@@ -36,7 +36,30 @@ python3 -m http.server -d dist
 
 Open `http://127.0.0.1:8000/`. The build fails if a page, image, or home-page link does not resolve.
 
-4. Commit the new HTML file and the catalog entry, then push to `main`. GitHub Actions publishes the site.
+4. Commit the new HTML file and the catalog entry, then push to `main`. GitHub Actions publishes the site. A new essay also needs its content signature and, if it is part of the screenshot set, a reviewed visual baseline. See below.
+
+## Checks
+
+These checks guard the editorial text, charts, URLs, and layout. They are not part of the published site. `build.py` still uses only the Python standard library.
+
+```bash
+python3 -m unittest discover -s tests -p 'test_*.py'
+npm ci
+npx playwright install chromium
+npx playwright test
+```
+
+The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Overflow, keyboard focus, and serious accessibility findings are checked on every article.
+
+Refresh a baseline only after reviewing the diff. Do not update snapshots just to make a red check pass.
+
+```bash
+python3 tests/signatures.py --write
+python3 tests/test_site_structure.py
+npx playwright test --update-snapshots
+```
+
+`tests/fixtures/known-defects.json` records layout and accessibility issues that already existed before the styling work. A new critical or serious issue fails the run.
 
 ## How publishing works
 

@@ -1,0 +1,12 @@
+{
+  "notes": "Recorded before the styling migration. No page overflows at 390, 768, or 1440. The only serious accessibility finding is color-contrast on .smallcaps in the Bitcoin holding-up essay: 12px uppercase text uses #9d7237 on the warm paper background, which is below 4.5:1. That label is pre-existing and is not a chart series. New critical or serious violations fail the check. Do not refresh this file just to make a failure pass.",
+  "horizontalOverflow": [],
+  "accessibility": [
+    {
+      "route": "/bitcoin-holding-up/",
+      "id": "color-contrast",
+      "impact": "serious",
+      "target": ".smallcaps"
+    }
+  ]
+}

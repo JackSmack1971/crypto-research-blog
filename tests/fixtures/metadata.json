@@ -1,0 +1,151 @@
+{
+  "home": {
+    "title": "Crypto Research",
+    "description": "Independent market research on digital assets: token economics, market structure, and the evidence behind the trade.",
+    "canonical": "https://jacksmack1971.github.io/crypto-research-blog/",
+    "og:title": "Crypto Research",
+    "og:description": "Independent market research on digital assets: token economics, market structure, and the evidence behind the trade.",
+    "og:url": "https://jacksmack1971.github.io/crypto-research-blog/",
+    "og:type": "website",
+    "twitter:card": "summary"
+  },
+  "articles": {
+    "bitcoin-holding-up": {
+      "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing. — October 2026 Crypto Market Essay",
+      "description": "Bitcoin's relative resilience masks deteriorating momentum, highly correlated altcoins, and concentrated volume shocks. An evidence-led October 2026 crypto market essay.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-holding-up/",
+      "og:title": "Bitcoin Is Holding Up. The Tape Is Less Convincing.",
+      "og:description": "Bitcoin's relative resilience masks deteriorating momentum, highly correlated altcoins, and concentrated volume shocks. An evidence-led October 2026 crypto market essay.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-holding-up/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
+    "aero-at-0-68": {
+      "title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't. | Crypto Market Analysis",
+      "description": "An independent examination of AERO after the Aerodrome–Velodrome merger: broken daily structure, support near $0.65, falling revenue yield, token migration risks, and what would signal a genuine recovery.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/aero-at-0-68/",
+      "og:title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't.",
+      "og:description": "An independent examination of AERO after the Aerodrome–Velodrome merger: broken daily structure, support near $0.65, falling revenue yield, token migration risks, and what would signal a genuine recovery.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/aero-at-0-68/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
+    "bitcoin-buying-imbalance": {
+      "title": "Bitcoin’s $1.2 Million Buying Imbalance—and the Reversal It Hasn’t Proven",
+      "description": "A close reading of October 26, 2026 crypto prices, derivatives positioning and signed Bitcoin spot trades reveals a buying imbalance—and the limits of calling it accumulation.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-buying-imbalance/",
+      "og:title": "Bitcoin’s $1.2 Million Buying Imbalance—and the Reversal It Hasn’t Proven",
+      "og:description": "A close reading of October 26, 2026 crypto prices, derivatives positioning and signed Bitcoin spot trades reveals a buying imbalance—and the limits of calling it accumulation.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-buying-imbalance/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
+    "weft-first-week": {
+      "title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit? | Independent Crypto Analysis",
+      "description": "A forensic examination of Weft Finance (WEFT): its concentrated Solana token supply, fragmented Meteora liquidity, volatile first week, and the unfinished evidence behind buybacks and burns.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/weft-first-week/",
+      "og:title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit?",
+      "og:description": "A forensic examination of Weft Finance (WEFT): its concentrated Solana token supply, fragmented Meteora liquidity, volatile first week, and the unfinished evidence behind buybacks and burns.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/weft-first-week/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
+    "virtual-alpha-risk": {
+      "title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story | Independent Market Analysis",
+      "description": "A critical look at Virtuals Protocol's VIRTUAL token: elevated volatility, BTC sensitivity, a promising but fragile residual-momentum backtest, and the evidence still missing.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/virtual-alpha-risk/",
+      "og:title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story",
+      "og:description": "A critical look at Virtuals Protocol's VIRTUAL token: elevated volatility, BTC sensitivity, a promising but fragile residual-momentum backtest, and the evidence still missing.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/virtual-alpha-risk/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
+    "rune-quiet-repricing": {
+      "title": "RUNE’s Quiet Repricing Problem: A Real Network, an Unsettled Token Thesis",
+      "description": "An independent assessment of THORChain's RUNE as of October 22, 2026: real cross-chain activity, cleaner supply, complicated value capture, and unconfirmed market momentum.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/rune-quiet-repricing/",
+      "og:title": "RUNE’s Quiet Repricing Problem: A Real Network, an Unsettled Token Thesis",
+      "og:description": "An independent assessment of THORChain's RUNE as of October 22, 2026: real cross-chain activity, cleaner supply, complicated value capture, and unconfirmed market momentum.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/rune-quiet-repricing/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
+    "pyth-revenue-unlock": {
+      "title": "PYTH’s Revenue Breakthrough Meets a 2.125 Billion Token Unlock | Pyth Network Analysis",
+      "description": "Pyth Network's growing commercial revenue and token reserve face a final May 2027 unlock. An evidence-led examination of PYTH supply, demand, liquidity, and risk.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/pyth-revenue-unlock/",
+      "og:title": "Pyth Has a Revenue Story. It Also Has a 2.125 Billion Token Problem.",
+      "og:description": "A measured look at the business emerging behind Pyth Network—and the supply event that could challenge its token economics.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/pyth-revenue-unlock/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
+    "venice-ai-privacy": {
+      "title": "Venice AI’s Privacy Promise Has a Verification Problem | Independent Analysis",
+      "description": "Venice AI has built real privacy safeguards, but its encryption, provider policies, and VVV token economics warrant a closer look. An evidence-led analysis of what is and isn't proven.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/venice-ai-privacy/",
+      "og:title": "Venice AI’s Privacy Promise Has a Verification Problem",
+      "og:description": "Venice AI has built real privacy safeguards, but its encryption, provider policies, and VVV token economics warrant a closer look. An evidence-led analysis of what is and isn't proven.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/venice-ai-privacy/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
+    "crypto-buybacks": {
+      "title": "Who Actually Benefits From Crypto Buybacks? EDGE, STONK and the Missing Ledger",
+      "description": "A critical examination of EDGE and STONK token economics: revenue rights, executed buybacks, dilution, valuation, liquidity, and the evidence still needed to measure tokenholder value.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/crypto-buybacks/",
+      "og:title": "Who Actually Benefits From Crypto Buybacks? EDGE, STONK and the Missing Ledger",
+      "og:description": "A critical examination of EDGE and STONK token economics: revenue rights, executed buybacks, dilution, valuation, liquidity, and the evidence still needed to measure tokenholder value.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/crypto-buybacks/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    }
+  },
+  "rss": [
+    {
+      "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing.",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-holding-up/",
+      "description": "A resilient Bitcoin, weaker altcoins, and violent pockets of turnover make a deceptively calm crypto market. The deeper story is in the divergence between relative strength and absolute momentum."
+    },
+    {
+      "title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't.",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/aero-at-0-68/",
+      "description": "AERO is testing the boundary between an ordinary post-launch shakeout and a deeper repricing. The chart is beginning to stabilize, but the economics tell a more complicated story."
+    },
+    {
+      "title": "Bitcoin’s $1.2 Million Buying Imbalance—and the Reversal It Hasn’t Proven",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-buying-imbalance/",
+      "description": "On October 26, the crypto market looked calm on the surface. Beneath that calm, spot buyers and derivatives traders were telling a more complicated story."
+    },
+    {
+      "title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit?",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/weft-first-week/",
+      "description": "Weft Finance has a functioning market, a public tokenomics story and a strikingly concentrated supply. The harder questions are about what the ledger proves—and what it doesn’t."
+    },
+    {
+      "title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/virtual-alpha-risk/",
+      "description": "A short-window momentum model looks surprisingly good. The underlying token is also unusually volatile, heavily exposed to Bitcoin, and far from passing the tests that would make that result trustworthy."
+    },
+    {
+      "title": "RUNE’s Quiet Repricing Problem: A Real Network, an Unsettled Token Thesis",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/rune-quiet-repricing/",
+      "description": "THORChain is still moving meaningful value across chains. Its token is a fraction of its former price. The gap is intriguing—but the case for a recovery is more complicated than either number suggests."
+    },
+    {
+      "title": "PYTH’s Revenue Breakthrough Meets a 2.125 Billion Token Unlock",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/pyth-revenue-unlock/",
+      "description": "A real financial-data business is emerging behind PYTH. The harder question is whether its new token-buying mechanism can mature quickly enough to matter before May 2027."
+    },
+    {
+      "title": "Venice AI’s Privacy Promise Has a Verification Problem",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/venice-ai-privacy/",
+      "description": "The encryption is meaningful. The assurances are not uniform. And even a genuinely private AI product still has to prove why its token should capture the value."
+    },
+    {
+      "title": "Who Actually Benefits From Crypto Buybacks? EDGE, STONK and the Missing Ledger",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/crypto-buybacks/",
+      "description": "EDGE and STONK put two very different revenue stories on the same balance sheet. The harder question is how much economic value survives the journey from customer fees to each circulating token—and what the market has already priced in."
+    }
+  ]
+}
