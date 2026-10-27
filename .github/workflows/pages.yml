@@ -80,7 +80,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: build
+    needs: [build, styling-check]
     runs-on: ubuntu-latest
     environment:
       name: github-pages

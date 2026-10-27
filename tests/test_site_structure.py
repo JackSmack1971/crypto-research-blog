@@ -167,6 +167,7 @@ class SiteStructureTest(unittest.TestCase):
             "if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'",
             deploy,
         )
+        self.assertIn("needs: [build, styling-check]", deploy)
 
 
 if __name__ == "__main__":

@@ -51,24 +51,28 @@ npx playwright test
 
 The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Overflow, keyboard focus, and serious accessibility findings are checked on every article.
 
-Refresh a baseline only after reviewing the diff. Do not update snapshots just to make a red check pass.
+A layout or content regression fails the suite on its own. Widening the homepage past the viewport fails `no unexpected overflow`. Changing a sentence in an essay fails the content signature. Both were confirmed before any shared CSS was adopted. The screenshot check does not accept a new image when it fails.
+
+## Reviewing a visual change
+
+1. Run the suite and let the screenshot check fail.
+2. Open the expected image, the actual image, and the diff under `test-results/`. Confirm the change is the intended type or color, and that the words, tables, and charts are intact.
+3. Refresh only the screenshots you reviewed:
 
 ```bash
-python3 tests/signatures.py --write
-python3 tests/test_site_structure.py
-npx playwright test --update-snapshots
+npx playwright test tests/visual.spec.ts -g "venice-ai-privacy @" --update-snapshots
 ```
 
-`tests/fixtures/known-defects.json` records layout and accessibility issues that already existed before the styling work. A new critical or serious issue fails the run.
+4. Commit those PNGs with the CSS change. Do not raise `maxDiffPixelRatio`, and do not run `--update-snapshots` across the whole suite, to hide a diff.
+
+`python3 tests/signatures.py --write` and `python3 tests/test_site_structure.py` rewrite the content and metadata fixtures. Use them only when an editorial change is intentional.
+
+`tests/fixtures/known-defects.json` lists layout and accessibility issues that are already accepted. A new critical or serious issue fails the run. The Bitcoin holding-up small-caps contrast failure was fixed during the migration, so that list is empty.
 
 ## How publishing works
 
-[`.github/workflows/pages.yml`](.github/workflows/pages.yml) runs `python3 build.py` on every push and pull request. A push to `main` uploads `dist/` with `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`.
+The site is published at <https://jacksmack1971.github.io/crypto-research-blog/>. Pages is set to **GitHub Actions** (**Settings → Pages → Build and deployment → Source**).
 
-GitHub Pages has to be switched on once, by a repository admin:
-
-**Settings → Pages → Build and deployment → Source: GitHub Actions**
-
-Until that is set, the workflow can build successfully and the deploy job will not have a Pages environment to publish to.
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds on every push and pull request and runs the content, structure, and browser checks in `styling-check`. A push to `main` uploads `dist/` with `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`. The deploy job waits for both `build` and `styling-check`, and its `if` still limits it to `main`. Pull requests do not publish.
 
 No paid host, database, or package install is required. The generator is [`build.py`](build.py) and uses only the Python standard library.
