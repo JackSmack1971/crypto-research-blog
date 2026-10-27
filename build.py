@@ -289,7 +289,6 @@ def article_extra_head(note: dict, site: dict) -> str:
     description = note["description"]
     parts = [
         '<link rel="stylesheet" href="../design-system.css">',
-        '<link rel="stylesheet" href="../site-bar.css">',
     ]
     if 'rel="canonical"' not in head and "rel='canonical'" not in head:
         parts.append(f'<link rel="canonical" href="{escape(url, quote=True)}">')
@@ -347,69 +346,6 @@ def article_bar(site: dict) -> str:
     )
 
 
-SITE_BAR_CSS = """\
-#cr-sitebar {
-  display: block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: #172420 !important;
-  color: #f4f1ea !important;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif !important;
-  font-size: 13px !important;
-  line-height: 1.3 !important;
-  letter-spacing: 0.01em !important;
-  text-transform: none !important;
-  position: relative !important;
-  width: auto !important;
-  max-width: none !important;
-  min-height: 0 !important;
-  border: 0 !important;
-  float: none !important;
-  box-sizing: border-box !important;
-}
-#cr-sitebar * { box-sizing: border-box !important; }
-#cr-sitebar .cr-sitebar-inner {
-  max-width: 1160px !important;
-  margin: 0 auto !important;
-  padding: 10px 20px !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  gap: 16px !important;
-}
-#cr-sitebar a {
-  display: inline !important;
-  color: #f4f1ea !important;
-  background: transparent !important;
-  text-decoration: none !important;
-  font-weight: 600 !important;
-  font-family: inherit !important;
-  font-size: inherit !important;
-  letter-spacing: inherit !important;
-  text-transform: none !important;
-  border: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-#cr-sitebar a.cr-all {
-  font-weight: 500 !important;
-  color: #d5ddd8 !important;
-}
-#cr-sitebar a:hover {
-  text-decoration: underline !important;
-  text-underline-offset: 3px !important;
-  color: #f4f1ea !important;
-}
-#cr-sitebar a:focus-visible {
-  outline: 2px solid #e6d3ae !important;
-  outline-offset: 3px !important;
-}
-@media print {
-  #cr-sitebar { display: none !important; }
-}
-"""
-
-
 def render_article(note: dict, site: dict) -> str:
     html = note["html"]
     extra = article_extra_head(note, site)
@@ -422,147 +358,6 @@ def render_article(note: dict, site: dict) -> str:
         die(f"{note['slug']} is missing <body>")
     bar = article_bar(site)
     return html[: body_match.end()] + bar + html[body_match.end() :]
-
-
-PAGE_CSS = """\
-:root {
-  --ink: #1b2422;
-  --muted: #5c6a65;
-  --paper: #f6f3ec;
-  --line: #e3dbd0;
-  --accent: #1d5c55;
-  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.55;
-  border-top: 6px solid #172420;
-}
-a { color: inherit; }
-.skip {
-  position: absolute;
-  left: 12px;
-  top: -48px;
-  background: #fff;
-  color: var(--ink);
-  padding: 8px 12px;
-  z-index: 2;
-  font-family: var(--sans);
-}
-.skip:focus { top: 12px; }
-.wrap { width: min(880px, calc(100% - 40px)); margin: 0 auto; }
-.mast { padding: 28px 0 8px; }
-.topline {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  font-family: var(--sans);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-.kicker { margin: 0; color: var(--accent); font-weight: 700; }
-.tools a {
-  color: var(--accent);
-  text-decoration: none;
-  letter-spacing: 0.12em;
-  padding: 8px 0;
-}
-.tools a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.tools a:focus-visible, .back:focus-visible, .entry:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 4px;
-}
-h1 {
-  font-weight: 500;
-  font-size: clamp(2.15rem, 7.2vw, 4.25rem);
-  letter-spacing: -0.045em;
-  line-height: 0.98;
-  margin: 22px 0 14px;
-  text-wrap: balance;
-}
-.lede {
-  max-width: 38rem;
-  margin: 0 0 8px;
-  color: #3e4c48;
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  line-height: 1.45;
-}
-.count {
-  margin: 28px 0 0;
-  font-family: var(--sans);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.entry {
-  display: grid;
-  grid-template-columns: 9.25rem 1fr;
-  gap: 8px 28px;
-  padding: 26px 0;
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
-  color: inherit;
-}
-.entry:first-of-type { border-top: 1px solid var(--ink); margin-top: 12px; }
-.entry time {
-  font-family: var(--sans);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding-top: 7px;
-}
-.entry h2 {
-  font-weight: 500;
-  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
-  letter-spacing: -0.03em;
-  line-height: 1.16;
-  margin: 0 0 8px;
-  text-wrap: balance;
-}
-.entry:hover h2 { color: var(--accent); }
-.dek { margin: 0; color: #31403c; font-size: 1.02rem; line-height: 1.45; }
-.colophon {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--ink);
-  margin-top: 8px;
-  padding: 22px 0 48px;
-  font-family: var(--sans);
-  font-size: 13px;
-  color: var(--muted);
-}
-.colophon a { color: var(--accent); }
-.missing { padding: 48px 0 80px; }
-.back {
-  display: inline-block;
-  margin-top: 8px;
-  color: var(--accent);
-  font-family: var(--sans);
-  font-size: 14px;
-}
-@media (max-width: 640px) {
-  .wrap { width: min(100% - 32px, 880px); }
-  .entry { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
-  .entry time { padding-top: 0; }
-  h1 { margin-top: 16px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-}
-"""
 
 
 def page_shell(
@@ -604,11 +399,8 @@ def page_shell(
   <meta name="twitter:title" content="{escape(document_title, quote=True)}">
   <meta name="twitter:description" content="{escape(description, quote=True)}">
   {json_ld(structured_data)}
-  <style>
-{PAGE_CSS}
-  </style>
 </head>
-<body>
+<body class="cr-home">
   <a class="skip" href="#notes">Skip to notes</a>
   {main}
 </body>
@@ -887,7 +679,6 @@ def main() -> None:
     DIST.mkdir()
     shutil.copyfile(FAVICON, DIST / "favicon.svg")
     shutil.copyfile(DESIGN_SYSTEM, DIST / "design-system.css")
-    (DIST / "site-bar.css").write_text(SITE_BAR_CSS, encoding="utf-8")
     (DIST / ".nojekyll").write_text("", encoding="utf-8")
     for note in notes:
         out = DIST / note["slug"] / "index.html"
