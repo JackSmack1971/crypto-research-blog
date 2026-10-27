@@ -104,7 +104,6 @@ class SiteStructureTest(unittest.TestCase):
             "sitemap.xml",
             "robots.txt",
             "favicon.svg",
-            "site-bar.css",
             "design-system.css",
         ):
             self.assertTrue((build.DIST / relative).is_file(), relative)
@@ -122,6 +121,7 @@ class SiteStructureTest(unittest.TestCase):
             self.assertEqual(actual["og:url"], f"{self.base}/{slug}/")
             self.assertIn('href="../"', html)
             self.assertIn('href="../design-system.css"', html)
+            self.assertNotIn("site-bar.css", html)
 
     def test_homepage_loads_shared_tokens(self) -> None:
         index = (build.DIST / "index.html").read_text(encoding="utf-8")
@@ -129,6 +129,10 @@ class SiteStructureTest(unittest.TestCase):
         tokens = (build.DIST / "design-system.css").read_text(encoding="utf-8")
         for token in ("--cr-bg:", "--cr-ink:", "--cr-muted:", "--cr-accent:", "--cr-measure:", "--cr-container:"):
             self.assertIn(token, tokens)
+        self.assertIn('class="cr-home"', index)
+        self.assertIn("#cr-sitebar", tokens)
+        without_comments = re.sub(r"/\*.*?\*/", "", tokens, flags=re.S)
+        self.assertNotIn("!important", without_comments)
 
     def test_homepage_lists_catalog_copy(self) -> None:
         index = (build.DIST / "index.html").read_text(encoding="utf-8")
