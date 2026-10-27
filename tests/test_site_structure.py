@@ -105,6 +105,7 @@ class SiteStructureTest(unittest.TestCase):
             "robots.txt",
             "favicon.svg",
             "site-bar.css",
+            "design-system.css",
         ):
             self.assertTrue((build.DIST / relative).is_file(), relative)
         for entry in self.catalog:
@@ -120,6 +121,14 @@ class SiteStructureTest(unittest.TestCase):
             self.assertEqual(actual["canonical"], f"{self.base}/{slug}/")
             self.assertEqual(actual["og:url"], f"{self.base}/{slug}/")
             self.assertIn('href="../"', html)
+            self.assertIn('href="../design-system.css"', html)
+
+    def test_homepage_loads_shared_tokens(self) -> None:
+        index = (build.DIST / "index.html").read_text(encoding="utf-8")
+        self.assertIn('href="design-system.css"', index)
+        tokens = (build.DIST / "design-system.css").read_text(encoding="utf-8")
+        for token in ("--cr-bg:", "--cr-ink:", "--cr-muted:", "--cr-accent:", "--cr-measure:", "--cr-container:"):
+            self.assertIn(token, tokens)
 
     def test_homepage_lists_catalog_copy(self) -> None:
         index = (build.DIST / "index.html").read_text(encoding="utf-8")
