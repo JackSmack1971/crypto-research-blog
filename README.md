@@ -49,7 +49,7 @@ npx playwright install chromium
 npx playwright test
 ```
 
-The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Overflow, keyboard focus, and serious accessibility findings are checked on every article.
+The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Overflow, keyboard focus, and serious accessibility findings are checked on every article. CI installs Noto Serif and Noto Sans and prefers them for Georgia, Palatino, and the system sans stack, which is how these baselines were captured. A different face changes text wrapping and fails the screenshot check.
 
 A layout or content regression fails the suite on its own. Widening the homepage past the viewport fails `no unexpected overflow`. Changing a sentence in an essay fails the content signature. Both were confirmed before any shared CSS was adopted. The screenshot check does not accept a new image when it fails.
 
