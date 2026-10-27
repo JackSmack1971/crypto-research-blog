@@ -11,9 +11,11 @@ permissions:
   pages: write
   id-token: write
 
+# Each pull request is refs/pull/<number>/merge, so checks do not cancel each other.
+# Pushes to main share pages-deploy, and a deploy that has started is left to finish.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: ${{ github.ref == 'refs/heads/main' && 'pages-deploy' || format('pages-{0}', github.ref) }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
   build:
@@ -53,6 +55,12 @@ jobs:
 
       - name: Install test runner
         run: npm ci
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium

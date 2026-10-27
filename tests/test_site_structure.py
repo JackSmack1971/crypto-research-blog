@@ -140,6 +140,11 @@ class SiteStructureTest(unittest.TestCase):
 
     def test_deploy_job_stays_on_main(self) -> None:
         workflow = (ROOT / ".github" / "workflows" / "pages.yml").read_text(encoding="utf-8")
+        concurrency = workflow.split("jobs:", 1)[0]
+        self.assertIn("pages-deploy", concurrency)
+        self.assertIn("format('pages-{0}', github.ref)", concurrency)
+        self.assertIn("cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}", concurrency)
+        self.assertNotIn('group: "pages"', concurrency)
         self.assertIn("actions/upload-pages-artifact@v3", workflow)
         self.assertIn("actions/deploy-pages@v4", workflow)
         self.assertIn("github.ref == 'refs/heads/main'", workflow)
