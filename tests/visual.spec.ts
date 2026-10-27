@@ -47,6 +47,11 @@ async function prepare(page: Page, route: string): Promise<void> {
       ),
     );
     document.documentElement.style.overflowY = "scroll";
+    // Overlay scrollbars (where the baselines were captured) take no gutter.
+    // A classic scrollbar narrows the page and makes a 100vw breakout report
+    // about 16px of overflow. Hide the gutter so both environments measure
+    // the same content box.
+    document.documentElement.style.scrollbarWidth = "none";
     window.scrollTo(0, 0);
   });
 }
@@ -57,9 +62,11 @@ test.describe("layout", () => {
       test(`no unexpected overflow ${route} @ ${width}`, async ({ page }) => {
         await page.setViewportSize({ width, height: 900 });
         await prepare(page, route);
-        const overflow = await page.evaluate(
-          () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
-        );
+        const overflow = await page.evaluate(() => {
+          const doc = document.documentElement;
+          const gutter = Math.max(0, window.innerWidth - doc.clientWidth);
+          return doc.scrollWidth - doc.clientWidth - gutter;
+        });
         const allowed = knownOverflow.has(`${route}|${width}`);
         if (!allowed) {
           expect(overflow, `${route} overflows by ${overflow}px at ${width}px`).toBeLessThanOrEqual(1);
