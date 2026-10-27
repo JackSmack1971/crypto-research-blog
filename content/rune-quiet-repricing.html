@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>RUNE’s Quiet Repricing Problem: A Real Network, an Unsettled Token Thesis</title>
+  <meta name="description" content="An independent assessment of THORChain's RUNE as of October 22, 2026: real cross-chain activity, cleaner supply, complicated value capture, and unconfirmed market momentum.">
+  <style>
+    :root { --ink:#202b31; --muted:#52646b; --paper:#faf9f5; --line:#d6d9d5; --accent:#1f5960; --tint:#edf1ee; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Georgia, 'Times New Roman',serif; font-size:19px; line-height:1.72; text-rendering:optimizeLegibility; }
+    a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:.17em; overflow-wrap:anywhere; }
+    a:hover { color:#113c41; }
+    a:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+    .skip-link { position:absolute; left:18px; top:12px; z-index:10; padding:10px 14px; background:var(--ink); color:var(--paper); font:600 14px/1.2 system-ui,-apple-system,Segoe UI,sans-serif; transform:translateY(-160%); }
+    .skip-link:focus { transform:translateY(0); }
+    .masthead { border-bottom:1px solid var(--line); padding:20px 28px; font: 700 11px/1.4 system-ui,-apple-system,Segoe UI,sans-serif; letter-spacing:.19em; text-transform:uppercase; }
+    .masthead-inner { max-width:1120px; margin:auto; display:flex; justify-content:space-between; gap:24px; }
+    .masthead .right { font-weight:500; color:var(--muted); letter-spacing:.12em; }
+    article { max-width:760px; margin:0 auto; padding:84px 26px 105px; }
+    .eyebrow { color:var(--accent); font:700 12px/1.4 system-ui,-apple-system,Segoe UI,sans-serif; text-transform:uppercase; letter-spacing:.17em; margin:0 0 26px; }
+    h1 { font-size:clamp(2.7rem,7vw,5.15rem); line-height:1.07; font-weight:500; letter-spacing:-.047em; margin:0; max-width:790px; }
+    .dek { font-size:clamp(1.2rem,2.35vw,1.48rem); line-height:1.53; color:var(--muted); margin:29px 0 27px; max-width:680px; }
+    .meta { border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px 22px; padding:13px 0; font:500 12px/1.5 system-ui,-apple-system,Segoe UI,sans-serif; color:var(--muted); letter-spacing:.035em; }
+    .opening { margin-top:51px; font-size:1.15em; }
+    p { margin:0 0 1.35em; }
+    h2 { font-size:clamp(1.75rem,3.2vw,2.35rem); letter-spacing:-.027em; font-weight:500; line-height:1.2; margin:2.0em 0 .7em; }
+    h3 { font-size:1.25rem; line-height:1.3; margin:1.7em 0 .6em; }
+    .rule { border:0; border-top:1px solid var(--line); margin:53px 0; }
+    .callout { border-left:3px solid var(--accent); padding:8px 0 7px 24px; margin:38px 0 42px; font-size:1.32em; line-height:1.43; letter-spacing:-.01em; }
+    .callout cite { display:block; color:var(--muted); font:600 11px/1.5 system-ui,-apple-system,Segoe UI,sans-serif; text-transform:uppercase; letter-spacing:.11em; margin-top:17px; font-style:normal; }
+    .data-strip { margin:38px 0 38px; padding:26px 0; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .datum { min-width:0; }
+    .datum .value { display:block; font:500 clamp(1.55rem,3vw,2.15rem)/1.13 Georgia,serif; letter-spacing:-.04em; }
+    .datum .label { display:block; margin-top:10px; color:var(--muted); font:500 11px/1.5 system-ui,-apple-system,Segoe UI,sans-serif; }
+    .fine { font:400 12px/1.65 system-ui,-apple-system,Segoe UI,sans-serif; color:var(--muted); margin-top:-15px; }
+    .comparison { margin:35px 0 43px; }
+    .table-wrap { width:100%; overflow-x:auto; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); }
+    .table-wrap:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    table { width:100%; border-collapse:collapse; font: 14px/1.58 system-ui,-apple-system,Segoe UI,sans-serif; }
+    th { text-align:left; color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.09em; }
+    th, td { padding:16px 14px 16px 0; vertical-align:top; border-bottom:1px solid var(--line); }
+    tbody tr:last-child td { border-bottom:0; }
+    td:first-child { min-width:150px; font-weight:650; }
+    caption { caption-side:bottom; text-align:left; font:400 12px/1.65 system-ui,-apple-system,Segoe UI,sans-serif; color:var(--muted); padding-top:10px; }
+    .source-notes { padding-top:25px; border-top:2px solid var(--ink); margin-top:78px; }
+    .source-notes h2 { font:700 12px/1.4 system-ui,-apple-system,Segoe UI,sans-serif; text-transform:uppercase; letter-spacing:.15em; margin:0 0 18px; }
+    .source-notes ol { padding-left:21px; margin:0; font:400 13px/1.7 system-ui,-apple-system,Segoe UI,sans-serif; color:var(--muted); }
+    .source-notes li { margin-bottom:10px; padding-left:6px; }
+    footer { max-width:760px; margin:0 auto; border-top:1px solid var(--line); padding:23px 26px 48px; color:var(--muted); font:400 11px/1.6 system-ui,-apple-system,Segoe UI,sans-serif; }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media(max-width:600px) { body { font-size:17px; line-height:1.66; } article { padding:57px 22px 70px; } .masthead { padding:18px 22px; } .masthead .right { display:none; } .opening { margin-top:35px; } .data-strip { grid-template-columns:1fr 1fr; gap:25px 14px; } .data-strip .datum:last-child { grid-column:1/-1; } .callout { padding-left:17px; font-size:1.22em; } h2 { margin-top:1.8em; } }
+    @media print { body { background:white; font-size:12pt; } article { padding:30px 0; } .masthead { padding:12px 0; } a { color:inherit; } h2, h3, .callout { break-after:avoid; } table, .data-strip { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to article</a>
+  <header class="masthead"><div class="masthead-inner"><span>Independent Market Notes</span><span class="right">Digital assets / analysis</span></div></header>
+  <main id="main-content">
+    <article aria-labelledby="article-title">
+      <header>
+        <p class="eyebrow">THORChain · Token Economics · Market Structure</p>
+        <h1 id="article-title">RUNE’s Quiet Repricing Problem</h1>
+        <p class="dek">THORChain is still moving meaningful value across chains. Its token is a fraction of its former price. The gap is intriguing—but the case for a recovery is more complicated than either number suggests.</p>
+        <div class="meta"><span><time datetime="2026-10-22">October 22, 2026</time></span><span>Research perspective: 7–30 days and 3–12 months</span><span>Figures are dated observations, not live quotes</span></div>
+      </header>
+
+      <p class="opening">A token can lose almost all of its market value without its underlying network disappearing. That is the tension I see in THORChain’s RUNE. As of October 22, 2026, RUNE was trading near $0.68, about 97% below its 2021 peak, while THORChain continued to process substantial cross-chain swap activity. The contrast invites an obvious question: has the market overcorrected, or is the low price telling us something that protocol usage alone cannot capture?</p>
+      <p>I lean toward a narrower, less dramatic answer. <strong>RUNE may be undervalued relative to a functioning cross-chain network, but there is not yet enough evidence to call it a confirmed recovery trade.</strong> The supply structure has improved. The product has utility. The fee stream is real. Yet normalized demand, tokenholder value capture, operational reliability and current positioning all complicate the bullish narrative.</p>
+
+      <div class="data-strip" aria-label="Dated RUNE reference figures">
+        <div class="datum"><span class="value">~$0.68</span><span class="label">RUNE reference price, Oct. 22, 2026</span></div>
+        <div class="datum"><span class="value">~$226M</span><span class="label">Reported circulating market value, Oct. 22</span></div>
+        <div class="datum"><span class="value">~$2.40B</span><span class="label">Reported THORChain swap volume, Sept. 2026</span></div>
+      </div>
+      <p class="fine">Sources: CoinGecko, the October 22 Hyperliquid/Liquid market snapshot, and THORChain’s September network report. Different metrics cover different venues and periods; they should not be read as one synchronized market snapshot.</p>
+
+      <h2>The case begins with a real product, not a ticker</h2>
+      <p>THORChain occupies a specific part of crypto infrastructure: native-asset swaps between blockchains, without relying on conventional wrapped-asset bridges for the core exchange proposition. That is a useful distinction. Crypto has more than enough speculative assets whose supposed product-market fit exists mostly in a slide deck. THORChain’s demand can at least be examined through swap volume, fee generation, bonded security and active users.</p>
+      <p>Its <a href="https://blog.thorchain.org/state-of-the-network-september-2026/">September 2026 network report</a> put monthly swap volume at approximately $2.40 billion and system income at $3.01 million. Active wallets reportedly climbed to roughly 25,000, the third consecutive monthly increase. On the surface, that is a respectable activity profile for a token capitalized near $226 million.</p>
+      <p>But I would not annualize those September figures and declare victory. The same report attributes approximately $1.37 billion of the month’s volume to the September 25–29 window, associated with funds linked to the Bitget exploit. That means more than half the headline monthly volume occurred in one unusual period. It may represent genuine exchange activity, but it is not reliable evidence of repeatable, ordinary customer demand.</p>
+      <p>This is the first test any serious valuation argument must survive: <em>what does THORChain look like after the exceptional flow is separated from the recurring business?</em> A platform can handle an extraordinary burst of volume and still have a weaker underlying trend than the monthly total suggests. The distinction matters because persistent activity, not a single episode, is what could justify a durable token rerating.</p>
+
+      <aside class="callout">The market may be discounting a working protocol. But a working protocol is not the same thing as a token with strong, direct value capture.<cite>The central valuation distinction</cite></aside>
+
+      <h2>Cleaner supply does not mean simple token economics</h2>
+      <p>RUNE’s supply profile is more attractive than the dilution-heavy models common across crypto. CoinGecko’s October 22 reference figures indicated about 328.5 million tokens circulating and a circulating valuation near 93% of fully diluted valuation. THORChain’s own <a href="https://thorchain.org/rune">token information</a> states that the final scheduled unlock occurred in 2023. Future scheduled unlock pressure is therefore not the dominant issue it is for some newer projects.</p>
+      <p>That is meaningful, but it only removes one source of risk. It does not answer whether economic activity benefits the token in proportion to its market price. Network revenue and tokenholder cash flows are not interchangeable.</p>
+      <p>THORChain’s <a href="https://blog.thorchain.org/how-thorchain-s-new-system-income-distribution-works/">income-distribution framework</a> directs approximately 59% of system income to nodes and pools, 20% to protocol-owned liquidity, 10% to TCY, 5% each to developers and marketing, and 1% to RUNE burn. The direct burn allocation was reduced from 5% to 1% as protocol-owned liquidity assumed a larger role.</p>
+      <p>There is a coherent design argument behind this. Liquidity held or managed at the protocol level may improve resilience and the network’s economics over time. Yet that potential benefit is indirect. A dollar of swap fees is not a dollar paid to a RUNE holder, and a low market-cap-to-fees ratio cannot be interpreted as if RUNE were an ordinary equity claim on the network’s revenues.</p>
+      <p>My interpretation is that the asset has become less of an aggressive burn story and more of a security-and-liquidity coordination story. That may be sustainable, but it is harder to value. I would rather see a defensible model of fee retention, bonded RUNE, protocol-owned liquidity and actual token demand than a neat multiple that pretends those channels are equivalent.</p>
+
+      <h2>The chart is not confirming the fundamental story yet</h2>
+      <p>The October 22 Hyperliquid RUNE reference was near $0.678. A contemporaneous hourly indicator snapshot showed RSI around 50.6: neither deeply oversold nor especially strong. Price was above the 50-hour moving average near $0.676 and the 200-hour moving average near $0.650, but below the 20-hour average near $0.683 and the preceding 24-hour volume-weighted average near $0.690. The MACD histogram was slightly negative, and on-balance volume had been falling over the prior 20 hourly observations.</p>
+      <p>None of this establishes a statistically reliable forecast. It does, however, describe the current tension precisely: a medium-term recovery structure paired with short-term hesitation. I see neither a clean breakdown nor convincing evidence that buyers are expanding their participation.</p>
+      <p>Perpetual derivatives tell a similarly mixed story. The Hyperliquid/Liquid snapshot showed approximately $2.47 million in RUNE open interest and a small positive funding figure of about 0.0013% per funding interval. The sampled profitable-trader cohort was approximately 45% long, compared with about 61% long among the sampled losing-trader cohort. That difference is worth monitoring, but it is venue-specific and classification-dependent. It is not proof that informed traders expect a decline.</p>
+      <p>Nor does open interest resolve who is in control. Every outstanding long has a corresponding short. OI describes outstanding exposure; it does not independently tell us whether aggressive new risk-taking will push prices higher or lower.</p>
+
+      <div class="comparison">
+        <div class="table-wrap" role="region" aria-label="Evidence for and against the RUNE thesis" tabindex="0">
+          <table>
+            <caption>Interpretive comparison based on figures and disclosures available through October 22, 2026; not a mechanical scoring model.</caption>
+            <thead><tr><th scope="col">Dimension</th><th scope="col">Constructive reading</th><th scope="col">What prevents confirmation</th></tr></thead>
+            <tbody>
+              <tr><td>Protocol demand</td><td>Meaningful cross-chain volume, fees and wallet activity</td><td>September volume heavily influenced by an unusual event window</td></tr>
+              <tr><td>Token supply</td><td>Limited remaining scheduled unlock dilution</td><td>Supply scarcity alone cannot establish sustainable token demand</td></tr>
+              <tr><td>Value capture</td><td>Fee-funded network economics and protocol-owned liquidity</td><td>Only a small fraction of income flows directly to RUNE burns</td></tr>
+              <tr><td>Market structure</td><td>Price above longer hourly moving averages</td><td>Weaker short-term VWAP, volume trend and mixed trader cohorts</td></tr>
+              <tr><td>Operational quality</td><td>Established live cross-chain functionality</td><td>Signing reliability and security remain material risks</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2>A caution hidden in the order book</h2>
+      <p>There is another reason I am reluctant to infer too much precision from this market. A short historical reconstruction of Hyperliquid’s RUNE order book covered approximately 58 seconds around October 19–20. It processed 2,074 recorded L4 events and found no orphan removals, orphan updates or reversed event order in the returned sequence. That is a useful preliminary integrity check.</p>
+      <p>But the rebuilt top of book did not agree with a separately archived L2 sample. The replay showed a best bid and ask of $0.64650 and $0.64666; the archived L2 sample showed $0.64654 and $0.64685. Not one of the first 20 price levels on either side matched exactly when price, quantity and order count were considered. Differences in checkpoint cursors or sample-time semantics may explain the divergence, but the cause was not established.</p>
+      <p>This is not proof that THORChain liquidity is defective, nor that the market is manipulated. It is a narrower research warning: an apparently complete event replay is not automatically a reliable execution model. Until archival semantics and trade-to-order reconciliation are resolved, claims about historical queue priority, fill probability or precise slippage from that data would be overstated. For an illiquid or latency-sensitive strategy, false precision can be more dangerous than openly acknowledging missing data.</p>
+
+      <h2>The operational risk belongs in the valuation</h2>
+      <p>THORChain’s product is technically demanding. Native cross-chain settlement depends on signing, coordination, network security and reliable execution. The project’s <a href="https://blog.thorchain.org/thorchain-prioritizes-stability-before-monero-and-new-features/">September 2026 development communication</a> emphasized stability and work on TSS signing issues before expanding to additional chains.</p>
+      <p>I read that as sensible prioritization, not automatically as a sign of failure. Still, reliability is central to the investment thesis. Every technical interruption or security incident can influence participation, fee generation and the premium investors are willing to assign to the token. The bull case cannot reasonably celebrate cross-chain utility while treating operational risk as an afterthought.</p>
+
+      <h2>What would actually change my view?</h2>
+      <p>Over the next several weeks, a sustained recovery through approximately $0.69–$0.70 alongside stronger spot participation would improve the near-term picture. Continued weakness toward the recent $0.63–$0.65 area would instead be consistent with the market discount remaining in place. These are reference areas drawn from the October 22 price structure, <strong>not validated entry, stop or target levels</strong>. There are no calibrated probabilities attached to them.</p>
+      <p>Over three to twelve months, the more decisive evidence would be fundamental: recurring swap volume after removing unusual flow episodes; income that remains healthy across different volatility regimes; growth in sustainably bonded RUNE; improved network reliability; and a clearer connection between protocol-owned liquidity and demand for the token. I would also watch whether direct burns and broader economic incentives produce measurable benefits rather than simply more complicated accounting.</p>
+      <p>The opposing scenario is straightforward. Normalized swap activity could stagnate, rival routing and swap infrastructure could capture more demand, or another operational problem could undermine confidence. Under those conditions, a 97% drawdown would not, by itself, make RUNE inexpensive. Assets can remain far below former peaks because their prospective economics have changed.</p>
+
+      <h2>Why this matters beyond one token</h2>
+      <p>RUNE illustrates a wider problem in crypto valuation. A protocol can generate real fees, secure real assets and perform a useful service, yet the token representing its economic coordination layer may capture those benefits imperfectly. Traditional revenue multiples become seductive precisely when they are least appropriate.</p>
+      <p>The better question is not simply whether a network is being used. It is how the value generated by that usage moves through the system, who bears the risks, who receives the cash flows or other benefits, and whether the market price adequately reflects those relationships. In that sense, RUNE is an unusually revealing case study: the product is tangible enough to analyze, but the route from product success to token appreciation remains indirect.</p>
+
+      <hr class="rule">
+      <p><strong>My conclusion is conditional, not dismissive.</strong> I think RUNE deserves attention as a potentially mispriced infrastructure token. The supply overhang is smaller, the protocol remains useful, and there is a credible path to a rerating if organic activity compounds. But the most persuasive version of that story has not yet been established by the available data.</p>
+      <p>What stands out to me is not how far RUNE has fallen. It is the distance between what THORChain demonstrably does and what RUNE holders can demonstrably capture. If that gap narrows, the valuation could become compelling. If it does not, the apparent bargain may be an illusion. That is the distinction I would want to resolve before mistaking a battered price for an investment thesis.</p>
+
+      <section class="source-notes" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources &amp; scope</h2>
+        <ol>
+          <li><a href="https://www.coingecko.com/en/coins/thorchain">CoinGecko — THORChain (RUNE)</a>, price, market capitalization and supply reference reported for October 22, 2026.</li>
+          <li><a href="https://blog.thorchain.org/state-of-the-network-september-2026/">THORChain — State of the Network, September 2026</a>, including system income, reported volume and the unusual late-September volume window.</li>
+          <li><a href="https://thorchain.org/rune">THORChain — RUNE token information</a>, token supply and network economics.</li>
+          <li><a href="https://blog.thorchain.org/how-thorchain-s-new-system-income-distribution-works/">THORChain — System income distribution</a>, allocation proportions and burn changes.</li>
+          <li><a href="https://blog.thorchain.org/thorchain-prioritizes-stability-before-monero-and-new-features/">THORChain — Stability before new features</a>, September development priorities and TSS signing concerns.</li>
+          <li><a href="https://defillama.com/chain/thorchain">DeFiLlama — THORChain</a>, supplementary public protocol-activity reference; provider definitions may differ.</li>
+          <li>Hyperliquid RUNE derivatives and technical snapshot, October 22, 2026, approximately 12:57 UTC; provider data delivered through Liquid/Co-Invest. Cohort positioning and funding are venue-specific observations, not independently validated forecasts.</li>
+          <li>“Hyperliquid RUNE — Bounded L4 replay and reconciliation audit,” dated October 22, 2026; historical interval October 19, 23:59:02.652 to October 20, 00:00:00.759 UTC. Preliminary audit; L4/L2 reconciliation failed. No public source URL is provided for this audit.</li>
+        </ol>
+      </section>
+    </article>
+  </main>
+  <footer>Market commentary for research and education. Forward-looking scenarios are conditional, not probabilities or investment recommendations. Market figures and reported protocol data can change after the dates stated above.</footer>
+</body>
+</html>
