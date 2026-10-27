@@ -26,6 +26,7 @@ CONTENT = ROOT / "content"
 DIST = ROOT / "dist"
 SITE_PATH = ROOT / "site.json"
 FAVICON = ROOT / "assets" / "favicon.svg"
+DESIGN_SYSTEM = ROOT / "assets" / "design-system.css"
 
 TITLE_SUFFIXES = (
     " | Crypto Market Analysis",
@@ -286,7 +287,10 @@ def article_extra_head(note: dict, site: dict) -> str:
     url = f"{site['url']}/{note['slug']}/"
     title = note["title"]
     description = note["description"]
-    parts = ['<link rel="stylesheet" href="../site-bar.css">']
+    parts = [
+        '<link rel="stylesheet" href="../design-system.css">',
+        '<link rel="stylesheet" href="../site-bar.css">',
+    ]
     if 'rel="canonical"' not in head and "rel='canonical'" not in head:
         parts.append(f'<link rel="canonical" href="{escape(url, quote=True)}">')
     if "application/rss+xml" not in head:
@@ -589,6 +593,7 @@ def page_shell(
   <meta name="description" content="{escape(description, quote=True)}">
   <link rel="canonical" href="{escape(canonical, quote=True)}">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="design-system.css">
   <link rel="alternate" type="application/rss+xml" title="{escape(site["title"], quote=True)}" href="feed.xml">
   <meta property="og:site_name" content="{escape(site["title"], quote=True)}">
   <meta property="og:type" content="website">
@@ -881,6 +886,7 @@ def main() -> None:
         shutil.rmtree(DIST)
     DIST.mkdir()
     shutil.copyfile(FAVICON, DIST / "favicon.svg")
+    shutil.copyfile(DESIGN_SYSTEM, DIST / "design-system.css")
     (DIST / "site-bar.css").write_text(SITE_BAR_CSS, encoding="utf-8")
     (DIST / ".nojekyll").write_text("", encoding="utf-8")
     for note in notes:

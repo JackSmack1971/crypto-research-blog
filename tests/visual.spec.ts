@@ -174,6 +174,22 @@ test.describe("visual baseline", () => {
   }
 });
 
+test("shared tokens load without changing paint", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  for (const route of ["/", "/venice-ai-privacy/"]) {
+    await prepare(page, route);
+    const tokens = await page.evaluate(() => {
+      const style = getComputedStyle(document.documentElement);
+      return {
+        bg: style.getPropertyValue("--cr-bg").trim(),
+        ink: style.getPropertyValue("--cr-ink").trim(),
+        accent: style.getPropertyValue("--cr-accent").trim(),
+      };
+    });
+    expect(tokens, route).toEqual({ bg: "#f6f3ec", ink: "#1b2422", accent: "#1d5c55" });
+  }
+});
+
 test("representative images decode", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   for (const route of ["/aero-at-0-68/", "/pyth-revenue-unlock/", "/bitcoin-buying-imbalance/"]) {

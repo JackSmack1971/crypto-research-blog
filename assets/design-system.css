@@ -1,0 +1,37 @@
+/*
+  Shared design tokens for generated pages.
+
+  Text contrast on #f6f3ec (WCAG 2.1 AA needs 4.5:1 for normal text):
+    --cr-ink   #1b2422  14.33:1
+    --cr-muted #5c6a65   5.12:1
+    --cr-accent #1d5c55  6.98:1
+  All three clear AA, so the proposed values are unchanged.
+
+  --cr-line #e3dbd0 is about 1.24:1 against the paper. It is a decorative
+  rule, not the boundary of a control, so it is not held to the 3:1
+  non-text requirement. Focus rings use --cr-accent, which clears 3:1.
+
+  Dark bar, measured on #172420:
+    --cr-bar-text  #f4f1ea  14.22:1
+    --cr-bar-muted #d5ddd8  11.58:1
+
+  This file defines tokens only. It does not restyle elements, so pages
+  keep their current appearance until a later change opts in.
+*/
+
+:root {
+  --cr-bg: #f6f3ec;
+  --cr-ink: #1b2422;
+  --cr-muted: #5c6a65;
+  --cr-accent: #1d5c55;
+  --cr-line: #e3dbd0;
+  --cr-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --cr-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cr-measure: 47.5rem;
+  --cr-container: 72.5rem;
+  --cr-focus: #1d5c55;
+  --cr-bar: #172420;
+  --cr-bar-text: #f4f1ea;
+  --cr-bar-muted: #d5ddd8;
+  --cr-break: 640px;
+}
