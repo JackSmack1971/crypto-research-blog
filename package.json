@@ -1,0 +1,15 @@
+{
+  "name": "crypto-research-blog-tests",
+  "private": true,
+  "description": "Development-only browser checks. Not used by the published site.",
+  "scripts": {
+    "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:browser": "playwright test",
+    "test:browser:update": "playwright test --update-snapshots",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.56.1"
+  }
+}
