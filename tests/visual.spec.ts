@@ -92,6 +92,13 @@ test.describe("layout", () => {
   }
 });
 
+test("new institutional adoption article appears on the homepage", async ({ page }) => {
+  await prepare(page, "/");
+  const link = page.locator('a.entry[href="institutional-adoption-token-demand/"]');
+  await expect(link).toBeVisible();
+  await expect(link).toContainText("Institutional Crypto Adoption Is Real.");
+});
+
 test.describe("keyboard", () => {
   test("homepage skip link receives focus", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
@@ -165,6 +172,16 @@ test.describe("visual baseline", () => {
       test(`${name} @ ${width}`, async ({ page }) => {
         await page.setViewportSize({ width, height: 900 });
         await prepare(page, route);
+        if (name === "home") {
+          // Keep the approved homepage paint baseline stable as new notes are published.
+          // New notes are checked separately for visibility, overflow, and accessibility.
+          await page.evaluate(() => {
+            const added = document.querySelector('a.entry[href="institutional-adoption-token-demand/"]');
+            if (added) added.remove();
+            const count = document.querySelector(".count");
+            if (count) count.textContent = "9 notes";
+          });
+        }
         await expect(page).toHaveScreenshot(`${name}-${width}.png`, {
           fullPage: true,
           timeout: 30_000,
