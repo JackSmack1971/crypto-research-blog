@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "institutional-adoption-token-demand": {
+      "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial. | Crypto Research",
+      "description": "Canton Coin and Chainlink are building genuine institutional infrastructure. But CC issuance, LINK Reserve flows and BTC/ETH-adjusted prices tell a more demanding story about token value capture.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/institutional-adoption-token-demand/",
+      "og:title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial.",
+      "og:description": "Canton Coin and Chainlink are building genuine institutional infrastructure. But CC issuance, LINK Reserve flows and BTC/ETH-adjusted prices tell a more demanding story about token value capture.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/institutional-adoption-token-demand/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
     "bitcoin-holding-up": {
       "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing. — October 2026 Crypto Market Essay",
       "description": "Bitcoin's relative resilience masks deteriorating momentum, highly correlated altcoins, and concentrated volume shocks. An evidence-led October 2026 crypto market essay.",
@@ -102,6 +112,11 @@
     }
   },
   "rss": [
+    {
+      "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial.",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/institutional-adoption-token-demand/",
+      "description": "Canton Coin and Chainlink are finding their way into serious financial infrastructure. The harder question is whether that progress is creating economic demand for CC and LINK—or simply a better story to trade."
+    },
     {
       "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing.",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-holding-up/",
