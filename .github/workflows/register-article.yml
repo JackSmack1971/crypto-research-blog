@@ -1,0 +1,33 @@
+name: Register new article baselines
+on:
+  push:
+    paths:
+      - '.github/workflows/register-article.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  register:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Update approved content and metadata fixtures
+        run: |
+          python3 tests/signatures.py --write
+          python3 tests/test_site_structure.py
+          python3 -m unittest discover -s tests -p 'test_*.py'
+      - name: Commit regenerated fixtures
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tests/fixtures/content-signatures.json tests/fixtures/metadata.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Register editorial baselines for institutional adoption article"
+            git push
+          fi
