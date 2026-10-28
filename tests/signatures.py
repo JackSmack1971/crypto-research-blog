@@ -157,6 +157,9 @@ def editorial_body(html: str, *, strip_bar: bool) -> str:
     body = build.body_inner(html)
     if strip_bar:
         body = build.strip_site_bar(body)
+    # The fixed skip link is page navigation, not editorial article copy.
+    # Match its exact markup so unrelated link or text edits remain protected.
+    body = body.replace('<a class="skip-link" href="#article-content">Skip to article</a>', "")
     return body
 
 
