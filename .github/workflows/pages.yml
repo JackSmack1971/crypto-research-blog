@@ -78,15 +78,6 @@ jobs:
       - name: Browser regression checks
         run: npx playwright test
 
-      - name: Upload browser failure evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-results-${{ github.run_id }}
-          path: test-results
-          if-no-files-found: ignore
-          retention-days: 2
-
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: [build, styling-check]
