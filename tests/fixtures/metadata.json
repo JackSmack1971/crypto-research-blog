@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "solz-launch-investigation": {
+      "title": "Six Trades, Three Wallets, and a Question About SOLZ’s Launch",
+      "description": "An evidence-led investigation into SolZFoundation's October 29, 2026 Pump.fun launch: three perfectly matched buy-and-sell round trips, a disputed creator attribution, and an unproven privacy-bridge narrative.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
+      "og:title": "Six Trades. Three Wallets. One Unsettling Launch.",
+      "og:description": "An evidence-led investigation into SolZFoundation's October 29, 2026 Pump.fun launch: three perfectly matched buy-and-sell round trips, a disputed creator attribution, and an unproven privacy-bridge narrative.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
     "institutional-adoption-token-demand": {
       "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial. | Crypto Research",
       "description": "Canton Coin and Chainlink are building genuine institutional infrastructure. But CC issuance, LINK Reserve flows and BTC/ETH-adjusted prices tell a more demanding story about token value capture.",
@@ -113,6 +123,11 @@
   },
   "rss": [
     {
+      "title": "Six Trades. Three Wallets. One Unsettling Launch.",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
+      "description": "SolZFoundation arrived with a privacy-bridge story and a tiny Pump.fun market. Its first indexed trades tell a more immediate story: every observed buyer sold exactly what they bought."
+    },
+    {
       "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial.",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/institutional-adoption-token-demand/",
       "description": "Canton Coin and Chainlink are finding their way into serious financial infrastructure. The harder question is whether that progress is creating economic demand for CC and LINK—or simply a better story to trade."
@@ -162,15 +177,5 @@
       "link": "https://jacksmack1971.github.io/crypto-research-blog/crypto-buybacks/",
       "description": "EDGE and STONK put two very different revenue stories on the same balance sheet. The harder question is how much economic value survives the journey from customer fees to each circulating token—and what the market has already priced in."
     }
-  ],
-  "solz-launch-investigation": {
-    "title": "Six Trades, Three Wallets, and a Question About SOLZ’s Launch",
-    "description": "An evidence-led investigation into SolZFoundation's October 29, 2026 Pump.fun launch: three perfectly matched buy-and-sell round trips, a disputed creator attribution, and an unproven privacy-bridge narrative.",
-    "canonical": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
-    "og:title": "Six Trades. Three Wallets. One Unsettling Launch.",
-    "og:description": "An evidence-led investigation into SolZFoundation's October 29, 2026 Pump.fun launch: three perfectly matched buy-and-sell round trips, a disputed creator attribution, and an unproven privacy-bridge narrative.",
-    "og:url": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
-    "og:type": "article",
-    "twitter:card": "summary"
-  }
+  ]
 }
