@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-selloff-leverage": {
+      "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated. | Market Essay",
+      "description": "A close examination of Bitcoin's October 29, 2026 selloff: what funding, perpetual basis, aggressive order flow and exchange liquidation data reveal—and what they cannot prove.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selloff-leverage/",
+      "og:title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated.",
+      "og:description": "A close examination of Bitcoin's October 29, 2026 selloff: what funding, perpetual basis, aggressive order flow and exchange liquidation data reveal—and what they cannot prove.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selloff-leverage/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
     "solz-launch-investigation": {
       "title": "Six Trades, Three Wallets, and a Question About SOLZ’s Launch",
       "description": "An evidence-led investigation into SolZFoundation's October 29, 2026 Pump.fun launch: three perfectly matched buy-and-sell round trips, a disputed creator attribution, and an unproven privacy-bridge narrative.",
@@ -122,6 +132,11 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated.",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selloff-leverage/",
+      "description": "The October 29 decline carried the unmistakable fingerprints of forced long liquidations. But a closer look at funding, order flow and open interest suggests a market that shed leverage during the shock—and then began rebuilding it."
+    },
     {
       "title": "Six Trades. Three Wallets. One Unsettling Launch.",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
