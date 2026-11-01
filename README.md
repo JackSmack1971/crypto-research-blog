@@ -57,7 +57,7 @@ npx playwright install chromium
 npx playwright test
 ```
 
-The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Homepage screenshots use a stable list of article slugs declared in `tests/visual.spec.ts`; new articles are checked separately for homepage presence, overflow, keyboard focus, and accessibility, so routine publishing does not require a homepage screenshot refresh. Overflow, keyboard focus, and serious accessibility findings are checked on every article. CI installs the faces Chromium used for these baselines: Tinos, from the Croscore fonts, for the editorial serif stack, and Noto Sans for interface text. Aliasing that serif stack to Noto Serif changes wrapping and fails the screenshot check.
+The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Homepage screenshots use a stable list of article slugs declared in `tests/visual.spec.ts`; new articles are checked separately for homepage presence, overflow, keyboard focus, and accessibility, so routine publishing does not require a homepage screenshot refresh. Overflow, keyboard focus, and serious accessibility findings are checked on every article. CI installs the faces Chromium used to capture the baselines: Tinos, from the Croscore fonts, for the editorial serif stack, and Noto Sans for interface text. Aliasing that serif stack to Noto Serif changes wrapping and fails the screenshot check.
 
 A layout or content regression fails the suite on its own. Widening the homepage past the viewport fails `no unexpected overflow`. Changing a sentence in an essay fails the content signature. Both were confirmed before any shared CSS was adopted. The screenshot check does not accept a new image when it fails.
 
@@ -84,3 +84,7 @@ The site is published at <https://jacksmack1971.github.io/crypto-research-blog/>
 [`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds on every push and pull request and runs the content, structure, and browser checks in `styling-check`. A push to `main` uploads `dist/` with `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`. The deploy job waits for both `build` and `styling-check`, and its `if` still limits it to `main`. Pull requests do not publish.
 
 No paid host, database, or package install is required. The generator is [`build.py`](build.py) and uses only the Python standard library.
+
+## Netlify
+
+The repository includes [`netlify.toml`](netlify.toml), which runs `python3 build.py` and publishes `dist/`. Netlify's build command and publish directory should match those values. Deploy from the repository root with `main` as the production branch; do not publish the repository root, which has no generated `index.html`.
