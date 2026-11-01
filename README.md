@@ -46,6 +46,22 @@ Open `http://127.0.0.1:8000/`. The build fails if a page, image, or home-page li
 
 5. Commit the HTML, catalog, and refreshed text fixtures together, then push to `main`. GitHub Actions publishes only after the existing checks pass.
 
+### Featured images and social previews
+
+Save a real 1200 x 630 JPEG, PNG, or WebP file in `assets/featured/`.
+Add optional fields to the existing entry in `content/articles.json`:
+
+```json
+{ "image": "assets/featured/my-new-note.jpg", "image_alt": "Editorial illustration of the article thesis", "image_width": 1200, "image_height": 630, "image_mime_type": "image/jpeg" }
+```
+
+The build validates the file signature, image path, declared dimensions, MIME type, and alt text. It publishes the asset under `dist/assets/featured/`, generates absolute Open Graph and X image URLs, uses `summary_large_image`, and adds the image to BlogPosting schema. Legacy articles without images retain their previous rendering and metadata.
+
+The featured artwork stays separate from article visuals. Any preexisting source `og:image`, `twitter:image`, or conflicting `twitter:card` tags must be removed before registering an image; the build refuses conflicting metadata. The build does not insert an article hero or rewrite charts.
+
+The canonical hostname comes from `site.json`. Confirm that this URL matches the live domain before distributing links; social crawlers must be able to fetch both article and image over HTTPS. Social preview cache behavior requires post-deployment testing.
+
+For a ChatGPT publication ZIP: copy its HTML to `content/`, featured artwork to `assets/featured/`, and merge `publish.json` fields into the existing `content/articles.json` entry. Never replace the entire catalog with one manifest.
 ## Checks
 
 These checks guard the editorial text, charts, URLs, and layout. They are not part of the published site. `build.py` still uses only the Python standard library.

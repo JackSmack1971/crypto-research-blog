@@ -224,6 +224,33 @@ def load_site() -> dict:
     return site
 
 
+def featured_image(entry: dict, slug: str) -> dict | None:
+    """Validate the optional social image and return normalized metadata."""
+    name = str(entry.get("image") or "").strip()
+    if not name:
+        return None
+    if not re.fullmatch(r"assets/featured/[a-z0-9][a-z0-9-]*\.(?:jpg|jpeg|png|webp)", name):
+        die(f"{slug} image path must be under assets/featured/ and use a safe filename")
+    path = ROOT / name
+    if not path.is_file():
+        die(f"{slug} missing featured image: {name}")
+    raw = path.read_bytes()
+    ext = path.suffix.lower()
+    mime = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png" if ext == ".png" else "image/webp"
+    good = (raw.startswith(b"\xff\xd8\xff") and raw.endswith(b"\xff\xd9")) if mime == "image/jpeg" else (raw.startswith(b"\x89PNG\r\n\x1a\n") and b"IEND" in raw[-32:]) if mime == "image/png" else (raw.startswith(b"RIFF") and raw[8:12] == b"WEBP" and int.from_bytes(raw[4:8], "little") + 8 == len(raw))
+    if not good:
+        die(f"{slug} invalid featured image bytes: {name}")
+    alt = str(entry.get("image_alt") or "").strip()
+    if not alt:
+        die(f"{slug} image_alt is required")
+    width, height = entry.get("image_width", 1200), entry.get("image_height", 630)
+    if type(width) is not int or type(height) is not int or (width, height) != (1200, 630):
+        die(f"{slug} image dimensions must be 1200 x 630")
+    if entry.get("image_mime_type") and entry["image_mime_type"] != mime:
+        die(f"{slug} image_mime_type disagrees with image extension")
+    return {"path": name, "alt": alt, "width": width, "height": height, "mime": mime}
+
+
 def load_notes() -> list[dict]:
     raw = load_json(CONTENT / "articles.json")
     if not isinstance(raw, list) or not raw:
@@ -270,6 +297,7 @@ def load_notes() -> list[dict]:
                 "description": descriptions[0] if descriptions else dek,
                 "author": (meta_values(html, "author") or [None])[0],
                 "html": html,
+                "image": featured_image(entry, slug),
             }
         )
     notes.sort(key=lambda note: note["date"], reverse=True)
@@ -312,8 +340,20 @@ def article_extra_head(note: dict, site: dict) -> str:
         )
     if "og:url" not in head:
         parts.append(f'<meta property="og:url" content="{escape(url, quote=True)}">')
+    if note["image"]:
+        image = note["image"]
+        image_url = f"{site['url']}/{image['path']}"
+        for tag in ("og:image", "og:image:secure_url", "og:image:type", "og:image:width", "og:image:height", "og:image:alt", "twitter:image"):
+            if meta_values(html, tag):
+                die(f"{note['slug']} already defines {tag}; remove conflicting source metadata")
+        existing_card = meta_values(html, "twitter:card")
+        if existing_card and existing_card != ["summary_large_image"]:
+            die(f"{note['slug']} twitter:card conflicts with featured image")
+        for key, value in (("og:image", image_url), ("og:image:secure_url", image_url), ("og:image:type", image["mime"]), ("og:image:width", str(image["width"])), ("og:image:height", str(image["height"])), ("og:image:alt", image["alt"])):
+            parts.append(f'<meta property="{key}" content="{escape(value, quote=True)}">')
+        parts.append(f'<meta name="twitter:image" content="{escape(image_url, quote=True)}">')
     if "twitter:card" not in head:
-        parts.append('<meta name="twitter:card" content="summary">')
+        parts.append(f'<meta name="twitter:card" content="{"summary_large_image" if note["image"] else "summary"}">')
         parts.append(f'<meta name="twitter:title" content="{escape(title, quote=True)}">')
         parts.append(
             f'<meta name="twitter:description" content="{escape(description, quote=True)}">'
@@ -330,6 +370,8 @@ def article_extra_head(note: dict, site: dict) -> str:
         "author": {"@type": "Person" if note["author"] else "Organization", "name": author},
         "publisher": {"@type": "Organization", "name": site["title"]},
     }
+    if note["image"]:
+        posting["image"] = f"{site['url']}/{note['image']['path']}"
     if "application/ld+json" not in head:
         parts.append(json_ld(posting))
     return "\n".join(parts) + "\n"
@@ -654,6 +696,14 @@ def verify(notes: list[dict]) -> None:
             die(f"{note['slug']} is missing the link back home")
         if visible_text(strip_site_bar(body_inner(built))) != visible_text(body_inner(note["html"])):
             die(f"{note['slug']} body text changed during the build")
+        if note["image"]:
+            img = note["image"]
+            image_url = f"{load_site()['url']}/{img['path']}"
+            for key, expected in (("og:image", image_url), ("og:image:alt", img["alt"]), ("og:image:width", str(img["width"])), ("og:image:height", str(img["height"])), ("twitter:image", image_url), ("twitter:card", "summary_large_image")):
+                if meta_values(built, key) != [expected]:
+                    die(f"{note['slug']} incorrect {key} metadata")
+            if not (DIST / img["path"]).is_file():
+                die(f"{note['slug']} featured image was not copied")
         if image_srcs(built) != image_srcs(note["html"]):
             die(f"{note['slug']} images changed during the build")
         original_title = re.search(r"<title\b[^>]*>.*?</title>", note["html"], flags=re.I | re.S)
@@ -679,6 +729,10 @@ def main() -> None:
     DIST.mkdir()
     shutil.copyfile(FAVICON, DIST / "favicon.svg")
     shutil.copyfile(DESIGN_SYSTEM, DIST / "design-system.css")
+    for relative in sorted({n["image"]["path"] for n in notes if n["image"]}):
+        target = DIST / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT / relative, target)
     (DIST / ".nojekyll").write_text("", encoding="utf-8")
     for note in notes:
         out = DIST / note["slug"] / "index.html"
