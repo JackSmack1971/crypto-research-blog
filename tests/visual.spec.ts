@@ -11,6 +11,20 @@ const visualTargets = [
   ["venice-ai-privacy", "/venice-ai-privacy/"],
   ["aero-at-0-68", "/aero-at-0-68/"],
 ];
+const homepageBaselineSlugs = new Set([
+  "bitcoin-rebound-spot-demand",
+  "bitcoin-selloff-leverage",
+  "solz-launch-investigation",
+  "bitcoin-holding-up",
+  "aero-at-0-68",
+  "bitcoin-buying-imbalance",
+  "weft-first-week",
+  "virtual-alpha-risk",
+  "rune-quiet-repricing",
+  "pyth-revenue-unlock",
+  "venice-ai-privacy",
+  "crypto-buybacks",
+]);
 
 type KnownDefects = {
   notes: string;
@@ -92,11 +106,13 @@ test.describe("layout", () => {
   }
 });
 
-test("new institutional adoption article appears on the homepage", async ({ page }) => {
+test("every catalog article appears on the homepage", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
   await prepare(page, "/");
-  const link = page.locator('a.entry[href="institutional-adoption-token-demand/"]');
-  await expect(link).toBeVisible();
-  await expect(link).toContainText("Institutional Crypto Adoption Is Real.");
+  for (const article of articles) {
+    const link = page.locator(`a.entry[href="${article.slug}/"]`);
+    await expect(link, `homepage is missing ${article.slug}`).toBeVisible();
+  }
 });
 
 test.describe("keyboard", () => {
@@ -173,14 +189,16 @@ test.describe("visual baseline", () => {
         await page.setViewportSize({ width, height: 900 });
         await prepare(page, route);
         if (name === "home") {
-          // Keep the approved homepage paint baseline stable as new notes are published.
-          // New notes are checked separately for visibility, overflow, and accessibility.
-          await page.evaluate(() => {
-            const added = document.querySelector('a.entry[href="institutional-adoption-token-demand/"]');
-            if (added) added.remove();
+          // Keep homepage paint baselines focused on the approved article set.
+          // New notes are independently checked for homepage visibility, overflow, and accessibility.
+          await page.evaluate((slugs) => {
+            for (const entry of document.querySelectorAll<HTMLAnchorElement>("a.entry")) {
+              const slug = entry.getAttribute("href")?.replace(/\/$/, "");
+              if (!slug || !slugs.includes(slug)) entry.remove();
+            }
             const count = document.querySelector(".count");
             if (count) count.textContent = "9 notes";
-          });
+          }, [...homepageBaselineSlugs]);
         }
         await expect(page).toHaveScreenshot(`${name}-${width}.png`, {
           fullPage: true,

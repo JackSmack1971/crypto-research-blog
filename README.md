@@ -27,7 +27,15 @@ Edit `title` in [`site.json`](site.json). The home page, article bar, feed, and 
 
 `slug` becomes the URL (`/my-new-note/`). `date` is `YYYY-MM-DD` and controls the order: newest first. Notes from the same day keep the order they appear in the file. If you set `dek`, it must appear in the essay itself.
 
-3. Build and check locally:
+3. Refresh the committed text and metadata baselines with one command:
+
+```bash
+python3 scripts/refresh_fixtures.py
+```
+
+This regenerates `tests/fixtures/content-signatures.json` and `tests/fixtures/metadata.json` in catalog order. Review both diffs; run it only after an intentional article or metadata change.
+
+4. Build and check locally:
 
 ```bash
 python3 build.py
@@ -36,7 +44,7 @@ python3 -m http.server -d dist
 
 Open `http://127.0.0.1:8000/`. The build fails if a page, image, or home-page link does not resolve.
 
-4. Commit the new HTML file and the catalog entry, then push to `main`. GitHub Actions publishes the site. A new essay also needs its content signature and, if it is part of the screenshot set, a reviewed visual baseline. See below.
+5. Commit the HTML, catalog, and refreshed text fixtures together, then push to `main`. GitHub Actions publishes only after the existing checks pass.
 
 ## Checks
 
@@ -49,23 +57,23 @@ npx playwright install chromium
 npx playwright test
 ```
 
-The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Overflow, keyboard focus, and serious accessibility findings are checked on every article. CI installs the faces Chromium used for these baselines: Tinos, from the Croscore fonts, for the editorial serif stack, and Noto Sans for interface text. Aliasing that serif stack to Noto Serif changes wrapping and fails the screenshot check.
+The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Homepage screenshots use a stable list of article slugs declared in `tests/visual.spec.ts`; new articles are checked separately for homepage presence, overflow, keyboard focus, and accessibility, so routine publishing does not require a homepage screenshot refresh. Overflow, keyboard focus, and serious accessibility findings are checked on every article. CI installs the faces Chromium used for these baselines: Tinos, from the Croscore fonts, for the editorial serif stack, and Noto Sans for interface text. Aliasing that serif stack to Noto Serif changes wrapping and fails the screenshot check.
 
 A layout or content regression fails the suite on its own. Widening the homepage past the viewport fails `no unexpected overflow`. Changing a sentence in an essay fails the content signature. Both were confirmed before any shared CSS was adopted. The screenshot check does not accept a new image when it fails.
 
 ## Reviewing a visual change
 
-1. Run the suite and let the screenshot check fail.
-2. Open the expected image, the actual image, and the diff under `test-results/`. Confirm the change is the intended type or color, and that the words, tables, and charts are intact.
-3. Refresh only the screenshots you reviewed:
+1. Run the suite and let the screenshot check fail. CI now uploads `test-results/` as a `browser-failure-<run_id>` artifact, so the actual screenshots and diffs are available from the failed run without changing the workflow.
+2. Download and inspect the expected image, actual image, and diff. Confirm the visual change is intended and that text, tables, and charts remain intact.
+3. Refresh only the reviewed targets. For an intentional homepage design change, run:
 
 ```bash
-npx playwright test tests/visual.spec.ts -g "venice-ai-privacy @" --update-snapshots
+npm run test:browser:update:home
 ```
 
-4. Commit those PNGs with the CSS change. Do not raise `maxDiffPixelRatio`, and do not run `--update-snapshots` across the whole suite, to hide a diff.
+For another target, use `npx playwright test tests/visual.spec.ts --grep "<target> @" --update-snapshots` with that target’s exact test name. Commit the reviewed PNGs with the visual change. Do not raise `maxDiffPixelRatio` or update the whole screenshot suite to hide a diff.
 
-`python3 tests/signatures.py --write` and `python3 tests/test_site_structure.py` rewrite the content and metadata fixtures. Use them only when an editorial change is intentional.
+`python3 scripts/refresh_fixtures.py` regenerates both the content signature and metadata fixtures. It is an explicit local command; CI never refreshes baselines automatically.
 
 `tests/fixtures/known-defects.json` lists layout and accessibility issues that are already accepted. A new critical or serious issue fails the run. The Bitcoin holding-up small-caps contrast failure was fixed during the migration, so that list is empty.
 

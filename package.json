@@ -6,7 +6,8 @@
     "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:browser": "playwright test",
     "test:browser:update": "playwright test --update-snapshots",
-    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && playwright test"
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && playwright test",
+    "test:browser:update:home": "playwright test tests/visual.spec.ts --grep \"visual baseline › home @\" --update-snapshots"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
