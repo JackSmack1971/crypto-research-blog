@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-rebound-spot-demand": {
+      "title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
+      "description": "A skeptical examination of Bitcoin's October 2026 selloff, ETF outflows, perpetual futures funding, and hourly open-interest changes across Hyperliquid and Lighter—and why a rebound is not yet a reversal.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-spot-demand/",
+      "og:title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
+      "og:description": "A skeptical examination of Bitcoin's October 2026 selloff, ETF outflows, perpetual futures funding, and hourly open-interest changes across Hyperliquid and Lighter—and why a rebound is not yet a reversal.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-spot-demand/",
+      "og:type": "article",
+      "twitter:card": "summary"
+    },
     "bitcoin-selloff-leverage": {
       "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated. | Market Essay",
       "description": "A close examination of Bitcoin's October 29, 2026 selloff: what funding, perpetual basis, aggressive order flow and exchange liquidation data reveal—and what they cannot prove.",
@@ -132,6 +142,11 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-spot-demand/",
+      "description": "Leverage has been coming out of the market. ETF money has turned uneven. And the most important question about the bounce remains unanswered: who is actually doing the buying?"
+    },
     {
       "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated.",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selloff-leverage/",
