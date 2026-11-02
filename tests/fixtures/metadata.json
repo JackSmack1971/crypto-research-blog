@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-breadth-beneath-bitcoin": {
+      "title": "Bitcoin’s Price Is Not the Whole Market: The Weak Breadth Beneath Crypto’s November Open",
+      "description": "Bitcoin held near $77,762 on November 1, 2026, while perpetual-market breadth and altcoin returns told a more fragile story. An investigation of leverage, liquidations and evidence limits.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/crypto-breadth-beneath-bitcoin/",
+      "og:title": "Bitcoin’s Price Is Not the Whole Market",
+      "og:description": "Bitcoin’s relative resilience concealed weak crypto-market breadth and an uneven leverage picture ahead of November 2, 2026.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/crypto-breadth-beneath-bitcoin/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "small-cap-crypto-liquidity-illusion": {
       "title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings | Crypto Research",
       "description": "An evidence-led investigation of FLOAT, LEVERHEDGE, NETWORK, SAFU and DACITYCOIN, examining token controls, reported volume, holders and the limits of liquidity claims.",
@@ -152,6 +162,11 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Price Is Not the Whole Market",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/crypto-breadth-beneath-bitcoin/",
+      "description": "Ahead of November’s first US trading session, Bitcoin looked comparatively resilient. Beneath the headline price, market breadth, aggressive selling and uneven liquidation exposure told a less comfortable story."
+    },
     {
       "title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/small-cap-crypto-liquidity-illusion/",
