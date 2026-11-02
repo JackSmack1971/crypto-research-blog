@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-quiet-divergence": {
+      "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market | Market Investigation",
+      "description": "An evidence-led examination of Bitcoin, Ether and Solana’s relative returns, market breadth and daily technical signals through November 1, 2026.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-quiet-divergence/",
+      "og:title": "Bitcoin’s Quiet Lead in a Weak Crypto Market",
+      "og:description": "Bitcoin held up better than Ether and Solana, but its own momentum remained bearish. What the divergence reveals—and what it cannot prove.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-quiet-divergence/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "crypto-breadth-beneath-bitcoin": {
       "title": "Bitcoin’s Price Is Not the Whole Market: The Weak Breadth Beneath Crypto’s November Open",
       "description": "Bitcoin held near $77,762 on November 1, 2026, while perpetual-market breadth and altcoin returns told a more fragile story. An investigation of leverage, liquidations and evidence limits.",
@@ -162,6 +172,11 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-quiet-divergence/",
+      "description": "Ether and Solana fell further, while Bitcoin’s own trend deteriorated. Relative strength, it turns out, is not the same thing as a healthy market."
+    },
     {
       "title": "Bitcoin’s Price Is Not the Whole Market",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/crypto-breadth-beneath-bitcoin/",

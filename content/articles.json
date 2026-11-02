@@ -1,5 +1,17 @@
 [
   {
+    "slug": "bitcoin-quiet-divergence",
+    "source": "bitcoin-quiet-divergence.html",
+    "date": "2026-11-02",
+    "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market",
+    "dek": "Ether and Solana fell further, while Bitcoin’s own trend deteriorated. Relative strength, it turns out, is not the same thing as a healthy market.",
+    "image": "assets/featured/bitcoin-quiet-divergence.jpg",
+    "image_alt": "Editorial illustration of three abstract market paths separating, with a restrained gold path above teal and rust paths; not a factual price chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "crypto-breadth-beneath-bitcoin",
     "source": "crypto-breadth-beneath-bitcoin.html",
     "date": "2026-11-01",
