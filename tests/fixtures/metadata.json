@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "small-cap-crypto-liquidity-illusion": {
+      "title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings | Crypto Research",
+      "description": "An evidence-led investigation of FLOAT, LEVERHEDGE, NETWORK, SAFU and DACITYCOIN, examining token controls, reported volume, holders and the limits of liquidity claims.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/small-cap-crypto-liquidity-illusion/",
+      "og:title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings",
+      "og:description": "An evidence-led investigation of FLOAT, LEVERHEDGE, NETWORK, SAFU and DACITYCOIN, examining token controls, reported volume, holders and the limits of liquidity claims.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/small-cap-crypto-liquidity-illusion/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-rebound-spot-demand": {
       "title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
       "description": "A skeptical examination of Bitcoin's October 2026 selloff, ETF outflows, perpetual futures funding, and hourly open-interest changes across Hyperliquid and Lighter—and why a rebound is not yet a reversal.",
@@ -142,6 +152,11 @@
     }
   },
   "rss": [
+    {
+      "title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/small-cap-crypto-liquidity-illusion/",
+      "description": "Five token investigations exposed the gap between reported turnover, concentrated ownership and the price at which anyone could actually exit."
+    },
     {
       "title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-spot-demand/",
