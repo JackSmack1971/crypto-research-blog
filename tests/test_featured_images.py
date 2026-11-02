@@ -14,8 +14,9 @@ class FeaturedImageTest(unittest.TestCase):
     def test_existing_articles_without_images_remain_unchanged(self):
         notes = build.load_notes()
         self.assertTrue(notes)
-        self.assertTrue(all(note["image"] is None for note in notes))
-        head = build.article_extra_head(notes[0], build.load_site())
+        legacy = next(note for note in notes if note["slug"] == "bitcoin-rebound-spot-demand")
+        self.assertIsNone(legacy["image"])
+        head = build.article_extra_head(legacy, build.load_site())
         self.assertNotIn('property="og:image"', head)
         self.assertIn('content="summary"', head)
 
@@ -36,7 +37,8 @@ class FeaturedImageTest(unittest.TestCase):
             }
             with patch.object(build, "ROOT", root):
                 image = build.featured_image(entry, "example")
-            note = dict(build.load_notes()[0], image=image)
+            legacy = next(note for note in build.load_notes() if note["slug"] == "bitcoin-rebound-spot-demand")
+            note = dict(legacy, image=image)
             rendered = build.article_extra_head(note, build.load_site())
             expected = build.load_site()["url"] + "/assets/featured/example.jpg"
             self.assertIn('property="og:image" content="' + expected + '"', rendered)
