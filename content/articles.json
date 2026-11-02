@@ -1,5 +1,17 @@
 [
   {
+    "slug": "uni-rebound-liquidity-test",
+    "source": "uni-rebound-liquidity-test.html",
+    "date": "2026-11-02",
+    "title": "The Uniswap Rebound That Failed the Liquidity Test",
+    "dek": "A rally can be real and still be a bad trade. That distinction became the defining feature of Uniswap’s UNI token on November 2, when a plausible intraday recovery collided with deteriorating visible liquidity, limited room to the next resistance level, and fresh questions about the source of selling pressure.",
+    "image": "assets/featured/uni-rebound-liquidity-test.jpg",
+    "image_alt": "Editorial illustration of UNI market scrutiny alongside cautionary imagery referencing the reported Binance wallet exploit",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "bitcoin-quiet-divergence",
     "source": "bitcoin-quiet-divergence.html",
     "date": "2026-11-02",

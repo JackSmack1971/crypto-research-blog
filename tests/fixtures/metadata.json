@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "uni-rebound-liquidity-test": {
+      "title": "The Uniswap Rebound That Failed the Liquidity Test",
+      "description": "An investigation of UNI’s November 2 rebound, exchange order flow, liquidity fragility, exploit-related selling and why no long setup qualified.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/uni-rebound-liquidity-test/",
+      "og:title": "The Uniswap Rebound That Failed the Liquidity Test",
+      "og:description": "An investigation of UNI’s November 2 rebound, exchange order flow, liquidity fragility, exploit-related selling and why no long setup qualified.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/uni-rebound-liquidity-test/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-quiet-divergence": {
       "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market | Market Investigation",
       "description": "An evidence-led examination of Bitcoin, Ether and Solana’s relative returns, market breadth and daily technical signals through November 1, 2026.",
@@ -172,6 +182,11 @@
     }
   },
   "rss": [
+    {
+      "title": "The Uniswap Rebound That Failed the Liquidity Test",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/uni-rebound-liquidity-test/",
+      "description": "A rally can be real and still be a bad trade. That distinction became the defining feature of Uniswap’s UNI token on November 2, when a plausible intraday recovery collided with deteriorating visible liquidity, limited room to the next resistance level, and fresh questions about the source of selling pressure."
+    },
     {
       "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-quiet-divergence/",
