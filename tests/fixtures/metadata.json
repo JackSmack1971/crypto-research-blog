@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-recovery-beneath-resistance": {
+      "title": "Bitcoin’s Recovery Has a Ceiling—and the Evidence Is Still Divided",
+      "description": "Bitcoin rebounded beneath resistance on November 3, 2026. A closer look at momentum, derivatives positioning, volatility and the missing confirmation.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-recovery-beneath-resistance/",
+      "og:title": "Bitcoin’s Recovery Has a Ceiling—and the Evidence Is Still Divided",
+      "og:description": "Bitcoin rebounded beneath resistance on November 3, 2026. A closer look at momentum, derivatives positioning, volatility and the missing confirmation.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-recovery-beneath-resistance/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "uni-rebound-liquidity-test": {
       "title": "The Uniswap Rebound That Failed the Liquidity Test",
       "description": "An investigation of UNI’s November 2 rebound, exchange order flow, liquidity fragility, exploit-related selling and why no long setup qualified.",
@@ -182,6 +192,11 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Recovery Has a Ceiling—and the Evidence Is Still Divided",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-recovery-beneath-resistance/",
+      "description": "A November 3 market snapshot showed improving short-term momentum beneath stubborn higher-timeframe resistance. The harder question is what would turn a rebound into a genuine reversal."
+    },
     {
       "title": "The Uniswap Rebound That Failed the Liquidity Test",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/uni-rebound-liquidity-test/",
