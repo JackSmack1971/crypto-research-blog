@@ -27,6 +27,7 @@ DIST = ROOT / "dist"
 SITE_PATH = ROOT / "site.json"
 FAVICON = ROOT / "assets" / "favicon.svg"
 DESIGN_SYSTEM = ROOT / "assets" / "design-system.css"
+SEARCH_SCRIPT = ROOT / "assets" / "search.js"
 
 TITLE_SUFFIXES = (
     " | Crypto Market Analysis",
@@ -53,6 +54,20 @@ MONTHS = (
 )
 
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+TOPICS = {
+    "bitcoin": "Bitcoin",
+    "market-structure": "Market Structure",
+    "liquidity": "Liquidity",
+    "tokenomics": "Tokenomics",
+    "protocol-research": "Protocol Research",
+    "risk-verification": "Risk & Verification",
+}
+RESEARCH_TYPES = {
+    "market-snapshot": "Market Snapshot",
+    "investigative-analysis": "Investigative Analysis",
+    "token-due-diligence": "Token Due Diligence",
+}
+ASSET_RE = re.compile(r"^[A-Z0-9]{2,12}$")
 
 
 def die(message: str) -> None:
@@ -221,6 +236,14 @@ def load_site() -> dict:
         die("site.json description is empty")
     site["language"] = str(site.get("language") or "en").strip() or "en"
     site["url"] = site_url(site)
+    guid_origin = str(site.get("rss_guid_origin") or site["url"]).strip().rstrip("/")
+    if not guid_origin.startswith("https://"):
+        die("site.json rss_guid_origin must be an https URL")
+    site["rss_guid_origin"] = guid_origin
+    featured_slug = str(site.get("featured_slug") or "").strip()
+    if featured_slug and not SLUG_RE.fullmatch(featured_slug):
+        die("site.json featured_slug must be a valid article slug")
+    site["featured_slug"] = featured_slug
     return site
 
 
@@ -260,6 +283,20 @@ def load_notes() -> list[dict]:
     for index, entry in enumerate(raw, start=1):
         if not isinstance(entry, dict):
             die(f"articles.json item {index} must be an object")
+        topic = str(entry.get("topic") or "").strip()
+        research_type = str(entry.get("research_type") or "").strip()
+        assets = entry.get("assets")
+        if topic not in TOPICS:
+            die(f"article {index} topic must be one of: {', '.join(TOPICS)}")
+        if research_type not in RESEARCH_TYPES:
+            die(f"article {index} research_type must be one of: {', '.join(RESEARCH_TYPES)}")
+        if not isinstance(assets, list) or any(
+            not isinstance(asset, str) or not ASSET_RE.fullmatch(asset)
+            for asset in assets
+        ):
+            die(f"article {index} assets must be an array of uppercase ticker symbols")
+        if len(set(assets)) != len(assets):
+            die(f"article {index} assets must not contain duplicate tickers")
         slug = str(entry.get("slug") or "").strip()
         source_name = str(entry.get("source") or "").strip()
         date = str(entry.get("date") or "").strip()
@@ -298,10 +335,25 @@ def load_notes() -> list[dict]:
                 "author": (meta_values(html, "author") or [None])[0],
                 "html": html,
                 "image": featured_image(entry, slug),
+                "topic": topic,
+                "topic_label": TOPICS.get(topic, "Research"),
+                "assets": assets,
+                "research_type": research_type,
+                "research_type_label": RESEARCH_TYPES.get(research_type, "Research"),
             }
         )
     notes.sort(key=lambda note: note["date"], reverse=True)
     return notes
+
+
+def select_featured(notes: list[dict], site: dict) -> dict:
+    slug = site["featured_slug"]
+    if slug:
+        for note in notes:
+            if note["slug"] == slug:
+                return note
+        die(f"site.json featured_slug does not match an article: {slug}")
+    return notes[0]
 
 
 def json_ld(data: dict) -> str:
@@ -390,6 +442,16 @@ def article_bar(site: dict) -> str:
 
 def render_article(note: dict, site: dict) -> str:
     html = note["html"]
+    article_url = f'{site["url"]}/{note["slug"]}/'
+    # A configured domain change must replace canonicals embedded in source
+    # articles so every generated route agrees with the site's public origin.
+    html = re.sub(
+        r'<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*>',
+        f'<link rel="canonical" href="{escape(article_url, quote=True)}">',
+        html,
+        count=1,
+        flags=re.I,
+    )
     extra = article_extra_head(note, site)
     head_match = re.search(r"</head>", html, flags=re.I)
     if not head_match:
@@ -443,7 +505,7 @@ def page_shell(
   {json_ld(structured_data)}
 </head>
 <body class="cr-home">
-  <a class="skip" href="#notes">Skip to notes</a>
+  <a class="skip" href="#main-content">Skip to main content</a>
   {main}
 </body>
 </html>
@@ -452,18 +514,48 @@ def page_shell(
 
 def render_home(notes: list[dict], site: dict) -> str:
     count = len(notes)
-    label = "1 note" if count == 1 else f"{count} notes"
+    label = "1 investigation" if count == 1 else f"{count} investigations"
+    featured = select_featured(notes, site)
     entries = []
     for note in notes:
+        if note["slug"] == featured["slug"]:
+            continue
+        image = note["image"]
+        artwork = (
+            f'<img src="{escape(image["path"], quote=True)}" '
+            f'alt="{escape(image["alt"], quote=True)}" width="{image["width"]}" '
+            f'height="{image["height"]}" loading="lazy">'
+            if image
+            else '<span class="card-art-fallback" aria-hidden="true">IMN</span>'
+        )
+        tags = "".join(f'<span>{escape(asset)}</span>' for asset in note["assets"][:3])
         entries.append(
-            f"""<a class="entry" href="{escape(note["slug"], quote=True)}/">
-      <time datetime="{escape(note["date"], quote=True)}">{escape(pretty_date(note["date"]))}</time>
-      <div>
+            f"""<article class="entry" data-slug="{escape(note["slug"], quote=True)}" data-topic="{escape(note["topic"], quote=True)}" data-research-type="{escape(note["research_type"], quote=True)}" data-assets="{escape(' '.join(note["assets"]), quote=True)}">
+      <a class="entry-link" href="{escape(note["slug"], quote=True)}/">
+        <div class="entry-art">{artwork}</div>
+        <div class="entry-copy">
+          <p class="entry-meta"><span>{escape(note["topic_label"])}</span><time datetime="{escape(note["date"], quote=True)}">{escape(pretty_date(note["date"]))}</time></p>
         <h2>{escape(note["title"])}</h2>
         <p class="dek">{escape(note["dek"])}</p>
-      </div>
-    </a>"""
+        <p class="asset-tags">{tags}</p>
+        </div>
+      </a>
+    </article>"""
         )
+    feature_image = featured["image"]
+    feature_art = (
+        f'<img src="{escape(feature_image["path"], quote=True)}" '
+        f'alt="{escape(feature_image["alt"], quote=True)}" '
+        f'width="{feature_image["width"]}" height="{feature_image["height"]}">'
+        if feature_image
+        else '<span class="feature-art-fallback" aria-hidden="true">IMN</span>'
+    )
+    topics = "".join(f'<option value="{key}">{escape(value)}</option>' for key, value in TOPICS.items())
+    topic_links = "".join(
+        f'<a href="?topic={key}#notes">{escape(value)}</a>'
+        for key, value in TOPICS.items()
+    )
+    types = "".join(f'<option value="{key}">{escape(value)}</option>' for key, value in RESEARCH_TYPES.items())
     posts = [
         {
             "@type": "BlogPosting",
@@ -487,25 +579,47 @@ def render_home(notes: list[dict], site: dict) -> str:
     <div class="wrap">
       <div class="topline">
         {tagline}
-        <nav class="tools" aria-label="Subscribe"><a href="feed.xml">RSS</a></nav>
+        <nav class="tools" aria-label="Publication links"><a href="#notes">Research archive</a><a href="feed.xml">RSS</a></nav>
       </div>
       <h1>{escape(site["title"])}</h1>
       <p class="lede">{escape(site["description"])}</p>
+      <nav class="topic-nav" aria-label="Browse by topic">{topic_links}</nav>
     </div>
   </header>
-  <main id="notes">
-    <div class="wrap">
-      <p class="count">{label}</p>
+  <main id="main-content">
+    <div data-feature-slot hidden></div>
+    <section class="feature wrap" aria-labelledby="feature-title" data-featured-search data-slug="{escape(featured["slug"], quote=True)}" data-topic="{escape(featured["topic"], quote=True)}" data-research-type="{escape(featured["research_type"], quote=True)}" data-assets="{escape(' '.join(featured["assets"]), quote=True)}">
+      <a class="feature-art" href="{escape(featured["slug"], quote=True)}/" aria-label="Read featured investigation: {escape(featured["title"], quote=True)}">{feature_art}</a>
+      <div class="feature-copy">
+        <p class="section-label">Featured investigation <span aria-hidden="true">/</span> {escape(featured["topic_label"])}</p>
+        <h2 id="feature-title"><a href="{escape(featured["slug"], quote=True)}/">{escape(featured["title"])}</a></h2>
+        <p class="dek">{escape(featured["dek"])}</p>
+        <p class="entry-meta"><time datetime="{escape(featured["date"], quote=True)}">{escape(pretty_date(featured["date"]))}</time><span>{escape(featured["research_type_label"])}</span></p>
+      </div>
+    </section>
+    <section class="archive wrap" id="notes" aria-labelledby="archive-title">
+      <div class="archive-heading"><div><p class="section-label">Browse the archive</p><h2 id="archive-title">Research, with receipts.</h2></div><p class="count" data-result-count>{label}</p></div>
+      <form class="filters" role="search" aria-label="Search research" data-search-form>
+        <label class="search-field"><span class="sr-only">Search by topic, asset ticker, or title</span><input type="search" name="q" placeholder="Search topics, tickers, or titles" autocomplete="off"></label>
+        <label><span class="sr-only">Filter by topic</span><select name="topic"><option value="">All topics</option>{topics}</select></label>
+        <label><span class="sr-only">Filter by research type</span><select name="research_type"><option value="">All research types</option>{types}</select></label>
+        <button type="reset">Clear</button>
+      </form>
+      <p class="search-status" aria-live="polite" data-search-status>{label}</p>
+      <div class="archive-grid" data-archive-grid>
       {"".join(entries)}
-    </div>
+      </div>
+      <p class="empty-state" data-empty-state hidden>No investigations match those filters. Try a broader search.</p>
+    </section>
+    <section class="method wrap" aria-labelledby="method-title"><p class="section-label">How we work</p><h2 id="method-title">Evidence first. Conviction second.</h2><p>These independent market notes separate observable data from interpretation, flag uncertainty, and show what would change the thesis. A useful investigation can end with a trade idea, a failed setup, or no trade at all.</p></section>
   </main>
   <footer>
     <div class="wrap colophon">
       <p>{escape(site["title"])}</p>
-      <a href="feed.xml">Subscribe via RSS</a>
+      <div><a href="#notes">Browse the archive</a><a href="feed.xml">Subscribe via RSS</a></div>
     </div>
   </footer>"""
-    return page_shell(
+    home = page_shell(
         site,
         document_title=site["title"],
         description=site["description"],
@@ -513,6 +627,8 @@ def render_home(notes: list[dict], site: dict) -> str:
         main=main,
         structured_data=structured_data,
     )
+    script_tag = '<script src="search.js" defer></script>'
+    return home.replace("</body>", f"  {script_tag}\n</body>")
 
 
 def render_404(site: dict) -> str:
@@ -538,13 +654,14 @@ def render_feed(notes: list[dict], site: dict) -> str:
             tzinfo=timezone.utc, hour=18
         ) - timedelta(seconds=index)
         link = f"{site['url']}/{note['slug']}/"
+        guid = f"{site['rss_guid_origin']}/{note['slug']}/"
         items.append(
             "\n".join(
                 [
                     "    <item>",
                     f"      <title>{xml_escape(note['title'])}</title>",
                     f"      <link>{xml_escape(link)}</link>",
-                    f'      <guid isPermaLink="true">{xml_escape(link)}</guid>',
+                    f'      <guid isPermaLink="true">{xml_escape(guid)}</guid>',
                     f"      <pubDate>{format_datetime(published)}</pubDate>",
                     f"      <description><![CDATA[{note['dek'].replace(']]>', ']]]]><![CDATA[>')}]]></description>",
                     "    </item>",
@@ -729,6 +846,7 @@ def main() -> None:
     DIST.mkdir()
     shutil.copyfile(FAVICON, DIST / "favicon.svg")
     shutil.copyfile(DESIGN_SYSTEM, DIST / "design-system.css")
+    shutil.copyfile(SEARCH_SCRIPT, DIST / "search.js")
     for relative in sorted({n["image"]["path"] for n in notes if n["image"]}):
         target = DIST / relative
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -743,6 +861,20 @@ def main() -> None:
     (DIST / "feed.xml").write_text(render_feed(notes, site), encoding="utf-8")
     (DIST / "sitemap.xml").write_text(render_sitemap(notes, site), encoding="utf-8")
     (DIST / "robots.txt").write_text(render_robots(site), encoding="utf-8")
+    index_data = []
+    for note in notes:
+        index_data.append(
+            {
+                "slug": note["slug"],
+                "title": note["title"],
+                "dek": note["dek"],
+                "topic": note["topic"],
+                "assets": note["assets"],
+                "research_type": note["research_type"],
+                "date": note["date"],
+            }
+        )
+    (DIST / "search-index.json").write_text(json.dumps(index_data, ensure_ascii=False).replace("<", "\\u003c"), encoding="utf-8")
     verify(notes)
     print(f"Built {len(notes)} notes → {DIST.relative_to(ROOT)}")
     for note in notes:

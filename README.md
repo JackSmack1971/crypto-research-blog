@@ -1,6 +1,6 @@
-# Crypto Research
+# Independent Market Notes
 
-Static site for independent crypto market notes. The published site is [jacksmack1971.github.io/crypto-research-blog](https://jacksmack1971.github.io/crypto-research-blog/).
+Static site for independent crypto market notes. The canonical publication URL is [independent-market-notes.netlify.app](https://independent-market-notes.netlify.app/). GitHub Pages remains available as a secondary deployment.
 
 Each essay stays a standalone HTML page, with its own styles and images. The build adds a home page, a small “back to all notes” bar, an RSS feed, and basic social meta tags. It does not rewrite the prose.
 
@@ -8,7 +8,7 @@ Each essay stays a standalone HTML page, with its own styles and images. The bui
 
 ## Change the site title
 
-Edit `title` in [`site.json`](site.json). The home page, article bar, feed, and meta tags all read that file. `url` is the public site origin used for canonical links, the sitemap, and RSS. Navigation links are relative, so the pages still work if the site is served from the `/crypto-research-blog/` project path.
+Edit `title` in [`site.json`](site.json). The home page, article bar, feed, and meta tags all read that file. `url` is the canonical public origin used for canonical links, the sitemap, and RSS permalinks. `rss_guid_origin` preserves stable RSS item identifiers when the canonical domain changes. `featured_slug` selects the lead investigation; when empty, the newest article is used. Navigation links are relative, so both Netlify and the GitHub Pages project path continue to work.
 
 ## Add a note
 
@@ -21,11 +21,16 @@ Edit `title` in [`site.json`](site.json). The home page, article bar, feed, and 
   "source": "my-new-note.html",
   "date": "2026-11-02",
   "title": "Optional. Defaults to the document title.",
-  "dek": "Optional. A sentence copied from the essay. Defaults to the meta description."
+  "dek": "Optional. A sentence copied from the essay. Defaults to the meta description.",
+  "topic": "liquidity",
+  "assets": ["UNI"],
+  "research_type": "market-snapshot"
 }
 ```
 
 `slug` becomes the URL (`/my-new-note/`). `date` is `YYYY-MM-DD` and controls the order: newest first. Notes from the same day keep the order they appear in the file. If you set `dek`, it must appear in the essay itself.
+
+`topic`, `assets`, and `research_type` are required. They power the archive filters and generated `search-index.json`. Topics are `bitcoin`, `market-structure`, `liquidity`, `tokenomics`, `protocol-research`, and `risk-verification`. Research types are `market-snapshot`, `investigative-analysis`, and `token-due-diligence`. Use uppercase ticker symbols for `assets`; the build rejects missing or unapproved values.
 
 3. Refresh the committed text and metadata baselines with one command:
 
@@ -95,7 +100,7 @@ For another target, use `npx playwright test tests/visual.spec.ts --grep "<targe
 
 ## How publishing works
 
-The site is published at <https://jacksmack1971.github.io/crypto-research-blog/>. Pages is set to **GitHub Actions** (**Settings → Pages → Build and deployment → Source**).
+The canonical site is <https://independent-market-notes.netlify.app/>. The repository also retains its GitHub Pages deployment at <https://jacksmack1971.github.io/crypto-research-blog/>. Pages is set to **GitHub Actions** (**Settings → Pages → Build and deployment → Source**).
 
 [`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds on every push and pull request and runs the content, structure, and browser checks in `styling-check`. A push to `main` uploads `dist/` with `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`. The deploy job waits for both `build` and `styling-check`, and its `if` still limits it to `main`. Pull requests do not publish.
 

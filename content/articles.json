@@ -9,7 +9,12 @@
     "image_width": 1200,
     "image_height": 630,
     "image_mime_type": "image/jpeg",
-    "image": "assets/featured/deepbook-supply-transparency.jpg"
+    "image": "assets/featured/deepbook-supply-transparency.jpg",
+    "topic": "protocol-research",
+    "assets": [
+      "DEEP"
+    ],
+    "research_type": "token-due-diligence"
   },
   {
     "slug": "bitcoin-recovery-beneath-resistance",
@@ -21,7 +26,12 @@
     "image_width": 1200,
     "image_height": 630,
     "image_mime_type": "image/jpeg",
-    "image": "assets/featured/bitcoin-recovery-beneath-resistance.jpg"
+    "image": "assets/featured/bitcoin-recovery-beneath-resistance.jpg",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "market-snapshot"
   },
   {
     "slug": "uni-rebound-liquidity-test",
@@ -33,7 +43,12 @@
     "image_alt": "Editorial illustration of UNI market scrutiny alongside cautionary imagery referencing the reported Binance wallet exploit",
     "image_width": 1200,
     "image_height": 630,
-    "image_mime_type": "image/jpeg"
+    "image_mime_type": "image/jpeg",
+    "topic": "liquidity",
+    "assets": [
+      "UNI"
+    ],
+    "research_type": "market-snapshot"
   },
   {
     "slug": "bitcoin-quiet-divergence",
@@ -45,7 +60,14 @@
     "image_alt": "Editorial illustration of three abstract market paths separating, with a restrained gold path above teal and rust paths; not a factual price chart.",
     "image_width": 1200,
     "image_height": 630,
-    "image_mime_type": "image/jpeg"
+    "image_mime_type": "image/jpeg",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL"
+    ],
+    "research_type": "market-snapshot"
   },
   {
     "slug": "crypto-breadth-beneath-bitcoin",
@@ -57,7 +79,14 @@
     "image_alt": "Abstract editorial illustration: an illuminated circular opening split by a jagged amber fault line amid layered market-like bands, symbolizing the divide between Bitcoin price and underlying market breadth.",
     "image_width": 1200,
     "image_height": 630,
-    "image_mime_type": "image/jpeg"
+    "image_mime_type": "image/jpeg",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL"
+    ],
+    "research_type": "market-snapshot"
   },
   {
     "slug": "small-cap-crypto-liquidity-illusion",
@@ -69,97 +98,175 @@
     "image_alt": "Editorial illustration of many trading-flow lines narrowing through a small opening, representing the gap between reported crypto volume and usable liquidity.",
     "image_width": 1200,
     "image_height": 630,
-    "image_mime_type": "image/jpeg"
+    "image_mime_type": "image/jpeg",
+    "topic": "liquidity",
+    "assets": [
+      "FLOAT",
+      "LEVERHEDGE",
+      "NETWORK",
+      "SAFU",
+      "DACITYCOIN"
+    ],
+    "research_type": "investigative-analysis"
   },
   {
     "slug": "bitcoin-rebound-spot-demand",
     "source": "bitcoin-rebound-spot-demand.html",
     "date": "2026-11-01",
     "title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
-    "dek": "Leverage has been coming out of the market. ETF money has turned uneven. And the most important question about the bounce remains unanswered: who is actually doing the buying?"
+    "dek": "Leverage has been coming out of the market. ETF money has turned uneven. And the most important question about the bounce remains unanswered: who is actually doing the buying?",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "market-snapshot"
   },
   {
     "slug": "bitcoin-selloff-leverage",
     "source": "bitcoin-selloff-leverage.html",
     "date": "2026-10-29",
     "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated.",
-    "dek": "The October 29 decline carried the unmistakable fingerprints of forced long liquidations. But a closer look at funding, order flow and open interest suggests a market that shed leverage during the shock—and then began rebuilding it."
+    "dek": "The October 29 decline carried the unmistakable fingerprints of forced long liquidations. But a closer look at funding, order flow and open interest suggests a market that shed leverage during the shock—and then began rebuilding it.",
+    "topic": "market-structure",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "market-snapshot"
   },
   {
     "slug": "solz-launch-investigation",
     "source": "solz-launch-investigation.html",
     "date": "2026-10-29",
     "title": "Six Trades. Three Wallets. One Unsettling Launch.",
-    "dek": "SolZFoundation arrived with a privacy-bridge story and a tiny Pump.fun market. Its first indexed trades tell a more immediate story: every observed buyer sold exactly what they bought."
+    "dek": "SolZFoundation arrived with a privacy-bridge story and a tiny Pump.fun market. Its first indexed trades tell a more immediate story: every observed buyer sold exactly what they bought.",
+    "topic": "risk-verification",
+    "assets": [
+      "SOLZ"
+    ],
+    "research_type": "investigative-analysis"
   },
   {
     "slug": "institutional-adoption-token-demand",
     "source": "institutional-adoption-token-demand.html",
     "date": "2026-10-28",
     "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial.",
-    "dek": "Canton Coin and Chainlink are finding their way into serious financial infrastructure. The harder question is whether that progress is creating economic demand for CC and LINK—or simply a better story to trade."
+    "dek": "Canton Coin and Chainlink are finding their way into serious financial infrastructure. The harder question is whether that progress is creating economic demand for CC and LINK—or simply a better story to trade.",
+    "topic": "protocol-research",
+    "assets": [
+      "CC",
+      "LINK"
+    ],
+    "research_type": "token-due-diligence"
   },
   {
     "slug": "bitcoin-holding-up",
     "source": "bitcoin-holding-up.html",
     "date": "2026-10-27",
     "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing.",
-    "dek": "A resilient Bitcoin, weaker altcoins, and violent pockets of turnover make a deceptively calm crypto market. The deeper story is in the divergence between relative strength and absolute momentum."
+    "dek": "A resilient Bitcoin, weaker altcoins, and violent pockets of turnover make a deceptively calm crypto market. The deeper story is in the divergence between relative strength and absolute momentum.",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL"
+    ],
+    "research_type": "market-snapshot"
   },
   {
     "slug": "aero-at-0-68",
     "source": "aero-at-0-68.html",
     "date": "2026-10-26",
     "title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't.",
-    "dek": "AERO is testing the boundary between an ordinary post-launch shakeout and a deeper repricing. The chart is beginning to stabilize, but the economics tell a more complicated story."
+    "dek": "AERO is testing the boundary between an ordinary post-launch shakeout and a deeper repricing. The chart is beginning to stabilize, but the economics tell a more complicated story.",
+    "topic": "tokenomics",
+    "assets": [
+      "AERO"
+    ],
+    "research_type": "token-due-diligence"
   },
   {
     "slug": "bitcoin-buying-imbalance",
     "source": "bitcoin-buying-imbalance.html",
     "date": "2026-10-26",
     "title": "Bitcoin’s $1.2 Million Buying Imbalance—and the Reversal It Hasn’t Proven",
-    "dek": "On October 26, the crypto market looked calm on the surface. Beneath that calm, spot buyers and derivatives traders were telling a more complicated story."
+    "dek": "On October 26, the crypto market looked calm on the surface. Beneath that calm, spot buyers and derivatives traders were telling a more complicated story.",
+    "topic": "market-structure",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "market-snapshot"
   },
   {
     "slug": "weft-first-week",
     "source": "weft-first-week.html",
     "date": "2026-10-23",
     "title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit?",
-    "dek": "Weft Finance has a functioning market, a public tokenomics story and a strikingly concentrated supply. The harder questions are about what the ledger proves—and what it doesn’t."
+    "dek": "Weft Finance has a functioning market, a public tokenomics story and a strikingly concentrated supply. The harder questions are about what the ledger proves—and what it doesn’t.",
+    "topic": "tokenomics",
+    "assets": [
+      "WEFT"
+    ],
+    "research_type": "token-due-diligence"
   },
   {
     "slug": "virtual-alpha-risk",
     "source": "virtual-alpha-risk.html",
     "date": "2026-10-23",
     "title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story",
-    "dek": "A short-window momentum model looks surprisingly good. The underlying token is also unusually volatile, heavily exposed to Bitcoin, and far from passing the tests that would make that result trustworthy."
+    "dek": "A short-window momentum model looks surprisingly good. The underlying token is also unusually volatile, heavily exposed to Bitcoin, and far from passing the tests that would make that result trustworthy.",
+    "topic": "risk-verification",
+    "assets": [
+      "VIRTUAL"
+    ],
+    "research_type": "investigative-analysis"
   },
   {
     "slug": "rune-quiet-repricing",
     "source": "rune-quiet-repricing.html",
     "date": "2026-10-22",
     "title": "RUNE’s Quiet Repricing Problem: A Real Network, an Unsettled Token Thesis",
-    "dek": "THORChain is still moving meaningful value across chains. Its token is a fraction of its former price. The gap is intriguing—but the case for a recovery is more complicated than either number suggests."
+    "dek": "THORChain is still moving meaningful value across chains. Its token is a fraction of its former price. The gap is intriguing—but the case for a recovery is more complicated than either number suggests.",
+    "topic": "protocol-research",
+    "assets": [
+      "RUNE"
+    ],
+    "research_type": "token-due-diligence"
   },
   {
     "slug": "pyth-revenue-unlock",
     "source": "pyth-revenue-unlock.html",
     "date": "2026-10-21",
     "title": "PYTH’s Revenue Breakthrough Meets a 2.125 Billion Token Unlock",
-    "dek": "A real financial-data business is emerging behind PYTH. The harder question is whether its new token-buying mechanism can mature quickly enough to matter before May 2027."
+    "dek": "A real financial-data business is emerging behind PYTH. The harder question is whether its new token-buying mechanism can mature quickly enough to matter before May 2027.",
+    "topic": "tokenomics",
+    "assets": [
+      "PYTH"
+    ],
+    "research_type": "token-due-diligence"
   },
   {
     "slug": "venice-ai-privacy",
     "source": "venice-ai-privacy.html",
     "date": "2026-10-21",
     "title": "Venice AI’s Privacy Promise Has a Verification Problem",
-    "dek": "The encryption is meaningful. The assurances are not uniform. And even a genuinely private AI product still has to prove why its token should capture the value."
+    "dek": "The encryption is meaningful. The assurances are not uniform. And even a genuinely private AI product still has to prove why its token should capture the value.",
+    "topic": "risk-verification",
+    "assets": [
+      "VVV"
+    ],
+    "research_type": "investigative-analysis"
   },
   {
     "slug": "crypto-buybacks",
     "source": "crypto-buybacks.html",
     "date": "2026-10-21",
     "title": "Who Actually Benefits From Crypto Buybacks? EDGE, STONK and the Missing Ledger",
-    "dek": "EDGE and STONK put two very different revenue stories on the same balance sheet. The harder question is how much economic value survives the journey from customer fees to each circulating token—and what the market has already priced in."
+    "dek": "EDGE and STONK put two very different revenue stories on the same balance sheet. The harder question is how much economic value survives the journey from customer fees to each circulating token—and what the market has already priced in.",
+    "topic": "tokenomics",
+    "assets": [
+      "EDGE",
+      "STONK"
+    ],
+    "research_type": "token-due-diligence"
   }
 ]

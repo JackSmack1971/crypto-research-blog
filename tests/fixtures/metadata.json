@@ -1,11 +1,11 @@
 {
   "home": {
-    "title": "Crypto Research",
+    "title": "Independent Market Notes",
     "description": "Independent market research on digital assets: token economics, market structure, and the evidence behind the trade.",
-    "canonical": "https://jacksmack1971.github.io/crypto-research-blog/",
-    "og:title": "Crypto Research",
+    "canonical": "https://independent-market-notes.netlify.app/",
+    "og:title": "Independent Market Notes",
     "og:description": "Independent market research on digital assets: token economics, market structure, and the evidence behind the trade.",
-    "og:url": "https://jacksmack1971.github.io/crypto-research-blog/",
+    "og:url": "https://independent-market-notes.netlify.app/",
     "og:type": "website",
     "twitter:card": "summary"
   },
@@ -13,190 +13,190 @@
     "deepbook-supply-transparency": {
       "title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
       "description": "DeepBook’s largest reported DEEP holder raises unresolved questions about treasury custody, circulating supply, vesting restrictions, and token valuation.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/deepbook-supply-transparency/",
+      "canonical": "https://independent-market-notes.netlify.app/deepbook-supply-transparency/",
       "og:title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
       "og:description": "A reported 5.27-billion-token holder, conflicting circulation figures, and an unanswered question about who can move DEEP.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/deepbook-supply-transparency/",
+      "og:url": "https://independent-market-notes.netlify.app/deepbook-supply-transparency/",
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
     "bitcoin-recovery-beneath-resistance": {
       "title": "Bitcoin’s Recovery Has a Ceiling—and the Evidence Is Still Divided",
       "description": "Bitcoin rebounded beneath resistance on November 3, 2026. A closer look at momentum, derivatives positioning, volatility and the missing confirmation.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-recovery-beneath-resistance/",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-recovery-beneath-resistance/",
       "og:title": "Bitcoin’s Recovery Has a Ceiling—and the Evidence Is Still Divided",
       "og:description": "Bitcoin rebounded beneath resistance on November 3, 2026. A closer look at momentum, derivatives positioning, volatility and the missing confirmation.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-recovery-beneath-resistance/",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-recovery-beneath-resistance/",
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
     "uni-rebound-liquidity-test": {
       "title": "The Uniswap Rebound That Failed the Liquidity Test",
       "description": "An investigation of UNI’s November 2 rebound, exchange order flow, liquidity fragility, exploit-related selling and why no long setup qualified.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/uni-rebound-liquidity-test/",
+      "canonical": "https://independent-market-notes.netlify.app/uni-rebound-liquidity-test/",
       "og:title": "The Uniswap Rebound That Failed the Liquidity Test",
       "og:description": "An investigation of UNI’s November 2 rebound, exchange order flow, liquidity fragility, exploit-related selling and why no long setup qualified.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/uni-rebound-liquidity-test/",
+      "og:url": "https://independent-market-notes.netlify.app/uni-rebound-liquidity-test/",
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
     "bitcoin-quiet-divergence": {
       "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market | Market Investigation",
       "description": "An evidence-led examination of Bitcoin, Ether and Solana’s relative returns, market breadth and daily technical signals through November 1, 2026.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-quiet-divergence/",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-quiet-divergence/",
       "og:title": "Bitcoin’s Quiet Lead in a Weak Crypto Market",
       "og:description": "Bitcoin held up better than Ether and Solana, but its own momentum remained bearish. What the divergence reveals—and what it cannot prove.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-quiet-divergence/",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-quiet-divergence/",
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
     "crypto-breadth-beneath-bitcoin": {
       "title": "Bitcoin’s Price Is Not the Whole Market: The Weak Breadth Beneath Crypto’s November Open",
       "description": "Bitcoin held near $77,762 on November 1, 2026, while perpetual-market breadth and altcoin returns told a more fragile story. An investigation of leverage, liquidations and evidence limits.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/crypto-breadth-beneath-bitcoin/",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-breadth-beneath-bitcoin/",
       "og:title": "Bitcoin’s Price Is Not the Whole Market",
       "og:description": "Bitcoin’s relative resilience concealed weak crypto-market breadth and an uneven leverage picture ahead of November 2, 2026.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/crypto-breadth-beneath-bitcoin/",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-breadth-beneath-bitcoin/",
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
     "small-cap-crypto-liquidity-illusion": {
       "title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings | Crypto Research",
       "description": "An evidence-led investigation of FLOAT, LEVERHEDGE, NETWORK, SAFU and DACITYCOIN, examining token controls, reported volume, holders and the limits of liquidity claims.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/small-cap-crypto-liquidity-illusion/",
+      "canonical": "https://independent-market-notes.netlify.app/small-cap-crypto-liquidity-illusion/",
       "og:title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings",
       "og:description": "An evidence-led investigation of FLOAT, LEVERHEDGE, NETWORK, SAFU and DACITYCOIN, examining token controls, reported volume, holders and the limits of liquidity claims.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/small-cap-crypto-liquidity-illusion/",
+      "og:url": "https://independent-market-notes.netlify.app/small-cap-crypto-liquidity-illusion/",
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
     "bitcoin-rebound-spot-demand": {
       "title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
       "description": "A skeptical examination of Bitcoin's October 2026 selloff, ETF outflows, perpetual futures funding, and hourly open-interest changes across Hyperliquid and Lighter—and why a rebound is not yet a reversal.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-spot-demand/",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-rebound-spot-demand/",
       "og:title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
       "og:description": "A skeptical examination of Bitcoin's October 2026 selloff, ETF outflows, perpetual futures funding, and hourly open-interest changes across Hyperliquid and Lighter—and why a rebound is not yet a reversal.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-spot-demand/",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-rebound-spot-demand/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "bitcoin-selloff-leverage": {
       "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated. | Market Essay",
       "description": "A close examination of Bitcoin's October 29, 2026 selloff: what funding, perpetual basis, aggressive order flow and exchange liquidation data reveal—and what they cannot prove.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selloff-leverage/",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-selloff-leverage/",
       "og:title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated.",
       "og:description": "A close examination of Bitcoin's October 29, 2026 selloff: what funding, perpetual basis, aggressive order flow and exchange liquidation data reveal—and what they cannot prove.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selloff-leverage/",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-selloff-leverage/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "solz-launch-investigation": {
       "title": "Six Trades, Three Wallets, and a Question About SOLZ’s Launch",
       "description": "An evidence-led investigation into SolZFoundation's October 29, 2026 Pump.fun launch: three perfectly matched buy-and-sell round trips, a disputed creator attribution, and an unproven privacy-bridge narrative.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
+      "canonical": "https://independent-market-notes.netlify.app/solz-launch-investigation/",
       "og:title": "Six Trades. Three Wallets. One Unsettling Launch.",
       "og:description": "An evidence-led investigation into SolZFoundation's October 29, 2026 Pump.fun launch: three perfectly matched buy-and-sell round trips, a disputed creator attribution, and an unproven privacy-bridge narrative.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
+      "og:url": "https://independent-market-notes.netlify.app/solz-launch-investigation/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "institutional-adoption-token-demand": {
       "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial. | Crypto Research",
       "description": "Canton Coin and Chainlink are building genuine institutional infrastructure. But CC issuance, LINK Reserve flows and BTC/ETH-adjusted prices tell a more demanding story about token value capture.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/institutional-adoption-token-demand/",
+      "canonical": "https://independent-market-notes.netlify.app/institutional-adoption-token-demand/",
       "og:title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial.",
       "og:description": "Canton Coin and Chainlink are building genuine institutional infrastructure. But CC issuance, LINK Reserve flows and BTC/ETH-adjusted prices tell a more demanding story about token value capture.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/institutional-adoption-token-demand/",
+      "og:url": "https://independent-market-notes.netlify.app/institutional-adoption-token-demand/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "bitcoin-holding-up": {
       "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing. — October 2026 Crypto Market Essay",
       "description": "Bitcoin's relative resilience masks deteriorating momentum, highly correlated altcoins, and concentrated volume shocks. An evidence-led October 2026 crypto market essay.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-holding-up/",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-holding-up/",
       "og:title": "Bitcoin Is Holding Up. The Tape Is Less Convincing.",
       "og:description": "Bitcoin's relative resilience masks deteriorating momentum, highly correlated altcoins, and concentrated volume shocks. An evidence-led October 2026 crypto market essay.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-holding-up/",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-holding-up/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "aero-at-0-68": {
       "title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't. | Crypto Market Analysis",
       "description": "An independent examination of AERO after the Aerodrome–Velodrome merger: broken daily structure, support near $0.65, falling revenue yield, token migration risks, and what would signal a genuine recovery.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/aero-at-0-68/",
+      "canonical": "https://independent-market-notes.netlify.app/aero-at-0-68/",
       "og:title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't.",
       "og:description": "An independent examination of AERO after the Aerodrome–Velodrome merger: broken daily structure, support near $0.65, falling revenue yield, token migration risks, and what would signal a genuine recovery.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/aero-at-0-68/",
+      "og:url": "https://independent-market-notes.netlify.app/aero-at-0-68/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "bitcoin-buying-imbalance": {
       "title": "Bitcoin’s $1.2 Million Buying Imbalance—and the Reversal It Hasn’t Proven",
       "description": "A close reading of October 26, 2026 crypto prices, derivatives positioning and signed Bitcoin spot trades reveals a buying imbalance—and the limits of calling it accumulation.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-buying-imbalance/",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-buying-imbalance/",
       "og:title": "Bitcoin’s $1.2 Million Buying Imbalance—and the Reversal It Hasn’t Proven",
       "og:description": "A close reading of October 26, 2026 crypto prices, derivatives positioning and signed Bitcoin spot trades reveals a buying imbalance—and the limits of calling it accumulation.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-buying-imbalance/",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-buying-imbalance/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "weft-first-week": {
       "title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit? | Independent Crypto Analysis",
       "description": "A forensic examination of Weft Finance (WEFT): its concentrated Solana token supply, fragmented Meteora liquidity, volatile first week, and the unfinished evidence behind buybacks and burns.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/weft-first-week/",
+      "canonical": "https://independent-market-notes.netlify.app/weft-first-week/",
       "og:title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit?",
       "og:description": "A forensic examination of Weft Finance (WEFT): its concentrated Solana token supply, fragmented Meteora liquidity, volatile first week, and the unfinished evidence behind buybacks and burns.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/weft-first-week/",
+      "og:url": "https://independent-market-notes.netlify.app/weft-first-week/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "virtual-alpha-risk": {
       "title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story | Independent Market Analysis",
       "description": "A critical look at Virtuals Protocol's VIRTUAL token: elevated volatility, BTC sensitivity, a promising but fragile residual-momentum backtest, and the evidence still missing.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/virtual-alpha-risk/",
+      "canonical": "https://independent-market-notes.netlify.app/virtual-alpha-risk/",
       "og:title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story",
       "og:description": "A critical look at Virtuals Protocol's VIRTUAL token: elevated volatility, BTC sensitivity, a promising but fragile residual-momentum backtest, and the evidence still missing.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/virtual-alpha-risk/",
+      "og:url": "https://independent-market-notes.netlify.app/virtual-alpha-risk/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "rune-quiet-repricing": {
       "title": "RUNE’s Quiet Repricing Problem: A Real Network, an Unsettled Token Thesis",
       "description": "An independent assessment of THORChain's RUNE as of October 22, 2026: real cross-chain activity, cleaner supply, complicated value capture, and unconfirmed market momentum.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/rune-quiet-repricing/",
+      "canonical": "https://independent-market-notes.netlify.app/rune-quiet-repricing/",
       "og:title": "RUNE’s Quiet Repricing Problem: A Real Network, an Unsettled Token Thesis",
       "og:description": "An independent assessment of THORChain's RUNE as of October 22, 2026: real cross-chain activity, cleaner supply, complicated value capture, and unconfirmed market momentum.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/rune-quiet-repricing/",
+      "og:url": "https://independent-market-notes.netlify.app/rune-quiet-repricing/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "pyth-revenue-unlock": {
       "title": "PYTH’s Revenue Breakthrough Meets a 2.125 Billion Token Unlock | Pyth Network Analysis",
       "description": "Pyth Network's growing commercial revenue and token reserve face a final May 2027 unlock. An evidence-led examination of PYTH supply, demand, liquidity, and risk.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/pyth-revenue-unlock/",
+      "canonical": "https://independent-market-notes.netlify.app/pyth-revenue-unlock/",
       "og:title": "Pyth Has a Revenue Story. It Also Has a 2.125 Billion Token Problem.",
       "og:description": "A measured look at the business emerging behind Pyth Network—and the supply event that could challenge its token economics.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/pyth-revenue-unlock/",
+      "og:url": "https://independent-market-notes.netlify.app/pyth-revenue-unlock/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "venice-ai-privacy": {
       "title": "Venice AI’s Privacy Promise Has a Verification Problem | Independent Analysis",
       "description": "Venice AI has built real privacy safeguards, but its encryption, provider policies, and VVV token economics warrant a closer look. An evidence-led analysis of what is and isn't proven.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/venice-ai-privacy/",
+      "canonical": "https://independent-market-notes.netlify.app/venice-ai-privacy/",
       "og:title": "Venice AI’s Privacy Promise Has a Verification Problem",
       "og:description": "Venice AI has built real privacy safeguards, but its encryption, provider policies, and VVV token economics warrant a closer look. An evidence-led analysis of what is and isn't proven.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/venice-ai-privacy/",
+      "og:url": "https://independent-market-notes.netlify.app/venice-ai-privacy/",
       "og:type": "article",
       "twitter:card": "summary"
     },
     "crypto-buybacks": {
       "title": "Who Actually Benefits From Crypto Buybacks? EDGE, STONK and the Missing Ledger",
       "description": "A critical examination of EDGE and STONK token economics: revenue rights, executed buybacks, dilution, valuation, liquidity, and the evidence still needed to measure tokenholder value.",
-      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/crypto-buybacks/",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-buybacks/",
       "og:title": "Who Actually Benefits From Crypto Buybacks? EDGE, STONK and the Missing Ledger",
       "og:description": "A critical examination of EDGE and STONK token economics: revenue rights, executed buybacks, dilution, valuation, liquidity, and the evidence still needed to measure tokenholder value.",
-      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/crypto-buybacks/",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-buybacks/",
       "og:type": "article",
       "twitter:card": "summary"
     }
@@ -204,97 +204,116 @@
   "rss": [
     {
       "title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/deepbook-supply-transparency/",
+      "link": "https://independent-market-notes.netlify.app/deepbook-supply-transparency/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/deepbook-supply-transparency/",
       "description": "A reported 5.27-billion-token holder, conflicting circulation figures, and an unanswered question about who can move DEEP."
     },
     {
       "title": "Bitcoin’s Recovery Has a Ceiling—and the Evidence Is Still Divided",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-recovery-beneath-resistance/",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-recovery-beneath-resistance/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-recovery-beneath-resistance/",
       "description": "A November 3 market snapshot showed improving short-term momentum beneath stubborn higher-timeframe resistance. The harder question is what would turn a rebound into a genuine reversal."
     },
     {
       "title": "The Uniswap Rebound That Failed the Liquidity Test",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/uni-rebound-liquidity-test/",
+      "link": "https://independent-market-notes.netlify.app/uni-rebound-liquidity-test/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/uni-rebound-liquidity-test/",
       "description": "A rally can be real and still be a bad trade. That distinction became the defining feature of Uniswap’s UNI token on November 2, when a plausible intraday recovery collided with deteriorating visible liquidity, limited room to the next resistance level, and fresh questions about the source of selling pressure."
     },
     {
       "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-quiet-divergence/",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-quiet-divergence/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-quiet-divergence/",
       "description": "Ether and Solana fell further, while Bitcoin’s own trend deteriorated. Relative strength, it turns out, is not the same thing as a healthy market."
     },
     {
       "title": "Bitcoin’s Price Is Not the Whole Market",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/crypto-breadth-beneath-bitcoin/",
+      "link": "https://independent-market-notes.netlify.app/crypto-breadth-beneath-bitcoin/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-breadth-beneath-bitcoin/",
       "description": "Ahead of November’s first US trading session, Bitcoin looked comparatively resilient. Beneath the headline price, market breadth, aggressive selling and uneven liquidation exposure told a less comfortable story."
     },
     {
       "title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/small-cap-crypto-liquidity-illusion/",
+      "link": "https://independent-market-notes.netlify.app/small-cap-crypto-liquidity-illusion/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/small-cap-crypto-liquidity-illusion/",
       "description": "Five token investigations exposed the gap between reported turnover, concentrated ownership and the price at which anyone could actually exit."
     },
     {
       "title": "Bitcoin’s $78,000 Rebound Has a Missing Ingredient: Proof of Spot Demand",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-spot-demand/",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-rebound-spot-demand/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-spot-demand/",
       "description": "Leverage has been coming out of the market. ETF money has turned uneven. And the most important question about the bounce remains unanswered: who is actually doing the buying?"
     },
     {
       "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated.",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selloff-leverage/",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-selloff-leverage/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selloff-leverage/",
       "description": "The October 29 decline carried the unmistakable fingerprints of forced long liquidations. But a closer look at funding, order flow and open interest suggests a market that shed leverage during the shock—and then began rebuilding it."
     },
     {
       "title": "Six Trades. Three Wallets. One Unsettling Launch.",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
+      "link": "https://independent-market-notes.netlify.app/solz-launch-investigation/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/solz-launch-investigation/",
       "description": "SolZFoundation arrived with a privacy-bridge story and a tiny Pump.fun market. Its first indexed trades tell a more immediate story: every observed buyer sold exactly what they bought."
     },
     {
       "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial.",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/institutional-adoption-token-demand/",
+      "link": "https://independent-market-notes.netlify.app/institutional-adoption-token-demand/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/institutional-adoption-token-demand/",
       "description": "Canton Coin and Chainlink are finding their way into serious financial infrastructure. The harder question is whether that progress is creating economic demand for CC and LINK—or simply a better story to trade."
     },
     {
       "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing.",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-holding-up/",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-holding-up/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-holding-up/",
       "description": "A resilient Bitcoin, weaker altcoins, and violent pockets of turnover make a deceptively calm crypto market. The deeper story is in the divergence between relative strength and absolute momentum."
     },
     {
       "title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't.",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/aero-at-0-68/",
+      "link": "https://independent-market-notes.netlify.app/aero-at-0-68/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/aero-at-0-68/",
       "description": "AERO is testing the boundary between an ordinary post-launch shakeout and a deeper repricing. The chart is beginning to stabilize, but the economics tell a more complicated story."
     },
     {
       "title": "Bitcoin’s $1.2 Million Buying Imbalance—and the Reversal It Hasn’t Proven",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-buying-imbalance/",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-buying-imbalance/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-buying-imbalance/",
       "description": "On October 26, the crypto market looked calm on the surface. Beneath that calm, spot buyers and derivatives traders were telling a more complicated story."
     },
     {
       "title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit?",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/weft-first-week/",
+      "link": "https://independent-market-notes.netlify.app/weft-first-week/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/weft-first-week/",
       "description": "Weft Finance has a functioning market, a public tokenomics story and a strikingly concentrated supply. The harder questions are about what the ledger proves—and what it doesn’t."
     },
     {
       "title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/virtual-alpha-risk/",
+      "link": "https://independent-market-notes.netlify.app/virtual-alpha-risk/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/virtual-alpha-risk/",
       "description": "A short-window momentum model looks surprisingly good. The underlying token is also unusually volatile, heavily exposed to Bitcoin, and far from passing the tests that would make that result trustworthy."
     },
     {
       "title": "RUNE’s Quiet Repricing Problem: A Real Network, an Unsettled Token Thesis",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/rune-quiet-repricing/",
+      "link": "https://independent-market-notes.netlify.app/rune-quiet-repricing/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/rune-quiet-repricing/",
       "description": "THORChain is still moving meaningful value across chains. Its token is a fraction of its former price. The gap is intriguing—but the case for a recovery is more complicated than either number suggests."
     },
     {
       "title": "PYTH’s Revenue Breakthrough Meets a 2.125 Billion Token Unlock",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/pyth-revenue-unlock/",
+      "link": "https://independent-market-notes.netlify.app/pyth-revenue-unlock/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/pyth-revenue-unlock/",
       "description": "A real financial-data business is emerging behind PYTH. The harder question is whether its new token-buying mechanism can mature quickly enough to matter before May 2027."
     },
     {
       "title": "Venice AI’s Privacy Promise Has a Verification Problem",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/venice-ai-privacy/",
+      "link": "https://independent-market-notes.netlify.app/venice-ai-privacy/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/venice-ai-privacy/",
       "description": "The encryption is meaningful. The assurances are not uniform. And even a genuinely private AI product still has to prove why its token should capture the value."
     },
     {
       "title": "Who Actually Benefits From Crypto Buybacks? EDGE, STONK and the Missing Ledger",
-      "link": "https://jacksmack1971.github.io/crypto-research-blog/crypto-buybacks/",
+      "link": "https://independent-market-notes.netlify.app/crypto-buybacks/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-buybacks/",
       "description": "EDGE and STONK put two very different revenue stories on the same balance sheet. The harder question is how much economic value survives the journey from customer fees to each circulating token—and what the market has already priced in."
     }
   ]
