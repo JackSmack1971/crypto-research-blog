@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "deepbook-supply-transparency": {
+      "title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
+      "description": "DeepBook’s largest reported DEEP holder raises unresolved questions about treasury custody, circulating supply, vesting restrictions, and token valuation.",
+      "canonical": "https://jacksmack1971.github.io/crypto-research-blog/deepbook-supply-transparency/",
+      "og:title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
+      "og:description": "A reported 5.27-billion-token holder, conflicting circulation figures, and an unanswered question about who can move DEEP.",
+      "og:url": "https://jacksmack1971.github.io/crypto-research-blog/deepbook-supply-transparency/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-recovery-beneath-resistance": {
       "title": "Bitcoin’s Recovery Has a Ceiling—and the Evidence Is Still Divided",
       "description": "Bitcoin rebounded beneath resistance on November 3, 2026. A closer look at momentum, derivatives positioning, volatility and the missing confirmation.",
@@ -192,6 +202,11 @@
     }
   },
   "rss": [
+    {
+      "title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
+      "link": "https://jacksmack1971.github.io/crypto-research-blog/deepbook-supply-transparency/",
+      "description": "A reported 5.27-billion-token holder, conflicting circulation figures, and an unanswered question about who can move DEEP."
+    },
     {
       "title": "Bitcoin’s Recovery Has a Ceiling—and the Evidence Is Still Divided",
       "link": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-recovery-beneath-resistance/",

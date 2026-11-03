@@ -1,5 +1,17 @@
 [
   {
+    "slug": "deepbook-supply-transparency",
+    "source": "deepbook-supply-transparency.html",
+    "date": "2026-11-03",
+    "title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
+    "dek": "A reported 5.27-billion-token holder, conflicting circulation figures, and an unanswered question about who can move DEEP.",
+    "image_alt": "Editorial illustration of a gold vault door with an interrupted lock mechanism, representing uncertainty over DeepBook token custody and transfer restrictions.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "image": "assets/featured/deepbook-supply-transparency.jpg"
+  },
+  {
     "slug": "bitcoin-recovery-beneath-resistance",
     "source": "bitcoin-recovery-beneath-resistance.html",
     "date": "2026-11-03",

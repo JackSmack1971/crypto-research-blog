@@ -1,4 +1,358 @@
 {
+  "deepbook-supply-transparency": {
+    "text": "Independent Market NotesTokenomics / Investigative analysisDeepBook’s Supply Question: Is the Treasury Locked or Discretionary?A reported 5.27-billion-token holder, conflicting circulation figures, and an unanswered question about who can move DEEP.Research snapshot: November 3, 2026 · Historical figures, not live quotes Editorial illustration. The lock is conceptual, not a depiction of a verified on-chain vault. A token can have a functioning product, measurable trading activity and a plausible economic role—and still leave investors unable to answer a basic question: how much supply is actually available to move? That is the tension at the center of DeepBook, the Sui-based on-chain order-book infrastructure project. Public token-holder pages identify one address as holding roughly 5.27 billion DEEP, more than half of the token’s stated 10-billion maximum. Yet two major market-data providers have published sharply different circulating-supply figures. And the project's allocation disclosures describe a large ecosystem treasury without conclusively identifying the controls on the reported holder. What interests me is not the size of that balance in isolation. Large protocol treasuries are common. The consequential question is whether the tokens are subject to enforceable release restrictions or held under administrative discretion. Those are different economic risks, even when both arrangements are described as a long-term ecosystem allocation. A real protocol, and a separate supply problem DeepBook is not merely a token searching for a purpose. It provides shared on-chain central-limit-order-book infrastructure for applications on Sui. The DEEP token can be used to pay trading fees and obtain staking-related benefits. Official documentation also allows certain fees to be paid in input tokens, meaning DEEP is useful without being mandatory in every transaction. Sui’s DeepBook documentation describes the protocol and its operating model. Protocol activity gives the project an empirical foundation. In snapshots discussed during this investigation, DefiLlama reported roughly $178 million–$211 million in trailing 30-day DEX volume, with tokenholder-revenue estimates around $8,859–$10,981. These are different observations at different retrieval times, not a single synchronized dataset; their methodology and the relationship between reported revenue and economic benefits to holders require scrutiny. The underlying DefiLlama protocol page is the appropriate reference for updated values. Those numbers matter because they establish a reason to investigate DEEP seriously. They do not resolve the supply denominator used to value the token. Two circulating supplies for the same token On November 3, 2026, CoinGecko’s supply breakdown reported 2.5 billion DEEP circulating, alongside approximately 6.259 billion outstanding and 10 billion total. CoinMarketCap’s quote data reported approximately 6.014 billion circulating and 10 billion total. The CoinMarketCap figure was also labeled as self-reported circulating supply. Provider snapshots, November 3, 2026, approximately 13:24–13:26 UTC. Figures rounded.MeasureCoinGeckoCoinMarketCapCirculating DEEP2.500B6.014BMaximum / total supply10.000B10.000BReported market capitalization~$37.9M~$93.9MFully diluted valuation~$151.6M~$156.1MProvenance limitationNo noncirculating wallets identified in supply-breakdown responseCirculating supply also designated self-reported Both estimates placed DEEP within the $1 million–$100 million small-cap research range at those timestamps. But they describe very different floats. Using the two circulating-supply figures produces a roughly 2.4-fold difference in implied capitalization at a common token price. The modest difference in the providers’ fully diluted valuations reflects differing price snapshots, not a different maximum supply. How much of the maximum supply is counted as circulating?CoinGecko25.00%CoinMarketCap60.14%Scale begins at zero and ends at 100% of the 10B maximum. Historical provider estimates, not independently reconciled on-chain circulation. There are legitimate reasons for data services to disagree. One may exclude ecosystem-controlled balances that another counts as transferable. One may rely on a project-supplied figure while another applies its own classification. The discrepancy is therefore evidence of a measurement problem, not evidence by itself of concealment or misconduct. The address that changes the question GeckoTerminal’s holder information identifies the following Sui address as the largest reported DEEP holder: 0x9548232f9cebbc1eec56cfb25b99f61e17924b4908248c260c8d70100c59c70d Its reported balance is approximately 5.27 billion DEEP, or 52.7% of maximum supply. A separate holder-distribution page showed a similarly sized top balance and a second address holding roughly 1.62 billion DEEP. The two reported positions together account for approximately 69% of maximum supply. These are address-level concentrations, not proof that two people or entities beneficially own the tokens. See GeckoTerminal’s DEEP/SUI pool and holder information. A key distinction follows: a blockchain address can belong to a treasury, custodian, vesting system, exchange or individual. A balance alone does not reveal who can authorize transfers or what restrictions apply. What the treasury disclosures actually say DeepBook’s published tokenomics assign 61.57% of total supply—6.157 billion DEEP—to ecosystem growth. The allocation is close enough in scale to the reported 5.27-billion holder to make a treasury connection plausible. It does not prove that connection. A Sui-hosted DeepBook whitepaper describes the token’s design and allocation, while the project’s token page describes ecosystem distribution. A separate Kraken-published DEEP disclosure describes the Sui Foundation as the initial holder of a large ecosystem allocation and refers to an on-chain ecosystem vault with a multiyear release program. The documents do not, in the evidence available here, authenticate the reported largest-holder address as that vault. There is also a subtle but crucial ambiguity in the language of release. A project can say tokens were “unlocked” at token generation while planning to distribute them over seven years. That may mean the tokens were technically transferable but administratively reserved. Alternatively, tokens could be held inside a Move object with time-based withdrawal restrictions. Both arrangements can support a multiyear distribution plan; only one necessarily makes that plan enforceable by code. The missing fact is not the intended schedule. It is the authority to override it. Without the vault object, controlling Move module, ownership configuration and withdrawal history, a published distribution plan cannot establish that transfers are technically prohibited. Three explanations remain viable 1. A genuinely restricted ecosystem vault The large address could correspond to an ecosystem-controlled object with enforceable vesting or timelock conditions. Under this interpretation, at least some treasury balances may be properly excluded from circulating supply until release. Confirmation would require identifying the relevant Sui object and demonstrating the actual withdrawal rules, including any privileged bypass. 2. A treasury governed by authorized signers The tokens could instead sit in ordinary transferable coin objects controlled by an authorized address or multisignature arrangement. A seven-year release plan could still be sincere and consistently followed, but the restriction would be institutional rather than automatically enforced. The economic distinction is that authorized parties may have greater discretion to accelerate transfers. 3. An address unrelated to the Foundation treasury The holder could represent another custody or protocol arrangement. Matching its balance to the original ecosystem allocation is suggestive, not identifying evidence. A reliable attribution would require an official address statement, an unambiguous creation or funding trail, or both. None of these explanations has been conclusively established. It would be premature to call the balance either a verified locked vault or an unrestricted Foundation wallet. Why vesting trackers do not settle it Third-party token-unlock dashboards have shown different unlocked-supply estimates and classifications for DEEP. Some distinguish scheduled vesting from circulation; others apply allocation-specific assumptions. These datasets can be useful leads, but they cannot replace inspection of the relevant Sui objects and transaction history. One more complication is the token’s architecture. The official Sui documentation identifies the native coin type as 0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP. DeepBook’s core contracts are upgradeable, but upgradeability of the trading protocol does not by itself establish the transfer controls on a separate ecosystem treasury. The relevant treasury implementation must be examined on its own terms. See Sui’s contract information. Why the difference matters for valuation When circulating supply is uncertain, market capitalization becomes a conditional estimate. A lower denominator can make a token appear smaller relative to its activity, revenue or peers. A larger denominator can make the same price look considerably more expensive. Neither interpretation should be adopted without understanding what the excluded tokens are and who can move them. The distinction also changes how investors should think about dilution. A time-locked allocation introduces scheduled future supply. A discretionary treasury introduces governance, custody and disclosure risk. Both can be managed responsibly; they simply require different evidence. Trading liquidity adds another layer. A few observed automated-market-maker pools showed relatively modest reserves, but those snapshots did not capture DeepBook’s own order books or all centralized venues. It would be misleading to treat that narrow sample as the token’s total executable liquidity. The protocol’s documented DEEP/SUI and DEEP/USDC order-book pools warrant separate depth analysis. What would settle the question For a definitive answer, I would want four pieces of public evidence: an authoritative attribution of the largest-holder address; the relevant treasury object ID and Move type; the code and capabilities governing withdrawal, upgrade and administrator access; and a historical reconciliation of deposits, releases and remaining balances against the published allocation schedule. Those facts could validate the restricted-vault interpretation. They could instead show a discretionary treasury following a voluntary distribution policy. Or they could reveal that the reported address is unrelated to the Foundation allocation. Any of those outcomes would be more informative than repeating a circulating-supply number without examining its assumptions. The real test is verifiability My conclusion is deliberately narrower than an accusation: DeepBook has demonstrable utility, but the public evidence considered here does not establish how the largest reported DEEP balance is controlled. Nor does it reconcile the competing circulating-supply estimates. For a protocol built on transparent, programmable finance, that gap is worth closing. The strongest disclosure would not be another promise about long-term alignment. It would be a verifiable address, a verifiable contract and a clear explanation of which tokens can actually move. Until then, the honest description is not “locked” or “unlocked.” It is unresolved. ◆ Sources and methodology notesDeepBook: DEEP token and distribution — project allocation and release language.Sui: DeepBook token whitepaper — original design and allocation framework; note that historical allocation percentages may differ from later documents.Sui: DeepBook V3 contract information — canonical DEEP type, protocol versions and order-book identifiers.CoinGecko: DeepBook and CoinMarketCap: DeepBook Protocol — differing November 3, 2026 supply and valuation snapshots.GeckoTerminal: DEEP/SUI pool — reported largest-holder address and balance.DefiLlama: DeepBook — protocol activity and revenue categories; figures are time-dependent.DefiLlama: DeepBook unlocks and DropsTab: DEEP vesting — competing unlock methodologies, not definitive proof of wallet-level restrictions.All market and holder figures are historical observations discussed as of November 3, 2026. Reported balances, labels and supply classifications are not presented as a complete independent on-chain audit. No allegation of misconduct follows from the unresolved custody question. This article is research commentary, not investment advice.Independent Market Notes · Research commentary",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?"
+      },
+      {
+        "tag": "h2",
+        "text": "A real protocol, and a separate supply problem"
+      },
+      {
+        "tag": "h2",
+        "text": "Two circulating supplies for the same token"
+      },
+      {
+        "tag": "h3",
+        "text": "How much of the maximum supply is counted as circulating?"
+      },
+      {
+        "tag": "h2",
+        "text": "The address that changes the question"
+      },
+      {
+        "tag": "h2",
+        "text": "What the treasury disclosures actually say"
+      },
+      {
+        "tag": "h2",
+        "text": "Three explanations remain viable"
+      },
+      {
+        "tag": "h3",
+        "text": "1. A genuinely restricted ecosystem vault"
+      },
+      {
+        "tag": "h3",
+        "text": "2. A treasury governed by authorized signers"
+      },
+      {
+        "tag": "h3",
+        "text": "3. An address unrelated to the Foundation treasury"
+      },
+      {
+        "tag": "h2",
+        "text": "Why vesting trackers do not settle it"
+      },
+      {
+        "tag": "h2",
+        "text": "Why the difference matters for valuation"
+      },
+      {
+        "tag": "h2",
+        "text": "What would settle the question"
+      },
+      {
+        "tag": "h2",
+        "text": "The real test is verifiability"
+      },
+      {
+        "tag": "h2",
+        "text": "Sources and methodology notes"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://docs.sui.io/onchain-finance/deepbook",
+        "text": "Sui’s DeepBook documentation"
+      },
+      {
+        "href": "https://defillama.com/protocol/deepbook",
+        "text": "DefiLlama protocol page"
+      },
+      {
+        "href": "https://www.geckoterminal.com/sui-network/pools/0xd0dd3d7ae05c22c80e1e16639fb0d4334372a8a45a8f01c85dac662cc8850b60",
+        "text": "GeckoTerminal’s DEEP/SUI pool and holder information"
+      },
+      {
+        "href": "https://docs.sui.io/doc/deepbook.pdf",
+        "text": "Sui-hosted DeepBook whitepaper"
+      },
+      {
+        "href": "https://www.deepbook.tech/deep-token",
+        "text": "project’s token page"
+      },
+      {
+        "href": "https://docs.sui.io/onchain-finance/deepbook/deepbookv3/contract-information/",
+        "text": "Sui’s contract information"
+      },
+      {
+        "href": "https://docs.sui.io/onchain-finance/deepbook/deepbookv3/contract-information/",
+        "text": "documented DEEP/SUI and DEEP/USDC order-book pools"
+      },
+      {
+        "href": "https://www.deepbook.tech/deep-token",
+        "text": "DeepBook: DEEP token and distribution"
+      },
+      {
+        "href": "https://docs.sui.io/doc/deepbook.pdf",
+        "text": "Sui: DeepBook token whitepaper"
+      },
+      {
+        "href": "https://docs.sui.io/onchain-finance/deepbook/deepbookv3/contract-information/",
+        "text": "Sui: DeepBook V3 contract information"
+      },
+      {
+        "href": "https://www.coingecko.com/en/coins/deepbook",
+        "text": "CoinGecko: DeepBook"
+      },
+      {
+        "href": "https://coinmarketcap.com/currencies/deepbook-protocol/",
+        "text": "CoinMarketCap: DeepBook Protocol"
+      },
+      {
+        "href": "https://www.geckoterminal.com/sui-network/pools/0xd0dd3d7ae05c22c80e1e16639fb0d4334372a8a45a8f01c85dac662cc8850b60",
+        "text": "GeckoTerminal: DEEP/SUI pool"
+      },
+      {
+        "href": "https://defillama.com/protocol/deepbook",
+        "text": "DefiLlama: DeepBook"
+      },
+      {
+        "href": "https://defillama.com/unlocks/deepbook",
+        "text": "DefiLlama: DeepBook unlocks"
+      },
+      {
+        "href": "https://dropstab.com/coins/deep-sui/vesting",
+        "text": "DropsTab: DEEP vesting"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Tokenomics / Investigative analysis"
+      },
+      {
+        "tag": "p",
+        "text": "A reported 5.27-billion-token holder, conflicting circulation figures, and an unanswered question about who can move DEEP."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Editorial illustration. The lock is conceptual, not a depiction of a verified on-chain vault."
+      },
+      {
+        "tag": "p",
+        "text": "A token can have a functioning product, measurable trading activity and a plausible economic role—and still leave investors unable to answer a basic question: how much supply is actually available to move?"
+      },
+      {
+        "tag": "p",
+        "text": "That is the tension at the center of DeepBook, the Sui-based on-chain order-book infrastructure project. Public token-holder pages identify one address as holding roughly 5.27 billion DEEP, more than half of the token’s stated 10-billion maximum. Yet two major market-data providers have published sharply different circulating-supply figures. And the project's allocation disclosures describe a large ecosystem treasury without conclusively identifying the controls on the reported holder."
+      },
+      {
+        "tag": "p",
+        "text": "What interests me is not the size of that balance in isolation. Large protocol treasuries are common. The consequential question is whether the tokens are subject to enforceable release restrictions or held under administrative discretion. Those are different economic risks, even when both arrangements are described as a long-term ecosystem allocation."
+      },
+      {
+        "tag": "p",
+        "text": "DeepBook is not merely a token searching for a purpose. It provides shared on-chain central-limit-order-book infrastructure for applications on Sui. The DEEP token can be used to pay trading fees and obtain staking-related benefits. Official documentation also allows certain fees to be paid in input tokens, meaning DEEP is useful without being mandatory in every transaction. Sui’s DeepBook documentation describes the protocol and its operating model."
+      },
+      {
+        "tag": "p",
+        "text": "Protocol activity gives the project an empirical foundation. In snapshots discussed during this investigation, DefiLlama reported roughly $178 million–$211 million in trailing 30-day DEX volume, with tokenholder-revenue estimates around $8,859–$10,981. These are different observations at different retrieval times, not a single synchronized dataset; their methodology and the relationship between reported revenue and economic benefits to holders require scrutiny. The underlying DefiLlama protocol page is the appropriate reference for updated values."
+      },
+      {
+        "tag": "p",
+        "text": "Those numbers matter because they establish a reason to investigate DEEP seriously. They do not resolve the supply denominator used to value the token."
+      },
+      {
+        "tag": "p",
+        "text": "On November 3, 2026, CoinGecko’s supply breakdown reported 2.5 billion DEEP circulating, alongside approximately 6.259 billion outstanding and 10 billion total. CoinMarketCap’s quote data reported approximately 6.014 billion circulating and 10 billion total. The CoinMarketCap figure was also labeled as self-reported circulating supply."
+      },
+      {
+        "tag": "caption",
+        "text": "Provider snapshots, November 3, 2026, approximately 13:24–13:26 UTC. Figures rounded."
+      },
+      {
+        "tag": "p",
+        "text": "Both estimates placed DEEP within the $1 million–$100 million small-cap research range at those timestamps. But they describe very different floats. Using the two circulating-supply figures produces a roughly 2.4-fold difference in implied capitalization at a common token price. The modest difference in the providers’ fully diluted valuations reflects differing price snapshots, not a different maximum supply."
+      },
+      {
+        "tag": "p",
+        "text": "Scale begins at zero and ends at 100% of the 10B maximum. Historical provider estimates, not independently reconciled on-chain circulation."
+      },
+      {
+        "tag": "p",
+        "text": "There are legitimate reasons for data services to disagree. One may exclude ecosystem-controlled balances that another counts as transferable. One may rely on a project-supplied figure while another applies its own classification. The discrepancy is therefore evidence of a measurement problem, not evidence by itself of concealment or misconduct."
+      },
+      {
+        "tag": "p",
+        "text": "GeckoTerminal’s holder information identifies the following Sui address as the largest reported DEEP holder:"
+      },
+      {
+        "tag": "p",
+        "text": "0x9548232f9cebbc1eec56cfb25b99f61e17924b4908248c260c8d70100c59c70d"
+      },
+      {
+        "tag": "p",
+        "text": "Its reported balance is approximately 5.27 billion DEEP, or 52.7% of maximum supply. A separate holder-distribution page showed a similarly sized top balance and a second address holding roughly 1.62 billion DEEP. The two reported positions together account for approximately 69% of maximum supply. These are address-level concentrations, not proof that two people or entities beneficially own the tokens. See GeckoTerminal’s DEEP/SUI pool and holder information."
+      },
+      {
+        "tag": "p",
+        "text": "A key distinction follows: a blockchain address can belong to a treasury, custodian, vesting system, exchange or individual. A balance alone does not reveal who can authorize transfers or what restrictions apply."
+      },
+      {
+        "tag": "p",
+        "text": "DeepBook’s published tokenomics assign 61.57% of total supply—6.157 billion DEEP—to ecosystem growth. The allocation is close enough in scale to the reported 5.27-billion holder to make a treasury connection plausible. It does not prove that connection."
+      },
+      {
+        "tag": "p",
+        "text": "A Sui-hosted DeepBook whitepaper describes the token’s design and allocation, while the project’s token page describes ecosystem distribution. A separate Kraken-published DEEP disclosure describes the Sui Foundation as the initial holder of a large ecosystem allocation and refers to an on-chain ecosystem vault with a multiyear release program. The documents do not, in the evidence available here, authenticate the reported largest-holder address as that vault."
+      },
+      {
+        "tag": "p",
+        "text": "There is also a subtle but crucial ambiguity in the language of release. A project can say tokens were “unlocked” at token generation while planning to distribute them over seven years. That may mean the tokens were technically transferable but administratively reserved. Alternatively, tokens could be held inside a Move object with time-based withdrawal restrictions. Both arrangements can support a multiyear distribution plan; only one necessarily makes that plan enforceable by code."
+      },
+      {
+        "tag": "p",
+        "text": "The large address could correspond to an ecosystem-controlled object with enforceable vesting or timelock conditions. Under this interpretation, at least some treasury balances may be properly excluded from circulating supply until release. Confirmation would require identifying the relevant Sui object and demonstrating the actual withdrawal rules, including any privileged bypass."
+      },
+      {
+        "tag": "p",
+        "text": "The tokens could instead sit in ordinary transferable coin objects controlled by an authorized address or multisignature arrangement. A seven-year release plan could still be sincere and consistently followed, but the restriction would be institutional rather than automatically enforced. The economic distinction is that authorized parties may have greater discretion to accelerate transfers."
+      },
+      {
+        "tag": "p",
+        "text": "The holder could represent another custody or protocol arrangement. Matching its balance to the original ecosystem allocation is suggestive, not identifying evidence. A reliable attribution would require an official address statement, an unambiguous creation or funding trail, or both."
+      },
+      {
+        "tag": "p",
+        "text": "None of these explanations has been conclusively established. It would be premature to call the balance either a verified locked vault or an unrestricted Foundation wallet."
+      },
+      {
+        "tag": "p",
+        "text": "Third-party token-unlock dashboards have shown different unlocked-supply estimates and classifications for DEEP. Some distinguish scheduled vesting from circulation; others apply allocation-specific assumptions. These datasets can be useful leads, but they cannot replace inspection of the relevant Sui objects and transaction history."
+      },
+      {
+        "tag": "p",
+        "text": "One more complication is the token’s architecture. The official Sui documentation identifies the native coin type as 0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP. DeepBook’s core contracts are upgradeable, but upgradeability of the trading protocol does not by itself establish the transfer controls on a separate ecosystem treasury. The relevant treasury implementation must be examined on its own terms. See Sui’s contract information."
+      },
+      {
+        "tag": "p",
+        "text": "When circulating supply is uncertain, market capitalization becomes a conditional estimate. A lower denominator can make a token appear smaller relative to its activity, revenue or peers. A larger denominator can make the same price look considerably more expensive. Neither interpretation should be adopted without understanding what the excluded tokens are and who can move them."
+      },
+      {
+        "tag": "p",
+        "text": "The distinction also changes how investors should think about dilution. A time-locked allocation introduces scheduled future supply. A discretionary treasury introduces governance, custody and disclosure risk. Both can be managed responsibly; they simply require different evidence."
+      },
+      {
+        "tag": "p",
+        "text": "Trading liquidity adds another layer. A few observed automated-market-maker pools showed relatively modest reserves, but those snapshots did not capture DeepBook’s own order books or all centralized venues. It would be misleading to treat that narrow sample as the token’s total executable liquidity. The protocol’s documented DEEP/SUI and DEEP/USDC order-book pools warrant separate depth analysis."
+      },
+      {
+        "tag": "p",
+        "text": "For a definitive answer, I would want four pieces of public evidence: an authoritative attribution of the largest-holder address; the relevant treasury object ID and Move type; the code and capabilities governing withdrawal, upgrade and administrator access; and a historical reconciliation of deposits, releases and remaining balances against the published allocation schedule."
+      },
+      {
+        "tag": "p",
+        "text": "Those facts could validate the restricted-vault interpretation. They could instead show a discretionary treasury following a voluntary distribution policy. Or they could reveal that the reported address is unrelated to the Foundation allocation. Any of those outcomes would be more informative than repeating a circulating-supply number without examining its assumptions."
+      },
+      {
+        "tag": "p",
+        "text": "My conclusion is deliberately narrower than an accusation: DeepBook has demonstrable utility, but the public evidence considered here does not establish how the largest reported DEEP balance is controlled. Nor does it reconcile the competing circulating-supply estimates."
+      },
+      {
+        "tag": "p",
+        "text": "For a protocol built on transparent, programmable finance, that gap is worth closing. The strongest disclosure would not be another promise about long-term alignment. It would be a verifiable address, a verifiable contract and a clear explanation of which tokens can actually move."
+      },
+      {
+        "tag": "p",
+        "text": "Until then, the honest description is not “locked” or “unlocked.” It is unresolved."
+      },
+      {
+        "tag": "p",
+        "text": "◆"
+      },
+      {
+        "tag": "li",
+        "text": "DeepBook: DEEP token and distribution — project allocation and release language."
+      },
+      {
+        "tag": "li",
+        "text": "Sui: DeepBook token whitepaper — original design and allocation framework; note that historical allocation percentages may differ from later documents."
+      },
+      {
+        "tag": "li",
+        "text": "Sui: DeepBook V3 contract information — canonical DEEP type, protocol versions and order-book identifiers."
+      },
+      {
+        "tag": "li",
+        "text": "CoinGecko: DeepBook and CoinMarketCap: DeepBook Protocol — differing November 3, 2026 supply and valuation snapshots."
+      },
+      {
+        "tag": "li",
+        "text": "GeckoTerminal: DEEP/SUI pool — reported largest-holder address and balance."
+      },
+      {
+        "tag": "li",
+        "text": "DefiLlama: DeepBook — protocol activity and revenue categories; figures are time-dependent."
+      },
+      {
+        "tag": "li",
+        "text": "DefiLlama: DeepBook unlocks and DropsTab: DEEP vesting — competing unlock methodologies, not definitive proof of wallet-level restrictions."
+      },
+      {
+        "tag": "p",
+        "text": "All market and holder figures are historical observations discussed as of November 3, 2026. Reported balances, labels and supply classifications are not presented as a complete independent on-chain audit. No allegation of misconduct follows from the unresolved custody question. This article is research commentary, not investment advice."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Measure",
+          "CoinGecko",
+          "CoinMarketCap"
+        ],
+        [
+          "Circulating DEEP",
+          "2.500B",
+          "6.014B"
+        ],
+        [
+          "Maximum / total supply",
+          "10.000B",
+          "10.000B"
+        ],
+        [
+          "Reported market capitalization",
+          "~$37.9M",
+          "~$93.9M"
+        ],
+        [
+          "Fully diluted valuation",
+          "~$151.6M",
+          "~$156.1M"
+        ],
+        [
+          "Provenance limitation",
+          "No noncirculating wallets identified in supply-breakdown response",
+          "Circulating supply also designated self-reported"
+        ]
+      ]
+    ],
+    "alts": [
+      "Editorial illustration of a gold vault door with an interrupted lock mechanism, representing uncertainty over DeepBook token custody and transfer restrictions."
+    ],
+    "svgCount": 0,
+    "svgSha256": [],
+    "imageCount": 1,
+    "imageSha256": [
+      "90ca526af23e1bb01e8ef316822d58cd207b5f22bbdf4cc6d4caae4769bd6aa5"
+    ],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "bitcoin-recovery-beneath-resistance": {
     "text": "INDEPENDENT MARKET NOTES / CRYPTOCURRENCYBitcoin / Market structureBitcoin’s Recovery Has a Ceiling—and the Evidence Is Still DividedA November 3 market snapshot showed improving short-term momentum beneath stubborn higher-timeframe resistance. The harder question is what would turn a rebound into a genuine reversal.November 3, 2026 · Historical market investigation · Approximately 9-minute readOriginal editorial illustration. Not a depiction of actual market data. Bitcoin’s short-term recovery looked convincing in one respect: momentum had turned up. But the market’s larger structure was still telling a different story. On November 3, 2026, the price was climbing toward a resistance area that had not yet been reclaimed, while the four-hour and daily indicators remained weak. That tension is the story. A rebound can be real without becoming a reversal. It can draw buyers back in, pressure short positions and lift momentum readings—all while leaving the prevailing trend intact. My interpretation of this snapshot is not that Bitcoin had to fall next. It is that the evidence for a durable change in direction had not caught up with the enthusiasm of the shorter timeframes. The market was recovering, but from below In the November 3 research snapshot, a Bitcoin mark-price observation stood at $77,416. The contemporaneous 15-minute relative strength index (RSI) was 67.58, while the five-minute reading was 65.03. Both pointed to strengthening near-term momentum. Their positive MACD histograms reinforced that interpretation. Zoom out, however, and the picture changes. The four-hour RSI was 39.76, the daily RSI 34.91, and the four-hour MACD histogram remained negative. Bitcoin was also below its four-hour 20-period exponential moving average, approximately $77,653.55, and well below its four-hour 50-period EMA near $78,667.20. None of these indicators predicts the next candle. Their value is comparative: the shorter-term recovery had improved before the higher-timeframe evidence did. That distinction matters because a rally against a weak larger trend faces a different burden of proof than a rally already supported across timeframes. Bitcoin technical snapshot — November 3, 2026 (historical observations)Measure15-minute1-hour4-hourDailyRSI (14)67.5848.5639.7634.91MACD histogram+43.63+59.45−14.49−478.54ATR (14), USD172.82371.03750.881,986.77EMA (20), USD77,052.0177,050.3277,653.5580,111.02 Source: November 3, 2026 historical market-indicator observations in the underlying research record. Indicator values use completed candles; the contemporaneous price may reflect an in-progress candle. These are not current market quotes. Resistance is a test, not a prediction The important nearby zone in the research was roughly $77,668 to $78,255. Its lower edge aligned closely with the four-hour 20-period EMA. Its upper edge corresponded to a previously mapped resistance boundary. At the observed $77,416 mark, Bitcoin remained about $252 below the lower edge. That made the area worth watching, not worth treating as an automatic short. A test of resistance can end in rejection, consolidation or acceptance above it. A wick through a level is not the same as a completed candle establishing a new structure. The distinction becomes especially important when short-term momentum is already improving. Historical Bitcoin price and resistance referencesAt the November 3 snapshot, Bitcoin was at 77,416 dollars, below the lower resistance reference of 77,668 dollars and the upper resistance reference of 78,254.50 dollars. This is a reference-level diagram, not a historical price chart.Price relative to mapped resistance$77,416$77,668$78,255Resistance zoneIllustrative spacing between three observed reference values; not a time series or order-book visualization. Historical snapshot: November 3, 2026. The bearish hypothesis required a completed 15-minute rejection, a lower high and a failed reclaim. A more convincing bullish alternative required an hourly close above approximately $78,254.50 followed by a successful retest. Neither sequence had been confirmed in the available snapshot. Price approaching resistance is an observation. Resistance holding is an event that still needs to happen. Derivatives positioning added suspicion, not certainty The derivatives evidence leaned toward caution. Reported open interest fell from about $3.0921 billion to $3.0885 billion between two nearby observations, a decrease of roughly 0.12%. Funding remained reported at +0.0013% for the applicable quoted interval, whose duration was not established in the record. A positioning breakdown also described a striking divide: accounts grouped as “smart money” were 37% long, compared with 71% long among a cohort characterized as losing traders. That sounds like a compelling contrarian signal. But labels of that kind depend on how accounts are classified, over what interval performance is measured, and whether the grouping remains representative. The positioning observation was timestamped 12:13 UTC on November 3 and was not refreshed in the later comparison. I would not turn that divergence into a claim that sophisticated traders knew a decline was coming. It is more defensible to say that the observed positioning was consistent with a bearish interpretation while leaving substantial room for selection effects, delayed data and a short squeeze. The overlooked variable was volatility The four-hour average true range (ATR), a measure of recent price movement rather than direction, was $750.88. An earlier calculation had placed the four-hour ATR around $678.29, using a different calculation approach and data context. The later reading was approximately 10.7% higher. That difference matters. A fixed stop distance that looks generous under one volatility estimate can be less forgiving under another. For a hypothetical bearish setup, the research used a $587 structural stop distance. Against the updated four-hour ATR, that represented about 0.78 ATR. It was not automatically unreasonable, but it did not leave much room for disorderly execution if volatility expanded. The broader lesson is easy to miss when charts are reduced to entry and target lines: the geometry of a trade does not establish its realizable economics. A projected gross reward-to-risk ratio can deteriorate after fees, spread, slippage and funding. Protective stops specify intended exits; they do not guarantee a maximum loss in a fast or discontinuous market. Three paths, and no confirmed winner The research considered three conditional market paths. The first was a rejection from resistance, followed by a renewed move toward lower liquidity references. The second was a bullish breakout and retest above the upper resistance boundary. The third was a breakdown beneath roughly $76,386 and an unsuccessful attempt to reclaim it. As analytical constructions, those paths were useful because each described what evidence would need to appear. They were not simultaneous forecasts and none was a recorded transaction. Two failed a minimum gross reward-to-risk screen of 2:1 even before execution costs; the remaining bearish case still lacked its required confirmation and a validated net reward-to-risk estimate. Lower price references around $76,067 and $75,809 came from venue-specific modeled liquidation exposures. Such estimates can help identify areas worth observing, but they are not guaranteed liquidity pools, visible resting orders or inevitable destinations. What would overturn the bearish reading? The strongest counterargument is straightforward: the short-term recovery might be the beginning of a larger reversal, not merely a countertrend bounce. Positive near-term momentum, a rising short-term volume-balance measure and a successful reclaim of resistance would support that case. A completed hourly acceptance above the mapped upper boundary, followed by a retest that holds, would materially weaken the original rejection thesis. The bearish alternative also has an evidence test. A move below support is not enough by itself; the more consequential event would be a completed breakdown followed by a failed reclaim. Without that sequence, a dip could remain part of a volatile range rather than a directional continuation. There is a third possibility that deserves more respect than directional narratives usually give it: neither side wins quickly. A market can oscillate between mapped levels, punish premature entries and consume the apparent reward before any thesis is cleanly resolved. The earlier research attached subjective scenario weights of 45% bearish, 25% bullish and 30% range-bound. They were not backtested probabilities or measured odds of a particular setup succeeding. Subsequent observations did not justify revising them, which is another way of saying the evidence had not materially changed. Why waiting was the substantive conclusion Between the two nearest market snapshots, Bitcoin’s reported mark moved only from $77,419.70 to $77,416—a change of about 0.005%. Open interest softened marginally. Four-hour ATR and the principal momentum indicators were unchanged. There was no confirmed hourly breakout, no confirmed breakdown and no observed rejection sequence that satisfied the original conditions. That may sound anticlimactic. I think it is the most consequential finding in the entire investigation. Markets offer a constant supply of plausible stories, but the discipline lies in separating a plausible story from an observed transition. The bearish thesis was coherent; it was not yet proven by the events it required. What stands out to me is how easily a recovery can be mistaken for resolution. Bitcoin had improved on the fastest charts, while the higher timeframes still demanded evidence. Until that gap closes—or a decisive rejection confirms the opposite—the intellectually defensible position is uncertainty, not manufactured conviction. Data and interpretation: This article examines historical observations recorded on November 3, 2026, not live market conditions. Price references and technical readings are historical, venue-specific snapshots; some quotation timestamps and execution-market details were not independently established. Hypothetical levels and scenario weights are analytical constructs, not investment recommendations. Historical source material: the dated BTC technical, derivatives and monitoring observations underlying this investigation. No publicly accessible source URL was established for those specific observations. Historical analysis only. This article does not provide personalized financial advice.",
     "headings": [
