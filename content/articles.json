@@ -1,5 +1,29 @@
 [
   {
+    "slug": "token-unlock-liquidity-illusion-90-day-calendar",
+    "source": "token-unlock-liquidity-illusion-90-day-calendar.html",
+    "date": "2026-11-03",
+    "title": "The Token Unlock Calendar Has a Liquidity Problem",
+    "dek": "A 90-day wave of scheduled crypto releases looks alarming on paper. But reported float, recipient behavior and buy-side depth determine whether the supply ever reaches the market.",
+    "image_alt": "Editorial illustration of a glowing open lock and crypto tokens beside the words The Supply Behind the Float",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "image": "assets/featured/token-unlock-liquidity-illusion-90-day-calendar.jpg",
+    "topic": "tokenomics",
+    "assets": [
+      "MON",
+      "ONDO",
+      "APT",
+      "ARB",
+      "ENA",
+      "STRK",
+      "ZRO",
+      "SEI"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "deepbook-supply-transparency",
     "source": "deepbook-supply-transparency.html",
     "date": "2026-11-03",

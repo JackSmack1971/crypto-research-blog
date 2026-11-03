@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "token-unlock-liquidity-illusion-90-day-calendar": {
+      "title": "The Token Unlock Calendar Has a Liquidity Problem | Independent Market Notes",
+      "description": "A Nov 2026–Feb 2027 investigation of MON, ONDO and other token unlocks, examining reported-float dilution, trading liquidity and critical data gaps.",
+      "canonical": "https://independent-market-notes.netlify.app/token-unlock-liquidity-illusion-90-day-calendar/",
+      "og:title": "The Token Unlock Calendar Has a Liquidity Problem",
+      "og:description": "A Nov 2026–Feb 2027 investigation of MON, ONDO and other token unlocks, examining reported-float dilution, trading liquidity and critical data gaps.",
+      "og:url": "https://independent-market-notes.netlify.app/token-unlock-liquidity-illusion-90-day-calendar/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "deepbook-supply-transparency": {
       "title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
       "description": "DeepBook’s largest reported DEEP holder raises unresolved questions about treasury custody, circulating supply, vesting restrictions, and token valuation.",
@@ -202,6 +212,12 @@
     }
   },
   "rss": [
+    {
+      "title": "The Token Unlock Calendar Has a Liquidity Problem",
+      "link": "https://independent-market-notes.netlify.app/token-unlock-liquidity-illusion-90-day-calendar/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/token-unlock-liquidity-illusion-90-day-calendar/",
+      "description": "A 90-day wave of scheduled crypto releases looks alarming on paper. But reported float, recipient behavior and buy-side depth determine whether the supply ever reaches the market."
+    },
     {
       "title": "DeepBook’s Supply Question: Is the Treasury Locked or Discretionary?",
       "link": "https://independent-market-notes.netlify.app/deepbook-supply-transparency/",

@@ -1,4 +1,537 @@
 {
+  "token-unlock-liquidity-illusion-90-day-calendar": {
+    "text": "Independent Market NotesMarket Structure / SupplyInvestigative analysis · Nov 3, 2026 market snapshotThe Token Unlock Calendar Has a Liquidity ProblemA 90-day wave of scheduled crypto releases looks alarming on paper. But reported float, recipient behavior and buy-side depth determine whether the supply ever reaches the market.Research window: November 3, 2026 – February 1, 2027 · Pricing and volume snapshot: November 3, 2026Illustration. Imagery is conceptual, not a representation of market transactions or verified token balances. A token unlock is often described as if a locked door opens and every token behind it instantly appears on an exchange. That is a useful image for a headline, but a poor model of market impact. A large tranche can overwhelm thin trading interest—or barely register if recipients do not sell. The question is not simply what unlocks. It is what becomes transferable, who controls it, and how much genuine demand is waiting.The 90 days from November 3, 2026 to February 1, 2027 contain several unusually large reported supply events. Monad and Ondo dominate different parts of the screen: one by the ratio of projected releases to circulating supply, the other by total dollar notional. A separate cluster—Falcon Finance, MemeCore and Cronos—looks especially consequential after comparing prospective release value with reported daily trading volume.My interpretation is that the headline unlock league table obscures two very different kinds of risk. Dilution describes how much the visible supply base might expand. Liquidity describes the ability of buyers to absorb possible transfers without moving price. A token can score modestly on the first dimension and look alarming on the second.A scheduled unlock is a supply event, not proof of a sell order. Float, recipient incentives and real order-book depth determine its market significance. Selected MON event~144%of reported circulating supplySelected ONDO event~$666Mestimated unlock notionalMON volume comparison40.3×reported 24-hour turnoverThese are screening calculations using reported third-party schedules and CoinPaprika market data from November 3, 2026. They do not measure freely tradable float or available bids. Why the two biggest releases tell different storiesThe selected Monad estimate is 15.6 billion MON scheduled around November 24. Against a reported circulating base of roughly 10.83 billion, that is approximately 144%. At a snapshot reference price around $0.01786, the notional value approaches $279 million. The same market snapshot reports about $6.92 million in daily trading volume. The quotient—40.3 times volume—is remarkable as an indicator of potential liquidity mismatch.But even the numerator is disputed. Another calendar reports roughly 17.11 billion tokens, while reported supply definitions also differ. A sufficiently large discrepancy in an unlock table can invert the resulting assessment. Until schedules, vesting categories and token transferability are reconciled, precision beyond the indicative magnitude would be misleading.Ondo is different. A January 17–18 tranche of approximately 1.71 billion ONDO tokens is valued near $666 million at the November 3 snapshot price. That equals roughly 35.1% of reported circulating tokens and 13.4 times the reported daily volume. It is the larger nominal-dollar story, yet its eventual price effect may be driven less by the headline number than by whether foundation, investor or ecosystem recipients immediately acquire transferable inventory.Neither ratio predicts a specific decline. Nor does a release of previously locked assets necessarily dilute the economic rights of existing holders in the same way that newly minted tokens would. Ownership, supply accounting and market access must be distinguished. A ranked screen, not an executable short listThe table prioritizes large reported-float events and liquidity-disproportionate releases. These values are reconstructed from the November 3 market snapshot and candidate unlock calendars, not audited vesting contracts.TokenScheduled dateReleaseUnlock / reported floatValueValue / 24h volumeMONNov 2415.6B~144%$279M40.3×ONDOJan 17–181.71B35.1%$666M13.4×KITENov 3800M44.4%$95.9M15.1×FFNov 28–29203M8.7%$17.7M12.0×MDec 256.11M2.4%$48.4M39.4×CRONov 161.17B2.3%$58.9M19.9×ZRONov 19–2023.3M21.2%$43.3M0.78×XPLNov 25228M12.7%$14.5M0.34×STABLENov 7888.9M5.1%$24.1M5.7×LDOJan 148.9M5.9%$16.2M1.76×KITE's November 3 event had not been verified as pending or completed at the snapshot. GRVT and WET, omitted from numerical volume ranking, have large reported dilution estimates (~64% and ~84% respectively) but insufficient comparable independently retrieved liquidity observations.How large is the release relative to trading activity?Gross unlock value divided by one day of reported market turnoverMON 40.3, MemeCore 39.4, Cronos 19.9, Kite 15.1, ONDO 13.4, Falcon Finance 12, STABLE 5.7, Lido 1.8, LayerZero 0.8, and Plasma 0.3 times.MON40.3×M39.4×CRO19.9×KITE15.1×ONDO13.4×FF12.0×STABLE5.7×LDO1.8×ZRO0.8×XPL0.3×Estimated gross unlock value divided by reported 24-hour turnover, shown on a zero-based scale. Trading volume is not resting buy-side depth, and the comparison is not a slippage forecast. See the table above for numerical values. Why smaller tokens may carry the worse liquidity problemFalcon Finance's reported late-November release of approximately 203 million FF tokens is valued around $17.7 million. Reported turnover in the same snapshot was only about $1.47 million per day. That makes the theoretical release roughly 12 times daily activity. MemeCore's early-December release, around 56.11 million M, is worth approximately $48.4 million against $1.23 million in daily volume—nearly 39.4 times.Cronos demonstrates the other side of the mismatch. Its prospective 1.17 billion CRO strategic-reserve allocation is only about 2.3% of reported circulation, but its value is nearly 20 times one day's reported trading. A strategic-reserve release should not be treated as automatic selling. Its intended distribution and wallet behavior matter more than the size of the reserve label.Meanwhile, LayerZero and Plasma show high calculated float additions but lower gross unlock-to-volume ratios in the same snapshot. That does not make them safe: gross volume can be inflated, liquidity fragments across exchanges and tokens may trade in thin conditions even when daily volume appears healthy. It does argue against assigning the same supply-risk label to every large circulating-supply change.Three ways an unlock can fail to become a price shockFirst, the new recipients may hold. Founders, long-duration investors and protocol treasuries face different incentives. Second, recipients may hedge in advance, shifting the price response before the official date. Third, legitimate market makers or existing buy interest may absorb release-related transfers without a sustained decline. Conversely, selling can arrive before the unlock if holders reposition in anticipation, and an adverse macro event can overwhelm any token-specific effect.That makes recipient wallets, transfer restrictions, on-chain exchange deposits, spot taker activity and actual order-book resilience the decisive next tests. An exchange-inflow increase is stronger evidence of possible distribution than a calendar cell, but it is still not proof of a completed sale. The 90-day event mapSelected material calendar entries, grouped by month. Where providers disagree, the conflicting quantity or date is intentionally shown. A recurring vesting tranche is not necessarily equivalent to a one-time cliff.November 2026DateTokenScheduled release / noteNov 3KITE800M; release status not verifiedNov 5ENA93.8MNov 7STABLE888.9MNov 11PUMP6.88B; conflicting provider reportsNov 12APT4.54MNov 13–15STRK127M–226M; conflicting estimatesNov 14PIEVERSE16.7MNov 15–16ARB92.7MNov 16CRO1.17BNov 19–20ZRO23.3M–23.6MNov 23H292.86M, reportedNov 24MON15.6B–17.11B; conflicting estimatesNov 25XPL~228MNov 28–29FF~203MNov 29GRVT73.63M, reportedDecember 2026DateTokenScheduled release / noteDec 1SUI~13MDec 2M56.11MDec 3WETmajor reported cliff; quantity unverifiedDec 3KITE66.7MDec 5ENA93.8MDec 7JTO14.5MDec 14PIEVERSE16.7MDec 15STRK / SEIrecurring tranchesDec 16ARBrecurring trancheDec 20ZRO~23.3MDec 24MON~863MDec 25XPL~228MDec 29FF~203MJanuary 2027 to February 1DateTokenScheduled release / noteJan 1LDO48.9MJan 1XDC~519MJan 1SUI~12.8MJan 3KITE66.7MJan 5ENA93.8MJan 12APT / PUMPrecurring tranchesJan 14PIEVERSE16.7MJan 15STRK / SEIrecurring tranchesJan 16ARBrecurring trancheJan 17–18ONDO1.71BJan 20ZRO~23.3MJan 24MON~863MJan 25XPL~228MFeb 1AZTECreported transition; timing unconfirmedThis is a material-event selection, not a complete ledger of all linear vesting emissions. Later-month percentages should not be extrapolated using a fixed November 3 supply denominator. The uncomfortable part: the data has a float problemThe most tempting rankings use unlock tokens divided by circulating supply and unlock dollar value divided by daily volume. Both can be calculated. Neither alone measures the variable a trader actually needs: newly transferable supply that is likely to seek buyers. Reported circulation can include inactive or effectively constrained inventory. Trading volume describes turnover, not the cumulative limit orders available at a given price.There are also irreducible schedule disagreements. MON estimates range from 15.6 billion to 17.11 billion tokens. Ondo's date is reported as January 17 or 18. LayerZero dates differ by a day in some calendars. Starknet figures range from approximately 127 million to 226 million. PUMP's reported monthly release sizes are inconsistent enough that I would not collapse them into one confident figure. Any model treating those competing inputs as a single known truth is overstating its quality.For a more useful pressure estimate, I would multiply the unlock notional by an evidence-based estimate of the immediately sellable share, then compare that amount with genuine spot demand: verified buy-side depth, replenishment rates and recent execution volume after excluding suspicious turnover. The result would be conditional rather than predictive, but it would be much closer to the question that actually matters.What would prove this thesis wrong?The high-pressure case would weaken if the relevant tokens remain contractually restricted, identified recipient wallets do not send supply toward markets, or genuine spot bids replenish sufficiently to absorb transfers. It would also weaken if exchanges already priced the event well in advance. Conversely, rising recipient-linked deposits combined with falling bid depth, aggressive spot selling and failed price recoveries would strengthen the case for near-term market stress.Even then, an unlock is not a standalone trading strategy. For a short-horizon position, price structure, funding, open interest, spot cumulative volume delta and a defensible stop are necessary before evaluating reward against risk. Without those confirmations, the analytical decision is to monitor rather than manufacture a trade.What I would watch firstMonad is the highest-priority schedule reconciliation and exchange-flow investigation. Ondo is the largest nominal release and deserves focused analysis as January approaches. Falcon Finance, MemeCore and Cronos merit attention because the notional size of their candidate releases is disproportionate to current reported turnover. GRVT and WET need credible liquidity and transferable-float measurements before they can be responsibly ranked with the others.The more important conclusion is structural. Crypto market dashboards make circulating supply look like a single objective number, while actual access to supply is mediated by contracts, institutions, trading venues and incentives. A token unlock reveals where that abstraction may fail. The calendar is the beginning of the investigation, not its answer.My bottom line: The next 90 days contain significant prospective supply changes, but a calendar cannot establish an impending sell-off. What matters is the gap between tokens that may become transferable and demand that is genuinely willing to meet them. Until that gap is measured, the appropriate classification is a research watchlist—not a directional trade signal. Sources and methodology: Published schedule comparisons: DefiLlama calendar, Toolz unlocks, TokenToria and MrNasDog. Market-price, market-cap, circulation and 24-hour volume references: CoinPaprika snapshot, November 3, 2026, approximately 20:27 UTC. These third-party schedule sources were summarized in the underlying November 3 research; original vesting contracts were not comprehensively audited.Scope: All valuations are historical snapshot estimates, not live quotes. Unlock dates, sizes and supply classifications may change. Token prices, volume, holder intent and actual liquidity are not forecast. Some values are contradictory or incomplete and are labeled accordingly. This publication provides market research, not financial advice.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "The Token Unlock Calendar Has a Liquidity Problem"
+      },
+      {
+        "tag": "h2",
+        "text": "Why the two biggest releases tell different stories"
+      },
+      {
+        "tag": "h2",
+        "text": "A ranked screen, not an executable short list"
+      },
+      {
+        "tag": "h3",
+        "text": "How large is the release relative to trading activity?"
+      },
+      {
+        "tag": "h2",
+        "text": "Why smaller tokens may carry the worse liquidity problem"
+      },
+      {
+        "tag": "h2",
+        "text": "Three ways an unlock can fail to become a price shock"
+      },
+      {
+        "tag": "h2",
+        "text": "The 90-day event map"
+      },
+      {
+        "tag": "h3",
+        "text": "November 2026"
+      },
+      {
+        "tag": "h3",
+        "text": "December 2026"
+      },
+      {
+        "tag": "h3",
+        "text": "January 2027 to February 1"
+      },
+      {
+        "tag": "h2",
+        "text": "The uncomfortable part: the data has a float problem"
+      },
+      {
+        "tag": "h2",
+        "text": "What would prove this thesis wrong?"
+      },
+      {
+        "tag": "h2",
+        "text": "What I would watch first"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://defillama.com/calendar",
+        "text": "DefiLlama calendar"
+      },
+      {
+        "href": "https://toolz.trade/token-unlocks/",
+        "text": "Toolz unlocks"
+      },
+      {
+        "href": "https://tokentoria.com/en/unlocks/",
+        "text": "TokenToria"
+      },
+      {
+        "href": "https://mrnasdog.com/token-unlocks",
+        "text": "MrNasDog"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "A 90-day wave of scheduled crypto releases looks alarming on paper. But reported float, recipient behavior and buy-side depth determine whether the supply ever reaches the market."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Illustration. Imagery is conceptual, not a representation of market transactions or verified token balances."
+      },
+      {
+        "tag": "p",
+        "text": "A token unlock is often described as if a locked door opens and every token behind it instantly appears on an exchange. That is a useful image for a headline, but a poor model of market impact. A large tranche can overwhelm thin trading interest—or barely register if recipients do not sell. The question is not simply what unlocks. It is what becomes transferable, who controls it, and how much genuine demand is waiting."
+      },
+      {
+        "tag": "p",
+        "text": "The 90 days from November 3, 2026 to February 1, 2027 contain several unusually large reported supply events. Monad and Ondo dominate different parts of the screen: one by the ratio of projected releases to circulating supply, the other by total dollar notional. A separate cluster—Falcon Finance, MemeCore and Cronos—looks especially consequential after comparing prospective release value with reported daily trading volume."
+      },
+      {
+        "tag": "p",
+        "text": "My interpretation is that the headline unlock league table obscures two very different kinds of risk. Dilution describes how much the visible supply base might expand. Liquidity describes the ability of buyers to absorb possible transfers without moving price. A token can score modestly on the first dimension and look alarming on the second."
+      },
+      {
+        "tag": "p",
+        "text": "These are screening calculations using reported third-party schedules and CoinPaprika market data from November 3, 2026. They do not measure freely tradable float or available bids."
+      },
+      {
+        "tag": "p",
+        "text": "The selected Monad estimate is 15.6 billion MON scheduled around November 24. Against a reported circulating base of roughly 10.83 billion, that is approximately 144%. At a snapshot reference price around $0.01786, the notional value approaches $279 million. The same market snapshot reports about $6.92 million in daily trading volume. The quotient—40.3 times volume—is remarkable as an indicator of potential liquidity mismatch."
+      },
+      {
+        "tag": "p",
+        "text": "But even the numerator is disputed. Another calendar reports roughly 17.11 billion tokens, while reported supply definitions also differ. A sufficiently large discrepancy in an unlock table can invert the resulting assessment. Until schedules, vesting categories and token transferability are reconciled, precision beyond the indicative magnitude would be misleading."
+      },
+      {
+        "tag": "p",
+        "text": "Ondo is different. A January 17–18 tranche of approximately 1.71 billion ONDO tokens is valued near $666 million at the November 3 snapshot price. That equals roughly 35.1% of reported circulating tokens and 13.4 times the reported daily volume. It is the larger nominal-dollar story, yet its eventual price effect may be driven less by the headline number than by whether foundation, investor or ecosystem recipients immediately acquire transferable inventory."
+      },
+      {
+        "tag": "p",
+        "text": "Neither ratio predicts a specific decline. Nor does a release of previously locked assets necessarily dilute the economic rights of existing holders in the same way that newly minted tokens would. Ownership, supply accounting and market access must be distinguished."
+      },
+      {
+        "tag": "p",
+        "text": "The table prioritizes large reported-float events and liquidity-disproportionate releases. These values are reconstructed from the November 3 market snapshot and candidate unlock calendars, not audited vesting contracts."
+      },
+      {
+        "tag": "p",
+        "text": "KITE's November 3 event had not been verified as pending or completed at the snapshot. GRVT and WET, omitted from numerical volume ranking, have large reported dilution estimates (~64% and ~84% respectively) but insufficient comparable independently retrieved liquidity observations."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Estimated gross unlock value divided by reported 24-hour turnover, shown on a zero-based scale. Trading volume is not resting buy-side depth, and the comparison is not a slippage forecast. See the table above for numerical values."
+      },
+      {
+        "tag": "p",
+        "text": "Falcon Finance's reported late-November release of approximately 203 million FF tokens is valued around $17.7 million. Reported turnover in the same snapshot was only about $1.47 million per day. That makes the theoretical release roughly 12 times daily activity. MemeCore's early-December release, around 56.11 million M, is worth approximately $48.4 million against $1.23 million in daily volume—nearly 39.4 times."
+      },
+      {
+        "tag": "p",
+        "text": "Cronos demonstrates the other side of the mismatch. Its prospective 1.17 billion CRO strategic-reserve allocation is only about 2.3% of reported circulation, but its value is nearly 20 times one day's reported trading. A strategic-reserve release should not be treated as automatic selling. Its intended distribution and wallet behavior matter more than the size of the reserve label."
+      },
+      {
+        "tag": "p",
+        "text": "Meanwhile, LayerZero and Plasma show high calculated float additions but lower gross unlock-to-volume ratios in the same snapshot. That does not make them safe: gross volume can be inflated, liquidity fragments across exchanges and tokens may trade in thin conditions even when daily volume appears healthy. It does argue against assigning the same supply-risk label to every large circulating-supply change."
+      },
+      {
+        "tag": "p",
+        "text": "First, the new recipients may hold. Founders, long-duration investors and protocol treasuries face different incentives. Second, recipients may hedge in advance, shifting the price response before the official date. Third, legitimate market makers or existing buy interest may absorb release-related transfers without a sustained decline. Conversely, selling can arrive before the unlock if holders reposition in anticipation, and an adverse macro event can overwhelm any token-specific effect."
+      },
+      {
+        "tag": "p",
+        "text": "That makes recipient wallets, transfer restrictions, on-chain exchange deposits, spot taker activity and actual order-book resilience the decisive next tests. An exchange-inflow increase is stronger evidence of possible distribution than a calendar cell, but it is still not proof of a completed sale."
+      },
+      {
+        "tag": "p",
+        "text": "Selected material calendar entries, grouped by month. Where providers disagree, the conflicting quantity or date is intentionally shown. A recurring vesting tranche is not necessarily equivalent to a one-time cliff."
+      },
+      {
+        "tag": "p",
+        "text": "This is a material-event selection, not a complete ledger of all linear vesting emissions. Later-month percentages should not be extrapolated using a fixed November 3 supply denominator."
+      },
+      {
+        "tag": "p",
+        "text": "The most tempting rankings use unlock tokens divided by circulating supply and unlock dollar value divided by daily volume. Both can be calculated. Neither alone measures the variable a trader actually needs: newly transferable supply that is likely to seek buyers. Reported circulation can include inactive or effectively constrained inventory. Trading volume describes turnover, not the cumulative limit orders available at a given price."
+      },
+      {
+        "tag": "p",
+        "text": "There are also irreducible schedule disagreements. MON estimates range from 15.6 billion to 17.11 billion tokens. Ondo's date is reported as January 17 or 18. LayerZero dates differ by a day in some calendars. Starknet figures range from approximately 127 million to 226 million. PUMP's reported monthly release sizes are inconsistent enough that I would not collapse them into one confident figure. Any model treating those competing inputs as a single known truth is overstating its quality."
+      },
+      {
+        "tag": "p",
+        "text": "For a more useful pressure estimate, I would multiply the unlock notional by an evidence-based estimate of the immediately sellable share, then compare that amount with genuine spot demand: verified buy-side depth, replenishment rates and recent execution volume after excluding suspicious turnover. The result would be conditional rather than predictive, but it would be much closer to the question that actually matters."
+      },
+      {
+        "tag": "p",
+        "text": "The high-pressure case would weaken if the relevant tokens remain contractually restricted, identified recipient wallets do not send supply toward markets, or genuine spot bids replenish sufficiently to absorb transfers. It would also weaken if exchanges already priced the event well in advance. Conversely, rising recipient-linked deposits combined with falling bid depth, aggressive spot selling and failed price recoveries would strengthen the case for near-term market stress."
+      },
+      {
+        "tag": "p",
+        "text": "Even then, an unlock is not a standalone trading strategy. For a short-horizon position, price structure, funding, open interest, spot cumulative volume delta and a defensible stop are necessary before evaluating reward against risk. Without those confirmations, the analytical decision is to monitor rather than manufacture a trade."
+      },
+      {
+        "tag": "p",
+        "text": "Monad is the highest-priority schedule reconciliation and exchange-flow investigation. Ondo is the largest nominal release and deserves focused analysis as January approaches. Falcon Finance, MemeCore and Cronos merit attention because the notional size of their candidate releases is disproportionate to current reported turnover. GRVT and WET need credible liquidity and transferable-float measurements before they can be responsibly ranked with the others."
+      },
+      {
+        "tag": "p",
+        "text": "The more important conclusion is structural. Crypto market dashboards make circulating supply look like a single objective number, while actual access to supply is mediated by contracts, institutions, trading venues and incentives. A token unlock reveals where that abstraction may fail. The calendar is the beginning of the investigation, not its answer."
+      },
+      {
+        "tag": "p",
+        "text": "My bottom line: The next 90 days contain significant prospective supply changes, but a calendar cannot establish an impending sell-off. What matters is the gap between tokens that may become transferable and demand that is genuinely willing to meet them. Until that gap is measured, the appropriate classification is a research watchlist—not a directional trade signal."
+      },
+      {
+        "tag": "p",
+        "text": "Sources and methodology: Published schedule comparisons: DefiLlama calendar, Toolz unlocks, TokenToria and MrNasDog. Market-price, market-cap, circulation and 24-hour volume references: CoinPaprika snapshot, November 3, 2026, approximately 20:27 UTC. These third-party schedule sources were summarized in the underlying November 3 research; original vesting contracts were not comprehensively audited."
+      },
+      {
+        "tag": "p",
+        "text": "Scope: All valuations are historical snapshot estimates, not live quotes. Unlock dates, sizes and supply classifications may change. Token prices, volume, holder intent and actual liquidity are not forecast. Some values are contradictory or incomplete and are labeled accordingly. This publication provides market research, not financial advice."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Token",
+          "Scheduled date",
+          "Release",
+          "Unlock / reported float",
+          "Value",
+          "Value / 24h volume"
+        ],
+        [
+          "MON",
+          "Nov 24",
+          "15.6B",
+          "~144%",
+          "$279M",
+          "40.3×"
+        ],
+        [
+          "ONDO",
+          "Jan 17–18",
+          "1.71B",
+          "35.1%",
+          "$666M",
+          "13.4×"
+        ],
+        [
+          "KITE",
+          "Nov 3",
+          "800M",
+          "44.4%",
+          "$95.9M",
+          "15.1×"
+        ],
+        [
+          "FF",
+          "Nov 28–29",
+          "203M",
+          "8.7%",
+          "$17.7M",
+          "12.0×"
+        ],
+        [
+          "M",
+          "Dec 2",
+          "56.11M",
+          "2.4%",
+          "$48.4M",
+          "39.4×"
+        ],
+        [
+          "CRO",
+          "Nov 16",
+          "1.17B",
+          "2.3%",
+          "$58.9M",
+          "19.9×"
+        ],
+        [
+          "ZRO",
+          "Nov 19–20",
+          "23.3M",
+          "21.2%",
+          "$43.3M",
+          "0.78×"
+        ],
+        [
+          "XPL",
+          "Nov 25",
+          "228M",
+          "12.7%",
+          "$14.5M",
+          "0.34×"
+        ],
+        [
+          "STABLE",
+          "Nov 7",
+          "888.9M",
+          "5.1%",
+          "$24.1M",
+          "5.7×"
+        ],
+        [
+          "LDO",
+          "Jan 1",
+          "48.9M",
+          "5.9%",
+          "$16.2M",
+          "1.76×"
+        ]
+      ],
+      [
+        [
+          "Date",
+          "Token",
+          "Scheduled release / note"
+        ],
+        [
+          "Nov 3",
+          "KITE",
+          "800M; release status not verified"
+        ],
+        [
+          "Nov 5",
+          "ENA",
+          "93.8M"
+        ],
+        [
+          "Nov 7",
+          "STABLE",
+          "888.9M"
+        ],
+        [
+          "Nov 11",
+          "PUMP",
+          "6.88B; conflicting provider reports"
+        ],
+        [
+          "Nov 12",
+          "APT",
+          "4.54M"
+        ],
+        [
+          "Nov 13–15",
+          "STRK",
+          "127M–226M; conflicting estimates"
+        ],
+        [
+          "Nov 14",
+          "PIEVERSE",
+          "16.7M"
+        ],
+        [
+          "Nov 15–16",
+          "ARB",
+          "92.7M"
+        ],
+        [
+          "Nov 16",
+          "CRO",
+          "1.17B"
+        ],
+        [
+          "Nov 19–20",
+          "ZRO",
+          "23.3M–23.6M"
+        ],
+        [
+          "Nov 23",
+          "H",
+          "292.86M, reported"
+        ],
+        [
+          "Nov 24",
+          "MON",
+          "15.6B–17.11B; conflicting estimates"
+        ],
+        [
+          "Nov 25",
+          "XPL",
+          "~228M"
+        ],
+        [
+          "Nov 28–29",
+          "FF",
+          "~203M"
+        ],
+        [
+          "Nov 29",
+          "GRVT",
+          "73.63M, reported"
+        ]
+      ],
+      [
+        [
+          "Date",
+          "Token",
+          "Scheduled release / note"
+        ],
+        [
+          "Dec 1",
+          "SUI",
+          "~13M"
+        ],
+        [
+          "Dec 2",
+          "M",
+          "56.11M"
+        ],
+        [
+          "Dec 3",
+          "WET",
+          "major reported cliff; quantity unverified"
+        ],
+        [
+          "Dec 3",
+          "KITE",
+          "66.7M"
+        ],
+        [
+          "Dec 5",
+          "ENA",
+          "93.8M"
+        ],
+        [
+          "Dec 7",
+          "JTO",
+          "14.5M"
+        ],
+        [
+          "Dec 14",
+          "PIEVERSE",
+          "16.7M"
+        ],
+        [
+          "Dec 15",
+          "STRK / SEI",
+          "recurring tranches"
+        ],
+        [
+          "Dec 16",
+          "ARB",
+          "recurring tranche"
+        ],
+        [
+          "Dec 20",
+          "ZRO",
+          "~23.3M"
+        ],
+        [
+          "Dec 24",
+          "MON",
+          "~863M"
+        ],
+        [
+          "Dec 25",
+          "XPL",
+          "~228M"
+        ],
+        [
+          "Dec 29",
+          "FF",
+          "~203M"
+        ]
+      ],
+      [
+        [
+          "Date",
+          "Token",
+          "Scheduled release / note"
+        ],
+        [
+          "Jan 1",
+          "LDO",
+          "48.9M"
+        ],
+        [
+          "Jan 1",
+          "XDC",
+          "~519M"
+        ],
+        [
+          "Jan 1",
+          "SUI",
+          "~12.8M"
+        ],
+        [
+          "Jan 3",
+          "KITE",
+          "66.7M"
+        ],
+        [
+          "Jan 5",
+          "ENA",
+          "93.8M"
+        ],
+        [
+          "Jan 12",
+          "APT / PUMP",
+          "recurring tranches"
+        ],
+        [
+          "Jan 14",
+          "PIEVERSE",
+          "16.7M"
+        ],
+        [
+          "Jan 15",
+          "STRK / SEI",
+          "recurring tranches"
+        ],
+        [
+          "Jan 16",
+          "ARB",
+          "recurring tranche"
+        ],
+        [
+          "Jan 17–18",
+          "ONDO",
+          "1.71B"
+        ],
+        [
+          "Jan 20",
+          "ZRO",
+          "~23.3M"
+        ],
+        [
+          "Jan 24",
+          "MON",
+          "~863M"
+        ],
+        [
+          "Jan 25",
+          "XPL",
+          "~228M"
+        ],
+        [
+          "Feb 1",
+          "AZTEC",
+          "reported transition; timing unconfirmed"
+        ]
+      ]
+    ],
+    "alts": [
+      "Editorial illustration of a glowing open lock and crypto tokens beside the words The Supply Behind the Float"
+    ],
+    "svgCount": 1,
+    "svgSha256": [
+      "c932d0537d56c1b900aa48a378cc8156ff8f2f033ce5afd4bea5d20efbd53544"
+    ],
+    "imageCount": 1,
+    "imageSha256": [
+      "3a93530201e76bb190dba2aaad9f4ba61c5c82644f5d478b890dd3468f0dd387"
+    ],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "deepbook-supply-transparency": {
     "text": "Independent Market NotesTokenomics / Investigative analysisDeepBook’s Supply Question: Is the Treasury Locked or Discretionary?A reported 5.27-billion-token holder, conflicting circulation figures, and an unanswered question about who can move DEEP.Research snapshot: November 3, 2026 · Historical figures, not live quotes Editorial illustration. The lock is conceptual, not a depiction of a verified on-chain vault. A token can have a functioning product, measurable trading activity and a plausible economic role—and still leave investors unable to answer a basic question: how much supply is actually available to move? That is the tension at the center of DeepBook, the Sui-based on-chain order-book infrastructure project. Public token-holder pages identify one address as holding roughly 5.27 billion DEEP, more than half of the token’s stated 10-billion maximum. Yet two major market-data providers have published sharply different circulating-supply figures. And the project's allocation disclosures describe a large ecosystem treasury without conclusively identifying the controls on the reported holder. What interests me is not the size of that balance in isolation. Large protocol treasuries are common. The consequential question is whether the tokens are subject to enforceable release restrictions or held under administrative discretion. Those are different economic risks, even when both arrangements are described as a long-term ecosystem allocation. A real protocol, and a separate supply problem DeepBook is not merely a token searching for a purpose. It provides shared on-chain central-limit-order-book infrastructure for applications on Sui. The DEEP token can be used to pay trading fees and obtain staking-related benefits. Official documentation also allows certain fees to be paid in input tokens, meaning DEEP is useful without being mandatory in every transaction. Sui’s DeepBook documentation describes the protocol and its operating model. Protocol activity gives the project an empirical foundation. In snapshots discussed during this investigation, DefiLlama reported roughly $178 million–$211 million in trailing 30-day DEX volume, with tokenholder-revenue estimates around $8,859–$10,981. These are different observations at different retrieval times, not a single synchronized dataset; their methodology and the relationship between reported revenue and economic benefits to holders require scrutiny. The underlying DefiLlama protocol page is the appropriate reference for updated values. Those numbers matter because they establish a reason to investigate DEEP seriously. They do not resolve the supply denominator used to value the token. Two circulating supplies for the same token On November 3, 2026, CoinGecko’s supply breakdown reported 2.5 billion DEEP circulating, alongside approximately 6.259 billion outstanding and 10 billion total. CoinMarketCap’s quote data reported approximately 6.014 billion circulating and 10 billion total. The CoinMarketCap figure was also labeled as self-reported circulating supply. Provider snapshots, November 3, 2026, approximately 13:24–13:26 UTC. Figures rounded.MeasureCoinGeckoCoinMarketCapCirculating DEEP2.500B6.014BMaximum / total supply10.000B10.000BReported market capitalization~$37.9M~$93.9MFully diluted valuation~$151.6M~$156.1MProvenance limitationNo noncirculating wallets identified in supply-breakdown responseCirculating supply also designated self-reported Both estimates placed DEEP within the $1 million–$100 million small-cap research range at those timestamps. But they describe very different floats. Using the two circulating-supply figures produces a roughly 2.4-fold difference in implied capitalization at a common token price. The modest difference in the providers’ fully diluted valuations reflects differing price snapshots, not a different maximum supply. How much of the maximum supply is counted as circulating?CoinGecko25.00%CoinMarketCap60.14%Scale begins at zero and ends at 100% of the 10B maximum. Historical provider estimates, not independently reconciled on-chain circulation. There are legitimate reasons for data services to disagree. One may exclude ecosystem-controlled balances that another counts as transferable. One may rely on a project-supplied figure while another applies its own classification. The discrepancy is therefore evidence of a measurement problem, not evidence by itself of concealment or misconduct. The address that changes the question GeckoTerminal’s holder information identifies the following Sui address as the largest reported DEEP holder: 0x9548232f9cebbc1eec56cfb25b99f61e17924b4908248c260c8d70100c59c70d Its reported balance is approximately 5.27 billion DEEP, or 52.7% of maximum supply. A separate holder-distribution page showed a similarly sized top balance and a second address holding roughly 1.62 billion DEEP. The two reported positions together account for approximately 69% of maximum supply. These are address-level concentrations, not proof that two people or entities beneficially own the tokens. See GeckoTerminal’s DEEP/SUI pool and holder information. A key distinction follows: a blockchain address can belong to a treasury, custodian, vesting system, exchange or individual. A balance alone does not reveal who can authorize transfers or what restrictions apply. What the treasury disclosures actually say DeepBook’s published tokenomics assign 61.57% of total supply—6.157 billion DEEP—to ecosystem growth. The allocation is close enough in scale to the reported 5.27-billion holder to make a treasury connection plausible. It does not prove that connection. A Sui-hosted DeepBook whitepaper describes the token’s design and allocation, while the project’s token page describes ecosystem distribution. A separate Kraken-published DEEP disclosure describes the Sui Foundation as the initial holder of a large ecosystem allocation and refers to an on-chain ecosystem vault with a multiyear release program. The documents do not, in the evidence available here, authenticate the reported largest-holder address as that vault. There is also a subtle but crucial ambiguity in the language of release. A project can say tokens were “unlocked” at token generation while planning to distribute them over seven years. That may mean the tokens were technically transferable but administratively reserved. Alternatively, tokens could be held inside a Move object with time-based withdrawal restrictions. Both arrangements can support a multiyear distribution plan; only one necessarily makes that plan enforceable by code. The missing fact is not the intended schedule. It is the authority to override it. Without the vault object, controlling Move module, ownership configuration and withdrawal history, a published distribution plan cannot establish that transfers are technically prohibited. Three explanations remain viable 1. A genuinely restricted ecosystem vault The large address could correspond to an ecosystem-controlled object with enforceable vesting or timelock conditions. Under this interpretation, at least some treasury balances may be properly excluded from circulating supply until release. Confirmation would require identifying the relevant Sui object and demonstrating the actual withdrawal rules, including any privileged bypass. 2. A treasury governed by authorized signers The tokens could instead sit in ordinary transferable coin objects controlled by an authorized address or multisignature arrangement. A seven-year release plan could still be sincere and consistently followed, but the restriction would be institutional rather than automatically enforced. The economic distinction is that authorized parties may have greater discretion to accelerate transfers. 3. An address unrelated to the Foundation treasury The holder could represent another custody or protocol arrangement. Matching its balance to the original ecosystem allocation is suggestive, not identifying evidence. A reliable attribution would require an official address statement, an unambiguous creation or funding trail, or both. None of these explanations has been conclusively established. It would be premature to call the balance either a verified locked vault or an unrestricted Foundation wallet. Why vesting trackers do not settle it Third-party token-unlock dashboards have shown different unlocked-supply estimates and classifications for DEEP. Some distinguish scheduled vesting from circulation; others apply allocation-specific assumptions. These datasets can be useful leads, but they cannot replace inspection of the relevant Sui objects and transaction history. One more complication is the token’s architecture. The official Sui documentation identifies the native coin type as 0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP. DeepBook’s core contracts are upgradeable, but upgradeability of the trading protocol does not by itself establish the transfer controls on a separate ecosystem treasury. The relevant treasury implementation must be examined on its own terms. See Sui’s contract information. Why the difference matters for valuation When circulating supply is uncertain, market capitalization becomes a conditional estimate. A lower denominator can make a token appear smaller relative to its activity, revenue or peers. A larger denominator can make the same price look considerably more expensive. Neither interpretation should be adopted without understanding what the excluded tokens are and who can move them. The distinction also changes how investors should think about dilution. A time-locked allocation introduces scheduled future supply. A discretionary treasury introduces governance, custody and disclosure risk. Both can be managed responsibly; they simply require different evidence. Trading liquidity adds another layer. A few observed automated-market-maker pools showed relatively modest reserves, but those snapshots did not capture DeepBook’s own order books or all centralized venues. It would be misleading to treat that narrow sample as the token’s total executable liquidity. The protocol’s documented DEEP/SUI and DEEP/USDC order-book pools warrant separate depth analysis. What would settle the question For a definitive answer, I would want four pieces of public evidence: an authoritative attribution of the largest-holder address; the relevant treasury object ID and Move type; the code and capabilities governing withdrawal, upgrade and administrator access; and a historical reconciliation of deposits, releases and remaining balances against the published allocation schedule. Those facts could validate the restricted-vault interpretation. They could instead show a discretionary treasury following a voluntary distribution policy. Or they could reveal that the reported address is unrelated to the Foundation allocation. Any of those outcomes would be more informative than repeating a circulating-supply number without examining its assumptions. The real test is verifiability My conclusion is deliberately narrower than an accusation: DeepBook has demonstrable utility, but the public evidence considered here does not establish how the largest reported DEEP balance is controlled. Nor does it reconcile the competing circulating-supply estimates. For a protocol built on transparent, programmable finance, that gap is worth closing. The strongest disclosure would not be another promise about long-term alignment. It would be a verifiable address, a verifiable contract and a clear explanation of which tokens can actually move. Until then, the honest description is not “locked” or “unlocked.” It is unresolved. ◆ Sources and methodology notesDeepBook: DEEP token and distribution — project allocation and release language.Sui: DeepBook token whitepaper — original design and allocation framework; note that historical allocation percentages may differ from later documents.Sui: DeepBook V3 contract information — canonical DEEP type, protocol versions and order-book identifiers.CoinGecko: DeepBook and CoinMarketCap: DeepBook Protocol — differing November 3, 2026 supply and valuation snapshots.GeckoTerminal: DEEP/SUI pool — reported largest-holder address and balance.DefiLlama: DeepBook — protocol activity and revenue categories; figures are time-dependent.DefiLlama: DeepBook unlocks and DropsTab: DEEP vesting — competing unlock methodologies, not definitive proof of wallet-level restrictions.All market and holder figures are historical observations discussed as of November 3, 2026. Reported balances, labels and supply classifications are not presented as a complete independent on-chain audit. No allegation of misconduct follows from the unresolved custody question. This article is research commentary, not investment advice.Independent Market Notes · Research commentary",
     "headings": [
