@@ -10,6 +10,7 @@ import unittest
 import xml.etree.ElementTree as ET
 from html import escape
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -105,6 +106,8 @@ class SiteStructureTest(unittest.TestCase):
             "robots.txt",
             "favicon.svg",
             "design-system.css",
+            "search.js",
+            "search-index.json",
         ):
             self.assertTrue((build.DIST / relative).is_file(), relative)
         for entry in self.catalog:
@@ -142,6 +145,45 @@ class SiteStructureTest(unittest.TestCase):
             self.assertIn(f'href="{entry["slug"]}/"', index)
             self.assertIn(escape(entry["title"]), index)
             self.assertIn(escape(entry["dek"]), index)
+
+    def test_featured_story_and_search_index_are_complete(self) -> None:
+        index = (build.DIST / "index.html").read_text(encoding="utf-8")
+        featured_slug = self.site["featured_slug"]
+        featured = next(entry for entry in self.catalog if entry["slug"] == featured_slug)
+        self.assertIn('class="feature wrap"', index)
+        self.assertEqual(index.count('class="entry"'), len(self.catalog) - 1)
+        self.assertNotIn(f'class="entry" data-slug="{featured_slug}"', index)
+        search_data = json.loads((build.DIST / "search-index.json").read_text(encoding="utf-8"))
+        self.assertEqual({row["slug"] for row in search_data}, {row["slug"] for row in self.catalog})
+        for entry in self.catalog:
+            self.assertIn(entry["topic"], build.TOPICS)
+            self.assertIn(entry["research_type"], build.RESEARCH_TYPES)
+            self.assertIsInstance(entry["assets"], list)
+        self.assertIn('aria-live="polite"', index)
+        self.assertIn('data-empty-state', index)
+
+    def test_article_canonicals_follow_configured_domain(self) -> None:
+        for entry in self.catalog:
+            html = (build.DIST / entry["slug"] / "index.html").read_text(encoding="utf-8")
+            self.assertEqual(canonical(html), f'{self.base}/{entry["slug"]}/')
+
+    def test_invalid_taxonomy_values_fail_with_actionable_errors(self) -> None:
+        catalog = json.loads((ROOT / "content" / "articles.json").read_text(encoding="utf-8"))
+        catalog[0]["topic"] = "unapproved-topic"
+        with patch.object(build, "load_json", return_value=catalog):
+            with self.assertRaisesRegex(SystemExit, "topic must be one of"):
+                build.load_notes()
+
+        catalog[0]["topic"] = "protocol-research"
+        catalog[0]["assets"] = ["lowercase"]
+        with patch.object(build, "load_json", return_value=catalog):
+            with self.assertRaisesRegex(SystemExit, "uppercase ticker symbols"):
+                build.load_notes()
+
+    def test_unknown_featured_slug_fails_the_build(self) -> None:
+        notes = build.load_notes()
+        with self.assertRaisesRegex(SystemExit, "does not match an article"):
+            build.select_featured(notes, {"featured_slug": "missing-article"})
 
     def test_rss_matches_baseline(self) -> None:
         items = rss_items()

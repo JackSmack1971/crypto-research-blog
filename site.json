@@ -1,7 +1,8 @@
 {
-  "title": "Crypto Research",
-  "tagline": "Independent market notes",
+  "title": "Independent Market Notes",
+  "tagline": "Independent crypto research",
   "description": "Independent market research on digital assets: token economics, market structure, and the evidence behind the trade.",
-  "url": "https://jacksmack1971.github.io/crypto-research-blog",
-  "language": "en"
+  "url": "https://independent-market-notes.netlify.app",
+  "language": "en",
+  "featured_slug": "deepbook-supply-transparency"
 }

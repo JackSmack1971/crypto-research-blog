@@ -4,7 +4,8 @@ import AxeBuilder from "@axe-core/playwright";
 
 const articles = JSON.parse(readFileSync("content/articles.json", "utf8")) as { slug: string }[];
 const routes = ["/", ...articles.map((article) => `/${article.slug}/`), "/404.html"];
-const widths = [390, 768, 1440];
+const widths = [320, 390, 768, 1024, 1440];
+const baselineWidths = [390, 768, 1440];
 const visualTargets = [
   ["home", "/"],
   ["bitcoin-buying-imbalance", "/bitcoin-buying-imbalance/"],
@@ -110,9 +111,43 @@ test("every catalog article appears on the homepage", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await prepare(page, "/");
   for (const article of articles) {
-    const link = page.locator(`a.entry[href="${article.slug}/"]`);
+    const link = page.locator(`a[href="${article.slug}/"]`).first();
     await expect(link, `homepage is missing ${article.slug}`).toBeVisible();
   }
+});
+
+test.describe("research archive search", () => {
+  test("combines ticker, topic, and research type filters and clears them", async ({ page }) => {
+    await page.setViewportSize({ width: 1024, height: 900 });
+    await prepare(page, "/");
+    await page.getByRole("searchbox", { name: "Search by topic, asset ticker, or title" }).fill("BTC");
+    await page.getByLabel("Filter by topic").selectOption("bitcoin");
+    await page.getByLabel("Filter by research type").selectOption("market-snapshot");
+    await expect(page.locator(".entry:visible")).toHaveCount(3);
+    await expect(page.locator("[data-search-status]")).toContainText("3 investigations");
+    await page.getByRole("button", { name: "Clear" }).click();
+    await expect(page.locator(".entry:visible")).toHaveCount(18);
+  });
+
+  test("normalizes punctuation and announces empty results", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await prepare(page, "/");
+    await page.getByRole("searchbox", { name: "Search by topic, asset ticker, or title" }).fill("deepbook’s supply question");
+    await expect(page.locator("[data-featured-search]")).toBeVisible();
+    await expect(page.locator("[data-search-status]")).toContainText("1 investigation");
+    await page.getByRole("searchbox", { name: "Search by topic, asset ticker, or title" }).fill("unmatched query xyz");
+    await expect(page.locator(".entry:visible")).toHaveCount(0);
+    await expect(page.locator("[data-empty-state]")).toBeVisible();
+  });
+
+  test("all article links remain in server-rendered HTML without the search script", async ({ page }) => {
+    await page.route("**/search.js", (route) => route.abort());
+    await page.setViewportSize({ width: 768, height: 900 });
+    await prepare(page, "/");
+    for (const article of articles) {
+      await expect(page.locator(`a[href="${article.slug}/"]`).first()).toBeVisible();
+    }
+  });
 });
 
 test.describe("keyboard", () => {
@@ -184,7 +219,7 @@ test.describe("accessibility", () => {
 
 test.describe("visual baseline", () => {
   for (const [name, route] of visualTargets) {
-    for (const width of widths) {
+    for (const width of baselineWidths) {
       test(`${name} @ ${width}`, async ({ page }) => {
         await page.setViewportSize({ width, height: 900 });
         await prepare(page, route);
@@ -192,12 +227,12 @@ test.describe("visual baseline", () => {
           // Keep homepage paint baselines focused on the approved article set.
           // New notes are independently checked for homepage visibility, overflow, and accessibility.
           await page.evaluate((slugs) => {
-            for (const entry of document.querySelectorAll<HTMLAnchorElement>("a.entry")) {
-              const slug = entry.getAttribute("href")?.replace(/\/$/, "");
+            for (const entry of document.querySelectorAll<HTMLElement>(".entry[data-slug]")) {
+              const slug = entry.dataset.slug;
               if (!slug || !slugs.includes(slug)) entry.remove();
             }
             const count = document.querySelector(".count");
-            if (count) count.textContent = "9 notes";
+            if (count) count.textContent = "9 investigations";
           }, [...homepageBaselineSlugs]);
         }
         await expect(page).toHaveScreenshot(`${name}-${width}.png`, {
