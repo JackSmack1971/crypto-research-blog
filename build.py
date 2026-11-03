@@ -236,6 +236,10 @@ def load_site() -> dict:
         die("site.json description is empty")
     site["language"] = str(site.get("language") or "en").strip() or "en"
     site["url"] = site_url(site)
+    guid_origin = str(site.get("rss_guid_origin") or site["url"]).strip().rstrip("/")
+    if not guid_origin.startswith("https://"):
+        die("site.json rss_guid_origin must be an https URL")
+    site["rss_guid_origin"] = guid_origin
     featured_slug = str(site.get("featured_slug") or "").strip()
     if featured_slug and not SLUG_RE.fullmatch(featured_slug):
         die("site.json featured_slug must be a valid article slug")
@@ -281,10 +285,10 @@ def load_notes() -> list[dict]:
             die(f"articles.json item {index} must be an object")
         topic = str(entry.get("topic") or "").strip()
         research_type = str(entry.get("research_type") or "").strip()
-        assets = entry.get("assets", [])
-        if topic and topic not in TOPICS:
+        assets = entry.get("assets")
+        if topic not in TOPICS:
             die(f"article {index} topic must be one of: {', '.join(TOPICS)}")
-        if research_type and research_type not in RESEARCH_TYPES:
+        if research_type not in RESEARCH_TYPES:
             die(f"article {index} research_type must be one of: {', '.join(RESEARCH_TYPES)}")
         if not isinstance(assets, list) or any(
             not isinstance(asset, str) or not ASSET_RE.fullmatch(asset)
@@ -501,7 +505,7 @@ def page_shell(
   {json_ld(structured_data)}
 </head>
 <body class="cr-home">
-  <a class="skip" href="#notes">Skip to notes</a>
+  <a class="skip" href="#main-content">Skip to main content</a>
   {main}
 </body>
 </html>
@@ -547,6 +551,10 @@ def render_home(notes: list[dict], site: dict) -> str:
         else '<span class="feature-art-fallback" aria-hidden="true">IMN</span>'
     )
     topics = "".join(f'<option value="{key}">{escape(value)}</option>' for key, value in TOPICS.items())
+    topic_links = "".join(
+        f'<a href="?topic={key}#notes">{escape(value)}</a>'
+        for key, value in TOPICS.items()
+    )
     types = "".join(f'<option value="{key}">{escape(value)}</option>' for key, value in RESEARCH_TYPES.items())
     posts = [
         {
@@ -575,10 +583,11 @@ def render_home(notes: list[dict], site: dict) -> str:
       </div>
       <h1>{escape(site["title"])}</h1>
       <p class="lede">{escape(site["description"])}</p>
-      <nav class="topic-nav" aria-label="Browse by topic"><a href="?topic=bitcoin#notes">Bitcoin</a><a href="?topic=liquidity#notes">Liquidity</a><a href="?topic=tokenomics#notes">Tokenomics</a><a href="?topic=protocol-research#notes">Protocol research</a></nav>
+      <nav class="topic-nav" aria-label="Browse by topic">{topic_links}</nav>
     </div>
   </header>
   <main id="main-content">
+    <div data-feature-slot hidden></div>
     <section class="feature wrap" aria-labelledby="feature-title" data-featured-search data-slug="{escape(featured["slug"], quote=True)}" data-topic="{escape(featured["topic"], quote=True)}" data-research-type="{escape(featured["research_type"], quote=True)}" data-assets="{escape(' '.join(featured["assets"]), quote=True)}">
       <a class="feature-art" href="{escape(featured["slug"], quote=True)}/" aria-label="Read featured investigation: {escape(featured["title"], quote=True)}">{feature_art}</a>
       <div class="feature-copy">
@@ -645,13 +654,14 @@ def render_feed(notes: list[dict], site: dict) -> str:
             tzinfo=timezone.utc, hour=18
         ) - timedelta(seconds=index)
         link = f"{site['url']}/{note['slug']}/"
+        guid = f"{site['rss_guid_origin']}/{note['slug']}/"
         items.append(
             "\n".join(
                 [
                     "    <item>",
                     f"      <title>{xml_escape(note['title'])}</title>",
                     f"      <link>{xml_escape(link)}</link>",
-                    f'      <guid isPermaLink="true">{xml_escape(link)}</guid>',
+                    f'      <guid isPermaLink="true">{xml_escape(guid)}</guid>',
                     f"      <pubDate>{format_datetime(published)}</pubDate>",
                     f"      <description><![CDATA[{note['dek'].replace(']]>', ']]]]><![CDATA[>')}]]></description>",
                     "    </item>",

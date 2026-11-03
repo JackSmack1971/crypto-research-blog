@@ -263,13 +263,16 @@ body.cr-home .topic-nav {
 }
 body.cr-home .topic-nav a { color: #e6d3ae; text-underline-offset: 4px; }
 body.cr-home .topic-nav a:hover { text-decoration-thickness: 2px; }
-body.cr-home .tools a:focus-visible,
-body.cr-home .topic-nav a:focus-visible,
+body.cr-home .mast .tools a:focus-visible,
+body.cr-home .mast .topic-nav a:focus-visible {
+  outline: 3px solid var(--cr-bar-focus);
+  outline-offset: 4px;
+}
 body.cr-home .feature a:focus-visible,
 body.cr-home .entry-link:focus-visible,
 body.cr-home .filters :focus-visible,
 body.cr-home .colophon a:focus-visible {
-  outline: 3px solid #b18a4c;
+  outline: 3px solid var(--cr-accent);
   outline-offset: 4px;
 }
 body.cr-home .feature {
@@ -364,7 +367,7 @@ body.cr-home .filters button {
   background: #fffdf8;
   color: var(--cr-ink);
   padding: 0 12px;
-  font: 500 0.9rem/1.3 var(--cr-sans);
+  font: 500 1rem/1.3 var(--cr-sans);
 }
 body.cr-home .filters button { width: auto; cursor: pointer; background: var(--cr-bar); color: white; border-color: var(--cr-bar); }
 body.cr-home .sr-only {
@@ -380,6 +383,13 @@ body.cr-home .sr-only {
 }
 body.cr-home .search-status { min-height: 1.5em; margin: 13px 0 8px; color: var(--cr-muted); font: 0.82rem/1.4 var(--cr-sans); }
 body.cr-home .archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 22px; }
+body.cr-home .archive-grid > .feature-result {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 0;
+  border: 0;
+}
 body.cr-home .entry { display: block; min-width: 0; padding: 0; border: 0; }
 body.cr-home .entry:first-of-type { border: 0; margin: 0; }
 body.cr-home .entry[hidden] { display: none; }
@@ -404,6 +414,8 @@ body.cr-home .method > p:last-child { max-width: 55rem; margin-bottom: 0; color:
 body.cr-home footer .colophon { width: min(var(--cr-container), calc(100% - 48px)); }
 body.cr-home .colophon > p { margin: 0; }
 body.cr-home .colophon > div { display: flex; gap: 24px; }
+body.cr-home:not(.js-ready) .topic-nav,
+body.cr-home:not(.js-ready) .filters { display: none; }
 @media (min-width: 640px) and (max-width: 1023px) {
   body.cr-home .archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   body.cr-home .filters { grid-template-columns: 1fr 1fr; }

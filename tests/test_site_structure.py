@@ -64,6 +64,7 @@ def rss_items() -> list[dict[str, str]]:
             {
                 "title": item.findtext("title") or "",
                 "link": item.findtext("link") or "",
+                "guid": item.findtext("guid") or "",
                 "description": item.findtext("description") or "",
             }
         )
@@ -169,6 +170,12 @@ class SiteStructureTest(unittest.TestCase):
 
     def test_invalid_taxonomy_values_fail_with_actionable_errors(self) -> None:
         catalog = json.loads((ROOT / "content" / "articles.json").read_text(encoding="utf-8"))
+        catalog[0].pop("topic")
+        with patch.object(build, "load_json", return_value=catalog):
+            with self.assertRaisesRegex(SystemExit, "topic must be one of"):
+                build.load_notes()
+
+        catalog = json.loads((ROOT / "content" / "articles.json").read_text(encoding="utf-8"))
         catalog[0]["topic"] = "unapproved-topic"
         with patch.object(build, "load_json", return_value=catalog):
             with self.assertRaisesRegex(SystemExit, "topic must be one of"):
@@ -190,6 +197,10 @@ class SiteStructureTest(unittest.TestCase):
         self.assertEqual(items, self.metadata["rss"])
         for entry, item in zip(self.catalog, items):
             self.assertEqual(item["link"], f"{self.base}/{entry['slug']}/")
+            self.assertEqual(
+                item["guid"],
+                f"{self.site['rss_guid_origin'].rstrip('/')}/{entry['slug']}/",
+            )
             self.assertEqual(item["title"], entry["title"])
             self.assertEqual(item["description"], entry["dek"])
 

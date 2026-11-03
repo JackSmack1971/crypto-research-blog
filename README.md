@@ -8,7 +8,7 @@ Each essay stays a standalone HTML page, with its own styles and images. The bui
 
 ## Change the site title
 
-Edit `title` in [`site.json`](site.json). The home page, article bar, feed, and meta tags all read that file. `url` is the canonical public origin used for canonical links, the sitemap, and RSS. `featured_slug` selects the lead investigation; when empty, the newest article is used. Navigation links are relative, so both Netlify and the GitHub Pages project path continue to work.
+Edit `title` in [`site.json`](site.json). The home page, article bar, feed, and meta tags all read that file. `url` is the canonical public origin used for canonical links, the sitemap, and RSS permalinks. `rss_guid_origin` preserves stable RSS item identifiers when the canonical domain changes. `featured_slug` selects the lead investigation; when empty, the newest article is used. Navigation links are relative, so both Netlify and the GitHub Pages project path continue to work.
 
 ## Add a note
 
@@ -30,7 +30,7 @@ Edit `title` in [`site.json`](site.json). The home page, article bar, feed, and 
 
 `slug` becomes the URL (`/my-new-note/`). `date` is `YYYY-MM-DD` and controls the order: newest first. Notes from the same day keep the order they appear in the file. If you set `dek`, it must appear in the essay itself.
 
-`topic`, `assets`, and `research_type` power the archive filters and generated `search-index.json`. Topics are `bitcoin`, `market-structure`, `liquidity`, `tokenomics`, `protocol-research`, and `risk-verification`. Research types are `market-snapshot`, `investigative-analysis`, and `token-due-diligence`. Use uppercase ticker symbols for `assets`. Older entries may omit these fields while migrating.
+`topic`, `assets`, and `research_type` are required. They power the archive filters and generated `search-index.json`. Topics are `bitcoin`, `market-structure`, `liquidity`, `tokenomics`, `protocol-research`, and `risk-verification`. Research types are `market-snapshot`, `investigative-analysis`, and `token-due-diligence`. Use uppercase ticker symbols for `assets`; the build rejects missing or unapproved values.
 
 3. Refresh the committed text and metadata baselines with one command:
 
