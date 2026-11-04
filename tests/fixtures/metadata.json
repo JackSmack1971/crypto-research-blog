@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-market-structure-after-midterms": {
+      "title": "After the Midterms, CLARITY’s Hardest Vote Is Still Ahead",
+      "description": "Democrats’ midterm wins reshape the next Congress, but the stalled CLARITY Act faces a different and more difficult legislative path than a lame-duck revival.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-market-structure-after-midterms/",
+      "og:title": "After the Midterms, CLARITY’s Hardest Vote Is Still Ahead",
+      "og:description": "The election changes who will control the next Congress. It does not erase the Senate vote that stalled crypto market-structure legislation.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-market-structure-after-midterms/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-open-interest-filter-test": {
       "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test | Crypto Research",
       "description": "A close reading of OKX BTC perpetual data shows why matching open interest to the right hour matters—and why a positive backtest is not proof of an edge.",
@@ -242,6 +252,12 @@
     }
   },
   "rss": [
+    {
+      "title": "After the Midterms, CLARITY’s Hardest Vote Is Still Ahead",
+      "link": "https://independent-market-notes.netlify.app/crypto-market-structure-after-midterms/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-market-structure-after-midterms/",
+      "description": "Democrats’ wins reshape the next Congress. They do not turn a stalled crypto market-structure bill into a lame-duck certainty."
+    },
     {
       "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
       "link": "https://independent-market-notes.netlify.app/bitcoin-open-interest-filter-test/",
