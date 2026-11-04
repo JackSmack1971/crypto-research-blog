@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-open-interest-filter-test": {
+      "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test | Crypto Research",
+      "description": "A close reading of OKX BTC perpetual data shows why matching open interest to the right hour matters—and why a positive backtest is not proof of an edge.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-open-interest-filter-test/",
+      "og:title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
+      "og:description": "A timestamp correction rescued a plausible derivatives signal from look-ahead bias. It did not show that open interest improves on price momentum.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-open-interest-filter-test/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "binance-four-hour-wallet-takeover": {
       "title": "Binance&#x27;s Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation | Independent Market Notes",
       "description": "A transaction-grounded reconstruction of Binance 14’s EIP-7702 delegation, 50 authorization attempts, token sweep and eventual revocation.",
@@ -232,6 +242,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-open-interest-filter-test/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-open-interest-filter-test/",
+      "description": "A timestamp correction rescued a plausible derivatives signal from look-ahead bias. It did not show that open interest improves on price momentum."
+    },
     {
       "title": "Binance's Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation",
       "link": "https://independent-market-notes.netlify.app/binance-four-hour-wallet-takeover/",

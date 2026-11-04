@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bitcoin-open-interest-filter-test",
+    "source": "bitcoin-open-interest-filter-test.html",
+    "date": "2026-11-04",
+    "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
+    "dek": "A timestamp correction rescued a plausible derivatives signal from look-ahead bias. It did not show that open interest improves on price momentum.",
+    "image": "assets/featured/bitcoin-open-interest-filter-test.jpg",
+    "image_alt": "Editorial illustration: separate teal price and rust open-interest paths diverge over a faint conceptual grid beside the words The Open Interest Question; the paths are not market data.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "binance-four-hour-wallet-takeover",
     "source": "binance-four-hour-wallet-takeover.html",
     "date": "2026-11-04",

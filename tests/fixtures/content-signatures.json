@@ -1,4 +1,261 @@
 {
+  "bitcoin-open-interest-filter-test": {
+    "text": "Skip to article Crypto ResearchIndependent market analysis / Derivatives Market structure / InvestigationBitcoin’s Open-Interest Filter Failed Its Simplest TestA timestamp correction rescued a plausible derivatives signal from look-ahead bias. It did not show that open interest improves on price momentum.November 4, 2026 · Historical research, not a live market signal Conceptual editorial artwork. The two lines do not represent recorded market prices or open interest. A market signal can look convincing for two very different reasons. It can contain information that prices have not yet absorbed. Or it can appear to work because the test quietly gives it information from the future. Bitcoin’s open-interest story sits uncomfortably close to that boundary. The familiar interpretation is seductive: when Bitcoin rises and futures open interest rises with it, new leveraged positions may be reinforcing the move. When open interest falls, perhaps the rally is merely traders closing shorts. That language gives us a tidy narrative about conviction, positioning and the quality of a trend. But a narrative is not a tradeable edge. What matters is whether the extra variable improves a decision relative to a rule that just watches price—and whether the data were genuinely available when that decision would have been made. In the historical OKX BTC-USDT perpetual dataset examined here, open interest did not clear that bar. An initially troubling timestamp mismatch was substantially reconciled. A modestly profitable hypothetical price-plus-OI strategy survived that correction. Yet a simpler price-momentum strategy still earned higher modeled returns in both available comparison periods. The one-hour problem hiding inside the data Open interest counts outstanding derivatives contracts. It is not a direct measure of bullishness: every contract has a long and a short. The interpretation of rising OI depends on who is initiating risk, the direction of price, funding conditions and the structure of the market. It also depends, less romantically, on which clock the database uses. The original daily and hourly observations for the same instrument initially appeared irreconcilable. At matching printed timestamps, BTC-denominated daily OI differed from hourly OI by an average of about 754 BTC. The daily USD-denominated OI values also differed from BTC OI multiplied by the contemporaneous mark by as much as 6.69%. These were warnings, not evidence of manipulation or a market event. The revised historical panel supplied a more defensible explanation for the first mismatch. Its hourly OI records distinguish an aggregation bar's printed timestamp from an inferred value time one hour later. Once completed daily OI values were compared to hourly OI on that basis, 58 of 59 comparable daily observations matched exactly; the remaining observation was nearly identical, with a maximum relative difference of roughly 0.0000416%. The corrected hourly BTC OI values also reproduced the earlier hourly series across all 1,439 completed records. That reconciliation is substantial, but it has a boundary. It demonstrates agreement within the supplied dataset under a particular time convention. It does not independently prove the provider’s publication latency, and it does not explain every currency- or contract-denominated discrepancy. The smaller gap between reported BTC OI and contracts multiplied by the stated 0.01 BTC multiplier reached about 3.14 BTC. If the timestamp is wrong, the strategy may be betting with tomorrow’s information while claiming to predict tomorrow. This changes how the earlier daily test should be read. The day-level result cannot be treated as a clean, point-in-time predictive experiment once the OI value-time ambiguity is acknowledged. The hourly comparison is more defensible because it deliberately waits: the price candle and corresponding OI interval must finish, and the modeled entry comes at the next hour’s open. The filter earned money on paper. That was not the point. The hourly setup used 1,440 consecutive price observations, 1,439 completed OI observations and 280 funding settlements, with a 24-hour holding period. The rule was deliberately simple: consider a long after both the preceding one-hour price change and the corresponding BTC-denominated OI change are positive. Entries were restricted to nonoverlapping daily opportunities, with a further hour allowed between signal observation and entry. Recorded settlement funding was included; the assumed trading friction was nine basis points per round trip. Over 40 eligible development opportunities from September 6 through October 15, 2026, the price-plus-OI rule generated ten entries and a compounded hypothetical net return of +6.52%. Over 19 later opportunities from October 16 through November 3, it generated five entries and returned +1.19%. On their own, those positive numbers might seem to vindicate the OI thesis. Then comes the necessary comparison: what if the same rule ignored open interest and used price direction alone? What the extra OI filter actually addedOKX BTC-USDT-SWAP; compounded hypothetical strategy returns, unleveraged; recorded funding included and assumed 9 bps round-trip costs deducted. Periods are historical, not forecasts.StrategyDevelopmentSep 6–Oct 15Later periodOct 16–Nov 3Price ↑ and OI ↑+6.52%+1.19%Price momentum only+9.31%+1.78%Daily long, repeated entry−1.15%−7.80%Cash0.00%0.00%The development segment has 40 eligible opportunities; the later segment has 19. Signals triggered 10/5 times for price + OI and 21/11 times for price alone. The later segment was already examined during the wider research process and is not an untouched out-of-sample holdout. Different trading frequencies imply different cost burdens; the repeated daily-long strategy is not continuous buy-and-hold. Source: supplied OKX research datasets and their accompanying reproducible numerical validation, frozen November 4, 2026. The momentum-only baseline came out ahead in both segments: by roughly 2.79 percentage points in development and 0.60 points later. In these windows, filtering for rising OI reduced exposure, but it did not improve the modeled compounded return compared with simply following positive price momentum. Hypothetical net performance: OI filter versus price momentumThe development price-plus-OI strategy returned 6.52 percent versus 9.31 percent for price-only momentum. In the later diagnostic period, the respective returns were 1.19 percent and 1.78 percent. The bars share a zero baseline and a 0 to 10 percent scale.Net return after funding and assumed 9 bps costHistorical, compounded; shared 0–10% scaleDevelopmentLater period02.557.510%6.52%9.31%1.19%1.78%Price + OIPrice momentumBoth segments favor the simpler price-only rule on modeled return. The two groups are not independent evidence of forward predictive performance. Underlying values and assumptions are provided in the table above. The distinction is central. There is a coherent story for why open interest could help: a directional price move accompanied by expanding leverage might carry information about the market’s willingness to add risk. But there is also a coherent opposing story. Crowded leverage may be fragile, the sign of open interest says nothing about who is right, and the filter may discard profitable price moves for no compensating benefit. The comparison in this dataset favors the simpler explanation, while remaining too small to settle the general question. Why costs and funding complicate the answer The backtest incorporated 8-hour funding settlements instead of treating funding as a single arbitrary daily adjustment. For the price-plus-OI rule, the total modeled return was +7.48% in development before trading fees and slippage and +1.64% in the later period. Deducting nine basis points per round trip reduced those figures to +6.52% and +1.19%; raising assumed costs to 20 basis points reduced them again to +5.36% and +0.63%. How fragile are the returns to trading friction?Price ↑ / OI ↑ rule only. Compounded hypothetical return with recorded funding; 0, 9 or 20 basis points of total assumed round-trip costs.Round-trip costDevelopmentLater period0 bps+7.48%+1.64%9 bps+6.52%+1.19%20 bps+5.36%+0.63%Costs are scenarios, not measured fills. Funding is based on recorded historical settlement rates. The calculation does not establish realized spread, queue position, market impact, adverse selection, liquidation costs or the effect of leverage. It is tempting to regard positive results at 20 basis points as proof of robustness. I would not. These are modeled entries and exits at reference prices, not evidence that a trader could consistently obtain those prices at the intended size. And the more frequently a baseline trades, the more often a flat per-trade cost penalizes it. That makes execution design part of the comparison, not a footnote. There is a further statistical problem. A profitable segment does not tell us whether the difference from a simpler baseline is meaningful when the OI rule makes only ten trades in one period and five in another. No reliable claim of incremental statistical significance follows from counts that small. Nor can the later segment be renamed a pristine holdout simply because it appears after the first segment on a chart: it was already exposed to previous research decisions. The harder interpretation of open interest Open interest remains useful market context. It can describe the extent of outstanding risk and, alongside funding, liquidation activity and order-book depth, help distinguish superficially similar price moves. The error is to turn that contextual value into an untested claim of predictive power. It matters, too, that the instrument here is a single venue’s BTC-USDT perpetual swap, not the whole Bitcoin market. Exchange-specific position growth can reflect hedging, basis trades or venue shifts as readily as directional speculation. Without independently establishing the identity, timestamp and aggregation of each observation, broad claims about “Bitcoin leverage” become fragile. The strongest counterargument to the negative result is that the rule is too crude. A binary increase in price and OI ignores the magnitude of the changes, volatility regime, spot flows, the level of funding, basis and where leverage is concentrated. A more carefully specified model might extract something useful. But greater complexity also opens the door to overfitting; the burden of proof rises, not falls. What would change my assessment is straightforward: a prespecified signal tested on genuinely new observations collected after the November 4, 2026 research freeze; timestamped OI values whose availability is independently confirmed; comparable execution and funding assumptions for every strategy; and an improvement over price momentum that survives realistic costs, alternative regimes and uncertainty estimates. No such forward observations are contained in the supplied files. A useful failure The most instructive result is not that a BTC derivatives strategy made 6.52% in one modeled window. It is that the apparent sophistication of the extra variable did not translate into a better comparison. Once timing was taken seriously and a plain momentum benchmark was put beside the filtered rule, the story became less exciting—and more informative. That is where I land: open interest can deepen a market explanation without deserving a place in the trading decision. Until it proves otherwise against a simpler alternative on genuinely unseen data, its proper role is a question to investigate, not an answer to trade. Data, definitions and limitationsThe historical research covers OKX BTC-USDT-SWAP hourly prices from September 5 through November 4, 2026, the reconciled hourly open-interest series, and 280 recorded 8-hour funding settlements from August 3 through November 4, 2026. Results are as of the November 4, 2026 data freeze; they are not live market conditions. The test uses BTC-denominated OI changes and historical reference-price execution, rather than actual trade fills.The development window contains 40 eligible daily entry opportunities, September 6–October 15; the later diagnostic window contains 19, October 16–November 3. Signals require positive changes in both one-hour price and OI; modeled entry is one hour after the information becomes available, with a fixed 24-hour hold. Positive funding means a long position pays. Long-only returns use unleveraged compounding, with cash when the rule is inactive. No uncertainty interval or significance claim is asserted.Source attribution: supplied historical research datasets identified as originating from OKX public market data, plus the associated numerical validation. The reporting conventions can be compared with the official OKX API documentation; this general documentation link is not proof of the precise hourly value-time semantics. Exact data-vintage and response-retrieval timing were not independently certified. The earlier daily-frequency result is excluded from affirmative evidence because of unresolved point-in-time timing.Illustration and embedded bar chart serve different purposes: the hero is conceptual art; the comparison chart uses the exact rounded hypothetical returns reported in the research. This article is an analytical examination of historical data, not a recommendation or an assurance of strategy performance. Crypto Research · Historical market structure analysis · November 4, 2026",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test"
+      },
+      {
+        "tag": "h2",
+        "text": "The one-hour problem hiding inside the data"
+      },
+      {
+        "tag": "h2",
+        "text": "The filter earned money on paper. That was not the point."
+      },
+      {
+        "tag": "h3",
+        "text": "What the extra OI filter actually added"
+      },
+      {
+        "tag": "h2",
+        "text": "Why costs and funding complicate the answer"
+      },
+      {
+        "tag": "h3",
+        "text": "How fragile are the returns to trading friction?"
+      },
+      {
+        "tag": "h2",
+        "text": "The harder interpretation of open interest"
+      },
+      {
+        "tag": "h2",
+        "text": "A useful failure"
+      },
+      {
+        "tag": "h2",
+        "text": "Data, definitions and limitations"
+      }
+    ],
+    "links": [
+      {
+        "href": "#article",
+        "text": "Skip to article"
+      },
+      {
+        "href": "https://www.okx.com/docs-v5/en/",
+        "text": "official OKX API documentation"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "A timestamp correction rescued a plausible derivatives signal from look-ahead bias. It did not show that open interest improves on price momentum."
+      },
+      {
+        "tag": "p",
+        "text": "November 4, 2026 · Historical research, not a live market signal"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Conceptual editorial artwork. The two lines do not represent recorded market prices or open interest."
+      },
+      {
+        "tag": "p",
+        "text": "A market signal can look convincing for two very different reasons. It can contain information that prices have not yet absorbed. Or it can appear to work because the test quietly gives it information from the future. Bitcoin’s open-interest story sits uncomfortably close to that boundary."
+      },
+      {
+        "tag": "p",
+        "text": "The familiar interpretation is seductive: when Bitcoin rises and futures open interest rises with it, new leveraged positions may be reinforcing the move. When open interest falls, perhaps the rally is merely traders closing shorts. That language gives us a tidy narrative about conviction, positioning and the quality of a trend."
+      },
+      {
+        "tag": "p",
+        "text": "But a narrative is not a tradeable edge. What matters is whether the extra variable improves a decision relative to a rule that just watches price—and whether the data were genuinely available when that decision would have been made."
+      },
+      {
+        "tag": "p",
+        "text": "In the historical OKX BTC-USDT perpetual dataset examined here, open interest did not clear that bar. An initially troubling timestamp mismatch was substantially reconciled. A modestly profitable hypothetical price-plus-OI strategy survived that correction. Yet a simpler price-momentum strategy still earned higher modeled returns in both available comparison periods."
+      },
+      {
+        "tag": "p",
+        "text": "Open interest counts outstanding derivatives contracts. It is not a direct measure of bullishness: every contract has a long and a short. The interpretation of rising OI depends on who is initiating risk, the direction of price, funding conditions and the structure of the market. It also depends, less romantically, on which clock the database uses."
+      },
+      {
+        "tag": "p",
+        "text": "The original daily and hourly observations for the same instrument initially appeared irreconcilable. At matching printed timestamps, BTC-denominated daily OI differed from hourly OI by an average of about 754 BTC. The daily USD-denominated OI values also differed from BTC OI multiplied by the contemporaneous mark by as much as 6.69%. These were warnings, not evidence of manipulation or a market event."
+      },
+      {
+        "tag": "p",
+        "text": "The revised historical panel supplied a more defensible explanation for the first mismatch. Its hourly OI records distinguish an aggregation bar's printed timestamp from an inferred value time one hour later. Once completed daily OI values were compared to hourly OI on that basis, 58 of 59 comparable daily observations matched exactly; the remaining observation was nearly identical, with a maximum relative difference of roughly 0.0000416%. The corrected hourly BTC OI values also reproduced the earlier hourly series across all 1,439 completed records."
+      },
+      {
+        "tag": "p",
+        "text": "That reconciliation is substantial, but it has a boundary. It demonstrates agreement within the supplied dataset under a particular time convention. It does not independently prove the provider’s publication latency, and it does not explain every currency- or contract-denominated discrepancy. The smaller gap between reported BTC OI and contracts multiplied by the stated 0.01 BTC multiplier reached about 3.14 BTC."
+      },
+      {
+        "tag": "p",
+        "text": "This changes how the earlier daily test should be read. The day-level result cannot be treated as a clean, point-in-time predictive experiment once the OI value-time ambiguity is acknowledged. The hourly comparison is more defensible because it deliberately waits: the price candle and corresponding OI interval must finish, and the modeled entry comes at the next hour’s open."
+      },
+      {
+        "tag": "p",
+        "text": "The hourly setup used 1,440 consecutive price observations, 1,439 completed OI observations and 280 funding settlements, with a 24-hour holding period. The rule was deliberately simple: consider a long after both the preceding one-hour price change and the corresponding BTC-denominated OI change are positive. Entries were restricted to nonoverlapping daily opportunities, with a further hour allowed between signal observation and entry. Recorded settlement funding was included; the assumed trading friction was nine basis points per round trip."
+      },
+      {
+        "tag": "p",
+        "text": "Over 40 eligible development opportunities from September 6 through October 15, 2026, the price-plus-OI rule generated ten entries and a compounded hypothetical net return of +6.52%. Over 19 later opportunities from October 16 through November 3, it generated five entries and returned +1.19%. On their own, those positive numbers might seem to vindicate the OI thesis."
+      },
+      {
+        "tag": "p",
+        "text": "Then comes the necessary comparison: what if the same rule ignored open interest and used price direction alone?"
+      },
+      {
+        "tag": "p",
+        "text": "OKX BTC-USDT-SWAP; compounded hypothetical strategy returns, unleveraged; recorded funding included and assumed 9 bps round-trip costs deducted. Periods are historical, not forecasts."
+      },
+      {
+        "tag": "p",
+        "text": "The development segment has 40 eligible opportunities; the later segment has 19. Signals triggered 10/5 times for price + OI and 21/11 times for price alone. The later segment was already examined during the wider research process and is not an untouched out-of-sample holdout. Different trading frequencies imply different cost burdens; the repeated daily-long strategy is not continuous buy-and-hold. Source: supplied OKX research datasets and their accompanying reproducible numerical validation, frozen November 4, 2026."
+      },
+      {
+        "tag": "p",
+        "text": "The momentum-only baseline came out ahead in both segments: by roughly 2.79 percentage points in development and 0.60 points later. In these windows, filtering for rising OI reduced exposure, but it did not improve the modeled compounded return compared with simply following positive price momentum."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Both segments favor the simpler price-only rule on modeled return. The two groups are not independent evidence of forward predictive performance. Underlying values and assumptions are provided in the table above."
+      },
+      {
+        "tag": "p",
+        "text": "The distinction is central. There is a coherent story for why open interest could help: a directional price move accompanied by expanding leverage might carry information about the market’s willingness to add risk. But there is also a coherent opposing story. Crowded leverage may be fragile, the sign of open interest says nothing about who is right, and the filter may discard profitable price moves for no compensating benefit. The comparison in this dataset favors the simpler explanation, while remaining too small to settle the general question."
+      },
+      {
+        "tag": "p",
+        "text": "The backtest incorporated 8-hour funding settlements instead of treating funding as a single arbitrary daily adjustment. For the price-plus-OI rule, the total modeled return was +7.48% in development before trading fees and slippage and +1.64% in the later period. Deducting nine basis points per round trip reduced those figures to +6.52% and +1.19%; raising assumed costs to 20 basis points reduced them again to +5.36% and +0.63%."
+      },
+      {
+        "tag": "p",
+        "text": "Price ↑ / OI ↑ rule only. Compounded hypothetical return with recorded funding; 0, 9 or 20 basis points of total assumed round-trip costs."
+      },
+      {
+        "tag": "p",
+        "text": "Costs are scenarios, not measured fills. Funding is based on recorded historical settlement rates. The calculation does not establish realized spread, queue position, market impact, adverse selection, liquidation costs or the effect of leverage."
+      },
+      {
+        "tag": "p",
+        "text": "It is tempting to regard positive results at 20 basis points as proof of robustness. I would not. These are modeled entries and exits at reference prices, not evidence that a trader could consistently obtain those prices at the intended size. And the more frequently a baseline trades, the more often a flat per-trade cost penalizes it. That makes execution design part of the comparison, not a footnote."
+      },
+      {
+        "tag": "p",
+        "text": "There is a further statistical problem. A profitable segment does not tell us whether the difference from a simpler baseline is meaningful when the OI rule makes only ten trades in one period and five in another. No reliable claim of incremental statistical significance follows from counts that small. Nor can the later segment be renamed a pristine holdout simply because it appears after the first segment on a chart: it was already exposed to previous research decisions."
+      },
+      {
+        "tag": "p",
+        "text": "Open interest remains useful market context. It can describe the extent of outstanding risk and, alongside funding, liquidation activity and order-book depth, help distinguish superficially similar price moves. The error is to turn that contextual value into an untested claim of predictive power."
+      },
+      {
+        "tag": "p",
+        "text": "It matters, too, that the instrument here is a single venue’s BTC-USDT perpetual swap, not the whole Bitcoin market. Exchange-specific position growth can reflect hedging, basis trades or venue shifts as readily as directional speculation. Without independently establishing the identity, timestamp and aggregation of each observation, broad claims about “Bitcoin leverage” become fragile."
+      },
+      {
+        "tag": "p",
+        "text": "The strongest counterargument to the negative result is that the rule is too crude. A binary increase in price and OI ignores the magnitude of the changes, volatility regime, spot flows, the level of funding, basis and where leverage is concentrated. A more carefully specified model might extract something useful. But greater complexity also opens the door to overfitting; the burden of proof rises, not falls."
+      },
+      {
+        "tag": "p",
+        "text": "What would change my assessment is straightforward: a prespecified signal tested on genuinely new observations collected after the November 4, 2026 research freeze; timestamped OI values whose availability is independently confirmed; comparable execution and funding assumptions for every strategy; and an improvement over price momentum that survives realistic costs, alternative regimes and uncertainty estimates. No such forward observations are contained in the supplied files."
+      },
+      {
+        "tag": "p",
+        "text": "The most instructive result is not that a BTC derivatives strategy made 6.52% in one modeled window. It is that the apparent sophistication of the extra variable did not translate into a better comparison. Once timing was taken seriously and a plain momentum benchmark was put beside the filtered rule, the story became less exciting—and more informative."
+      },
+      {
+        "tag": "p",
+        "text": "That is where I land: open interest can deepen a market explanation without deserving a place in the trading decision. Until it proves otherwise against a simpler alternative on genuinely unseen data, its proper role is a question to investigate, not an answer to trade."
+      },
+      {
+        "tag": "p",
+        "text": "The historical research covers OKX BTC-USDT-SWAP hourly prices from September 5 through November 4, 2026, the reconciled hourly open-interest series, and 280 recorded 8-hour funding settlements from August 3 through November 4, 2026. Results are as of the November 4, 2026 data freeze; they are not live market conditions. The test uses BTC-denominated OI changes and historical reference-price execution, rather than actual trade fills."
+      },
+      {
+        "tag": "p",
+        "text": "The development window contains 40 eligible daily entry opportunities, September 6–October 15; the later diagnostic window contains 19, October 16–November 3. Signals require positive changes in both one-hour price and OI; modeled entry is one hour after the information becomes available, with a fixed 24-hour hold. Positive funding means a long position pays. Long-only returns use unleveraged compounding, with cash when the rule is inactive. No uncertainty interval or significance claim is asserted."
+      },
+      {
+        "tag": "p",
+        "text": "Source attribution: supplied historical research datasets identified as originating from OKX public market data, plus the associated numerical validation. The reporting conventions can be compared with the official OKX API documentation; this general documentation link is not proof of the precise hourly value-time semantics. Exact data-vintage and response-retrieval timing were not independently certified. The earlier daily-frequency result is excluded from affirmative evidence because of unresolved point-in-time timing."
+      },
+      {
+        "tag": "p",
+        "text": "Illustration and embedded bar chart serve different purposes: the hero is conceptual art; the comparison chart uses the exact rounded hypothetical returns reported in the research. This article is an analytical examination of historical data, not a recommendation or an assurance of strategy performance."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Strategy",
+          "DevelopmentSep 6–Oct 15",
+          "Later periodOct 16–Nov 3"
+        ],
+        [
+          "Price ↑ and OI ↑",
+          "+6.52%",
+          "+1.19%"
+        ],
+        [
+          "Price momentum only",
+          "+9.31%",
+          "+1.78%"
+        ],
+        [
+          "Daily long, repeated entry",
+          "−1.15%",
+          "−7.80%"
+        ],
+        [
+          "Cash",
+          "0.00%",
+          "0.00%"
+        ]
+      ],
+      [
+        [
+          "Round-trip cost",
+          "Development",
+          "Later period"
+        ],
+        [
+          "0 bps",
+          "+7.48%",
+          "+1.64%"
+        ],
+        [
+          "9 bps",
+          "+6.52%",
+          "+1.19%"
+        ],
+        [
+          "20 bps",
+          "+5.36%",
+          "+0.63%"
+        ]
+      ]
+    ],
+    "alts": [
+      "Editorial illustration: separate teal price and rust open-interest paths diverge over a faint conceptual grid beside the words The Open Interest Question; the paths are not market data."
+    ],
+    "svgCount": 1,
+    "svgSha256": [
+      "dc641bc57748ec2a96e49805996208fdd18847aaa186bf523615cd464ce4fe04"
+    ],
+    "imageCount": 1,
+    "imageSha256": [
+      "300fd13f3cd68121b8b07b581743e43aa99e6c82c2d38ad4f8f1f5fdc13e340b"
+    ],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "binance-four-hour-wallet-takeover": {
     "text": "INDEPENDENT MARKET NOTES / RESEARCH & INVESTIGATIONSBlockchain forensics · Security & custodyBinance's Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed RevocationThe chain records the takeover and its end to the second. It cannot tell us why the emergency response took nearly four hours.November 4, 2026 · Historical transaction reconstruction · Ethereum mainnetEditorial illustration based on verified transaction timestamps; not a screenshot of blockchain data.The revealing number in the Binance wallet compromise is not the multibillion-dollar loss. It is one: one valid authorization hidden among 50 submitted signatures, sufficient to hand execution authority over an exchange hot wallet to a different contract. That authority remained in place for almost four hours before a successful on-chain revocation. There are two distinct stories here. One is visible on Ethereum, where transactions have block numbers, timestamps and authorization records. The other happened inside Binance: the detection alerts, decisions, signing controls and emergency procedures. The first story is unusually precise. The second remains largely dependent on Binance's account. Confusing the two would make this investigation sound more certain than the evidence allows. My central conclusion is narrower—and more consequential—than saying a particular wallet technology failed. Stopping ordinary withdrawals is not the same as extinguishing delegated on-chain authority. The Binance 14 incident illustrates that separation with remarkable clarity. The transaction that changed the wallet's authority At 20:20:59 UTC on October 29, 2026, an Ethereum type-4 transaction in block 26,300,753 submitted 50 EIP-7702 authorizations for the address commonly labeled Binance 14: 0x28C6c06298d514Db089934071355E5743bf21d60. Public address metadata identifies the wallet as a Binance hot wallet; such labels are third-party attribution, not consensus-level proof of ownership. The authorizations targeted the same delegation address, 0x63e842B054Bd624a465454D533C33F573e9c6fAe. Their nonces formed a consecutive range from 18,914,775 to 18,914,824. Forty-nine were rejected with an invalid_nonce status. One—nonce 18,914,809—was accepted. That distinction matters. Fifty entries did not mean 50 successful delegations. The batch offered many candidate nonces against a busy account; only one had to match. The transaction record demonstrates the result. It does not establish precisely how the signatures were obtained. One valid authorization among 50Fifty equal-width cells represent the consecutive authorization nonces 18914775 through 18914824. One cell at nonce 18914809 is highlighted as accepted; the remaining 49 are invalid.50 submitted authorizations49 invalid nonces1 accepted: 18,914,809Historical transaction authorization results · Ethereum block 26,300,753Authorization outcomes in the recorded transaction. Each bar represents one authorization entry, not a separate transaction. Source: Ethereum transaction record. Three minutes later, assets began moving At 20:24:23 UTC, another transaction in block 26,300,770 called Binance 14 from the same operator address that submitted the delegation: 0x7C8601d4645b93cea45F71e118A729332e6B5CA0. The transaction's token-transfer records include approximately 1.6154 billion USDT moving from Binance 14 to 0x5227f603C1eE34CE3c06eFe6477003BDfCCB2f8c. Records also identify transfers of RLUSD, WBETH, XAUT and UNI to that recipient. These are historical token quantities, not estimates of their current dollar value. The complete multichain loss and the full inventory of this sweep are not established by this subset of records. For readers accustomed to ordinary exchange withdrawals, this is the essential technical turn. The operator was not merely clicking a withdrawal button. A delegated execution path could invoke wallet behavior on-chain. Disabling a customer-facing withdrawal service does not automatically revoke an authorization that Ethereum itself still recognizes. What EIP-7702 does—and does not explain EIP-7702 allows an externally owned Ethereum account to authorize execution through contract code. The authorization carries an account identity, a chain identifier, a nonce and a target address. A later authorization targeting the zero address can clear the delegation. That is a designed capability, not proof of a protocol vulnerability. It can support useful wallet behavior; it also means that whoever obtains a valid authorization may alter how the account executes. The relevant security question is who could authorize the change, which policies constrained it, and how quickly the owner could undo it. Binance's preliminary report describes a longer intrusion beginning with compromised developer devices, fraudulent recruitment activity, stolen credentials and access to wallet-signing infrastructure. It says an internal AI tool was used during lateral movement. Those details are material, but they are company-reported incident findings, not conclusions independently recoverable from Ethereum transaction history. The final drain and the revocation The late-stage evidence is particularly stark. At 23:55:47 UTC, records show approximately 2,961.99 ETH arriving at Binance 14. At 23:56:47 UTC, a successful transaction in block 26,301,828 produced an internal transfer of 2,961.910820938285 ETH out of that wallet. The incoming transfer's operational purpose is not established. It would be unjustified to claim Binance knowingly routed deposits into a compromised address. What the sequence does show is that assets were still leaving the delegated wallet shortly before the final revocation. At 00:10:35 UTC on October 30, Binance 14 sent a successful type-4 transaction in block 26,301,896 to itself. Its authorization list specified the zero address as the delegation target. The transaction nonce was 18,914,903; the authorization nonce was 18,914,904. That next-nonce relationship is consistent with EIP-7702's rules. The successful zero-address authorization confirms the reported revocation mechanism at transaction level. It does not, without a separate historical code-state comparison, independently establish every byte of the account's before-and-after code state. Verified Ethereum transaction milestones, October 29–30, 2026 (UTC)EventTimestampBlockEvidenceDelegation acceptedOct 29, 20:20:5926,300,753One valid authorization among 50Initial token sweepOct 29, 20:24:2326,300,770Successful token transfersLate ETH outflowOct 29, 23:56:4726,301,8282,961.910820938285 ETH internal transferZero-address revocationOct 30, 00:10:3526,301,896Successful EIP-7702 authorization Ethereum delegation windowThe delegation was accepted October 29 at 20:20:59 UTC and revoked October 30 at 00:10:35 UTC, an elapsed 3 hours 49 minutes 36 seconds. The initial sweep occurred at 20:24:23 and the late ETH outflow at 23:56:47.3 hours, 49 minutes, 36 secondsDelegatedRevoked20:20:5900:10:35Initial sweep: 20:24:23Late ETH outflow: 23:56:47Historical Ethereum events, plotted along a linear elapsed-time axis; intermediate labels are simplified for legibility. Sources: linked transaction records. Four hours of delegated authority is not four hours after detection From the accepted delegation at 20:20:59 UTC to the successful revocation at 00:10:35 UTC, 3 hours, 49 minutes and 36 seconds elapsed. That is a measured blockchain interval. It should not be renamed an incident-response delay after detection. Binance says it detected unusual transfers, suspended withdrawals and worked to revoke the malicious permission. But the exact alert timestamp, the point at which responders understood the delegation mechanism, and the chronology of attempted countermeasures are not established by the transaction records. The difference is not semantic. Without those times, nobody outside the incident team can calculate a reliable detection-to-revocation interval. Was this a failure of emergency readiness? There is a tempting verdict: the exchange lacked a ready-to-run revocation procedure. Binance's own description says its multi-party computation signing arrangement complicated the response and that a specialized procedure was developed. That makes emergency readiness a serious line of inquiry. It does not settle the case. One possibility is that no tested emergency path existed. Another is that a path existed but could not safely satisfy signing policies, nonce requirements or compromised-system isolation under the circumstances. A third is that responders deliberately sequenced containment and validation before submitting a revocation. These explanations carry different implications for governance and engineering quality. The 50-authorization batch demonstrates why nonce management matters: the attacker prepared a range of candidate nonces against a busy wallet. But it does not establish that nonce contention caused the nearly four-hour interval. Internal signing logs, runbooks, escalation records and rejected revocation attempts would be needed to determine that. Nor would it be sound to declare multi-party computation inherently insecure. MPC may reduce the risk of a single stolen key. Its usefulness in a crisis depends on whether the organization can exercise the necessary authority quickly, safely and under attack. A custody architecture can be resistant to theft yet operationally difficult to recover. Attribution is not the same as transaction proof The FBI attributed the operation to North Korea-linked TraderTraitor activity and published associated addresses. That is a significant government finding. The public advisory does not disclose all the intelligence behind the attribution, so the chain records alone should not be presented as proof of an operator's nationality or organizational identity. There is also a distinction between the initial operator address, the wallet whose authority was delegated, the first token recipient and downstream consolidation addresses. The initial operator and recipient are visible in the transaction records cited here. A complete reconciliation of all FBI-listed addresses and the subsequent laundering graph remains outside the demonstrated transaction path. That gap matters when estimating how much was recovered, frozen or still movable. What the breach says about custody Binance reported an overall incident impact of approximately $6.34 billion and about $2.85 billion frozen or intercepted as of its November 3 account. Those are company estimates, not a fully reconciled independent asset-and-liability ledger. Freezing assets is not equivalent to returning them to customers, and replenishing a balance does not by itself establish how the replacement was funded. For the broader financial and governance consequences, see Crypto’s November Stress Test. The lesson I draw from the Ethereum evidence is about control boundaries. A customer withdrawal switch, a signing policy, an on-chain authorization and an emergency revocation are different systems. In calm conditions, they may appear to act as one. During an intrusion, the gaps between them become the attack surface. A stronger custody standard would therefore ask not only whether an attacker can steal a signing credential, but whether an exchange can demonstrate a rehearsed, independently authorized path to extinguish compromised execution authority. That is a question for exchange operators, auditors and customers alike. It is not a claim that every wallet using EIP-7702 faces the same risk. The unanswered question is the one that matters most The public blockchain tells us when authority changed, which authorization succeeded, what moved in the sampled transactions and when the zero-address revocation executed. It does not tell us what Binance's responders knew at each minute, what they tried, or which constraints were unavoidable. That is where the next credible investigation belongs: a documented comparison between the first alert, the first recognition of malicious delegation, the first feasible revocation attempt and the final successful transaction. Such evidence could strengthen the emergency-readiness criticism—or materially weaken it. For now, the strongest conclusion is also the most useful one. A wallet can be administratively frozen while its delegated on-chain authority remains active. Binance 14's recorded history makes that risk concrete. The unresolved issue is not whether the delegation lasted nearly four hours. It is why terminating it took that long—and whether the next exchange facing the same problem will be ready sooner. Sources and verification notes Transaction timestamps are historical Ethereum block timestamps in UTC. Incident-level explanations, aggregate losses and recovery figures are attributed to the reporting organizations identified below. The chain records cited here support the specific authorization and transfer observations, not a complete forensic accounting of the multichain incident. Binance, preliminary incident report (November 3, 2026) — company account of intrusion and containment. FBI, TraderTraitor advisory (October 31, 2026) — government attribution and published addresses. Ethereum Improvement Proposal 7702 — protocol rules for delegation and revocation. Ethereum transaction: initial authorization, block 26,300,753. Ethereum transaction: initial token sweep, block 26,300,770. Ethereum transaction: late ETH transfer, block 26,301,828. Ethereum transaction: zero-address revocation, block 26,301,896. Independent Market Notes, Crypto’s November Stress Test — related investigation of recovery and custody risk. Independent Market Notes · Independent cryptocurrency market research",
     "headings": [
