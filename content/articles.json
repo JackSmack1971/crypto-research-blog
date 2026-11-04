@@ -1,5 +1,27 @@
 [
   {
+    "slug": "binance-four-hour-wallet-takeover",
+    "source": "binance-four-hour-wallet-takeover.html",
+    "date": "2026-11-04",
+    "title": "Binance's Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation",
+    "dek": "The chain records the takeover and its end to the second. It cannot tell us why the emergency response took nearly four hours.",
+    "image_alt": "Editorial timeline showing 50 authorization attempts, one delegation, and 3 hours 49 minutes 36 seconds until revocation",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "image": "assets/featured/binance-four-hour-wallet-takeover.jpg",
+    "topic": "risk-verification",
+    "assets": [
+      "ETH",
+      "USDT",
+      "RLUSD",
+      "WBETH",
+      "XAUT",
+      "UNI"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "crypto-chokepoints-november-2026",
     "source": "crypto-chokepoints-november-2026.html",
     "date": "2026-11-04",

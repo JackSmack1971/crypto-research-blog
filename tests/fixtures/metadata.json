@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "binance-four-hour-wallet-takeover": {
+      "title": "Binance&#x27;s Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation | Independent Market Notes",
+      "description": "A transaction-grounded reconstruction of Binance 14’s EIP-7702 delegation, 50 authorization attempts, token sweep and eventual revocation.",
+      "canonical": "https://independent-market-notes.netlify.app/binance-four-hour-wallet-takeover/",
+      "og:title": "Binance's Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation",
+      "og:description": "A transaction-grounded reconstruction of Binance 14’s EIP-7702 delegation, 50 authorization attempts, token sweep and eventual revocation.",
+      "og:url": "https://independent-market-notes.netlify.app/binance-four-hour-wallet-takeover/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "crypto-chokepoints-november-2026": {
       "title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
       "description": "An investigation of November 2026 crypto thefts, DeFi rebounds, ETF outflows, U.S. legislation and sanctions-driven settlement risk.",
@@ -222,6 +232,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Binance's Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation",
+      "link": "https://independent-market-notes.netlify.app/binance-four-hour-wallet-takeover/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/binance-four-hour-wallet-takeover/",
+      "description": "The chain records the takeover and its end to the second. It cannot tell us why the emergency response took nearly four hours."
+    },
     {
       "title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
       "link": "https://independent-market-notes.netlify.app/crypto-chokepoints-november-2026/",
