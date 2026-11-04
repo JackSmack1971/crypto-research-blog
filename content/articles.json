@@ -1,5 +1,27 @@
 [
   {
+    "slug": "crypto-chokepoints-november-2026",
+    "source": "crypto-chokepoints-november-2026.html",
+    "date": "2026-11-04",
+    "title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
+    "dek": "From exchange thefts and frozen stablecoins to election-driven legislation and a sanctioned Moscow trading venue, the same question keeps resurfacing: who can actually move the money?",
+    "image_alt": "Editorial illustration of a Bitcoin coin, fractured lock, U.S. Capitol, and labeled blocks representing ETF flows, legislation, exchange security, DeFi, and sanctions.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "image": "assets/featured/crypto-chokepoints-november-2026.jpg",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "USDT",
+      "USDC",
+      "INJ",
+      "ENA"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "token-unlock-liquidity-illusion-90-day-calendar",
     "source": "token-unlock-liquidity-illusion-90-day-calendar.html",
     "date": "2026-11-03",

@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-chokepoints-november-2026": {
+      "title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
+      "description": "An investigation of November 2026 crypto thefts, DeFi rebounds, ETF outflows, U.S. legislation and sanctions-driven settlement risk.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-chokepoints-november-2026/",
+      "og:title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
+      "og:description": "An investigation of November 2026 crypto thefts, DeFi rebounds, ETF outflows, U.S. legislation and sanctions-driven settlement risk.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-chokepoints-november-2026/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "token-unlock-liquidity-illusion-90-day-calendar": {
       "title": "The Token Unlock Calendar Has a Liquidity Problem | Independent Market Notes",
       "description": "A Nov 2026–Feb 2027 investigation of MON, ONDO and other token unlocks, examining reported-float dilution, trading liquidity and critical data gaps.",
@@ -212,6 +222,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
+      "link": "https://independent-market-notes.netlify.app/crypto-chokepoints-november-2026/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-chokepoints-november-2026/",
+      "description": "From exchange thefts and frozen stablecoins to election-driven legislation and a sanctioned Moscow trading venue, the same question keeps resurfacing: who can actually move the money?"
+    },
     {
       "title": "The Token Unlock Calendar Has a Liquidity Problem",
       "link": "https://independent-market-notes.netlify.app/token-unlock-liquidity-illusion-90-day-calendar/",

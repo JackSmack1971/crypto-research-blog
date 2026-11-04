@@ -1,4 +1,259 @@
 {
+  "crypto-chokepoints-november-2026": {
+    "text": "Independent Market NotesResearch / November 2026Investigations · Market structureCrypto’s November Stress Test: Liquidity, Custody and the Limits of ControlFrom exchange thefts and frozen stablecoins to election-driven legislation and a sanctioned Moscow trading venue, the same question keeps resurfacing: who can actually move the money?November 4, 2026 · Historical research snapshotEditorial illustration; not a depiction of actual market data or an identified incident.The most revealing number in crypto this week is not a token price. It is the gap between an asset that exists on a ledger and an asset that can actually be moved, redeemed or recovered. That gap runs through the reported Binance theft, a separate European financial-institution attack, an uneven DeFi rebound, and Moscow Exchange’s proposed crypto market. It also helps explain why election headlines and ETF flows should not be mistaken for settled outcomes. My reading of the available evidence is that crypto’s most important November story is a contest over control. Blockchains can make transfers visible, but they cannot by themselves establish who owns an exchange account, compel a custodian to release funds, guarantee stablecoin redemption or turn a legislative proposal into law. The practical market sits between the ledger and the institutions that make it usable. Theft accounting is not the same as recovered money Binance reported approximately $6.34 billion in assets impacted by an October 29, 2026 attack, describing roughly $2.85 billion as frozen or intercepted in its November 3 account. Subtracting those figures produces about $3.49 billion not confirmed secured. That residual is not an audited measure of proceeds successfully cashed out, and it is not necessarily a current-price valuation of attacker holdings. Separate tracing described large balances remaining identifiable in attacker-controlled wallets. A reported Bitquery snapshot at 09:10 UTC on November 3 valued tracked holdings at about $3 billion. That observation supports the possibility of future sell pressure, but a wallet balance is not a sell order. It is equally important that an issuer freeze is not the same as a legal recovery, and a customer reimbursement is not proof the original tokens have been returned. Different measures of the Binance incident; figures are approximate and not additive.MeasureReported amountWhat it establishesInitial impacted value$6.34BTheft-time incident estimateFrozen or intercepted$2.85BReported restrictions or interception, not completed restitutionUnconfirmed secured~$3.49BArithmetic residual, not verified launderingTracked attacker holdings~$3.0BThird-party snapshot, Nov. 3, 09:10 UTC That distinction changes how I think about market impact. Bitcoin has no central token issuer that can blacklist a native coin. USDT and USDC do have issuers able to restrict token transfers at specific addresses. The stolen asset’s technical liquidity, its legal transferability and its practical ability to reach a market are three different questions. Sources: Binance incident statement; TRM Labs forensic reconstruction; Bitquery tracing. These sources have different observation cutoffs and should not be treated as a single reconciled ledger. A second theft exposes the danger of naming a victim too early The separate attack attributed in public reporting to Crédit Mutuel Arkéa offers a smaller but instructive version of the same problem. Investigator ZachXBT alleged withdrawals exceeding $133 million. The institution subsequently acknowledged an attack and fraudulent transactions to CoinDesk, but did not publicly validate the full amount or assign ownership of every wallet in the proposed transaction chain. A separate Bitquery investigation traced approximately $108.80 million in Ethereum USDC withdrawals from exchange accounts, using a November 2, 13:47 UTC cutoff. The difference from the $133 million allegation is at least $24.20 million. That is a reconciliation gap, not evidence that the larger allegation is false. It may reflect additional accounts, chains or activity outside the observed sample; none should be assumed without transactions and account ownership records. The cases should not be merged merely because they happened in the same news cycle. The Binance case has a separate North Korean attribution by U.S. authorities; the Arkéa-related investigation does not establish a shared attacker or common funds. FBI alert; Bitquery Ethereum analysis. The DeFi rebound looks better at one day than at one month The same tendency to compress distinct observations into a single headline appears in DeFi. CoinDesk described a strong one-session gain in its seven-member DeFi Select Index, with Injective and Ethena among the names discussed. That is a valid observation about a defined index over a defined interval. It does not demonstrate a broad, durable sector rotation. A wider fifteen-token DeFi-category basket, ranked by circulating market capitalization and excluding stablecoins, staked/wrapped representations and tokenized fund shares, showed an equal-weighted 24-hour mean return of about +2.05% at 13:53:48 UTC on November 4. Bitcoin gained approximately 1.22% over the same provider-defined rolling interval. But only 7 of 15 basket members beat Bitcoin over 24 hours, and only 2 of 15 did so over 30 days. The basket’s thirty-day mean was about −21.33%, compared with Bitcoin’s −9.25%. Share of the defined 15-token basket outperforming BTC, by rolling windowDeFi basket relative breadthSeven of fifteen tokens beat Bitcoin over 24 hours, nine of fifteen over seven days, and two of fifteen over thirty days, using a November 4, 2026 snapshot.24 hours7 days30 days7/159/152/15Equal number of constituents in each window; zero-based bars, not returns.Source: CoinGecko market-data snapshot, Nov. 4, 2026, 13:53:48 UTC. Basket membership selected at the endpoint, creating survivorship bias for historical comparisons. The seven-day relative breadth does not imply a positive seven-day basket return. Trading activity alone cannot rescue the bull case. Contemporaneous DeFiLlama dashboard observations placed total DeFi value locked around $82.3 billion, with reported weekly contraction even as DEX turnover rose. Higher turnover can accompany liquidation and hedging as readily as fresh investment. The strongest alternative explanation is a high-beta bounce in weakened tokens, amplified by a few exceptional movers. A twelve-month, event-defined follow-through study was not established, so I would not attach a historical continuation probability to this rebound. Reference: DefiLlama. Aggregate TVL and fee observations are time-sensitive and are not a synchronized constituent-level fundamental panel. ETF flows and elections: two different clocks U.S. spot Bitcoin ETF flows offered another reason for caution. The November 3 reporting discussed roughly $115.6 million in net outflows and a three-session outflow total near $1.16 billion. The figures are useful as a directional snapshot, but a reliable forward-flow base rate requires a reconciled, fund-by-fund history and consistent definitions across aggregators. Those conditions were not established here. The midterm election likewise changes incentives without guaranteeing legislative action. Reporting described Democratic victories and a possible change in congressional committee control. But the market-structure bill’s key procedural obstacle preceded election night: a reported 49–50 Senate cloture defeat on September 15. A different political balance can raise the urgency of a lame-duck negotiation while simultaneously making a 2027 rewrite more likely. An election result is not a floor schedule, and a committee chair prediction is not a confirmed appointment. What matters for markets is not simply whether legislators say they support crypto. It is whether a negotiated text can define the boundary between SEC and CFTC oversight, set enforceable stablecoin and DeFi obligations, and clear the Senate’s procedural requirements. That is the gap between a campaign narrative and legislation that actually changes how intermediaries operate. Moscow Exchange tests the difference between trading and settlement The clearest illustration of that gap may be the planned Moscow Exchange crypto market. MOEX announced a December 1, 2026 pilot involving BTC, ETH and USDT, with same-day and next-day settlement conventions and clearing through the National Clearing Centre. Its stated retail arrangements were narrower than an unrestricted public crypto exchange: non-qualified investors faced testing and an annual purchase cap. The legal obstacle is already established. The U.S. Treasury sanctioned MOEX, the National Clearing Centre and the National Settlement Depository on June 12, 2024. Historic wind-down authorizations are not a blanket permission to start a new international crypto settlement business. Domestic matching and bookkeeping may be feasible, but neither proves that a customer can move a token to an outside wallet, sell it abroad or redeem USDT through a compliant intermediary. Tether’s history of restricting wallets linked to sanctioned entities, including its publicly discussed Garantex cooperation, adds a second point of control. Bitcoin has no issuer freeze switch; USDT does. A pooled domestic custody arrangement could reduce the number of public-chain transfers without removing the issuer’s leverage over the underlying token balance. The actual MOEX custody and blockchain-delivery architecture had not been established in the evidence reviewed. Primary references: MOEX announcement; OFAC guidance; Treasury designation; Tether sanctions-wallet policy. The counterargument: visible friction can coexist with a functioning market None of this proves that crypto markets are structurally failing. An attacker can retain coins without selling them. A frozen balance may ultimately be recovered. A DeFi rebound can begin with narrow leadership and broaden later. A domestic trading venue can operate within limits even when international settlement is constrained. And lawmakers can compromise after a failed vote. Those are substantive counterarguments, not reasons to erase the friction. To overturn my interpretation, I would want to see reconciled theft recoveries rather than headline freeze totals; a broadening of DeFi leadership accompanied by improving protocol activity; independently matched ETF flow histories; an actual bipartisan market-structure vote; and disclosed MOEX custody rules demonstrating reliable settlement. Each would answer a different question. None can substitute for the others. The market’s real bottleneck What stands out to me is how often the same mistake appears in different forms. We treat a quoted balance as spendable cash, a protocol’s trading volume as durable demand, a legislative headline as a change in law, or an exchange launch as proof of unrestricted settlement. Crypto’s ledger is only one layer of the financial system. The more consequential layer is the set of institutions that can custody, freeze, clear, redeem, insure, authorize or refuse to process the asset. In November 2026, that layer—not the price chart—may be where the most important risks are accumulating. Evidence and measurement notesFigures in this article are historical snapshots from October 29–November 4, 2026, not live prices or current balances. Estimates from institutions and blockchain analytics may overlap, use different price timestamps or cover different wallet sets. ETF figures and election-night calls require separate source reconciliation or certification before being treated as final. The DeFi basket is an endpoint-selected sample, not an investable index or a backtested strategy. No assertion of a shared attacker across the two theft cases is made.Independent market research · Historical information, not investment advice.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control"
+      },
+      {
+        "tag": "h2",
+        "text": "Theft accounting is not the same as recovered money"
+      },
+      {
+        "tag": "h2",
+        "text": "A second theft exposes the danger of naming a victim too early"
+      },
+      {
+        "tag": "h2",
+        "text": "The DeFi rebound looks better at one day than at one month"
+      },
+      {
+        "tag": "h2",
+        "text": "ETF flows and elections: two different clocks"
+      },
+      {
+        "tag": "h2",
+        "text": "Moscow Exchange tests the difference between trading and settlement"
+      },
+      {
+        "tag": "h2",
+        "text": "The counterargument: visible friction can coexist with a functioning market"
+      },
+      {
+        "tag": "h2",
+        "text": "The market’s real bottleneck"
+      },
+      {
+        "tag": "h2",
+        "text": "Evidence and measurement notes"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://www.binance.bh/en/blog/community/3229153443759566763",
+        "text": "Binance incident statement"
+      },
+      {
+        "href": "https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history",
+        "text": "TRM Labs forensic reconstruction"
+      },
+      {
+        "href": "https://bitquery.io/investigations/binance-hack",
+        "text": "Bitquery tracing"
+      },
+      {
+        "href": "https://www.fbi.gov/investigate/cyber/alerts/2026/north-korea-responsible-for-6-billion-binance-attack/layout_view",
+        "text": "FBI alert"
+      },
+      {
+        "href": "https://www.bitquery.io/investigations/eu-106m-crypto-theft",
+        "text": "Bitquery Ethereum analysis"
+      },
+      {
+        "href": "https://defillama.com/",
+        "text": "DefiLlama"
+      },
+      {
+        "href": "https://www.moex.com/n105654?nt=111",
+        "text": "MOEX announcement"
+      },
+      {
+        "href": "https://ofac.treasury.gov/faqs/1197",
+        "text": "OFAC guidance"
+      },
+      {
+        "href": "https://home.treasury.gov/news/press-releases/jy2404",
+        "text": "Treasury designation"
+      },
+      {
+        "href": "https://tether.io/news/tether-introduces-new-policy-to-strengthen-ecosystem-security/",
+        "text": "Tether sanctions-wallet policy"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Investigations · Market structure"
+      },
+      {
+        "tag": "p",
+        "text": "From exchange thefts and frozen stablecoins to election-driven legislation and a sanctioned Moscow trading venue, the same question keeps resurfacing: who can actually move the money?"
+      },
+      {
+        "tag": "p",
+        "text": "November 4, 2026 · Historical research snapshot"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Editorial illustration; not a depiction of actual market data or an identified incident."
+      },
+      {
+        "tag": "p",
+        "text": "The most revealing number in crypto this week is not a token price. It is the gap between an asset that exists on a ledger and an asset that can actually be moved, redeemed or recovered. That gap runs through the reported Binance theft, a separate European financial-institution attack, an uneven DeFi rebound, and Moscow Exchange’s proposed crypto market. It also helps explain why election headlines and ETF flows should not be mistaken for settled outcomes."
+      },
+      {
+        "tag": "p",
+        "text": "My reading of the available evidence is that crypto’s most important November story is a contest over control. Blockchains can make transfers visible, but they cannot by themselves establish who owns an exchange account, compel a custodian to release funds, guarantee stablecoin redemption or turn a legislative proposal into law. The practical market sits between the ledger and the institutions that make it usable."
+      },
+      {
+        "tag": "p",
+        "text": "Binance reported approximately $6.34 billion in assets impacted by an October 29, 2026 attack, describing roughly $2.85 billion as frozen or intercepted in its November 3 account. Subtracting those figures produces about $3.49 billion not confirmed secured. That residual is not an audited measure of proceeds successfully cashed out, and it is not necessarily a current-price valuation of attacker holdings."
+      },
+      {
+        "tag": "p",
+        "text": "Separate tracing described large balances remaining identifiable in attacker-controlled wallets. A reported Bitquery snapshot at 09:10 UTC on November 3 valued tracked holdings at about $3 billion. That observation supports the possibility of future sell pressure, but a wallet balance is not a sell order. It is equally important that an issuer freeze is not the same as a legal recovery, and a customer reimbursement is not proof the original tokens have been returned."
+      },
+      {
+        "tag": "caption",
+        "text": "Different measures of the Binance incident; figures are approximate and not additive."
+      },
+      {
+        "tag": "p",
+        "text": "That distinction changes how I think about market impact. Bitcoin has no central token issuer that can blacklist a native coin. USDT and USDC do have issuers able to restrict token transfers at specific addresses. The stolen asset’s technical liquidity, its legal transferability and its practical ability to reach a market are three different questions."
+      },
+      {
+        "tag": "p",
+        "text": "Sources: Binance incident statement; TRM Labs forensic reconstruction; Bitquery tracing. These sources have different observation cutoffs and should not be treated as a single reconciled ledger."
+      },
+      {
+        "tag": "p",
+        "text": "The separate attack attributed in public reporting to Crédit Mutuel Arkéa offers a smaller but instructive version of the same problem. Investigator ZachXBT alleged withdrawals exceeding $133 million. The institution subsequently acknowledged an attack and fraudulent transactions to CoinDesk, but did not publicly validate the full amount or assign ownership of every wallet in the proposed transaction chain."
+      },
+      {
+        "tag": "p",
+        "text": "A separate Bitquery investigation traced approximately $108.80 million in Ethereum USDC withdrawals from exchange accounts, using a November 2, 13:47 UTC cutoff. The difference from the $133 million allegation is at least $24.20 million. That is a reconciliation gap, not evidence that the larger allegation is false. It may reflect additional accounts, chains or activity outside the observed sample; none should be assumed without transactions and account ownership records."
+      },
+      {
+        "tag": "p",
+        "text": "The cases should not be merged merely because they happened in the same news cycle. The Binance case has a separate North Korean attribution by U.S. authorities; the Arkéa-related investigation does not establish a shared attacker or common funds. FBI alert; Bitquery Ethereum analysis."
+      },
+      {
+        "tag": "p",
+        "text": "The same tendency to compress distinct observations into a single headline appears in DeFi. CoinDesk described a strong one-session gain in its seven-member DeFi Select Index, with Injective and Ethena among the names discussed. That is a valid observation about a defined index over a defined interval. It does not demonstrate a broad, durable sector rotation."
+      },
+      {
+        "tag": "p",
+        "text": "A wider fifteen-token DeFi-category basket, ranked by circulating market capitalization and excluding stablecoins, staked/wrapped representations and tokenized fund shares, showed an equal-weighted 24-hour mean return of about +2.05% at 13:53:48 UTC on November 4. Bitcoin gained approximately 1.22% over the same provider-defined rolling interval. But only 7 of 15 basket members beat Bitcoin over 24 hours, and only 2 of 15 did so over 30 days. The basket’s thirty-day mean was about −21.33%, compared with Bitcoin’s −9.25%."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Share of the defined 15-token basket outperforming BTC, by rolling window"
+      },
+      {
+        "tag": "p",
+        "text": "Source: CoinGecko market-data snapshot, Nov. 4, 2026, 13:53:48 UTC. Basket membership selected at the endpoint, creating survivorship bias for historical comparisons. The seven-day relative breadth does not imply a positive seven-day basket return."
+      },
+      {
+        "tag": "p",
+        "text": "Trading activity alone cannot rescue the bull case. Contemporaneous DeFiLlama dashboard observations placed total DeFi value locked around $82.3 billion, with reported weekly contraction even as DEX turnover rose. Higher turnover can accompany liquidation and hedging as readily as fresh investment. The strongest alternative explanation is a high-beta bounce in weakened tokens, amplified by a few exceptional movers. A twelve-month, event-defined follow-through study was not established, so I would not attach a historical continuation probability to this rebound."
+      },
+      {
+        "tag": "p",
+        "text": "Reference: DefiLlama. Aggregate TVL and fee observations are time-sensitive and are not a synchronized constituent-level fundamental panel."
+      },
+      {
+        "tag": "p",
+        "text": "U.S. spot Bitcoin ETF flows offered another reason for caution. The November 3 reporting discussed roughly $115.6 million in net outflows and a three-session outflow total near $1.16 billion. The figures are useful as a directional snapshot, but a reliable forward-flow base rate requires a reconciled, fund-by-fund history and consistent definitions across aggregators. Those conditions were not established here."
+      },
+      {
+        "tag": "p",
+        "text": "The midterm election likewise changes incentives without guaranteeing legislative action. Reporting described Democratic victories and a possible change in congressional committee control. But the market-structure bill’s key procedural obstacle preceded election night: a reported 49–50 Senate cloture defeat on September 15. A different political balance can raise the urgency of a lame-duck negotiation while simultaneously making a 2027 rewrite more likely. An election result is not a floor schedule, and a committee chair prediction is not a confirmed appointment."
+      },
+      {
+        "tag": "p",
+        "text": "What matters for markets is not simply whether legislators say they support crypto. It is whether a negotiated text can define the boundary between SEC and CFTC oversight, set enforceable stablecoin and DeFi obligations, and clear the Senate’s procedural requirements. That is the gap between a campaign narrative and legislation that actually changes how intermediaries operate."
+      },
+      {
+        "tag": "p",
+        "text": "The clearest illustration of that gap may be the planned Moscow Exchange crypto market. MOEX announced a December 1, 2026 pilot involving BTC, ETH and USDT, with same-day and next-day settlement conventions and clearing through the National Clearing Centre. Its stated retail arrangements were narrower than an unrestricted public crypto exchange: non-qualified investors faced testing and an annual purchase cap."
+      },
+      {
+        "tag": "p",
+        "text": "The legal obstacle is already established. The U.S. Treasury sanctioned MOEX, the National Clearing Centre and the National Settlement Depository on June 12, 2024. Historic wind-down authorizations are not a blanket permission to start a new international crypto settlement business. Domestic matching and bookkeeping may be feasible, but neither proves that a customer can move a token to an outside wallet, sell it abroad or redeem USDT through a compliant intermediary."
+      },
+      {
+        "tag": "p",
+        "text": "Tether’s history of restricting wallets linked to sanctioned entities, including its publicly discussed Garantex cooperation, adds a second point of control. Bitcoin has no issuer freeze switch; USDT does. A pooled domestic custody arrangement could reduce the number of public-chain transfers without removing the issuer’s leverage over the underlying token balance. The actual MOEX custody and blockchain-delivery architecture had not been established in the evidence reviewed."
+      },
+      {
+        "tag": "p",
+        "text": "Primary references: MOEX announcement; OFAC guidance; Treasury designation; Tether sanctions-wallet policy."
+      },
+      {
+        "tag": "p",
+        "text": "None of this proves that crypto markets are structurally failing. An attacker can retain coins without selling them. A frozen balance may ultimately be recovered. A DeFi rebound can begin with narrow leadership and broaden later. A domestic trading venue can operate within limits even when international settlement is constrained. And lawmakers can compromise after a failed vote."
+      },
+      {
+        "tag": "p",
+        "text": "Those are substantive counterarguments, not reasons to erase the friction. To overturn my interpretation, I would want to see reconciled theft recoveries rather than headline freeze totals; a broadening of DeFi leadership accompanied by improving protocol activity; independently matched ETF flow histories; an actual bipartisan market-structure vote; and disclosed MOEX custody rules demonstrating reliable settlement. Each would answer a different question. None can substitute for the others."
+      },
+      {
+        "tag": "p",
+        "text": "What stands out to me is how often the same mistake appears in different forms. We treat a quoted balance as spendable cash, a protocol’s trading volume as durable demand, a legislative headline as a change in law, or an exchange launch as proof of unrestricted settlement."
+      },
+      {
+        "tag": "p",
+        "text": "Crypto’s ledger is only one layer of the financial system. The more consequential layer is the set of institutions that can custody, freeze, clear, redeem, insure, authorize or refuse to process the asset. In November 2026, that layer—not the price chart—may be where the most important risks are accumulating."
+      },
+      {
+        "tag": "p",
+        "text": "Figures in this article are historical snapshots from October 29–November 4, 2026, not live prices or current balances. Estimates from institutions and blockchain analytics may overlap, use different price timestamps or cover different wallet sets. ETF figures and election-night calls require separate source reconciliation or certification before being treated as final. The DeFi basket is an endpoint-selected sample, not an investable index or a backtested strategy. No assertion of a shared attacker across the two theft cases is made."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Measure",
+          "Reported amount",
+          "What it establishes"
+        ],
+        [
+          "Initial impacted value",
+          "$6.34B",
+          "Theft-time incident estimate"
+        ],
+        [
+          "Frozen or intercepted",
+          "$2.85B",
+          "Reported restrictions or interception, not completed restitution"
+        ],
+        [
+          "Unconfirmed secured",
+          "~$3.49B",
+          "Arithmetic residual, not verified laundering"
+        ],
+        [
+          "Tracked attacker holdings",
+          "~$3.0B",
+          "Third-party snapshot, Nov. 3, 09:10 UTC"
+        ]
+      ]
+    ],
+    "alts": [
+      "Editorial illustration of a Bitcoin coin, fractured lock, U.S. Capitol, and labeled blocks representing ETF flows, legislation, exchange security, DeFi, and sanctions."
+    ],
+    "svgCount": 1,
+    "svgSha256": [
+      "9baaa431efd9901dfde73f7f06bfdc873df60ad302e3a874ed3c219f6aacd93b"
+    ],
+    "imageCount": 1,
+    "imageSha256": [
+      "7936225ef7945d63605152a2542efdada59b275dc0ae36da83d5e7d7c4fd06a1"
+    ],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "token-unlock-liquidity-illusion-90-day-calendar": {
     "text": "Independent Market NotesMarket Structure / SupplyInvestigative analysis · Nov 3, 2026 market snapshotThe Token Unlock Calendar Has a Liquidity ProblemA 90-day wave of scheduled crypto releases looks alarming on paper. But reported float, recipient behavior and buy-side depth determine whether the supply ever reaches the market.Research window: November 3, 2026 – February 1, 2027 · Pricing and volume snapshot: November 3, 2026Illustration. Imagery is conceptual, not a representation of market transactions or verified token balances. A token unlock is often described as if a locked door opens and every token behind it instantly appears on an exchange. That is a useful image for a headline, but a poor model of market impact. A large tranche can overwhelm thin trading interest—or barely register if recipients do not sell. The question is not simply what unlocks. It is what becomes transferable, who controls it, and how much genuine demand is waiting.The 90 days from November 3, 2026 to February 1, 2027 contain several unusually large reported supply events. Monad and Ondo dominate different parts of the screen: one by the ratio of projected releases to circulating supply, the other by total dollar notional. A separate cluster—Falcon Finance, MemeCore and Cronos—looks especially consequential after comparing prospective release value with reported daily trading volume.My interpretation is that the headline unlock league table obscures two very different kinds of risk. Dilution describes how much the visible supply base might expand. Liquidity describes the ability of buyers to absorb possible transfers without moving price. A token can score modestly on the first dimension and look alarming on the second.A scheduled unlock is a supply event, not proof of a sell order. Float, recipient incentives and real order-book depth determine its market significance. Selected MON event~144%of reported circulating supplySelected ONDO event~$666Mestimated unlock notionalMON volume comparison40.3×reported 24-hour turnoverThese are screening calculations using reported third-party schedules and CoinPaprika market data from November 3, 2026. They do not measure freely tradable float or available bids. Why the two biggest releases tell different storiesThe selected Monad estimate is 15.6 billion MON scheduled around November 24. Against a reported circulating base of roughly 10.83 billion, that is approximately 144%. At a snapshot reference price around $0.01786, the notional value approaches $279 million. The same market snapshot reports about $6.92 million in daily trading volume. The quotient—40.3 times volume—is remarkable as an indicator of potential liquidity mismatch.But even the numerator is disputed. Another calendar reports roughly 17.11 billion tokens, while reported supply definitions also differ. A sufficiently large discrepancy in an unlock table can invert the resulting assessment. Until schedules, vesting categories and token transferability are reconciled, precision beyond the indicative magnitude would be misleading.Ondo is different. A January 17–18 tranche of approximately 1.71 billion ONDO tokens is valued near $666 million at the November 3 snapshot price. That equals roughly 35.1% of reported circulating tokens and 13.4 times the reported daily volume. It is the larger nominal-dollar story, yet its eventual price effect may be driven less by the headline number than by whether foundation, investor or ecosystem recipients immediately acquire transferable inventory.Neither ratio predicts a specific decline. Nor does a release of previously locked assets necessarily dilute the economic rights of existing holders in the same way that newly minted tokens would. Ownership, supply accounting and market access must be distinguished. A ranked screen, not an executable short listThe table prioritizes large reported-float events and liquidity-disproportionate releases. These values are reconstructed from the November 3 market snapshot and candidate unlock calendars, not audited vesting contracts.TokenScheduled dateReleaseUnlock / reported floatValueValue / 24h volumeMONNov 2415.6B~144%$279M40.3×ONDOJan 17–181.71B35.1%$666M13.4×KITENov 3800M44.4%$95.9M15.1×FFNov 28–29203M8.7%$17.7M12.0×MDec 256.11M2.4%$48.4M39.4×CRONov 161.17B2.3%$58.9M19.9×ZRONov 19–2023.3M21.2%$43.3M0.78×XPLNov 25228M12.7%$14.5M0.34×STABLENov 7888.9M5.1%$24.1M5.7×LDOJan 148.9M5.9%$16.2M1.76×KITE's November 3 event had not been verified as pending or completed at the snapshot. GRVT and WET, omitted from numerical volume ranking, have large reported dilution estimates (~64% and ~84% respectively) but insufficient comparable independently retrieved liquidity observations.How large is the release relative to trading activity?Gross unlock value divided by one day of reported market turnoverMON 40.3, MemeCore 39.4, Cronos 19.9, Kite 15.1, ONDO 13.4, Falcon Finance 12, STABLE 5.7, Lido 1.8, LayerZero 0.8, and Plasma 0.3 times.MON40.3×M39.4×CRO19.9×KITE15.1×ONDO13.4×FF12.0×STABLE5.7×LDO1.8×ZRO0.8×XPL0.3×Estimated gross unlock value divided by reported 24-hour turnover, shown on a zero-based scale. Trading volume is not resting buy-side depth, and the comparison is not a slippage forecast. See the table above for numerical values. Why smaller tokens may carry the worse liquidity problemFalcon Finance's reported late-November release of approximately 203 million FF tokens is valued around $17.7 million. Reported turnover in the same snapshot was only about $1.47 million per day. That makes the theoretical release roughly 12 times daily activity. MemeCore's early-December release, around 56.11 million M, is worth approximately $48.4 million against $1.23 million in daily volume—nearly 39.4 times.Cronos demonstrates the other side of the mismatch. Its prospective 1.17 billion CRO strategic-reserve allocation is only about 2.3% of reported circulation, but its value is nearly 20 times one day's reported trading. A strategic-reserve release should not be treated as automatic selling. Its intended distribution and wallet behavior matter more than the size of the reserve label.Meanwhile, LayerZero and Plasma show high calculated float additions but lower gross unlock-to-volume ratios in the same snapshot. That does not make them safe: gross volume can be inflated, liquidity fragments across exchanges and tokens may trade in thin conditions even when daily volume appears healthy. It does argue against assigning the same supply-risk label to every large circulating-supply change.Three ways an unlock can fail to become a price shockFirst, the new recipients may hold. Founders, long-duration investors and protocol treasuries face different incentives. Second, recipients may hedge in advance, shifting the price response before the official date. Third, legitimate market makers or existing buy interest may absorb release-related transfers without a sustained decline. Conversely, selling can arrive before the unlock if holders reposition in anticipation, and an adverse macro event can overwhelm any token-specific effect.That makes recipient wallets, transfer restrictions, on-chain exchange deposits, spot taker activity and actual order-book resilience the decisive next tests. An exchange-inflow increase is stronger evidence of possible distribution than a calendar cell, but it is still not proof of a completed sale. The 90-day event mapSelected material calendar entries, grouped by month. Where providers disagree, the conflicting quantity or date is intentionally shown. A recurring vesting tranche is not necessarily equivalent to a one-time cliff.November 2026DateTokenScheduled release / noteNov 3KITE800M; release status not verifiedNov 5ENA93.8MNov 7STABLE888.9MNov 11PUMP6.88B; conflicting provider reportsNov 12APT4.54MNov 13–15STRK127M–226M; conflicting estimatesNov 14PIEVERSE16.7MNov 15–16ARB92.7MNov 16CRO1.17BNov 19–20ZRO23.3M–23.6MNov 23H292.86M, reportedNov 24MON15.6B–17.11B; conflicting estimatesNov 25XPL~228MNov 28–29FF~203MNov 29GRVT73.63M, reportedDecember 2026DateTokenScheduled release / noteDec 1SUI~13MDec 2M56.11MDec 3WETmajor reported cliff; quantity unverifiedDec 3KITE66.7MDec 5ENA93.8MDec 7JTO14.5MDec 14PIEVERSE16.7MDec 15STRK / SEIrecurring tranchesDec 16ARBrecurring trancheDec 20ZRO~23.3MDec 24MON~863MDec 25XPL~228MDec 29FF~203MJanuary 2027 to February 1DateTokenScheduled release / noteJan 1LDO48.9MJan 1XDC~519MJan 1SUI~12.8MJan 3KITE66.7MJan 5ENA93.8MJan 12APT / PUMPrecurring tranchesJan 14PIEVERSE16.7MJan 15STRK / SEIrecurring tranchesJan 16ARBrecurring trancheJan 17–18ONDO1.71BJan 20ZRO~23.3MJan 24MON~863MJan 25XPL~228MFeb 1AZTECreported transition; timing unconfirmedThis is a material-event selection, not a complete ledger of all linear vesting emissions. Later-month percentages should not be extrapolated using a fixed November 3 supply denominator. The uncomfortable part: the data has a float problemThe most tempting rankings use unlock tokens divided by circulating supply and unlock dollar value divided by daily volume. Both can be calculated. Neither alone measures the variable a trader actually needs: newly transferable supply that is likely to seek buyers. Reported circulation can include inactive or effectively constrained inventory. Trading volume describes turnover, not the cumulative limit orders available at a given price.There are also irreducible schedule disagreements. MON estimates range from 15.6 billion to 17.11 billion tokens. Ondo's date is reported as January 17 or 18. LayerZero dates differ by a day in some calendars. Starknet figures range from approximately 127 million to 226 million. PUMP's reported monthly release sizes are inconsistent enough that I would not collapse them into one confident figure. Any model treating those competing inputs as a single known truth is overstating its quality.For a more useful pressure estimate, I would multiply the unlock notional by an evidence-based estimate of the immediately sellable share, then compare that amount with genuine spot demand: verified buy-side depth, replenishment rates and recent execution volume after excluding suspicious turnover. The result would be conditional rather than predictive, but it would be much closer to the question that actually matters.What would prove this thesis wrong?The high-pressure case would weaken if the relevant tokens remain contractually restricted, identified recipient wallets do not send supply toward markets, or genuine spot bids replenish sufficiently to absorb transfers. It would also weaken if exchanges already priced the event well in advance. Conversely, rising recipient-linked deposits combined with falling bid depth, aggressive spot selling and failed price recoveries would strengthen the case for near-term market stress.Even then, an unlock is not a standalone trading strategy. For a short-horizon position, price structure, funding, open interest, spot cumulative volume delta and a defensible stop are necessary before evaluating reward against risk. Without those confirmations, the analytical decision is to monitor rather than manufacture a trade.What I would watch firstMonad is the highest-priority schedule reconciliation and exchange-flow investigation. Ondo is the largest nominal release and deserves focused analysis as January approaches. Falcon Finance, MemeCore and Cronos merit attention because the notional size of their candidate releases is disproportionate to current reported turnover. GRVT and WET need credible liquidity and transferable-float measurements before they can be responsibly ranked with the others.The more important conclusion is structural. Crypto market dashboards make circulating supply look like a single objective number, while actual access to supply is mediated by contracts, institutions, trading venues and incentives. A token unlock reveals where that abstraction may fail. The calendar is the beginning of the investigation, not its answer.My bottom line: The next 90 days contain significant prospective supply changes, but a calendar cannot establish an impending sell-off. What matters is the gap between tokens that may become transferable and demand that is genuinely willing to meet them. Until that gap is measured, the appropriate classification is a research watchlist—not a directional trade signal. Sources and methodology: Published schedule comparisons: DefiLlama calendar, Toolz unlocks, TokenToria and MrNasDog. Market-price, market-cap, circulation and 24-hour volume references: CoinPaprika snapshot, November 3, 2026, approximately 20:27 UTC. These third-party schedule sources were summarized in the underlying November 3 research; original vesting contracts were not comprehensively audited.Scope: All valuations are historical snapshot estimates, not live quotes. Unlock dates, sizes and supply classifications may change. Token prices, volume, holder intent and actual liquidity are not forecast. Some values are contradictory or incomplete and are labeled accordingly. This publication provides market research, not financial advice.",
     "headings": [
