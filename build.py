@@ -21,6 +21,8 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from xml.sax.saxutils import escape as xml_escape
 
+from image_validation import MAX_BYTES, inspect_image
+
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
 DIST = ROOT / "dist"
@@ -257,18 +259,23 @@ def featured_image(entry: dict, slug: str) -> dict | None:
     path = ROOT / name
     if not path.is_file():
         die(f"{slug} missing featured image: {name}")
+    if path.stat().st_size > MAX_BYTES:
+        die(f"{slug} featured image exceeds the 8 MiB inspection limit: {name}")
     raw = path.read_bytes()
     ext = path.suffix.lower()
     mime = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png" if ext == ".png" else "image/webp"
-    good = (raw.startswith(b"\xff\xd8\xff") and raw.endswith(b"\xff\xd9")) if mime == "image/jpeg" else (raw.startswith(b"\x89PNG\r\n\x1a\n") and b"IEND" in raw[-32:]) if mime == "image/png" else (raw.startswith(b"RIFF") and raw[8:12] == b"WEBP" and int.from_bytes(raw[4:8], "little") + 8 == len(raw))
-    if not good:
-        die(f"{slug} invalid featured image bytes: {name}")
+    try:
+        intrinsic = inspect_image(raw, mime)
+    except (ValueError, IndexError, OverflowError) as error:
+        die(f"{slug} invalid featured image {name}: {error}")
     alt = str(entry.get("image_alt") or "").strip()
     if not alt:
         die(f"{slug} image_alt is required")
     width, height = entry.get("image_width", 1200), entry.get("image_height", 630)
     if type(width) is not int or type(height) is not int or (width, height) != (1200, 630):
         die(f"{slug} image dimensions must be 1200 x 630")
+    if intrinsic != (width, height):
+        die(f"{slug} declared image dimensions disagree with intrinsic dimensions")
     if entry.get("image_mime_type") and entry["image_mime_type"] != mime:
         die(f"{slug} image_mime_type disagrees with image extension")
     return {"path": name, "alt": alt, "width": width, "height": height, "mime": mime}
