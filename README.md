@@ -69,22 +69,17 @@ The canonical hostname comes from `site.json`. Confirm that this URL matches the
 For a ChatGPT publication ZIP: copy its HTML to `content/`, featured artwork to `assets/featured/`, and merge `publish.json` fields into the existing `content/articles.json` entry. Never replace the entire catalog with one manifest.
 ## Checks
 
-These checks guard the editorial text, charts, URLs, and layout. They are not part of the published site. `build.py` still uses only the Python standard library.
+The required publication checks guard content and structure. CI builds the site and runs the Python checks; it does not install Chromium or run Playwright. The generator still uses only the Python standard library.
 
 ```bash
 python3 -m unittest discover -s tests -p 'test_*.py'
-npm ci
-npx playwright install chromium
-npx playwright test
 ```
 
-The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Homepage screenshots use a stable list of article slugs declared in `tests/visual.spec.ts`; new articles are checked separately for homepage presence, overflow, keyboard focus, and accessibility, so routine publishing does not require a homepage screenshot refresh. Overflow, keyboard focus, and serious accessibility findings are checked on every article. CI installs the faces Chromium used to capture the baselines: Tinos, from the Croscore fonts, for the editorial serif stack, and Noto Sans for interface text. Aliasing that serif stack to Noto Serif changes wrapping and fails the screenshot check.
-
-A layout or content regression fails the suite on its own. Widening the homepage past the viewport fails `no unexpected overflow`. Changing a sentence in an essay fails the content signature. Both were confirmed before any shared CSS was adopted. The screenshot check does not accept a new image when it fails.
+The Python tests rebuild `dist/` and verify content signatures, metadata, and site structure. Browser-based visual and accessibility checks remain available for local review, but they are not a publication or deployment gate.
 
 ## Reviewing a visual change
 
-1. Run the suite and let the screenshot check fail. CI now uploads `test-results/` as a `browser-failure-<run_id>` artifact, so the actual screenshots and diffs are available from the failed run without changing the workflow.
+1. Run the browser suite locally and inspect any screenshots or diffs in `test-results/`.
 2. Download and inspect the expected image, actual image, and diff. Confirm the visual change is intended and that text, tables, and charts remain intact.
 3. Refresh only the reviewed targets. For an intentional homepage design change, run:
 
@@ -102,7 +97,7 @@ For another target, use `npx playwright test tests/visual.spec.ts --grep "<targe
 
 The canonical site is <https://independent-market-notes.netlify.app/>. The repository also retains its GitHub Pages deployment at <https://jacksmack1971.github.io/crypto-research-blog/>. Pages is set to **GitHub Actions** (**Settings → Pages → Build and deployment → Source**).
 
-[`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds on every push and pull request and runs the content, structure, and browser checks in `styling-check`. A push to `main` uploads `dist/` with `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`. The deploy job waits for both `build` and `styling-check`, and its `if` still limits it to `main`. Pull requests do not publish.
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds on every push and pull request and runs the Python content and structure checks. A push to `main` uploads `dist/` with `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`. The deploy job waits for both `build` and `content-check`, and its `if` still limits it to `main`. Pull requests do not publish.
 
 No paid host, database, or package install is required. The generator is [`build.py`](build.py) and uses only the Python standard library.
 
