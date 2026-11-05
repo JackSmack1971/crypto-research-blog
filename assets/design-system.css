@@ -383,7 +383,7 @@ body.cr-home .sr-only {
 }
 body.cr-home .search-status { min-height: 1.5em; margin: 13px 0 8px; color: var(--cr-muted); font: 0.82rem/1.4 var(--cr-sans); }
 body.cr-home .archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 22px; }
-body.cr-home .archive-grid > .feature-result {
+body.cr-home .archive-grid > .featured-result {
   grid-column: 1 / -1;
   width: 100%;
   margin: 0;

@@ -119,6 +119,20 @@ test("every catalog article appears on the homepage", async ({ page }) => {
 });
 
 test.describe("research archive search", () => {
+  test("filtered featured result spans the desktop archive", async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await prepare(page, "/");
+    await page.getByRole("searchbox").fill("DEEP");
+    const result = page.locator("[data-featured-search]");
+    await expect(result).toBeVisible();
+    await expect(result).toHaveCSS("grid-column", "1 / -1");
+    const grid = await page.locator(".archive-grid").boundingBox();
+    const box = await result.boundingBox();
+    expect(box).not.toBeNull();
+    expect(Math.abs(box!.width - grid!.width)).toBeLessThanOrEqual(1);
+    expect(Math.abs(box!.x - grid!.x)).toBeLessThanOrEqual(1);
+  });
+
   test("combines ticker, topic, and research type filters and clears them", async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 900 });
     await prepare(page, "/");
