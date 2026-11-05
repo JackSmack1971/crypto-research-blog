@@ -208,6 +208,8 @@ def meta_values(html: str, key: str) -> list[str]:
 
 
 def pretty_date(iso: str) -> str:
+    if not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", iso):
+        die(f"date must be YYYY-MM-DD, got {iso!r}")
     try:
         parsed = datetime.strptime(iso, "%Y-%m-%d")
     except ValueError:
