@@ -39,6 +39,15 @@ const knownAxe = new Set(known.accessibility.map((item) => `${item.route}|${item
 const knownOverflow = new Set(known.horizontalOverflow.map((item) => `${item.route}|${item.width}`));
 
 async function prepare(page: Page, route: string): Promise<void> {
+  if (route === "/404.html") {
+    // The 404 deliberately uses canonical URLs at arbitrary request depths.
+    // Preview its locally built assets, not whatever is currently in production.
+    const site = JSON.parse(readFileSync("site.json", "utf8")) as { url: string };
+    for (const asset of ["design-system.css", "favicon.svg", "feed.xml"]) {
+      await page.route(`${site.url.replace(/\/$/, "")}/${asset}`, (request) =>
+        request.fulfill({ path: `dist/${asset}` }));
+    }
+  }
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto(route, { waitUntil: "networkidle" });
   await page.evaluate(async () => {

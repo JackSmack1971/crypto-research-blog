@@ -472,6 +472,7 @@ def page_shell(
     canonical: str,
     main: str,
     structured_data: dict | None = None,
+    asset_base: str = "",
 ) -> str:
     if structured_data is None:
         structured_data = {
@@ -491,9 +492,9 @@ def page_shell(
   <title>{escape(document_title)}</title>
   <meta name="description" content="{escape(description, quote=True)}">
   <link rel="canonical" href="{escape(canonical, quote=True)}">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="design-system.css">
-  <link rel="alternate" type="application/rss+xml" title="{escape(site["title"], quote=True)}" href="feed.xml">
+  <link rel="icon" href="{escape(asset_base, quote=True)}favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{escape(asset_base, quote=True)}design-system.css">
+  <link rel="alternate" type="application/rss+xml" title="{escape(site["title"], quote=True)}" href="{escape(asset_base, quote=True)}feed.xml">
   <meta property="og:site_name" content="{escape(site["title"], quote=True)}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{escape(document_title, quote=True)}">
@@ -636,7 +637,7 @@ def render_404(site: dict) -> str:
     <p class="kicker">Missing page</p>
     <h1>That page is not on this site.</h1>
     <p class="lede">The research notes are collected on the home page.</p>
-    <p><a class="back" href="index.html">Back to {escape(site["title"])}</a></p>
+    <p><a class="back" href="{escape(site["url"] + "/", quote=True)}">Back to {escape(site["title"])}</a></p>
   </main>"""
     return page_shell(
         site,
@@ -644,6 +645,7 @@ def render_404(site: dict) -> str:
         description=f"That page is not on {site['title']}.",
         canonical=site["url"] + "/404.html",
         main=main,
+        asset_base=site["url"] + "/",
     )
 
 
