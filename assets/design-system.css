@@ -244,7 +244,7 @@ body.cr-home .mast {
 }
 body.cr-home .mast .wrap { width: min(var(--cr-container), calc(100% - 48px)); }
 body.cr-home .topline { min-height: 34px; }
-body.cr-home .kicker { color: #d9bd8a; }
+body.cr-home .mast .kicker { color: #d9bd8a; }
 body.cr-home .tools { display: flex; gap: 24px; }
 body.cr-home .tools a { color: var(--cr-bar-text); }
 body.cr-home .mast h1 {

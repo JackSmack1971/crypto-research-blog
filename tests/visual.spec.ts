@@ -208,7 +208,7 @@ test.describe("keyboard", () => {
 });
 
 test.describe("accessibility", () => {
-  for (const route of ["/", ...articles.map((article) => `/${article.slug}/`)]) {
+  for (const route of routes) {
     test(`no new serious issues ${route}`, async ({ page }) => {
       await page.setViewportSize({ width: 1440, height: 900 });
       await prepare(page, route);
@@ -290,3 +290,15 @@ test("representative images decode", async ({ page }) => {
     expect(broken, route).toEqual([]);
   }
 });
+
+for (const route of ["/", "/404.html"]) {
+  test(`shared skip link reaches main ${route}`, async ({ page }) => {
+    await prepare(page, route);
+    await page.keyboard.press("Tab");
+    await expect(page.locator(".skip")).toBeFocused();
+    await page.keyboard.press("Enter");
+    await expect(page).toHaveURL(/#main-content$/);
+    await expect(page.locator("main#main-content")).toHaveCount(1);
+    expect(await page.evaluate(() => document.activeElement?.id)).toBe("main-content");
+  });
+}

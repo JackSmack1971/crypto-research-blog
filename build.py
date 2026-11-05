@@ -586,7 +586,7 @@ def render_home(notes: list[dict], site: dict) -> str:
       <nav class="topic-nav" aria-label="Browse by topic">{topic_links}</nav>
     </div>
   </header>
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <div data-feature-slot hidden></div>
     <section class="feature wrap" aria-labelledby="feature-title" data-featured-search data-slug="{escape(featured["slug"], quote=True)}" data-topic="{escape(featured["topic"], quote=True)}" data-research-type="{escape(featured["research_type"], quote=True)}" data-assets="{escape(' '.join(featured["assets"]), quote=True)}">
       <a class="feature-art" href="{escape(featured["slug"], quote=True)}/" aria-label="Read featured investigation: {escape(featured["title"], quote=True)}">{feature_art}</a>
@@ -632,7 +632,7 @@ def render_home(notes: list[dict], site: dict) -> str:
 
 
 def render_404(site: dict) -> str:
-    main = f"""<main id="notes" class="wrap missing">
+    main = f"""<main id="main-content" class="wrap missing" tabindex="-1">
     <p class="kicker">Missing page</p>
     <h1>That page is not on this site.</h1>
     <p class="lede">The research notes are collected on the home page.</p>
