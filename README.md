@@ -103,4 +103,4 @@ No paid host, database, or package install is required. The generator is [`build
 
 ## Netlify
 
-The repository includes [`netlify.toml`](netlify.toml), which runs `python3 build.py` and publishes `dist/`. Netlify's build command and publish directory should match those values. Deploy from the repository root with `main` as the production branch; do not publish the repository root, which has no generated `index.html`.
+The repository includes [`netlify.toml`](netlify.toml), which runs `python3 build.py` followed by the Python content and structure suite, and publishes `dist/` only when both succeed. Netlify's build command and publish directory should match those values. These checks compare article content and metadata with the reviewed fixtures; Chromium remains outside publication CI. Deploy from the repository root with `main` as the production branch; do not publish the repository root, which has no generated `index.html`.
