@@ -370,6 +370,78 @@ def json_ld(data: dict) -> str:
     return f'<script type="application/ld+json">{payload}</script>'
 
 
+LD_JSON_RE = re.compile(
+    r"<script\b(?=[^>]*\btype\s*=\s*([\"'])application/ld\+json\1)[^>]*>(.*?)</script\s*>",
+    re.I | re.S,
+)
+
+
+def blog_postings(data):
+    if isinstance(data, list):
+        return [post for item in data for post in blog_postings(item)]
+    if not isinstance(data, dict):
+        return []
+    types = data.get("@type", [])
+    if isinstance(types, str):
+        types = [types]
+    found = [data] if "BlogPosting" in types else []
+    return found + blog_postings(data.get("@graph", []))
+
+
+def existing_blog_postings(html: str, slug: str) -> list[dict]:
+    found = []
+    for match in LD_JSON_RE.finditer(head_html(html)):
+        try:
+            found.extend(blog_postings(json.loads(match.group(2))))
+        except (ValueError, TypeError):
+            die(f"{slug} has invalid JSON-LD")
+    if len(found) > 1:
+        die(f"{slug} has multiple BlogPosting entities; keep one article identity")
+    return found
+
+
+def article_posting(note: dict, site: dict) -> dict:
+    url = f"{site['url']}/{note['slug']}/"
+    title, description = note["title"], note["description"]
+    author = note["author"] or site["title"]
+    posting = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": description,
+        "datePublished": note["date"],
+        "mainEntityOfPage": url,
+        "url": url,
+        "author": {"@type": "Person" if note["author"] else "Organization", "name": author},
+        "publisher": {"@type": "Organization", "name": site["title"]},
+    }
+    if note["image"]:
+        posting["image"] = f"{site['url']}/{note['image']['path']}"
+    return posting
+
+
+def augment_article_schema(html: str, note: dict, site: dict) -> str:
+    if not existing_blog_postings(html, note["slug"]):
+        return html
+    defaults = article_posting(note, site)
+
+    def augment(match):
+        data = json.loads(match.group(2))
+        posts = blog_postings(data)
+        if not posts:
+            return match.group(0)
+        for key, value in defaults.items():
+            posts[0].setdefault(key, value)
+        # Registered artwork is the authoritative social image.
+        if note["image"]:
+            posts[0]["image"] = defaults["image"]
+        return json_ld(data)
+
+    # Only head scripts are publication metadata; preserve article scripts verbatim.
+    end = re.search(r"</head>", html, flags=re.I).start()
+    return LD_JSON_RE.sub(augment, html[:end]) + html[end:]
+
+
 def article_extra_head(note: dict, site: dict) -> str:
     html = note["html"]
     head = head_html(html).lower()
@@ -419,22 +491,8 @@ def article_extra_head(note: dict, site: dict) -> str:
         parts.append(
             f'<meta name="twitter:description" content="{escape(description, quote=True)}">'
         )
-    author = note["author"] or site["title"]
-    posting = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": title,
-        "description": description,
-        "datePublished": note["date"],
-        "mainEntityOfPage": url,
-        "url": url,
-        "author": {"@type": "Person" if note["author"] else "Organization", "name": author},
-        "publisher": {"@type": "Organization", "name": site["title"]},
-    }
-    if note["image"]:
-        posting["image"] = f"{site['url']}/{note['image']['path']}"
-    if "application/ld+json" not in head:
-        parts.append(json_ld(posting))
+    if not existing_blog_postings(html, note["slug"]):
+        parts.append(json_ld(article_posting(note, site)))
     return "\n".join(parts) + "\n"
 
 
@@ -461,7 +519,8 @@ def render_article(note: dict, site: dict) -> str:
         count=1,
         flags=re.I,
     )
-    extra = article_extra_head(note, site)
+    html = augment_article_schema(html, note, site)
+    extra = article_extra_head(dict(note, html=html), site)
     head_match = re.search(r"</head>", html, flags=re.I)
     if not head_match:
         die(f"{note['slug']} is missing </head>")
