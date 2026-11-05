@@ -25,9 +25,9 @@ class FeaturedImageTest(unittest.TestCase):
             root = Path(temp)
             directory = root / "assets" / "featured"
             directory.mkdir(parents=True)
-            # Small byte-level JPEG fixture. Tests header validation and publishing,
-            # not artwork quality or a complete decoder.
-            (directory / "example.jpg").write_bytes(b"\xff\xd8\xff\xe0" + b"\x00" * 32 + b"\xff\xd9")
+            # Use actual repository artwork, including valid compressed image data.
+            artwork = build.ROOT / "assets/featured/deepbook-supply-transparency.jpg"
+            (directory / "example.jpg").write_bytes(artwork.read_bytes())
             entry = {
                 "image": "assets/featured/example.jpg",
                 "image_alt": 'Bitcoin "market" analysis',
