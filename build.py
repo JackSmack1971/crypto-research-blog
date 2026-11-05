@@ -13,7 +13,7 @@ import json
 import re
 import shutil
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from email.utils import format_datetime
 from html import escape
 from html.parser import HTMLParser
@@ -719,10 +719,10 @@ def render_404(site: dict) -> str:
 
 def render_feed(notes: list[dict], site: dict) -> str:
     items = []
-    for index, note in enumerate(notes):
+    for note in notes:
         published = datetime.strptime(note["date"], "%Y-%m-%d").replace(
             tzinfo=timezone.utc, hour=18
-        ) - timedelta(seconds=index)
+        )
         link = f"{site['url']}/{note['slug']}/"
         guid = f"{site['rss_guid_origin']}/{note['slug']}/"
         items.append(
