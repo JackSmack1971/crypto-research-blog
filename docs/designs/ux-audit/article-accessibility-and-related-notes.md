@@ -105,6 +105,8 @@ Current generated pages
 
 ### Slice 3: Correct reproduced scroll-region findings UX-04–06
 
+**Remeasurement status:** UX-04–06 are reproduced at 390 px because axe reports `scrollable-region-focusable` and the affected wrappers lack `role="region"` and a non-empty accessible name. Chromium natively moves focus to the overflowing wrappers with Tab and ArrowRight scrolls them; that native behavior does not provide the missing region semantics. Safari does not make scroll containers focusable by default, so explicit focusability is required for consistent keyboard access. The wrappers do not overflow at 768 or 1440 px.
+
 **Files and purpose**
 
 * `content/aero-at-0-68.html` — add `tabindex="0"`, `role="region"`, and an accessible name to the existing `.table-scroll` wrapper. Prefer `aria-labelledby` pointing to a relevant existing visible heading/caption; if that target lacks an ID, add only an ID attribute. (UX-04)
@@ -116,7 +118,7 @@ Current generated pages
 
 **Visual targets and snapshots:** The affected screenshot targets are `aero-at-0-68` (UX-04) and `bitcoin-buying-imbalance` (UX-05); the token-unlock article (UX-06) is not an approved screenshot target. These semantic attributes should not change the unfocused screenshot. Inspect target diffs; only if an intended visible change is confirmed, update one target at a time using `npx playwright test tests/visual.spec.ts --grep "visual baseline › aero-at-0-68 @" --update-snapshots` or `npx playwright test tests/visual.spec.ts --grep "visual baseline › bitcoin-buying-imbalance @" --update-snapshots`. Do not update token-unlock or unrelated snapshots. (UX-04–06)
 
-**Tests:** Add the Slice 3 Playwright assertions listed in Detailed Implementation and run them with `npx playwright test tests/visual.spec.ts --grep "keyboard › UX-04–06 scroll regions operate with keyboard for"` and `npx playwright test tests/visual.spec.ts --grep "accessibility › UX-04–06 scroll regions have accessible names for"`. Test only reproduced rows. At each viewport, check `scrollWidth > clientWidth`; if true, Tab from the preceding focusable element, assert the region is active and `:focus-visible` with visible outline, press ArrowRight five times, and assert `scrollLeft` increased. If false, assert focusability/name only and record no overflow in `evidence/remeasure.md`. In both cases assert role `region` and a non-empty accessible name. (UX-04–06)
+**Tests:** Add the Slice 3 Playwright assertions listed in Detailed Implementation and run them with `npx playwright test tests/visual.spec.ts --grep "keyboard › UX-04–06 scroll regions operate with keyboard for"` and `npx playwright test tests/visual.spec.ts --grep "accessibility › UX-04–06 scroll regions have accessible names for"`. Test only reproduced rows. At each viewport, always assert role `region` and a non-empty accessible name. Use `scrollWidth > clientWidth` as the precondition for scroll-interaction assertions: only when it is true, Tab from the preceding focusable element, assert the region is active and `:focus-visible` with visible outline, press ArrowRight five times, and assert `scrollLeft` increased. When it is false, assert focusability and name only; do not assert scrolling, and record no overflow in `evidence/remeasure.md`. (UX-04–06)
 
 **Rollback:** Remove only the attributes/IDs added to the reported wrappers and their focused assertions if the region becomes redundantly announced, cannot be operated as intended, or creates a regression. Preserve all prose, styles, table data, and fixture files. (UX-04–06)
 
