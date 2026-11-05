@@ -6,3 +6,9 @@ node_modules/
 test-results/
 playwright-report/
 blob-report/
+
+# Local UX audit captures and raw tool output
+docs/designs/ux-audit/evidence/screenshots/
+docs/designs/ux-audit/evidence/axe/
+docs/designs/ux-audit/evidence/lighthouse/
+docs/designs/ux-audit/evidence/*.png
