@@ -1,5 +1,22 @@
 [
   {
+    "slug": "monad-november-unlock-liquidity-test",
+    "source": "monad-november-unlock-liquidity-test.html",
+    "date": "2026-11-05",
+    "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?",
+    "dek": "Conflicting calendars put Monad’s anniversary release near 16.6–17.1 billion MON. The vesting math is clearer than the market’s capacity to absorb it.",
+    "image": "assets/featured/monad-november-unlock-liquidity-test.jpg",
+    "image_alt": "Editorial illustration of a large layered supply compartment beside sparse bid-like marks, illustrating that unlocked tokens are not automatically sold. No market data is depicted.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "tokenomics",
+    "assets": [
+      "MON"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "crypto-market-structure-after-midterms",
     "source": "crypto-market-structure-after-midterms.html",
     "date": "2026-11-04",
