@@ -28,7 +28,7 @@ Recording must be best-effort and must not delay a time-critical primary task. T
 
 ## Boundaries and limitations
 
-- This ZIP is a control-plane subset; full repository build/deploy dependencies are not supplied here.
+- This document and tools/friction.py are a local, opt-in control-plane subset; they are not part of the site build, and nothing in build.py, CI or deployment depends on them.
 - Existing CI/publishing remains unchanged. Nothing is wired into GitHub Actions or Netlify.
 - A user can inspect the local ledger; other agents read it only by intentionally invoking the tool in an authorized environment.
 - There is no automatic suggestion writer, remediation executor, host-wide collector, policy compiler, or reliable live-refresh contract.
