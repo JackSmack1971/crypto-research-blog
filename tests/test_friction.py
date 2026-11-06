@@ -4,6 +4,7 @@ import io
 import json
 from contextlib import redirect_stdout, redirect_stderr
 from pathlib import Path
+import sqlite3
 import tempfile
 import unittest
 from unittest import mock
@@ -67,6 +68,24 @@ class FrictionTest(unittest.TestCase):
         with mock.patch.object(friction.Path, 'home', return_value=Path(self.temp.name)):
             p = friction.db_path(None)
         self.assertEqual(p, Path(self.temp.name, '.codex', 'friction-intelligence', 'incidents.sqlite3'))
+
+    def test_main_closes_database_connection(self):
+        real = sqlite3.connect
+        connections = []
+
+        def spy(*args, **kwargs):
+            connection = real(*args, **kwargs)
+            connections.append(connection)
+            self.addCleanup(connection.close)
+            return connection
+
+        with mock.patch.object(friction.sqlite3, 'connect', side_effect=spy):
+            self.assertEqual(self.run_cli('list')[0], 0)
+
+        self.assertGreaterEqual(len(connections), 1)
+        for connection in connections:
+            with self.assertRaises(sqlite3.ProgrammingError):
+                connection.execute('SELECT 1')
 
 
 if __name__ == '__main__':
