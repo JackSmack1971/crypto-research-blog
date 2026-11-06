@@ -8,6 +8,10 @@
 
 Improve the experience of readers who arrive directly at an Independent Market Notes article, especially on a phone: correct the reported contrast and keyboard-access problems, then give readers a clear path to related research. The first phase makes finding-specific accessibility corrections in generated 404 chrome and named essay sources. UX-09 was added after PR #10 CI reproduced three Binance contrast failures. Only after the contrast and scroll corrections pass their checks does a second phase add a generated related-notes navigation area after the essay. (UX-01–06, UX-09, ED-01, ED-07)
 
+## Phase 1 Closure
+
+**Phase 1 closed — 2026-11-06.** Local Windows Playwright and axe measurements of the built site verified UX-01–06 and UX-09 at the requested viewports and color schemes. By operator decision, this rendered Playwright/axe evidence replaces the retired `styling-check` exit criterion. The exact ratios, axe results, keyboard behavior, and focus outlines are recorded in `evidence/remeasure.md`; the full raw measurement is local-only and git-ignored. `tests/visual.spec.ts` does not define `APPROVED_CONTRAST_STATES`; this was reported and left unchanged.
+
 ## The Problem
 
 The supplied audit reports a low-contrast 404 kicker (UX-01), two low-contrast labels in the token-unlock article (UX-02–03), and three horizontally scrollable regions missing accessible region semantics (UX-04–06). PR #10 styling-check CI also reproduced contrast failures in the Binance article (UX-09), now included in Slice 2. The editorial review observed limited paths between articles and from an article back to the wider library (ED-01, ED-07). The original UX-01–06 article states were remeasured, and UX-09 is documented from PR #10 base-branch CI evidence. (UX-01–06, UX-09, ED-01, ED-07)
