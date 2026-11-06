@@ -13,7 +13,7 @@ import json
 import re
 import shutil
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from email.utils import format_datetime
 from html import escape
 from html.parser import HTMLParser
@@ -505,6 +505,34 @@ def article_bar(site: dict) -> str:
         '<a class="cr-all" href="../">All notes</a>'
         "</div></nav>"
     )
+
+
+def rank_related_notes(note: dict, notes: list[dict]) -> dict:
+    ranked = []
+    for index, candidate in enumerate(notes):
+        if candidate["slug"] == note["slug"]:
+            continue
+        shared_assets = len(set(note["assets"]) & set(candidate["assets"]))
+        score = (
+            2 * shared_assets
+            + (1 if candidate["topic"] == note["topic"] else 0)
+            + (1 if candidate["research_type"] == note["research_type"] else 0)
+        )
+        candidate_date = candidate["date"]
+        ranked.append((score, candidate_date, index, candidate))
+
+    if not ranked:
+        return {"variant": "none", "notes": []}
+
+    ranked.sort(
+        key=lambda item: (
+            -item[0],
+            -date.fromisoformat(item[1]).toordinal(),
+            item[2],
+        )
+    )
+    variant = "related" if ranked[0][0] > 0 else "latest"
+    return {"variant": variant, "notes": [item[3] for item in ranked[:3]]}
 
 
 SCROLL_REGION_LABELS = {
