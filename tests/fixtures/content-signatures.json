@@ -1,4 +1,382 @@
 {
+  "monad-november-unlock-liquidity-test": {
+    "text": "Independent Market NotesTokenomics / Market Structure Investigative analysis · November 5, 2026 Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell? Conflicting calendars put Monad’s anniversary release near 16.6–17.1 billion MON. The vesting math is clearer than the market’s capacity to absorb it. November 5, 2026 · Scheduled event: November 24, 2026 · Market measurements are historical snapshots, not live quotes. Monad’s first anniversary arrives with a number large enough to dominate a token-unlock calendar. DefiLlama places 17.105 billion MON on November 24, nearly 145% of its reported circulating supply. At its November 5 reference price, that represented roughly $310 million. The number is striking. It is also not the same thing as $310 million of sell orders. What interests me is the gulf between the precision of the headline and what the public record actually establishes. Different trackers put materially different amounts on the same date. One treats the anniversary as an accumulated first-year cliff. Another appears to show an ordinary month of vesting. Still others compare that release against dramatically different definitions of supply. Those differences change the story before a single token moves. The deeper test is less tidy: which holdings will become genuinely transferable, who controls them, and what happens if even a modest percentage reaches exchanges? A one-year lock can expire without creating a market sale. But a release can still matter enormously when nearby bids are thin. The unlock is an entitlement to move tokens. The market impact depends on what their holders decide to do next. The first-year cliff is real. Its precise total is disputed. Monad launched its public mainnet on November 24, 2025. In its original tokenomics disclosure, the Foundation allocated roughly 27 billion MON to the team, 19.7 billion to investors and 3.95 billion to the Category Labs Treasury. These three cohorts were locked for at least one year. Team tokens had an additional vesting condition tied to individual service dates, while investor and treasury tokens followed a four-year schedule with a one-year cliff and monthly accrual.[1] The most important sentence in the Foundation’s account is not a percentage of circulating supply. It is the expectation that roughly 10.7% of the initial 100-billion-token issuance—about 10.7 billion MON in team allocations—would have both vested and unlocked at the first anniversary. That is much larger than a simple one-month installment for the team. It does not, however, mean every beneficiary will immediately receive an exchange-ready balance or sell it. A later issuer-filed transparency disclosure gives more exact initial allocations, including 19,647,582,746 investor tokens and 3,988,503,117 treasury tokens. It also records administrative allocation adjustments and distinguishes investor warrants from the equity interests underlying fundraising. Those records make it possible to test the calendar arithmetic rather than choose whichever number seems most alarming.[2] Two calendars, one extra month of accrual Competing November 24 estimates, as retrieved November 5, 2026SourceReported releaseHow to read it DefiLlama17.105B MON10.700B team; 5.335B investors; 1.070B treasury Tokenomics.com~16.609B MONApproximately 12/48 of investor and treasury allocations, plus the team cliff Blockworks Intel calendar~1.41B MONResembles a monthly tranche, not the full accumulated anniversary release NAUT / CoinGecko~6.66–6.67B MONSmaller team-release assumptions or reporting-period conventions Aggregator estimates are not attestations of actual settlement. Some providers use the first day of a month to label a monthly schedule rather than the legal unlock day. Sources: calendars above and issuer disclosure.[2][3] 10.700B team + (19.64758B × 12/48) investors + (3.98850B × 12/48) treasury ≈ 16.609B MON The rival 17.105-billion reading is close to applying 13/48 installments to the older, rounded investor and treasury allocation estimates. The difference is approximately half a billion tokens. This is principally an accrual convention disagreement, not a half-billion tokens discovered in an unexpected wallet. The Foundation has not established a single independently executable transfer schedule in the cited material that resolves the disagreement to the last token. DefiLlama’s reported 17.105-billion MON release split by recipientTeam 10.7 billion, investors 5.335 billion, Category Labs Treasury 1.07 billion. Data are aggregator estimates, not observed transfers.Reported recipient split · billions of MONTeam10.700Investors5.335Category Labs1.070010.7Zero baseline · DefiLlama estimate, retrieved November 5, 2026Calendar-based allocation, not a visualization of exchange selling. Table above provides the alternative amounts and original sources. The 145% figure describes a denominator, not a disaster DefiLlama’s 144.65% unlock-to-circulating ratio implies a float of about 11.825 billion MON. The same 17.105-billion-token event equals only 17.105% of the 100-billion initial supply. A provider that counts more than 51 billion unlocked tokens will produce a ratio around one-third instead. These metrics are not interchangeable, and none is a direct measure of market buy orders.[3] Monad’s initial distribution makes the mismatch unusually important. About 38.5 billion ecosystem-development tokens were technically unlocked at launch but under Foundation stewardship, rather than freely distributed to public holders. The Foundation’s issuer filing explicitly excludes this allocation from circulating treatment until deployment. Unlocking, circulation and actual market access are different states of the same asset.[1][2] There is a defensible bearish interpretation here: an insider release large relative to a narrow public float can alter price formation even when only a small portion is sold. Yet it would be misleading to call the event a 145% increase in total issuance. These tokens were already allocated within the initial issuance; the change is in vesting and potential transferability, not fresh minting. The ledger still needs a recipient map Public explorer rankings show very large MON accounts, including an unlabeled address shown in a retrieved snapshot with more than 17 billion MON. But an account balance is not a beneficiary identity. A round-number resemblance to a calendar event is certainly not evidence that an address holds that cliff. Public top-holder pages can also change between retrievals, so comparing them without the same block height risks manufacturing movements that never happened.[4] What would settle the question is an issuer-authenticated mapping from initial allocations to vesting agreements, escrow contracts or custodial accounts, followed by a block-height-pinned before-and-after reconciliation. Each beneficiary’s vested-but-restricted, newly transferable and transferred balances would have to be separated. Without that ledger, the $300 million figure remains a valuation of projected entitlements rather than an observed exchange inflow. The issuer’s October transparency filing provides useful allocation-level disclosure but does not supply the comprehensive beneficiary-level address map needed for this reconstruction. A serious on-chain story therefore has an identifiable missing receipt, not a vague appeal to “follow the wallets.”[2] One exchange snapshot exposes the liquidity problem At approximately 13:35 UTC on November 5, 2026, OKX MON/USDT spot traded around $0.01785. A contemporaneous order-book snapshot contained approximately $184,914 in resting bids within 1% below the best bid and $191,622 within 2%. The venue’s latest ticker at roughly that time showed approximately $2.40 million in reported 24-hour quote volume. These are measurements from a single exchange at one historical moment, not network-wide liquidity or a promise that bids would remain available. A broader DefiLlama liquidity series put MON’s average spot depth within its own ±2% band near $11.77 million across monitored venues, and average daily spot turnover around $21.06 million. That substantially larger number is not a contradiction: the venue set, timing and calculation differ. It is also not evidence that $11.77 million could safely be sold in one burst at current prices.[5] OKX resting bid depth within price distances below the best bidWithin 0.5% approximately $160,566; within 1% $184,914; within 2% $191,622; within 5% $195,887; within 10% $207,858, as of 13:35 UTC on November 5, 2026. Single historical snapshot.Visible OKX bids by price distance · US dollarsCumulative resting bids, November 5 at 13:35 UTC0.5% below bid$160.6K1% below bid$184.9K2% below bid$191.6K5% below bid$195.9K10% below bid$207.9KZero-based horizontal bars · historical snapshot, not a forecastObserved cumulative bids from a single OKX order-book snapshot. Quoted dollar amounts are sums of each visible bid price × quantity. Deeper levels do not necessarily represent executable or durable liquidity. The striking feature of this particular book is how little additional resting demand appears between the 2% and 10% thresholds. That suggests sparse visible orders farther below the market on this venue. But a static book ignores replenishment, hidden liquidity, execution pace, OTC trading and inventory hedging. It measures neither the full capacity of the market nor the slippage of a realistic multiday sale. Market makers are not an automatic backstop. The issuer’s disclosures identify market-making relationships, but loans and options to professional liquidity firms are not commitments to absorb billions of insider tokens at the last traded price.[2] A one-percent sale is already economically meaningful Using the 16.609-billion-token working cliff and the fixed November 5 reference price of $0.01785, the full event would have been notionally worth about $296.5 million. Selling just 1% of that entitlement would amount to approximately 166.1 million MON, or $2.96 million at the reference price. Five percent would be about $14.82 million. Those are scenario values—not reported trades, cash proceeds or price-impact forecasts. How much of the cliff might reach the market?Interactive sensitivity calculation, not a prediction. Fixed inputs: 16,609,154,895 MON and $0.01785/MON (November 5 reference). Adjust the hypothetical share sold.Share of projected release sold: 1.0%Tokens hypothetically sold166.1M MONReference-price notional$2.96MMultiple of one OKX 2% bid snapshot15.5×Share of $21.06M average daily spot turnover14.1%The depth comparison uses a historical single-venue resting-book observation; turnover is a separate multi-venue average. Neither measures realized price impact. The calculations work without an external dependency.JavaScript is disabled. Example at 1% sold: 166.1 million MON, $2.96 million notional; approximately 15.5 times the observed OKX 2% bid snapshot and 14.1% of reported average daily spot turnover. Why the bearish conclusion is not automatic There are legitimate reasons to expect selling. Investors may rebalance or return capital, and employees may liquidate part of their compensation after a long lockup. Yet the magnitude of those incentives is unknown. A token warrant granted alongside equity is not a public record of the investor’s effective token cost basis. It would be unsound to reverse-engineer a precise profit from a venture-round headline. There are equally legitimate reasons why the market might absorb the event more quietly. Holders can retain their tokens, transfer them OTC or stake newly eligible balances. The Foundation’s original policy barred staking of locked tokens, so post-release staking could represent an alternative destination to exchange custody. Neither a stake nor an exchange deposit alone proves an immediate trade.[1] The announcement itself can also move prices before release. If the market expects everyone to sell, some holders may reduce exposure during the preceding weeks. Conversely, an unexpectedly small realized sell-through can unwind bearish positioning. These are plausible mechanisms, not findings that either outcome has occurred. The receipts that would change the verdict My view would become meaningfully more bearish if an attributable group of newly released beneficiary accounts began transferring large amounts to trading venues, while net spot selling accelerated, displayed bids failed to replenish, and the price weakened relative to the wider market. The evidence would need to include verified address labels, actual exchange destinations and synchronized execution data—not just a spike in an explorer’s transaction count. It would become less bearish if the actual releasable quantity were smaller, beneficiaries retained or staked most of the tokens, exchange net inflows stayed modest, and market depth proved resilient through the event. In both cases, exchange volumes, perpetual funding and open interest could help interpret positioning, but none should be substituted for beneficiary-level flows. The distinction also matters after November 24. A token can be released at a cliff and sold over weeks, or transferred OTC and resold much later. A one-day price reaction is therefore a poor standalone test of whether the entire release was absorbed. A better way to read the unlock calendar Monad exposes a general weakness in crypto supply analysis. Calendar providers can be internally consistent while measuring different things. A small accrual convention becomes hundreds of millions of tokens. A change in the circulating-supply definition changes a headline ratio severalfold. A static exchange order book measures available quotes, not all the demand that might appear during execution. I would rather publish that uncertainty than turn an extrapolation into an on-chain certainty. The best working estimate is near 16.61 billion MON, with DefiLlama’s 17.105-billion figure representing a higher alternative. The team’s approximately 10.7-billion expected first-year release is grounded in the Foundation’s own language. The exact beneficiary distributions and subsequent market sales are not. On November 24, the most important number will not necessarily be the size of the unlocked cliff. It will be how many of those tokens actually cross the boundary from legally releasable inventory into genuine sell pressure—and whether buyers are still there when they do. Sources and methodological notes Monad Foundation, “MON Tokenomics Overview” (November 10, 2025); allocation update (as of March 31, 2026). Monad issuer-filed Token Transparency report, Blockworks, including cohort allocations and market-making disclosures. DefiLlama Monad unlock calendar; Tokenomics.com unlock schedule; Blockworks Intel calendar; NAUT. Figures are historical retrievals, not binding contractual records. MonadScan account distribution. Explorer rankings alone do not establish beneficiary identities or a same-block vesting audit. DefiLlama unlock and liquidity context. OKX spot depth, trade price and volume are from timestamped public venue snapshots collected November 5, 2026 at approximately 13:35 UTC; only the displayed figures are used here. Price, volume and order-book figures are historical observations. Supply-release calculations and sell-through examples are explicitly illustrative where noted. This publication is independent research, not investment advice. Independent Market Notes · Evidence before narrative",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?"
+      },
+      {
+        "tag": "h2",
+        "text": "The first-year cliff is real. Its precise total is disputed."
+      },
+      {
+        "tag": "h2",
+        "text": "Two calendars, one extra month of accrual"
+      },
+      {
+        "tag": "h2",
+        "text": "The 145% figure describes a denominator, not a disaster"
+      },
+      {
+        "tag": "h2",
+        "text": "The ledger still needs a recipient map"
+      },
+      {
+        "tag": "h2",
+        "text": "One exchange snapshot exposes the liquidity problem"
+      },
+      {
+        "tag": "h2",
+        "text": "A one-percent sale is already economically meaningful"
+      },
+      {
+        "tag": "h3",
+        "text": "How much of the cliff might reach the market?"
+      },
+      {
+        "tag": "h2",
+        "text": "Why the bearish conclusion is not automatic"
+      },
+      {
+        "tag": "h2",
+        "text": "The receipts that would change the verdict"
+      },
+      {
+        "tag": "h2",
+        "text": "A better way to read the unlock calendar"
+      },
+      {
+        "tag": "h2",
+        "text": "Sources and methodological notes"
+      }
+    ],
+    "links": [
+      {
+        "href": "#s1",
+        "text": "[1]"
+      },
+      {
+        "href": "#s2",
+        "text": "[2]"
+      },
+      {
+        "href": "https://defillama.com/unlocks/monad",
+        "text": "DefiLlama"
+      },
+      {
+        "href": "https://app.tokenomics.com/tokenomics/monad/unlocks",
+        "text": "Tokenomics.com"
+      },
+      {
+        "href": "https://app.blockworks.com/projects/monad/token-unlocks",
+        "text": "Blockworks Intel calendar"
+      },
+      {
+        "href": "https://naut.so/unlocks/monad",
+        "text": "NAUT"
+      },
+      {
+        "href": "https://www.coingecko.com/en/coins/monad",
+        "text": "CoinGecko"
+      },
+      {
+        "href": "#s2",
+        "text": "[2]"
+      },
+      {
+        "href": "#s3",
+        "text": "[3]"
+      },
+      {
+        "href": "#s3",
+        "text": "[3]"
+      },
+      {
+        "href": "#s1",
+        "text": "[1]"
+      },
+      {
+        "href": "#s2",
+        "text": "[2]"
+      },
+      {
+        "href": "#s4",
+        "text": "[4]"
+      },
+      {
+        "href": "#s2",
+        "text": "[2]"
+      },
+      {
+        "href": "#s5",
+        "text": "[5]"
+      },
+      {
+        "href": "#s2",
+        "text": "[2]"
+      },
+      {
+        "href": "#s1",
+        "text": "[1]"
+      },
+      {
+        "href": "https://monad.xyz/blog/mon-tokenomics-overview",
+        "text": "Monad Foundation, “MON Tokenomics Overview”"
+      },
+      {
+        "href": "https://monad.xyz/blog/token-overview-mar-2026",
+        "text": "allocation update"
+      },
+      {
+        "href": "https://blockworks.com/token-transparency/filing/monad",
+        "text": "Monad issuer-filed Token Transparency report, Blockworks"
+      },
+      {
+        "href": "https://defillama.com/unlocks/monad",
+        "text": "DefiLlama Monad unlock calendar"
+      },
+      {
+        "href": "https://app.tokenomics.com/tokenomics/monad/unlocks",
+        "text": "Tokenomics.com unlock schedule"
+      },
+      {
+        "href": "https://app.blockworks.com/projects/monad/token-unlocks",
+        "text": "Blockworks Intel calendar"
+      },
+      {
+        "href": "https://naut.so/unlocks/monad",
+        "text": "NAUT"
+      },
+      {
+        "href": "https://monadscan.com/accounts",
+        "text": "MonadScan account distribution"
+      },
+      {
+        "href": "https://defillama.com/unlocks/monad",
+        "text": "DefiLlama unlock and liquidity context"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Investigative analysis · November 5, 2026"
+      },
+      {
+        "tag": "p",
+        "text": "Conflicting calendars put Monad’s anniversary release near 16.6–17.1 billion MON. The vesting math is clearer than the market’s capacity to absorb it."
+      },
+      {
+        "tag": "p",
+        "text": "November 5, 2026 · Scheduled event: November 24, 2026 · Market measurements are historical snapshots, not live quotes."
+      },
+      {
+        "tag": "p",
+        "text": "Monad’s first anniversary arrives with a number large enough to dominate a token-unlock calendar. DefiLlama places 17.105 billion MON on November 24, nearly 145% of its reported circulating supply. At its November 5 reference price, that represented roughly $310 million. The number is striking. It is also not the same thing as $310 million of sell orders."
+      },
+      {
+        "tag": "p",
+        "text": "What interests me is the gulf between the precision of the headline and what the public record actually establishes. Different trackers put materially different amounts on the same date. One treats the anniversary as an accumulated first-year cliff. Another appears to show an ordinary month of vesting. Still others compare that release against dramatically different definitions of supply. Those differences change the story before a single token moves."
+      },
+      {
+        "tag": "p",
+        "text": "The deeper test is less tidy: which holdings will become genuinely transferable, who controls them, and what happens if even a modest percentage reaches exchanges? A one-year lock can expire without creating a market sale. But a release can still matter enormously when nearby bids are thin."
+      },
+      {
+        "tag": "blockquote",
+        "text": "The unlock is an entitlement to move tokens. The market impact depends on what their holders decide to do next."
+      },
+      {
+        "tag": "p",
+        "text": "Monad launched its public mainnet on November 24, 2025. In its original tokenomics disclosure, the Foundation allocated roughly 27 billion MON to the team, 19.7 billion to investors and 3.95 billion to the Category Labs Treasury. These three cohorts were locked for at least one year. Team tokens had an additional vesting condition tied to individual service dates, while investor and treasury tokens followed a four-year schedule with a one-year cliff and monthly accrual.[1]"
+      },
+      {
+        "tag": "p",
+        "text": "The most important sentence in the Foundation’s account is not a percentage of circulating supply. It is the expectation that roughly 10.7% of the initial 100-billion-token issuance—about 10.7 billion MON in team allocations—would have both vested and unlocked at the first anniversary. That is much larger than a simple one-month installment for the team. It does not, however, mean every beneficiary will immediately receive an exchange-ready balance or sell it."
+      },
+      {
+        "tag": "p",
+        "text": "A later issuer-filed transparency disclosure gives more exact initial allocations, including 19,647,582,746 investor tokens and 3,988,503,117 treasury tokens. It also records administrative allocation adjustments and distinguishes investor warrants from the equity interests underlying fundraising. Those records make it possible to test the calendar arithmetic rather than choose whichever number seems most alarming.[2]"
+      },
+      {
+        "tag": "caption",
+        "text": "Competing November 24 estimates, as retrieved November 5, 2026"
+      },
+      {
+        "tag": "p",
+        "text": "Aggregator estimates are not attestations of actual settlement. Some providers use the first day of a month to label a monthly schedule rather than the legal unlock day. Sources: calendars above and issuer disclosure.[2][3]"
+      },
+      {
+        "tag": "p",
+        "text": "The rival 17.105-billion reading is close to applying 13/48 installments to the older, rounded investor and treasury allocation estimates. The difference is approximately half a billion tokens. This is principally an accrual convention disagreement, not a half-billion tokens discovered in an unexpected wallet. The Foundation has not established a single independently executable transfer schedule in the cited material that resolves the disagreement to the last token."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Calendar-based allocation, not a visualization of exchange selling. Table above provides the alternative amounts and original sources."
+      },
+      {
+        "tag": "p",
+        "text": "DefiLlama’s 144.65% unlock-to-circulating ratio implies a float of about 11.825 billion MON. The same 17.105-billion-token event equals only 17.105% of the 100-billion initial supply. A provider that counts more than 51 billion unlocked tokens will produce a ratio around one-third instead. These metrics are not interchangeable, and none is a direct measure of market buy orders.[3]"
+      },
+      {
+        "tag": "p",
+        "text": "Monad’s initial distribution makes the mismatch unusually important. About 38.5 billion ecosystem-development tokens were technically unlocked at launch but under Foundation stewardship, rather than freely distributed to public holders. The Foundation’s issuer filing explicitly excludes this allocation from circulating treatment until deployment. Unlocking, circulation and actual market access are different states of the same asset.[1][2]"
+      },
+      {
+        "tag": "p",
+        "text": "There is a defensible bearish interpretation here: an insider release large relative to a narrow public float can alter price formation even when only a small portion is sold. Yet it would be misleading to call the event a 145% increase in total issuance. These tokens were already allocated within the initial issuance; the change is in vesting and potential transferability, not fresh minting."
+      },
+      {
+        "tag": "p",
+        "text": "Public explorer rankings show very large MON accounts, including an unlabeled address shown in a retrieved snapshot with more than 17 billion MON. But an account balance is not a beneficiary identity. A round-number resemblance to a calendar event is certainly not evidence that an address holds that cliff. Public top-holder pages can also change between retrievals, so comparing them without the same block height risks manufacturing movements that never happened.[4]"
+      },
+      {
+        "tag": "p",
+        "text": "What would settle the question is an issuer-authenticated mapping from initial allocations to vesting agreements, escrow contracts or custodial accounts, followed by a block-height-pinned before-and-after reconciliation. Each beneficiary’s vested-but-restricted, newly transferable and transferred balances would have to be separated. Without that ledger, the $300 million figure remains a valuation of projected entitlements rather than an observed exchange inflow."
+      },
+      {
+        "tag": "p",
+        "text": "The issuer’s October transparency filing provides useful allocation-level disclosure but does not supply the comprehensive beneficiary-level address map needed for this reconstruction. A serious on-chain story therefore has an identifiable missing receipt, not a vague appeal to “follow the wallets.”[2]"
+      },
+      {
+        "tag": "p",
+        "text": "At approximately 13:35 UTC on November 5, 2026, OKX MON/USDT spot traded around $0.01785. A contemporaneous order-book snapshot contained approximately $184,914 in resting bids within 1% below the best bid and $191,622 within 2%. The venue’s latest ticker at roughly that time showed approximately $2.40 million in reported 24-hour quote volume. These are measurements from a single exchange at one historical moment, not network-wide liquidity or a promise that bids would remain available."
+      },
+      {
+        "tag": "p",
+        "text": "A broader DefiLlama liquidity series put MON’s average spot depth within its own ±2% band near $11.77 million across monitored venues, and average daily spot turnover around $21.06 million. That substantially larger number is not a contradiction: the venue set, timing and calculation differ. It is also not evidence that $11.77 million could safely be sold in one burst at current prices.[5]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Observed cumulative bids from a single OKX order-book snapshot. Quoted dollar amounts are sums of each visible bid price × quantity. Deeper levels do not necessarily represent executable or durable liquidity."
+      },
+      {
+        "tag": "p",
+        "text": "The striking feature of this particular book is how little additional resting demand appears between the 2% and 10% thresholds. That suggests sparse visible orders farther below the market on this venue. But a static book ignores replenishment, hidden liquidity, execution pace, OTC trading and inventory hedging. It measures neither the full capacity of the market nor the slippage of a realistic multiday sale."
+      },
+      {
+        "tag": "p",
+        "text": "Market makers are not an automatic backstop. The issuer’s disclosures identify market-making relationships, but loans and options to professional liquidity firms are not commitments to absorb billions of insider tokens at the last traded price.[2]"
+      },
+      {
+        "tag": "p",
+        "text": "Using the 16.609-billion-token working cliff and the fixed November 5 reference price of $0.01785, the full event would have been notionally worth about $296.5 million. Selling just 1% of that entitlement would amount to approximately 166.1 million MON, or $2.96 million at the reference price. Five percent would be about $14.82 million. Those are scenario values—not reported trades, cash proceeds or price-impact forecasts."
+      },
+      {
+        "tag": "p",
+        "text": "Interactive sensitivity calculation, not a prediction. Fixed inputs: 16,609,154,895 MON and $0.01785/MON (November 5 reference). Adjust the hypothetical share sold."
+      },
+      {
+        "tag": "p",
+        "text": "The depth comparison uses a historical single-venue resting-book observation; turnover is a separate multi-venue average. Neither measures realized price impact. The calculations work without an external dependency."
+      },
+      {
+        "tag": "p",
+        "text": "JavaScript is disabled. Example at 1% sold: 166.1 million MON, $2.96 million notional; approximately 15.5 times the observed OKX 2% bid snapshot and 14.1% of reported average daily spot turnover."
+      },
+      {
+        "tag": "p",
+        "text": "There are legitimate reasons to expect selling. Investors may rebalance or return capital, and employees may liquidate part of their compensation after a long lockup. Yet the magnitude of those incentives is unknown. A token warrant granted alongside equity is not a public record of the investor’s effective token cost basis. It would be unsound to reverse-engineer a precise profit from a venture-round headline."
+      },
+      {
+        "tag": "p",
+        "text": "There are equally legitimate reasons why the market might absorb the event more quietly. Holders can retain their tokens, transfer them OTC or stake newly eligible balances. The Foundation’s original policy barred staking of locked tokens, so post-release staking could represent an alternative destination to exchange custody. Neither a stake nor an exchange deposit alone proves an immediate trade.[1]"
+      },
+      {
+        "tag": "p",
+        "text": "The announcement itself can also move prices before release. If the market expects everyone to sell, some holders may reduce exposure during the preceding weeks. Conversely, an unexpectedly small realized sell-through can unwind bearish positioning. These are plausible mechanisms, not findings that either outcome has occurred."
+      },
+      {
+        "tag": "p",
+        "text": "My view would become meaningfully more bearish if an attributable group of newly released beneficiary accounts began transferring large amounts to trading venues, while net spot selling accelerated, displayed bids failed to replenish, and the price weakened relative to the wider market. The evidence would need to include verified address labels, actual exchange destinations and synchronized execution data—not just a spike in an explorer’s transaction count."
+      },
+      {
+        "tag": "p",
+        "text": "It would become less bearish if the actual releasable quantity were smaller, beneficiaries retained or staked most of the tokens, exchange net inflows stayed modest, and market depth proved resilient through the event. In both cases, exchange volumes, perpetual funding and open interest could help interpret positioning, but none should be substituted for beneficiary-level flows."
+      },
+      {
+        "tag": "p",
+        "text": "The distinction also matters after November 24. A token can be released at a cliff and sold over weeks, or transferred OTC and resold much later. A one-day price reaction is therefore a poor standalone test of whether the entire release was absorbed."
+      },
+      {
+        "tag": "p",
+        "text": "Monad exposes a general weakness in crypto supply analysis. Calendar providers can be internally consistent while measuring different things. A small accrual convention becomes hundreds of millions of tokens. A change in the circulating-supply definition changes a headline ratio severalfold. A static exchange order book measures available quotes, not all the demand that might appear during execution."
+      },
+      {
+        "tag": "p",
+        "text": "I would rather publish that uncertainty than turn an extrapolation into an on-chain certainty. The best working estimate is near 16.61 billion MON, with DefiLlama’s 17.105-billion figure representing a higher alternative. The team’s approximately 10.7-billion expected first-year release is grounded in the Foundation’s own language. The exact beneficiary distributions and subsequent market sales are not."
+      },
+      {
+        "tag": "p",
+        "text": "On November 24, the most important number will not necessarily be the size of the unlocked cliff. It will be how many of those tokens actually cross the boundary from legally releasable inventory into genuine sell pressure—and whether buyers are still there when they do."
+      },
+      {
+        "tag": "li",
+        "text": "Monad Foundation, “MON Tokenomics Overview” (November 10, 2025); allocation update (as of March 31, 2026)."
+      },
+      {
+        "tag": "li",
+        "text": "Monad issuer-filed Token Transparency report, Blockworks, including cohort allocations and market-making disclosures."
+      },
+      {
+        "tag": "li",
+        "text": "DefiLlama Monad unlock calendar; Tokenomics.com unlock schedule; Blockworks Intel calendar; NAUT. Figures are historical retrievals, not binding contractual records."
+      },
+      {
+        "tag": "li",
+        "text": "MonadScan account distribution. Explorer rankings alone do not establish beneficiary identities or a same-block vesting audit."
+      },
+      {
+        "tag": "li",
+        "text": "DefiLlama unlock and liquidity context. OKX spot depth, trade price and volume are from timestamped public venue snapshots collected November 5, 2026 at approximately 13:35 UTC; only the displayed figures are used here."
+      },
+      {
+        "tag": "p",
+        "text": "Price, volume and order-book figures are historical observations. Supply-release calculations and sell-through examples are explicitly illustrative where noted. This publication is independent research, not investment advice."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Source",
+          "Reported release",
+          "How to read it"
+        ],
+        [
+          "DefiLlama",
+          "17.105B MON",
+          "10.700B team; 5.335B investors; 1.070B treasury"
+        ],
+        [
+          "Tokenomics.com",
+          "~16.609B MON",
+          "Approximately 12/48 of investor and treasury allocations, plus the team cliff"
+        ],
+        [
+          "Blockworks Intel calendar",
+          "~1.41B MON",
+          "Resembles a monthly tranche, not the full accumulated anniversary release"
+        ],
+        [
+          "NAUT / CoinGecko",
+          "~6.66–6.67B MON",
+          "Smaller team-release assumptions or reporting-period conventions"
+        ]
+      ]
+    ],
+    "alts": [],
+    "svgCount": 2,
+    "svgSha256": [
+      "c49fba8af84cd530429936aa59f3ac0a70a924b49ec2cbeaecfc8460b4171816",
+      "9547fea4cb5c85e9b90f0a9ea835eb20b4f222be47ccadb6a0fd818756610c95"
+    ],
+    "imageCount": 0,
+    "imageSha256": [],
+    "scriptCount": 1,
+    "scriptSha256": [
+      "5e7a654ffba884646bd26ab5a9ba49120fbe91b0c4d3a79171b2ac227cc63b0b"
+    ]
+  },
   "crypto-market-structure-after-midterms": {
     "text": "Skip to article Independent Market Notes · Policy & Digital Assets Washington · Digital asset policy After the Midterms, CLARITY’s Hardest Vote Is Still Ahead Democrats’ wins reshape the next Congress. They do not turn a stalled crypto market-structure bill into a lame-duck certainty. By Jack Smack · November 4, 2026 Editorial illustration. The calendar is the story: the outgoing Congress retains the gavel during the lame duck; the incoming Congress inherits the next attempt. Election night changed the political map. It did not change the vote that stopped the Digital Asset Market Clarity Act in the Senate. That distinction is easy to lose in the rush to interpret a new majority. The Associated Press called enough races on November 3 to say Democrats had won control of both chambers. It also called Ohio for Sherrod Brown over Republican Jon Husted. But these were election calls, not final state certifications: Ohio’s election office said its posted results were unofficial while canvassing and certification remained ahead. My read is that the result makes a quick, clean revival of CLARITY less likely, not more. The bill’s immediate fate still rests with the Congress elected in 2024, which retains control until the next Congress convenes in January. Democrats can shape that next Congress’s agenda and committee leadership. They cannot retroactively make the current Senate’s procedural failure disappear. The vote that matters happened before Election Day H.R. 3633, the House-passed Digital Asset Market Clarity Act, moved through the Senate Banking Committee in a substantially revised form. In May, the committee advanced a substitute after bipartisan negotiations. That was meaningful progress, but a committee vote is not a Senate floor coalition. On September 15, the Senate failed to invoke cloture on the motion to proceed. The official floor record lists the vote as 49–50. Cloture is the procedural step that would have allowed the chamber to move toward debate; failing there meant the bill never reached the floor debate and passage stage. The question is no longer simply whether lawmakers agree that digital-asset rules need clarification. It is whether they can agree on the bill’s actual allocation of authority and protections. Committee support showed a negotiating coalition. The failed floor vote showed that it was not yet a governing coalition. The difference between those two things is the difference between a bill that has momentum and one that has a path to enactment. A lame-duck window exists, but it is crowded The outgoing majority still sets the agenda during the post-election session. That creates a theoretical opening for another attempt. Yet no official floor notice or committee schedule I reviewed listed a CLARITY vote for the lame duck. A published return calendar is not a bill-specific commitment. Congress also faces end-of-year work that competes for scarce floor time. The Senate’s tentative 2026 calendar identifies December 18 as a target adjournment date. That is a planning marker, not a promise that lawmakers will finish on that date—or that they will spend the remaining time on crypto legislation. There is a further political complication. If the outgoing majority tries to push the bill through after voters have selected a new majority, incoming lawmakers may have little incentive to bless a text they did not shape. That is an inference about legislative incentives, not a public commitment by either party. The election does not prove that a lame-duck deal is impossible; it makes the deal’s politics harder to read. The next Congress can change the bill’s authorship and its substance When the new Congress organizes in January 2027, control of both chambers is expected to shift to Democrats. That should change which party chooses committee chairs in Senate Banking, Senate Agriculture, House Financial Services, and House Agriculture, subject to the chambers’ organization and committee assignments. The specific incoming chairs and ranking members were not established by election-night results. Nor does party control by itself tell us what any committee will do with crypto policy. Members’ votes and statements on stablecoin yield, decentralized finance, customer safeguards, and the SEC–CFTC boundary are more informative than a simple partisan label. The evidence assembled here does not support a complete member-by-member profile of the new committees. Text is likely to be part of the negotiation. The Senate committee advanced a substitute to the House-passed bill, so the chambers were already working from different versions. If lawmakers restart the effort in 2027, they may revisit how digital commodities are defined, which activities receive special treatment, what obligations apply to DeFi developers and intermediaries, and how enforcement authority is divided between the SEC and CFTC. Those are pressure points, not predictions of specific amendments. What is known: The House passed its bill; Senate Banking advanced a substitute; the Senate then failed to move forward procedurally. What remains unknown: whether leaders will schedule another vote, whether a new majority will reuse the same text, and whether the unresolved policy disputes can be closed. Three paths, with the uncertainty kept visible I assign a 5–15% chance to lame-duck passage, a 55–70% chance that the effort slips into 2027 with revised text, and a 20–35% chance that it stalls without near-term enactment. These are editorial probability ranges, not outputs from a statistical model. They are conditional on the evidence available on November 4, 2026, and should move if leadership schedules floor action or sponsors publish a negotiated agreement. PathMy rangeWhat would move it Lame-duck passage5–15%A bill-specific floor schedule, leadership backing, and a demonstrated Senate coalition before adjournment. 2027 restart with revised text55–70%New committee leadership, renewed sponsor negotiations, and public text addressing the disputes that blocked floor progress. Stall20–35%No committee action in the new Congress, competing legislative priorities, or continued disagreement over jurisdiction and DeFi obligations. The ranges are deliberately broad because the key evidence is missing: a published lame-duck schedule, a new cross-party agreement, and a confirmed list of incoming committee leaders. Without those, precision would be theatre. What would change my mind A formal Senate notice scheduling the bill would raise the lame-duck scenario. So would sponsor statements backed by actual vote commitments and a House plan to accept the Senate text. Conversely, explicit leadership opposition, a crowded end-of-year schedule, or a decision to defer substantive work to the next Congress would push the 2027 path higher. For the 2027 scenario, the decisive test is not whether new committee chairs use favorable language about innovation or consumer protection. It is whether they publish text, hold hearings or markups, and build a coalition that can survive a floor vote. Until then, committee control is an opportunity to set priorities—not evidence that a particular crypto rulebook is coming. The result changes leverage, not the legislative math Democratic control of the next Congress will reshape oversight and agenda-setting. It may also make the industry negotiate over a different balance of market access, investor protection, and agency authority. That is a material political shift for a sector that has treated comprehensive market-structure legislation as a defining federal policy goal. But the immediate legislative math remains stubborn. The September cloture vote failed; the lame-duck calendar is limited; and the incoming majority has not yet shown what text it would support. The election changed who gets to write the next chapter. It did not write the chapter for them. Sources and record Associated Press, “Voters give Democrats control of Congress in rebuke to Trump”, November 3, 2026. Accessed November 4, 2026. Associated Press, “Which Senate, governors races are still uncalled by The Associated Press”, November 4, 2026; reports race-call status as of noon Eastern. Accessed November 4, 2026. Ohio Secretary of State, Voting in Ohio / November 3, 2026 election information. Accessed November 4, 2026. U.S. Senate, Senate Floor Activity, September 15, 2026, official roll-call record on H.R. 3633. Accessed November 4, 2026. U.S. Senate, Cloture Motions, 119th Congress, entry for H.R. 3633. Accessed November 4, 2026. Senate Banking Committee, “Senate Banking Committee Advance CLARITY Act in Historic Bipartisan Vote”, May 2026. Accessed November 4, 2026. U.S. Senate, 2026 Senate calendar. Accessed November 4, 2026. Election calls are not state certifications. Scenario probabilities are the author’s judgment, not a forecast issued by a public institution. This article discusses legislative prospects and does not provide investment advice. At a glanceThe Senate procedural hurdle already failed in September. The outgoing Congress keeps control during the lame duck.What to watchBill-specific floor notices, sponsor commitments, the December adjournment calendar, and the new Congress’s committee assignments.",
     "headings": [

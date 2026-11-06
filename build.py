@@ -13,13 +13,15 @@ import json
 import re
 import shutil
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from email.utils import format_datetime
 from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 from xml.sax.saxutils import escape as xml_escape
+
+from image_validation import MAX_BYTES, inspect_image
 
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
@@ -208,6 +210,8 @@ def meta_values(html: str, key: str) -> list[str]:
 
 
 def pretty_date(iso: str) -> str:
+    if not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", iso):
+        die(f"date must be YYYY-MM-DD, got {iso!r}")
     try:
         parsed = datetime.strptime(iso, "%Y-%m-%d")
     except ValueError:
@@ -257,18 +261,23 @@ def featured_image(entry: dict, slug: str) -> dict | None:
     path = ROOT / name
     if not path.is_file():
         die(f"{slug} missing featured image: {name}")
+    if path.stat().st_size > MAX_BYTES:
+        die(f"{slug} featured image exceeds the 8 MiB inspection limit: {name}")
     raw = path.read_bytes()
     ext = path.suffix.lower()
     mime = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png" if ext == ".png" else "image/webp"
-    good = (raw.startswith(b"\xff\xd8\xff") and raw.endswith(b"\xff\xd9")) if mime == "image/jpeg" else (raw.startswith(b"\x89PNG\r\n\x1a\n") and b"IEND" in raw[-32:]) if mime == "image/png" else (raw.startswith(b"RIFF") and raw[8:12] == b"WEBP" and int.from_bytes(raw[4:8], "little") + 8 == len(raw))
-    if not good:
-        die(f"{slug} invalid featured image bytes: {name}")
+    try:
+        intrinsic = inspect_image(raw, mime)
+    except (ValueError, IndexError, OverflowError) as error:
+        die(f"{slug} invalid featured image {name}: {error}")
     alt = str(entry.get("image_alt") or "").strip()
     if not alt:
         die(f"{slug} image_alt is required")
     width, height = entry.get("image_width", 1200), entry.get("image_height", 630)
     if type(width) is not int or type(height) is not int or (width, height) != (1200, 630):
         die(f"{slug} image dimensions must be 1200 x 630")
+    if intrinsic != (width, height):
+        die(f"{slug} declared image dimensions disagree with intrinsic dimensions")
     if entry.get("image_mime_type") and entry["image_mime_type"] != mime:
         die(f"{slug} image_mime_type disagrees with image extension")
     return {"path": name, "alt": alt, "width": width, "height": height, "mime": mime}
@@ -361,6 +370,78 @@ def json_ld(data: dict) -> str:
     return f'<script type="application/ld+json">{payload}</script>'
 
 
+LD_JSON_RE = re.compile(
+    r"<script\b(?=[^>]*\btype\s*=\s*([\"'])application/ld\+json\1)[^>]*>(.*?)</script\s*>",
+    re.I | re.S,
+)
+
+
+def blog_postings(data):
+    if isinstance(data, list):
+        return [post for item in data for post in blog_postings(item)]
+    if not isinstance(data, dict):
+        return []
+    types = data.get("@type", [])
+    if isinstance(types, str):
+        types = [types]
+    found = [data] if "BlogPosting" in types else []
+    return found + blog_postings(data.get("@graph", []))
+
+
+def existing_blog_postings(html: str, slug: str) -> list[dict]:
+    found = []
+    for match in LD_JSON_RE.finditer(head_html(html)):
+        try:
+            found.extend(blog_postings(json.loads(match.group(2))))
+        except (ValueError, TypeError):
+            die(f"{slug} has invalid JSON-LD")
+    if len(found) > 1:
+        die(f"{slug} has multiple BlogPosting entities; keep one article identity")
+    return found
+
+
+def article_posting(note: dict, site: dict) -> dict:
+    url = f"{site['url']}/{note['slug']}/"
+    title, description = note["title"], note["description"]
+    author = note["author"] or site["title"]
+    posting = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": description,
+        "datePublished": note["date"],
+        "mainEntityOfPage": url,
+        "url": url,
+        "author": {"@type": "Person" if note["author"] else "Organization", "name": author},
+        "publisher": {"@type": "Organization", "name": site["title"]},
+    }
+    if note["image"]:
+        posting["image"] = f"{site['url']}/{note['image']['path']}"
+    return posting
+
+
+def augment_article_schema(html: str, note: dict, site: dict) -> str:
+    if not existing_blog_postings(html, note["slug"]):
+        return html
+    defaults = article_posting(note, site)
+
+    def augment(match):
+        data = json.loads(match.group(2))
+        posts = blog_postings(data)
+        if not posts:
+            return match.group(0)
+        for key, value in defaults.items():
+            posts[0].setdefault(key, value)
+        # Registered artwork is the authoritative social image.
+        if note["image"]:
+            posts[0]["image"] = defaults["image"]
+        return json_ld(data)
+
+    # Only head scripts are publication metadata; preserve article scripts verbatim.
+    end = re.search(r"</head>", html, flags=re.I).start()
+    return LD_JSON_RE.sub(augment, html[:end]) + html[end:]
+
+
 def article_extra_head(note: dict, site: dict) -> str:
     html = note["html"]
     head = head_html(html).lower()
@@ -410,22 +491,8 @@ def article_extra_head(note: dict, site: dict) -> str:
         parts.append(
             f'<meta name="twitter:description" content="{escape(description, quote=True)}">'
         )
-    author = note["author"] or site["title"]
-    posting = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": title,
-        "description": description,
-        "datePublished": note["date"],
-        "mainEntityOfPage": url,
-        "url": url,
-        "author": {"@type": "Person" if note["author"] else "Organization", "name": author},
-        "publisher": {"@type": "Organization", "name": site["title"]},
-    }
-    if note["image"]:
-        posting["image"] = f"{site['url']}/{note['image']['path']}"
-    if "application/ld+json" not in head:
-        parts.append(json_ld(posting))
+    if not existing_blog_postings(html, note["slug"]):
+        parts.append(json_ld(article_posting(note, site)))
     return "\n".join(parts) + "\n"
 
 
@@ -452,7 +519,8 @@ def render_article(note: dict, site: dict) -> str:
         count=1,
         flags=re.I,
     )
-    extra = article_extra_head(note, site)
+    html = augment_article_schema(html, note, site)
+    extra = article_extra_head(dict(note, html=html), site)
     head_match = re.search(r"</head>", html, flags=re.I)
     if not head_match:
         die(f"{note['slug']} is missing </head>")
@@ -472,6 +540,7 @@ def page_shell(
     canonical: str,
     main: str,
     structured_data: dict | None = None,
+    asset_base: str = "",
 ) -> str:
     if structured_data is None:
         structured_data = {
@@ -491,9 +560,9 @@ def page_shell(
   <title>{escape(document_title)}</title>
   <meta name="description" content="{escape(description, quote=True)}">
   <link rel="canonical" href="{escape(canonical, quote=True)}">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="design-system.css">
-  <link rel="alternate" type="application/rss+xml" title="{escape(site["title"], quote=True)}" href="feed.xml">
+  <link rel="icon" href="{escape(asset_base, quote=True)}favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{escape(asset_base, quote=True)}design-system.css">
+  <link rel="alternate" type="application/rss+xml" title="{escape(site["title"], quote=True)}" href="{escape(asset_base, quote=True)}feed.xml">
   <meta property="og:site_name" content="{escape(site["title"], quote=True)}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{escape(document_title, quote=True)}">
@@ -586,7 +655,7 @@ def render_home(notes: list[dict], site: dict) -> str:
       <nav class="topic-nav" aria-label="Browse by topic">{topic_links}</nav>
     </div>
   </header>
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <div data-feature-slot hidden></div>
     <section class="feature wrap" aria-labelledby="feature-title" data-featured-search data-slug="{escape(featured["slug"], quote=True)}" data-topic="{escape(featured["topic"], quote=True)}" data-research-type="{escape(featured["research_type"], quote=True)}" data-assets="{escape(' '.join(featured["assets"]), quote=True)}">
       <a class="feature-art" href="{escape(featured["slug"], quote=True)}/" aria-label="Read featured investigation: {escape(featured["title"], quote=True)}">{feature_art}</a>
@@ -632,11 +701,11 @@ def render_home(notes: list[dict], site: dict) -> str:
 
 
 def render_404(site: dict) -> str:
-    main = f"""<main id="notes" class="wrap missing">
+    main = f"""<main id="main-content" class="wrap missing" tabindex="-1">
     <p class="kicker">Missing page</p>
     <h1>That page is not on this site.</h1>
     <p class="lede">The research notes are collected on the home page.</p>
-    <p><a class="back" href="index.html">Back to {escape(site["title"])}</a></p>
+    <p><a class="back" href="{escape(site["url"] + "/", quote=True)}">Back to {escape(site["title"])}</a></p>
   </main>"""
     return page_shell(
         site,
@@ -644,15 +713,16 @@ def render_404(site: dict) -> str:
         description=f"That page is not on {site['title']}.",
         canonical=site["url"] + "/404.html",
         main=main,
+        asset_base=site["url"] + "/",
     )
 
 
 def render_feed(notes: list[dict], site: dict) -> str:
     items = []
-    for index, note in enumerate(notes):
+    for note in notes:
         published = datetime.strptime(note["date"], "%Y-%m-%d").replace(
             tzinfo=timezone.utc, hour=18
-        ) - timedelta(seconds=index)
+        )
         link = f"{site['url']}/{note['slug']}/"
         guid = f"{site['rss_guid_origin']}/{note['slug']}/"
         items.append(
