@@ -53,6 +53,14 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 
 12. **Complete with an evidence-bound handoff.** Review the final diff and `git diff --check`; report the concrete changed files, commands actually run and outcomes, any fixture/screenshot changes and justification, plus unverified behavior, approvals or blockers. If GitHub/Netlify deployment is within authorized scope, verify the actual resulting commit/CI/deployment and canonical URL rather than assuming a successful API call published the content. Never label a generated patch or a green unit test as production verified.
 
+## Local development friction learning (opt-in; never self-authorizing)
+
+- When avoidable command retries, shell incompatibilities, environment or tool-discovery friction materially impact work, consider the `imn-friction-intelligence` Skill and `docs/friction-intelligence.md`. Distinguish expected negative tests and code defects from reusable operational friction.
+- With permitted local filesystem access, log **only sanitized, short incident summaries** using `python3 tools/friction.py record`; the default database lives under the current user's home directory, not in Git. Do not capture raw tool output, user prompts, arguments, credentials, or sensitive paths. Logging is best-effort and must not impede the primary task.
+- Inspect recurring clusters only as investigation leads, not established root causes. A successful workaround is not proof of a globally correct solution. Prefer validated environment fixes and scripts over growing instructions.
+- **Never automatically rewrite** `AGENTS.md`, Skills, project configuration, command rules, approvals, CI gates, or other policy as a consequence of an incident. Propose a narrowly scoped change with reproduction, tests, independent review, human authorization, and rollback. Never work around denied tool/sandbox actions.
+- The collector is not automatically hooked into Codex and does not prove complete observation or automatic reload. Report material coverage gaps instead of claiming universal learning.
+
 ## Cross-agent collaboration (when a navigator is involved)
 
 The repository-owned protocol in `docs/agent-collaboration.md` defines handoff fields, provenance, review statuses, task/finding IDs, recovery, and escalation. Use it only for tasks involving an external Claude navigator; it does not replace the repository's implementation and validation rules or grant new authority.
