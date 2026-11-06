@@ -59,9 +59,13 @@ def connect(path):
         fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
         os.close(fd)
     db = sqlite3.connect(path, timeout=10)
-    db.execute('PRAGMA busy_timeout=10000')
-    db.execute('PRAGMA journal_mode=WAL')
-    db.executescript(SCHEMA)
+    try:
+        db.execute('PRAGMA busy_timeout=10000')
+        db.execute('PRAGMA journal_mode=WAL')
+        db.executescript(SCHEMA)
+    except BaseException:
+        db.close()
+        raise
     return db
 
 
@@ -120,12 +124,16 @@ def main(argv=None):
     if args.command == 'list' and not 1 <= args.limit <= 200:
         parser.error('--limit must be between 1 and 200')
     try:
-        with connect(db_path(args.db)) as db:
-            if args.command == 'record': result = record(db,args)
-            elif args.command == 'clusters': result = clusters(db,args.min_count)
-            else:
-                db.row_factory = sqlite3.Row
-                result = [dict(row) for row in db.execute('SELECT * FROM incidents ORDER BY id DESC LIMIT ?', (args.limit,))]
+        db = connect(db_path(args.db))
+        try:
+            with db:
+                if args.command == 'record': result = record(db,args)
+                elif args.command == 'clusters': result = clusters(db,args.min_count)
+                else:
+                    db.row_factory = sqlite3.Row
+                    result = [dict(row) for row in db.execute('SELECT * FROM incidents ORDER BY id DESC LIMIT ?', (args.limit,))]
+        finally:
+            db.close()
         print(json.dumps(result, indent=2))
         return 0
     except (OSError, sqlite3.Error, ValueError) as exc:
