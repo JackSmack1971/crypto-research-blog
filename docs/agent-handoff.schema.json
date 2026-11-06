@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/agent-handoff/1.1",
+  "title": "Codex-to-Claude task handoff v1.1 (shape, not independent proof)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "protocol_version", "task_id", "phase", "review_tier", "status", "scope", "repository", "verification", "findings", "decisions_required", "external_actions", "next_recommended_action"],
+  "properties": {
+    "schema_version": {"const": "1.1"},
+    "protocol_version": {"const": "1.1"},
+    "task_id": {"type": "string", "minLength": 1},
+    "phase": {"enum": ["investigation", "design", "implementation", "verification", "review", "recovery", "complete"]},
+    "review_tier": {"enum": ["lightweight", "standard", "enhanced"]},
+    "status": {"enum": ["passed", "failed", "blocked", "not_run", "not_applicable"]},
+    "scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["authorized", "changed", "protected"],
+      "properties": {
+        "authorized": {"$ref": "#/$defs/paths"},
+        "changed": {"$ref": "#/$defs/paths"},
+        "protected": {"$ref": "#/$defs/paths"}
+      }
+    },
+    "repository": {
+      "type": "object", "additionalProperties": false,
+      "required": ["base_commit", "head_commit", "branch", "working_tree"],
+      "properties": {
+        "base_commit": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{40}$"},
+        "head_commit": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{40}$"},
+        "branch": {"type": ["string", "null"], "minLength": 1},
+        "working_tree": {"enum": ["clean", "modified", "unknown"]}
+      }
+    },
+    "verification": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["check_id", "command", "kind", "exit_code", "tests_executed", "status", "environment", "evidence"],
+        "properties": {
+          "check_id": {"type": "string", "minLength": 1},
+          "command": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["tests", "build", "review", "other"]},
+          "exit_code": {"type": ["integer", "null"]},
+          "tests_executed": {"type": ["integer", "null"], "minimum": 0},
+          "status": {"enum": ["passed", "failed", "blocked", "not_run", "not_applicable"]},
+          "environment": {"enum": ["local_windows", "local_linux", "ci_linux", "hosted", "other"]},
+          "evidence": {"type": ["string", "null"]}
+        },
+        "allOf": [
+          {"if": {"properties": {"status": {"const": "passed"}}, "required": ["status"]},
+           "then": {"properties": {"exit_code": {"const": 0}, "evidence": {"type": "string", "minLength": 1}}}},
+          {"if": {"properties": {"kind": {"const": "tests"}, "status": {"const": "passed"}}, "required": ["kind", "status"]},
+           "then": {"properties": {"tests_executed": {"type": "integer", "minimum": 1}}}}
+        ]
+      }
+    },
+    "findings": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "state", "severity", "evidence", "acceptance"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "state": {"enum": ["open", "resolved", "contested", "deferred"]},
+          "severity": {"enum": ["blocking", "major", "minor"]},
+          "evidence": {"type": ["string", "null"]},
+          "acceptance": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "decisions_required": {"$ref": "#/$defs/strings"},
+    "external_actions": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["action", "target", "approval_ref", "evidence"],
+        "properties": {
+          "action": {"enum": ["commit", "push", "pr", "merge", "deploy", "destructive", "other"]},
+          "target": {"type": "string", "minLength": 1},
+          "approval_ref": {"type": ["string", "null"]},
+          "evidence": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "next_recommended_action": {"type": "string"}
+  },
+  "$defs": {
+    "strings": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "paths": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+  }
+}
