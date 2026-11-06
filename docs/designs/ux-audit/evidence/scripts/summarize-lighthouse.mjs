@@ -1,0 +1,21 @@
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
+const dir = path.resolve("docs/designs/ux-audit/evidence/lighthouse");
+const files = readdirSync(dir).filter((name) => name.endsWith(".json") && name !== "_run-index.json");
+const rows = files.map((file) => {
+  const json = JSON.parse(readFileSync(path.join(dir, file), "utf8"));
+  const scores = Object.fromEntries(["performance", "accessibility", "best-practices", "seo"].map((key) => [key, json.categories[key]?.score == null ? "n/a" : Math.round(json.categories[key].score * 100)]));
+  const metrics = json.audits.metrics?.details?.items?.[0] ?? {};
+  const failing = Object.values(json.audits).filter((audit) => audit.score === 0 && audit.details?.type !== "opportunity").map((audit) => audit.id);
+  return { file, url: json.finalDisplayedUrl, mode: file.includes("-desktop") ? "desktop" : "mobile", scores, metrics: { LCP_ms: metrics.largestContentfulPaint, FCP_ms: metrics.firstContentfulPaint, CLS: metrics.cumulativeLayoutShift, TBT_ms: metrics.totalBlockingTime, SpeedIndex_ms: metrics.speedIndex }, failing };
+});
+const lines = ["# Lighthouse results", "", "Audited the live Netlify site (homepage and two article pages) with Lighthouse 12.8.2. Each URL was run in mobile and desktop modes; categories are performance, accessibility, best practices, and SEO. JSON reports preserve full audit detail.", "", "## Category scores", "", "| Page | Mode | Performance | Accessibility | Best practices | SEO |", "| --- | --- | ---: | ---: | ---: | ---: |"];
+for (const row of rows) lines.push(`| ${row.file.replace(/-(?:mobile|desktop)\.json$/, "")} | ${row.mode} | ${row.scores.performance} | ${row.scores.accessibility} | ${row.scores["best-practices"]} | ${row.scores.seo} |`);
+lines.push("", "## Core performance metrics", "", "Times are milliseconds; CLS is unitless.");
+lines.push("", "| Report | LCP | FCP | CLS | TBT | Speed Index |", "| --- | ---: | ---: | ---: | ---: | ---: |");
+for (const row of rows) lines.push(`| [${row.file}](lighthouse/${row.file}) | ${row.metrics.LCP_ms ?? "—"} | ${row.metrics.FCP_ms ?? "—"} | ${row.metrics.CLS ?? "—"} | ${row.metrics.TBT_ms ?? "—"} | ${row.metrics.SpeedIndex_ms ?? "—"} |`);
+lines.push("", "## Failed audits", "", "| Report | Failed audit IDs |", "| --- | --- |");
+for (const row of rows) lines.push(`| [${row.file}](lighthouse/${row.file}) | ${row.failing.length ? row.failing.join(", ") : "None"} |`);
+lines.push("", "Lighthouse scores vary with network, browser, and host conditions; these are single-run measurements.", "");
+writeFileSync(path.resolve("docs/designs/ux-audit/evidence/lighthouse-summary.md"), lines.join("\n"));
+console.log(JSON.stringify(rows.map(({ file, scores }) => ({ file, scores }))));

@@ -1,0 +1,13 @@
+{
+  "protocol_version": "1.1",
+  "task_id": "IMN-REPLACE",
+  "review_tier": "enhanced",
+  "base_commit": "REPLACE_WITH_REAL_40_CHARACTER_GIT_SHA",
+  "authorized": ["docs/agent-collaboration.md", "docs/agent-handoff.schema.json", "docs/agent-task.schema.json", "tools/collaboration.py"],
+  "protected": ["tests/fixtures/**", ".github/workflows/**"],
+  "checks": [
+    {"id": "python-suite", "argv": ["python3", "-m", "unittest", "discover", "-s", "tests", "-p", "test_*.py"], "kind": "tests", "timeout_seconds": 300},
+    {"id": "diff-check", "argv": ["git", "diff", "--check"], "kind": "review", "timeout_seconds": 30}
+  ],
+  "authorized_external_actions": []
+}
