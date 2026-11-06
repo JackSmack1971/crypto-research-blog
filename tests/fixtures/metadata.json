@@ -20,6 +20,16 @@
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
+    "crypto-leverage-liquidity-trap": {
+      "title": "The Leverage Trap: Crypto's Fragile November Market | Independent Market Notes",
+      "description": "Crypto market value weakened as derivatives exposure expanded. An examination of the leverage divergence, competing explanations, and what could break the market's uneasy balance.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-leverage-liquidity-trap/",
+      "og:title": "The Leverage Trap: Crypto's Fragile November Market",
+      "og:description": "Crypto market value weakened as derivatives exposure expanded. An examination of the leverage divergence, competing explanations, and what could break the market's uneasy balance.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-leverage-liquidity-trap/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "monad-november-unlock-liquidity-test": {
       "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell? | Independent Market Notes",
       "description": "Monad’s November 24, 2026 token unlock exposes conflicting cliff calculations, opaque recipient mapping, and the gap between released supply and executable liquidity.",
@@ -277,6 +287,12 @@
       "link": "https://independent-market-notes.netlify.app/when-risk-off-is-not-a-crisis/",
       "guid": "https://jacksmack1971.github.io/crypto-research-blog/when-risk-off-is-not-a-crisis/",
       "description": "A technology rout, falling oil and a crypto derivatives divergence exposed market fragility. The evidence for a systemic break—or a lasting AI bust—is far thinner."
+    },
+    {
+      "title": "The Leverage Trap: Crypto's Fragile November Market",
+      "link": "https://independent-market-notes.netlify.app/crypto-leverage-liquidity-trap/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-leverage-liquidity-trap/",
+      "description": "Market value was slipping while derivatives exposure expanded. The dangerous part wasn't a certain crash—it was how little the positioning data revealed about who would be forced to move first."
     },
     {
       "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?",

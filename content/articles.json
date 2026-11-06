@@ -18,6 +18,31 @@
     "research_type": "investigative-analysis"
   },
   {
+    "slug": "crypto-leverage-liquidity-trap",
+    "source": "crypto-leverage-liquidity-trap.html",
+    "date": "2026-11-06",
+    "title": "The Leverage Trap: Crypto's Fragile November Market",
+    "dek": "Market value was slipping while derivatives exposure expanded. The dangerous part wasn't a certain crash—it was how little the positioning data revealed about who would be forced to move first.",
+    "image": "assets/featured/crypto-leverage-liquidity-trap.jpg",
+    "image_alt": "Editorial illustration of two heavy opposing structures separated by a narrow illuminated gap, suggesting pressure building around thin market liquidity",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL",
+      "XRP",
+      "TRX",
+      "ZEC",
+      "HYPE",
+      "USDT",
+      "USDC"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "monad-november-unlock-liquidity-test",
     "source": "monad-november-unlock-liquidity-test.html",
     "date": "2026-11-05",
