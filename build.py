@@ -507,6 +507,44 @@ def article_bar(site: dict) -> str:
     )
 
 
+SCROLL_REGION_LABELS = {
+    "aero-at-0-68": ("table-scroll", "AERO unlock data table"),
+    "bitcoin-buying-imbalance": (
+        "tablewrap",
+        "Bitcoin buying imbalance data table",
+    ),
+    "token-unlock-liquidity-illusion-90-day-calendar": (
+        "scroll",
+        "90-day token unlock calendar data table",
+    ),
+}
+
+
+def add_scroll_region_accessibility(slug: str, html: str) -> str:
+    target = SCROLL_REGION_LABELS.get(slug)
+    if target is None:
+        return html
+
+    class_name, label = target
+    matches = []
+    for match in re.finditer(r"<div\b[^>]*>", html, flags=re.I):
+        class_match = re.search(r'\bclass=["\']([^"\']*)["\']', match.group(0), flags=re.I)
+        if class_match and class_name in class_match.group(1).split():
+            matches.append(match)
+    if len(matches) != 1:
+        die(f"{slug} must contain exactly one .{class_name} wrapper")
+
+    match = matches[0]
+    opening_tag = match.group(0)
+    if re.search(r'\b(?:tabindex|role|aria-label)\s*=', opening_tag, flags=re.I):
+        die(f"{slug} .{class_name} wrapper already has accessibility attributes")
+    accessible_tag = (
+        opening_tag[:-1]
+        + f' tabindex="0" role="region" aria-label="{escape(label, quote=True)}">'
+    )
+    return html[: match.start()] + accessible_tag + html[match.end() :]
+
+
 def render_article(note: dict, site: dict) -> str:
     html = note["html"]
     article_url = f'{site["url"]}/{note["slug"]}/'
@@ -520,6 +558,7 @@ def render_article(note: dict, site: dict) -> str:
         flags=re.I,
     )
     html = augment_article_schema(html, note, site)
+    html = add_scroll_region_accessibility(note["slug"], html)
     extra = article_extra_head(dict(note, html=html), site)
     head_match = re.search(r"</head>", html, flags=re.I)
     if not head_match:
