@@ -1,0 +1,315 @@
+{
+  "description": "Design-stage routing probe bank; labels are intended outcomes, not observed activations.",
+  "cases": [
+    {
+      "id": "p01",
+      "class": "positive",
+      "prompt": "Break login and account settings into buildable tickets with acceptance tests.",
+      "should_activate": true
+    },
+    {
+      "id": "p02",
+      "class": "positive",
+      "prompt": "Write tickets for the three features in this product brief.",
+      "should_activate": true
+    },
+    {
+      "id": "p03",
+      "class": "positive",
+      "prompt": "Before coding, scope a notifications feature into verifiable work items.",
+      "should_activate": true
+    },
+    {
+      "id": "p04",
+      "class": "positive",
+      "prompt": "I need rd.md/eval.md for new password reset and MFA flows.",
+      "should_activate": true
+    },
+    {
+      "id": "p05",
+      "class": "positive",
+      "prompt": "Convert the feature backlog into local spec tickets, not GitHub issues.",
+      "should_activate": true
+    },
+    {
+      "id": "p06",
+      "class": "positive",
+      "prompt": "Produce implementation-ready tickets for the new search experience.",
+      "should_activate": true
+    },
+    {
+      "id": "p07",
+      "class": "positive",
+      "prompt": "List acceptance criteria and split the proposed editor features by shippable outcome.",
+      "should_activate": true
+    },
+    {
+      "id": "p08",
+      "class": "positive",
+      "prompt": "Write a PRD for this feature and divide it into distinct build tickets.",
+      "should_activate": true
+    },
+    {
+      "id": "p09",
+      "class": "positive",
+      "prompt": "Design a dependency board for tickets covering onboarding and billing.",
+      "should_activate": true
+    },
+    {
+      "id": "p10",
+      "class": "positive",
+      "prompt": "Create draft work items for a task board; let me approve them before starting.",
+      "should_activate": true
+    },
+    {
+      "id": "p11",
+      "class": "positive",
+      "prompt": "Turn this feature wish list into concrete developer assignments with PASS/FAIL checks.",
+      "should_activate": true
+    },
+    {
+      "id": "p12",
+      "class": "positive",
+      "prompt": "Scope a redesign into separately testable, user-facing deliverables.",
+      "should_activate": true
+    },
+    {
+      "id": "p13",
+      "class": "positive",
+      "prompt": "Draft the required behaviors and evaluation steps for saving a profile form.",
+      "should_activate": true
+    },
+    {
+      "id": "p14",
+      "class": "positive",
+      "prompt": "We have an epic to implement CRM basics: break it into independent tickets.",
+      "should_activate": true
+    },
+    {
+      "id": "p15",
+      "class": "positive",
+      "prompt": "Specify exactly what the login functionality should do and how we'll test it, without coding.",
+      "should_activate": true
+    },
+    {
+      "id": "p16",
+      "class": "positive",
+      "prompt": "Write one ticket per standalone feature in the release notes proposal.",
+      "should_activate": true
+    },
+    {
+      "id": "p17",
+      "class": "positive",
+      "prompt": "For the next sprint, generate requirement documents paired with eval checks.",
+      "should_activate": true
+    },
+    {
+      "id": "p18",
+      "class": "positive",
+      "prompt": "Create tickets from the product proposal and mark unresolved choices for review.",
+      "should_activate": true
+    },
+    {
+      "id": "p19",
+      "class": "positive",
+      "prompt": "Plan the feature work so independent items can be assigned to different agents later.",
+      "should_activate": true
+    },
+    {
+      "id": "p20",
+      "class": "positive",
+      "prompt": "Refine this existing feature ticket's requirements and acceptance checks before approval.",
+      "should_activate": true
+    },
+    {
+      "id": "n01",
+      "class": "negative",
+      "prompt": "Implement login and dashboard now; don't write planning documents.",
+      "should_activate": false
+    },
+    {
+      "id": "n02",
+      "class": "negative",
+      "prompt": "Find the cause of this failing GitHub Actions check.",
+      "should_activate": false
+    },
+    {
+      "id": "n03",
+      "class": "negative",
+      "prompt": "Review this pull request for regression risks.",
+      "should_activate": false
+    },
+    {
+      "id": "n04",
+      "class": "negative",
+      "prompt": "Deploy the site to Netlify.",
+      "should_activate": false
+    },
+    {
+      "id": "n05",
+      "class": "negative",
+      "prompt": "Open these five issues in GitHub directly.",
+      "should_activate": false
+    },
+    {
+      "id": "n06",
+      "class": "negative",
+      "prompt": "Summarize our sprint retrospective.",
+      "should_activate": false
+    },
+    {
+      "id": "n07",
+      "class": "negative",
+      "prompt": "Estimate the cost of cloud hosting for this app.",
+      "should_activate": false
+    },
+    {
+      "id": "n08",
+      "class": "negative",
+      "prompt": "Fix the broken button on the profile screen.",
+      "should_activate": false
+    },
+    {
+      "id": "n09",
+      "class": "negative",
+      "prompt": "Explain how a JSON Web Token works.",
+      "should_activate": false
+    },
+    {
+      "id": "n10",
+      "class": "negative",
+      "prompt": "Run the end-to-end tests for existing tickets.",
+      "should_activate": false
+    },
+    {
+      "id": "n11",
+      "class": "negative",
+      "prompt": "Write an editorial article about product planning.",
+      "should_activate": false
+    },
+    {
+      "id": "n12",
+      "class": "negative",
+      "prompt": "Generate a design mockup for the login page.",
+      "should_activate": false
+    },
+    {
+      "id": "n13",
+      "class": "negative",
+      "prompt": "Give me a high-level 2027 product strategy with no implementation specs.",
+      "should_activate": false
+    },
+    {
+      "id": "n14",
+      "class": "negative",
+      "prompt": "Commit the changes and push to main.",
+      "should_activate": false
+    },
+    {
+      "id": "n15",
+      "class": "negative",
+      "prompt": "Create a database migration for the customers table.",
+      "should_activate": false
+    },
+    {
+      "id": "n16",
+      "class": "negative",
+      "prompt": "Refactor the authentication module for readability.",
+      "should_activate": false
+    },
+    {
+      "id": "n17",
+      "class": "negative",
+      "prompt": "Check whether our API meets OWASP recommendations.",
+      "should_activate": false
+    },
+    {
+      "id": "n18",
+      "class": "negative",
+      "prompt": "Analyze weekly traffic conversion numbers.",
+      "should_activate": false
+    },
+    {
+      "id": "n19",
+      "class": "negative",
+      "prompt": "Write a standalone README for the project.",
+      "should_activate": false
+    },
+    {
+      "id": "n20",
+      "class": "negative",
+      "prompt": "Assign existing Jira tasks to the team and notify them.",
+      "should_activate": false
+    },
+    {
+      "id": "a01",
+      "class": "neighbor",
+      "prompt": "Help me decide whether search is worth building before we scope it.",
+      "should_activate": false,
+      "rationale": "Feasibility, not requirements artifacts"
+    },
+    {
+      "id": "a02",
+      "class": "neighbor",
+      "prompt": "Write a PRD for this feature, and include buildable tickets with acceptance checks.",
+      "should_activate": true,
+      "rationale": "Explicit tickets and checks"
+    },
+    {
+      "id": "a03",
+      "class": "neighbor",
+      "prompt": "Write one standalone product narrative, explicitly no tickets or evals.",
+      "should_activate": false,
+      "rationale": "User excludes owned artifacts"
+    },
+    {
+      "id": "a04",
+      "class": "neighbor",
+      "prompt": "Review the acceptance criteria in these existing tickets for missing checks.",
+      "should_activate": true,
+      "rationale": "Revision of ticket pair"
+    },
+    {
+      "id": "a05",
+      "class": "neighbor",
+      "prompt": "Create a QA plan to test a feature we already implemented; no new specs.",
+      "should_activate": false,
+      "rationale": "Post-implementation testing"
+    },
+    {
+      "id": "a06",
+      "class": "neighbor",
+      "prompt": "Sketch a project roadmap without detailing individual features.",
+      "should_activate": false,
+      "rationale": "General strategy"
+    },
+    {
+      "id": "a07",
+      "class": "neighbor",
+      "prompt": "Split this engineering epic into verifiable milestones before implementation.",
+      "should_activate": true,
+      "rationale": "Milestones are independently testable buildable outcomes"
+    },
+    {
+      "id": "a08",
+      "class": "neighbor",
+      "prompt": "Produce a technical architecture diagram for billing, no work items.",
+      "should_activate": false,
+      "rationale": "Architecture drawing"
+    },
+    {
+      "id": "a09",
+      "class": "neighbor",
+      "prompt": "List GitHub issue titles so I can decide what to file later, no local docs.",
+      "should_activate": false,
+      "rationale": "External-tracker ideation only"
+    },
+    {
+      "id": "a10",
+      "class": "neighbor",
+      "prompt": "We need an acceptance-criteria document for password reset before anyone builds it.",
+      "should_activate": true,
+      "rationale": "Feature specification and eval"
+    }
+  ]
+}

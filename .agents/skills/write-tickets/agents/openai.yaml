@@ -1,0 +1,6 @@
+interface:
+  display_name: "Write Tickets"
+  short_description: "Requirements, evaluations, approval board"
+  default_prompt: "Split this feature request into reviewable tickets with rd.md, eval.md, and a dependency-aware draft board. Do not implement it."
+policy:
+  allow_implicit_invocation: true
