@@ -1,5 +1,23 @@
 [
   {
+    "slug": "when-risk-off-is-not-a-crisis",
+    "source": "when-risk-off-is-not-a-crisis.html",
+    "date": "2026-11-06",
+    "title": "When Risk-Off Is Not a Crisis: What the November Selloff Really Proved",
+    "dek": "A technology rout, falling oil and a crypto derivatives divergence exposed market fragility. The evidence for a systemic break—or a lasting AI bust—is far thinner.",
+    "image": "assets/featured/when-risk-off-is-not-a-crisis.jpg",
+    "image_alt": "Abstract editorial illustration of opposing financial-market forces converging at a fractured central seam; no market prices are depicted.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "monad-november-unlock-liquidity-test",
     "source": "monad-november-unlock-liquidity-test.html",
     "date": "2026-11-05",

@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "when-risk-off-is-not-a-crisis": {
+      "title": "When Risk-Off Is Not a Crisis: What the November Selloff Really Proved",
+      "description": "An evidence-led investigation of November 2026 market turbulence, AI repricing, crypto derivatives, Treasury yields and the limits of the risk-off narrative.",
+      "canonical": "https://independent-market-notes.netlify.app/when-risk-off-is-not-a-crisis/",
+      "og:title": "When Risk-Off Is Not a Crisis: What the November Selloff Really Proved",
+      "og:description": "An evidence-led investigation of November 2026 market turbulence, AI repricing, crypto derivatives, Treasury yields and the limits of the risk-off narrative.",
+      "og:url": "https://independent-market-notes.netlify.app/when-risk-off-is-not-a-crisis/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "monad-november-unlock-liquidity-test": {
       "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell? | Independent Market Notes",
       "description": "Monad’s November 24, 2026 token unlock exposes conflicting cliff calculations, opaque recipient mapping, and the gap between released supply and executable liquidity.",
@@ -262,6 +272,12 @@
     }
   },
   "rss": [
+    {
+      "title": "When Risk-Off Is Not a Crisis: What the November Selloff Really Proved",
+      "link": "https://independent-market-notes.netlify.app/when-risk-off-is-not-a-crisis/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/when-risk-off-is-not-a-crisis/",
+      "description": "A technology rout, falling oil and a crypto derivatives divergence exposed market fragility. The evidence for a systemic break—or a lasting AI bust—is far thinner."
+    },
     {
       "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?",
       "link": "https://independent-market-notes.netlify.app/monad-november-unlock-liquidity-test/",
