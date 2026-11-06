@@ -39,6 +39,15 @@ const knownAxe = new Set(known.accessibility.map((item) => `${item.route}|${item
 const knownOverflow = new Set(known.horizontalOverflow.map((item) => `${item.route}|${item.width}`));
 
 async function prepare(page: Page, route: string): Promise<void> {
+  if (route === "/404.html") {
+    // The 404 deliberately uses canonical URLs at arbitrary request depths.
+    // Preview its locally built assets, not whatever is currently in production.
+    const site = JSON.parse(readFileSync("site.json", "utf8")) as { url: string };
+    for (const asset of ["design-system.css", "favicon.svg", "feed.xml"]) {
+      await page.route(`${site.url.replace(/\/$/, "")}/${asset}`, (request) =>
+        request.fulfill({ path: `dist/${asset}` }));
+    }
+  }
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto(route, { waitUntil: "networkidle" });
   await page.evaluate(async () => {
@@ -119,6 +128,20 @@ test("every catalog article appears on the homepage", async ({ page }) => {
 });
 
 test.describe("research archive search", () => {
+  test("filtered featured result spans the desktop archive", async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await prepare(page, "/");
+    await page.getByRole("searchbox").fill("DEEP");
+    const result = page.locator("[data-featured-search]");
+    await expect(result).toBeVisible();
+    await expect(result).toHaveCSS("grid-column", "1 / -1");
+    const grid = await page.locator(".archive-grid").boundingBox();
+    const box = await result.boundingBox();
+    expect(box).not.toBeNull();
+    expect(Math.abs(box!.width - grid!.width)).toBeLessThanOrEqual(1);
+    expect(Math.abs(box!.x - grid!.x)).toBeLessThanOrEqual(1);
+  });
+
   test("combines ticker, topic, and research type filters and clears them", async ({ page }) => {
     await page.setViewportSize({ width: 1024, height: 900 });
     await prepare(page, "/");
@@ -208,7 +231,7 @@ test.describe("keyboard", () => {
 });
 
 test.describe("accessibility", () => {
-  for (const route of ["/", ...articles.map((article) => `/${article.slug}/`)]) {
+  for (const route of routes) {
     test(`no new serious issues ${route}`, async ({ page }) => {
       await page.setViewportSize({ width: 1440, height: 900 });
       await prepare(page, route);
@@ -290,3 +313,15 @@ test("representative images decode", async ({ page }) => {
     expect(broken, route).toEqual([]);
   }
 });
+
+for (const route of ["/", "/404.html"]) {
+  test(`shared skip link reaches main ${route}`, async ({ page }) => {
+    await prepare(page, route);
+    await page.keyboard.press("Tab");
+    await expect(page.locator(".skip")).toBeFocused();
+    await page.keyboard.press("Enter");
+    await expect(page).toHaveURL(/#main-content$/);
+    await expect(page.locator("main#main-content")).toHaveCount(1);
+    expect(await page.evaluate(() => document.activeElement?.id)).toBe("main-content");
+  });
+}

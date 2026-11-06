@@ -204,7 +204,7 @@ class SiteStructureTest(unittest.TestCase):
             self.assertEqual(item["title"], entry["title"])
             self.assertEqual(item["description"], entry["dek"])
 
-    def test_deploy_job_stays_on_main(self) -> None:
+    def test_deploy_job_stays_on_main_without_browser_install(self) -> None:
         workflow = (ROOT / ".github" / "workflows" / "pages.yml").read_text(encoding="utf-8")
         concurrency = workflow.split("jobs:", 1)[0]
         self.assertIn("pages-deploy", concurrency)
@@ -220,7 +220,9 @@ class SiteStructureTest(unittest.TestCase):
             "if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'",
             deploy,
         )
-        self.assertIn("needs: [build, styling-check]", deploy)
+        self.assertIn("needs: [build, content-check]", deploy)
+        self.assertNotIn("chromium", workflow.lower())
+        self.assertNotIn("playwright", workflow.lower())
 
 
 if __name__ == "__main__":

@@ -1,5 +1,98 @@
 [
   {
+    "slug": "monad-november-unlock-liquidity-test",
+    "source": "monad-november-unlock-liquidity-test.html",
+    "date": "2026-11-05",
+    "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?",
+    "dek": "Conflicting calendars put Monad’s anniversary release near 16.6–17.1 billion MON. The vesting math is clearer than the market’s capacity to absorb it.",
+    "image": "assets/featured/monad-november-unlock-liquidity-test.jpg",
+    "image_alt": "Editorial illustration of a large layered supply compartment beside sparse bid-like marks, illustrating that unlocked tokens are not automatically sold. No market data is depicted.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "tokenomics",
+    "assets": [
+      "MON"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
+    "slug": "crypto-market-structure-after-midterms",
+    "source": "crypto-market-structure-after-midterms.html",
+    "date": "2026-11-04",
+    "title": "After the Midterms, CLARITY’s Hardest Vote Is Still Ahead",
+    "dek": "Democrats’ wins reshape the next Congress. They do not turn a stalled crypto market-structure bill into a lame-duck certainty.",
+    "image": "assets/featured/crypto-market-structure-midterms.jpg",
+    "image_alt": "An editorial illustration of the U.S. Capitol between calendar pages as lawmakers pass legislation across the transition into a new Congress.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "market-structure",
+    "assets": [],
+    "research_type": "investigative-analysis"
+  },
+  {
+    "slug": "bitcoin-open-interest-filter-test",
+    "source": "bitcoin-open-interest-filter-test.html",
+    "date": "2026-11-04",
+    "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
+    "dek": "A timestamp correction rescued a plausible derivatives signal from look-ahead bias. It did not show that open interest improves on price momentum.",
+    "image": "assets/featured/bitcoin-open-interest-filter-test.jpg",
+    "image_alt": "Editorial illustration: separate teal price and rust open-interest paths diverge over a faint conceptual grid beside the words The Open Interest Question; the paths are not market data.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
+    "slug": "binance-four-hour-wallet-takeover",
+    "source": "binance-four-hour-wallet-takeover.html",
+    "date": "2026-11-04",
+    "title": "Binance's Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation",
+    "dek": "The chain records the takeover and its end to the second. It cannot tell us why the emergency response took nearly four hours.",
+    "image_alt": "Editorial timeline showing 50 authorization attempts, one delegation, and 3 hours 49 minutes 36 seconds until revocation",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "image": "assets/featured/binance-four-hour-wallet-takeover.jpg",
+    "topic": "risk-verification",
+    "assets": [
+      "ETH",
+      "USDT",
+      "RLUSD",
+      "WBETH",
+      "XAUT",
+      "UNI"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
+    "slug": "crypto-chokepoints-november-2026",
+    "source": "crypto-chokepoints-november-2026.html",
+    "date": "2026-11-04",
+    "title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
+    "dek": "From exchange thefts and frozen stablecoins to election-driven legislation and a sanctioned Moscow trading venue, the same question keeps resurfacing: who can actually move the money?",
+    "image_alt": "Editorial illustration of a Bitcoin coin, fractured lock, U.S. Capitol, and labeled blocks representing ETF flows, legislation, exchange security, DeFi, and sanctions.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "image": "assets/featured/crypto-chokepoints-november-2026.jpg",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "USDT",
+      "USDC",
+      "INJ",
+      "ENA"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "token-unlock-liquidity-illusion-90-day-calendar",
     "source": "token-unlock-liquidity-illusion-90-day-calendar.html",
     "date": "2026-11-03",

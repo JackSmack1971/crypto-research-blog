@@ -10,6 +10,56 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "monad-november-unlock-liquidity-test": {
+      "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell? | Independent Market Notes",
+      "description": "Monad’s November 24, 2026 token unlock exposes conflicting cliff calculations, opaque recipient mapping, and the gap between released supply and executable liquidity.",
+      "canonical": "https://independent-market-notes.netlify.app/monad-november-unlock-liquidity-test/",
+      "og:title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?",
+      "og:description": "Monad’s November 24, 2026 token unlock exposes conflicting cliff calculations, opaque recipient mapping, and the gap between released supply and executable liquidity.",
+      "og:url": "https://independent-market-notes.netlify.app/monad-november-unlock-liquidity-test/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
+    "crypto-market-structure-after-midterms": {
+      "title": "After the Midterms, CLARITY’s Hardest Vote Is Still Ahead",
+      "description": "Democrats’ midterm wins reshape the next Congress, but the stalled CLARITY Act faces a different and more difficult legislative path than a lame-duck revival.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-market-structure-after-midterms/",
+      "og:title": "After the Midterms, CLARITY’s Hardest Vote Is Still Ahead",
+      "og:description": "The election changes who will control the next Congress. It does not erase the Senate vote that stalled crypto market-structure legislation.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-market-structure-after-midterms/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
+    "bitcoin-open-interest-filter-test": {
+      "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test | Crypto Research",
+      "description": "A close reading of OKX BTC perpetual data shows why matching open interest to the right hour matters—and why a positive backtest is not proof of an edge.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-open-interest-filter-test/",
+      "og:title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
+      "og:description": "A timestamp correction rescued a plausible derivatives signal from look-ahead bias. It did not show that open interest improves on price momentum.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-open-interest-filter-test/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
+    "binance-four-hour-wallet-takeover": {
+      "title": "Binance&#x27;s Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation | Independent Market Notes",
+      "description": "A transaction-grounded reconstruction of Binance 14’s EIP-7702 delegation, 50 authorization attempts, token sweep and eventual revocation.",
+      "canonical": "https://independent-market-notes.netlify.app/binance-four-hour-wallet-takeover/",
+      "og:title": "Binance's Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation",
+      "og:description": "A transaction-grounded reconstruction of Binance 14’s EIP-7702 delegation, 50 authorization attempts, token sweep and eventual revocation.",
+      "og:url": "https://independent-market-notes.netlify.app/binance-four-hour-wallet-takeover/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
+    "crypto-chokepoints-november-2026": {
+      "title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
+      "description": "An investigation of November 2026 crypto thefts, DeFi rebounds, ETF outflows, U.S. legislation and sanctions-driven settlement risk.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-chokepoints-november-2026/",
+      "og:title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
+      "og:description": "An investigation of November 2026 crypto thefts, DeFi rebounds, ETF outflows, U.S. legislation and sanctions-driven settlement risk.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-chokepoints-november-2026/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "token-unlock-liquidity-illusion-90-day-calendar": {
       "title": "The Token Unlock Calendar Has a Liquidity Problem | Independent Market Notes",
       "description": "A Nov 2026–Feb 2027 investigation of MON, ONDO and other token unlocks, examining reported-float dilution, trading liquidity and critical data gaps.",
@@ -212,6 +262,36 @@
     }
   },
   "rss": [
+    {
+      "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?",
+      "link": "https://independent-market-notes.netlify.app/monad-november-unlock-liquidity-test/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/monad-november-unlock-liquidity-test/",
+      "description": "Conflicting calendars put Monad’s anniversary release near 16.6–17.1 billion MON. The vesting math is clearer than the market’s capacity to absorb it."
+    },
+    {
+      "title": "After the Midterms, CLARITY’s Hardest Vote Is Still Ahead",
+      "link": "https://independent-market-notes.netlify.app/crypto-market-structure-after-midterms/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-market-structure-after-midterms/",
+      "description": "Democrats’ wins reshape the next Congress. They do not turn a stalled crypto market-structure bill into a lame-duck certainty."
+    },
+    {
+      "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-open-interest-filter-test/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-open-interest-filter-test/",
+      "description": "A timestamp correction rescued a plausible derivatives signal from look-ahead bias. It did not show that open interest improves on price momentum."
+    },
+    {
+      "title": "Binance's Four-Hour Wallet Takeover: 50 Authorizations, One Malicious Delegation, and a Delayed Revocation",
+      "link": "https://independent-market-notes.netlify.app/binance-four-hour-wallet-takeover/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/binance-four-hour-wallet-takeover/",
+      "description": "The chain records the takeover and its end to the second. It cannot tell us why the emergency response took nearly four hours."
+    },
+    {
+      "title": "Crypto’s November Stress Test: Liquidity, Custody and the Limits of Control",
+      "link": "https://independent-market-notes.netlify.app/crypto-chokepoints-november-2026/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-chokepoints-november-2026/",
+      "description": "From exchange thefts and frozen stablecoins to election-driven legislation and a sanctioned Moscow trading venue, the same question keeps resurfacing: who can actually move the money?"
+    },
     {
       "title": "The Token Unlock Calendar Has a Liquidity Problem",
       "link": "https://independent-market-notes.netlify.app/token-unlock-liquidity-illusion-90-day-calendar/",

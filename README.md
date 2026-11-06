@@ -60,7 +60,7 @@ Add optional fields to the existing entry in `content/articles.json`:
 { "image": "assets/featured/my-new-note.jpg", "image_alt": "Editorial illustration of the article thesis", "image_width": 1200, "image_height": 630, "image_mime_type": "image/jpeg" }
 ```
 
-The build validates the file signature, image path, declared dimensions, MIME type, and alt text. It publishes the asset under `dist/assets/featured/`, generates absolute Open Graph and X image URLs, uses `summary_large_image`, and adds the image to BlogPosting schema. Legacy articles without images retain their previous rendering and metadata.
+The build validates intrinsic and declared dimensions, image path, MIME type, alt text, and bounded image structure (8 MiB maximum). JPEG inspection checks frame dimensions, segment/table lengths and scan framing; WebP inspection checks RIFF chunk boundaries and key-frame dimensions. These standard-library checks do not decode JPEG/WebP entropy data and cannot prove that every compressed pixel is valid. Open each artwork in a real image decoder during publication review. PNG validation checks CRCs and bounded decompression of scanlines; supported PNGs are non-interlaced 8-bit RGB/RGBA. Unsupported JPEG/WebP variants, including animated WebP, fail closed. It publishes the asset under `dist/assets/featured/`, generates absolute Open Graph and X image URLs, uses `summary_large_image`, and adds the image to BlogPosting schema. Legacy articles without images retain their previous rendering and metadata.
 
 The featured artwork stays separate from article visuals. Any preexisting source `og:image`, `twitter:image`, or conflicting `twitter:card` tags must be removed before registering an image; the build refuses conflicting metadata. The build does not insert an article hero or rewrite charts.
 
@@ -69,22 +69,17 @@ The canonical hostname comes from `site.json`. Confirm that this URL matches the
 For a ChatGPT publication ZIP: copy its HTML to `content/`, featured artwork to `assets/featured/`, and merge `publish.json` fields into the existing `content/articles.json` entry. Never replace the entire catalog with one manifest.
 ## Checks
 
-These checks guard the editorial text, charts, URLs, and layout. They are not part of the published site. `build.py` still uses only the Python standard library.
+The required publication checks guard content and structure. CI builds the site and runs the Python checks; it does not install Chromium or run Playwright. The generator still uses only the Python standard library.
 
 ```bash
 python3 -m unittest discover -s tests -p 'test_*.py'
-npm ci
-npx playwright install chromium
-npx playwright test
 ```
 
-The Python tests rebuild `dist/`. Playwright rebuilds it again and serves that folder. Screenshots cover the homepage, the Bitcoin buying-imbalance note, Venice AI, and AERO at 390, 768, and 1440 pixels. Homepage screenshots use a stable list of article slugs declared in `tests/visual.spec.ts`; new articles are checked separately for homepage presence, overflow, keyboard focus, and accessibility, so routine publishing does not require a homepage screenshot refresh. Overflow, keyboard focus, and serious accessibility findings are checked on every article. CI installs the faces Chromium used to capture the baselines: Tinos, from the Croscore fonts, for the editorial serif stack, and Noto Sans for interface text. Aliasing that serif stack to Noto Serif changes wrapping and fails the screenshot check.
-
-A layout or content regression fails the suite on its own. Widening the homepage past the viewport fails `no unexpected overflow`. Changing a sentence in an essay fails the content signature. Both were confirmed before any shared CSS was adopted. The screenshot check does not accept a new image when it fails.
+The Python tests rebuild `dist/` and verify content signatures, metadata, and site structure. Browser-based visual and accessibility checks remain available for local review, but they are not a publication or deployment gate.
 
 ## Reviewing a visual change
 
-1. Run the suite and let the screenshot check fail. CI now uploads `test-results/` as a `browser-failure-<run_id>` artifact, so the actual screenshots and diffs are available from the failed run without changing the workflow.
+1. Run the browser suite locally and inspect any screenshots or diffs in `test-results/`.
 2. Download and inspect the expected image, actual image, and diff. Confirm the visual change is intended and that text, tables, and charts remain intact.
 3. Refresh only the reviewed targets. For an intentional homepage design change, run:
 
@@ -102,10 +97,10 @@ For another target, use `npx playwright test tests/visual.spec.ts --grep "<targe
 
 The canonical site is <https://independent-market-notes.netlify.app/>. The repository also retains its GitHub Pages deployment at <https://jacksmack1971.github.io/crypto-research-blog/>. Pages is set to **GitHub Actions** (**Settings → Pages → Build and deployment → Source**).
 
-[`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds on every push and pull request and runs the content, structure, and browser checks in `styling-check`. A push to `main` uploads `dist/` with `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`. The deploy job waits for both `build` and `styling-check`, and its `if` still limits it to `main`. Pull requests do not publish.
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds on every push and pull request and runs the Python content and structure checks. A push to `main` uploads `dist/` with `actions/upload-pages-artifact` and deploys it with `actions/deploy-pages`. The deploy job waits for both `build` and `content-check`, and its `if` still limits it to `main`. Pull requests do not publish.
 
 No paid host, database, or package install is required. The generator is [`build.py`](build.py) and uses only the Python standard library.
 
 ## Netlify
 
-The repository includes [`netlify.toml`](netlify.toml), which runs `python3 build.py` and publishes `dist/`. Netlify's build command and publish directory should match those values. Deploy from the repository root with `main` as the production branch; do not publish the repository root, which has no generated `index.html`.
+The repository includes [`netlify.toml`](netlify.toml), which runs `python3 build.py` followed by the Python content and structure suite, and publishes `dist/` only when both succeed. Netlify's build command and publish directory should match those values. These checks compare article content and metadata with the reviewed fixtures; Chromium remains outside publication CI. Deploy from the repository root with `main` as the production branch; do not publish the repository root, which has no generated `index.html`.
