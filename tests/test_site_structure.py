@@ -224,6 +224,96 @@ class SiteStructureTest(unittest.TestCase):
         self.assertNotIn("chromium", workflow.lower())
         self.assertNotIn("playwright", workflow.lower())
 
+    @staticmethod
+    def related_note(slug: str, date_value: str, topic: str, assets: list[str], research_type: str) -> dict:
+        return {
+            "slug": slug,
+            "date": date_value,
+            "topic": topic,
+            "assets": assets,
+            "research_type": research_type,
+        }
+
+    def test_rank_related_notes_uses_weight_date_and_catalog_ties(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", ["BTC", "ETH"], "snapshot")
+        shared = self.related_note("shared", "2026-01-02", "other", ["BTC"], "other")
+        topic_and_type = self.related_note("topic-type", "2026-01-03", "alpha", [], "snapshot")
+        tie_earlier = self.related_note("tie-earlier", "2026-01-04", "other", ["ETH"], "other")
+        tie_later = self.related_note("tie-later", "2026-01-04", "alpha", [], "snapshot")
+        notes = [source, shared, tie_earlier, tie_later, topic_and_type]
+        result = build.rank_related_notes(source, notes)
+        self.assertEqual(result["variant"], "related")
+        self.assertEqual([item["slug"] for item in result["notes"]], ["tie-earlier", "tie-later", "topic-type"])
+
+    def test_rank_related_notes_one_shared_asset_beats_same_topic(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", ["BTC"], "snapshot")
+        same_topic = self.related_note("topic", "2026-01-03", "alpha", [], "other")
+        one_asset = self.related_note("asset", "2026-01-02", "other", ["BTC"], "other")
+        result = build.rank_related_notes(source, [source, same_topic, one_asset])
+        self.assertEqual(result["notes"][0], one_asset)
+
+    def test_rank_related_notes_two_shared_assets_beat_topic_and_type(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", ["BTC", "ETH"], "snapshot")
+        topic_type = self.related_note("topic-type", "2026-01-03", "alpha", [], "snapshot")
+        two_assets = self.related_note("two-assets", "2026-01-02", "other", ["BTC", "ETH"], "other")
+        result = build.rank_related_notes(source, [source, topic_type, two_assets])
+        self.assertEqual(result["notes"][0], two_assets)
+
+    def test_rank_related_notes_equal_score_uses_newer_date(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", ["BTC"], "snapshot")
+        asset = self.related_note("asset", "2026-01-02", "other", ["BTC"], "other")
+        topic_type = self.related_note("topic-type", "2026-01-03", "alpha", [], "snapshot")
+        result = build.rank_related_notes(source, [source, asset, topic_type])
+        self.assertEqual(result["notes"][0], topic_type)
+
+    def test_rank_related_notes_excludes_self_by_slug(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", ["BTC"], "snapshot")
+        duplicate_slug = self.related_note("source", "2026-01-03", "alpha", ["BTC"], "snapshot")
+        neighbour = self.related_note("neighbour", "2026-01-02", "alpha", ["BTC"], "snapshot")
+        result = build.rank_related_notes(source, [source, duplicate_slug, neighbour])
+        self.assertEqual([entry["slug"] for entry in result["notes"]], ["neighbour"])
+
+    def test_rank_related_notes_equal_dates_keep_passed_catalog_order(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", ["BTC"], "snapshot")
+        later_position = self.related_note("later-position", "2026-01-03", "other", ["BTC"], "other")
+        earlier_position = self.related_note("earlier-position", "2026-01-03", "alpha", [], "snapshot")
+        result = build.rank_related_notes(source, [source, later_position, earlier_position])
+        self.assertEqual([entry["slug"] for entry in result["notes"]], ["later-position", "earlier-position"])
+
+    def test_rank_related_notes_zero_score_falls_back_to_latest(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", [], "snapshot")
+        old = self.related_note("old", "2026-01-01", "other", [], "other")
+        newest_first = self.related_note("newest-first", "2026-01-03", "other", [], "other")
+        newest_second = self.related_note("newest-second", "2026-01-03", "other", [], "other")
+        middle = self.related_note("middle", "2026-01-02", "other", [], "other")
+        result = build.rank_related_notes(source, [source, old, newest_first, newest_second, middle])
+        self.assertEqual(result["variant"], "latest")
+        self.assertEqual([entry["slug"] for entry in result["notes"]], ["newest-first", "newest-second", "middle"])
+
+    def test_rank_related_notes_returns_fewer_than_three_candidates(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", [], "snapshot")
+        candidate = self.related_note("candidate", "2026-01-02", "alpha", [], "snapshot")
+        result = build.rank_related_notes(source, [source, candidate])
+        self.assertEqual(len(result["notes"]), 1)
+        self.assertIs(result["notes"][0], candidate)
+
+    def test_rank_related_notes_no_candidates(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", [], "snapshot")
+        result = build.rank_related_notes(source, [source])
+        self.assertEqual(result, {"variant": "none", "notes": []})
+
+    def test_rank_related_notes_exact_shape_and_original_entries(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", [], "snapshot")
+        candidates = [
+            self.related_note(f"candidate-{index}", f"2026-01-0{index + 2}", "alpha", [], "snapshot")
+            for index in range(4)
+        ]
+        result = build.rank_related_notes(source, [source, *candidates])
+        self.assertEqual(set(result), {"variant", "notes"})
+        self.assertLessEqual(len(result["notes"]), 3)
+        for entry in result["notes"]:
+            self.assertTrue(any(entry is candidate for candidate in candidates))
+
 
 if __name__ == "__main__":
     write_metadata()
