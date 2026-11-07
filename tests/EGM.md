@@ -17,15 +17,14 @@
 - Structure checks compare generated metadata with the reviewed metadata fixture and validate generated routes, canonical URLs, feeds, and taxonomy. [test_site_structure.py:SiteStructureTest]
 - Browser tests preserve article links, search and filter behavior, focus visibility, accessibility checks, overflow coverage, and screenshot contracts. [visual.spec.ts:all catalog article appears on the homepage] [visual.spec.ts:research archive search] [visual.spec.ts:keyboard] [visual.spec.ts:accessibility] [visual.spec.ts:visual baseline]
 - Screenshot baselines cover 390, 768, and 1440 pixel widths. The configured screenshot tolerance is `maxDiffPixelRatio: 0.001` and must not be raised to hide a mismatch. [visual.spec.ts:widths] [playwright.config.ts:maxDiffPixelRatio] [README.md:Reviewing a visual change]
-- CI screenshot typography depends on Tinos from Croscore for editorial serif text and Noto Sans for interface text; aliasing the serif stack to Noto Serif changes line wrapping. [ci-fonts.conf:fontconfig] [.github/workflows/pages.yml:Match the fonts used to capture the baselines]
-- The standalone live UX audit uses its separate config and is not selected by the normal `tests/` Playwright config. [scripts/ux-audit.playwright.config.ts:testDir] [scripts/ux-audit.playwright.config.ts:testMatch] [playwright.config.ts:testDir]
+- Screenshot baselines are pinned to Tinos and Noto Sans; substituting Noto Serif changes line wrapping. The current CI workflow has no browser or font-install step. [ci-fonts.conf:fontconfig]
 
 ## Side Effects
 
 - Python test module setup calls `build.main()`, which rebuilds `dist/`. [test_content_integrity.py:setUpModule] [test_site_structure.py:setUpModule] [build.py:main]
 - `test_site_structure.py:write_metadata()` rewrites `tests/fixtures/metadata.json`; `signatures.py:write_fixture()` rewrites `tests/fixtures/content-signatures.json`. These are explicit fixture-refresh operations, not automatic test repair. [test_site_structure.py:write_metadata] [signatures.py:write_fixture]
-- Playwright may write screenshots and run artifacts under the configured test output paths. The standalone audit writes under `docs/ux-audit/evidence/`. [playwright.config.ts:snapshotDir] [scripts/ux-audit.spec.ts:evidenceDir]
-- The CI workflow invokes `npx playwright test` with the repository-root config; it does not invoke the standalone UX audit config. [../.github/workflows/pages.yml:Browser regression checks] [../playwright.config.ts:testDir]
+- Playwright may write screenshots and run artifacts under the configured test output paths. [playwright.config.ts:snapshotDir]
+- CI runs the Python build and content/structure checks; it does not invoke Playwright. The Playwright config selects `tests/`. [../playwright.config.ts:testDir]
 
 ## Verification
 
