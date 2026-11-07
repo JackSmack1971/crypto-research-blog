@@ -100,6 +100,78 @@
   #cr-sitebar { display: none; }
 }
 
+/* Related notes. Keep the generated region isolated from essay styles. */
+#cr-related {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: var(--cr-bg);
+  color: var(--cr-ink);
+  font: 400 13px/1.3 var(--cr-sans);
+  letter-spacing: 0.01em;
+  float: none;
+  box-sizing: border-box;
+}
+#cr-related * { box-sizing: border-box; }
+#cr-related .cr-related-inner {
+  max-width: var(--cr-container);
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+#cr-related h2 {
+  font-weight: 500;
+  font-size: clamp(1.28rem, 2vw, 1.65rem);
+  letter-spacing: -0.03em;
+  line-height: 1.13;
+  margin: 10px 0 8px;
+  text-wrap: balance;
+}
+#cr-related ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#cr-related li {
+  margin: 0;
+  padding: 26px 0;
+  list-style: none;
+  border-bottom: 1px solid var(--cr-line);
+}
+#cr-related a {
+  display: block;
+  height: 100%;
+  color: var(--cr-accent);
+  background: transparent;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: inherit;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+#cr-related a:visited { color: var(--cr-accent); }
+#cr-related a:hover { color: var(--cr-accent); }
+#cr-related a:focus-visible {
+  outline: 3px solid var(--cr-focus);
+  outline-offset: 4px;
+}
+#cr-related time {
+  display: block;
+  margin-top: 8px;
+  color: var(--cr-muted);
+  font: 700 0.65rem/1.4 var(--cr-sans);
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+@media (max-width: 639px) {
+  #cr-related h2 { font-size: 1.55rem; }
+  #cr-related li { padding: 22px 0; }
+}
+@media print {
+  #cr-related { display: none; }
+}
+
 /* Homepage and the small missing-page view. Scoped so essay class names
    such as .mast and .dek keep their own rules.
    The index lede (#3e4c48, 8.13:1) and entry dek (#31403c, 9.82:1)
