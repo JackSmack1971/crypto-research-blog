@@ -1,5 +1,25 @@
 [
   {
+    "slug": "binance-stablecoin-freeze-race",
+    "source": "binance-stablecoin-freeze-race.html",
+    "date": "2026-11-07",
+    "title": "The freeze came too late. But which delay actually mattered?",
+    "dek": "The Binance wallet takeover exposed two clocks in stablecoin enforcement: the long interval before anyone proposed a freeze, and the shorter but consequential interval while a proposed restriction awaited execution.",
+    "image": "assets/featured/binance-stablecoin-freeze-race.jpg",
+    "image_alt": "Editorial artwork of a secured vault and frozen stablecoin symbols, contrasting the long pre-proposal delay with the shorter freeze-approval window",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "risk-verification",
+    "assets": [
+      "USDT",
+      "USDC",
+      "RLUSD",
+      "ETH"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "when-risk-off-is-not-a-crisis",
     "source": "when-risk-off-is-not-a-crisis.html",
     "date": "2026-11-06",

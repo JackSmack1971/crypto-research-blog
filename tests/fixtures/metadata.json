@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "binance-stablecoin-freeze-race": {
+      "title": "Binance’s Stablecoin Freeze Race: The 130 Million USDT Window",
+      "description": "An on-chain reconstruction of Tether and Circle’s response to the Binance wallet takeover, exposing where freeze latency mattered and where it did not.",
+      "canonical": "https://independent-market-notes.netlify.app/binance-stablecoin-freeze-race/",
+      "og:title": "The freeze came too late. But which delay actually mattered?",
+      "og:description": "An on-chain reconstruction of Tether and Circle’s response to the Binance wallet takeover, exposing where freeze latency mattered and where it did not.",
+      "og:url": "https://independent-market-notes.netlify.app/binance-stablecoin-freeze-race/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "when-risk-off-is-not-a-crisis": {
       "title": "When Risk-Off Is Not a Crisis: What the November Selloff Really Proved",
       "description": "An evidence-led investigation of November 2026 market turbulence, AI repricing, crypto derivatives, Treasury yields and the limits of the risk-off narrative.",
@@ -282,6 +292,12 @@
     }
   },
   "rss": [
+    {
+      "title": "The freeze came too late. But which delay actually mattered?",
+      "link": "https://independent-market-notes.netlify.app/binance-stablecoin-freeze-race/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/binance-stablecoin-freeze-race/",
+      "description": "The Binance wallet takeover exposed two clocks in stablecoin enforcement: the long interval before anyone proposed a freeze, and the shorter but consequential interval while a proposed restriction awaited execution."
+    },
     {
       "title": "When Risk-Off Is Not a Crisis: What the November Selloff Really Proved",
       "link": "https://independent-market-notes.netlify.app/when-risk-off-is-not-a-crisis/",
