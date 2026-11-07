@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "while-clarity-stalls-agencies-write-crypto-rules": {
+      "title": "While CLARITY Stalls, Regulators Rewrite Crypto’s Rulebook",
+      "description": "SEC tokenized-stock exemptions, the CFTC’s December crypto rulemaking deadline, and GENIUS Act implementation reveal what is changing before January 3.",
+      "canonical": "https://independent-market-notes.netlify.app/while-clarity-stalls-agencies-write-crypto-rules/",
+      "og:title": "While CLARITY Stalls, Regulators Rewrite Crypto’s Rulebook",
+      "og:description": "SEC tokenized-stock exemptions, the CFTC’s December crypto rulemaking deadline, and GENIUS Act implementation reveal what is changing before January 3.",
+      "og:url": "https://independent-market-notes.netlify.app/while-clarity-stalls-agencies-write-crypto-rules/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "binance-stablecoin-freeze-race": {
       "title": "Binance’s Stablecoin Freeze Race: The 130 Million USDT Window",
       "description": "An on-chain reconstruction of Tether and Circle’s response to the Binance wallet takeover, exposing where freeze latency mattered and where it did not.",
@@ -302,6 +312,12 @@
     }
   },
   "rss": [
+    {
+      "title": "While CLARITY Stalls, Regulators Rewrite Crypto’s Rulebook",
+      "link": "https://independent-market-notes.netlify.app/while-clarity-stalls-agencies-write-crypto-rules/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/while-clarity-stalls-agencies-write-crypto-rules/",
+      "description": "Before Congress changes hands, SEC exemptions, CFTC proposals, and stablecoin implementation are creating sharply different pathways for digital assets."
+    },
     {
       "title": "The freeze came too late. But which delay actually mattered?",
       "link": "https://independent-market-notes.netlify.app/binance-stablecoin-freeze-race/",
