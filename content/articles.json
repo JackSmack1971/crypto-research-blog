@@ -20,6 +20,28 @@
     "research_type": "investigative-analysis"
   },
   {
+    "slug": "rwa-token-demand-vs-narrative",
+    "source": "rwa-token-demand-vs-narrative.html",
+    "date": "2026-11-07",
+    "title": "RWA Token Demand vs. the Narrative: What the Largest Holders Actually Show",
+    "dek": "Tokenized assets are attracting capital, and trading in real-world-asset derivatives is booming. But those milestones tell us remarkably little about who is buying the cryptocurrencies attached to the story.",
+    "image": "assets/featured/rwa-token-demand-vs-narrative.jpg",
+    "image_alt": "Editorial illustration of an institutional bank, RWA token labels, and an investigative ledger, contrasting financial adoption with unproven crypto-token demand",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "tokenomics",
+    "assets": [
+      "ONDO",
+      "LINK",
+      "XLM",
+      "PLUME",
+      "QNT",
+      "CFG"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "when-risk-off-is-not-a-crisis",
     "source": "when-risk-off-is-not-a-crisis.html",
     "date": "2026-11-06",

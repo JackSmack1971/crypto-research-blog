@@ -20,6 +20,16 @@
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
+    "rwa-token-demand-vs-narrative": {
+      "title": "RWA Token Demand vs. the Narrative: A Holder Audit",
+      "description": "Tokenized assets are growing. An examination of ONDO, LINK and other RWA-associated tokens reveals concentration, unlock risk and uncertain demand.",
+      "canonical": "https://independent-market-notes.netlify.app/rwa-token-demand-vs-narrative/",
+      "og:title": "RWA Token Demand vs. the Narrative: What the Largest Holders Actually Show",
+      "og:description": "Tokenized assets are growing. An examination of ONDO, LINK and other RWA-associated tokens reveals concentration, unlock risk and uncertain demand.",
+      "og:url": "https://independent-market-notes.netlify.app/rwa-token-demand-vs-narrative/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "when-risk-off-is-not-a-crisis": {
       "title": "When Risk-Off Is Not a Crisis: What the November Selloff Really Proved",
       "description": "An evidence-led investigation of November 2026 market turbulence, AI repricing, crypto derivatives, Treasury yields and the limits of the risk-off narrative.",
@@ -297,6 +307,12 @@
       "link": "https://independent-market-notes.netlify.app/binance-stablecoin-freeze-race/",
       "guid": "https://jacksmack1971.github.io/crypto-research-blog/binance-stablecoin-freeze-race/",
       "description": "The Binance wallet takeover exposed two clocks in stablecoin enforcement: the long interval before anyone proposed a freeze, and the shorter but consequential interval while a proposed restriction awaited execution."
+    },
+    {
+      "title": "RWA Token Demand vs. the Narrative: What the Largest Holders Actually Show",
+      "link": "https://independent-market-notes.netlify.app/rwa-token-demand-vs-narrative/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/rwa-token-demand-vs-narrative/",
+      "description": "Tokenized assets are attracting capital, and trading in real-world-asset derivatives is booming. But those milestones tell us remarkably little about who is buying the cryptocurrencies attached to the story."
     },
     {
       "title": "When Risk-Off Is Not a Crisis: What the November Selloff Really Proved",
