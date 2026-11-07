@@ -10,11 +10,10 @@ This repository builds a static publication of independent digital-asset researc
 - `site.json` supplies the site title, canonical URL, RSS GUID origin, language, and featured article. [site.json:title] [site.json:url] [site.json:rss_guid_origin] [site.json:language] [site.json:featured_slug]
 - `package.json` defines Python and Playwright development checks; `playwright.config.ts` runs the browser regression suite against a locally built site. [package.json:scripts] [playwright.config.ts:webServer]
 - The committed screenshot baselines cover 390, 768, and 1440 pixel viewports. Their `maxDiffPixelRatio` is `0.001`; do not raise it to mask visual changes. [tests/visual.spec.ts:widths] [playwright.config.ts:maxDiffPixelRatio] [README.md:Reviewing a visual change]
-- Screenshot rendering is pinned to Tinos for the editorial serif stack and Noto Sans for interface text. Substituting Noto Serif changes wrapping and invalidates screenshot comparisons. [tests/ci-fonts.conf:fontconfig] [.github/workflows/pages.yml:Match the fonts used to capture the baselines]
-- The separate UX audit is configured by `scripts/ux-audit.playwright.config.ts` and implemented by `scripts/ux-audit.spec.ts`. It visits the live canonical site and writes screenshots and findings to `docs/ux-audit/evidence/`. [scripts/ux-audit.playwright.config.ts:defineConfig] [scripts/ux-audit.spec.ts:test]
+- Screenshot rendering is pinned to Tinos for the editorial serif stack and Noto Sans for interface text. Substituting Noto Serif changes wrapping and invalidates screenshot comparisons. The current CI workflow has no browser or font-install step. [tests/ci-fonts.conf:fontconfig]
 - [Editorial catalog contract](./content/EGM.md)
 - [Browser and content verification contract](./tests/EGM.md)
-- [Maintenance and standalone audit scripts](./scripts/EGM.md)
+- [Maintenance scripts](./scripts/EGM.md)
 
 ## Global Invariants
 
@@ -27,12 +26,10 @@ This repository builds a static publication of independent digital-asset researc
 
 - `python3 build.py` deletes and recreates `dist/`, then writes generated site output there. [build.py:main]
 - `npx playwright test` starts the configured local build and HTTP server and may write Playwright artifacts to its configured output directories. [playwright.config.ts:webServer]
-- The standalone audit makes requests to the public Netlify site and writes PNGs and `findings.json` under `docs/ux-audit/evidence/`. [scripts/ux-audit.spec.ts:origin] [scripts/ux-audit.spec.ts:evidenceDir]
 - A push to `main` can trigger the GitHub Pages deploy after its required jobs pass. `netlify.toml` sets `python3 build.py` and `dist/` but does not encode a production branch; the README documents `main` as the expected Netlify production branch, whose live setting is outside this repository. [.github/workflows/pages.yml:deploy] [netlify.toml:command] [netlify.toml:publish] [README.md:Netlify]
 
 ## System Verification
 
 - Build: `python3 build.py`
 - Python checks: `python3 -m unittest discover -s tests -p 'test_*.py'`
-- CI browser regression suite: `npm ci` then `npx playwright install chromium` and `npx playwright test`
-- Standalone live UX audit: `npx playwright test --config scripts/ux-audit.playwright.config.ts`
+- Optional local browser suite (`npm ci`, `npx playwright install chromium`, then `npx playwright test`); CI does not install Chromium or run Playwright.

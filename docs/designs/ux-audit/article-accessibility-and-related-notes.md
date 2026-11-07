@@ -108,6 +108,8 @@ Current generated pages
 
 **Tests:** Add the Slice 2 Playwright assertion listed in Detailed Implementation and run it with `npx playwright test tests/visual.spec.ts --grep "accessibility › UX-01–03 and UX-09 contrast passes for"`. Define the literal `APPROVED_CONTRAST_STATES` array in `tests/visual.spec.ts`, with one entry per evidence-matrix row marked approved and fields `finding`, `route`, `viewport`, `colorScheme`, `selector`, and `minRatio`. Tests read this array only and assert exactly its entries; do not parse Markdown. In the same PR, code review confirms the array matches all approved rows and omits pending/rejected rows. Non-reproduced findings have no test. **Slice 2 acceptance:** GitHub Actions `styling-check` is green for the slice PR, including the browser and accessibility checks; this is an explicit exit criterion.
 
+Superseded 2026-11-07: styling-check is not a current CI job; see the Phase 1 closure note and the Slice 4b scope note for the current publication gates.
+
 **PR #10 red-CI exception:** PR #10 was merged while `styling-check` was red because run `41984687443` failed on the Binance and token-unlock contrast findings already present in base run `41918001423` at `550cce4` (148 browser tests passed; the same two route tests failed). This was a documented baseline exception for Slice 1 only. It does not carry forward: Slice 2 acceptance requires `styling-check` green. (UX-09)
 
 **Rollback:** Revert only the 404 selector change or the specific essay color declarations that fail rendered contrast or alter unrelated presentation. Retain the measured baseline and failed result in the design document; leave fixtures unchanged. (UX-01–03, UX-09)
