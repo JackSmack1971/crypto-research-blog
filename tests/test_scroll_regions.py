@@ -78,6 +78,7 @@ class ScrollRegionsTest(unittest.TestCase):
                     flags=re.I | re.S,
                 )
                 self.assertEqual(bar_count, 1, "expected the generated site bar")
+                built_body = build.strip_related_nav(built_body)
 
                 wrapper, count = re.subn(
                     rf'<div class="{re.escape(class_name)}"[^>]*>',

@@ -144,6 +144,10 @@ After reviewing the artifact, Bret records exactly `approved` or `deferred`, plu
 
 ### Slice 4b: Add generated related-notes navigation
 
+#### Slice 4b scope note
+
+Screenshot normalization (`FOOTER_BASELINE_SLUGS`) and baseline refresh are deferred to Slice 4c because visual baselines are unusable on this Windows machine; the cause is unattributed (F-02). The Python build and unit suite are the publication gates. Playwright is optional local evidence.
+
 Start only after Phase 1 is closed and the Slice 4 gate records `approved` with a date. Use the exact ranking contract defined in Slice 4a. (ED-01, ED-07)
 
 **Files and purpose**

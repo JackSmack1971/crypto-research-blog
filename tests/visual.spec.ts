@@ -1,8 +1,9 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { expect, test, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-type Article = { slug: string; topic: string; assets: string[]; research_type: string };
+type Article = { slug: string; title: string; date: string; topic: string; assets: string[]; research_type: string };
 const articles = JSON.parse(readFileSync("content/articles.json", "utf8")) as Article[];
 const routes = ["/", ...articles.map((article) => `/${article.slug}/`), "/404.html"];
 const widths = [390, 768, 1440];
@@ -254,6 +255,74 @@ test.describe("accessibility", () => {
       expect(unexpected, JSON.stringify(unexpected, null, 2)).toEqual([]);
     });
   }
+});
+
+test.describe("related notes", () => {
+  test("server-rendered region and links are valid for every article", async ({ page }) => {
+    for (const article of articles) {
+      const route = `/${article.slug}/`;
+      await prepare(page, route);
+      const nav = page.locator("#cr-related");
+      await expect(nav).toHaveCount(1);
+      await expect(page.locator("body > :last-child")).toHaveAttribute("id", "cr-related");
+
+      const articleLinks = nav.locator("li a");
+      const hrefs = await articleLinks.evaluateAll((links) =>
+        links.map((link) => (link as HTMLAnchorElement).getAttribute("href") ?? ""));
+      expect(hrefs.length).toBeGreaterThanOrEqual(1);
+      expect(hrefs.length).toBeLessThanOrEqual(3);
+      for (const href of hrefs) {
+        const target = new URL(href, `http://localhost${route}`);
+        const segments = target.pathname.split("/").filter(Boolean);
+        expect(segments[0]).not.toBe(article.slug);
+        expect(existsSync(resolve("dist", ...segments, "index.html"))).toBe(true);
+      }
+
+      await expect(nav.getByRole("link", { name: "All notes" })).toHaveAttribute("href", "../");
+      expect(existsSync(resolve("dist", "index.html"))).toBe(true);
+    }
+  });
+
+  test("remains available without JavaScript", async ({ browser }) => {
+    const context = await browser.newContext({ javaScriptEnabled: false });
+    try {
+      const page = await context.newPage();
+      for (const article of articles) {
+        await page.goto(`http://127.0.0.1:4173/${article.slug}/`, { waitUntil: "networkidle" });
+        const nav = page.locator("#cr-related");
+        await expect(nav).toBeVisible();
+        const relatedLinks = await nav.locator("li a").count();
+        expect(relatedLinks).toBeGreaterThanOrEqual(1);
+        expect(relatedLinks).toBeLessThanOrEqual(3);
+        await expect(nav.locator("a")).toHaveCount(relatedLinks + 1);
+        for (const link of await nav.locator("a").all()) await expect(link).toBeVisible();
+        await expect(nav.getByRole("link", { name: "All notes" })).toHaveAttribute("href", "../");
+      }
+    } finally {
+      await context.close();
+    }
+  });
+
+  test("keeps computed styles consistent across articles", async ({ page }) => {
+    let baseline: string[] | undefined;
+    for (const article of articles) {
+      await prepare(page, `/${article.slug}/`);
+      const values = await page.locator("#cr-related").evaluate((element) => {
+        const style = getComputedStyle(element);
+        return [style.fontFamily, style.fontSize, style.color, style.backgroundColor];
+      });
+      if (baseline) expect(values).toEqual(baseline);
+      else baseline = values;
+    }
+  });
+
+  test("adds no axe violations", async ({ page }) => {
+    for (const article of articles) {
+      await prepare(page, `/${article.slug}/`);
+      const results = await new AxeBuilder({ page }).include("#cr-related").analyze();
+      expect(results.violations, JSON.stringify(results.violations, null, 2)).toEqual([]);
+    }
+  });
 });
 
 test.describe("visual baseline", () => {
