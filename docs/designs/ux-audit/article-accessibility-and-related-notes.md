@@ -222,8 +222,9 @@ No other visual target may be refreshed for this slice. The normalized screensho
 
 ## Slice 4 Gate
 
-* **Decision:** pending (set to exactly `approved` or `deferred` after reviewing `evidence/related-dryrun.md`)
-* **Date:** pending (ISO `YYYY-MM-DD`)
+* **Decision:** approved
+* **Date:** 2026-11-06
+* Reviewed `evidence/related-dryrun.md` at e0ba417, 27 articles (27 related / 0 latest / 0 none). Known weak spots accepted: score-1 third picks in 6 articles, inbound skew toward newest notes, 3 articles never selected.
 
 Slice 4b is blocked unless the decision is `approved` and a date is recorded. (ED-01)
 
