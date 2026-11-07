@@ -245,6 +245,45 @@ class SiteStructureTest(unittest.TestCase):
         self.assertEqual(result["variant"], "related")
         self.assertEqual([item["slug"] for item in result["notes"]], ["tie-earlier", "tie-later", "topic-type"])
 
+    def test_render_related_notes_renders_related_markup_and_escapes_catalog_values(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", ["BTC"], "snapshot")
+        candidate = self.related_note('candidate" data-x="1', '2026-01-02" data-x="1', "alpha", ["BTC"], "snapshot")
+        candidate["title"] = 'A <Note> "quoted" & checked'
+        expected = (
+            '<nav id="cr-related" aria-label="More notes"><div class="cr-related-inner">'
+            '<h2>Related notes</h2><ul><li><a href="../candidate&quot; data-x=&quot;1/">'
+            'A &lt;Note&gt; &quot;quoted&quot; &amp; checked</a> '
+            '<time datetime="2026-01-02&quot; data-x=&quot;1">'
+            '2026-01-02&quot; data-x=&quot;1</time></li></ul>'
+            '<a href="../">All notes</a></div></nav>'
+        )
+        with patch.object(
+            build,
+            "rank_related_notes",
+            return_value={"variant": "related", "notes": [candidate]},
+        ):
+            self.assertEqual(build.render_related_notes(source, [source, candidate]), expected)
+
+    def test_render_related_notes_uses_latest_notes_when_scores_are_zero(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", [], "snapshot")
+        candidate = self.related_note("candidate", "2026-01-02", "other", [], "other")
+        candidate["title"] = "Latest & safest"
+        self.assertEqual(
+            build.render_related_notes(source, [source, candidate]),
+            '<nav id="cr-related" aria-label="More notes"><div class="cr-related-inner">'
+            '<h2>Latest notes</h2><ul><li><a href="../candidate/">'
+            'Latest &amp; safest</a> <time datetime="2026-01-02">2026-01-02</time></li></ul>'
+            '<a href="../">All notes</a></div></nav>',
+        )
+
+    def test_render_related_notes_omits_latest_heading_for_single_article(self) -> None:
+        source = self.related_note("source", "2026-01-01", "alpha", [], "snapshot")
+        self.assertEqual(
+            build.render_related_notes(source, [source]),
+            '<nav id="cr-related" aria-label="More notes"><div class="cr-related-inner">'
+            '<a href="../">All notes</a></div></nav>',
+        )
+
     def test_rank_related_notes_one_shared_asset_beats_same_topic(self) -> None:
         source = self.related_note("source", "2026-01-01", "alpha", ["BTC"], "snapshot")
         same_topic = self.related_note("topic", "2026-01-03", "alpha", [], "other")

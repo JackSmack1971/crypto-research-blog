@@ -535,6 +535,26 @@ def rank_related_notes(note: dict, notes: list[dict]) -> dict:
     return {"variant": variant, "notes": [item[3] for item in ranked[:3]]}
 
 
+def render_related_notes(note: dict, notes: list[dict]) -> str:
+    result = rank_related_notes(note, notes)
+    variant = result["variant"]
+    parts = ['<nav id="cr-related" aria-label="More notes"><div class="cr-related-inner">']
+    if variant != "none":
+        heading = "Related notes" if variant == "related" else "Latest notes"
+        parts.extend((f"<h2>{escape(heading)}</h2>", "<ul>"))
+        for related in result["notes"]:
+            slug = escape(str(related["slug"]), quote=True)
+            title = escape(str(related["title"]))
+            date_value = escape(str(related["date"]), quote=True)
+            parts.append(
+                f'<li><a href="../{slug}/">{title}</a> '
+                f'<time datetime="{date_value}">{date_value}</time></li>'
+            )
+        parts.append("</ul>")
+    parts.extend(('<a href="../">All notes</a>', "</div></nav>"))
+    return "".join(parts)
+
+
 SCROLL_REGION_LABELS = {
     "aero-at-0-68": ("table-scroll", "AERO unlock data table"),
     "bitcoin-buying-imbalance": (
@@ -573,7 +593,11 @@ def add_scroll_region_accessibility(slug: str, html: str) -> str:
     return html[: match.start()] + accessible_tag + html[match.end() :]
 
 
-def render_article(note: dict, site: dict) -> str:
+def render_article(
+    note: dict, site: dict, notes: list[dict] | None = None
+) -> str:
+    if notes is None:
+        notes = [note]
     html = note["html"]
     article_url = f'{site["url"]}/{note["slug"]}/'
     # A configured domain change must replace canonicals embedded in source
@@ -596,7 +620,13 @@ def render_article(note: dict, site: dict) -> str:
     if not body_match:
         die(f"{note['slug']} is missing <body>")
     bar = article_bar(site)
-    return html[: body_match.end()] + bar + html[body_match.end() :]
+    related = render_related_notes(note, notes)
+    body_end = re.search(r"</body>", html, flags=re.I)
+    if not body_end:
+        die(f"{note['slug']} is missing </body>")
+    html = html[: body_match.end()] + bar + html[body_match.end() :]
+    body_end = re.search(r"</body>", html, flags=re.I)
+    return html[: body_end.start()] + related + html[body_end.start() :]
 
 
 def page_shell(
@@ -865,6 +895,15 @@ def strip_site_bar(html: str) -> str:
     return stripped
 
 
+def strip_related_nav(html: str) -> str:
+    stripped, count = re.subn(
+        r'<nav id="cr-related"[^>]*>.*?</nav>', "", html, count=1, flags=re.S
+    )
+    if count != 1:
+        die("built article is missing the related notes navigation")
+    return stripped
+
+
 def looks_external(url: str) -> bool:
     if url.startswith(("mailto:", "tel:", "data:", "javascript:", "#")):
         return True
@@ -948,7 +987,27 @@ def verify(notes: list[dict]) -> None:
         built = page.read_text(encoding="utf-8")
         if 'href="../"' not in built:
             die(f"{note['slug']} is missing the link back home")
-        if visible_text(strip_site_bar(body_inner(built))) != visible_text(body_inner(note["html"])):
+        body = body_inner(built)
+        if len(re.findall(r'<nav id="cr-sitebar"(?=[\s>])', body)) != 1:
+            die(f"{note['slug']} must contain exactly one site header")
+        if len(re.findall(r'<nav id="cr-related"(?=[\s>])', body)) != 1:
+            die(f"{note['slug']} must contain exactly one related notes navigation")
+        if not body.lstrip().startswith('<nav id="cr-sitebar"'):
+            die(f"{note['slug']} site header is not the first body child")
+        if not re.search(r'<nav id="cr-related"[^>]*>.*?</nav>\s*$', body, flags=re.S):
+            die(f"{note['slug']} related notes navigation is not the last body child")
+        related_match = re.search(r'<nav id="cr-related"[^>]*>.*?</nav>', body, flags=re.S)
+        related_parser = LinkCollector()
+        related_parser.feed(related_match.group(0))
+        related_parser.close()
+        expected_hrefs = [f"../{item['slug']}/" for item in rank_related_notes(note, notes)["notes"]]
+        expected_hrefs.append("../")
+        if related_parser.hrefs != expected_hrefs:
+            die(f"{note['slug']} related notes links do not match the catalog ranking")
+        for href in related_parser.hrefs:
+            resolve_local(page, href)
+        visible_body = strip_related_nav(strip_site_bar(body))
+        if visible_text(visible_body) != visible_text(body_inner(note["html"])):
             die(f"{note['slug']} body text changed during the build")
         if note["image"]:
             img = note["image"]
@@ -992,7 +1051,7 @@ def main() -> None:
     for note in notes:
         out = DIST / note["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(render_article(note, site), encoding="utf-8")
+        out.write_text(render_article(note, site, notes), encoding="utf-8")
     (DIST / "index.html").write_text(render_home(notes, site), encoding="utf-8")
     (DIST / "404.html").write_text(render_404(site), encoding="utf-8")
     (DIST / "feed.xml").write_text(render_feed(notes, site), encoding="utf-8")
