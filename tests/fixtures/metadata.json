@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-monday-76000-pressure-test": {
+      "title": "Bitcoin at $76,000: The Monday Rebound That Still Needs Proof",
+      "description": "Bitcoin stabilized near $76,000 after a sharp selloff, but ETF outflows, thin spot-flow samples and rebuilding leverage leave Monday’s direction unresolved.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-monday-76000-pressure-test/",
+      "og:title": "Bitcoin at $76,000: The Monday Rebound That Still Needs Proof",
+      "og:description": "Bitcoin stabilized near $76,000 after a sharp selloff, but ETF outflows, thin spot-flow samples and rebuilding leverage leave Monday’s direction unresolved.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-monday-76000-pressure-test/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "mercado-bitcoin-hack-containment-timeline": {
       "title": "Mercado Bitcoin Hack: Why Wallets Kept Draining | Independent Market Notes",
       "description": "Mercado Bitcoin said its hack was contained, but researchers found later wallet drains. Examine the timeline, disputed losses, and remaining security risks.",
@@ -322,6 +332,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin at $76,000: The Monday Rebound That Still Needs Proof",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-monday-76000-pressure-test/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-monday-76000-pressure-test/",
+      "description": "Bitcoin stabilized near $76,000 after a sharp selloff, but ETF outflows, a misleadingly calm funding market and a rebound in open interest make one question unavoidable: is the selling finished, or merely paused?"
+    },
     {
       "title": "Mercado Bitcoin Said the Hack Was Contained. The Wallets Kept Draining.",
       "link": "https://independent-market-notes.netlify.app/mercado-bitcoin-hack-containment-timeline/",

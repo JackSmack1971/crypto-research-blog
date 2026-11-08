@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bitcoin-monday-76000-pressure-test",
+    "source": "bitcoin-monday-76000-pressure-test.html",
+    "date": "2026-11-08",
+    "title": "Bitcoin at $76,000: The Monday Rebound That Still Needs Proof",
+    "dek": "Bitcoin stabilized near $76,000 after a sharp selloff, but ETF outflows, a misleadingly calm funding market and a rebound in open interest make one question unavoidable: is the selling finished, or merely paused?",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-monday-76000-pressure-test.jpg",
+    "image_alt": "Conceptual editorial artwork showing two opposing stone-like market masses compressing a narrow illuminated seam, symbolizing uncertainty between Bitcoin recovery and renewed selling; no market data are depicted.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "mercado-bitcoin-hack-containment-timeline",
     "source": "mercado-bitcoin-hack-containment-timeline.html",
     "date": "2026-11-07",
