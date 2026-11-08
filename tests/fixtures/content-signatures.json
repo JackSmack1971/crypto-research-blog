@@ -281,15 +281,19 @@
         ]
       ]
     ],
-    "alts": [],
+    "alts": [
+      "Conceptual editorial artwork showing two opposing stone-like market masses compressing a narrow illuminated seam, symbolizing uncertainty between Bitcoin recovery and renewed selling; no market data are depicted."
+    ],
     "svgCount": 3,
     "svgSha256": [
       "0bb86848d4b71ff554474b89b91a64f713c8413ca935c63da1f124471a88b162",
       "c2a2485da1fff39f86a0e3da18f701963cb5c9855e6369c800bfd659235eca31",
       "8e3fe5b3e30fdfb2a44fddb12b9a3485d15837af60ba6cafd92454d14ccc93b9"
     ],
-    "imageCount": 0,
-    "imageSha256": [],
+    "imageCount": 1,
+    "imageSha256": [
+      "27239d5bbbbed6580bf6dc9cb2f6a87239941dc55ad48af3cb8d65bf3a848cdc"
+    ],
     "scriptCount": 1,
     "scriptSha256": [
       "3cdd550505370211c3dbbbcfe2032e751c0eb2fb4d2b632e72228a597ab0f1f3"
