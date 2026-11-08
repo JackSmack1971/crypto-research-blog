@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "mercado-bitcoin-hack-containment-timeline": {
+      "title": "Mercado Bitcoin Hack: Why Wallets Kept Draining | Independent Market Notes",
+      "description": "Mercado Bitcoin said its hack was contained, but researchers found later wallet drains. Examine the timeline, disputed losses, and remaining security risks.",
+      "canonical": "https://independent-market-notes.netlify.app/mercado-bitcoin-hack-containment-timeline/",
+      "og:title": "Mercado Bitcoin Said the Hack Was Contained. The Wallets Kept Draining.",
+      "og:description": "Mercado Bitcoin said its hack was contained, but researchers found later wallet drains. Examine the timeline, disputed losses, and remaining security risks.",
+      "og:url": "https://independent-market-notes.netlify.app/mercado-bitcoin-hack-containment-timeline/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "while-clarity-stalls-agencies-write-crypto-rules": {
       "title": "While CLARITY Stalls, Regulators Rewrite Crypto’s Rulebook",
       "description": "SEC tokenized-stock exemptions, the CFTC’s December crypto rulemaking deadline, and GENIUS Act implementation reveal what is changing before January 3.",
@@ -312,6 +322,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Mercado Bitcoin Said the Hack Was Contained. The Wallets Kept Draining.",
+      "link": "https://independent-market-notes.netlify.app/mercado-bitcoin-hack-containment-timeline/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/mercado-bitcoin-hack-containment-timeline/",
+      "description": "The exchange announced rapid containment. Researchers say customer deposit addresses continued transferring funds. The unanswered question is who still controlled the signatures."
+    },
     {
       "title": "While CLARITY Stalls, Regulators Rewrite Crypto’s Rulebook",
       "link": "https://independent-market-notes.netlify.app/while-clarity-stalls-agencies-write-crypto-rules/",
