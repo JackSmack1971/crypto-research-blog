@@ -1,4 +1,369 @@
 {
+  "aptos-unlock-calendar-discrepancy": {
+    "text": "Independent Crypto ResearchInvestigations · Tokenomics · Market Structure Investigation / Token unlocksAptos Unlock Calendars Still List Investors After Vesting EndsOne November calendar projects 14.38 million APT, including investor and insider allocations. Another projects 4.54 million. The original vesting arithmetic explains much of the gap—but the Foundation’s separate 210 million APT staking commitment poses a harder question.ARTOfficial IntelligenceNovember 8, 2026Research cutoff: November 8, 2026 Editorial illustration. The lock and calendar are symbolic, not images of a verified on-chain transaction. Aptos says its original investor and contributor vesting cycle is finished. Yet a prominent public unlock calendar continues to assign November tokens to investors and insiders. The discrepancy is not a rounding error. It changes the apparent size and composition of the next supply event—and invites a larger question about how confidently the market should treat the numbers displayed on token-unlock dashboards. The opposing estimates are striking. Tokenomics.com lists 14,377,312 APT for November 12, 2026, with 19.5% attributed to private investors and 27.5% to insiders. DefiLlama instead lists approximately 4.54 million APT for November 11, with community and foundation allocations. Blockworks independently displays 4.54 million APT for November 12 and marks the original investor and contributor categories fully unlocked. Dates, release definitions and data-provider assumptions can differ. But the first test is simpler: do those purported investor tranches still exist under Aptos’s published genesis schedule? What the evidence saysAptos publicly states that genesis investor and core-contributor vesting concluded October 12, 2026.The original schedule yields approximately 4.543 million APT per month for continuing community and foundation releases.The extra investor and insider portions in Tokenomics.com’s November projection closely resemble the old monthly vesting installments.A separate Foundation commitment to permanently stake 210 million APT is documented, but a publicly reproducible account-level proof of permanent restrictions was not established in the available evidence. The original vesting terms are the useful starting point Aptos published its tokenomics overview at mainnet launch in October 2022. Of the one billion APT minted at genesis, 510.217 million were assigned to the community, 165 million to the Foundation, 190 million to core contributors and approximately 134.783 million to investors. The first two groups followed extended ten-year distribution schedules. The latter two had a twelve-month lock, six accelerated monthly installments, and then smaller monthly installments until their allocations were exhausted. The contract described a four-year lockup horizon; the arithmetic establishes why the final installment need not occur on the fourth anniversary itself. Genesis allocationInitial allocationOrdinary monthly installmentCommunity510.217M APT3,210,145 APTFoundation165.000M APT1,333,333 APTCore contributors190.000M APT3,958,333 APT (late vesting period)Investors134.783M APT2,807,972 APT (late vesting period) Derived from Aptos’s original 2022 allocations and vesting terms. Monthly figures are rounded; these are scheduled entitlements, not individually verified deposits or exchange transfers. For each investor or contributor allocation, the published installments sum to the full grant: 6 × (3/48) + 30 × (1/48) = 1 That is six accelerated installments and thirty ordinary installments. Under the publicly described schedule beginning in October 2023, the last ordinary installment falls in September 2026. October 12, 2026, then marks the formal fourth anniversary. The distinction helps explain why some coverage calls September 12 the last investor and contributor release while Aptos calls October 12 the end of the cycle. On October 13, the official Aptos account stated that the schedule had concluded the previous day and that no genesis investor or core-contributor tokens remained to unlock. This is an attributable issuer assertion consistent with the original formula—not an independently reconstructed list of final beneficiary transactions. Where the 9.83 million APT disagreement comes from Once the investor and core-contributor schedules are complete, the unchanged original community and Foundation installments total about 4,543,478 APT monthly. That matches DefiLlama and Blockworks within ordinary rounding. Tokenomics.com’s 14,377,312 APT is about 3.16 times as large, a difference of roughly 9,833,834 APT. November 2026: published calendar estimatesTokenomics.com · Nov 1214.38M APTDefiLlama · Nov 114.54M APTBars begin at zero and compare forecasts, not observed token movements. Source: respective published calendars, reviewed November 8, 2026. The larger calendar’s recipient percentages offer a telling numerical fingerprint. Its reported 19.5% investor share implies roughly 2.80 million APT; its 27.5% insider share implies roughly 3.95 million. Those figures closely match the old investor installment of 2.808 million and core-contributor installment of 3.958 million. That correspondence supports a plausible interpretation: the model may be extending an expired schedule. It does not establish why the provider calculates the larger number. Its community component is also about 3.07 million APT above the original community installment. Tokenomics.com includes staking rewards in a broad community classification, raising the possibility that the forecast incorporates estimated emissions or another accounting category. A provider-level formula, dated source inputs and classification rules would be needed to prove the exact cause. There is a second denominator problem. Tokenomics.com’s page describes 2.1 billion APT as the overall scheduled supply through 2044. But the 2.1 billion figure is a hard supply cap, whereas the original one-billion genesis distribution and subsequent staking emissions are different mechanisms. Counting long-horizon potential issuance as locked scheduled vesting risks presenting a ceiling as if it were an already minted treasury inventory. Unlock, issuance, distribution and sale are not synonyms This is where unlock coverage often loses precision. A vesting event changes an entitlement or transfer restriction. Staking rewards create new token supply. A Foundation grant redistributes an existing balance. An exchange deposit transfers custody. An actual sale creates market flow. None of these events is interchangeable, and the same token can appear in multiple stages without representing multiple new units of supply. Aptos also changed its emissions economics in 2026. AIP-140 proposed reducing staking rewards and imposing a 2.1 billion APT cap. Later issuer updates describe a 2.6% reward rate and cap as implemented. These changes matter for forward supply modeling but do not themselves revive expired genesis investor grants. The most defensible reading of the 4.54 million figure is therefore deliberately narrow: it reconstructs the monthly community-and-Foundation schedule under the original terms, assuming those schedules remain applicable. It is not proof that 4.54 million newly sellable tokens will reach exchanges in November. The separate claim: 210 million APT permanently staked Alongside the unlock milestone, the Aptos Foundation announced that it would permanently stake 210 million APT and support its operations using the resulting staking rewards instead of selling the principal. In principle, that is a consequential change in the supply story. Permanently restricted principal should not be treated as ordinary future sale inventory. But the word permanently requires more than a pledge. Standard staking arrangements can include owner-authorized unlock and withdrawal functions, subject to protocol rules. Demonstrating that tokens are presently staked is not equivalent to demonstrating that the owner—or another authorized controller—cannot ever withdraw them. Blockworks’s October 20 research report described the 210 million APT as locked and counted it against undistributed Foundation and community holdings. That is an important published research claim, but the material available for this investigation did not establish a Foundation-authenticated mapping of the relevant staking accounts, deposit transactions, principal balances, and irrevocable withdrawal restrictions. A particularly revealing technical check concerns governance proposal #183. It has been cited in connection with the Foundation’s tokenomics reform. The published Move source for its supply-cap voting step identifies an empty governance proposal used for voting. Its execution does not, by itself, prove that 210 million tokens were transferred into a non-withdrawable arrangement. That is not evidence that the Foundation failed to carry out its commitment. A separate lock could exist. It does establish a limit on the common shortcut of citing the executed governance vote as sufficient proof of the permanent custody restriction. What would establish the lock?Authenticated Foundation-controlled account addresses; a complete balance reconciliation totaling 210 million APT; transaction hashes and ledger versions for the relevant deposits; deployed Move modules or resource-account authority records; and an explanation of whether any admin, owner, or upgrade path can release the principal. Staking reward balances should be identified separately. Why the remaining 210 million question changes the analysis Blockworks estimated approximately 335 million APT remained unvested in October, with 210 million supposedly permanently staked, leaving about 125 million for future distribution. Its implied remaining annual release pace was lower than the straightforward 54.52 million APT annualized from the original community-and-Foundation installments. Those figures should not be collapsed into one definitive schedule without reconciling which locked holdings overlap the original vesting buckets. If a permanent lock takes effect on balances already counted as future unlocks, a calendar can overstate sellable supply even if its mechanical vesting schedule is accurate. If, by contrast, the commitment covers previously circulating or separately classified stake, subtracting it from the remaining vesting schedule may double count the restriction. The distinction is economically meaningful. A permanently restricted token and a token freely withdrawable after a staking cooldown have different potential market behaviors. Yet neither behaves exactly like a burn while it remains in supply and continues earning staking rewards. The principal may be restricted while the yield is spendable—precisely the arrangement described by the Foundation’s operating model. What the calendars can—and cannot—say about price At a November 8 snapshot price of approximately $0.5952 per APT, the smaller estimate represents roughly $2.70 million of notional tokens; the larger one about $8.56 million. Those are illustrations based on the snapshot, not forward prices or forecasts of market impact. A calendar estimate is not a sell order. Even an accurately scheduled release does not reveal when holders will transfer, lend, collateralize or sell. A serious liquidity assessment would require the actual recipient accounts, transfer events, exchange inflows, bid and ask depth across venues, and evidence of subsequent execution. None of those can responsibly be inferred from a calendar countdown. The market may still price expectations before an event. That makes bad classification consequential: a trader reading a forecast of new investor supply may form a materially different risk expectation from one reading a community/Foundation-only installment, particularly when the headline total differs by almost ten million APT. What could overturn the preliminary interpretation? Tokenomics.com could identify a legitimate, distinct November tranche not covered by the original genesis schedule; publish a fully reconciled methodology showing why its current investor and insider labels remain appropriate; or demonstrate that the labels mean something broader than the original investor and contributor pools. Any of those findings would require revising the conclusion that its forecast appears to extend expired vesting entries. Similarly, Aptos could publish account addresses and immutable lock controls that decisively validate its 210 million commitment. An independently reproduced historical transfer and resource audit could settle the timing of the last genesis investor distribution. At the time of this report, neither the final beneficiary-level transfer trail nor the permanent-lock enforcement had been established from the identified public records. The Aptos Foundation has been sent a technical inquiry requesting custody addresses, transaction identifiers, withdrawal-authority information and an explanation of the November recipient categories. As of this research cutoff, no response is included in the record used for this article. A subsequent technical clarification would materially improve the supply accounting. My conclusion: accurate supply reporting starts with accurate categories What stands out to me is not merely the size of the conflicting numbers. It is how easily several true-sounding statements can become one misleading market narrative. Genesis vesting can be complete. Staking issuance can continue. A Foundation can promise to withhold principal. A tracker can still display a larger “unlock.” Each statement lives in a different accounting category. The original Aptos schedule, the issuer’s completion statement and the independent smaller calendars all point in the same direction: routine genesis investor and contributor unlocks should no longer be appearing as November 2026 releases. The larger calendar’s investor and insider amounts resemble installments from that completed schedule, but its exact calculation method has not been established. And the 210 million APT commitment remains a separate test of transparency. If the principal has been irreversibly locked, publishing the addresses and restrictions would let outside observers verify a meaningful reduction in available supply. Until then, the careful distinction is between a documented commitment and proven code-enforced permanence. For anyone using unlock dashboards to understand supply risk, that distinction is the story. Source documents and technical recordsAptos — Original Tokenomics Overview: genesis allocation amounts and vesting mechanics (October 2022).Aptos official announcements: issuer statements about the October 12, 2026 completion of genesis investor and contributor vesting.Tokenomics.com — Aptos Unlock Schedule: 14,377,312 APT November 12 projection and recipient categories (accessed November 8, 2026).DefiLlama — Aptos Unlocks: 4.54 million APT November projection (accessed November 8, 2026).Blockworks — Aptos Token Unlocks: final original contributor and investor allocation status; continuing community/Foundation schedule.Aptos AIP-140: 2026 tokenomics proposal and 210 million permanent staking commitment.Aptos Governance Proposal #183 and associated Move source: governance-voting implementation, not itself a staking-lock transaction.Blockworks Research — Aptos Tokenomics: Path to Deflation (October 20, 2026): interpretation of permanent staking and remaining emissions.Aptos Explorer: canonical portal for future transaction- and account-level corroboration. Research snapshot: November 8, 2026. Figures describing future unlocks are estimates from published provider schedules, not observed November disbursements. The supplied investigation did not independently attribute a final investor transfer hash or a 210 million APT permanent-lock transaction. This article does not constitute investment advice. ARTOfficial Intelligence · Independent research and analysis. Publication URL and social-sharing image URL are to be resolved by the site publisher.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Aptos Unlock Calendars Still List Investors After Vesting Ends"
+      },
+      {
+        "tag": "h2",
+        "text": "What the evidence says"
+      },
+      {
+        "tag": "h2",
+        "text": "The original vesting terms are the useful starting point"
+      },
+      {
+        "tag": "h2",
+        "text": "Where the 9.83 million APT disagreement comes from"
+      },
+      {
+        "tag": "h2",
+        "text": "Unlock, issuance, distribution and sale are not synonyms"
+      },
+      {
+        "tag": "h2",
+        "text": "The separate claim: 210 million APT permanently staked"
+      },
+      {
+        "tag": "h2",
+        "text": "Why the remaining 210 million question changes the analysis"
+      },
+      {
+        "tag": "h2",
+        "text": "What the calendars can—and cannot—say about price"
+      },
+      {
+        "tag": "h2",
+        "text": "What could overturn the preliminary interpretation?"
+      },
+      {
+        "tag": "h2",
+        "text": "My conclusion: accurate supply reporting starts with accurate categories"
+      },
+      {
+        "tag": "h2",
+        "text": "Source documents and technical records"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://app.tokenomics.com/tokenomics/aptos/unlocks",
+        "text": "Tokenomics.com"
+      },
+      {
+        "href": "https://defillama.com/unlocks/aptos",
+        "text": "DefiLlama"
+      },
+      {
+        "href": "https://app.blockworks.com/projects/aptos/token-unlocks",
+        "text": "Blockworks"
+      },
+      {
+        "href": "https://aptosnetwork.com/currents/aptos-tokenomics-overview",
+        "text": "tokenomics overview"
+      },
+      {
+        "href": "https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-140-aptos-tokenomics-update-moving-to-performance.md",
+        "text": "AIP-140"
+      },
+      {
+        "href": "https://governance.aptosfoundation.org/proposal/183",
+        "text": "governance proposal #183"
+      },
+      {
+        "href": "https://github.com/aptos-foundation/mainnet-proposals/blob/main/sources/2026-02-25-supply-cap/supply_cap.move",
+        "text": "published Move source"
+      },
+      {
+        "href": "https://aptosnetwork.com/currents/aptos-tokenomics-overview",
+        "text": "Aptos — Original Tokenomics Overview"
+      },
+      {
+        "href": "https://t.me/s/aptos_official",
+        "text": "Aptos official announcements"
+      },
+      {
+        "href": "https://app.tokenomics.com/tokenomics/aptos/unlocks",
+        "text": "Tokenomics.com — Aptos Unlock Schedule"
+      },
+      {
+        "href": "https://defillama.com/unlocks/aptos",
+        "text": "DefiLlama — Aptos Unlocks"
+      },
+      {
+        "href": "https://app.blockworks.com/projects/aptos/token-unlocks",
+        "text": "Blockworks — Aptos Token Unlocks"
+      },
+      {
+        "href": "https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-140-aptos-tokenomics-update-moving-to-performance.md",
+        "text": "Aptos AIP-140"
+      },
+      {
+        "href": "https://governance.aptosfoundation.org/proposal/183",
+        "text": "Aptos Governance Proposal #183"
+      },
+      {
+        "href": "https://github.com/aptos-foundation/mainnet-proposals/blob/main/sources/2026-02-25-supply-cap/supply_cap.move",
+        "text": "associated Move source"
+      },
+      {
+        "href": "https://app.blockworks.com/report/Aptos-tokenomics-path-to-deflation",
+        "text": "Blockworks Research — Aptos Tokenomics: Path to Deflation"
+      },
+      {
+        "href": "https://explorer.aptoslabs.com/",
+        "text": "Aptos Explorer"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "One November calendar projects 14.38 million APT, including investor and insider allocations. Another projects 4.54 million. The original vesting arithmetic explains much of the gap—but the Foundation’s separate 210 million APT staking commitment poses a harder question."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Editorial illustration. The lock and calendar are symbolic, not images of a verified on-chain transaction."
+      },
+      {
+        "tag": "p",
+        "text": "Aptos says its original investor and contributor vesting cycle is finished. Yet a prominent public unlock calendar continues to assign November tokens to investors and insiders. The discrepancy is not a rounding error. It changes the apparent size and composition of the next supply event—and invites a larger question about how confidently the market should treat the numbers displayed on token-unlock dashboards."
+      },
+      {
+        "tag": "p",
+        "text": "The opposing estimates are striking. Tokenomics.com lists 14,377,312 APT for November 12, 2026, with 19.5% attributed to private investors and 27.5% to insiders. DefiLlama instead lists approximately 4.54 million APT for November 11, with community and foundation allocations. Blockworks independently displays 4.54 million APT for November 12 and marks the original investor and contributor categories fully unlocked."
+      },
+      {
+        "tag": "p",
+        "text": "Dates, release definitions and data-provider assumptions can differ. But the first test is simpler: do those purported investor tranches still exist under Aptos’s published genesis schedule?"
+      },
+      {
+        "tag": "li",
+        "text": "Aptos publicly states that genesis investor and core-contributor vesting concluded October 12, 2026."
+      },
+      {
+        "tag": "li",
+        "text": "The original schedule yields approximately 4.543 million APT per month for continuing community and foundation releases."
+      },
+      {
+        "tag": "li",
+        "text": "The extra investor and insider portions in Tokenomics.com’s November projection closely resemble the old monthly vesting installments."
+      },
+      {
+        "tag": "li",
+        "text": "A separate Foundation commitment to permanently stake 210 million APT is documented, but a publicly reproducible account-level proof of permanent restrictions was not established in the available evidence."
+      },
+      {
+        "tag": "p",
+        "text": "Aptos published its tokenomics overview at mainnet launch in October 2022. Of the one billion APT minted at genesis, 510.217 million were assigned to the community, 165 million to the Foundation, 190 million to core contributors and approximately 134.783 million to investors."
+      },
+      {
+        "tag": "p",
+        "text": "The first two groups followed extended ten-year distribution schedules. The latter two had a twelve-month lock, six accelerated monthly installments, and then smaller monthly installments until their allocations were exhausted. The contract described a four-year lockup horizon; the arithmetic establishes why the final installment need not occur on the fourth anniversary itself."
+      },
+      {
+        "tag": "p",
+        "text": "Derived from Aptos’s original 2022 allocations and vesting terms. Monthly figures are rounded; these are scheduled entitlements, not individually verified deposits or exchange transfers."
+      },
+      {
+        "tag": "p",
+        "text": "For each investor or contributor allocation, the published installments sum to the full grant:"
+      },
+      {
+        "tag": "p",
+        "text": "That is six accelerated installments and thirty ordinary installments. Under the publicly described schedule beginning in October 2023, the last ordinary installment falls in September 2026. October 12, 2026, then marks the formal fourth anniversary. The distinction helps explain why some coverage calls September 12 the last investor and contributor release while Aptos calls October 12 the end of the cycle."
+      },
+      {
+        "tag": "p",
+        "text": "On October 13, the official Aptos account stated that the schedule had concluded the previous day and that no genesis investor or core-contributor tokens remained to unlock. This is an attributable issuer assertion consistent with the original formula—not an independently reconstructed list of final beneficiary transactions."
+      },
+      {
+        "tag": "p",
+        "text": "Once the investor and core-contributor schedules are complete, the unchanged original community and Foundation installments total about 4,543,478 APT monthly. That matches DefiLlama and Blockworks within ordinary rounding. Tokenomics.com’s 14,377,312 APT is about 3.16 times as large, a difference of roughly 9,833,834 APT."
+      },
+      {
+        "tag": "p",
+        "text": "The larger calendar’s recipient percentages offer a telling numerical fingerprint. Its reported 19.5% investor share implies roughly 2.80 million APT; its 27.5% insider share implies roughly 3.95 million. Those figures closely match the old investor installment of 2.808 million and core-contributor installment of 3.958 million."
+      },
+      {
+        "tag": "p",
+        "text": "That correspondence supports a plausible interpretation: the model may be extending an expired schedule. It does not establish why the provider calculates the larger number. Its community component is also about 3.07 million APT above the original community installment. Tokenomics.com includes staking rewards in a broad community classification, raising the possibility that the forecast incorporates estimated emissions or another accounting category. A provider-level formula, dated source inputs and classification rules would be needed to prove the exact cause."
+      },
+      {
+        "tag": "p",
+        "text": "There is a second denominator problem. Tokenomics.com’s page describes 2.1 billion APT as the overall scheduled supply through 2044. But the 2.1 billion figure is a hard supply cap, whereas the original one-billion genesis distribution and subsequent staking emissions are different mechanisms. Counting long-horizon potential issuance as locked scheduled vesting risks presenting a ceiling as if it were an already minted treasury inventory."
+      },
+      {
+        "tag": "p",
+        "text": "This is where unlock coverage often loses precision. A vesting event changes an entitlement or transfer restriction. Staking rewards create new token supply. A Foundation grant redistributes an existing balance. An exchange deposit transfers custody. An actual sale creates market flow. None of these events is interchangeable, and the same token can appear in multiple stages without representing multiple new units of supply."
+      },
+      {
+        "tag": "p",
+        "text": "Aptos also changed its emissions economics in 2026. AIP-140 proposed reducing staking rewards and imposing a 2.1 billion APT cap. Later issuer updates describe a 2.6% reward rate and cap as implemented. These changes matter for forward supply modeling but do not themselves revive expired genesis investor grants."
+      },
+      {
+        "tag": "p",
+        "text": "The most defensible reading of the 4.54 million figure is therefore deliberately narrow: it reconstructs the monthly community-and-Foundation schedule under the original terms, assuming those schedules remain applicable. It is not proof that 4.54 million newly sellable tokens will reach exchanges in November."
+      },
+      {
+        "tag": "p",
+        "text": "Alongside the unlock milestone, the Aptos Foundation announced that it would permanently stake 210 million APT and support its operations using the resulting staking rewards instead of selling the principal. In principle, that is a consequential change in the supply story. Permanently restricted principal should not be treated as ordinary future sale inventory."
+      },
+      {
+        "tag": "p",
+        "text": "But the word permanently requires more than a pledge. Standard staking arrangements can include owner-authorized unlock and withdrawal functions, subject to protocol rules. Demonstrating that tokens are presently staked is not equivalent to demonstrating that the owner—or another authorized controller—cannot ever withdraw them."
+      },
+      {
+        "tag": "p",
+        "text": "Blockworks’s October 20 research report described the 210 million APT as locked and counted it against undistributed Foundation and community holdings. That is an important published research claim, but the material available for this investigation did not establish a Foundation-authenticated mapping of the relevant staking accounts, deposit transactions, principal balances, and irrevocable withdrawal restrictions."
+      },
+      {
+        "tag": "p",
+        "text": "A particularly revealing technical check concerns governance proposal #183. It has been cited in connection with the Foundation’s tokenomics reform. The published Move source for its supply-cap voting step identifies an empty governance proposal used for voting. Its execution does not, by itself, prove that 210 million tokens were transferred into a non-withdrawable arrangement."
+      },
+      {
+        "tag": "p",
+        "text": "That is not evidence that the Foundation failed to carry out its commitment. A separate lock could exist. It does establish a limit on the common shortcut of citing the executed governance vote as sufficient proof of the permanent custody restriction."
+      },
+      {
+        "tag": "p",
+        "text": "Blockworks estimated approximately 335 million APT remained unvested in October, with 210 million supposedly permanently staked, leaving about 125 million for future distribution. Its implied remaining annual release pace was lower than the straightforward 54.52 million APT annualized from the original community-and-Foundation installments."
+      },
+      {
+        "tag": "p",
+        "text": "Those figures should not be collapsed into one definitive schedule without reconciling which locked holdings overlap the original vesting buckets. If a permanent lock takes effect on balances already counted as future unlocks, a calendar can overstate sellable supply even if its mechanical vesting schedule is accurate. If, by contrast, the commitment covers previously circulating or separately classified stake, subtracting it from the remaining vesting schedule may double count the restriction."
+      },
+      {
+        "tag": "p",
+        "text": "The distinction is economically meaningful. A permanently restricted token and a token freely withdrawable after a staking cooldown have different potential market behaviors. Yet neither behaves exactly like a burn while it remains in supply and continues earning staking rewards. The principal may be restricted while the yield is spendable—precisely the arrangement described by the Foundation’s operating model."
+      },
+      {
+        "tag": "p",
+        "text": "At a November 8 snapshot price of approximately $0.5952 per APT, the smaller estimate represents roughly $2.70 million of notional tokens; the larger one about $8.56 million. Those are illustrations based on the snapshot, not forward prices or forecasts of market impact. A calendar estimate is not a sell order."
+      },
+      {
+        "tag": "p",
+        "text": "Even an accurately scheduled release does not reveal when holders will transfer, lend, collateralize or sell. A serious liquidity assessment would require the actual recipient accounts, transfer events, exchange inflows, bid and ask depth across venues, and evidence of subsequent execution. None of those can responsibly be inferred from a calendar countdown."
+      },
+      {
+        "tag": "p",
+        "text": "The market may still price expectations before an event. That makes bad classification consequential: a trader reading a forecast of new investor supply may form a materially different risk expectation from one reading a community/Foundation-only installment, particularly when the headline total differs by almost ten million APT."
+      },
+      {
+        "tag": "p",
+        "text": "Tokenomics.com could identify a legitimate, distinct November tranche not covered by the original genesis schedule; publish a fully reconciled methodology showing why its current investor and insider labels remain appropriate; or demonstrate that the labels mean something broader than the original investor and contributor pools. Any of those findings would require revising the conclusion that its forecast appears to extend expired vesting entries."
+      },
+      {
+        "tag": "p",
+        "text": "Similarly, Aptos could publish account addresses and immutable lock controls that decisively validate its 210 million commitment. An independently reproduced historical transfer and resource audit could settle the timing of the last genesis investor distribution. At the time of this report, neither the final beneficiary-level transfer trail nor the permanent-lock enforcement had been established from the identified public records."
+      },
+      {
+        "tag": "p",
+        "text": "The Aptos Foundation has been sent a technical inquiry requesting custody addresses, transaction identifiers, withdrawal-authority information and an explanation of the November recipient categories. As of this research cutoff, no response is included in the record used for this article. A subsequent technical clarification would materially improve the supply accounting."
+      },
+      {
+        "tag": "p",
+        "text": "What stands out to me is not merely the size of the conflicting numbers. It is how easily several true-sounding statements can become one misleading market narrative. Genesis vesting can be complete. Staking issuance can continue. A Foundation can promise to withhold principal. A tracker can still display a larger “unlock.” Each statement lives in a different accounting category."
+      },
+      {
+        "tag": "p",
+        "text": "The original Aptos schedule, the issuer’s completion statement and the independent smaller calendars all point in the same direction: routine genesis investor and contributor unlocks should no longer be appearing as November 2026 releases. The larger calendar’s investor and insider amounts resemble installments from that completed schedule, but its exact calculation method has not been established."
+      },
+      {
+        "tag": "p",
+        "text": "And the 210 million APT commitment remains a separate test of transparency. If the principal has been irreversibly locked, publishing the addresses and restrictions would let outside observers verify a meaningful reduction in available supply. Until then, the careful distinction is between a documented commitment and proven code-enforced permanence."
+      },
+      {
+        "tag": "p",
+        "text": "For anyone using unlock dashboards to understand supply risk, that distinction is the story."
+      },
+      {
+        "tag": "li",
+        "text": "Aptos — Original Tokenomics Overview: genesis allocation amounts and vesting mechanics (October 2022)."
+      },
+      {
+        "tag": "li",
+        "text": "Aptos official announcements: issuer statements about the October 12, 2026 completion of genesis investor and contributor vesting."
+      },
+      {
+        "tag": "li",
+        "text": "Tokenomics.com — Aptos Unlock Schedule: 14,377,312 APT November 12 projection and recipient categories (accessed November 8, 2026)."
+      },
+      {
+        "tag": "li",
+        "text": "DefiLlama — Aptos Unlocks: 4.54 million APT November projection (accessed November 8, 2026)."
+      },
+      {
+        "tag": "li",
+        "text": "Blockworks — Aptos Token Unlocks: final original contributor and investor allocation status; continuing community/Foundation schedule."
+      },
+      {
+        "tag": "li",
+        "text": "Aptos AIP-140: 2026 tokenomics proposal and 210 million permanent staking commitment."
+      },
+      {
+        "tag": "li",
+        "text": "Aptos Governance Proposal #183 and associated Move source: governance-voting implementation, not itself a staking-lock transaction."
+      },
+      {
+        "tag": "li",
+        "text": "Blockworks Research — Aptos Tokenomics: Path to Deflation (October 20, 2026): interpretation of permanent staking and remaining emissions."
+      },
+      {
+        "tag": "li",
+        "text": "Aptos Explorer: canonical portal for future transaction- and account-level corroboration."
+      },
+      {
+        "tag": "p",
+        "text": "Research snapshot: November 8, 2026. Figures describing future unlocks are estimates from published provider schedules, not observed November disbursements. The supplied investigation did not independently attribute a final investor transfer hash or a 210 million APT permanent-lock transaction. This article does not constitute investment advice."
+      },
+      {
+        "tag": "p",
+        "text": "ARTOfficial Intelligence · Independent research and analysis. Publication URL and social-sharing image URL are to be resolved by the site publisher."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Genesis allocation",
+          "Initial allocation",
+          "Ordinary monthly installment"
+        ],
+        [
+          "Community",
+          "510.217M APT",
+          "3,210,145 APT"
+        ],
+        [
+          "Foundation",
+          "165.000M APT",
+          "1,333,333 APT"
+        ],
+        [
+          "Core contributors",
+          "190.000M APT",
+          "3,958,333 APT (late vesting period)"
+        ],
+        [
+          "Investors",
+          "134.783M APT",
+          "2,807,972 APT (late vesting period)"
+        ]
+      ]
+    ],
+    "alts": [
+      "Editorial illustration of an Aptos coin, a padlock and a November 2026 calendar—representing questions about token unlock schedules and restrictions"
+    ],
+    "svgCount": 0,
+    "svgSha256": [],
+    "imageCount": 1,
+    "imageSha256": [
+      "c8bb49935e653d01b0d9a6052ef0c63f280d63877af0bd845758a4745b30bb63"
+    ],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "bitcoin-monday-76000-pressure-test": {
     "text": "Independent Market NotesBitcoin / Market structure8 November 2026 Market investigation · Pre-Monday briefingBitcoin at $76,000: The Monday Rebound That Still Needs ProofBitcoin stabilized near $76,000 after a sharp selloff, but ETF outflows, a misleadingly calm funding market and a rebound in open interest make one question unavoidable: is the selling finished, or merely paused?Analysis dated 8 November 2026Market observations through approximately 12:07 UTC8-minute read Bitcoin looked calmer on Sunday morning. That was the easy part to see. The harder part was deciding what the calm meant. After a rapid fall from above $80,000, the market was trading around $76,000, not far from lows that had already been tested. A quieter tape offered the outline of a bottom. It did not yet offer its proof. At approximately 12:06 UTC on November 8, the OKX BTC/USDT spot price was 75,990.30 USDT. In the preceding days, price had briefly fallen to approximately 74,888 USDT. The distance between those observations matters less to me than the terrain between them. Buyers were defending part of the decline, but the market remained below its short-term averages. The apparent stability was arriving just as a difficult week of U.S. spot Bitcoin ETF redemptions ended. My working view heading into Monday, November 9, is therefore cautious, not categorically bearish. Bitcoin has demonstrated the ability to stop falling for a time; it has not yet demonstrated the capacity to reclaim the territory lost during the selloff. The distinction is the entire investigation. A selloff that changed the burden of proof The decline was not a simple, orderly retreat. In the OKX exchange-session series, the session beginning November 3 closed near 80,300 USDT; the following session closed near 76,039 USDT, a drop of roughly 5.3%. Subsequent sessions stayed close to $76,000. A market can build a base after such a move, but the preceding break creates overhead supply: participants who would have preferred to sell higher can use the next rally as an exit. That is why I care more about the quality of the next rebound than about its first few hundred dollars. The area around $77,000–$77,100 corresponds to a recent rebound high. Above it lies the seven-session average near $77,309. The twenty-session average was approximately $79,626. These are descriptions of historical structure, not walls where orders must be waiting. A fourteen-session average true range of approximately $2,324—about 3.1% of the observed price—also argues against overconfidence in a narrow Monday forecast. ATR measures recent trading ranges, not a guaranteed future move. A market capable of covering that distance in an ordinary exchange session can invalidate a neat-looking thesis quickly. A fragile recovery zone Price reference zones as of November 8Schematic vertical price map, not a continuous price chart. Historical resistance near 77,011; observed spot 75,990; local support near 75,395; deeper swing low 74,888 USDT. 77,011 — recent rebound high76,000 — nearby reference75,395 — recent local low74,888 — prior swing low Current point near 75,990USDT Levels are historical references and analytically chosen zones; this schematic does not depict order-book liquidity, liquidation concentrations or a realized forecast.Source: OKX BTC-USDT spot OHLC snapshots and completed exchange-session candles; session boundaries begin at 16:00 UTC. Wall Street demand was sending a less reassuring message Price alone can conceal the origin of demand. The week's ETF flows offered a different view. Reported U.S. spot Bitcoin ETF net flows for November 2–6 summed to approximately negative $1.282 billion. Four of the five sessions were negative. Friday, November 6, was reported at approximately negative $411.9 million. These were sizeable figures, and I would not dismiss them as a footnote. They suggest that the most visible regulated U.S. access channel was seeing net redemptions during a period when Bitcoin needed additional demand. But the flow numbers require care: trackers did not fully agree. A competing Friday tally of roughly negative $8.9 million apparently omitted the approximately $403 million IBIT outflow present in the larger estimate. The discrepancy changes the daily conclusion materially, so the larger number should be read as a reported tally rather than an independently reconciled final accounting. The reported ETF-flow sequence U.S. spot Bitcoin ETF reported daily net flows, November 2–6, 2026Reported net flow in millions of dollars: Monday minus 398.6, Tuesday minus 115.6, Wednesday plus 74.6, Thursday minus 430.2 and Friday minus 411.9. Friday figures are contested among trackers. $0 Mon 2Tue 3Wed 4Thu 5Fri 6*−398.6−115.6+74.6−430.2−411.9USD millions; reported daily net creations/redemptions *Friday's large reported outflow is disputed by a materially lower competing tracker. Chart reproduces the reported series used for this analysis rather than reconciling the conflicting feeds.Source: publicly reported U.S. spot Bitcoin ETF flow tracker tallies cited in the November 8 market dossier; attribution and reporting conventions differ. Accessible data alternative to the reported ETF-flow graphicSessionReported net flowNov 2−$398.6MNov 3−$115.6MNov 4+$74.6MNov 5−$430.2MNov 6*−$411.9M Nor is an ETF redemption automatically a same-minute Bitcoin sell order. Authorized-participant inventory, hedging and execution schedules complicate that transmission. What the figures can tell us is narrower and more useful: recent ETF demand was not an obvious source of support. What they cannot tell us is whether the next buyer at $75,000 will be a fund, a hedge, a market maker or somebody entirely different. The leverage market was not screaming panic There is a familiar shortcut in crypto commentary: rising open interest means bulls are piling in; falling open interest means bears are winning. Neither statement survives basic mechanics. Every open long has a matching short. Open interest counts outstanding contracts, not a net vote on price direction. On Hyperliquid, the BTC perpetual's hourly open-interest series fell from approximately 42,244 BTC at 00:00 UTC on November 7 to 41,563 BTC at 00:00 UTC on November 8, then rose to approximately 42,107 BTC by noon Sunday. That last twelve-hour increase—about 1.31%—is important, but it is not directional by itself. It shows gross exposure returning as price stabilized, not whether the returning risk is fundamentally long or short. Hyperliquid BTC perpetual: open interest returns Hyperliquid BTC perpetual selected open interest observationsSeven observations: November 7 at midnight 42,244 BTC, 06:00 42,085, 12:00 41,824, 18:00 41,272; November 8 at midnight 41,563, 06:00 41,751, and 12:00 42,107 BTC. 42.3k41.8k41.2kNov 7 00Nov 7 18Nov 8 12UTC · BTC units Hourly snapshots selected at six-hour intervals. The connected line is for readability; intermediate prices or OI states are not reconstructed.Source: Hyperliquid BTC perpetual hourly open-interest observations, November 7–8, 2026. Accessible data alternative to the open-interest graphicUTC observationOpen interest (BTC)Nov 7, 00:0042,244Nov 7, 06:0042,085Nov 7, 12:0041,824Nov 7, 18:0041,272Nov 8, 00:0041,563Nov 8, 06:0041,751Nov 8, 12:0042,107 The funding market was similarly subdued. On OKX, eleven of the twelve most recent BTC perpetual settlements were positive, yet the latest settled rate was only approximately 0.00336% per eight-hour settlement. Hyperliquid's sampled hourly rates were roughly 0.00125% per hour. The two contracts have different settlement clocks; comparing their raw percentages without adjusting the interval would mislead. Neither series, taken on its own, demonstrates dangerously one-sided positioning. The uncomfortable possibility is that leverage is returning before demand has convincingly returned. That is a risk hypothesis, not a verdict. A squeeze could follow if shorts are trapped; a fresh liquidation wave could follow if new longs are weakly margined. To distinguish those outcomes would require matched price, changes in contract counts, signed trading activity and liquidation evidence across a meaningful interval—not simply a funding print and an OI snapshot. What forty seconds of spot trading can—and cannot—say The most revealing small test was also the easiest to overinterpret. A window of 100 OKX BTC/USDT trades between 12:06:42 and 12:07:20 UTC on Sunday recorded approximately 0.3343 BTC marked buy-side and 0.4373 BTC marked sell-side. Based on the reported side labels, sellers exceeded buyers by 0.1030 BTC; buys accounted for 43.3% of the sampled volume. That is a real imbalance in the sample, not evidence that the entire market was under sustained selling pressure. The time window was less than 40 seconds, the volume was tiny relative to the broader BTC market, and the venue's trade-side labels were not independently reconciled against simultaneous quotes. The companion sample of 100 OKX BTC perpetual trades was closer to balanced: approximately 61.15 BTC buy-side and 64.45 BTC sell-side, a signed volume imbalance of roughly −2.6%. If the thesis is that heavy selling continues on Monday, those samples do not establish it. I would rather acknowledge the limit than convert a convenient burst of transactions into a predictive story. Monday has two different tests The first is a price test. A sustained reclaim of $77,100 would challenge the immediate bearish reading, particularly if the market then holds above the roughly $77,309 seven-session average. A sustained break below $75,300, followed by a failure at the earlier low near $74,888, would make downside continuation more plausible. The operative word is sustained: a brief wick through a level has far less evidentiary value than repeated acceptance and corroborating activity. The second is a participation test. Monday's U.S. session needs to show whether buying and selling actually expand around those levels; whether open interest rises because new exposure is opening rather than merely moving with the mark price; and whether the day's ETF activity reverses the preceding week's redemptions. A price bounce without better participation can still happen, but it earns less interpretive weight. Explore the conditional Monday casesSelect a hypothetical price condition. This is a research interpretation aid, not a live price display or predictive probability model.Above $77,100$75,300–$77,100Below $75,300Consolidation remains the defensible reading.Watch whether spot participation and OI change reinforce one another. There is no confirmed directional edge inside this interval from the evidence presented here. Macro timing adds another complication. Monday precedes the scheduled U.S. October CPI release on Tuesday, November 10, at 8:30 a.m. Eastern. Treasury auctions and policy commentary can affect broader risk appetite, but I would not claim a single scheduled event has already dictated Bitcoin's next move. The more defensible point is that participants will be entering an important inflation release with price structure already damaged. The countercase deserves serious attention There is a credible bullish explanation for everything that looks weak. Large ETF redemptions may have been absorbed. The market recovered from a low under $75,000. Funding was not euphoric, so a reflexive crowded-long unwinding argument has less force. Open interest returning during stabilization could reflect hedges, short covering or outright risk-taking that ultimately supports a recovery. And an oversold market does not require a beautiful macro backdrop to stage a forceful relief rally. The bearish countercase is equally straightforward. A temporary base below two short-term moving averages can become a pause before another leg down. Renewed leverage without durable spot demand increases sensitivity to bad news. If the market cannot reclaim its nearby rebound high while ETF demand remains negative, the path back toward the prior low becomes easier to imagine. Neither interpretation earns an automatic victory merely because it fits the last price move. I am deliberately not assigning numerical odds to those paths. Doing so without a calibrated forecast model, a comparable historical sample and tested error rates would give the appearance of precision without its substance. What the $76,000 stalemate really reveals Bitcoin's next move will be narrated afterward as though it were obvious. For now the interesting fact is the mismatch between what the market makes visible and what it conceals. We can observe price, selected open-interest histories and reported ETF flows. We cannot infer the identities, conviction or constraints of the marginal participants from those measurements alone. We also cannot assume one perpetual venue represents the global derivatives market. That is why I regard $76,000 less as an answer than as a stress point for competing explanations. If buyers reclaim the lost range with sustained participation, the market will have supplied evidence for a bottoming process. If the nearby lows fail while risk is being rebuilt, it will have supplied evidence that the calm was merely an interval between selling waves. The lesson is not to forecast nothing. It is to demand that a directional thesis survive contact with the next observation. Bitcoin has stabilized. Whether it has recovered remains an open question. Sources, definitions and evidence notesThis article is a dated analytical snapshot, not a live market update. USD prices are described in terms of the source market's USDT quotation where relevant; USDT is not identical to fiat USD. Quotes, OHLC, funding and OI come from different measurement conventions and should not be silently aggregated. Claims about Monday are conditional scenarios, not observed outcomes. OKX BTC-USDT spot: price snapshots around 12:02–12:07 UTC on 8 November 2026; completed exchange-session OHLC series used for moving averages, ATR and levels. The daily bar boundary in the observed series was 16:00 UTC, not midnight. Reported trade-side labels are used without independent aggressor classification.OKX BTC-USDT-SWAP perpetual: contemporary open-interest and funding observations, plus a 100-trade sample from 12:06:50–12:07:22 UTC. The $2.63 billion snapshot cited in the broader market briefing pertains to this one venue, not market-wide OI.Hyperliquid BTC perpetual: hourly OI and funding observations from 7–8 November 2026. Sampled OI values were rounded for chart and table readability; historical hourly values were not presented as transaction-by-transaction reconstruction.U.S. spot Bitcoin ETFs: November 2–6 publicly reported daily net-flow sequence, including a contested November 6 figure. The figures are provisional as presented because competing trackers were not fully reconciled; they are not direct proof of contemporaneous BTC selling.Economic releases: scheduled November 10 U.S. CPI and November 9 Treasury activity are contextual calendar events, not demonstrated causes of Bitcoin movements. Official reference points: Bureau of Labor Statistics CPI release calendar and U.S. Treasury refunding information. Independent Market Notes · Investigative market commentary · Observation cutoff: 8 November 2026, approximately 12:07 UTC.",
     "headings": [

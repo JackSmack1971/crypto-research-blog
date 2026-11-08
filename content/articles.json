@@ -1,5 +1,22 @@
 [
   {
+    "slug": "aptos-unlock-calendar-discrepancy",
+    "source": "aptos-unlock-calendar-discrepancy.html",
+    "date": "2026-11-08",
+    "title": "Aptos Unlock Calendars Still List Investors After Vesting Ends",
+    "dek": "One November calendar projects 14.38 million APT, including investor and insider allocations. Another projects 4.54 million. The original vesting arithmetic explains much of the gap—but the Foundation’s separate 210 million APT staking commitment poses a harder question.",
+    "image": "assets/featured/aptos-unlock-calendar-discrepancy.jpg",
+    "image_alt": "Editorial illustration of an Aptos coin, padlock and November 2026 calendar representing questions about token unlock schedules and restrictions",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "tokenomics",
+    "assets": [
+      "APT"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "bitcoin-monday-76000-pressure-test",
     "source": "bitcoin-monday-76000-pressure-test.html",
     "date": "2026-11-08",

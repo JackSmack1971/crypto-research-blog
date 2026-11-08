@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "aptos-unlock-calendar-discrepancy": {
+      "title": "Aptos Unlock Calendars Still List Investors After Vesting Ends",
+      "description": "Aptos says its genesis insider vesting ended, but a November calendar still lists investors. Here is what the schedules and lock evidence actually prove.",
+      "canonical": "https://independent-market-notes.netlify.app/aptos-unlock-calendar-discrepancy/",
+      "og:title": "Aptos Unlock Calendars Still List Investors After Vesting Ends",
+      "og:description": "The November APT schedules disagree by nearly 10 million tokens. The 210 million APT permanent-staking commitment raises a separate proof question.",
+      "og:url": "https://independent-market-notes.netlify.app/aptos-unlock-calendar-discrepancy/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-monday-76000-pressure-test": {
       "title": "Bitcoin at $76,000: The Monday Rebound That Still Needs Proof",
       "description": "Bitcoin stabilized near $76,000 after a sharp selloff, but ETF outflows, thin spot-flow samples and rebuilding leverage leave Monday’s direction unresolved.",
@@ -332,6 +342,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Aptos Unlock Calendars Still List Investors After Vesting Ends",
+      "link": "https://independent-market-notes.netlify.app/aptos-unlock-calendar-discrepancy/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/aptos-unlock-calendar-discrepancy/",
+      "description": "One November calendar projects 14.38 million APT, including investor and insider allocations. Another projects 4.54 million. The original vesting arithmetic explains much of the gap—but the Foundation’s separate 210 million APT staking commitment poses a harder question."
+    },
     {
       "title": "Bitcoin at $76,000: The Monday Rebound That Still Needs Proof",
       "link": "https://independent-market-notes.netlify.app/bitcoin-monday-76000-pressure-test/",
