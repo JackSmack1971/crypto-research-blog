@@ -1,5 +1,22 @@
 [
   {
+    "slug": "avalanche-nyse-rally-token-economics",
+    "source": "avalanche-nyse-rally-token-economics.html",
+    "date": "2026-11-09",
+    "title": "Avalanche’s NYSE Rally Exposes the Gap Between Adoption and AVAX Demand",
+    "dek": "The November 9 surge was real—and leverage expanded with it. The harder question is whether institutional settlement on Avalanche creates lasting value for its native token.",
+    "image": "assets/featured/avalanche-nyse-rally-token-economics.jpg",
+    "image_alt": "Editorial illustration of a settlement rail separated from a token-demand endpoint, alongside the title The Avalanche Value-Capture Question.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "tokenomics",
+    "assets": [
+      "AVAX"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "aptos-unlock-calendar-discrepancy",
     "source": "aptos-unlock-calendar-discrepancy.html",
     "date": "2026-11-08",

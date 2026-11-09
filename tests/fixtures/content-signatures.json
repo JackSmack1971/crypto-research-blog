@@ -1,4 +1,262 @@
 {
+  "avalanche-nyse-rally-token-economics": {
+    "text": "Independent research / Digital assetsMarket structure · November 9, 2026Avalanche’s NYSE Rally Exposes the Gap Between Adoption and AVAX DemandThe November 9 surge was real—and leverage expanded with it. The harder question is whether institutional settlement on Avalanche creates lasting value for its native token.November 9, 2026 · Historical market investigation · All times UTCEditorial illustration: institutional settlement infrastructure and native-token value capture are related questions, not the same question.A token can rally on news that its underlying network is becoming more important. That is not the same as proving the token itself will capture the economic value of that growth. Avalanche offered a particularly sharp demonstration of the distinction on November 9, 2026, when reports about the New York Stock Exchange’s tokenized-equities ambitions collided with a fast-moving AVAX market.The price reaction was substantial. On OKX, AVAX rose 4.39% within the five-minute candle beginning at 12:30 UTC. Later, using the 13:00 candle close as a baseline, it advanced another 3.68% through the 13:35–13:40 candle close, while Bitcoin and Ether both declined. Meanwhile, a separate derivatives market recorded a striking increase in outstanding AVAX contracts.What interests me is not whether traders noticed the headline. They clearly traded through the news cycle. The more consequential question is whether a network’s institutional success translates into recurring demand for its native asset—or whether markets sometimes price that connection long before anyone has demonstrated it.The settlement announcement is not a tokenomics disclosureNYSE’s tokenization plans are significant because they bring the language of blockchain settlement into the infrastructure of regulated securities markets. The original ICE description contemplated a tokenized-securities platform capable of integrating multiple blockchain networks, with transfer agents and wallet providers playing important roles. The November 9 reporting sharpened the Avalanche angle, describing an exclusive settlement plan. But a reported chain selection and a functioning, economically attributable settlement system are different milestones.The architectural distinction matters. Avalanche’s public C-Chain uses AVAX for transaction fees. Independent Avalanche L1s, however, can use their own native gas assets, while their validators face AVAX-denominated P-Chain fees. Therefore, a tokenized-equities venue built with Avalanche technology would not automatically require every transaction to purchase and burn AVAX. The exact deployment architecture—not the umbrella brand—determines the direct fee linkage.At the time of this investigation, the available public descriptions did not establish the production settlement chain, native gas asset, validator configuration or attributable NYSE settlement receipts. That is not a minor footnote. It is the difference between an adoption thesis and a measurable token-demand thesis.The market can be right about Avalanche’s strategic relevance and still be premature about how much of that relevance belongs to AVAX.A rally that began before the most prominent headlineThere is a temptation to place a vertical line at the 13:05 UTC Wall Street Journal report and declare everything afterward an event reaction. That would miss an essential part of the story. Earlier reporting circulated around 07:37 UTC, and the largest early burst of AVAX spot activity came at 12:30, before the later article.The 12:30–12:35 OKX spot candle opened near $8.114 and closed at $8.470, a gain of 4.39%, on approximately $1.32 million of quote volume. By the close of the 13:00–13:05 candle, AVAX was at $8.404. In the preceding 55 minutes, it had gained approximately 4.28%, against 0.67% for BTC and 0.53% for ETH.After 13:05, the divergence continued. The comparison below uses completed five-minute candles on the same OKX spot venue, each quoted in USDT. These are historical measurements, not current prices.Cumulative returns from the 13:00–13:05 UTC candle close. The +35-minute observation is the 13:35–13:40 candle close.InstrumentBaseline close+5 min+35 minAVAX-USDT$8.404+2.05%+3.68%BTC-USDT$74,970.50−0.19%−0.38%ETH-USDT$2,125.62−0.22%−0.26%AVAX outperformed BTC by roughly 4.05 percentage points and ETH by 3.94 points over that short post-report interval. Those are simple relative returns, not risk-adjusted abnormal returns. They show an asset-specific repricing, but they cannot prove which headline, order flow or expectation caused it.The leverage signal is stronger than the liquidation storyPrice alone does not reveal who is taking risk. The more revealing evidence came from historical Hyperliquid AVAX perpetual open interest. At 07:00 UTC, outstanding exposure was approximately 1.776 million AVAX. At 12:25 it was 1.809 million. By 13:00 it had reached 2.772 million, and by 13:40 approximately 3.177 million—an increase of about 78.9% from the morning snapshot.Open interest rose with the rallyHyperliquid AVAX perpetual · selected five-minute snapshots · millions of AVAX · November 9, 2026 UTCAVAX perpetual open interest increased sharply after 12:25 UTCAt 07:00 open interest was 1.776 million AVAX, at 12:25 1.809 million, at 13:00 2.772 million, and at 13:40 3.177 million. Selected snapshots only, with straight lines joining them.1.52.12.73.307:0012:2513:0013:40Illustrative connection of four observed snapshots, not a continuous trace. Source: Hyperliquid archived AVAX perpetual open-interest snapshots; timestamps 07:00, 12:25, 13:00 and 13:40 UTC.The most dramatic expansion began before 13:05. Between 12:25 and 13:00, open interest increased by roughly 963,000 AVAX, or 53.2%. Rising price alongside rising open interest is consistent with new risk being established, rather than a rally made entirely from closing positions. It does not tell us the net directional beliefs of those traders: each perpetual contract has a long and a short, and hedges or basis trades can enlarge open interest without representing a simple bullish wager.The liquidation evidence argues against a dramatic forced-short-squeeze explanation, at least on this venue. Hyperliquid’s records for the available window show 44 short liquidations totaling approximately $11,047, concentrated in three five-minute buckets. That is small beside the millions of dollars in perpetual trading recorded during the event. Voluntary short covering remains possible, and activity on other venues may differ. But the observed forced liquidations were not large enough to account for the bulk of Hyperliquid’s reported volume.Funding offered a subtler warningHyperliquid’s sampled funding-rate observations shifted from slightly negative at 07:00 (−0.000930%) to positive by 12:25 (+0.001250%), and remained around +0.001250% at 13:30. These are non-annualized rate observations, not evidence of payments occurring every five minutes. They suggest a long-side premium, but not an obvious funding blowout. The combination of price strength, expanding open interest and modest positive funding supports a leveraged-positioning interpretation without establishing extreme crowding.Two markets, two different kinds of evidenceThe spot and perpetual series should not be treated as interchangeable. At 12:30, the OKX spot candle closed at $8.470 and the Hyperliquid perpetual candle at $8.4685, a near match. At 13:05, they were $8.576 and $8.5823. Yet at 13:30 the recorded closes diverged: $8.713 on OKX spot versus $8.8959 on Hyperliquid perpetual, a difference of about 2.10%.That late discrepancy is too large to ignore. It may reflect temporary basis, timing, market fragmentation or data-quality effects. Without matched transaction-level and order-book evidence, I would not blend those prices into a synthetic series or use the difference to assert a particular trading mechanism.Volume also needs careful interpretation. OKX AVAX spot averaged approximately $211,185 of quote volume per five-minute candle during 12:05–13:05, versus $173,638 in the available 13:05–13:45 window, a decline of 17.8%. Hyperliquid perpetual quote volume was approximately $19.68 million before 13:05 and $9.47 million in the shorter subsequent window. Both markets were active, but the largest initial burst of activity had already occurred.Why the token economics still matterThe underlying Avalanche network has a credible institutional narrative. A third-quarter 2026 research review reported approximately $1.22 billion in tokenized real-world assets on C-Chain, 59,126 AVAX in C-Chain fees burned, and 2.62 million AVAX in staking rewards during the quarter. The burn was approximately 2.26% of those staking rewards. That comparison is not a complete supply reconciliation, but it illustrates the gap between network activity and offsetting new token issuance.The same review reported 2,444 AVAX in L1 validator fees. That is evidence of a direct economic linkage between Avalanche L1 operation and AVAX, but it is not evidence that a future NYSE venue will produce a particular quantity of fees. For illustration, a fixed fee of 512 nAVAX per second would amount to 1.327104 AVAX per validator over 30 days, or 26.54208 AVAX for 20 validators. This is a sensitivity calculation, not an observed NYSE expense; validator counts and rates can change.A bullish counterargument deserves serious treatment. A major securities venue might attract developers, liquidity, collateral applications, custody integrations and other activities that eventually use AVAX directly. Market value can also reflect strategic optionality well before transaction fees appear. A strict fee-burn model may therefore understate the wider ecosystem benefit. But the opposite error is just as serious: assuming that every dollar of institutional settlement volume creates a proportional bid for AVAX.What would settle the argument?Three developments would change my assessment. First, a confirmed production chain configuration would reveal whether settlement actually consumes AVAX as gas or relies on a custom token. Second, attributable validator registrations and P-Chain fees would allow the indirect AVAX linkage to be measured rather than imagined. Third, persistent spot demand alongside stable open interest after the initial news cycle would distinguish a more durable repricing from a short-lived leverage expansion.The available event study ends around 13:45 UTC, not at the close of the trading day. It is a single-event, single-day analysis, not a statistical demonstration of abnormal returns or causality. The derivatives observations come from Hyperliquid; the spot comparison comes from OKX. That bounded scope is important precisely because the price action was dramatic.My conclusion is narrower than either the promotional or dismissive version of this story. The November 9 rally was real. AVAX-specific relative strength was measurable. Perpetual open interest expanded rapidly, and recorded forced liquidations did not explain most of the derivatives volume. What remains unproven is the lasting economic bridge between NYSE’s reported use of Avalanche infrastructure and demand for AVAX itself.That is the question I would keep in focus after the headline fades. The future of on-chain securities settlement may be consequential. Whether its economics accrue to the infrastructure provider, the application operators, validators or the native token is still a matter of architecture—and ultimately of evidence.Sources and methodologyThe market figures above refer exclusively to November 9, 2026. Returns are simple close-to-close percentages; open-interest changes compare historical snapshots. The observations are descriptive, not causal estimates.Intercontinental Exchange / NYSE — original institutional platform announcements and transfer-agent developments. Specific settlement-chain configuration is not established in those disclosures as described here.The Wall Street Journal — November 9, 2026 reporting on the reported Avalanche settlement selection. The exact article URL was not established in the research record.Avalanche documentation — C-Chain AVAX gas and Avalanche L1/P-Chain validator fee architecture.OKX market data — AVAX-USDT, BTC-USDT and ETH-USDT five-minute spot candles, November 9, 2026.Hyperliquid market data — AVAX perpetual five-minute candles, open-interest snapshots, sampled funding rates and liquidation records, November 9, 2026.Blockworks Research — third-quarter 2026 Avalanche ecosystem and network economics review; numerical values attributed in the article.Source links identify the publishing organizations or market-data destinations, not independently resolved deep links to every historical observation. The article does not imply a verified transaction-level NYSE settlement trace.Historical investigation · November 9, 2026 · No investment recommendation",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Avalanche’s NYSE Rally Exposes the Gap Between Adoption and AVAX Demand"
+      },
+      {
+        "tag": "h2",
+        "text": "The settlement announcement is not a tokenomics disclosure"
+      },
+      {
+        "tag": "h2",
+        "text": "A rally that began before the most prominent headline"
+      },
+      {
+        "tag": "h2",
+        "text": "The leverage signal is stronger than the liquidation story"
+      },
+      {
+        "tag": "h3",
+        "text": "Open interest rose with the rally"
+      },
+      {
+        "tag": "h3",
+        "text": "Funding offered a subtler warning"
+      },
+      {
+        "tag": "h2",
+        "text": "Two markets, two different kinds of evidence"
+      },
+      {
+        "tag": "h2",
+        "text": "Why the token economics still matter"
+      },
+      {
+        "tag": "h2",
+        "text": "What would settle the argument?"
+      },
+      {
+        "tag": "h2",
+        "text": "Sources and methodology"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://www.ice.com/",
+        "text": "Intercontinental Exchange / NYSE"
+      },
+      {
+        "href": "https://www.wsj.com/",
+        "text": "The Wall Street Journal"
+      },
+      {
+        "href": "https://docs.avax.network/",
+        "text": "Avalanche documentation"
+      },
+      {
+        "href": "https://www.okx.com/markets",
+        "text": "OKX market data"
+      },
+      {
+        "href": "https://hyperliquid.xyz/",
+        "text": "Hyperliquid market data"
+      },
+      {
+        "href": "https://blockworks.co/research",
+        "text": "Blockworks Research"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "The November 9 surge was real—and leverage expanded with it. The harder question is whether institutional settlement on Avalanche creates lasting value for its native token."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Editorial illustration: institutional settlement infrastructure and native-token value capture are related questions, not the same question."
+      },
+      {
+        "tag": "p",
+        "text": "A token can rally on news that its underlying network is becoming more important. That is not the same as proving the token itself will capture the economic value of that growth. Avalanche offered a particularly sharp demonstration of the distinction on November 9, 2026, when reports about the New York Stock Exchange’s tokenized-equities ambitions collided with a fast-moving AVAX market."
+      },
+      {
+        "tag": "p",
+        "text": "The price reaction was substantial. On OKX, AVAX rose 4.39% within the five-minute candle beginning at 12:30 UTC. Later, using the 13:00 candle close as a baseline, it advanced another 3.68% through the 13:35–13:40 candle close, while Bitcoin and Ether both declined. Meanwhile, a separate derivatives market recorded a striking increase in outstanding AVAX contracts."
+      },
+      {
+        "tag": "p",
+        "text": "What interests me is not whether traders noticed the headline. They clearly traded through the news cycle. The more consequential question is whether a network’s institutional success translates into recurring demand for its native asset—or whether markets sometimes price that connection long before anyone has demonstrated it."
+      },
+      {
+        "tag": "p",
+        "text": "NYSE’s tokenization plans are significant because they bring the language of blockchain settlement into the infrastructure of regulated securities markets. The original ICE description contemplated a tokenized-securities platform capable of integrating multiple blockchain networks, with transfer agents and wallet providers playing important roles. The November 9 reporting sharpened the Avalanche angle, describing an exclusive settlement plan. But a reported chain selection and a functioning, economically attributable settlement system are different milestones."
+      },
+      {
+        "tag": "p",
+        "text": "The architectural distinction matters. Avalanche’s public C-Chain uses AVAX for transaction fees. Independent Avalanche L1s, however, can use their own native gas assets, while their validators face AVAX-denominated P-Chain fees. Therefore, a tokenized-equities venue built with Avalanche technology would not automatically require every transaction to purchase and burn AVAX. The exact deployment architecture—not the umbrella brand—determines the direct fee linkage."
+      },
+      {
+        "tag": "p",
+        "text": "At the time of this investigation, the available public descriptions did not establish the production settlement chain, native gas asset, validator configuration or attributable NYSE settlement receipts. That is not a minor footnote. It is the difference between an adoption thesis and a measurable token-demand thesis."
+      },
+      {
+        "tag": "p",
+        "text": "There is a temptation to place a vertical line at the 13:05 UTC Wall Street Journal report and declare everything afterward an event reaction. That would miss an essential part of the story. Earlier reporting circulated around 07:37 UTC, and the largest early burst of AVAX spot activity came at 12:30, before the later article."
+      },
+      {
+        "tag": "p",
+        "text": "The 12:30–12:35 OKX spot candle opened near $8.114 and closed at $8.470, a gain of 4.39%, on approximately $1.32 million of quote volume. By the close of the 13:00–13:05 candle, AVAX was at $8.404. In the preceding 55 minutes, it had gained approximately 4.28%, against 0.67% for BTC and 0.53% for ETH."
+      },
+      {
+        "tag": "p",
+        "text": "After 13:05, the divergence continued. The comparison below uses completed five-minute candles on the same OKX spot venue, each quoted in USDT. These are historical measurements, not current prices."
+      },
+      {
+        "tag": "caption",
+        "text": "Cumulative returns from the 13:00–13:05 UTC candle close. The +35-minute observation is the 13:35–13:40 candle close."
+      },
+      {
+        "tag": "p",
+        "text": "AVAX outperformed BTC by roughly 4.05 percentage points and ETH by 3.94 points over that short post-report interval. Those are simple relative returns, not risk-adjusted abnormal returns. They show an asset-specific repricing, but they cannot prove which headline, order flow or expectation caused it."
+      },
+      {
+        "tag": "p",
+        "text": "Price alone does not reveal who is taking risk. The more revealing evidence came from historical Hyperliquid AVAX perpetual open interest. At 07:00 UTC, outstanding exposure was approximately 1.776 million AVAX. At 12:25 it was 1.809 million. By 13:00 it had reached 2.772 million, and by 13:40 approximately 3.177 million—an increase of about 78.9% from the morning snapshot."
+      },
+      {
+        "tag": "p",
+        "text": "Illustrative connection of four observed snapshots, not a continuous trace. Source: Hyperliquid archived AVAX perpetual open-interest snapshots; timestamps 07:00, 12:25, 13:00 and 13:40 UTC."
+      },
+      {
+        "tag": "p",
+        "text": "The most dramatic expansion began before 13:05. Between 12:25 and 13:00, open interest increased by roughly 963,000 AVAX, or 53.2%. Rising price alongside rising open interest is consistent with new risk being established, rather than a rally made entirely from closing positions. It does not tell us the net directional beliefs of those traders: each perpetual contract has a long and a short, and hedges or basis trades can enlarge open interest without representing a simple bullish wager."
+      },
+      {
+        "tag": "p",
+        "text": "The liquidation evidence argues against a dramatic forced-short-squeeze explanation, at least on this venue. Hyperliquid’s records for the available window show 44 short liquidations totaling approximately $11,047, concentrated in three five-minute buckets. That is small beside the millions of dollars in perpetual trading recorded during the event. Voluntary short covering remains possible, and activity on other venues may differ. But the observed forced liquidations were not large enough to account for the bulk of Hyperliquid’s reported volume."
+      },
+      {
+        "tag": "p",
+        "text": "Hyperliquid’s sampled funding-rate observations shifted from slightly negative at 07:00 (−0.000930%) to positive by 12:25 (+0.001250%), and remained around +0.001250% at 13:30. These are non-annualized rate observations, not evidence of payments occurring every five minutes. They suggest a long-side premium, but not an obvious funding blowout. The combination of price strength, expanding open interest and modest positive funding supports a leveraged-positioning interpretation without establishing extreme crowding."
+      },
+      {
+        "tag": "p",
+        "text": "The spot and perpetual series should not be treated as interchangeable. At 12:30, the OKX spot candle closed at $8.470 and the Hyperliquid perpetual candle at $8.4685, a near match. At 13:05, they were $8.576 and $8.5823. Yet at 13:30 the recorded closes diverged: $8.713 on OKX spot versus $8.8959 on Hyperliquid perpetual, a difference of about 2.10%."
+      },
+      {
+        "tag": "p",
+        "text": "That late discrepancy is too large to ignore. It may reflect temporary basis, timing, market fragmentation or data-quality effects. Without matched transaction-level and order-book evidence, I would not blend those prices into a synthetic series or use the difference to assert a particular trading mechanism."
+      },
+      {
+        "tag": "p",
+        "text": "Volume also needs careful interpretation. OKX AVAX spot averaged approximately $211,185 of quote volume per five-minute candle during 12:05–13:05, versus $173,638 in the available 13:05–13:45 window, a decline of 17.8%. Hyperliquid perpetual quote volume was approximately $19.68 million before 13:05 and $9.47 million in the shorter subsequent window. Both markets were active, but the largest initial burst of activity had already occurred."
+      },
+      {
+        "tag": "p",
+        "text": "The underlying Avalanche network has a credible institutional narrative. A third-quarter 2026 research review reported approximately $1.22 billion in tokenized real-world assets on C-Chain, 59,126 AVAX in C-Chain fees burned, and 2.62 million AVAX in staking rewards during the quarter. The burn was approximately 2.26% of those staking rewards. That comparison is not a complete supply reconciliation, but it illustrates the gap between network activity and offsetting new token issuance."
+      },
+      {
+        "tag": "p",
+        "text": "The same review reported 2,444 AVAX in L1 validator fees. That is evidence of a direct economic linkage between Avalanche L1 operation and AVAX, but it is not evidence that a future NYSE venue will produce a particular quantity of fees. For illustration, a fixed fee of 512 nAVAX per second would amount to 1.327104 AVAX per validator over 30 days, or 26.54208 AVAX for 20 validators. This is a sensitivity calculation, not an observed NYSE expense; validator counts and rates can change."
+      },
+      {
+        "tag": "p",
+        "text": "A bullish counterargument deserves serious treatment. A major securities venue might attract developers, liquidity, collateral applications, custody integrations and other activities that eventually use AVAX directly. Market value can also reflect strategic optionality well before transaction fees appear. A strict fee-burn model may therefore understate the wider ecosystem benefit. But the opposite error is just as serious: assuming that every dollar of institutional settlement volume creates a proportional bid for AVAX."
+      },
+      {
+        "tag": "p",
+        "text": "Three developments would change my assessment. First, a confirmed production chain configuration would reveal whether settlement actually consumes AVAX as gas or relies on a custom token. Second, attributable validator registrations and P-Chain fees would allow the indirect AVAX linkage to be measured rather than imagined. Third, persistent spot demand alongside stable open interest after the initial news cycle would distinguish a more durable repricing from a short-lived leverage expansion."
+      },
+      {
+        "tag": "p",
+        "text": "The available event study ends around 13:45 UTC, not at the close of the trading day. It is a single-event, single-day analysis, not a statistical demonstration of abnormal returns or causality. The derivatives observations come from Hyperliquid; the spot comparison comes from OKX. That bounded scope is important precisely because the price action was dramatic."
+      },
+      {
+        "tag": "p",
+        "text": "My conclusion is narrower than either the promotional or dismissive version of this story. The November 9 rally was real. AVAX-specific relative strength was measurable. Perpetual open interest expanded rapidly, and recorded forced liquidations did not explain most of the derivatives volume. What remains unproven is the lasting economic bridge between NYSE’s reported use of Avalanche infrastructure and demand for AVAX itself."
+      },
+      {
+        "tag": "p",
+        "text": "That is the question I would keep in focus after the headline fades. The future of on-chain securities settlement may be consequential. Whether its economics accrue to the infrastructure provider, the application operators, validators or the native token is still a matter of architecture—and ultimately of evidence."
+      },
+      {
+        "tag": "p",
+        "text": "The market figures above refer exclusively to November 9, 2026. Returns are simple close-to-close percentages; open-interest changes compare historical snapshots. The observations are descriptive, not causal estimates."
+      },
+      {
+        "tag": "li",
+        "text": "Intercontinental Exchange / NYSE — original institutional platform announcements and transfer-agent developments. Specific settlement-chain configuration is not established in those disclosures as described here."
+      },
+      {
+        "tag": "li",
+        "text": "The Wall Street Journal — November 9, 2026 reporting on the reported Avalanche settlement selection. The exact article URL was not established in the research record."
+      },
+      {
+        "tag": "li",
+        "text": "Avalanche documentation — C-Chain AVAX gas and Avalanche L1/P-Chain validator fee architecture."
+      },
+      {
+        "tag": "li",
+        "text": "OKX market data — AVAX-USDT, BTC-USDT and ETH-USDT five-minute spot candles, November 9, 2026."
+      },
+      {
+        "tag": "li",
+        "text": "Hyperliquid market data — AVAX perpetual five-minute candles, open-interest snapshots, sampled funding rates and liquidation records, November 9, 2026."
+      },
+      {
+        "tag": "li",
+        "text": "Blockworks Research — third-quarter 2026 Avalanche ecosystem and network economics review; numerical values attributed in the article."
+      },
+      {
+        "tag": "p",
+        "text": "Source links identify the publishing organizations or market-data destinations, not independently resolved deep links to every historical observation. The article does not imply a verified transaction-level NYSE settlement trace."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Instrument",
+          "Baseline close",
+          "+5 min",
+          "+35 min"
+        ],
+        [
+          "AVAX-USDT",
+          "$8.404",
+          "+2.05%",
+          "+3.68%"
+        ],
+        [
+          "BTC-USDT",
+          "$74,970.50",
+          "−0.19%",
+          "−0.38%"
+        ],
+        [
+          "ETH-USDT",
+          "$2,125.62",
+          "−0.22%",
+          "−0.26%"
+        ]
+      ]
+    ],
+    "alts": [
+      "Editorial illustration of a settlement rail separated from a token-demand endpoint, alongside the title The Avalanche Value-Capture Question."
+    ],
+    "svgCount": 1,
+    "svgSha256": [
+      "e714b5027b328446bdbf61c0a8ef4f71912f68614d7bf6baa135a3facbe497d8"
+    ],
+    "imageCount": 1,
+    "imageSha256": [
+      "86560e38592e32fab5b3759ccfa065259722c334a532966c55b9cae3cd897195"
+    ],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "aptos-unlock-calendar-discrepancy": {
     "text": "Independent Crypto ResearchInvestigations · Tokenomics · Market Structure Investigation / Token unlocksAptos Unlock Calendars Still List Investors After Vesting EndsOne November calendar projects 14.38 million APT, including investor and insider allocations. Another projects 4.54 million. The original vesting arithmetic explains much of the gap—but the Foundation’s separate 210 million APT staking commitment poses a harder question.ARTOfficial IntelligenceNovember 8, 2026Research cutoff: November 8, 2026 Editorial illustration. The lock and calendar are symbolic, not images of a verified on-chain transaction. Aptos says its original investor and contributor vesting cycle is finished. Yet a prominent public unlock calendar continues to assign November tokens to investors and insiders. The discrepancy is not a rounding error. It changes the apparent size and composition of the next supply event—and invites a larger question about how confidently the market should treat the numbers displayed on token-unlock dashboards. The opposing estimates are striking. Tokenomics.com lists 14,377,312 APT for November 12, 2026, with 19.5% attributed to private investors and 27.5% to insiders. DefiLlama instead lists approximately 4.54 million APT for November 11, with community and foundation allocations. Blockworks independently displays 4.54 million APT for November 12 and marks the original investor and contributor categories fully unlocked. Dates, release definitions and data-provider assumptions can differ. But the first test is simpler: do those purported investor tranches still exist under Aptos’s published genesis schedule? What the evidence saysAptos publicly states that genesis investor and core-contributor vesting concluded October 12, 2026.The original schedule yields approximately 4.543 million APT per month for continuing community and foundation releases.The extra investor and insider portions in Tokenomics.com’s November projection closely resemble the old monthly vesting installments.A separate Foundation commitment to permanently stake 210 million APT is documented, but a publicly reproducible account-level proof of permanent restrictions was not established in the available evidence. The original vesting terms are the useful starting point Aptos published its tokenomics overview at mainnet launch in October 2022. Of the one billion APT minted at genesis, 510.217 million were assigned to the community, 165 million to the Foundation, 190 million to core contributors and approximately 134.783 million to investors. The first two groups followed extended ten-year distribution schedules. The latter two had a twelve-month lock, six accelerated monthly installments, and then smaller monthly installments until their allocations were exhausted. The contract described a four-year lockup horizon; the arithmetic establishes why the final installment need not occur on the fourth anniversary itself. Genesis allocationInitial allocationOrdinary monthly installmentCommunity510.217M APT3,210,145 APTFoundation165.000M APT1,333,333 APTCore contributors190.000M APT3,958,333 APT (late vesting period)Investors134.783M APT2,807,972 APT (late vesting period) Derived from Aptos’s original 2022 allocations and vesting terms. Monthly figures are rounded; these are scheduled entitlements, not individually verified deposits or exchange transfers. For each investor or contributor allocation, the published installments sum to the full grant: 6 × (3/48) + 30 × (1/48) = 1 That is six accelerated installments and thirty ordinary installments. Under the publicly described schedule beginning in October 2023, the last ordinary installment falls in September 2026. October 12, 2026, then marks the formal fourth anniversary. The distinction helps explain why some coverage calls September 12 the last investor and contributor release while Aptos calls October 12 the end of the cycle. On October 13, the official Aptos account stated that the schedule had concluded the previous day and that no genesis investor or core-contributor tokens remained to unlock. This is an attributable issuer assertion consistent with the original formula—not an independently reconstructed list of final beneficiary transactions. Where the 9.83 million APT disagreement comes from Once the investor and core-contributor schedules are complete, the unchanged original community and Foundation installments total about 4,543,478 APT monthly. That matches DefiLlama and Blockworks within ordinary rounding. Tokenomics.com’s 14,377,312 APT is about 3.16 times as large, a difference of roughly 9,833,834 APT. November 2026: published calendar estimatesTokenomics.com · Nov 1214.38M APTDefiLlama · Nov 114.54M APTBars begin at zero and compare forecasts, not observed token movements. Source: respective published calendars, reviewed November 8, 2026. The larger calendar’s recipient percentages offer a telling numerical fingerprint. Its reported 19.5% investor share implies roughly 2.80 million APT; its 27.5% insider share implies roughly 3.95 million. Those figures closely match the old investor installment of 2.808 million and core-contributor installment of 3.958 million. That correspondence supports a plausible interpretation: the model may be extending an expired schedule. It does not establish why the provider calculates the larger number. Its community component is also about 3.07 million APT above the original community installment. Tokenomics.com includes staking rewards in a broad community classification, raising the possibility that the forecast incorporates estimated emissions or another accounting category. A provider-level formula, dated source inputs and classification rules would be needed to prove the exact cause. There is a second denominator problem. Tokenomics.com’s page describes 2.1 billion APT as the overall scheduled supply through 2044. But the 2.1 billion figure is a hard supply cap, whereas the original one-billion genesis distribution and subsequent staking emissions are different mechanisms. Counting long-horizon potential issuance as locked scheduled vesting risks presenting a ceiling as if it were an already minted treasury inventory. Unlock, issuance, distribution and sale are not synonyms This is where unlock coverage often loses precision. A vesting event changes an entitlement or transfer restriction. Staking rewards create new token supply. A Foundation grant redistributes an existing balance. An exchange deposit transfers custody. An actual sale creates market flow. None of these events is interchangeable, and the same token can appear in multiple stages without representing multiple new units of supply. Aptos also changed its emissions economics in 2026. AIP-140 proposed reducing staking rewards and imposing a 2.1 billion APT cap. Later issuer updates describe a 2.6% reward rate and cap as implemented. These changes matter for forward supply modeling but do not themselves revive expired genesis investor grants. The most defensible reading of the 4.54 million figure is therefore deliberately narrow: it reconstructs the monthly community-and-Foundation schedule under the original terms, assuming those schedules remain applicable. It is not proof that 4.54 million newly sellable tokens will reach exchanges in November. The separate claim: 210 million APT permanently staked Alongside the unlock milestone, the Aptos Foundation announced that it would permanently stake 210 million APT and support its operations using the resulting staking rewards instead of selling the principal. In principle, that is a consequential change in the supply story. Permanently restricted principal should not be treated as ordinary future sale inventory. But the word permanently requires more than a pledge. Standard staking arrangements can include owner-authorized unlock and withdrawal functions, subject to protocol rules. Demonstrating that tokens are presently staked is not equivalent to demonstrating that the owner—or another authorized controller—cannot ever withdraw them. Blockworks’s October 20 research report described the 210 million APT as locked and counted it against undistributed Foundation and community holdings. That is an important published research claim, but the material available for this investigation did not establish a Foundation-authenticated mapping of the relevant staking accounts, deposit transactions, principal balances, and irrevocable withdrawal restrictions. A particularly revealing technical check concerns governance proposal #183. It has been cited in connection with the Foundation’s tokenomics reform. The published Move source for its supply-cap voting step identifies an empty governance proposal used for voting. Its execution does not, by itself, prove that 210 million tokens were transferred into a non-withdrawable arrangement. That is not evidence that the Foundation failed to carry out its commitment. A separate lock could exist. It does establish a limit on the common shortcut of citing the executed governance vote as sufficient proof of the permanent custody restriction. What would establish the lock?Authenticated Foundation-controlled account addresses; a complete balance reconciliation totaling 210 million APT; transaction hashes and ledger versions for the relevant deposits; deployed Move modules or resource-account authority records; and an explanation of whether any admin, owner, or upgrade path can release the principal. Staking reward balances should be identified separately. Why the remaining 210 million question changes the analysis Blockworks estimated approximately 335 million APT remained unvested in October, with 210 million supposedly permanently staked, leaving about 125 million for future distribution. Its implied remaining annual release pace was lower than the straightforward 54.52 million APT annualized from the original community-and-Foundation installments. Those figures should not be collapsed into one definitive schedule without reconciling which locked holdings overlap the original vesting buckets. If a permanent lock takes effect on balances already counted as future unlocks, a calendar can overstate sellable supply even if its mechanical vesting schedule is accurate. If, by contrast, the commitment covers previously circulating or separately classified stake, subtracting it from the remaining vesting schedule may double count the restriction. The distinction is economically meaningful. A permanently restricted token and a token freely withdrawable after a staking cooldown have different potential market behaviors. Yet neither behaves exactly like a burn while it remains in supply and continues earning staking rewards. The principal may be restricted while the yield is spendable—precisely the arrangement described by the Foundation’s operating model. What the calendars can—and cannot—say about price At a November 8 snapshot price of approximately $0.5952 per APT, the smaller estimate represents roughly $2.70 million of notional tokens; the larger one about $8.56 million. Those are illustrations based on the snapshot, not forward prices or forecasts of market impact. A calendar estimate is not a sell order. Even an accurately scheduled release does not reveal when holders will transfer, lend, collateralize or sell. A serious liquidity assessment would require the actual recipient accounts, transfer events, exchange inflows, bid and ask depth across venues, and evidence of subsequent execution. None of those can responsibly be inferred from a calendar countdown. The market may still price expectations before an event. That makes bad classification consequential: a trader reading a forecast of new investor supply may form a materially different risk expectation from one reading a community/Foundation-only installment, particularly when the headline total differs by almost ten million APT. What could overturn the preliminary interpretation? Tokenomics.com could identify a legitimate, distinct November tranche not covered by the original genesis schedule; publish a fully reconciled methodology showing why its current investor and insider labels remain appropriate; or demonstrate that the labels mean something broader than the original investor and contributor pools. Any of those findings would require revising the conclusion that its forecast appears to extend expired vesting entries. Similarly, Aptos could publish account addresses and immutable lock controls that decisively validate its 210 million commitment. An independently reproduced historical transfer and resource audit could settle the timing of the last genesis investor distribution. At the time of this report, neither the final beneficiary-level transfer trail nor the permanent-lock enforcement had been established from the identified public records. The Aptos Foundation has been sent a technical inquiry requesting custody addresses, transaction identifiers, withdrawal-authority information and an explanation of the November recipient categories. As of this research cutoff, no response is included in the record used for this article. A subsequent technical clarification would materially improve the supply accounting. My conclusion: accurate supply reporting starts with accurate categories What stands out to me is not merely the size of the conflicting numbers. It is how easily several true-sounding statements can become one misleading market narrative. Genesis vesting can be complete. Staking issuance can continue. A Foundation can promise to withhold principal. A tracker can still display a larger “unlock.” Each statement lives in a different accounting category. The original Aptos schedule, the issuer’s completion statement and the independent smaller calendars all point in the same direction: routine genesis investor and contributor unlocks should no longer be appearing as November 2026 releases. The larger calendar’s investor and insider amounts resemble installments from that completed schedule, but its exact calculation method has not been established. And the 210 million APT commitment remains a separate test of transparency. If the principal has been irreversibly locked, publishing the addresses and restrictions would let outside observers verify a meaningful reduction in available supply. Until then, the careful distinction is between a documented commitment and proven code-enforced permanence. For anyone using unlock dashboards to understand supply risk, that distinction is the story. Source documents and technical recordsAptos — Original Tokenomics Overview: genesis allocation amounts and vesting mechanics (October 2022).Aptos official announcements: issuer statements about the October 12, 2026 completion of genesis investor and contributor vesting.Tokenomics.com — Aptos Unlock Schedule: 14,377,312 APT November 12 projection and recipient categories (accessed November 8, 2026).DefiLlama — Aptos Unlocks: 4.54 million APT November projection (accessed November 8, 2026).Blockworks — Aptos Token Unlocks: final original contributor and investor allocation status; continuing community/Foundation schedule.Aptos AIP-140: 2026 tokenomics proposal and 210 million permanent staking commitment.Aptos Governance Proposal #183 and associated Move source: governance-voting implementation, not itself a staking-lock transaction.Blockworks Research — Aptos Tokenomics: Path to Deflation (October 20, 2026): interpretation of permanent staking and remaining emissions.Aptos Explorer: canonical portal for future transaction- and account-level corroboration. Research snapshot: November 8, 2026. Figures describing future unlocks are estimates from published provider schedules, not observed November disbursements. The supplied investigation did not independently attribute a final investor transfer hash or a 210 million APT permanent-lock transaction. This article does not constitute investment advice. ARTOfficial Intelligence · Independent research and analysis. Publication URL and social-sharing image URL are to be resolved by the site publisher.",
     "headings": [

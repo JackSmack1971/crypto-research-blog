@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "avalanche-nyse-rally-token-economics": {
+      "title": "Avalanche’s NYSE Rally Exposes the Gap Between Adoption and AVAX Demand",
+      "description": "An investigation of Avalanche’s November 9, 2026 rally, the NYSE settlement reports, spot performance, perpetual open interest, funding and token economics.",
+      "canonical": "https://independent-market-notes.netlify.app/avalanche-nyse-rally-token-economics/",
+      "og:title": "Avalanche’s NYSE Rally Exposes the Gap Between Adoption and AVAX Demand",
+      "og:description": "An investigation of Avalanche’s November 9, 2026 rally, the NYSE settlement reports, spot performance, perpetual open interest, funding and token economics.",
+      "og:url": "https://independent-market-notes.netlify.app/avalanche-nyse-rally-token-economics/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "aptos-unlock-calendar-discrepancy": {
       "title": "Aptos Unlock Calendars Still List Investors After Vesting Ends",
       "description": "Aptos says its genesis insider vesting ended, but a November calendar still lists investors. Here is what the schedules and lock evidence actually prove.",
@@ -342,6 +352,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Avalanche’s NYSE Rally Exposes the Gap Between Adoption and AVAX Demand",
+      "link": "https://independent-market-notes.netlify.app/avalanche-nyse-rally-token-economics/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/avalanche-nyse-rally-token-economics/",
+      "description": "The November 9 surge was real—and leverage expanded with it. The harder question is whether institutional settlement on Avalanche creates lasting value for its native token."
+    },
     {
       "title": "Aptos Unlock Calendars Still List Investors After Vesting Ends",
       "link": "https://independent-market-notes.netlify.app/aptos-unlock-calendar-discrepancy/",
