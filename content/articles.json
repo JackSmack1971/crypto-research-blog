@@ -1,5 +1,22 @@
 [
   {
+    "slug": "circle-arc-revenue-valuation-investigation",
+    "source": "circle-arc-revenue-valuation-investigation.html",
+    "date": "2026-11-09",
+    "title": "Circle’s ARC Revenue Changed the Growth Story. The Valuation Question Is Harder.",
+    "dek": "A $181.8 million token presale turned a contracting quarter into headline growth. What the filings, valuation arithmetic, and Arc blockchain evidence actually show.",
+    "image": "assets/featured/circle-arc-revenue-valuation-investigation.jpg",
+    "image_alt": "Editorial illustration of a financial ledger with a separate amber ARC revenue layer, emphasizing the distinction between recurring earnings and token presale income.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "tokenomics",
+    "assets": [
+      "ARC"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "allora-unlock-accounting-versus-selling",
     "source": "allora-unlock-accounting-versus-selling.html",
     "date": "2026-11-09",

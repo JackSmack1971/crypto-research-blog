@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "circle-arc-revenue-valuation-investigation": {
+      "title": "Circle’s ARC Revenue Changed the Growth Story. The Valuation Question Is Harder.",
+      "description": "Circle’s Q3 2026 ARC presale boosted reported revenue by $181.8 million. A closer look at normalized growth, CRCL valuation and Arc network evidence.",
+      "canonical": "https://independent-market-notes.netlify.app/circle-arc-revenue-valuation-investigation/",
+      "og:title": "Circle’s ARC Revenue Changed the Growth Story. The Valuation Question Is Harder.",
+      "og:description": "Circle’s Q3 2026 ARC presale boosted reported revenue by $181.8 million. A closer look at normalized growth, CRCL valuation and Arc network evidence.",
+      "og:url": "https://independent-market-notes.netlify.app/circle-arc-revenue-valuation-investigation/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "allora-unlock-accounting-versus-selling": {
       "title": "Allora’s Insider Unlock: Why the Vesting Clock Is Not a Sell Order",
       "description": "An investigation of Allora’s November 2026 ALLO unlock, native-chain vesting figures, supply discrepancies, spot liquidity, and the evidence needed to establish insider selling.",
@@ -362,6 +372,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Circle’s ARC Revenue Changed the Growth Story. The Valuation Question Is Harder.",
+      "link": "https://independent-market-notes.netlify.app/circle-arc-revenue-valuation-investigation/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/circle-arc-revenue-valuation-investigation/",
+      "description": "A $181.8 million token presale turned a contracting quarter into headline growth. What the filings, valuation arithmetic, and Arc blockchain evidence actually show."
+    },
     {
       "title": "Allora’s Insider Unlock: Why the Vesting Clock Is Not a Sell Order",
       "link": "https://independent-market-notes.netlify.app/allora-unlock-accounting-versus-selling/",
