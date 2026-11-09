@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "allora-unlock-accounting-versus-selling": {
+      "title": "Allora’s Insider Unlock: Why the Vesting Clock Is Not a Sell Order",
+      "description": "An investigation of Allora’s November 2026 ALLO unlock, native-chain vesting figures, supply discrepancies, spot liquidity, and the evidence needed to establish insider selling.",
+      "canonical": "https://independent-market-notes.netlify.app/allora-unlock-accounting-versus-selling/",
+      "og:title": "Allora’s Insider Unlock: Why the Vesting Clock Is Not a Sell Order",
+      "og:description": "An investigation of Allora’s November 2026 ALLO unlock, native-chain vesting figures, supply discrepancies, spot liquidity, and the evidence needed to establish insider selling.",
+      "og:url": "https://independent-market-notes.netlify.app/allora-unlock-accounting-versus-selling/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "avalanche-nyse-rally-token-economics": {
       "title": "Avalanche’s NYSE Rally Exposes the Gap Between Adoption and AVAX Demand",
       "description": "An investigation of Avalanche’s November 9, 2026 rally, the NYSE settlement reports, spot performance, perpetual open interest, funding and token economics.",
@@ -352,6 +362,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Allora’s Insider Unlock: Why the Vesting Clock Is Not a Sell Order",
+      "link": "https://independent-market-notes.netlify.app/allora-unlock-accounting-versus-selling/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/allora-unlock-accounting-versus-selling/",
+      "description": "A 160-million-token cliff, conflicting supply classifications, and thin spot liquidity expose the gap between scheduled vesting and actual market selling."
+    },
     {
       "title": "Avalanche’s NYSE Rally Exposes the Gap Between Adoption and AVAX Demand",
       "link": "https://independent-market-notes.netlify.app/avalanche-nyse-rally-token-economics/",

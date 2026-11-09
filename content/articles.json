@@ -1,5 +1,22 @@
 [
   {
+    "slug": "allora-unlock-accounting-versus-selling",
+    "source": "allora-unlock-accounting-versus-selling.html",
+    "date": "2026-11-09",
+    "title": "Allora’s Insider Unlock: Why the Vesting Clock Is Not a Sell Order",
+    "dek": "A 160-million-token cliff, conflicting supply classifications, and thin spot liquidity expose the gap between scheduled vesting and actual market selling.",
+    "image": "assets/featured/allora-unlock-accounting-versus-selling.jpg",
+    "image_alt": "Editorial illustration of a secured token allocation facing a calendar, separated by a line representing the gap between unlocking and selling.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg",
+    "topic": "tokenomics",
+    "assets": [
+      "ALLO"
+    ],
+    "research_type": "investigative-analysis"
+  },
+  {
     "slug": "avalanche-nyse-rally-token-economics",
     "source": "avalanche-nyse-rally-token-economics.html",
     "date": "2026-11-09",
