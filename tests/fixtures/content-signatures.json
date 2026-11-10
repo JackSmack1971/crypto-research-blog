@@ -1,4 +1,222 @@
 {
+  "bitcoin-selling-pressure-investigation": {
+    "text": "INDEPENDENT MARKET NOTESBitcoin · Market structure · InvestigationBitcoin Fell While Open Interest Rose. That Complicates the Liquidation Story.A 29-day Hyperliquid record shows nearly $727 million in long liquidations alongside rising BTC-denominated open interest. The selloff was real; its dominant cause remains unsettled.November 10, 2026 · Historical observations, not live market dataEditorial illustration. The opposing fields are conceptual, not a market chart. Bitcoin's October-to-November slide looks, at first glance, like a familiar story: leveraged traders crowd into the wrong side of a move, forced selling accelerates the decline, and the market eventually clears the excess. There is evidence for part of that story. There is also a stubborn piece of evidence that refuses to fit neatly inside it. Across 29 days of hourly Hyperliquid observations, Bitcoin's mark price fell approximately 10.26%. Yet open interest measured in Bitcoin—not in dollars—rose 9.88%. Over the same period, reported long liquidations totaled approximately $726.6 million. The market was absorbing liquidations and adding outstanding exposure at the same time. That is the distinction I think matters. A liquidation event tells us something was forcibly closed. It does not tell us whether the market as a whole was persistently shedding leverage, or whether new positions were replacing the old ones. And it certainly does not identify the original source of the selling. −10.26%BTC mark-price change · first to last hourly snapshot+9.88%BTC-denominated open-interest change$726.6MReported long liquidations · summed hourly aggregates The market declined. The leverage did not simply disappear. Open interest is the amount of outstanding derivative exposure. It can increase when new contracts are opened and decrease when contracts are closed. Because a perpetual contract has both a long and a short, open interest cannot by itself tell us which side is winning. But its units matter enormously. If Bitcoin falls 10%, open interest expressed in dollars can fall even if the number of Bitcoin contracts does not change. That makes a dollar-denominated chart a dangerous shortcut when the question is whether positions actually closed. In the Hyperliquid record, open interest rose from approximately 38,251 BTC at October 12, 00:00 UTC to 42,031 BTC at November 9, 23:00 UTC. Those are endpoint snapshots, not a claim that leverage increased without interruption. Indeed, the path was uneven. During the November 5 selloff, the hourly record showed a roughly 460 BTC contraction in open interest alongside an approximately 3.15% negative log return and $36.2 million in reported long liquidations. That is a credible signature of liquidation-related amplification within the hour. It is not proof that liquidations initiated the move: hourly buckets do not establish the order of individual trades and forced closures. Liquidations can be real, substantial and consequential without being the primary cause of a month-long decline. Where the selloff was sharpest Several of the largest daily declines illuminate the problem with a one-cause explanation. On November 5, both price and open interest fell. On October 22, price fell while open interest increased. On October 29, a steep decline coincided with nearly flat daily open interest. Those are different market configurations, not interchangeable episodes. UTC dateDaily BTC returnDaily BTC OI changeReported long liquidationsNov 5−5.47%−1.14%$76.1MOct 29−4.15%−0.14%$100.2MOct 22−3.13%+1.93%$50.5MNov 2−1.94%+0.84%$16.2M Source: Hyperliquid BTC historical market-state, candle and liquidation aggregates. Daily returns are close-to-close; OI changes compare consecutive daily observations. Dates and percentages are historical, rounded observations. Liquidation totals are reported venue aggregates, not global market totals. The same-hour statistics point toward a relationship but stop short of identifying a driver. Across 695 hourly changes, the Pearson correlation between log returns and BTC open-interest changes was approximately +0.209. Between returns and reported long-liquidation notional, it was approximately −0.373. Negative price hours tended to coincide with more long-liquidation activity; positive returns tended to coincide with OI expansion. Neither correlation is a lead–lag test. Neither accounts for autocorrelation, market regimes or simultaneous responses to an outside shock. Funding adds a second complication The OKX BTC-USDT perpetual funding history offers a separate view of trader positioning. Over the 30-day UTC window ending November 9, 83 of 90 eight-hour funding observations were positive. The average realized rate was approximately +0.00643% per interval. In ordinary terms, longs generally paid shorts even as Bitcoin declined. That does not mean every trader was bullish, or that the same positions survived the entire month. It means the derivatives market continued to price a premium for long exposure through much of the selloff. The possibility worth taking seriously is a market where leveraged demand repeatedly rebuilds after setbacks, rather than one where all speculative risk exits in a single purge. OKX spot turnover provides another necessary but incomplete piece. Over 30 completed exchange-defined daily sessions, BTC-USDT spot volume totaled approximately 177,861 BTC, or 14.16 billion USDT in reported notional turnover, while price declined roughly 9.07% from the first session open to the last close. The exchange's daily session boundary was 16:00 UTC, not midnight UTC, so those figures should not be mechanically joined to the Hyperliquid calendar-day series. Most importantly, turnover is not net selling. Every executed spot trade has a buyer and a seller. To determine whether sellers were persistently crossing the spread, we need aggressor-classified trade records: marketable sells versus marketable buys, consistently measured across venues. Candles and volume alone cannot answer that question. Reading the evidence: The Hyperliquid record covers October 12–November 9, 2026, with 696 hourly OI and funding observations and 286 hourly liquidation aggregates containing reported events. The OKX spot and funding windows use their own documented exchange intervals. The figures above are not a synchronized four-exchange causal study. Three explanations remain alive Liquidation-driven amplification The strongest argument for the liquidation thesis is local and event-specific. Large long-liquidation totals appeared during sharp declines, including the November 5 hourly episode. Forced closures can consume available liquidity and deepen a move that is already underway. But the persistence of higher endpoint OI makes it hard to describe the entire period as continuous net deleveraging on Hyperliquid. Persistent spot distribution A second possibility is that underlying spot selling set the direction, with derivatives liquidations responding to it. That would fit a market where leveraged exposure keeps rebuilding while price drifts lower. It remains a hypothesis, not a finding: the available spot turnover figures do not classify trade initiators, and they cover only one spot venue. A feedback loop rather than a single culprit The third explanation is the one I consider most plausible as a framework, though not yet demonstrated empirically: spot selling pressures price, leverage amplifies the move, traders re-enter, and the cycle repeats. The observed alternation between OI contraction and expansion is compatible with that process. Compatibility is weaker than proof. A proper test would examine whether aggressive spot sells lead OI contraction and liquidation spikes, rather than merely appearing in the same interval. What would change my interpretation? A synchronized hourly panel across OKX, Binance, Bybit and Hyperliquid could substantially strengthen or weaken each explanation. It would require BTC-denominated OI, settled funding normalized for different payment intervals, aggressor-side spot volume and venue-specific liquidation events. Exchange-specific contract multipliers, timestamp conventions and reporting completeness would have to be reconciled before aggregation. If spot sell imbalance consistently led the largest declines and liquidation spikes followed, I would give more weight to a spot-led process. If OI contracted sharply before or at the start of declines, with concentrated long liquidations and limited preceding spot imbalance, the liquidation-led explanation would gain ground. If neither pattern held consistently, the evidence would favor a mixed or regime-dependent mechanism. There is a broader reason to care about this distinction. A selloff caused primarily by leveraged positions being flushed out can exhaust itself without changing the underlying demand for Bitcoin. Sustained spot distribution is a different kind of pressure: it can persist after funding normalizes and liquidation headlines fade. Confusing the two leads to premature claims that the market has already cleared its excess risk. The question behind the liquidation headline What stands out to me is not that liquidations happened. They did, in material size on the venue examined. It is that a falling Bitcoin price coexisted with more outstanding BTC-denominated derivatives exposure at the end of the period. That is a market continually rearranging risk, not merely erasing it. I would resist declaring either a completed leverage flush or a proven campaign of spot distribution. The evidence supports a narrower and more interesting conclusion: forced selling amplified parts of the decline, while the dominant source of sustained downward pressure remains unresolved. The next useful headline will not be the largest liquidation number. It will be the one that establishes which market moved first. Sources and measurement notesHyperliquid documentation — reference for the BTC perpetual market and its market-data conventions. Numerical observations in this article are drawn from historical Hyperliquid BTC price, open-interest, funding and liquidation aggregates covering October 12–November 9, 2026. The documentation link is not a permanent archive of the quoted historical rows.OKX market-data documentation — reference for BTC-USDT spot candles and BTC-USDT-SWAP funding conventions. Numerical observations are based on the historical market records examined for this investigation; the linked documentation does not itself reproduce those observations.All percentages and liquidation amounts are rounded. Hyperliquid price change uses first and last hourly mark-price snapshots; daily returns use close-to-close candles. The hourly return–liquidation correlation treats intervals without a returned liquidation aggregate as zero reported events, an assumption that could understate unreported activity. The 29-day Hyperliquid sample is shorter than the intended 30-day four-venue comparison. No causal attribution or market-wide liquidation share is claimed. INDEPENDENT MARKET NOTES · MARKET STRUCTURE RESEARCH",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Bitcoin Fell While Open Interest Rose. That Complicates the Liquidation Story."
+      },
+      {
+        "tag": "h2",
+        "text": "The market declined. The leverage did not simply disappear."
+      },
+      {
+        "tag": "h2",
+        "text": "Where the selloff was sharpest"
+      },
+      {
+        "tag": "h2",
+        "text": "Funding adds a second complication"
+      },
+      {
+        "tag": "h2",
+        "text": "Three explanations remain alive"
+      },
+      {
+        "tag": "h3",
+        "text": "Liquidation-driven amplification"
+      },
+      {
+        "tag": "h3",
+        "text": "Persistent spot distribution"
+      },
+      {
+        "tag": "h3",
+        "text": "A feedback loop rather than a single culprit"
+      },
+      {
+        "tag": "h2",
+        "text": "What would change my interpretation?"
+      },
+      {
+        "tag": "h2",
+        "text": "The question behind the liquidation headline"
+      },
+      {
+        "tag": "h2",
+        "text": "Sources and measurement notes"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://hyperliquid.gitbook.io/hyperliquid-docs",
+        "text": "Hyperliquid documentation"
+      },
+      {
+        "href": "https://www.okx.com/docs-v5/en/",
+        "text": "OKX market-data documentation"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "A 29-day Hyperliquid record shows nearly $727 million in long liquidations alongside rising BTC-denominated open interest. The selloff was real; its dominant cause remains unsettled."
+      },
+      {
+        "tag": "p",
+        "text": "November 10, 2026 · Historical observations, not live market data"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Editorial illustration. The opposing fields are conceptual, not a market chart."
+      },
+      {
+        "tag": "p",
+        "text": "Bitcoin's October-to-November slide looks, at first glance, like a familiar story: leveraged traders crowd into the wrong side of a move, forced selling accelerates the decline, and the market eventually clears the excess. There is evidence for part of that story. There is also a stubborn piece of evidence that refuses to fit neatly inside it."
+      },
+      {
+        "tag": "p",
+        "text": "Across 29 days of hourly Hyperliquid observations, Bitcoin's mark price fell approximately 10.26%. Yet open interest measured in Bitcoin—not in dollars—rose 9.88%. Over the same period, reported long liquidations totaled approximately $726.6 million. The market was absorbing liquidations and adding outstanding exposure at the same time."
+      },
+      {
+        "tag": "p",
+        "text": "That is the distinction I think matters. A liquidation event tells us something was forcibly closed. It does not tell us whether the market as a whole was persistently shedding leverage, or whether new positions were replacing the old ones. And it certainly does not identify the original source of the selling."
+      },
+      {
+        "tag": "p",
+        "text": "Open interest is the amount of outstanding derivative exposure. It can increase when new contracts are opened and decrease when contracts are closed. Because a perpetual contract has both a long and a short, open interest cannot by itself tell us which side is winning. But its units matter enormously."
+      },
+      {
+        "tag": "p",
+        "text": "If Bitcoin falls 10%, open interest expressed in dollars can fall even if the number of Bitcoin contracts does not change. That makes a dollar-denominated chart a dangerous shortcut when the question is whether positions actually closed. In the Hyperliquid record, open interest rose from approximately 38,251 BTC at October 12, 00:00 UTC to 42,031 BTC at November 9, 23:00 UTC. Those are endpoint snapshots, not a claim that leverage increased without interruption."
+      },
+      {
+        "tag": "p",
+        "text": "Indeed, the path was uneven. During the November 5 selloff, the hourly record showed a roughly 460 BTC contraction in open interest alongside an approximately 3.15% negative log return and $36.2 million in reported long liquidations. That is a credible signature of liquidation-related amplification within the hour. It is not proof that liquidations initiated the move: hourly buckets do not establish the order of individual trades and forced closures."
+      },
+      {
+        "tag": "blockquote",
+        "text": "Liquidations can be real, substantial and consequential without being the primary cause of a month-long decline."
+      },
+      {
+        "tag": "p",
+        "text": "Several of the largest daily declines illuminate the problem with a one-cause explanation. On November 5, both price and open interest fell. On October 22, price fell while open interest increased. On October 29, a steep decline coincided with nearly flat daily open interest. Those are different market configurations, not interchangeable episodes."
+      },
+      {
+        "tag": "p",
+        "text": "Source: Hyperliquid BTC historical market-state, candle and liquidation aggregates. Daily returns are close-to-close; OI changes compare consecutive daily observations. Dates and percentages are historical, rounded observations. Liquidation totals are reported venue aggregates, not global market totals."
+      },
+      {
+        "tag": "p",
+        "text": "The same-hour statistics point toward a relationship but stop short of identifying a driver. Across 695 hourly changes, the Pearson correlation between log returns and BTC open-interest changes was approximately +0.209. Between returns and reported long-liquidation notional, it was approximately −0.373. Negative price hours tended to coincide with more long-liquidation activity; positive returns tended to coincide with OI expansion. Neither correlation is a lead–lag test. Neither accounts for autocorrelation, market regimes or simultaneous responses to an outside shock."
+      },
+      {
+        "tag": "p",
+        "text": "The OKX BTC-USDT perpetual funding history offers a separate view of trader positioning. Over the 30-day UTC window ending November 9, 83 of 90 eight-hour funding observations were positive. The average realized rate was approximately +0.00643% per interval. In ordinary terms, longs generally paid shorts even as Bitcoin declined."
+      },
+      {
+        "tag": "p",
+        "text": "That does not mean every trader was bullish, or that the same positions survived the entire month. It means the derivatives market continued to price a premium for long exposure through much of the selloff. The possibility worth taking seriously is a market where leveraged demand repeatedly rebuilds after setbacks, rather than one where all speculative risk exits in a single purge."
+      },
+      {
+        "tag": "p",
+        "text": "OKX spot turnover provides another necessary but incomplete piece. Over 30 completed exchange-defined daily sessions, BTC-USDT spot volume totaled approximately 177,861 BTC, or 14.16 billion USDT in reported notional turnover, while price declined roughly 9.07% from the first session open to the last close. The exchange's daily session boundary was 16:00 UTC, not midnight UTC, so those figures should not be mechanically joined to the Hyperliquid calendar-day series."
+      },
+      {
+        "tag": "p",
+        "text": "Most importantly, turnover is not net selling. Every executed spot trade has a buyer and a seller. To determine whether sellers were persistently crossing the spread, we need aggressor-classified trade records: marketable sells versus marketable buys, consistently measured across venues. Candles and volume alone cannot answer that question."
+      },
+      {
+        "tag": "p",
+        "text": "The strongest argument for the liquidation thesis is local and event-specific. Large long-liquidation totals appeared during sharp declines, including the November 5 hourly episode. Forced closures can consume available liquidity and deepen a move that is already underway. But the persistence of higher endpoint OI makes it hard to describe the entire period as continuous net deleveraging on Hyperliquid."
+      },
+      {
+        "tag": "p",
+        "text": "A second possibility is that underlying spot selling set the direction, with derivatives liquidations responding to it. That would fit a market where leveraged exposure keeps rebuilding while price drifts lower. It remains a hypothesis, not a finding: the available spot turnover figures do not classify trade initiators, and they cover only one spot venue."
+      },
+      {
+        "tag": "p",
+        "text": "The third explanation is the one I consider most plausible as a framework, though not yet demonstrated empirically: spot selling pressures price, leverage amplifies the move, traders re-enter, and the cycle repeats. The observed alternation between OI contraction and expansion is compatible with that process. Compatibility is weaker than proof. A proper test would examine whether aggressive spot sells lead OI contraction and liquidation spikes, rather than merely appearing in the same interval."
+      },
+      {
+        "tag": "p",
+        "text": "A synchronized hourly panel across OKX, Binance, Bybit and Hyperliquid could substantially strengthen or weaken each explanation. It would require BTC-denominated OI, settled funding normalized for different payment intervals, aggressor-side spot volume and venue-specific liquidation events. Exchange-specific contract multipliers, timestamp conventions and reporting completeness would have to be reconciled before aggregation."
+      },
+      {
+        "tag": "p",
+        "text": "If spot sell imbalance consistently led the largest declines and liquidation spikes followed, I would give more weight to a spot-led process. If OI contracted sharply before or at the start of declines, with concentrated long liquidations and limited preceding spot imbalance, the liquidation-led explanation would gain ground. If neither pattern held consistently, the evidence would favor a mixed or regime-dependent mechanism."
+      },
+      {
+        "tag": "p",
+        "text": "There is a broader reason to care about this distinction. A selloff caused primarily by leveraged positions being flushed out can exhaust itself without changing the underlying demand for Bitcoin. Sustained spot distribution is a different kind of pressure: it can persist after funding normalizes and liquidation headlines fade. Confusing the two leads to premature claims that the market has already cleared its excess risk."
+      },
+      {
+        "tag": "p",
+        "text": "What stands out to me is not that liquidations happened. They did, in material size on the venue examined. It is that a falling Bitcoin price coexisted with more outstanding BTC-denominated derivatives exposure at the end of the period. That is a market continually rearranging risk, not merely erasing it."
+      },
+      {
+        "tag": "p",
+        "text": "I would resist declaring either a completed leverage flush or a proven campaign of spot distribution. The evidence supports a narrower and more interesting conclusion: forced selling amplified parts of the decline, while the dominant source of sustained downward pressure remains unresolved. The next useful headline will not be the largest liquidation number. It will be the one that establishes which market moved first."
+      },
+      {
+        "tag": "li",
+        "text": "Hyperliquid documentation — reference for the BTC perpetual market and its market-data conventions. Numerical observations in this article are drawn from historical Hyperliquid BTC price, open-interest, funding and liquidation aggregates covering October 12–November 9, 2026. The documentation link is not a permanent archive of the quoted historical rows."
+      },
+      {
+        "tag": "li",
+        "text": "OKX market-data documentation — reference for BTC-USDT spot candles and BTC-USDT-SWAP funding conventions. Numerical observations are based on the historical market records examined for this investigation; the linked documentation does not itself reproduce those observations."
+      },
+      {
+        "tag": "p",
+        "text": "All percentages and liquidation amounts are rounded. Hyperliquid price change uses first and last hourly mark-price snapshots; daily returns use close-to-close candles. The hourly return–liquidation correlation treats intervals without a returned liquidation aggregate as zero reported events, an assumption that could understate unreported activity. The 29-day Hyperliquid sample is shorter than the intended 30-day four-venue comparison. No causal attribution or market-wide liquidation share is claimed."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "UTC date",
+          "Daily BTC return",
+          "Daily BTC OI change",
+          "Reported long liquidations"
+        ],
+        [
+          "Nov 5",
+          "−5.47%",
+          "−1.14%",
+          "$76.1M"
+        ],
+        [
+          "Oct 29",
+          "−4.15%",
+          "−0.14%",
+          "$100.2M"
+        ],
+        [
+          "Oct 22",
+          "−3.13%",
+          "+1.93%",
+          "$50.5M"
+        ],
+        [
+          "Nov 2",
+          "−1.94%",
+          "+0.84%",
+          "$16.2M"
+        ]
+      ]
+    ],
+    "alts": [
+      "Conceptual editorial artwork of opposing slate and copper pressure fields converging around a central circular fracture, representing competing explanations for Bitcoin selling."
+    ],
+    "svgCount": 0,
+    "svgSha256": [],
+    "imageCount": 1,
+    "imageSha256": [
+      "067a377d17645b6226625637dc103602f99b5c381a477532632819f1625d2abc"
+    ],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "circle-arc-revenue-valuation-investigation": {
     "text": "Independent Research / Crypto & Capital MarketsInvestigative analysis · Circle / CRCL / ARCCircle’s ARC Revenue Changed the Growth Story. The Valuation Question Is Harder.A $181.8 million token presale turned a contracting quarter into headline growth. What the filings, valuation arithmetic, and Arc blockchain evidence actually show.November 9, 2026 · Financial data as of the dates specified belowEditorial illustration: token-presale revenue is a distinct layer of Circle’s reported growth, not a proxy for recurring stablecoin economics.Circle’s third-quarter numbers offered two stories at once. On the surface, revenue and reserve income rose nearly 17% from a year earlier. Remove a single $181.8 million item tied to an institutional presale of ARC tokens, however, and the same quarter shows a decline of roughly 7.7%. Both statements can be true. The problem begins when investors treat them as interchangeable.That distinction is the center of my reading of Circle’s September 2026 quarter. This is not an allegation that the company concealed the presale. The amount and its accounting treatment appear in the company’s filings. It is a question of economic interpretation: how much of the reported growth came from a repeatable business, and how much came from an event whose timing and future recurrence are fundamentally different?The answer matters beyond one company. Crypto businesses increasingly straddle conventional financial services and self-issued digital assets. Their income statements can blend reserve yield, transaction fees, infrastructure services and token monetization. Each may be legitimate revenue. They do not deserve the same valuation multiple.The quarter changes when ARC comes outCircle reported $864.888 million in third-quarter 2026 revenue and reserve income, compared with $739.759 million a year earlier. The reported increase was $125.129 million. ARC presale revenue alone was approximately $181.8 million—larger than the entire year-over-year increase. Without it, third-quarter revenue was about $683.088 million.Two views of the same quarterQ3 reported and ex-ARC revenue2025 reported and ex-ARC both 739.8 million dollars; 2026 reported 864.9 million and ex-ARC 683.1 million.Q3 2025Q3 20260$900M739.8739.8864.9683.1■ Reported■ Ex-ARC (lighter bar)USD millions; Q3 periods ended September 30. Rounded display values.Revenue componentQ3 2025Q3 2026Year-over-yearReserve income711.2657.6−7.5%Other revenue, excluding ARC28.525.5−10.7% approx.Revenue excluding ARC739.8683.1−7.7%ARC presale revenue—181.8Not comparableTotal reported revenue739.8864.9+16.9%Sources: Circle Q3 2026 earnings release and Form 10-Q, Note 11. Ex-ARC amounts are arithmetic adjustments, not a company-reported GAAP measure. Earnings exhibit · Form 10-Q.The core reserve-income line was already under pressure. It fell from approximately $711.2 million to $657.6 million as lower interest rates more than offset growth in average USDC circulation. The average supply rose about 8% year over year to $73.3 billion. That is a meaningful operating achievement; it simply did not translate into higher reserve income during this period.There is a bullish interpretation here. More USDC circulating at lower prevailing rates may create future operating leverage if distribution economics improve or rates stabilize. Yet the bearish interpretation deserves equal attention: volume and adoption metrics can grow while the dollars retained by shareholders stagnate. USDC’s reported $13.9 trillion of quarterly on-chain transfer volume, up roughly 49% year over year, is not itself revenue.The headline is about growth. The investigation is about what kind of growth shareholders are paying for.What the token presale actually representsThe disclosed ARC presale covered 807.5 million tokens at $0.30 apiece, implying roughly $242.2 million in proceeds. About $181.8 million was recognized as revenue in the quarter; approximately $60.4 million remained deferred. The presale represented roughly 8.075% of a stated 10 billion-token initial supply.At the presale price, multiplying the entire initial supply by $0.30 produces a $3 billion implied fully diluted token valuation. It is not a demonstrated market capitalization. Nor is it evidence that Circle could sell its remaining tokens at that price. A private contractual price and a liquid public market are different things.The timing is also consequential. Circle disclosed a September 14 genesis mint and a subsequent public mainnet launch. Its materials distinguish this network launch from any public launch of the ARC token. Presale arrangements include contractual conditions tied to the network’s transition toward proof of stake, with a May 8, 2028 milestone associated with specified purchaser repayment rights. That provision establishes a potential contractual exposure, not a prediction that repayment will occur.Company materials described an initial allocation framework of 60% for ecosystem purposes, 25% for Circle and 15% for a reserve. Those percentages describe an issuer-stated allocation framework. They are not the same as a wallet-by-wallet demonstration of beneficial ownership, unlock status or freely circulating supply.The cash-flow story has the same fault lineFor the first nine months of 2026, Circle reported approximately $523 million of operating cash flow, versus $293 million in the comparable 2025 period. The company identified the roughly $242.2 million ARC presale proceeds as a major driver of that improvement. Subtracting those receipts produces a simple illustrative $280.8 million—slightly below the prior-year figure.That subtraction is deliberately limited. Cash receipts and revenue recognition are different accounting events, and removing a single receipt does not rebuild taxes, working capital or related operating costs. Still, the arithmetic exposes why I would hesitate to extrapolate the nine-month cash-flow growth rate into an enduring run rate.What does CRCL’s valuation assume?For a reproducible market anchor, I use CRCL’s November 6, 2026 closing price of $67.88. A newer November 9 indicative quote near $66 was observed, but the available market snapshots did not share a cleanly comparable execution timestamp. The historical close avoids implying intraday precision the evidence cannot support.Using approximately 256.55 million outstanding shares gives an equity capitalization near $17.41 billion. A separate diluted-share reference—267.776 million weighted-average diluted shares for the third quarter—implies roughly $18.18 billion when multiplied by the same closing price. These are different denominators: quarterly weighted-average diluted shares are not a verified current fully diluted capitalization table.Circle reported approximately $317 million of third-quarter adjusted EBITDA. Removing $181.8 million of ARC revenue dollar for dollar leaves about $135.2 million, or $540.8 million when annualized by multiplying by four. This is a sensitivity, not a company-reported ex-ARC EBITDA figure: it assumes no offsetting ARC-specific costs and repeats one quarter four times.Using approximately $1.70 billion of reported corporate cash and no outstanding convertible debt at quarter-end gives a simplified enterprise value near $15.71 billion. Against the illustrative annualized normalized EBITDA, that is approximately 29.1 times. Other enterprise-value adjustments could change that number.How fragile is the earnings multiple?Illustrative annualized ex-ARC adjusted EBITDA; USD millions. These are independent scenarios, not additive forecasts.ScenarioAnnualized EBITDADistribution costs 10% lower705.5Base normalization540.8Distribution costs 10% higher376.1Reserve-rate sensitivity +100 basis points908.8Reserve-rate sensitivity −100 basis points172.8Distribution-cost scenarios vary the approximately $412 million quarterly cost base by 10% and annualize the change. Rate scenarios apply the 10-Q’s approximately $739 million annual reserve-income and $371 million annual distribution-cost sensitivity per 100 basis points, net $368 million. Other variables held constant. Source: Circle Form 10-Q.Explore the earnings sensitivityAdjust two independent assumptions around the $540.8 million annualized ex-ARC baseline. This calculator is illustrative; it is not a price target.Quarterly distribution-cost change: 0%Reserve-rate change: 0 bps$540.8 millionImplied simplified EV / annualized ex-ARC EBITDA: 29.1×Formula: $540.8M − (4 × $412M × cost change) + ($368M × rate change / 100 bps). Rate and cost shocks are mechanically combined for exploration; real-world interactions may differ.What the Arc blockchain can—and cannot—settleArc Mainnet is not merely a slide-deck proposition. A November 9, 2026 observation identified chain ID 5042, with USDC as the native fee currency. At 14:33:39 UTC, indexed block 30,363,526 contained nine transactions and used about 3.83% of its gas limit. That is a narrow but concrete indication of an operating network.It is not a measure of durable adoption. A single block cannot establish active-user trends, organic transaction demand, recurring network fees, validator decentralization or economic value accruing to Circle shareholders. Nor does it establish that the issuer-described token allocations correspond to verified balances in identifiable wallets. Those questions require a longitudinal activity series and authenticated token-contract and treasury-address mappings.This is where I think the debate is most likely to go wrong. Bulls may treat the existence of a live network as evidence that a large token valuation is justified. Bears may treat a presale-driven earnings quarter as evidence that the network has no future. Neither follows from the record. The chain can be real, the revenue recognized under the company’s accounting policies, and the investment valuation still be demanding.What would change my view?A stronger bullish case would show stable or rising revenue after excluding ARC presale recognition, sustained improvement in revenue less distribution costs, and evidence that Arc activity converts into repeatable economics. A stronger bearish case would show continuing ex-ARC contraction, persistent sensitivity to lower reserve yields, or future reported growth again relying heavily on episodic token events.There is also a simpler possibility: the market already understands the distinction and values Circle primarily for the long-duration option on digital-dollar infrastructure. A roughly 29-times normalized annualized EBITDA multiple is not, by itself, proof of mispricing. It is a measure of how much improvement or strategic value investors may be anticipating.My conclusion is narrower and more durable. Circle’s third-quarter headline growth was materially dependent on ARC presale revenue; its recurring earnings power deserves to be assessed separately. The market’s premium might ultimately prove justified, but the justification must come from repeatable economics—not from treating a token presale as though it were an ordinary quarter of stablecoin growth.Source notes and definitionsCircle, Q3 2026 earnings exhibit — reported revenue, reserve income and adjusted EBITDA.Circle, Form 10-Q for quarter ended September 30, 2026 — ARC presale accounting, deferred revenue, diluted shares, operating cash flow, risk disclosures and rate sensitivity.Circle investor relations — issuer presentations and ARC network disclosures; allocation framework is issuer-reported, not wallet-verified.CRCL market reference: November 6, 2026 NYSE close of $67.88; indicative November 9 snapshots were not used as a synchronized closing valuation. Outstanding-share capitalization uses approximately 256.55 million shares; share count and market capitalization are rounded.Arc Mainnet reference: chain ID 5042; block 30,363,526 timestamped November 9, 2026 at 14:33:39 UTC. A single block establishes activity at that point, not aggregate adoption.Published November 9, 2026 · Financial analysis for research and commentary, not individualized investment advice. Historical observations and illustrative sensitivities are identified in the text.",
     "headings": [

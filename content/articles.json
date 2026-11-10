@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bitcoin-selling-pressure-investigation",
+    "source": "bitcoin-selling-pressure-investigation.html",
+    "date": "2026-11-10",
+    "title": "Bitcoin Fell While Open Interest Rose. That Complicates the Liquidation Story.",
+    "dek": "A 29-day Hyperliquid record shows nearly $727 million in long liquidations alongside rising BTC-denominated open interest. The selloff was real; its dominant cause remains unsettled.",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-selling-pressure-investigation.jpg",
+    "image_alt": "Conceptual editorial artwork of opposing slate and copper pressure fields converging around a central circular fracture, representing competing explanations for Bitcoin selling.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "circle-arc-revenue-valuation-investigation",
     "source": "circle-arc-revenue-valuation-investigation.html",
     "date": "2026-11-09",

@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-selling-pressure-investigation": {
+      "title": "Bitcoin Fell While Open Interest Rose. That Complicates the Liquidation Story.",
+      "description": "Bitcoin fell 10.3% across 29 days on Hyperliquid even as BTC open interest rose 9.9%. What funding, liquidations and spot volume do—and do not—prove.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-selling-pressure-investigation/",
+      "og:title": "Bitcoin Fell While Open Interest Rose. That Complicates the Liquidation Story.",
+      "og:description": "Bitcoin fell 10.3% across 29 days on Hyperliquid even as BTC open interest rose 9.9%. What funding, liquidations and spot volume do—and do not—prove.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-selling-pressure-investigation/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "circle-arc-revenue-valuation-investigation": {
       "title": "Circle’s ARC Revenue Changed the Growth Story. The Valuation Question Is Harder.",
       "description": "Circle’s Q3 2026 ARC presale boosted reported revenue by $181.8 million. A closer look at normalized growth, CRCL valuation and Arc network evidence.",
@@ -372,6 +382,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin Fell While Open Interest Rose. That Complicates the Liquidation Story.",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-selling-pressure-investigation/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selling-pressure-investigation/",
+      "description": "A 29-day Hyperliquid record shows nearly $727 million in long liquidations alongside rising BTC-denominated open interest. The selloff was real; its dominant cause remains unsettled."
+    },
     {
       "title": "Circle’s ARC Revenue Changed the Growth Story. The Valuation Question Is Harder.",
       "link": "https://independent-market-notes.netlify.app/circle-arc-revenue-valuation-investigation/",
