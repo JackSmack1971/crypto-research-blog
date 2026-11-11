@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bitcoin-rebound-unproven-trading-edge",
+    "source": "bitcoin-rebound-unproven-trading-edge.html",
+    "date": "2026-11-11",
+    "title": "Bitcoin’s Rebound Was Real. The Trading Edge Was Unproven.",
+    "dek": "A market can change direction before the evidence becomes strong enough to justify a trade.",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-rebound-unproven-trading-edge.jpg",
+    "image_alt": "Conceptual illustration of a Bitcoin-marked disc on one balance pan, an empty opposite pan, and an hourglass behind them.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "quid-edge-kor-token-value-capture",
     "source": "quid-edge-kor-token-value-capture.html",
     "date": "2026-11-10",

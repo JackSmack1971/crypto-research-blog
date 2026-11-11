@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-rebound-unproven-trading-edge": {
+      "title": "Bitcoin’s Rebound Was Real. The Trading Edge Was Unproven.",
+      "description": "A Bitcoin rebound, a losing historical simulation and expiring market snapshots reveal why a plausible directional thesis is not a demonstrated trading edge.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-rebound-unproven-trading-edge/",
+      "og:title": "Bitcoin’s Rebound Was Real. The Trading Edge Was Unproven.",
+      "og:description": "A Bitcoin rebound, a losing historical simulation and expiring market snapshots reveal why a plausible directional thesis is not a demonstrated trading edge.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-rebound-unproven-trading-edge/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "quid-edge-kor-token-value-capture": {
       "title": "QUID, EDGE and KOR: When Product Success Fails to Reach the Token",
       "description": "Three 2026 crypto launches put utility, product-market fit and token value capture to the test. EDGE leads on documented economics; QUID and KOR face harder questions.",
@@ -392,6 +402,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Rebound Was Real. The Trading Edge Was Unproven.",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-rebound-unproven-trading-edge/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-unproven-trading-edge/",
+      "description": "A market can change direction before the evidence becomes strong enough to justify a trade."
+    },
     {
       "title": "QUID, EDGE and KOR: When Product Success Fails to Reach the Token",
       "link": "https://independent-market-notes.netlify.app/quid-edge-kor-token-value-capture/",
