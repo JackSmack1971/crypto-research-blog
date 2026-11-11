@@ -1,5 +1,24 @@
 [
   {
+    "slug": "quid-edge-kor-token-value-capture",
+    "source": "quid-edge-kor-token-value-capture.html",
+    "date": "2026-11-10",
+    "title": "QUID, EDGE and KOR: When Product Success Fails to Reach the Token",
+    "dek": "A useful product can attract customers without creating a valuable token. Three new launches expose the difference.",
+    "topic": "tokenomics",
+    "assets": [
+      "QUID",
+      "EDGE",
+      "KOR"
+    ],
+    "research_type": "token-due-diligence",
+    "image": "assets/featured/quid-edge-kor-token-value-capture.jpg",
+    "image_alt": "Conceptual editorial design showing QUID, EDGE and KOR as three labeled circles above separate baselines, representing their distinct token-value-capture questions.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "bitcoin-selling-pressure-investigation",
     "source": "bitcoin-selling-pressure-investigation.html",
     "date": "2026-11-10",

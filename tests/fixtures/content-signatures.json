@@ -1,4 +1,328 @@
 {
+  "quid-edge-kor-token-value-capture": {
+    "text": "Skip to article Independent Market Notes / Token Due Diligence Investigative analysis · Token economics QUID, EDGE and KOR: When Product Success Fails to Reach the Token A useful product can attract customers without creating a valuable token. Three new launches expose the difference. November 10, 2026 · Market figures are dated snapshots, not live quotes · USD A cryptocurrency can solve a real problem, build an audience and still disappoint its token holders. That is the uncomfortable possibility at the center of my examination of three 2026 launches: Squid's QUID, edgeX's EDGE and Kor Protocol's KOR. Each has a plausible business purpose. But a product's users, a protocol's revenue and the value of a circulating token are three different things. I began with a simple three-part screen: Is the utility real? Is there credible evidence of product-market fit? And can token ownership benefit economically without relying exclusively on the next buyer paying more? The deeper I looked, the less useful the conventional headline market capitalization became. Vesting schedules, treasury allocations, buyback accounting and tradable liquidity can change the conclusion. My working conclusion is deliberately narrower than a buy recommendation: EDGE shows the clearest documented token-demand mechanism; QUID shows meaningful product use but has not established a recurring claim on that activity; and KOR's reported commercial traction has to be weighed against unresolved circulating-supply and concentration questions. The essential distinction: I am evaluating the economic claim represented by each token—not making an assertion that every useful protocol must appreciate. Three valuations, three different questions The November 10 reference snapshots illustrate why a microcap label can conceal important differences. QUID's roughly $7.41 million circulating capitalization corresponds to a fully diluted value near $51.8 million. EDGE's roughly $136.72 million circulating capitalization implies approximately $390.6 million fully diluted. KOR's reported $1.36 million circulating figure depends on a contested, self-reported supply estimate; its approximately $5.96 million fully diluted valuation is a more defensible provisional reference. Indicative market snapshots · November 10, 2026 · not executable quotesMetricQUIDEDGEKOR Token price$0.0518$0.3906$0.000596Circulating market cap$7.41M$136.72M$1.36M*Fully diluted valuation$51.8M$390.6M$5.96MReported circulating tokens143.16M350M2.287B*Maximum/original supply1B1B10BFDV / reported circulating cap6.99×2.86×4.37×* * KOR's circulating figure is provisional. The original research identified conflicting or unavailable supply estimates across data providers. Values are from the accompanying November 10 market investigation; not synchronized exchange order books. QUID: The service is used. Does the token collect the value? Squid addresses a genuine problem: moving value between different blockchains remains cumbersome for users and developers. Its routing service aims to abstract that complexity. The official statistics dashboard reported $22.38 million in routed volume across 678,280 transactions and 53,572 users in the referenced 30-day window. These are meaningful indications of activity, though first-party aggregated figures are not the same as an independently reconstructed transaction ledger. Annualizing that routing volume gives roughly $272.3 million. That may sound impressive beside QUID's market capitalization, but it would be a serious error to describe it as annual revenue. Routing volume is customer throughput; the protocol may retain only a small and variable portion after network costs, integrations and other expenses. The harder question is whether fees create enforceable or mechanically recurring demand for QUID. The published tokenomics describe staking incentives funded from allocated supply and potential buybacks, but indicate buybacks were not active at launch. The research did not establish a verified later activation or an executed-buyback ledger. An August 2027 supply test Investor, team and strategic-partner allocations collectively represent about 64.34% of QUID's billion-token supply. The documented first significant insider cliff in August 2027 would release an estimated 160.86 million QUID—approximately 112% of the currently reported circulating token count. At the November 10 indicative price, the release would have a notional value of about $8.33 million. That is not a forecast of immediate selling. A vesting event changes eligibility to transfer, not necessarily economic intent. But an investment thesis that uses circulating capitalization and ignores this potential liquid-supply expansion is incomplete. What would change my view: traceable fee revenue, sustained user retention and recurring revenue-funded token purchases large enough to matter against the vesting calendar. Without that, Squid's product could thrive while QUID underperforms. EDGE: An operating business with a more direct token mechanism edgeX operates a derivatives trading venue. Its attraction in this comparison is not merely reported trading volume; it is an explicit policy intended to connect perpetual-contract profits with EDGE repurchases and burning. The official tokenomics dashboard reports 5.13% of the original one-billion-token supply repurchased or burned. That implies approximately 51.3 million tokens—but the investigation did not independently match the quantity to finalized burn transactions. The revenue trend is less reassuring. DefiLlama's reported gross trading fees fell from approximately $76.24 million in the first quarter of 2026 to $35.16 million in the second and $12.29 million in the third. The partial fourth-quarter observation was about $2.76 million, and cannot be compared to complete quarters as though it were a final result. The provider's definitions and accounting periods also are not audited financial statements. Q1 2026 · $76.24M Q2 2026 · $35.16M Q3 2026 · $12.29M Q4 2026, partial · $2.76M Reported gross trading fees, USD millions. The final bar is a partial quarter and should not be interpreted as a like-for-like rate comparison. Source: DefiLlama, as summarized in the November 10 investigation. EDGE's second-quarter reported buybacks of approximately $45.09 million exceeded its $21.78 million in retained revenue during that period. This is not necessarily contradictory: purchases could draw on prior accumulated resources or reflect reporting timing. It does, however, rule out casually equating one quarter's buybacks with that quarter's earnings. There is a second accounting question. The issuer's presentation of 29.87% net circulating supply after reported repurchases differs from an aggregator's 35% circulating estimate. The approximately 51.3 million-token gap is consistent with the reported repurchase amount, but the evidence does not yet show whether the relevant holdings were permanently burned, custodied in a noncirculating wallet or excluded under another supply methodology. My preferred metric here is not gross buyback spending. It is newly liquid tokens minus permanently retired tokens, measured over time and checked against retained revenue. EDGE has the best documented value-capture design of the three; that is not proof its net liquid supply is actually contracting or that future buyback capacity will recover. KOR: The smallest valuation may carry the largest evidentiary burden Kor Protocol's proposed infrastructure for creative-rights verification, licensing and royalty settlement has recognizable real-world customers in principle. The project reports more than one million lifetime sign-ups, over one thousand IP partners and over $2 million in cumulative gross revenue on its official site. These claims warrant attention. They do not yet demonstrate recurring on-chain royalty settlement, revenue collected by the KOR token or cash flows attributable to token ownership. A second concern is supply quality. The November 10 investigation found CoinMarketCap's roughly 2.287 billion-token circulating estimate marked self-reported, while other sources did not substantiate the same quantity. Separate third-party holder snapshots suggested unusually high concentration among the largest addresses, including investor- and team-sized wallets. Contractually locked wallets may explain much of this concentration; without contract restrictions and address attribution, it is premature to treat those balances as freely tradeable—or safe from eventual distribution. Reports of a steep launch-period drawdown and highly variable exchange volume increase the need to examine market-making arrangements and actual bid-side liquidity. None of the available research established synchronized exchange depth or reliable $10,000 and $50,000 exit costs. A low FDV does not compensate for the inability to sell at a published price. What would change my view: independent confirmation of recurring licensing receipts, settlement demand that genuinely requires KOR, audited release schedules, ownership attribution for the largest addresses and usable liquidity across the real trading venues. What the blockchains have not yet proved The investigation identified the advertised token contracts: QUID on Base at 0x1a44233FAe8D50F1AeB3a5d58dd426ff4814Cb53, EDGE on Ethereum at 0xb0076de78dc50581770bba1d211ddc0ad4f2a241, and KOR on Base at 0xD3679306360705ba3580BC4130b56460FB4e6926. The earlier assessment found an upgradeable proxy architecture for EDGE, an administrative control surface worth reviewing but not evidence of an exploit. However, the assembled material does not contain a finished 90-day transfer reconstruction, independently matched buyback/burn transactions, verified treasury address ownership, synchronized order-book sweeps or comprehensive token-holder cash-flow estimates. Consequently, assertions about verified net burns, exchange inflows, wash trading or true free float would exceed the evidence. What survives scrutiny—and what remains openTokenEvidence supporting the thesisDecisive open questionQUIDReported service usage and published allocationsDo recurring fees produce economic demand for QUID after dilution?EDGEReported trading revenue and a documented repurchase policyAre retirements definitive and sustainable after new token releases?KORReported commercial relationships and defined licensing use caseWhat is the verified tradable supply and token-linked recurring revenue? The three tests are not equally difficult Real utility is often easiest to recognize: a product carries out a task someone values. Product-market fit is harder, demanding sustained usage and ideally repeat business without dependence on temporary token incentives. Appreciation potential is hardest because it depends not just on users or revenue but on what rights, constraints and recurring demand attach to the specific token being purchased. For QUID, activity is substantial enough to keep the investigation open, but I would require demonstrated value capture before drawing an undervaluation conclusion. For EDGE, I see the strongest economic architecture, offset by falling reported trading fees and unresolved burn accounting. For KOR, I see a potentially useful business proposition whose tiny apparent valuation is overwhelmed by supply and liquidity uncertainty. None is a verified bargain on the evidence assembled. The next legitimate research advance would be a transaction-hash-level reconciliation of token flows, not a more elaborate price target. Sources and methodologyThis analysis synthesizes the November 10, 2026 QUID–EDGE–KOR research and its follow-up investigation. Prices are indicative dated observations; first-party product statistics and secondary holder summaries are identified as reported rather than independently reproduced. No estimate of expected return or claim of verified on-chain investor yield is made. Squid — routing statistics; QUID tokenomics.edgeX — tokenomics and repurchases; DefiLlama — edgeX activity and revenue.KOR Protocol — issuer product and partner disclosures.QUID contract explorer; EDGE contract explorer; KOR contract explorer. Risk disclosure: Small and recently launched tokens may suffer severe losses, abrupt dilution and exchange-liquidity failures. This is an assessment of public evidence, not individualized investment advice.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "QUID, EDGE and KOR: When Product Success Fails to Reach the Token"
+      },
+      {
+        "tag": "h2",
+        "text": "Three valuations, three different questions"
+      },
+      {
+        "tag": "h2",
+        "text": "QUID: The service is used. Does the token collect the value?"
+      },
+      {
+        "tag": "h3",
+        "text": "An August 2027 supply test"
+      },
+      {
+        "tag": "h2",
+        "text": "EDGE: An operating business with a more direct token mechanism"
+      },
+      {
+        "tag": "h2",
+        "text": "KOR: The smallest valuation may carry the largest evidentiary burden"
+      },
+      {
+        "tag": "h2",
+        "text": "What the blockchains have not yet proved"
+      },
+      {
+        "tag": "h2",
+        "text": "The three tests are not equally difficult"
+      }
+    ],
+    "links": [
+      {
+        "href": "#article",
+        "text": "Skip to article"
+      },
+      {
+        "href": "https://www.squidrouter.com/stats",
+        "text": "official statistics dashboard"
+      },
+      {
+        "href": "https://www.squidrouter.com/squid-school/quid-tokenomics-utility",
+        "text": "published tokenomics"
+      },
+      {
+        "href": "https://pro.edgex.exchange/en-US/tokenomics",
+        "text": "official tokenomics dashboard"
+      },
+      {
+        "href": "https://defillama.com/protocol/edgex",
+        "text": "DefiLlama"
+      },
+      {
+        "href": "https://www.korprotocol.io/",
+        "text": "official site"
+      },
+      {
+        "href": "https://www.squidrouter.com/stats",
+        "text": "Squid — routing statistics"
+      },
+      {
+        "href": "https://www.squidrouter.com/squid-school/quid-tokenomics-utility",
+        "text": "QUID tokenomics"
+      },
+      {
+        "href": "https://pro.edgex.exchange/en-US/tokenomics",
+        "text": "edgeX — tokenomics and repurchases"
+      },
+      {
+        "href": "https://defillama.com/protocol/edgex",
+        "text": "DefiLlama — edgeX activity and revenue"
+      },
+      {
+        "href": "https://www.korprotocol.io/",
+        "text": "KOR Protocol — issuer product and partner disclosures"
+      },
+      {
+        "href": "https://basescan.org/token/0x1a44233FAe8D50F1AeB3a5d58dd426ff4814Cb53",
+        "text": "QUID contract explorer"
+      },
+      {
+        "href": "https://etherscan.io/token/0xb0076de78dc50581770bba1d211ddc0ad4f2a241",
+        "text": "EDGE contract explorer"
+      },
+      {
+        "href": "https://basescan.org/token/0xD3679306360705ba3580BC4130b56460FB4e6926",
+        "text": "KOR contract explorer"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Investigative analysis · Token economics"
+      },
+      {
+        "tag": "p",
+        "text": "A useful product can attract customers without creating a valuable token. Three new launches expose the difference."
+      },
+      {
+        "tag": "p",
+        "text": "November 10, 2026 · Market figures are dated snapshots, not live quotes · USD"
+      },
+      {
+        "tag": "p",
+        "text": "A cryptocurrency can solve a real problem, build an audience and still disappoint its token holders. That is the uncomfortable possibility at the center of my examination of three 2026 launches: Squid's QUID, edgeX's EDGE and Kor Protocol's KOR. Each has a plausible business purpose. But a product's users, a protocol's revenue and the value of a circulating token are three different things."
+      },
+      {
+        "tag": "p",
+        "text": "I began with a simple three-part screen: Is the utility real? Is there credible evidence of product-market fit? And can token ownership benefit economically without relying exclusively on the next buyer paying more? The deeper I looked, the less useful the conventional headline market capitalization became. Vesting schedules, treasury allocations, buyback accounting and tradable liquidity can change the conclusion."
+      },
+      {
+        "tag": "p",
+        "text": "My working conclusion is deliberately narrower than a buy recommendation: EDGE shows the clearest documented token-demand mechanism; QUID shows meaningful product use but has not established a recurring claim on that activity; and KOR's reported commercial traction has to be weighed against unresolved circulating-supply and concentration questions."
+      },
+      {
+        "tag": "p",
+        "text": "The November 10 reference snapshots illustrate why a microcap label can conceal important differences. QUID's roughly $7.41 million circulating capitalization corresponds to a fully diluted value near $51.8 million. EDGE's roughly $136.72 million circulating capitalization implies approximately $390.6 million fully diluted. KOR's reported $1.36 million circulating figure depends on a contested, self-reported supply estimate; its approximately $5.96 million fully diluted valuation is a more defensible provisional reference."
+      },
+      {
+        "tag": "caption",
+        "text": "Indicative market snapshots · November 10, 2026 · not executable quotes"
+      },
+      {
+        "tag": "p",
+        "text": "* KOR's circulating figure is provisional. The original research identified conflicting or unavailable supply estimates across data providers. Values are from the accompanying November 10 market investigation; not synchronized exchange order books."
+      },
+      {
+        "tag": "p",
+        "text": "Squid addresses a genuine problem: moving value between different blockchains remains cumbersome for users and developers. Its routing service aims to abstract that complexity. The official statistics dashboard reported $22.38 million in routed volume across 678,280 transactions and 53,572 users in the referenced 30-day window. These are meaningful indications of activity, though first-party aggregated figures are not the same as an independently reconstructed transaction ledger."
+      },
+      {
+        "tag": "p",
+        "text": "Annualizing that routing volume gives roughly $272.3 million. That may sound impressive beside QUID's market capitalization, but it would be a serious error to describe it as annual revenue. Routing volume is customer throughput; the protocol may retain only a small and variable portion after network costs, integrations and other expenses."
+      },
+      {
+        "tag": "p",
+        "text": "The harder question is whether fees create enforceable or mechanically recurring demand for QUID. The published tokenomics describe staking incentives funded from allocated supply and potential buybacks, but indicate buybacks were not active at launch. The research did not establish a verified later activation or an executed-buyback ledger."
+      },
+      {
+        "tag": "p",
+        "text": "Investor, team and strategic-partner allocations collectively represent about 64.34% of QUID's billion-token supply. The documented first significant insider cliff in August 2027 would release an estimated 160.86 million QUID—approximately 112% of the currently reported circulating token count. At the November 10 indicative price, the release would have a notional value of about $8.33 million."
+      },
+      {
+        "tag": "p",
+        "text": "That is not a forecast of immediate selling. A vesting event changes eligibility to transfer, not necessarily economic intent. But an investment thesis that uses circulating capitalization and ignores this potential liquid-supply expansion is incomplete."
+      },
+      {
+        "tag": "p",
+        "text": "What would change my view: traceable fee revenue, sustained user retention and recurring revenue-funded token purchases large enough to matter against the vesting calendar. Without that, Squid's product could thrive while QUID underperforms."
+      },
+      {
+        "tag": "p",
+        "text": "edgeX operates a derivatives trading venue. Its attraction in this comparison is not merely reported trading volume; it is an explicit policy intended to connect perpetual-contract profits with EDGE repurchases and burning. The official tokenomics dashboard reports 5.13% of the original one-billion-token supply repurchased or burned. That implies approximately 51.3 million tokens—but the investigation did not independently match the quantity to finalized burn transactions."
+      },
+      {
+        "tag": "p",
+        "text": "The revenue trend is less reassuring. DefiLlama's reported gross trading fees fell from approximately $76.24 million in the first quarter of 2026 to $35.16 million in the second and $12.29 million in the third. The partial fourth-quarter observation was about $2.76 million, and cannot be compared to complete quarters as though it were a final result. The provider's definitions and accounting periods also are not audited financial statements."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Reported gross trading fees, USD millions. The final bar is a partial quarter and should not be interpreted as a like-for-like rate comparison. Source: DefiLlama, as summarized in the November 10 investigation."
+      },
+      {
+        "tag": "p",
+        "text": "EDGE's second-quarter reported buybacks of approximately $45.09 million exceeded its $21.78 million in retained revenue during that period. This is not necessarily contradictory: purchases could draw on prior accumulated resources or reflect reporting timing. It does, however, rule out casually equating one quarter's buybacks with that quarter's earnings."
+      },
+      {
+        "tag": "p",
+        "text": "There is a second accounting question. The issuer's presentation of 29.87% net circulating supply after reported repurchases differs from an aggregator's 35% circulating estimate. The approximately 51.3 million-token gap is consistent with the reported repurchase amount, but the evidence does not yet show whether the relevant holdings were permanently burned, custodied in a noncirculating wallet or excluded under another supply methodology."
+      },
+      {
+        "tag": "p",
+        "text": "My preferred metric here is not gross buyback spending. It is newly liquid tokens minus permanently retired tokens, measured over time and checked against retained revenue. EDGE has the best documented value-capture design of the three; that is not proof its net liquid supply is actually contracting or that future buyback capacity will recover."
+      },
+      {
+        "tag": "p",
+        "text": "Kor Protocol's proposed infrastructure for creative-rights verification, licensing and royalty settlement has recognizable real-world customers in principle. The project reports more than one million lifetime sign-ups, over one thousand IP partners and over $2 million in cumulative gross revenue on its official site. These claims warrant attention. They do not yet demonstrate recurring on-chain royalty settlement, revenue collected by the KOR token or cash flows attributable to token ownership."
+      },
+      {
+        "tag": "p",
+        "text": "A second concern is supply quality. The November 10 investigation found CoinMarketCap's roughly 2.287 billion-token circulating estimate marked self-reported, while other sources did not substantiate the same quantity. Separate third-party holder snapshots suggested unusually high concentration among the largest addresses, including investor- and team-sized wallets. Contractually locked wallets may explain much of this concentration; without contract restrictions and address attribution, it is premature to treat those balances as freely tradeable—or safe from eventual distribution."
+      },
+      {
+        "tag": "p",
+        "text": "Reports of a steep launch-period drawdown and highly variable exchange volume increase the need to examine market-making arrangements and actual bid-side liquidity. None of the available research established synchronized exchange depth or reliable $10,000 and $50,000 exit costs. A low FDV does not compensate for the inability to sell at a published price."
+      },
+      {
+        "tag": "p",
+        "text": "What would change my view: independent confirmation of recurring licensing receipts, settlement demand that genuinely requires KOR, audited release schedules, ownership attribution for the largest addresses and usable liquidity across the real trading venues."
+      },
+      {
+        "tag": "p",
+        "text": "The investigation identified the advertised token contracts: QUID on Base at 0x1a44233FAe8D50F1AeB3a5d58dd426ff4814Cb53, EDGE on Ethereum at 0xb0076de78dc50581770bba1d211ddc0ad4f2a241, and KOR on Base at 0xD3679306360705ba3580BC4130b56460FB4e6926. The earlier assessment found an upgradeable proxy architecture for EDGE, an administrative control surface worth reviewing but not evidence of an exploit."
+      },
+      {
+        "tag": "p",
+        "text": "However, the assembled material does not contain a finished 90-day transfer reconstruction, independently matched buyback/burn transactions, verified treasury address ownership, synchronized order-book sweeps or comprehensive token-holder cash-flow estimates. Consequently, assertions about verified net burns, exchange inflows, wash trading or true free float would exceed the evidence."
+      },
+      {
+        "tag": "caption",
+        "text": "What survives scrutiny—and what remains open"
+      },
+      {
+        "tag": "p",
+        "text": "Real utility is often easiest to recognize: a product carries out a task someone values. Product-market fit is harder, demanding sustained usage and ideally repeat business without dependence on temporary token incentives. Appreciation potential is hardest because it depends not just on users or revenue but on what rights, constraints and recurring demand attach to the specific token being purchased."
+      },
+      {
+        "tag": "p",
+        "text": "For QUID, activity is substantial enough to keep the investigation open, but I would require demonstrated value capture before drawing an undervaluation conclusion. For EDGE, I see the strongest economic architecture, offset by falling reported trading fees and unresolved burn accounting. For KOR, I see a potentially useful business proposition whose tiny apparent valuation is overwhelmed by supply and liquidity uncertainty."
+      },
+      {
+        "tag": "p",
+        "text": "None is a verified bargain on the evidence assembled. The next legitimate research advance would be a transaction-hash-level reconciliation of token flows, not a more elaborate price target."
+      },
+      {
+        "tag": "p",
+        "text": "Sources and methodology"
+      },
+      {
+        "tag": "p",
+        "text": "This analysis synthesizes the November 10, 2026 QUID–EDGE–KOR research and its follow-up investigation. Prices are indicative dated observations; first-party product statistics and secondary holder summaries are identified as reported rather than independently reproduced. No estimate of expected return or claim of verified on-chain investor yield is made."
+      },
+      {
+        "tag": "li",
+        "text": "Squid — routing statistics; QUID tokenomics."
+      },
+      {
+        "tag": "li",
+        "text": "edgeX — tokenomics and repurchases; DefiLlama — edgeX activity and revenue."
+      },
+      {
+        "tag": "li",
+        "text": "KOR Protocol — issuer product and partner disclosures."
+      },
+      {
+        "tag": "li",
+        "text": "QUID contract explorer; EDGE contract explorer; KOR contract explorer."
+      },
+      {
+        "tag": "p",
+        "text": "Risk disclosure: Small and recently launched tokens may suffer severe losses, abrupt dilution and exchange-liquidity failures. This is an assessment of public evidence, not individualized investment advice."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Metric",
+          "QUID",
+          "EDGE",
+          "KOR"
+        ],
+        [
+          "Token price",
+          "$0.0518",
+          "$0.3906",
+          "$0.000596"
+        ],
+        [
+          "Circulating market cap",
+          "$7.41M",
+          "$136.72M",
+          "$1.36M*"
+        ],
+        [
+          "Fully diluted valuation",
+          "$51.8M",
+          "$390.6M",
+          "$5.96M"
+        ],
+        [
+          "Reported circulating tokens",
+          "143.16M",
+          "350M",
+          "2.287B*"
+        ],
+        [
+          "Maximum/original supply",
+          "1B",
+          "1B",
+          "10B"
+        ],
+        [
+          "FDV / reported circulating cap",
+          "6.99×",
+          "2.86×",
+          "4.37×*"
+        ]
+      ],
+      [
+        [
+          "Token",
+          "Evidence supporting the thesis",
+          "Decisive open question"
+        ],
+        [
+          "QUID",
+          "Reported service usage and published allocations",
+          "Do recurring fees produce economic demand for QUID after dilution?"
+        ],
+        [
+          "EDGE",
+          "Reported trading revenue and a documented repurchase policy",
+          "Are retirements definitive and sustainable after new token releases?"
+        ],
+        [
+          "KOR",
+          "Reported commercial relationships and defined licensing use case",
+          "What is the verified tradable supply and token-linked recurring revenue?"
+        ]
+      ]
+    ],
+    "alts": [],
+    "svgCount": 0,
+    "svgSha256": [],
+    "imageCount": 0,
+    "imageSha256": [],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "bitcoin-selling-pressure-investigation": {
     "text": "INDEPENDENT MARKET NOTESBitcoin · Market structure · InvestigationBitcoin Fell While Open Interest Rose. That Complicates the Liquidation Story.A 29-day Hyperliquid record shows nearly $727 million in long liquidations alongside rising BTC-denominated open interest. The selloff was real; its dominant cause remains unsettled.November 10, 2026 · Historical observations, not live market dataEditorial illustration. The opposing fields are conceptual, not a market chart. Bitcoin's October-to-November slide looks, at first glance, like a familiar story: leveraged traders crowd into the wrong side of a move, forced selling accelerates the decline, and the market eventually clears the excess. There is evidence for part of that story. There is also a stubborn piece of evidence that refuses to fit neatly inside it. Across 29 days of hourly Hyperliquid observations, Bitcoin's mark price fell approximately 10.26%. Yet open interest measured in Bitcoin—not in dollars—rose 9.88%. Over the same period, reported long liquidations totaled approximately $726.6 million. The market was absorbing liquidations and adding outstanding exposure at the same time. That is the distinction I think matters. A liquidation event tells us something was forcibly closed. It does not tell us whether the market as a whole was persistently shedding leverage, or whether new positions were replacing the old ones. And it certainly does not identify the original source of the selling. −10.26%BTC mark-price change · first to last hourly snapshot+9.88%BTC-denominated open-interest change$726.6MReported long liquidations · summed hourly aggregates The market declined. The leverage did not simply disappear. Open interest is the amount of outstanding derivative exposure. It can increase when new contracts are opened and decrease when contracts are closed. Because a perpetual contract has both a long and a short, open interest cannot by itself tell us which side is winning. But its units matter enormously. If Bitcoin falls 10%, open interest expressed in dollars can fall even if the number of Bitcoin contracts does not change. That makes a dollar-denominated chart a dangerous shortcut when the question is whether positions actually closed. In the Hyperliquid record, open interest rose from approximately 38,251 BTC at October 12, 00:00 UTC to 42,031 BTC at November 9, 23:00 UTC. Those are endpoint snapshots, not a claim that leverage increased without interruption. Indeed, the path was uneven. During the November 5 selloff, the hourly record showed a roughly 460 BTC contraction in open interest alongside an approximately 3.15% negative log return and $36.2 million in reported long liquidations. That is a credible signature of liquidation-related amplification within the hour. It is not proof that liquidations initiated the move: hourly buckets do not establish the order of individual trades and forced closures. Liquidations can be real, substantial and consequential without being the primary cause of a month-long decline. Where the selloff was sharpest Several of the largest daily declines illuminate the problem with a one-cause explanation. On November 5, both price and open interest fell. On October 22, price fell while open interest increased. On October 29, a steep decline coincided with nearly flat daily open interest. Those are different market configurations, not interchangeable episodes. UTC dateDaily BTC returnDaily BTC OI changeReported long liquidationsNov 5−5.47%−1.14%$76.1MOct 29−4.15%−0.14%$100.2MOct 22−3.13%+1.93%$50.5MNov 2−1.94%+0.84%$16.2M Source: Hyperliquid BTC historical market-state, candle and liquidation aggregates. Daily returns are close-to-close; OI changes compare consecutive daily observations. Dates and percentages are historical, rounded observations. Liquidation totals are reported venue aggregates, not global market totals. The same-hour statistics point toward a relationship but stop short of identifying a driver. Across 695 hourly changes, the Pearson correlation between log returns and BTC open-interest changes was approximately +0.209. Between returns and reported long-liquidation notional, it was approximately −0.373. Negative price hours tended to coincide with more long-liquidation activity; positive returns tended to coincide with OI expansion. Neither correlation is a lead–lag test. Neither accounts for autocorrelation, market regimes or simultaneous responses to an outside shock. Funding adds a second complication The OKX BTC-USDT perpetual funding history offers a separate view of trader positioning. Over the 30-day UTC window ending November 9, 83 of 90 eight-hour funding observations were positive. The average realized rate was approximately +0.00643% per interval. In ordinary terms, longs generally paid shorts even as Bitcoin declined. That does not mean every trader was bullish, or that the same positions survived the entire month. It means the derivatives market continued to price a premium for long exposure through much of the selloff. The possibility worth taking seriously is a market where leveraged demand repeatedly rebuilds after setbacks, rather than one where all speculative risk exits in a single purge. OKX spot turnover provides another necessary but incomplete piece. Over 30 completed exchange-defined daily sessions, BTC-USDT spot volume totaled approximately 177,861 BTC, or 14.16 billion USDT in reported notional turnover, while price declined roughly 9.07% from the first session open to the last close. The exchange's daily session boundary was 16:00 UTC, not midnight UTC, so those figures should not be mechanically joined to the Hyperliquid calendar-day series. Most importantly, turnover is not net selling. Every executed spot trade has a buyer and a seller. To determine whether sellers were persistently crossing the spread, we need aggressor-classified trade records: marketable sells versus marketable buys, consistently measured across venues. Candles and volume alone cannot answer that question. Reading the evidence: The Hyperliquid record covers October 12–November 9, 2026, with 696 hourly OI and funding observations and 286 hourly liquidation aggregates containing reported events. The OKX spot and funding windows use their own documented exchange intervals. The figures above are not a synchronized four-exchange causal study. Three explanations remain alive Liquidation-driven amplification The strongest argument for the liquidation thesis is local and event-specific. Large long-liquidation totals appeared during sharp declines, including the November 5 hourly episode. Forced closures can consume available liquidity and deepen a move that is already underway. But the persistence of higher endpoint OI makes it hard to describe the entire period as continuous net deleveraging on Hyperliquid. Persistent spot distribution A second possibility is that underlying spot selling set the direction, with derivatives liquidations responding to it. That would fit a market where leveraged exposure keeps rebuilding while price drifts lower. It remains a hypothesis, not a finding: the available spot turnover figures do not classify trade initiators, and they cover only one spot venue. A feedback loop rather than a single culprit The third explanation is the one I consider most plausible as a framework, though not yet demonstrated empirically: spot selling pressures price, leverage amplifies the move, traders re-enter, and the cycle repeats. The observed alternation between OI contraction and expansion is compatible with that process. Compatibility is weaker than proof. A proper test would examine whether aggressive spot sells lead OI contraction and liquidation spikes, rather than merely appearing in the same interval. What would change my interpretation? A synchronized hourly panel across OKX, Binance, Bybit and Hyperliquid could substantially strengthen or weaken each explanation. It would require BTC-denominated OI, settled funding normalized for different payment intervals, aggressor-side spot volume and venue-specific liquidation events. Exchange-specific contract multipliers, timestamp conventions and reporting completeness would have to be reconciled before aggregation. If spot sell imbalance consistently led the largest declines and liquidation spikes followed, I would give more weight to a spot-led process. If OI contracted sharply before or at the start of declines, with concentrated long liquidations and limited preceding spot imbalance, the liquidation-led explanation would gain ground. If neither pattern held consistently, the evidence would favor a mixed or regime-dependent mechanism. There is a broader reason to care about this distinction. A selloff caused primarily by leveraged positions being flushed out can exhaust itself without changing the underlying demand for Bitcoin. Sustained spot distribution is a different kind of pressure: it can persist after funding normalizes and liquidation headlines fade. Confusing the two leads to premature claims that the market has already cleared its excess risk. The question behind the liquidation headline What stands out to me is not that liquidations happened. They did, in material size on the venue examined. It is that a falling Bitcoin price coexisted with more outstanding BTC-denominated derivatives exposure at the end of the period. That is a market continually rearranging risk, not merely erasing it. I would resist declaring either a completed leverage flush or a proven campaign of spot distribution. The evidence supports a narrower and more interesting conclusion: forced selling amplified parts of the decline, while the dominant source of sustained downward pressure remains unresolved. The next useful headline will not be the largest liquidation number. It will be the one that establishes which market moved first. Sources and measurement notesHyperliquid documentation — reference for the BTC perpetual market and its market-data conventions. Numerical observations in this article are drawn from historical Hyperliquid BTC price, open-interest, funding and liquidation aggregates covering October 12–November 9, 2026. The documentation link is not a permanent archive of the quoted historical rows.OKX market-data documentation — reference for BTC-USDT spot candles and BTC-USDT-SWAP funding conventions. Numerical observations are based on the historical market records examined for this investigation; the linked documentation does not itself reproduce those observations.All percentages and liquidation amounts are rounded. Hyperliquid price change uses first and last hourly mark-price snapshots; daily returns use close-to-close candles. The hourly return–liquidation correlation treats intervals without a returned liquidation aggregate as zero reported events, an assumption that could understate unreported activity. The 29-day Hyperliquid sample is shorter than the intended 30-day four-venue comparison. No causal attribution or market-wide liquidation share is claimed. INDEPENDENT MARKET NOTES · MARKET STRUCTURE RESEARCH",
     "headings": [
