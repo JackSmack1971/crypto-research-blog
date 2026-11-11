@@ -17,6 +17,23 @@
     "image_mime_type": "image/jpeg"
   },
   {
+    "slug": "bitcoin-cycle-institutional-stress",
+    "source": "bitcoin-cycle-institutional-stress.html",
+    "date": "2026-11-11",
+    "title": "Bitcoin’s Four-Year Cycle Meets a Different Kind of Selloff",
+    "dek": "The halving clock still fits the timing. ETF redemptions, higher real yields and unfinished crypto legislation may change what happens after the first liquidation.",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-cycle-institutional-stress.jpg",
+    "image_alt": "An abstract institutional stone facade fractured beside layered market bands and a restrained Bitcoin emblem, representing sudden shocks and prolonged selling.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "quid-edge-kor-token-value-capture",
     "source": "quid-edge-kor-token-value-capture.html",
     "date": "2026-11-10",

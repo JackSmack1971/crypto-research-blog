@@ -20,6 +20,16 @@
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
+    "bitcoin-cycle-institutional-stress": {
+      "title": "Bitcoin’s Four-Year Cycle Meets a Different Kind of Selloff",
+      "description": "Bitcoin’s post-halving decline fits the old cycle, but ETF flows, Fed pressure and Washington’s crypto rulebook complicate the path to recovery.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-cycle-institutional-stress/",
+      "og:title": "Bitcoin’s Four-Year Cycle Meets a Different Kind of Selloff",
+      "og:description": "Bitcoin’s post-halving decline fits the old cycle, but ETF flows, Fed pressure and Washington’s crypto rulebook complicate the path to recovery.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-cycle-institutional-stress/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "quid-edge-kor-token-value-capture": {
       "title": "QUID, EDGE and KOR: When Product Success Fails to Reach the Token",
       "description": "Three 2026 crypto launches put utility, product-market fit and token value capture to the test. EDGE leads on documented economics; QUID and KOR face harder questions.",
@@ -407,6 +417,12 @@
       "link": "https://independent-market-notes.netlify.app/bitcoin-rebound-unproven-trading-edge/",
       "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-rebound-unproven-trading-edge/",
       "description": "A market can change direction before the evidence becomes strong enough to justify a trade."
+    },
+    {
+      "title": "Bitcoin’s Four-Year Cycle Meets a Different Kind of Selloff",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-cycle-institutional-stress/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-cycle-institutional-stress/",
+      "description": "The halving clock still fits the timing. ETF redemptions, higher real yields and unfinished crypto legislation may change what happens after the first liquidation."
     },
     {
       "title": "QUID, EDGE and KOR: When Product Success Fails to Reach the Token",
