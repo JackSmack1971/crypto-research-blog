@@ -34,6 +34,23 @@
     "image_mime_type": "image/jpeg"
   },
   {
+    "slug": "bitcoin-selling-chain-etfs-basis-treasuries",
+    "source": "bitcoin-selling-chain-etfs-basis-treasuries.html",
+    "date": "2026-11-11",
+    "title": "Bitcoin’s Selling Chain: ETF Redemptions, Basis Unwinds and Treasury Debt",
+    "dek": "ETF money is leaving just as leveraged hedges shrink and corporate Bitcoin balance sheets face a harder funding market. The evidence points to a transmission system—not one identifiable seller.",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-selling-chain-etfs-basis-treasuries.jpg",
+    "image_alt": "Editorial illustration of three slate balance-sheet panels labeled ETF flows, CME hedges and BTC treasury connected by a strained copper line; conceptual artwork, not a market chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "quid-edge-kor-token-value-capture",
     "source": "quid-edge-kor-token-value-capture.html",
     "date": "2026-11-10",

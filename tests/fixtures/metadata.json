@@ -30,6 +30,16 @@
       "og:type": "article",
       "twitter:card": "summary_large_image"
     },
+    "bitcoin-selling-chain-etfs-basis-treasuries": {
+      "title": "Bitcoin’s Selling Chain: ETF Redemptions, Basis Unwinds and Treasury Debt",
+      "description": "An investigation of November 2026 Bitcoin ETF outflows, CME positioning, ETF cost-basis estimates and the conditional risk of treasury-company BTC sales.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-selling-chain-etfs-basis-treasuries/",
+      "og:title": "Bitcoin’s Selling Chain: ETF Redemptions, Basis Unwinds and Treasury Debt",
+      "og:description": "An investigation of November 2026 Bitcoin ETF outflows, CME positioning, ETF cost-basis estimates and the conditional risk of treasury-company BTC sales.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-selling-chain-etfs-basis-treasuries/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "quid-edge-kor-token-value-capture": {
       "title": "QUID, EDGE and KOR: When Product Success Fails to Reach the Token",
       "description": "Three 2026 crypto launches put utility, product-market fit and token value capture to the test. EDGE leads on documented economics; QUID and KOR face harder questions.",
@@ -423,6 +433,12 @@
       "link": "https://independent-market-notes.netlify.app/bitcoin-cycle-institutional-stress/",
       "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-cycle-institutional-stress/",
       "description": "The halving clock still fits the timing. ETF redemptions, higher real yields and unfinished crypto legislation may change what happens after the first liquidation."
+    },
+    {
+      "title": "Bitcoin’s Selling Chain: ETF Redemptions, Basis Unwinds and Treasury Debt",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-selling-chain-etfs-basis-treasuries/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-selling-chain-etfs-basis-treasuries/",
+      "description": "ETF money is leaving just as leveraged hedges shrink and corporate Bitcoin balance sheets face a harder funding market. The evidence points to a transmission system—not one identifiable seller."
     },
     {
       "title": "QUID, EDGE and KOR: When Product Success Fails to Reach the Token",
