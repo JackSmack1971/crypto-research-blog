@@ -1,5 +1,22 @@
 [
   {
+    "slug": "inj-bridge-concentration-accounting",
+    "source": "inj-bridge-concentration-accounting.html",
+    "date": "2026-11-13",
+    "title": "INJ’s 95% Bridge Wallet Is Not the Whale Story It Appears to Be",
+    "dek": "The Ethereum balance is real. The conclusion often attached to it is wrong. Injective’s harder questions concern cross-chain claims, native issuance and what “circulating supply” actually measures.",
+    "topic": "risk-verification",
+    "assets": [
+      "INJ"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/inj-bridge-concentration-accounting.jpg",
+    "image_alt": "Conceptual cutaway of a guarded vault filled with archival plates, with a smaller group of plates outside along a narrow bridge, illustrating custody versus circulating claims.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "bitcoin-rebound-unproven-trading-edge",
     "source": "bitcoin-rebound-unproven-trading-edge.html",
     "date": "2026-11-11",
