@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bitcoin-bottom-liquidation-reversal",
+    "source": "bitcoin-bottom-liquidation-reversal.html",
+    "date": "2026-11-14",
+    "title": "Bitcoin’s $62,000 Reversal Was Real. A Bottom Is Still Unproven.",
+    "dek": "The November selloff triggered a cross-venue liquidation reversal. The missing piece is not another fear indicator—it is evidence that ordinary buyers can hold the line.",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-bottom-liquidation-reversal.jpg",
+    "image_alt": "Abstract editorial illustration of dark fractured horizontal layers beside a copper-colored rising line and circular marks.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "inj-bridge-concentration-accounting",
     "source": "inj-bridge-concentration-accounting.html",
     "date": "2026-11-13",

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin’s $62,000 Reversal Was Real. A Bottom Is Still Unproven.</title>
+<meta name="description" content="Bitcoin approached $62,000 in November 2026, then rebounded as liquidations flipped from longs to shorts. What ETF flows and venue-level open interest reveal about the unconfirmed bottom.">
+<meta name="robots" content="index,follow">
+<style>
+:root {
+  color-scheme: light;
+  --paper: #f6f3ec;
+  --ink: #1c2d2d;
+  --muted: #52625e;
+  --line: #bfc5bb;
+  --accent: #1c5956;
+  --bronze: #a55d34;
+  --serif: Georgia, 'Iowan Old Style', Palatino, serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1.0625rem/1.75 var(--sans); }
+a { color: var(--accent); text-decoration-thickness: .09em; text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: .14em; }
+:where(a, summary, [tabindex="0"]):focus-visible { outline: 3px solid var(--bronze); outline-offset: 4px; }
+.skip { position: absolute; top: -100px; left: 1rem; padding: .8rem; background: var(--paper); z-index: 10; }
+.skip:focus { top: .5rem; }
+main { max-width: 840px; margin: auto; padding: 3.1rem 1.25rem 5rem; }
+article { min-width: 0; }
+article > header { border-bottom: 1px solid var(--line); padding-bottom: 1.8rem; }
+.kicker { font-weight: 750; color: var(--accent); letter-spacing: .14em; text-transform: uppercase; font-size: .76rem; }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.18; letter-spacing: -.022em; text-wrap: balance; }
+h1 { font-size: clamp(2.35rem, 6vw, 4.1rem); font-weight: 600; margin: .35rem 0 1.1rem; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.45rem); margin: 3.2rem 0 1rem; }
+h3 { font-size: 1.38rem; margin: 2.2rem 0 .7rem; }
+.dek { font: 1.35rem/1.5 var(--serif); max-width: 65ch; }
+.dateline, .caption, .source-note, figcaption { font-size: .87rem; color: var(--muted); }
+.dateline { margin-bottom: 0; }
+p { margin: 0 0 1.3rem; }
+section { scroll-margin-top: 1rem; }
+/* Keep long-form paragraphs at an editorial reading measure without shrinking data figures. */
+article > p, section > p, section > blockquote, .sources > p { max-width: 68ch; }
+.lead { font: 1.32rem/1.65 var(--serif); margin-top: 2.2rem; }
+figure { margin: 2rem 0 2.4rem; }
+.hero-art { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: #e8e5dc; }
+figcaption { line-height: 1.55; margin-top: .7rem; max-width: 78ch; }
+.measure { border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 1.3rem 0; margin: 2rem 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.measure strong { font: 1.6rem/1.15 var(--serif); display: block; font-variant-numeric: tabular-nums; }
+.measure span { font-size: .81rem; color: var(--muted); display: block; margin-top: .45rem; }
+blockquote { border-left: 3px solid var(--bronze); padding: .15rem 0 .15rem 1.25rem; margin: 2.2rem 0; font: 1.45rem/1.45 var(--serif); }
+.viz { margin-block: 2rem; }
+/* Preserve legible axis labels on narrow screens; scrolling remains keyboard accessible. */
+.chart-scroll { overflow-x: auto; max-width: 100%; padding: 4px; }
+.viz svg { width: 100%; min-width: 640px; height: auto; display: block; background: #f1efe8; border: 1px solid var(--line); padding: .65rem; }
+.tablewrap { overflow-x: auto; max-width: 100%; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 1.35rem 0 2rem; }
+table { border-collapse: collapse; width: 100%; font-size: .91rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+caption { text-align: left; color: var(--muted); padding: .85rem .55rem; }
+th, td { border-bottom: 1px solid var(--line); padding: .8rem .6rem; text-align: left; vertical-align: top; }
+thead { background: #e9e8df; }
+th { font-weight: 700; }
+td.num { white-space: nowrap; text-align: right; }
+.sources { border-top: 2px solid var(--ink); padding-top: 1rem; margin-top: 3.5rem; }
+.sources ol { padding-left: 1.5rem; }
+.sources li { margin-bottom: .8rem; font-size: .89rem; }
+.mini { font-size: .82rem; color: var(--muted); }
+sup a { text-decoration: underline; }
+@media (max-width: 620px) {
+  main { padding: 1.5rem 1rem 3rem; }
+  .measure { grid-template-columns: 1fr; gap: .8rem; }
+  .measure div { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1rem; }
+  .measure span { margin: 0; }
+  h1 { font-size: clamp(2.15rem, 9vw, 2.5rem); }
+  .dek { font-size: 1.16rem; }
+  blockquote { font-size: 1.28rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  body { background: #fff; color: #000; font-size: 11pt; }
+  main { max-width: none; padding: 0; }
+  .skip { display: none; }
+  .viz svg { max-height: 300px; min-width: 0; }
+  .chart-scroll, .tablewrap { overflow: visible; }
+  a { color: #000; }
+  h2 { break-after: avoid; }
+  tr { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<a href="#story" class="skip">Skip to the article</a>
+<main id="story"><article itemscope itemtype="https://schema.org/Article">
+<header><p class="kicker">Bitcoin / Market structure / Investigation</p>
+<h1 itemprop="headline">Bitcoin’s $62,000 Reversal Was Real. A Bottom Is Still Unproven.</h1>
+<p class="dek" itemprop="description">The November selloff triggered a cross-venue liquidation reversal. The missing piece is not another fear indicator—it is evidence that ordinary buyers can hold the line.</p>
+<p class="dateline">Published <time itemprop="datePublished" datetime="2026-11-14">November 14, 2026</time> · Historical market window: November 11–15 UTC · Prices and positioning are not live.</p></header>
+<figure><img class="hero-art" src="../assets/featured/bitcoin-bottom-liquidation-reversal.jpg" alt="Abstract editorial illustration of dark fractured horizontal layers beside a copper-colored rising line and circular marks." width="1200" height="630" decoding="async" fetchpriority="high"><figcaption>Editorial illustration: the first reversal is visible; the structure supporting it is harder to establish. Not a market-data chart.</figcaption></figure>
+<p class="lead">There is a moment in a Bitcoin selloff when the market begins to look finished. Leverage breaks, fear becomes obvious, and a violent rebound offers the temptation of a simple explanation: that was the bottom.</p>
+<p>Bitcoin gave traders exactly that kind of moment late on November 14 in the eastern United States. The OKX BTC/USDT spot market briefly traded at 62,000 USDT. In the corresponding hour, Hyperliquid's BTC perpetual traded as low as approximately $61,970 and Lighter's perpetual touched about $62,010. The recovery was abrupt. On Hyperliquid, the subsequent hourly candle moved from a $62,603 close to a $64,890 close. <a href="#sources">Source notes</a> distinguish the instruments and timestamps.</p>
+<p>But a price low is not automatically a market bottom. My central concern is not whether the reversal happened. Three venues recorded it. It is whether the buying that followed can outlast the mechanical pressure that helped produce it.</p>
+<div class="measure" aria-label="Key observations"><div><strong>~$62,000</strong><span>Observed low region, Nov. 15 UTC</span></div><div><strong>−$1.91B</strong><span>Seven-session U.S. spot BTC ETF net flow</span></div><div><strong>2 venues</strong><span>Liquidation direction reversals observed</span></div></div>
+<section aria-labelledby="pressure"><h2 id="pressure">A collapse that left footprints beyond price</h2>
+<p>The broader trend had already weakened before the $62,000 print. A CoinMarketCap Bitcoin reference recorded $64,950.97 at 03:37 UTC on November 15, down approximately 14.26% over seven days and 20.52% over thirty days. Those aggregate USD figures are reference prices, not interchangeable with an exchange-specific USDT last trade. They describe the severity of the decline, not the price at which anyone was assured a fill.</p>
+<p>U.S. spot Bitcoin ETFs added a more consequential sign of strain. The seven completed trading sessions from November 5 through November 13 had net withdrawals totaling approximately $1.91 billion, including $185.4 million on November 13. The daily path matters: the latest withdrawal was smaller than several preceding days, but it was still a withdrawal. A slowing outflow is not the same thing as restored inflows.<sup><a href="#s1" aria-label="Source 1">1</a></sup></p>
+<figure class="viz"><div class="chart-scroll" role="region" tabindex="0" aria-label="Scrollable chart; underlying values are also in the following table"><svg viewBox="0 0 760 300" role="img" aria-labelledby="etft etfd" xmlns="http://www.w3.org/2000/svg"><title id="etft">Seven consecutive sessions of net spot Bitcoin ETF outflows</title><desc id="etfd">U.S. spot Bitcoin ETFs recorded net outflows of 430.2, 411.9, 201, 95, 299.8, 284.1 and 185.4 million dollars on November 5, 6, 9, 10, 11, 12 and 13, respectively.</desc><line x1="68" y1="39" x2="740" y2="39" stroke="#697572" stroke-width="1"/><text x="68" y="23" font-size="14" fill="#596863">Net outflows, USD millions</text><rect x="78" y="53" width="53" height="187.4" fill="#aa6c46"/><text x="104" y="250.4" text-anchor="middle" font-size="13" fill="#293c3e">$430.2M</text><text x="104" y="284" text-anchor="middle" font-size="13" fill="#394a4b">Nov 5</text><rect x="172" y="53" width="53" height="179.4" fill="#aa6c46"/><text x="198" y="242.4" text-anchor="middle" font-size="13" fill="#293c3e">$411.9M</text><text x="198" y="284" text-anchor="middle" font-size="13" fill="#394a4b">Nov 6</text><rect x="266" y="53" width="53" height="87.5" fill="#aa6c46"/><text x="292" y="150.5" text-anchor="middle" font-size="13" fill="#293c3e">$201.0M</text><text x="292" y="284" text-anchor="middle" font-size="13" fill="#394a4b">Nov 9</text><rect x="360" y="53" width="53" height="41.4" fill="#aa6c46"/><text x="386" y="104.4" text-anchor="middle" font-size="13" fill="#293c3e">$95.0M</text><text x="386" y="284" text-anchor="middle" font-size="13" fill="#394a4b">Nov 10</text><rect x="454" y="53" width="53" height="130.6" fill="#aa6c46"/><text x="480" y="193.6" text-anchor="middle" font-size="13" fill="#293c3e">$299.8M</text><text x="480" y="284" text-anchor="middle" font-size="13" fill="#394a4b">Nov 11</text><rect x="548" y="53" width="53" height="123.7" fill="#aa6c46"/><text x="574" y="186.7" text-anchor="middle" font-size="13" fill="#293c3e">$284.1M</text><text x="574" y="284" text-anchor="middle" font-size="13" fill="#394a4b">Nov 12</text><rect x="642" y="53" width="53" height="80.8" fill="#aa6c46"/><text x="668" y="143.8" text-anchor="middle" font-size="13" fill="#293c3e">$185.4M</text><text x="668" y="284" text-anchor="middle" font-size="13" fill="#394a4b">Nov 13</text></svg></div><figcaption>Seven completed U.S. sessions of reported net spot-Bitcoin ETF flows (USD millions; withdrawals plotted as magnitude below the heading). Source: Farside Investors flow series as reflected in the dated session figures. Numbers are historical and subject to provider revisions.</figcaption></figure>
+<div class="tablewrap" role="region" tabindex="0" aria-label="ETF flow table"><table><caption>Accessible data alternative: net ETF flows</caption><thead><tr><th scope="col">Session</th><th scope="col">Net flow, USD millions</th></tr></thead><tbody><tr><th scope="row">Nov 5, 2026</th><td class="num">−$430.2M</td></tr><tr><th scope="row">Nov 6, 2026</th><td class="num">−$411.9M</td></tr><tr><th scope="row">Nov 9, 2026</th><td class="num">−$201.0M</td></tr><tr><th scope="row">Nov 10, 2026</th><td class="num">−$95.0M</td></tr><tr><th scope="row">Nov 11, 2026</th><td class="num">−$299.8M</td></tr><tr><th scope="row">Nov 12, 2026</th><td class="num">−$284.1M</td></tr><tr><th scope="row">Nov 13, 2026</th><td class="num">−$185.4M</td></tr></tbody></table></div>
+<p>ETF redemptions do not identify a single seller's intent. They also do not capture the entire spot market. Still, a succession of net withdrawals means it is too early to cite that vehicle as evidence of a renewed, persistent bid. A bottom narrative that ignores this evidence would be convenient rather than complete.</p></section>
+<section aria-labelledby="leverage"><h2 id="leverage">The leverage story splits in two</h2>
+<p>Open interest is frequently treated as if it were a mood gauge. It is not. Every outstanding perpetual contract has a long and a short. Open interest measures their shared gross exposure; a falling number can indicate position closure, but it cannot, by itself, identify which side initiated it or why.</p>
+<p>Over the wider retreat, there was genuine contraction. Hyperliquid's sampled BTC-denominated open interest moved from about 39,247 BTC at 00:00 UTC on November 13 to about 37,345 BTC at 00:00 UTC on November 15—a decline of 4.85%. Lighter reported approximately $145.8 million in one-sided BTC perpetual notional at the first timestamp and $116.0 million at the second. Because those are mark-dependent USD amounts, simply calling the resulting 20.4% fall a position contraction would exaggerate the result. Dividing by each observation's contemporaneous mark gives a roughly 12.1% reduction in BTC-equivalent contracts.</p>
+<p>Yet the crucial forty-five minutes around the local low show why the broad deleveraging narrative should not be applied indiscriminately. From 01:35 to 02:05 UTC on November 15, Hyperliquid's sampled BTC open interest <em>rose</em> 5.19%; Lighter's mark-adjusted BTC-equivalent exposure <em>fell</em> roughly 6.42%. By 02:20, Hyperliquid remained 3.55% above its 01:35 level while Lighter was 7.45% below it.</p>
+<figure class="viz"><div class="chart-scroll" role="region" tabindex="0" aria-label="Scrollable chart; underlying values are also in the following table"><svg viewBox="0 0 760 340" role="img" aria-labelledby="oit oid" xmlns="http://www.w3.org/2000/svg"><title id="oit">BTC-equivalent open interest diverged across Hyperliquid and Lighter during the rebound</title><desc id="oid">Relative to November 15 at 01:35 UTC, Hyperliquid OI increased 5.19 percent by 02:05 and 3.55 percent by 02:20; Lighter BTC-equivalent OI declined 6.42 and 7.45 percent at those respective times. Only these three observed positions are plotted.</desc><line x1="74" x2="722" y1="282" y2="282" stroke="#c8c9be" stroke-width="1"/><text x="52" y="287" text-anchor="end" font-size="13" fill="#546460">-10%</text><line x1="74" x2="722" y1="212" y2="212" stroke="#c8c9be" stroke-width="1"/><text x="52" y="217" text-anchor="end" font-size="13" fill="#546460">-5%</text><line x1="74" x2="722" y1="142" y2="142" stroke="#c8c9be" stroke-width="1"/><text x="52" y="147" text-anchor="end" font-size="13" fill="#546460">+0%</text><line x1="74" x2="722" y1="72" y2="72" stroke="#c8c9be" stroke-width="1"/><text x="52" y="77" text-anchor="end" font-size="13" fill="#546460">+5%</text><line x1="74" x2="722" y1="2" y2="2" stroke="#c8c9be" stroke-width="1"/><text x="52" y="7" text-anchor="end" font-size="13" fill="#546460">+10%</text><text x="114" y="322" text-anchor="middle" font-size="14" fill="#354949">01:35 UTC</text><text x="400" y="322" text-anchor="middle" font-size="14" fill="#354949">02:05 UTC</text><text x="678" y="322" text-anchor="middle" font-size="14" fill="#354949">02:20 UTC</text><polyline points="114,142.0 400,69.3 678,92.2" fill="none" stroke="#1b5756" stroke-width="4"/><circle cx="114" cy="142.0" r="6" fill="#1b5756"/><circle cx="400" cy="69.3" r="6" fill="#1b5756"/><circle cx="678" cy="92.2" r="6" fill="#1b5756"/><polyline points="114,142.0 400,231.8 678,246.3" fill="none" stroke="#ac6a45" stroke-width="4"/><circle cx="114" cy="142.0" r="6" fill="#ac6a45"/><circle cx="400" cy="231.8" r="6" fill="#ac6a45"/><circle cx="678" cy="246.3" r="6" fill="#ac6a45"/><text x="454" y="33" fill="#1b5756" font-size="15">● Hyperliquid</text><text x="588" y="33" fill="#ac6a45" font-size="15">● Lighter</text></svg></div><figcaption>Relative change in observed BTC-equivalent perpetual open interest from 01:35 UTC, November 15, 2026. Hyperliquid open interest is reported in BTC; Lighter USD notional is divided by its contemporaneous mark price. Lines connect three observed samples and must not be read as tick-by-tick paths. Source: historical venue-level positioning records.</figcaption></figure>
+<div class="tablewrap" role="region" tabindex="0" aria-label="Open interest comparison table"><table><caption>Underlying-equivalent open-interest changes from 01:35 UTC</caption><thead><tr><th scope="col">Time, Nov. 15 UTC</th><th scope="col">Hyperliquid</th><th scope="col">Lighter</th></tr></thead><tbody><tr><th scope="row">01:35</th><td>0.00%</td><td>0.00%</td></tr><tr><th scope="row">02:05</th><td>+5.19%</td><td>−6.42%</td></tr><tr><th scope="row">02:20</th><td>+3.55%</td><td>−7.45%</td></tr></tbody></table></div>
+<p>This is the part of the episode I find most revealing. A uniform squeeze would be an easy story. The venue-level record is messier: one market saw net creation of gross contracts as prices advanced; another saw contraction. Different positioning, trader populations, liquidity conditions, and hedging behavior can coexist within the same global price move. The contradiction is not noise to be averaged away. It is the market's structure.</p></section>
+<section aria-labelledby="forced"><h2 id="forced">The direction of forced trading flipped</h2>
+<p>Liquidation records supply a narrower but firmer fact. On Lighter, 27 recorded BTC liquidations between 01:35 and 01:50 UTC closed long positions, with an aggregate recorded notional of approximately $46,795. During 02:00–02:20 UTC, 31 recorded BTC liquidations closed short positions, totaling approximately $63,356. The position sign before liquidation—not the generic event label—determines the direction. The selected intervals returned complete pages for those venue records.</p>
+<p>Hyperliquid records also show long-position liquidation during the decline and short-position liquidation during the rebound. Its retrieved samples were not exhaustive, so they establish the direction of observed events, not total liquidation dollars or market-wide proportions.</p>
+<p>That is a meaningful shift. A forced long sale can deepen a falling market. Once price turns, leveraged shorts can be forced to buy back exposure, amplifying the rebound. Both mechanisms were visible in the event record. Neither observation proves that short liquidations were the dominant source of buying, much less that a sustained base of discretionary spot buyers had formed.</p>
+<blockquote><p>The cleanest fact is the reversal in forced trading. The hardest question is what remains when that forced buying ends.</p></blockquote>
+<p>Funding gives little reason to declare an all-clear. The sampled Hyperliquid rates hovered near zero and moved between positive and negative values, Lighter's were mildly positive, and OKX's latest observed eight-hour settlement was slightly negative. Their settlement conventions differ. Mixed signs across venues describe localized conditions, not a universal signal of extreme short crowding or complete long capitulation.</p></section>
+<section aria-labelledby="missing"><h2 id="missing">The difference between absorption and a squeeze</h2>
+<p>There are at least two plausible readings of the $62,000 event. In the bullish version, forced selling pushed Bitcoin into a region where genuine buyers absorbed supply. The subsequent liquidations of shorts added fuel, but were not the foundation. In the bearish version, short covering and derivatives repositioning temporarily reversed price while underlying spot demand remained too weak to carry a lasting recovery.</p>
+<p>The missing discriminator is complete, correctly signed spot trade flow across the decline and rebound, ideally paired with contemporaneous order-book depth. Candles and overall traded volume cannot answer it. A candle tells us where price opened, traded and closed; it does not identify how much was bought aggressively at the ask rather than sold aggressively at the bid. Even an exchange's recent trade sample must cover the event in full before anyone should use it to calculate a reliable cumulative volume delta.</p>
+<p>The figures above therefore establish a price reversal, substantial positioning changes, and a reversal in observed forced liquidations. They do not establish comprehensive cross-market spot accumulation. That distinction is not a technical footnote. It is the difference between saying that a crowd of levered traders had to buy and saying that longer-term demand voluntarily chose to buy.</p>
+<p>Nor would one favorable flow reading be enough on its own. Visible order-book liquidity can vanish; a burst of market buys can be fleeting; aggregate venue participation may be concentrated. A durable bottom is a process that survives a renewed test, not a verdict delivered by the first rebound candle.</p></section>
+<section aria-labelledby="test"><h2 id="test">What would make the bottom case credible?</h2>
+<p>The immediate reference is the observed low around $62,000. It deserves attention precisely because it is an actual traded region on multiple venues. The more speculative $58,000–$60,000 area is a stress scenario below that low, <em>not</em> a demonstrated support shelf or a prediction. Similarly, $67,000–$69,000 and $73,000–$75,000 are useful recovery areas drawn from recent broken price structure, not statistically validated trigger prices.</p>
+<p>For me, the compelling sequence would be straightforward: Bitcoin revisits the low area without a durable break, forms a higher low, and regains the intervening rebound structure. At the same time, BTC-denominated open interest would stabilize rather than rebuild into another fragile long crowd, and several sessions of healthier spot demand would become visible. ETF flow improvement would add support—but would not substitute for the price and spot-flow evidence.</p>
+<p>The bearish falsification is equally clear. Another sustained move below $62,000, especially if accompanied by continuing net ETF redemptions and fragile liquidity, would weaken the immediate local-bottom case. A subsequent rebound could still occur from lower prices. No technical level, by itself, identifies the cycle's ultimate floor.</p>
+<p>Timing is the trap in every bottom forecast. A market can print a low on one day and spend weeks proving that it mattered. Conversely, it can rally several thousand dollars, invite a verdict, and resume the decline. Without a separately validated predictive model, assigning a specific date or a probability to the final bottom would give uncertainty a false veneer of precision.</p></section>
+<section aria-labelledby="meaning"><h2 id="meaning">Why this reversal matters beyond Bitcoin's chart</h2>
+<p>This episode illustrates how a single global headline price can hide very different local mechanisms. ETF redemptions reflect one channel of demand. Spot prints describe actual asset exchange. Perpetual open interest describes gross contractual exposure. Liquidations reveal compulsory risk reduction. They are related, but they are not interchangeable.</p>
+<p>That distinction becomes especially important in crypto because leverage can rapidly change the distribution of forced orders. Price may stabilize because leveraged sellers have disappeared, because buyers have arrived, or because both happened in sequence. The consequences for the next selloff are different in each case. A market with fewer vulnerable longs may have less mechanical downside pressure, while a market without persistent spot buying can remain exposed to renewed supply.</p>
+<p>As of this investigation, the evidence supports a meaningful local liquidation reversal near $62,000. It supports saying that some leverage was extinguished, and that short-side forced buying helped the rebound. It does not support declaring a final Bitcoin cycle bottom.</p>
+<p><strong>What I will watch is not the next dramatic wick, but the quieter test after it: whether price can hold once the machinery of liquidation stops doing the buying.</strong></p></section>
+<footer class="sources" id="sources"><h2>Sources and definitions</h2>
+<ol><li id="s1"><a href="https://farside.co.uk/btc/" rel="noopener noreferrer">Farside Investors, Bitcoin ETF flows</a>. Figures cited for completed U.S. trading sessions November 5–13, 2026. Daily totals used in the chart are −430.2, −411.9, −201.0, −95.0, −299.8, −284.1 and −185.4 million USD. They may be revised by the publisher.</li>
+<li>Historical OKX BTC-USDT spot observations and hourly candlesticks, including a 62,000 USDT low in the 01:00–02:00 UTC candle on November 15. USDT-quoted prices are not identical to consolidated BTC/USD prices.</li>
+<li>Hyperliquid BTC perpetual historical OHLCV, sampled open interest, funding, and liquidation records for November 11–15, 2026 UTC. Liquidation-direction samples were not fully paginated and cannot support aggregate liquidation shares.</li>
+<li>Lighter BTC perpetual historical OHLCV, sampled position notional and liquidation records for November 13–15, 2026 UTC. BTC-equivalent OI is calculated as reported one-sided USD notional divided by its corresponding mark price; rounding affects percentage results.</li>
+<li>CoinMarketCap Bitcoin reference snapshot timestamped November 15, 2026, 03:37 UTC: $64,950.97, seven-day −14.26%, thirty-day −20.52%. Aggregate reference, not an executable price.</li></ol>
+<p class="mini">Method: observation windows are explicitly historical; close and mark prices, spot and perpetual markets, quote currencies, funding settlement periods, and venue populations are treated separately. The three-point OI chart is descriptive, not an estimated continuous path or a predictive model. Neither local support nor any proposed scenario constitutes a probability forecast.</p></footer>
+</article></main></body></html>

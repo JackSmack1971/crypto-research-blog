@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-bottom-liquidation-reversal": {
+      "title": "Bitcoin’s $62,000 Reversal Was Real. A Bottom Is Still Unproven.",
+      "description": "Bitcoin approached $62,000 in November 2026, then rebounded as liquidations flipped from longs to shorts. What ETF flows and venue-level open interest reveal about the unconfirmed bottom.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-bottom-liquidation-reversal/",
+      "og:title": "Bitcoin’s $62,000 Reversal Was Real. A Bottom Is Still Unproven.",
+      "og:description": "Bitcoin approached $62,000 in November 2026, then rebounded as liquidations flipped from longs to shorts. What ETF flows and venue-level open interest reveal about the unconfirmed bottom.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-bottom-liquidation-reversal/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "inj-bridge-concentration-accounting": {
       "title": "INJ’s 95% Bridge Wallet Is Not the Whale Story It Appears to Be",
       "description": "An investigation of Injective's Ethereum escrow, 123.7 million native INJ supply, staking, bridge liabilities and the distinction between custody and control as of November 13, 2026.",
@@ -432,6 +442,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s $62,000 Reversal Was Real. A Bottom Is Still Unproven.",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-bottom-liquidation-reversal/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-bottom-liquidation-reversal/",
+      "description": "The November selloff triggered a cross-venue liquidation reversal. The missing piece is not another fear indicator—it is evidence that ordinary buyers can hold the line."
+    },
     {
       "title": "INJ’s 95% Bridge Wallet Is Not the Whale Story It Appears to Be",
       "link": "https://independent-market-notes.netlify.app/inj-bridge-concentration-accounting/",
