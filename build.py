@@ -785,8 +785,9 @@ def render_home(notes: list[dict], site: dict) -> str:
     )
     topics = "".join(f'<option value="{key}">{escape(value)}</option>' for key, value in TOPICS.items())
     topic_links = "".join(
-        f'<a href="?topic={key}#notes">{escape(value)}</a>'
+        f'<a href="topics/{key}/">{escape(value)}</a>'
         for key, value in TOPICS.items()
+        if topic_notes(key, notes)
     )
     types = "".join(f'<option value="{key}">{escape(value)}</option>' for key, value in RESEARCH_TYPES.items())
     posts = [
@@ -884,6 +885,111 @@ def render_home(notes: list[dict], site: dict) -> str:
     return home.replace("</body>", f"  {script_tag}\n</body>")
 
 
+TOPIC_INTROS = {
+    "bitcoin": "Bitcoin price, flow and positioning notes: what the dated evidence supports, what failed, and what remains unproven.",
+    "market-structure": "Cross-market structure notes on breadth, relative strength, leverage and regulation, kept separate from live data and prediction.",
+    "liquidity": "Order-book depth and small-cap liquidity: whether quoted markets can absorb real size.",
+    "tokenomics": "Token supply, unlock schedules, buybacks and value capture, reconciled against primary records.",
+    "protocol-research": "Protocol-level research into launches, products and how their economics work in practice.",
+    "risk-verification": "Incident reconstructions and verification work: custody, concentration and what the record can and cannot show.",
+}
+
+
+def topic_notes(topic: str, notes: list[dict]) -> list[dict]:
+    return [n for n in notes if n["topic"] == topic]
+
+
+def render_topic_hub(topic: str, notes: list[dict], site: dict) -> str:
+    label = TOPICS[topic]
+    members = topic_notes(topic, notes)
+    count = len(members)
+    noun = "investigation" if count == 1 else "investigations"
+    canonical = f"{site['url']}/topics/{topic}/"
+    newest, oldest = members[0]["date"], members[-1]["date"]
+    description = (
+        f"{count} {label} {noun} from Independent Market Notes, "
+        f"{pretty_date(oldest)} to {pretty_date(newest)}. {TOPIC_INTROS[topic]}"
+    )
+    entries = "\n".join(
+        f"""<article class="entry">
+      <a class="entry-link" href="../../{escape(n["slug"], quote=True)}/">
+        <div class="entry-copy">
+          <p class="entry-meta"><span>{escape(n["research_type_label"])}</span><time datetime="{escape(n["date"], quote=True)}">{escape(pretty_date(n["date"]))}</time></p>
+          <h3>{escape(n["title"])}</h3>
+          <p class="dek">{escape(n["dek"])}</p>
+        </div>
+      </a>
+    </article>"""
+        for n in members
+    )
+    others = "".join(
+        f'<a href="../{key}/">{escape(value)}</a>'
+        for key, value in TOPICS.items()
+        if key != topic and topic_notes(key, notes)
+    )
+    main = f"""<header class="mast">
+    <div class="wrap">
+      <div class="topline">
+        <a class="publication-mark" href="../../">IMN <span>Independent research journal</span></a>
+        <nav class="tools" aria-label="Publication links"><a href="../../">Home</a><a href="../../#notes">Archive</a></nav>
+      </div>
+      <nav aria-label="Breadcrumb"><a href="../../">Home</a> / {escape(label)}</nav>
+      <h1>{escape(label)}</h1>
+      <p class="lede">{escape(TOPIC_INTROS[topic])}</p>
+      <p class="count">{count} {noun}</p>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <section class="archive wrap" aria-labelledby="hub-title">
+      <h2 id="hub-title">All {escape(label)} notes, newest first</h2>
+      <div class="archive-grid">
+      {entries}
+      </div>
+      <nav class="topic-nav" aria-label="Other topics">{others}</nav>
+    </section>
+  </main>"""
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": canonical + "#page",
+                "url": canonical,
+                "name": f"{label} research notes",
+                "description": description,
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": i,
+                            "url": f"{site['url']}/{n['slug']}/",
+                            "name": n["title"],
+                        }
+                        for i, n in enumerate(members, 1)
+                    ],
+                },
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": site["url"] + "/"},
+                    {"@type": "ListItem", "position": 2, "name": label, "item": canonical},
+                ],
+            },
+        ],
+    }
+    return page_shell(
+        site,
+        document_title=f"{label} research notes \u2014 {site['title']}",
+        description=description,
+        canonical=canonical,
+        main=main,
+        structured_data=data,
+        asset_base="../../",
+    )
+
+
 def render_404(site: dict) -> str:
     main = f"""<main id="main-content" class="wrap missing" tabindex="-1">
     <p class="kicker">Missing page</p>
@@ -942,6 +1048,11 @@ def render_feed(notes: list[dict], site: dict) -> str:
 def render_sitemap(notes: list[dict], site: dict) -> str:
     newest = notes[0]["date"]
     urls = [(site["url"] + "/", newest)]
+    urls.extend(
+        (f"{site['url']}/topics/{key}/", topic_notes(key, notes)[0]["date"])
+        for key in TOPICS
+        if topic_notes(key, notes)
+    )
     urls.extend((f"{site['url']}/{note['slug']}/", note["date"]) for note in notes)
     body = "\n".join(
         f"""  <url>
@@ -1139,6 +1250,11 @@ def main() -> None:
         out = DIST / note["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render_article(note, site, notes), encoding="utf-8")
+    for key in TOPICS:
+        if topic_notes(key, notes):
+            hub_out = DIST / "topics" / key / "index.html"
+            hub_out.parent.mkdir(parents=True, exist_ok=True)
+            hub_out.write_text(render_topic_hub(key, notes, site), encoding="utf-8")
     (DIST / "index.html").write_text(render_home(notes, site), encoding="utf-8")
     (DIST / "404.html").write_text(render_404(site), encoding="utf-8")
     (DIST / "feed.xml").write_text(render_feed(notes, site), encoding="utf-8")

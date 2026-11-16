@@ -356,3 +356,40 @@ class SiteStructureTest(unittest.TestCase):
 
 if __name__ == "__main__":
     write_metadata()
+
+
+class TopicHubTests(unittest.TestCase):
+    def setUp(self):
+        import build
+        self.build = build
+        self.site = build.load_site()
+        self.notes = build.load_notes()
+        self.keys = [k for k in build.TOPICS if build.topic_notes(k, self.notes)]
+
+    def test_each_hub_matches_registry_and_has_unique_metadata(self):
+        import re
+        titles, descriptions = set(), set()
+        for key in self.keys:
+            html = self.build.render_topic_hub(key, self.notes, self.site)
+            members = self.build.topic_notes(key, self.notes)
+            links = re.findall(r'class="entry-link" href="\.\./\.\./([^"/]+)/"', html)
+            self.assertEqual(links, [n["slug"] for n in members], key)
+            self.assertEqual(html.count("<h1>"), 1)
+            canonical = f'{self.site["url"]}/topics/{key}/'
+            self.assertIn(f'<link rel="canonical" href="{canonical}">', html)
+            titles.add(re.search(r"<title>(.*?)</title>", html).group(1))
+            descriptions.add(re.search(r'name="description" content="([^"]*)"', html).group(1))
+        self.assertEqual(len(titles), len(self.keys))
+        self.assertEqual(len(descriptions), len(self.keys))
+
+    def test_hubs_are_in_sitemap_and_home_links_to_them(self):
+        sitemap = self.build.render_sitemap(self.notes, self.site)
+        home = self.build.render_home(self.notes, self.site)
+        for key in self.keys:
+            self.assertIn(f'<loc>{self.site["url"]}/topics/{key}/</loc>', sitemap)
+            self.assertIn(f'href="topics/{key}/"', home)
+        self.assertNotIn('href="?topic=', home)
+
+    def test_every_catalog_note_belongs_to_exactly_one_hub(self):
+        total = sum(len(self.build.topic_notes(k, self.notes)) for k in self.keys)
+        self.assertEqual(total, len(self.notes))
