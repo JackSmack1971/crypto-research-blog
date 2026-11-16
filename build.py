@@ -31,6 +31,16 @@ FAVICON = ROOT / "assets" / "favicon.svg"
 DESIGN_SYSTEM = ROOT / "assets" / "design-system.css"
 SEARCH_SCRIPT = ROOT / "assets" / "search.js"
 
+NETLIFY_ASSET_HEADERS = """/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/design-system.css
+  Cache-Control: public, max-age=86400
+
+/search.js
+  Cache-Control: public, max-age=86400
+"""
+
 TITLE_SUFFIXES = (
     " | Crypto Market Analysis",
     " | Pyth Network Analysis",
@@ -409,6 +419,26 @@ def existing_blog_postings(html: str, slug: str) -> list[dict]:
     return found
 
 
+def has_schema_type(html: str, schema_type: str, slug: str) -> bool:
+    def contains(data) -> bool:
+        if isinstance(data, list):
+            return any(contains(item) for item in data)
+        if not isinstance(data, dict):
+            return False
+        types = data.get("@type", [])
+        if isinstance(types, str):
+            types = [types]
+        return schema_type in types or contains(data.get("@graph", []))
+
+    for match in LD_JSON_RE.finditer(head_html(html)):
+        try:
+            if contains(json.loads(match.group(2))):
+                return True
+        except (ValueError, TypeError):
+            die(f"{slug} has invalid JSON-LD")
+    return False
+
+
 def article_posting(note: dict, site: dict) -> dict:
     url = f"{site['url']}/{note['slug']}/"
     title, description = note["title"], note["description"]
@@ -423,7 +453,14 @@ def article_posting(note: dict, site: dict) -> dict:
         "mainEntityOfPage": url,
         "url": url,
         "author": {"@type": "Person" if note["author"] else "Organization", "name": author},
-        "publisher": {"@type": "Organization", "name": site["title"]},
+        "publisher": {
+            "@type": "Organization",
+            "name": site["title"],
+            "logo": {
+                "@type": "ImageObject",
+                "url": site["url"] + "/favicon.svg",
+            },
+        },
     }
     if note["image"]:
         posting["image"] = f"{site['url']}/{note['image']['path']}"
@@ -442,6 +479,9 @@ def augment_article_schema(html: str, note: dict, site: dict) -> str:
             return match.group(0)
         for key, value in defaults.items():
             posts[0].setdefault(key, value)
+        publisher = posts[0].get("publisher")
+        if isinstance(publisher, dict):
+            publisher.setdefault("logo", defaults["publisher"]["logo"])
         # Registered artwork is the authoritative social image.
         if note["image"]:
             posts[0]["image"] = defaults["image"]
@@ -452,6 +492,33 @@ def augment_article_schema(html: str, note: dict, site: dict) -> str:
     # Only head scripts are publication metadata; preserve article scripts verbatim.
     end = re.search(r"</head>", html, flags=re.I).start()
     return LD_JSON_RE.sub(augment, html[:end]) + html[end:]
+
+
+def article_breadcrumbs(note: dict, site: dict) -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": site["url"] + "/",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": note["topic_label"],
+                "item": f"{site['url']}/topics/{note['topic']}/",
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": note["title"],
+                "item": f"{site['url']}/{note['slug']}/",
+            },
+        ],
+    }
 
 
 def article_extra_head(note: dict, site: dict) -> str:
@@ -505,6 +572,8 @@ def article_extra_head(note: dict, site: dict) -> str:
         )
     if not existing_blog_postings(html, note["slug"]):
         parts.append(json_ld(article_posting(note, site)))
+    if not has_schema_type(html, "BreadcrumbList", note["slug"]):
+        parts.append(json_ld(article_breadcrumbs(note, site)))
     return "\n".join(parts) + "\n"
 
 
@@ -923,11 +992,20 @@ def render_home(notes: list[dict], site: dict) -> str:
     ]
     structured_data = {
         "@context": "https://schema.org",
-        "@type": "Blog",
-        "name": site["title"],
-        "description": site["description"],
-        "url": site["url"] + "/",
-        "blogPost": posts,
+        "@graph": [
+            {
+                "@type": "Blog",
+                "name": site["title"],
+                "description": site["description"],
+                "url": site["url"] + "/",
+                "blogPost": posts,
+            },
+            {
+                "@type": "WebSite",
+                "name": site["title"],
+                "url": site["url"] + "/",
+            },
+        ],
     }
     latest_entries = []
     for index, note in enumerate(notes[:3], 1):
@@ -1374,6 +1452,7 @@ def main() -> None:
     if inline_src.is_dir():
         shutil.copytree(inline_src, DIST / "inline")
     (DIST / ".nojekyll").write_text("", encoding="utf-8")
+    (DIST / "_headers").write_text(NETLIFY_ASSET_HEADERS, encoding="utf-8")
     for note in notes:
         out = DIST / note["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
