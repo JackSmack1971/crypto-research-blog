@@ -356,3 +356,15 @@ class SiteStructureTest(unittest.TestCase):
 
 if __name__ == "__main__":
     write_metadata()
+
+
+class RobotsMetaConsistencyTests(unittest.TestCase):
+    def test_every_article_has_one_identical_robots_meta(self):
+        import re
+        import build
+        site = build.load_site()
+        notes = build.load_notes()
+        for note in notes:
+            html = build.render_article(note, site, notes)
+            tags = re.findall(r'<meta\s+name="robots"[^>]*>', html, flags=re.I)
+            self.assertEqual(tags, [build.ROBOTS_META], note["slug"])
