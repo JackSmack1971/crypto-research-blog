@@ -569,32 +569,103 @@ def article_bar(site: dict, note: dict, outline: list[tuple[str, str]]) -> str:
     )
 
 
-def rank_related_notes(note: dict, notes: list[dict]) -> dict:
-    ranked = []
-    for index, candidate in enumerate(notes):
-        if candidate["slug"] == note["slug"]:
-            continue
-        shared_assets = len(set(note["assets"]) & set(candidate["assets"]))
-        score = (
-            2 * shared_assets
-            + (1 if candidate["topic"] == note["topic"] else 0)
-            + (1 if candidate["research_type"] == note["research_type"] else 0)
-        )
-        candidate_date = candidate["date"]
-        ranked.append((score, candidate_date, index, candidate))
+RELATED_LINKS = 3
+# Twice the average inbound count (RELATED_LINKS). Stops one article becoming a
+# hub for everything without forcing irrelevant links.
+RELATED_MAX_INBOUND = 2 * RELATED_LINKS
 
-    if not ranked:
-        return {"variant": "none", "notes": []}
 
-    ranked.sort(
-        key=lambda item: (
-            -item[0],
-            -date.fromisoformat(item[1]).toordinal(),
-            item[2],
-        )
+def _relatedness(note: dict, candidate: dict) -> int:
+    shared_assets = len(set(note["assets"]) & set(candidate["assets"]))
+    return (
+        2 * shared_assets
+        + (1 if candidate["topic"] == note["topic"] else 0)
+        + (1 if candidate["research_type"] == note["research_type"] else 0)
     )
-    variant = "related" if ranked[0][0] > 0 else "latest"
-    return {"variant": variant, "notes": [item[3] for item in ranked[:3]]}
+
+
+def _relevance_key(note: dict, candidate: dict, cidx: int):
+    """Display order and base preference: relevance, newest, then catalog order."""
+    return (
+        -_relatedness(note, candidate),
+        -date.fromisoformat(candidate["date"]).toordinal(),
+        cidx,
+    )
+
+
+def balanced_related_indexes(notes: list[dict]) -> list[list[int]]:
+    """Choose related notes for every article, deterministically.
+
+    1. In catalog order, each article takes its best-ranked candidates, where
+       equal relevance prefers the candidate with fewer inbound links so far,
+       and candidates already at RELATED_MAX_INBOUND are skipped.
+    2. Any article still without an inbound link replaces the weakest slot of
+       its most relevant source whose current target keeps at least one other
+       inbound link.
+    A note is never linked to another entry with its own slug.
+    Returns, per input index, the chosen candidate indexes sorted for display.
+    """
+    n = len(notes)
+    slugs = [note["slug"] for note in notes]
+    want = min(RELATED_LINKS, len({*slugs}) - 1)
+    inbound = [0] * n
+    chosen: list[list[int]] = [[] for _ in range(n)]
+    for i, note in enumerate(notes):
+        order = sorted(
+            (c for c in range(n) if slugs[c] != slugs[i]),
+            key=lambda c: (-_relatedness(note, notes[c]), inbound[c])
+            + _relevance_key(note, notes[c], c)[1:],
+        )
+        under = [c for c in order if inbound[c] < RELATED_MAX_INBOUND]
+        picks = under[:want]
+        if len(picks) < want:  # cap too tight for a tiny catalog: fill anyway
+            picks += [c for c in order if c not in picks][: want - len(picks)]
+        chosen[i] = picks
+        for c in picks:
+            inbound[c] += 1
+    for orphan in range(n):
+        if inbound[orphan] or want == 0:
+            continue
+        sources = sorted(
+            (s for s in range(n) if slugs[s] != slugs[orphan]),
+            key=lambda s: _relevance_key(notes[s], notes[orphan], orphan),
+        )
+        for s in sources:
+            donors = [c for c in chosen[s] if inbound[c] > 1]
+            if not donors:
+                continue
+            drop = min(
+                donors,
+                key=lambda c: (
+                    _relatedness(notes[s], notes[c]),
+                    -inbound[c],
+                    -chosen[s].index(c),
+                ),
+            )
+            chosen[s][chosen[s].index(drop)] = orphan
+            inbound[drop] -= 1
+            inbound[orphan] += 1
+            break
+    return [
+        sorted(chosen[i], key=lambda c: _relevance_key(notes[i], notes[c], c))
+        for i in range(n)
+    ]
+
+
+def rank_related_notes(note: dict, notes: list[dict]) -> dict:
+    if not any(c["slug"] != note["slug"] for c in notes):
+        return {"variant": "none", "notes": []}
+    position = next((i for i, c in enumerate(notes) if c is note), None)
+    if position is None:
+        position = next((i for i, c in enumerate(notes) if c["slug"] == note["slug"]), None)
+    if position is None:
+        notes = notes + [note]
+        position = len(notes) - 1
+    picks = balanced_related_indexes(notes)[position]
+    selected = [notes[c] for c in picks]
+    top = max(_relatedness(note, c) for c in selected) if selected else 0
+    variant = "related" if top > 0 else "latest"
+    return {"variant": variant, "notes": selected}
 
 
 def render_related_notes(note: dict, notes: list[dict]) -> str:
