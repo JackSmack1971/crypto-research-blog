@@ -23,10 +23,7 @@ SUFFIXES = (
     " — October 2026 Crypto Market Essay",
 )
 
-# Held pending an owner decision on a shortened headline (133 characters).
-# The test requires this set to equal the actual violators, so it fails, and
-# forces removal of the entry, as soon as the title is fixed.
-HELD_PENDING_OWNER_DECISION = {"binance-four-hour-wallet-takeover"}
+HELD_PENDING_OWNER_DECISION: set[str] = set()  # no title is currently held
 
 
 def source_title(note):
