@@ -1,5 +1,23 @@
 [
   {
+    "slug": "crypto-edge-evidence-gap",
+    "source": "crypto-edge-evidence-gap.html",
+    "date": "2026-11-16",
+    "title": "Crypto’s Missing Edge: When Evidence Stops Short",
+    "dek": "Bitcoin and Ethereum showed stress, liquidity and violent positioning shifts. But a convincing market story is not the same as a tested trading advantage.",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/crypto-edge-evidence-gap.jpg",
+    "image_alt": "Conceptual editorial artwork contrasting fractured market layers with a precision balance and blank research paper, symbolizing the gap between market narratives and tested evidence.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "crypto-market-fear-beneath-the-surface",
     "source": "crypto-market-fear-beneath-the-surface.html",
     "date": "2026-11-16",

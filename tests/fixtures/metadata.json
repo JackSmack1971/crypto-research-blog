@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-edge-evidence-gap": {
+      "title": "Crypto’s Missing Edge: When Evidence Stops Short",
+      "description": "November 16 evidence from BTC, ETH, derivatives, spot liquidity and model tests reveals why market conviction can outrun predictive proof.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-edge-evidence-gap/",
+      "og:title": "Crypto’s Missing Edge: When Evidence Stops Short",
+      "og:description": "November 16 evidence from BTC, ETH, derivatives, spot liquidity and model tests reveals why market conviction can outrun predictive proof.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-edge-evidence-gap/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "crypto-market-fear-beneath-the-surface": {
       "title": "Crypto’s Fear Reading Is Extreme. The Market’s Weakness Runs Deeper.",
       "description": "A November 16, 2026 investigation of crypto market breadth, Bitcoin volatility, derivatives deleveraging and why extreme fear alone cannot confirm a bottom.",
@@ -452,6 +462,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Crypto’s Missing Edge: When Evidence Stops Short",
+      "link": "https://independent-market-notes.netlify.app/crypto-edge-evidence-gap/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-edge-evidence-gap/",
+      "description": "Bitcoin and Ethereum showed stress, liquidity and violent positioning shifts. But a convincing market story is not the same as a tested trading advantage."
+    },
     {
       "title": "Crypto’s Fear Reading Is Extreme. The Market’s Weakness Runs Deeper.",
       "link": "https://independent-market-notes.netlify.app/crypto-market-fear-beneath-the-surface/",
