@@ -384,3 +384,16 @@ class CanonicalOriginTests(unittest.TestCase):
             canon = re.findall(r'<link[^>]*rel="canonical"[^>]*href="([^"]+)"', html)
             self.assertEqual(len(canon), 1, name)
             self.assertTrue(canon[0].startswith(prefix), (name, canon[0]))
+
+
+class NetlifyHeadersTests(unittest.TestCase):
+    def test_security_headers_configured_for_all_paths(self):
+        import tomllib
+        from pathlib import Path
+        config = tomllib.loads((Path(__file__).resolve().parents[1] / "netlify.toml").read_text())
+        rules = [h for h in config.get("headers", []) if h["for"] == "/*"]
+        self.assertEqual(len(rules), 1)
+        values = rules[0]["values"]
+        self.assertEqual(values["X-Content-Type-Options"], "nosniff")
+        self.assertIn("Referrer-Policy", values)
+        self.assertEqual(values["Content-Security-Policy"], "frame-ancestors 'none'")

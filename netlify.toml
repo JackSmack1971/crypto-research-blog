@@ -1,3 +1,10 @@
 [build]
   command = "python3 build.py && python3 -m unittest discover -s tests -p 'test_*.py'"
   publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "frame-ancestors 'none'"
