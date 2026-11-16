@@ -1008,9 +1008,9 @@ def render_home(notes: list[dict], site: dict) -> str:
 
 TOPIC_INTROS = {
     "bitcoin": "Bitcoin price, flow and positioning notes: what the dated evidence supports, what failed, and what remains unproven.",
-    "market-structure": "Cross-market structure notes on breadth, relative strength, leverage and regulation, kept separate from live data and prediction.",
+    "market-structure": "Cross-market structure notes on breadth, relative strength, leverage and regulation.",
     "liquidity": "Order-book depth and small-cap liquidity: whether quoted markets can absorb real size.",
-    "tokenomics": "Token supply, unlock schedules, buybacks and value capture, reconciled against primary records.",
+    "tokenomics": "Token supply, unlock schedules, buybacks and value capture, tested against the primary records that exist.",
     "protocol-research": "Protocol-level research into launches, products and how their economics work in practice.",
     "risk-verification": "Incident reconstructions and verification work: custody, concentration and what the record can and cannot show.",
 }
