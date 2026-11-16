@@ -131,7 +131,7 @@
       "twitter:card": "summary_large_image"
     },
     "mercado-bitcoin-hack-containment-timeline": {
-      "title": "Mercado Bitcoin Hack: Why Wallets Kept Draining | Independent Market Notes",
+      "title": "Mercado Bitcoin Hack: Why Wallets Kept Draining",
       "description": "Mercado Bitcoin said its hack was contained, but researchers found later wallet drains. Examine the timeline, disputed losses, and remaining security risks.",
       "canonical": "https://independent-market-notes.netlify.app/mercado-bitcoin-hack-containment-timeline/",
       "og:title": "Mercado Bitcoin Said the Hack Was Contained. The Wallets Kept Draining.",
@@ -181,7 +181,7 @@
       "twitter:card": "summary_large_image"
     },
     "crypto-leverage-liquidity-trap": {
-      "title": "The Leverage Trap: Crypto's Fragile November Market | Independent Market Notes",
+      "title": "The Leverage Trap: Crypto's Fragile November Market",
       "description": "Crypto market value weakened as derivatives exposure expanded. An examination of the leverage divergence, competing explanations, and what could break the market's uneasy balance.",
       "canonical": "https://independent-market-notes.netlify.app/crypto-leverage-liquidity-trap/",
       "og:title": "The Leverage Trap: Crypto's Fragile November Market",
@@ -191,7 +191,7 @@
       "twitter:card": "summary_large_image"
     },
     "monad-november-unlock-liquidity-test": {
-      "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell? | Independent Market Notes",
+      "title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?",
       "description": "Monad’s November 24, 2026 token unlock exposes conflicting cliff calculations, opaque recipient mapping, and the gap between released supply and executable liquidity.",
       "canonical": "https://independent-market-notes.netlify.app/monad-november-unlock-liquidity-test/",
       "og:title": "Monad’s November 24 Unlock Has a $300 Million Question: Who Can Actually Sell?",
@@ -211,7 +211,7 @@
       "twitter:card": "summary_large_image"
     },
     "bitcoin-open-interest-filter-test": {
-      "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test | Crypto Research",
+      "title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
       "description": "A close reading of OKX BTC perpetual data shows why matching open interest to the right hour matters—and why a positive backtest is not proof of an edge.",
       "canonical": "https://independent-market-notes.netlify.app/bitcoin-open-interest-filter-test/",
       "og:title": "Bitcoin’s Open-Interest Filter Failed Its Simplest Test",
@@ -241,7 +241,7 @@
       "twitter:card": "summary_large_image"
     },
     "token-unlock-liquidity-illusion-90-day-calendar": {
-      "title": "The Token Unlock Calendar Has a Liquidity Problem | Independent Market Notes",
+      "title": "The Token Unlock Calendar Has a Liquidity Problem",
       "description": "A Nov 2026–Feb 2027 investigation of MON, ONDO and other token unlocks, examining reported-float dilution, trading liquidity and critical data gaps.",
       "canonical": "https://independent-market-notes.netlify.app/token-unlock-liquidity-illusion-90-day-calendar/",
       "og:title": "The Token Unlock Calendar Has a Liquidity Problem",
@@ -281,7 +281,7 @@
       "twitter:card": "summary_large_image"
     },
     "bitcoin-quiet-divergence": {
-      "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market | Market Investigation",
+      "title": "Bitcoin’s Quiet Lead in a Weak Crypto Market",
       "description": "An evidence-led examination of Bitcoin, Ether and Solana’s relative returns, market breadth and daily technical signals through November 1, 2026.",
       "canonical": "https://independent-market-notes.netlify.app/bitcoin-quiet-divergence/",
       "og:title": "Bitcoin’s Quiet Lead in a Weak Crypto Market",
@@ -301,7 +301,7 @@
       "twitter:card": "summary_large_image"
     },
     "small-cap-crypto-liquidity-illusion": {
-      "title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings | Crypto Research",
+      "title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings",
       "description": "An evidence-led investigation of FLOAT, LEVERHEDGE, NETWORK, SAFU and DACITYCOIN, examining token controls, reported volume, holders and the limits of liquidity claims.",
       "canonical": "https://independent-market-notes.netlify.app/small-cap-crypto-liquidity-illusion/",
       "og:title": "The Liquidity Illusion in Crypto’s New Small-Cap Listings",
@@ -321,7 +321,7 @@
       "twitter:card": "summary"
     },
     "bitcoin-selloff-leverage": {
-      "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated. | Market Essay",
+      "title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated.",
       "description": "A close examination of Bitcoin's October 29, 2026 selloff: what funding, perpetual basis, aggressive order flow and exchange liquidation data reveal—and what they cannot prove.",
       "canonical": "https://independent-market-notes.netlify.app/bitcoin-selloff-leverage/",
       "og:title": "Bitcoin’s Selloff Was Real. The Leverage Story Is More Complicated.",
@@ -341,7 +341,7 @@
       "twitter:card": "summary"
     },
     "institutional-adoption-token-demand": {
-      "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial. | Crypto Research",
+      "title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial.",
       "description": "Canton Coin and Chainlink are building genuine institutional infrastructure. But CC issuance, LINK Reserve flows and BTC/ETH-adjusted prices tell a more demanding story about token value capture.",
       "canonical": "https://independent-market-notes.netlify.app/institutional-adoption-token-demand/",
       "og:title": "Institutional Crypto Adoption Is Real. Token Demand Is Still on Trial.",
@@ -351,7 +351,7 @@
       "twitter:card": "summary"
     },
     "bitcoin-holding-up": {
-      "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing. — October 2026 Crypto Market Essay",
+      "title": "Bitcoin Is Holding Up. The Tape Is Less Convincing.",
       "description": "Bitcoin's relative resilience masks deteriorating momentum, highly correlated altcoins, and concentrated volume shocks. An evidence-led October 2026 crypto market essay.",
       "canonical": "https://independent-market-notes.netlify.app/bitcoin-holding-up/",
       "og:title": "Bitcoin Is Holding Up. The Tape Is Less Convincing.",
@@ -361,7 +361,7 @@
       "twitter:card": "summary"
     },
     "aero-at-0-68": {
-      "title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't. | Crypto Market Analysis",
+      "title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't.",
       "description": "An independent examination of AERO after the Aerodrome–Velodrome merger: broken daily structure, support near $0.65, falling revenue yield, token migration risks, and what would signal a genuine recovery.",
       "canonical": "https://independent-market-notes.netlify.app/aero-at-0-68/",
       "og:title": "AERO at $0.68: The Merger Is Real. The Reversal Isn't.",
@@ -381,7 +381,7 @@
       "twitter:card": "summary"
     },
     "weft-first-week": {
-      "title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit? | Independent Crypto Analysis",
+      "title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit?",
       "description": "A forensic examination of Weft Finance (WEFT): its concentrated Solana token supply, fragmented Meteora liquidity, volatile first week, and the unfinished evidence behind buybacks and burns.",
       "canonical": "https://independent-market-notes.netlify.app/weft-first-week/",
       "og:title": "WEFT’s First Week: Who Owns the Float, Who Controls the Exit?",
@@ -391,7 +391,7 @@
       "twitter:card": "summary"
     },
     "virtual-alpha-risk": {
-      "title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story | Independent Market Analysis",
+      "title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story",
       "description": "A critical look at Virtuals Protocol's VIRTUAL token: elevated volatility, BTC sensitivity, a promising but fragile residual-momentum backtest, and the evidence still missing.",
       "canonical": "https://independent-market-notes.netlify.app/virtual-alpha-risk/",
       "og:title": "VIRTUAL’s Apparent Alpha Has a Much Bigger Risk Story",
@@ -411,7 +411,7 @@
       "twitter:card": "summary"
     },
     "pyth-revenue-unlock": {
-      "title": "PYTH’s Revenue Breakthrough Meets a 2.125 Billion Token Unlock | Pyth Network Analysis",
+      "title": "PYTH’s Revenue Breakthrough Meets a 2.125 Billion Token Unlock",
       "description": "Pyth Network's growing commercial revenue and token reserve face a final May 2027 unlock. An evidence-led examination of PYTH supply, demand, liquidity, and risk.",
       "canonical": "https://independent-market-notes.netlify.app/pyth-revenue-unlock/",
       "og:title": "Pyth Has a Revenue Story. It Also Has a 2.125 Billion Token Problem.",
@@ -421,7 +421,7 @@
       "twitter:card": "summary"
     },
     "venice-ai-privacy": {
-      "title": "Venice AI’s Privacy Promise Has a Verification Problem | Independent Analysis",
+      "title": "Venice AI’s Privacy Promise Has a Verification Problem",
       "description": "Venice AI has built real privacy safeguards, but its encryption, provider policies, and VVV token economics warrant a closer look. An evidence-led analysis of what is and isn't proven.",
       "canonical": "https://independent-market-notes.netlify.app/venice-ai-privacy/",
       "og:title": "Venice AI’s Privacy Promise Has a Verification Problem",
