@@ -496,14 +496,76 @@ def article_extra_head(note: dict, site: dict) -> str:
     return "\n".join(parts) + "\n"
 
 
-def article_bar(site: dict) -> str:
+def article_outline(html: str) -> tuple[str, list[tuple[str, str]]]:
+    """Add collision-free heading anchors; leave scripts and existing IDs verbatim."""
+    offsets = [0]
+    for line in html.splitlines(keepends=True):
+        offsets.append(offsets[-1] + len(line))
+
+    class Sections(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=True)
+            self.ids = set()
+            self.headings = []
+            self.current = None
+
+        def position(self):
+            line, column = self.getpos()
+            return offsets[line - 1] + column
+
+        def handle_starttag(self, tag, attrs):
+            values = dict(attrs)
+            if values.get("id"):
+                self.ids.add(values["id"])
+            if tag == "h2":
+                end = self.position() + len(self.get_starttag_text())
+                self.current = (end, values.get("id"))
+
+        def handle_endtag(self, tag):
+            if tag == "h2" and self.current:
+                end, target = self.current
+                title = visible_text(html[end:self.position()])
+                if title:
+                    self.headings.append((end, target, title))
+                self.current = None
+
+    parser = Sections()
+    parser.feed(html)
+    parser.close()
+    outline, insertions = [], []
+    for end, target, title in parser.headings:
+        if not target:
+            target = f"cr-section-{len(outline) + 1}"
+            while target in parser.ids:
+                target += "-section"
+            parser.ids.add(target)
+            insertions.append((end - 1, f' id="{target}"'))
+        outline.append((target, title))
+    for position, attributes in reversed(insertions):
+        html = html[:position] + attributes + html[position:]
+    return html, outline
+
+
+def article_bar(site: dict, note: dict, outline: list[tuple[str, str]]) -> str:
     title = escape(site["title"])
+    links = "".join(
+        f'<li><a href="#{escape(target, quote=True)}">{escape(label)}</a></li>'
+        for target, label in outline
+    )
+    guide = (
+        '<details class="cr-outline"><summary>In this investigation</summary>'
+        f'<ol>{links}</ol></details>' if links else ""
+    )
     return (
         '<nav id="cr-sitebar" aria-label="Site">'
         '<div class="cr-sitebar-inner">'
-        f'<a class="cr-home" href="../">{title}</a>'
-        '<a class="cr-all" href="../">All notes</a>'
-        "</div></nav>"
+        f'<a class="cr-home" href="../"><span class="cr-monogram" aria-hidden="true">IMN</span>{title}</a>'
+        '<a class="cr-all" href="../#notes">Research archive <span class="cr-arrow" aria-hidden="true"></span></a>'
+        '</div><div class="cr-context">'
+        f'<span>{escape(note["topic_label"])}</span>'
+        f'<span>{escape(note["research_type_label"])}</span>'
+        f'<time datetime="{note["date"]}">{pretty_date(note["date"])}</time>'
+        f'{guide}</div></nav>'
     )
 
 
@@ -616,10 +678,24 @@ def render_article(
     if not head_match:
         die(f"{note['slug']} is missing </head>")
     html = html[: head_match.start()] + extra + html[head_match.start() :]
+    html, outline = article_outline(html)
     body_match = re.search(r"<body\b[^>]*>", html, flags=re.I)
     if not body_match:
         die(f"{note['slug']} is missing <body>")
-    bar = article_bar(site)
+    # Scope the shared reading layer without changing source documents.
+    opening = body_match.group(0)
+    class_pattern = r"(\sclass\s*=\s*)([\"'])(.*?)\2"
+    if re.search(class_pattern, opening, flags=re.I | re.S):
+        opening = re.sub(
+            class_pattern,
+            lambda match: f'{match[1]}{match[2]}cr-article {match[3]}{match[2]}',
+            opening, count=1, flags=re.I | re.S,
+        )
+    else:
+        opening = opening[:-1] + ' class="cr-article">'
+    html = html[:body_match.start()] + opening + html[body_match.end():]
+    body_match = re.search(r"<body\b[^>]*>", html, flags=re.I)
+    bar = article_bar(site, note, outline)
     related = render_related_notes(note, notes)
     body_end = re.search(r"</body>", html, flags=re.I)
     if not body_end:
@@ -686,24 +762,15 @@ def render_home(notes: list[dict], site: dict) -> str:
     for note in notes:
         if note["slug"] == featured["slug"]:
             continue
-        image = note["image"]
-        artwork = (
-            f'<img src="{escape(image["path"], quote=True)}" '
-            f'alt="{escape(image["alt"], quote=True)}" width="{image["width"]}" '
-            f'height="{image["height"]}" loading="lazy">'
-            if image
-            else '<span class="card-art-fallback" aria-hidden="true">IMN</span>'
-        )
         tags = "".join(f'<span>{escape(asset)}</span>' for asset in note["assets"][:3])
         entries.append(
             f"""<article class="entry" data-slug="{escape(note["slug"], quote=True)}" data-topic="{escape(note["topic"], quote=True)}" data-research-type="{escape(note["research_type"], quote=True)}" data-assets="{escape(' '.join(note["assets"]), quote=True)}">
       <a class="entry-link" href="{escape(note["slug"], quote=True)}/">
-        <div class="entry-art">{artwork}</div>
         <div class="entry-copy">
           <p class="entry-meta"><span>{escape(note["topic_label"])}</span><time datetime="{escape(note["date"], quote=True)}">{escape(pretty_date(note["date"]))}</time></p>
-        <h2>{escape(note["title"])}</h2>
+        <h3>{escape(note["title"])}</h3>
         <p class="dek">{escape(note["dek"])}</p>
-        <p class="asset-tags">{tags}</p>
+        <p class="asset-tags">{tags}<span class="entry-type">{escape(note["research_type_label"])}</span></p>
         </div>
       </a>
     </article>"""
@@ -740,15 +807,24 @@ def render_home(notes: list[dict], site: dict) -> str:
         "url": site["url"] + "/",
         "blogPost": posts,
     }
-    tagline = f'<p class="kicker">{escape(site["tagline"])}</p>' if site["tagline"] else ""
+    latest_entries = []
+    for index, note in enumerate(notes[:3], 1):
+        latest_entries.append(f"""<article class="latest-entry" data-latest-slug="{escape(note['slug'], quote=True)}">
+          <p class="entry-meta"><span class="latest-number" aria-hidden="true">0{index}</span><time datetime="{note['date']}">{pretty_date(note['date'])}</time></p>
+          <h3><a href="{escape(note['slug'], quote=True)}/">{escape(note['title'])}</a></h3>
+          <p class="dek">{escape(note['dek'])}</p>
+          <p class="section-label">{escape(note['research_type_label'])}</p>
+        </article>""")
     main = f"""<header class="mast">
     <div class="wrap">
       <div class="topline">
-        {tagline}
-        <nav class="tools" aria-label="Publication links"><a href="#notes">Research archive</a><a href="feed.xml">RSS</a></nav>
+        <a class="publication-mark" href="./">IMN <span>Independent research journal</span></a>
+        <nav class="tools" aria-label="Publication links"><a href="./#latest">Latest</a><a href="#notes">Archive</a><a href="#methodology">Methodology</a></nav>
       </div>
+      <p class="kicker">{escape(site["tagline"] or "Independent digital-asset intelligence")}</p>
       <h1>{escape(site["title"])}</h1>
       <p class="lede">{escape(site["description"])}</p>
+      <div class="mast-actions"><a class="primary-link" href="#notes">Explore investigations <span class="cr-arrow" aria-hidden="true"></span></a><a href="#methodology">Our research approach <span class="cr-arrow" aria-hidden="true"></span></a></div>
       <nav class="topic-nav" aria-label="Browse by topic">{topic_links}</nav>
     </div>
   </header>
@@ -763,8 +839,12 @@ def render_home(notes: list[dict], site: dict) -> str:
         <p class="entry-meta"><time datetime="{escape(featured["date"], quote=True)}">{escape(pretty_date(featured["date"]))}</time><span>{escape(featured["research_type_label"])}</span></p>
       </div>
     </section>
+    <section class="latest wrap" id="latest" aria-labelledby="latest-title" data-latest-section>
+      <div class="section-heading"><div><p class="section-label">The current edition</p><h2 id="latest-title">Latest research</h2></div><a href="#notes">View the full archive <span class="cr-arrow" aria-hidden="true"></span></a></div>
+      <div class="latest-grid">{"".join(latest_entries)}</div>
+    </section>
     <section class="archive wrap" id="notes" aria-labelledby="archive-title">
-      <div class="archive-heading"><div><p class="section-label">Browse the archive</p><h2 id="archive-title">Research, with receipts.</h2></div><p class="count" data-result-count>{label}</p></div>
+      <div class="archive-heading"><div><p class="section-label">Browse the archive</p><h2 id="archive-title">The research archive</h2></div><p class="count" data-result-count>{label}</p></div>
       <form class="filters" role="search" aria-label="Search research" data-search-form>
         <label class="search-field"><span class="sr-only">Search by topic, asset ticker, or title</span><input type="search" name="q" placeholder="Search topics, tickers, or titles" autocomplete="off"></label>
         <label><span class="sr-only">Filter by topic</span><select name="topic"><option value="">All topics</option>{topics}</select></label>
@@ -777,12 +857,19 @@ def render_home(notes: list[dict], site: dict) -> str:
       </div>
       <p class="empty-state" data-empty-state hidden>No investigations match those filters. Try a broader search.</p>
     </section>
-    <section class="method wrap" aria-labelledby="method-title"><p class="section-label">How we work</p><h2 id="method-title">Evidence first. Conviction second.</h2><p>These independent market notes separate observable data from interpretation, flag uncertainty, and show what would change the thesis. A useful investigation can end with a trade idea, a failed setup, or no trade at all.</p></section>
+    <section class="method wrap" id="methodology" aria-labelledby="method-title">
+      <div class="method-intro"><p class="section-label">Methodology &amp; editorial standards</p><h2 id="method-title">Evidence first.<br>Conviction second.</h2><p>These independent market notes separate observable data from interpretation, flag uncertainty, and show what would change the thesis.</p></div>
+      <div class="method-principles">
+        <div><span aria-hidden="true">01</span><h3>Follow the evidence</h3><p>Read the linked sources, dated observations, and data notes alongside each investigation.</p></div>
+        <div><span aria-hidden="true">02</span><h3>Keep uncertainty visible</h3><p>Distinguish reported facts from interpretations, conditional scenarios, and questions that remain unresolved.</p></div>
+        <div><span aria-hidden="true">03</span><h3>Research before a trade</h3><p>A useful investigation can end with a trade idea, a failed setup, or no trade at all. Historical observations are not live market data.</p></div>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="wrap colophon">
-      <p>{escape(site["title"])}</p>
-      <div><a href="#notes">Browse the archive</a><a href="feed.xml">Subscribe via RSS</a></div>
+      <div class="footer-identity"><span class="footer-mark">IMN</span><p>{escape(site["title"])}<br><span>Independent digital-asset research. Read the evidence.</span></p></div>
+      <div><a href="#notes">Research archive</a><a href="#methodology">Methodology</a><a href="feed.xml">Subscribe via RSS</a><a href="#main-content">Back to top</a></div>
     </div>
   </footer>"""
     home = page_shell(

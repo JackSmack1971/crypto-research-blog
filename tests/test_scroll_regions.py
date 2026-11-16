@@ -91,6 +91,9 @@ class ScrollRegionsTest(unittest.TestCase):
                     count=1,
                 )
                 self.assertEqual(count, 1, f"expected one generated .{class_name} wrapper")
+                # The shared reading layer adds only section anchors. Their
+                # uniqueness and preservation are checked in test_editorial_design.
+                wrapper = re.sub(r'(<h2\b[^>]*?) id="cr-section-\d+(?:-section)*"(?=>)', r'\1', wrapper)
                 self.assertEqual(wrapper, body_inner(source))
 
 

@@ -24,6 +24,8 @@ export default defineConfig({
     timezoneId: "UTC",
     colorScheme: "light",
     launchOptions: {
+      // Use an already installed browser when managed environments block downloads.
+      executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
       args: [
         "--font-render-hinting=none",
         "--disable-font-subpixel-positioning",

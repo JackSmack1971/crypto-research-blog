@@ -3,6 +3,7 @@
   const grid = document.querySelector("[data-archive-grid]");
   const featured = document.querySelector("[data-featured-search]");
   const featureSlot = document.querySelector("[data-feature-slot]");
+  const latest = document.querySelector("[data-latest-section]");
   if (!(form instanceof HTMLFormElement) || !(grid instanceof HTMLElement)) return;
 
   const cards = [...grid.querySelectorAll(".entry")];
@@ -22,7 +23,7 @@
   researchType.value = params.get("research_type") || "";
 
   const records = [...cards, ...(featured instanceof HTMLElement ? [featured] : [])].map((card) => {
-    const title = card.querySelector("h2")?.textContent || "";
+    const title = card.querySelector("h2, h3")?.textContent || "";
     const dek = card.querySelector(".dek")?.textContent || "";
     return {
       card,
@@ -70,6 +71,7 @@
     const selectedTopic = topic.value;
     const selectedType = researchType.value;
     const filtering = query.length > 0 || Boolean(selectedTopic) || Boolean(selectedType);
+    if (latest instanceof HTMLElement) latest.hidden = filtering;
     const matches = records
       .map((record) => ({ record, rank: score(record, query) }))
       .filter(({ record, rank }) => rank >= 0 && (!selectedTopic || record.topic === selectedTopic) && (!selectedType || record.researchType === selectedType))

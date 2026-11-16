@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { expect, test, type Page } from "@playwright/test";
@@ -6,8 +7,9 @@ import AxeBuilder from "@axe-core/playwright";
 type Article = { slug: string; title: string; date: string; topic: string; assets: string[]; research_type: string };
 const articles = JSON.parse(readFileSync("content/articles.json", "utf8")) as Article[];
 const routes = ["/", ...articles.map((article) => `/${article.slug}/`), "/404.html"];
-const widths = [390, 768, 1440];
-const homepageWidths = [320, ...widths, 1024];
+const widths = [320, 390, 768, 1024, 1440];
+const homepageWidths = widths;
+const snapshotWidths = [390, 768, 1440];
 const visualTargets = [
   ["home", "/"],
   ["bitcoin-buying-imbalance", "/bitcoin-buying-imbalance/"],
@@ -237,7 +239,7 @@ test.describe("accessibility", () => {
       await page.setViewportSize({ width: 1440, height: 900 });
       await prepare(page, route);
       const results = await new AxeBuilder({ page })
-        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
         .analyze();
       const serious = results.violations.filter(
         (violation) => violation.impact === "critical" || violation.impact === "serious",
@@ -326,25 +328,25 @@ test.describe("related notes", () => {
 });
 
 test.describe("visual baseline", () => {
+  // Render a fixed edition through the real generator so future publications
+  // do not require repainting legacy design snapshots. Functional tests above
+  // still exercise the complete, current catalog.
+  const snapshotHome = execFileSync("python3", ["-c", `
+import build
+slugs = ${JSON.stringify([...homepageBaselineSlugs])}
+site = build.load_site()
+notes = [note for note in build.load_notes() if note["slug"] in slugs or note["slug"] == site["featured_slug"]]
+print(build.render_home(notes, site))
+`], { encoding: "utf8" });
   for (const [name, route] of visualTargets) {
-    for (const width of widths) {
+    for (const width of snapshotWidths) {
       test(`${name} @ ${width}`, async ({ page }) => {
+        if (name === "home") {
+          await page.route("http://127.0.0.1:4173/", (request) =>
+            request.fulfill({ body: snapshotHome, contentType: "text/html" }));
+        }
         await page.setViewportSize({ width, height: 900 });
         await prepare(page, route);
-        if (name === "home") {
-          // Keep homepage paint baselines focused on the approved article set.
-          // New notes are independently checked for homepage visibility, overflow, and accessibility.
-          await page.evaluate((slugs) => {
-            for (const entry of document.querySelectorAll<HTMLElement>(".entry[data-slug]")) {
-              const slug = entry.dataset.slug;
-              if (!slug || !slugs.includes(slug)) entry.remove();
-            }
-            const count = document.querySelector(".count");
-            if (count) count.textContent = "9 investigations";
-            const status = document.querySelector("[data-search-status]");
-            if (status) status.textContent = "9 investigations";
-          }, [...homepageBaselineSlugs]);
-        }
         await expect(page).toHaveScreenshot(`${name}-${width}.png`, {
           fullPage: true,
           timeout: 30_000,
@@ -394,3 +396,62 @@ for (const route of ["/", "/404.html"]) {
     expect(await page.evaluate(() => document.activeElement?.id)).toBe("main-content");
   });
 }
+
+
+test.describe("editorial hierarchy", () => {
+  test("latest edition is chronological and independent of the pinned feature", async ({ page }) => {
+    await prepare(page, "/");
+    await expect(page.locator("[data-latest-slug]")).toHaveCount(3);
+    expect(await page.locator("[data-latest-slug]").evaluateAll((items) =>
+      items.map((item) => (item as HTMLElement).dataset.latestSlug))).toEqual(articles.slice(0, 3).map((article) => article.slug));
+    await page.getByRole("searchbox").fill("DEEP");
+    await expect(page.locator("#latest")).toBeHidden();
+    await page.getByRole("link", { name: "Latest", exact: true }).click();
+    await expect(page.locator("#latest")).toBeVisible();
+    await expect(page.getByRole("searchbox")).toHaveValue("");
+  });
+
+  test("URL filters restore matching results and clear without losing unrelated parameters", async ({ page }) => {
+    await prepare(page, "/?q=AERO&topic=tokenomics&ref=reader#notes");
+    await expect(page.getByRole("searchbox")).toHaveValue("AERO");
+    await expect(page.getByLabel("Filter by topic")).toHaveValue("tokenomics");
+    await expect(page.locator('.entry[data-slug="aero-at-0-68"]')).toBeVisible();
+    await page.getByRole("button", { name: "Clear", exact: true }).click();
+    await expect(page.locator(".entry:visible")).toHaveCount(articles.length - 1);
+    await expect(page).toHaveURL(/\?ref=reader#notes$/);
+    await expect(page.locator("#latest")).toBeVisible();
+  });
+
+  test("section guide works by keyboard, uses actual headings, and fits mobile", async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 900 });
+    for (const article of articles) {
+      await prepare(page, `/${article.slug}/`);
+      const summary = page.locator("#cr-sitebar summary");
+      await summary.focus();
+      await page.keyboard.press("Enter");
+      await expect(page.locator("#cr-sitebar details")).toHaveAttribute("open", "");
+      const links = page.locator("#cr-sitebar ol a");
+      expect(await links.count()).toBeGreaterThan(0);
+      for (const link of await links.all()) {
+        const target = (await link.getAttribute("href"))!.slice(1);
+        expect(await page.evaluate((id) => document.getElementById(id)?.tagName, target)).toBe("H2");
+      }
+      expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), article.slug).toBeLessThanOrEqual(1);
+      const href = await links.last().getAttribute("href");
+      await links.last().click();
+      expect(new URL(page.url()).hash).toBe(href);
+    }
+  });
+
+  for (const width of widths) {
+    test(`archive controls have comfortable touch targets @ ${width}`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await prepare(page, "/");
+      for (const control of await page.locator(".filters input, .filters select, .filters button").all()) {
+        const box = await control.boundingBox();
+        expect(box!.height).toBeGreaterThanOrEqual(44);
+        expect(box!.width).toBeGreaterThanOrEqual(44);
+      }
+    });
+  }
+});

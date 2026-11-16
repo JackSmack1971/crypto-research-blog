@@ -104,3 +104,34 @@ No paid host, database, or package install is required. The generator is [`build
 ## Netlify
 
 The repository includes [`netlify.toml`](netlify.toml), which runs `python3 build.py` followed by the Python content and structure suite, and publishes `dist/` only when both succeed. Netlify's build command and publish directory should match those values. These checks compare article content and metadata with the reviewed fixtures; Chromium remains outside publication CI. Deploy from the repository root with `main` as the production branch; do not publish the repository root, which has no generated `index.html`.
+
+## Shared editorial presentation
+
+`assets/design-system.css` owns publication tokens, navigation, homepage layout,
+reading typography, evidence callouts, citations, and related-note framing.
+The homepage separates the editorial feature selected by `featured_slug` from
+three chronological latest investigations. The complete archive stays in the
+initial HTML; search progressively enhances those links and supports shareable
+query parameters. A text-led archive avoids requiring artwork for every note.
+
+The generator adds a `cr-article` body class and a collapsible section guide based
+on each essay's existing H2 headings. It preserves existing anchor IDs and adds
+collision-free IDs only where needed. Article sources, tables, SVGs, images,
+research claims, and source links remain authoritative; the shared reading layer
+must not restyle chart series or invent evidence summaries. Related-note ranking
+is unchanged. New editorial components should use shared styles rather than
+append duplicate homepage overrides.
+
+For an approved design review, the optional browser suite checks all routes at
+320, 390, 768, 1024, and 1440px, plus archive interactions, keyboard navigation,
+WCAG 2.2 AA axe rules, and section-guide links. Its homepage screenshots render a
+fixed historical edition through the real generator so new publications do not
+require updating legacy design baselines. Functional checks use the full catalog.
+When Chromium is already installed, use it without downloading another copy:
+
+```bash
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:browser
+```
+
+Leave this variable unset to use Playwright's managed browser. Browser results
+remain local design evidence and do not alter the Python publication gates.
