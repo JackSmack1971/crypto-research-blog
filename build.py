@@ -655,6 +655,31 @@ def add_scroll_region_accessibility(slug: str, html: str) -> str:
     return html[: match.start()] + accessible_tag + html[match.end() :]
 
 
+ROBOTS_CONTENT = "index,follow,max-image-preview:large"
+ROBOTS_META = f'<meta name="robots" content="{ROBOTS_CONTENT}">'
+
+
+def normalize_robots_meta(html: str, slug: str) -> str:
+    """Emit one consistent indexable robots meta per article.
+
+    Source documents are never edited: any author-supplied robots meta is
+    replaced in the generated output. A source asking for noindex or nofollow
+    is a deliberate editorial choice and fails the build rather than being
+    silently overridden.
+    """
+    head_end = re.search(r"</head>", html, flags=re.I)
+    if not head_end:
+        die(f"{slug} is missing </head>")
+    head, rest = html[: head_end.start()], html[head_end.start() :]
+    pattern = r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>'
+    for tag in re.findall(pattern, head, flags=re.I):
+        content = re.search(r'content=["\']([^"\']*)["\']', tag, flags=re.I)
+        if content and re.search(r"no(index|follow)", content.group(1), flags=re.I):
+            die(f"{slug} source robots meta restricts indexing; resolve editorially")
+    head = re.sub(pattern, "", head, flags=re.I)
+    return head + ROBOTS_META + rest
+
+
 def render_article(
     note: dict, site: dict, notes: list[dict] | None = None
 ) -> str:
@@ -671,6 +696,7 @@ def render_article(
         count=1,
         flags=re.I,
     )
+    html = normalize_robots_meta(html, note["slug"])
     html = augment_article_schema(html, note, site)
     html = add_scroll_region_accessibility(note["slug"], html)
     extra = article_extra_head(dict(note, html=html), site)
@@ -714,6 +740,7 @@ def page_shell(
     main: str,
     structured_data: dict | None = None,
     asset_base: str = "",
+    indexable: bool = True,
 ) -> str:
     if structured_data is None:
         structured_data = {
@@ -723,6 +750,11 @@ def page_shell(
             "description": description,
             "url": canonical,
         }
+    head_directives = (
+        f'<link rel="canonical" href="{escape(canonical, quote=True)}">'
+        if indexable
+        else '<meta name="robots" content="noindex">'
+    )
     return f"""<!DOCTYPE html>
 <html lang="{escape(site["language"], quote=True)}">
 <head>
@@ -732,7 +764,7 @@ def page_shell(
   <meta name="theme-color" content="#172420">
   <title>{escape(document_title)}</title>
   <meta name="description" content="{escape(description, quote=True)}">
-  <link rel="canonical" href="{escape(canonical, quote=True)}">
+  {head_directives}
   <link rel="icon" href="{escape(asset_base, quote=True)}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{escape(asset_base, quote=True)}design-system.css">
   <link rel="alternate" type="application/rss+xml" title="{escape(site["title"], quote=True)}" href="{escape(asset_base, quote=True)}feed.xml">
@@ -898,6 +930,7 @@ def render_404(site: dict) -> str:
         canonical=site["url"] + "/404.html",
         main=main,
         asset_base=site["url"] + "/",
+        indexable=False,
     )
 
 
@@ -915,7 +948,7 @@ def render_feed(notes: list[dict], site: dict) -> str:
                     "    <item>",
                     f"      <title>{xml_escape(note['title'])}</title>",
                     f"      <link>{xml_escape(link)}</link>",
-                    f'      <guid isPermaLink="true">{xml_escape(guid)}</guid>',
+                    f'      <guid isPermaLink="false">{xml_escape(guid)}</guid>',
                     f"      <pubDate>{format_datetime(published)}</pubDate>",
                     f"      <description><![CDATA[{note['dek'].replace(']]>', ']]]]><![CDATA[>')}]]></description>",
                     "    </item>",
