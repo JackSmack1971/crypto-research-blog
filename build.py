@@ -714,6 +714,7 @@ def page_shell(
     main: str,
     structured_data: dict | None = None,
     asset_base: str = "",
+    indexable: bool = True,
 ) -> str:
     if structured_data is None:
         structured_data = {
@@ -723,6 +724,11 @@ def page_shell(
             "description": description,
             "url": canonical,
         }
+    head_directives = (
+        f'<link rel="canonical" href="{escape(canonical, quote=True)}">'
+        if indexable
+        else '<meta name="robots" content="noindex">'
+    )
     return f"""<!DOCTYPE html>
 <html lang="{escape(site["language"], quote=True)}">
 <head>
@@ -732,7 +738,7 @@ def page_shell(
   <meta name="theme-color" content="#172420">
   <title>{escape(document_title)}</title>
   <meta name="description" content="{escape(description, quote=True)}">
-  <link rel="canonical" href="{escape(canonical, quote=True)}">
+  {head_directives}
   <link rel="icon" href="{escape(asset_base, quote=True)}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{escape(asset_base, quote=True)}design-system.css">
   <link rel="alternate" type="application/rss+xml" title="{escape(site["title"], quote=True)}" href="{escape(asset_base, quote=True)}feed.xml">
@@ -898,6 +904,7 @@ def render_404(site: dict) -> str:
         canonical=site["url"] + "/404.html",
         main=main,
         asset_base=site["url"] + "/",
+        indexable=False,
     )
 
 
