@@ -326,6 +326,13 @@ def load_notes() -> list[dict]:
         html = source.read_text(encoding="utf-8")
         if not re.search(r"<body\b", html, flags=re.I):
             die(f"{slug} is missing <body>")
+        # Optional real edit date. Empty means "never edited since publication";
+        # never fill it from the build date.
+        updated = str(entry.get("updated") or "").strip()
+        if updated:
+            pretty_date(updated)
+            if updated < date:
+                die(f"{slug} updated date is earlier than its publication date")
         title = str(entry.get("title") or "").strip() or document_title(html)
         descriptions = meta_values(html, "description")
         dek = str(entry.get("dek") or "").strip() or (descriptions[0] if descriptions else "")
@@ -339,6 +346,7 @@ def load_notes() -> list[dict]:
                 "slug": slug,
                 "source": source,
                 "date": date,
+                "updated": updated,
                 "title": title,
                 "dek": dek,
                 "description": descriptions[0] if descriptions else dek,
@@ -411,6 +419,7 @@ def article_posting(note: dict, site: dict) -> dict:
         "headline": title,
         "description": description,
         "datePublished": note["date"],
+        "dateModified": note["updated"] or note["date"],
         "mainEntityOfPage": url,
         "url": url,
         "author": {"@type": "Person" if note["author"] else "Organization", "name": author},
@@ -436,6 +445,8 @@ def augment_article_schema(html: str, note: dict, site: dict) -> str:
         # Registered artwork is the authoritative social image.
         if note["image"]:
             posts[0]["image"] = defaults["image"]
+        if note["updated"]:
+            posts[0]["dateModified"] = note["updated"]
         return json_ld(data)
 
     # Only head scripts are publication metadata; preserve article scripts verbatim.
@@ -557,6 +568,11 @@ def article_bar(site: dict, note: dict, outline: list[tuple[str, str]]) -> str:
         '<details class="cr-outline"><summary>In this investigation</summary>'
         f'<ol>{links}</ol></details>' if links else ""
     )
+    updated_line = (
+        f'<time datetime="{note["updated"]}">Updated {pretty_date(note["updated"])}</time>'
+        if note.get("updated")
+        else ""
+    )
     return (
         '<nav id="cr-sitebar" aria-label="Site">'
         '<div class="cr-sitebar-inner">'
@@ -566,6 +582,7 @@ def article_bar(site: dict, note: dict, outline: list[tuple[str, str]]) -> str:
         f'<span>{escape(note["topic_label"])}</span>'
         f'<span>{escape(note["research_type_label"])}</span>'
         f'<time datetime="{note["date"]}">{pretty_date(note["date"])}</time>'
+        f'{updated_line}'
         f'{guide}</div></nav>'
     )
 
@@ -974,9 +991,12 @@ def render_feed(notes: list[dict], site: dict) -> str:
 
 
 def render_sitemap(notes: list[dict], site: dict) -> str:
-    newest = notes[0]["date"]
+    def lastmod(note: dict) -> str:
+        return note["updated"] or note["date"]
+
+    newest = max(lastmod(note) for note in notes)
     urls = [(site["url"] + "/", newest)]
-    urls.extend((f"{site['url']}/{note['slug']}/", note["date"]) for note in notes)
+    urls.extend((f"{site['url']}/{note['slug']}/", lastmod(note)) for note in notes)
     body = "\n".join(
         f"""  <url>
     <loc>{xml_escape(loc)}</loc>

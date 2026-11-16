@@ -32,6 +32,8 @@ Edit `title` in [`site.json`](site.json). The home page, article bar, feed, and 
 
 `topic`, `assets`, and `research_type` are required. They power the archive filters and generated `search-index.json`. Topics are `bitcoin`, `market-structure`, `liquidity`, `tokenomics`, `protocol-research`, and `risk-verification`. Research types are `market-snapshot`, `investigative-analysis`, and `token-due-diligence`. Use uppercase ticker symbols for `assets`; the build rejects missing or unapproved values.
 
+`updated` is optional (`YYYY-MM-DD`, not earlier than `date`). Set it only when the article is genuinely revised. It feeds the sitemap `lastmod`, JSON-LD `dateModified` and a visible "Updated" line. When absent, `lastmod` and `dateModified` fall back to the publication date; never use the build date.
+
 3. Refresh the committed text and metadata baselines with one command:
 
 ```bash
