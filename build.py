@@ -238,6 +238,7 @@ def load_site() -> dict:
     site["description"] = str(site.get("description") or "").strip()
     if not site["description"]:
         die("site.json description is empty")
+    site["home_title"] = str(site.get("home_title") or title).strip() or title
     site["language"] = str(site.get("language") or "en").strip() or "en"
     site["url"] = site_url(site)
     guid_origin = str(site.get("rss_guid_origin") or site["url"]).strip().rstrip("/")
@@ -325,6 +326,13 @@ def load_notes() -> list[dict]:
         html = source.read_text(encoding="utf-8")
         if not re.search(r"<body\b", html, flags=re.I):
             die(f"{slug} is missing <body>")
+        # Optional real edit date. Empty means "never edited since publication";
+        # never fill it from the build date.
+        updated = str(entry.get("updated") or "").strip()
+        if updated:
+            pretty_date(updated)
+            if updated < date:
+                die(f"{slug} updated date is earlier than its publication date")
         title = str(entry.get("title") or "").strip() or document_title(html)
         descriptions = meta_values(html, "description")
         dek = str(entry.get("dek") or "").strip() or (descriptions[0] if descriptions else "")
@@ -338,6 +346,7 @@ def load_notes() -> list[dict]:
                 "slug": slug,
                 "source": source,
                 "date": date,
+                "updated": updated,
                 "title": title,
                 "dek": dek,
                 "description": descriptions[0] if descriptions else dek,
@@ -410,6 +419,7 @@ def article_posting(note: dict, site: dict) -> dict:
         "headline": title,
         "description": description,
         "datePublished": note["date"],
+        "dateModified": note["updated"] or note["date"],
         "mainEntityOfPage": url,
         "url": url,
         "author": {"@type": "Person" if note["author"] else "Organization", "name": author},
@@ -435,6 +445,8 @@ def augment_article_schema(html: str, note: dict, site: dict) -> str:
         # Registered artwork is the authoritative social image.
         if note["image"]:
             posts[0]["image"] = defaults["image"]
+        if note["updated"]:
+            posts[0]["dateModified"] = note["updated"]
         return json_ld(data)
 
     # Only head scripts are publication metadata; preserve article scripts verbatim.
@@ -556,6 +568,11 @@ def article_bar(site: dict, note: dict, outline: list[tuple[str, str]]) -> str:
         '<details class="cr-outline"><summary>In this investigation</summary>'
         f'<ol>{links}</ol></details>' if links else ""
     )
+    updated_line = (
+        f'<time datetime="{note["updated"]}">Updated {pretty_date(note["updated"])}</time>'
+        if note.get("updated")
+        else ""
+    )
     return (
         '<nav id="cr-sitebar" aria-label="Site">'
         '<div class="cr-sitebar-inner">'
@@ -565,36 +582,108 @@ def article_bar(site: dict, note: dict, outline: list[tuple[str, str]]) -> str:
         f'<span>{escape(note["topic_label"])}</span>'
         f'<span>{escape(note["research_type_label"])}</span>'
         f'<time datetime="{note["date"]}">{pretty_date(note["date"])}</time>'
+        f'{updated_line}'
         f'{guide}</div></nav>'
     )
 
 
-def rank_related_notes(note: dict, notes: list[dict]) -> dict:
-    ranked = []
-    for index, candidate in enumerate(notes):
-        if candidate["slug"] == note["slug"]:
-            continue
-        shared_assets = len(set(note["assets"]) & set(candidate["assets"]))
-        score = (
-            2 * shared_assets
-            + (1 if candidate["topic"] == note["topic"] else 0)
-            + (1 if candidate["research_type"] == note["research_type"] else 0)
-        )
-        candidate_date = candidate["date"]
-        ranked.append((score, candidate_date, index, candidate))
+RELATED_LINKS = 3
+# Twice the average inbound count (RELATED_LINKS). Stops one article becoming a
+# hub for everything without forcing irrelevant links.
+RELATED_MAX_INBOUND = 2 * RELATED_LINKS
 
-    if not ranked:
-        return {"variant": "none", "notes": []}
 
-    ranked.sort(
-        key=lambda item: (
-            -item[0],
-            -date.fromisoformat(item[1]).toordinal(),
-            item[2],
-        )
+def _relatedness(note: dict, candidate: dict) -> int:
+    shared_assets = len(set(note["assets"]) & set(candidate["assets"]))
+    return (
+        2 * shared_assets
+        + (1 if candidate["topic"] == note["topic"] else 0)
+        + (1 if candidate["research_type"] == note["research_type"] else 0)
     )
-    variant = "related" if ranked[0][0] > 0 else "latest"
-    return {"variant": variant, "notes": [item[3] for item in ranked[:3]]}
+
+
+def _relevance_key(note: dict, candidate: dict, cidx: int):
+    """Display order and base preference: relevance, newest, then catalog order."""
+    return (
+        -_relatedness(note, candidate),
+        -date.fromisoformat(candidate["date"]).toordinal(),
+        cidx,
+    )
+
+
+def balanced_related_indexes(notes: list[dict]) -> list[list[int]]:
+    """Choose related notes for every article, deterministically.
+
+    1. In catalog order, each article takes its best-ranked candidates, where
+       equal relevance prefers the candidate with fewer inbound links so far,
+       and candidates already at RELATED_MAX_INBOUND are skipped.
+    2. Any article still without an inbound link replaces the weakest slot of
+       its most relevant source whose current target keeps at least one other
+       inbound link.
+    A note is never linked to another entry with its own slug.
+    Returns, per input index, the chosen candidate indexes sorted for display.
+    """
+    n = len(notes)
+    slugs = [note["slug"] for note in notes]
+    want = min(RELATED_LINKS, len({*slugs}) - 1)
+    inbound = [0] * n
+    chosen: list[list[int]] = [[] for _ in range(n)]
+    for i, note in enumerate(notes):
+        order = sorted(
+            (c for c in range(n) if slugs[c] != slugs[i]),
+            key=lambda c: (-_relatedness(note, notes[c]), inbound[c])
+            + _relevance_key(note, notes[c], c)[1:],
+        )
+        under = [c for c in order if inbound[c] < RELATED_MAX_INBOUND]
+        picks = under[:want]
+        if len(picks) < want:  # cap too tight for a tiny catalog: fill anyway
+            picks += [c for c in order if c not in picks][: want - len(picks)]
+        chosen[i] = picks
+        for c in picks:
+            inbound[c] += 1
+    for orphan in range(n):
+        if inbound[orphan] or want == 0:
+            continue
+        sources = sorted(
+            (s for s in range(n) if slugs[s] != slugs[orphan]),
+            key=lambda s: _relevance_key(notes[s], notes[orphan], orphan),
+        )
+        for s in sources:
+            donors = [c for c in chosen[s] if inbound[c] > 1]
+            if not donors:
+                continue
+            drop = min(
+                donors,
+                key=lambda c: (
+                    _relatedness(notes[s], notes[c]),
+                    -inbound[c],
+                    -chosen[s].index(c),
+                ),
+            )
+            chosen[s][chosen[s].index(drop)] = orphan
+            inbound[drop] -= 1
+            inbound[orphan] += 1
+            break
+    return [
+        sorted(chosen[i], key=lambda c: _relevance_key(notes[i], notes[c], c))
+        for i in range(n)
+    ]
+
+
+def rank_related_notes(note: dict, notes: list[dict]) -> dict:
+    if not any(c["slug"] != note["slug"] for c in notes):
+        return {"variant": "none", "notes": []}
+    position = next((i for i, c in enumerate(notes) if c is note), None)
+    if position is None:
+        position = next((i for i, c in enumerate(notes) if c["slug"] == note["slug"]), None)
+    if position is None:
+        notes = notes + [note]
+        position = len(notes) - 1
+    picks = balanced_related_indexes(notes)[position]
+    selected = [notes[c] for c in picks]
+    top = max(_relatedness(note, c) for c in selected) if selected else 0
+    variant = "related" if top > 0 else "latest"
+    return {"variant": variant, "notes": selected}
 
 
 def render_related_notes(note: dict, notes: list[dict]) -> str:
@@ -655,6 +744,31 @@ def add_scroll_region_accessibility(slug: str, html: str) -> str:
     return html[: match.start()] + accessible_tag + html[match.end() :]
 
 
+ROBOTS_CONTENT = "index,follow,max-image-preview:large"
+ROBOTS_META = f'<meta name="robots" content="{ROBOTS_CONTENT}">'
+
+
+def normalize_robots_meta(html: str, slug: str) -> str:
+    """Emit one consistent indexable robots meta per article.
+
+    Source documents are never edited: any author-supplied robots meta is
+    replaced in the generated output. A source asking for noindex or nofollow
+    is a deliberate editorial choice and fails the build rather than being
+    silently overridden.
+    """
+    head_end = re.search(r"</head>", html, flags=re.I)
+    if not head_end:
+        die(f"{slug} is missing </head>")
+    head, rest = html[: head_end.start()], html[head_end.start() :]
+    pattern = r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*>'
+    for tag in re.findall(pattern, head, flags=re.I):
+        content = re.search(r'content=["\']([^"\']*)["\']', tag, flags=re.I)
+        if content and re.search(r"no(index|follow)", content.group(1), flags=re.I):
+            die(f"{slug} source robots meta restricts indexing; resolve editorially")
+    head = re.sub(pattern, "", head, flags=re.I)
+    return head + ROBOTS_META + rest
+
+
 def render_article(
     note: dict, site: dict, notes: list[dict] | None = None
 ) -> str:
@@ -671,6 +785,7 @@ def render_article(
         count=1,
         flags=re.I,
     )
+    html = normalize_robots_meta(html, note["slug"])
     html = augment_article_schema(html, note, site)
     html = add_scroll_region_accessibility(note["slug"], html)
     extra = article_extra_head(dict(note, html=html), site)
@@ -714,6 +829,7 @@ def page_shell(
     main: str,
     structured_data: dict | None = None,
     asset_base: str = "",
+    indexable: bool = True,
 ) -> str:
     if structured_data is None:
         structured_data = {
@@ -723,6 +839,11 @@ def page_shell(
             "description": description,
             "url": canonical,
         }
+    head_directives = (
+        f'<link rel="canonical" href="{escape(canonical, quote=True)}">'
+        if indexable
+        else '<meta name="robots" content="noindex">'
+    )
     return f"""<!DOCTYPE html>
 <html lang="{escape(site["language"], quote=True)}">
 <head>
@@ -732,7 +853,7 @@ def page_shell(
   <meta name="theme-color" content="#172420">
   <title>{escape(document_title)}</title>
   <meta name="description" content="{escape(description, quote=True)}">
-  <link rel="canonical" href="{escape(canonical, quote=True)}">
+  {head_directives}
   <link rel="icon" href="{escape(asset_base, quote=True)}favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{escape(asset_base, quote=True)}design-system.css">
   <link rel="alternate" type="application/rss+xml" title="{escape(site["title"], quote=True)}" href="{escape(asset_base, quote=True)}feed.xml">
@@ -875,7 +996,7 @@ def render_home(notes: list[dict], site: dict) -> str:
   </footer>"""
     home = page_shell(
         site,
-        document_title=site["title"],
+        document_title=site["home_title"],
         description=site["description"],
         canonical=site["url"] + "/",
         main=main,
@@ -1004,6 +1125,7 @@ def render_404(site: dict) -> str:
         canonical=site["url"] + "/404.html",
         main=main,
         asset_base=site["url"] + "/",
+        indexable=False,
     )
 
 
@@ -1021,7 +1143,7 @@ def render_feed(notes: list[dict], site: dict) -> str:
                     "    <item>",
                     f"      <title>{xml_escape(note['title'])}</title>",
                     f"      <link>{xml_escape(link)}</link>",
-                    f'      <guid isPermaLink="true">{xml_escape(guid)}</guid>',
+                    f'      <guid isPermaLink="false">{xml_escape(guid)}</guid>',
                     f"      <pubDate>{format_datetime(published)}</pubDate>",
                     f"      <description><![CDATA[{note['dek'].replace(']]>', ']]]]><![CDATA[>')}]]></description>",
                     "    </item>",
@@ -1046,14 +1168,17 @@ def render_feed(notes: list[dict], site: dict) -> str:
 
 
 def render_sitemap(notes: list[dict], site: dict) -> str:
-    newest = notes[0]["date"]
+    def lastmod(note: dict) -> str:
+        return note["updated"] or note["date"]
+
+    newest = max(lastmod(note) for note in notes)
     urls = [(site["url"] + "/", newest)]
     urls.extend(
         (f"{site['url']}/topics/{key}/", topic_notes(key, notes)[0]["date"])
         for key in TOPICS
         if topic_notes(key, notes)
     )
-    urls.extend((f"{site['url']}/{note['slug']}/", note["date"]) for note in notes)
+    urls.extend((f"{site['url']}/{note['slug']}/", lastmod(note)) for note in notes)
     body = "\n".join(
         f"""  <url>
     <loc>{xml_escape(loc)}</loc>
@@ -1245,6 +1370,9 @@ def main() -> None:
         target = DIST / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / relative, target)
+    inline_src = ROOT / "assets" / "inline"
+    if inline_src.is_dir():
+        shutil.copytree(inline_src, DIST / "inline")
     (DIST / ".nojekyll").write_text("", encoding="utf-8")
     for note in notes:
         out = DIST / note["slug"] / "index.html"

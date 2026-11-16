@@ -84,3 +84,17 @@ class MissingRoutesTest(unittest.TestCase):
             html = build.render_404(dict(build.load_site(), url=origin))
             for path in ('', 'design-system.css', 'favicon.svg', 'feed.xml'):
                 self.assertIn(origin + '/' + path, Links(html).hrefs)
+
+
+class Missing404IndexingTests(unittest.TestCase):
+    def test_404_is_noindex_and_has_no_canonical(self):
+        html = build.render_404(build.load_site())
+        self.assertIn('<meta name="robots" content="noindex">', html)
+        self.assertNotIn('rel="canonical"', html)
+
+    def test_indexable_pages_keep_canonical(self):
+        site = build.load_site()
+        notes = build.load_notes()
+        home = build.render_home(notes, site)
+        self.assertIn('rel="canonical"', home)
+        self.assertNotIn('content="noindex"', home)

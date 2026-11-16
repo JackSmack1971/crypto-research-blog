@@ -29,3 +29,11 @@ class RssStabilityTest(unittest.TestCase):
         channel = ET.fromstring(build.render_feed(notes, site)).find('channel')
         self.assertEqual([item.findtext('link') for item in channel.findall('item')],
                          [f"{site['url']}/{note['slug']}/" for note in notes])
+
+
+class RssGuidPermalinkTests(unittest.TestCase):
+    def test_guids_are_not_declared_permalinks(self):
+        notes = build.load_notes()
+        feed = build.render_feed(notes, build.load_site())
+        self.assertEqual(feed.count('<guid isPermaLink="false">'), len(notes))
+        self.assertNotIn('isPermaLink="true"', feed)

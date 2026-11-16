@@ -358,6 +358,60 @@ if __name__ == "__main__":
     write_metadata()
 
 
+class RobotsMetaConsistencyTests(unittest.TestCase):
+    def test_every_article_has_one_identical_robots_meta(self):
+        import re
+        import build
+        site = build.load_site()
+        notes = build.load_notes()
+        for note in notes:
+            html = build.render_article(note, site, notes)
+            tags = re.findall(r'<meta\s+name="robots"[^>]*>', html, flags=re.I)
+            self.assertEqual(tags, [build.ROBOTS_META], note["slug"])
+
+
+class CanonicalOriginTests(unittest.TestCase):
+    def test_every_built_canonical_starts_with_site_url(self):
+        import re
+        import build
+        site = build.load_site()
+        notes = build.load_notes()
+        pages = {"home": build.render_home(notes, site)}
+        for note in notes:
+            pages[note["slug"]] = build.render_article(note, site, notes)
+        prefix = site["url"] + "/"
+        for name, html in pages.items():
+            canon = re.findall(r'<link[^>]*rel="canonical"[^>]*href="([^"]+)"', html)
+            self.assertEqual(len(canon), 1, name)
+            self.assertTrue(canon[0].startswith(prefix), (name, canon[0]))
+
+
+class NetlifyHeadersTests(unittest.TestCase):
+    def test_security_headers_configured_for_all_paths(self):
+        import tomllib
+        from pathlib import Path
+        config = tomllib.loads((Path(__file__).resolve().parents[1] / "netlify.toml").read_text())
+        rules = [h for h in config.get("headers", []) if h["for"] == "/*"]
+        self.assertEqual(len(rules), 1)
+        values = rules[0]["values"]
+        self.assertEqual(values["X-Content-Type-Options"], "nosniff")
+        self.assertIn("Referrer-Policy", values)
+        self.assertEqual(values["Content-Security-Policy"], "frame-ancestors 'none'")
+
+
+class HomeTitleTests(unittest.TestCase):
+    def test_home_title_is_descriptive_not_brand_only(self):
+        import re
+        import build
+        site = build.load_site()
+        html = build.render_home(build.load_notes(), site)
+        import html as htmllib
+        title = htmllib.unescape(re.search(r"<title>(.*?)</title>", html, flags=re.S).group(1))
+        self.assertTrue(title.startswith(site["title"]))
+        self.assertNotEqual(title, site["title"])
+        self.assertLessEqual(len(title), 70)
+
+
 class TopicHubTests(unittest.TestCase):
     def setUp(self):
         import build
