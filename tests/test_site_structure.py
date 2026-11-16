@@ -397,3 +397,16 @@ class NetlifyHeadersTests(unittest.TestCase):
         self.assertEqual(values["X-Content-Type-Options"], "nosniff")
         self.assertIn("Referrer-Policy", values)
         self.assertEqual(values["Content-Security-Policy"], "frame-ancestors 'none'")
+
+
+class HomeTitleTests(unittest.TestCase):
+    def test_home_title_is_descriptive_not_brand_only(self):
+        import re
+        import build
+        site = build.load_site()
+        html = build.render_home(build.load_notes(), site)
+        import html as htmllib
+        title = htmllib.unescape(re.search(r"<title>(.*?)</title>", html, flags=re.S).group(1))
+        self.assertTrue(title.startswith(site["title"]))
+        self.assertNotEqual(title, site["title"])
+        self.assertLessEqual(len(title), 70)
