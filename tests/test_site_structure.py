@@ -356,3 +356,16 @@ class SiteStructureTest(unittest.TestCase):
 
 if __name__ == "__main__":
     write_metadata()
+
+
+class NetlifyHeadersTests(unittest.TestCase):
+    def test_security_headers_configured_for_all_paths(self):
+        import tomllib
+        from pathlib import Path
+        config = tomllib.loads((Path(__file__).resolve().parents[1] / "netlify.toml").read_text())
+        rules = [h for h in config.get("headers", []) if h["for"] == "/*"]
+        self.assertEqual(len(rules), 1)
+        values = rules[0]["values"]
+        self.assertEqual(values["X-Content-Type-Options"], "nosniff")
+        self.assertIn("Referrer-Policy", values)
+        self.assertEqual(values["Content-Security-Policy"], "frame-ancestors 'none'")
