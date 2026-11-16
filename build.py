@@ -1134,6 +1134,9 @@ def main() -> None:
         target = DIST / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / relative, target)
+    inline_src = ROOT / "assets" / "inline"
+    if inline_src.is_dir():
+        shutil.copytree(inline_src, DIST / "inline")
     (DIST / ".nojekyll").write_text("", encoding="utf-8")
     for note in notes:
         out = DIST / note["slug"] / "index.html"
