@@ -922,7 +922,7 @@ def render_feed(notes: list[dict], site: dict) -> str:
                     "    <item>",
                     f"      <title>{xml_escape(note['title'])}</title>",
                     f"      <link>{xml_escape(link)}</link>",
-                    f'      <guid isPermaLink="true">{xml_escape(guid)}</guid>',
+                    f'      <guid isPermaLink="false">{xml_escape(guid)}</guid>',
                     f"      <pubDate>{format_datetime(published)}</pubDate>",
                     f"      <description><![CDATA[{note['dek'].replace(']]>', ']]]]><![CDATA[>')}]]></description>",
                     "    </item>",
