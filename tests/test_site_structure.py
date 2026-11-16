@@ -356,3 +356,16 @@ class SiteStructureTest(unittest.TestCase):
 
 if __name__ == "__main__":
     write_metadata()
+
+
+class HomeTitleTests(unittest.TestCase):
+    def test_home_title_is_descriptive_not_brand_only(self):
+        import re
+        import build
+        site = build.load_site()
+        html = build.render_home(build.load_notes(), site)
+        import html as htmllib
+        title = htmllib.unescape(re.search(r"<title>(.*?)</title>", html, flags=re.S).group(1))
+        self.assertTrue(title.startswith(site["title"]))
+        self.assertNotEqual(title, site["title"])
+        self.assertLessEqual(len(title), 70)

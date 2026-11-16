@@ -238,6 +238,7 @@ def load_site() -> dict:
     site["description"] = str(site.get("description") or "").strip()
     if not site["description"]:
         die("site.json description is empty")
+    site["home_title"] = str(site.get("home_title") or title).strip() or title
     site["language"] = str(site.get("language") or "en").strip() or "en"
     site["url"] = site_url(site)
     guid_origin = str(site.get("rss_guid_origin") or site["url"]).strip().rstrip("/")
@@ -874,7 +875,7 @@ def render_home(notes: list[dict], site: dict) -> str:
   </footer>"""
     home = page_shell(
         site,
-        document_title=site["title"],
+        document_title=site["home_title"],
         description=site["description"],
         canonical=site["url"] + "/",
         main=main,
