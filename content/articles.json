@@ -1,5 +1,29 @@
 [
   {
+    "slug": "crypto-market-fear-beneath-the-surface",
+    "source": "crypto-market-fear-beneath-the-surface.html",
+    "date": "2026-11-16",
+    "title": "Crypto’s Fear Reading Is Extreme. The Market’s Weakness Runs Deeper.",
+    "dek": "A November 16 snapshot shows widespread losses, shrinking derivatives exposure and a Bitcoin market still below its trend. The case for a bottom remains incomplete.",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL",
+      "XRP",
+      "BNB",
+      "TRX",
+      "HYPE",
+      "ZEC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/crypto-market-fear-beneath-the-surface.jpg",
+    "image_alt": "Conceptual editorial artwork of fractured dark market layers divided by a copper fault, beside a restrained balance symbol; not a factual price chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "bitcoin-bottom-liquidation-reversal",
     "source": "bitcoin-bottom-liquidation-reversal.html",
     "date": "2026-11-14",

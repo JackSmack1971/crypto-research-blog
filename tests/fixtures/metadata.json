@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-market-fear-beneath-the-surface": {
+      "title": "Crypto’s Fear Reading Is Extreme. The Market’s Weakness Runs Deeper.",
+      "description": "A November 16, 2026 investigation of crypto market breadth, Bitcoin volatility, derivatives deleveraging and why extreme fear alone cannot confirm a bottom.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-market-fear-beneath-the-surface/",
+      "og:title": "Crypto’s Fear Reading Is Extreme. The Market’s Weakness Runs Deeper.",
+      "og:description": "A November 16, 2026 investigation of crypto market breadth, Bitcoin volatility, derivatives deleveraging and why extreme fear alone cannot confirm a bottom.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-market-fear-beneath-the-surface/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-bottom-liquidation-reversal": {
       "title": "Bitcoin’s $62,000 Reversal Was Real. A Bottom Is Still Unproven.",
       "description": "Bitcoin approached $62,000 in November 2026, then rebounded as liquidations flipped from longs to shorts. What ETF flows and venue-level open interest reveal about the unconfirmed bottom.",
@@ -442,6 +452,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Crypto’s Fear Reading Is Extreme. The Market’s Weakness Runs Deeper.",
+      "link": "https://independent-market-notes.netlify.app/crypto-market-fear-beneath-the-surface/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-market-fear-beneath-the-surface/",
+      "description": "A November 16 snapshot shows widespread losses, shrinking derivatives exposure and a Bitcoin market still below its trend. The case for a bottom remains incomplete."
+    },
     {
       "title": "Bitcoin’s $62,000 Reversal Was Real. A Bottom Is Still Unproven.",
       "link": "https://independent-market-notes.netlify.app/bitcoin-bottom-liquidation-reversal/",
