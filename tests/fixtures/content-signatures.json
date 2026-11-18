@@ -1,4 +1,1314 @@
 {
+  "zcash-momentum-single-trade-test": {
+    "text": "Independent Market Notes / InvestigationsMarket structure · Risk verificationZcash’s Momentum Test Turned on a Single TradeA November 18 screen of ten liquid crypto pairs found relative strength inside a broad selloff. A historical simulation exposed why none qualified for a trade.November 18, 2026 · Historical market investigation · All quotations are time-specific Three simulated Zcash trades turned a small, deliberately constrained allocation into a positive result. Remove the contribution of just one of them, and the profit becomes a loss. That is the most revealing detail in a November 18 investigation of ten relatively liquid cryptocurrency pairs: the strongest-looking candidate did not fail because it lacked a convincing price story. It failed because the story depended on an event that had not been shown to repeat. Zcash had gained 62.54% over 90 days while Bitcoin had lost 12.90%. Yet both were down sharply over the preceding month. Hyperliquid, another relative outperformer, offered a different economic narrative, tied to protocol fees and token supply. XRP had held up better than Bitcoin over the latest week, suggesting a possible reversal. There was more than enough here to generate a watchlist. There was not enough to turn it into a dependable strategy. My conclusion: the evidence favors further research on ZEC, not a trade. Relative strength inside a selloff is a legitimate observation; repeatable net profitability is a separate, considerably harder claim. Ten pairs, all down The daily spot evidence was unusually consistent. At the close of the 24-hour trading interval ending November 18 at 16:00 UTC, every one of the ten screened OKX USDT pairs had declined over both seven and 30 days. All ten were below their 20-, 50- and 100-day simple moving averages. A separate initial twelve-asset panel was also below its 20- and 50-day averages. That is broad weakness within the examined groups, not a census of the entire crypto market. Bitcoin’s turnover over the latest seven days was 54% higher than in the preceding thirty-day period, a sign of exceptional participation in a falling market—not proof that sellers had exhausted themselves. The investable-looking group was deliberately narrow. The discovery screen began with a partial review of CoinPaprika’s top 60, excluding dollar-linked and duplicate wrapped exposures, then looked for at least $1 billion in market capitalization, $25 million in reported global daily volume, ninety completed daily bars, median OKX quote turnover of 10 million USDT, a quoted spread no greater than ten basis points, and at least 100,000 USDT of displayed depth per side within fifty basis points of the midpoint. Ten pairs met the provisional thresholds. These criteria were exploratory and adjusted after initial observations; ten names in the larger screen were not fully qualified. Some major assets failed the specific venue-turnover test, not necessarily a test of liquidity elsewhere. 10/10Negative 30-day returns4/10Positive 90-day returns0Validated strategies OKX USDT spot: 109 completed daily bars per pair, August 1–November 17 opening dates, ending November 18, 2026 at 16:00 UTC. Simple returns; realized volatility annualized.PairClose (USDT)7 days30 days90 daysRV30BTC63,123.6−14.70%−22.96%−12.90%41.63%ETH1,768.48−14.80%−26.14%−23.96%58.42%XRP0.9767−8.96%−24.79%−22.57%55.48%ZEC928.11−5.60%−17.57%+62.54%119.55%HYPE65.888−10.18%−16.32%−10.05%84.23%PEPE0.0000037036−25.28%−10.00%+15.38%129.48%DOGE0.05874−14.93%−25.70%−26.78%59.44%SOL73.48−13.39%−29.44%−15.90%61.38%NEAR3.211−14.33%−34.58%+84.86%99.98%UNI5.104−21.67%−30.02%+37.95%92.22% A selloff with very different historiesNegative ← | → PositiveNEAR+84.86%ZEC+62.54%UNI+37.95%PEPE+15.38%HYPE−10.05%BTC−12.90%SOL−15.90%XRP−22.57%ETH−23.96%DOGE−26.78%90-day simple price return, same OKX completed native-clock bars as the preceding table. Positive 90-day histories did not prevent recent losses. ZEC and HYPE were the only nonbenchmark candidates to outperform Bitcoin over all three measured horizons. XRP’s comparative advantage was shorter-lived; it outperformed BTC by 5.75 percentage points over seven days but trailed it over thirty and ninety. NEAR was more extreme: a 90-day gain of nearly 85% sat beside a 34.58% monthly loss. PEPE’s 30-day loss was the smallest of the group, but its seven-day decline exceeded 25%. The leader depends on the clock and the horizon. That last observation matters because a ranking can introduce its own distortion. A signed negative return divided by volatility becomes less negative as volatility rises. With identical −20% returns, the quotient is −0.50 at 40% volatility but −0.20 at 100% volatility. If a high quotient attracts a higher score, the riskier loser gets rewarded. The discovery ranking contained that weakness, as well as an identical missing-evidence penalty for assets whose structural risks were hardly identical. I would retire that score as a predictive signal rather than give its ordering undue authority. The clock that almost manufactured a price discrepancy Before attaching significance to the relative returns, a seemingly serious disagreement had to be understood. The November 17 bar-opening date in the exchange’s native daily series showed Bitcoin closing at 63,123.60 USDT. Massive’s November 17 BTC/USD daily close was $64,873.18. A difference of about 2.77% is large enough to question the comparison. But those bars did not end at the same moment. OKX’s native day opened at 16:00 UTC; Massive’s daily aggregation began at midnight. Reconstructing the November 17 UTC day from twenty-four completed OKX hourly candles gave a 64,947.80 USDT close, only about 0.115% above the Massive dollar reference. Four other pairs showed similarly small discrepancies. The USD and USDT units are still distinct, and only this day was independently reconciled. November 17, 2026 UTC daily comparison. Absolute difference divided by Massive closing reference. Native series ended November 18 at 16:00 UTC; UTC series ended November 18 at 00:00 UTC.AssetOKX native closeOKX UTC closeMassive USD closeUTC differenceBTC63,123.664,947.8064,873.180.115%ETH1,768.481,825.111,822.770.128%XRP0.97670.98360.98280.081%SOL73.4875.1975.120.093%ZEC928.11968.45967.680.080% That resolves much of the apparent Bitcoin discrepancy without pretending the two markets are identical. Other disagreements remained: CoinMarketCap reported a roughly $2.15 trillion global capitalization versus about $2.257 trillion from CoinPaprika, and the reported aggregate changes in derivatives open interest were not comparable. Combining incompatible figures would create an impressive-looking number with no defensible definition. The rest of this analysis stays with the common-clock spot series. Zcash was resilient—until the market’s worst days ZEC is the interesting case precisely because it does not fit the simplest bearish narrative. Its 90-day performance was substantial, and its seven- and thirty-day returns were less negative than Bitcoin’s. Controlling for a simple estimated relationship with Bitcoin also left positive relative performance. The question was whether that made Zcash meaningfully safer or more predictive. A regression on the first 78 daily log returns estimated each asset’s sensitivity to BTC. Applying that fixed coefficient to the final 30 returns gave ZEC about +17.72 log-percentage points after subtracting the estimated Bitcoin exposure. XRP showed +14.41 and HYPE +13.33. But PEPE showed +47.86 under the same diagnostic. That last result is a useful reminder: removing one market factor is not the same as discovering alpha. A BTC-only regression omits other exposures, and the final thirty days had already informed candidate selection. 108 common-clock daily log returns; beta fitted on first 78, then held fixed for last 30; 53 negative BTC days and 10 worst BTC days. Adjusted return is Σ(asset log return − beta × BTC log return), not hedge P&L.AssetBTC betaR² (first 78)30D adjusted log returnMean on BTC-down daysMean on 10 worst BTC daysBTC1.00100.0%+0.00%−1.43%−3.76%ETH1.1075.4%−1.64%−1.76%−4.98%XRP1.6468.4%+14.41%−2.18%−4.61%ZEC1.4222.3%+17.72%−1.41%−6.48%HYPE1.1946.9%+13.33%−1.68%−4.09%PEPE2.2464.3%+47.86%−2.67%−6.91%DOGE1.4463.7%+7.83%−2.11%−5.74%SOL1.2869.5%−1.41%−1.86%−5.24%NEAR1.4321.6%−5.08%−1.82%−5.96%UNI1.4127.1%+1.04%−2.15%−6.99% Worst ten BTC days: resilience breaks downNegative ← | → PositiveBTC−3.76%HYPE−4.09%XRP−4.61%ETH−4.98%SOL−5.24%DOGE−5.74%NEAR−5.96%ZEC−6.48%PEPE−6.91%UNI−6.99%Mean contemporaneous daily log returns on the ten most negative BTC days in the 108-return sample. This is a historical stress comparison, not a prediction. Across all 53 BTC-negative days, ZEC’s mean loss was roughly the same as Bitcoin’s: 1.41% versus 1.43% in daily log-return terms. On the ten worst BTC days, ZEC’s mean loss widened to 6.48%, compared with Bitcoin’s 3.76%. ZEC’s month-long realized volatility was 119.55% annualized and its peak-to-trough closing-price drawdown reached 44.74% in the 109-bar sample. Recent turnover was only 0.79 times its preceding 30-day average. My interpretation is that Zcash’s relative-momentum case is worth investigating, but its behavior under severe stress rules out treating it as a demonstrated defensive asset. When the market is losing liquidity, relative resilience measured over ordinary days may not be the kind of protection an investor actually needs. Volatility, trend and participation diagnostics through Nov 18 16:00 UTC. RV uses sample SD of log returns × √365; percentile among 79 overlapping RV30 windows; ATR is simple 14-period true range; drawdown uses closes. Volume ratio = last 7 days mean quote turnover / previous 30 days.AssetSMA20 dist.SMA50 dist.SMA100 dist.RV7RV60RV30 pctileATR14 / priceMax DDVolume ratioBTC−13.41%−19.84%−18.87%32.2%38.1%67.14.39%−26.96%1.54×ETH−15.63%−24.19%−25.49%35.2%49.4%93.76.23%−35.82%1.07×XRP−12.98%−23.30%−25.54%47.0%55.4%36.76.13%−39.58%1.25×ZEC−17.02%−22.47%−16.29%83.5%107.7%75.911.68%−44.74%0.79×HYPE−14.45%−18.51%−17.90%67.8%66.9%100.07.56%−30.58%1.19×PEPE−20.25%−16.54%−8.07%108.9%121.5%92.412.16%−32.65%0.87×DOGE−14.68%−24.88%−28.01%56.2%65.7%34.26.30%−41.60%1.07×SOL−13.98%−26.16%−26.35%67.0%57.4%53.26.33%−41.92%1.24×NEAR−12.94%−27.50%−8.67%96.6%110.0%17.79.25%−45.85%0.79×UNI−20.98%−29.02%−22.82%106.3%81.6%38.09.90%−47.51%0.91× Relative strength did not reliably persistA forward-return diagnostic was deliberately simpler than any trading strategy. At eleven historical decision dates, spaced seven days apart, an asset qualified when both its preceding seven- and thirty-day log returns beat Bitcoin. The outcome was its next seven-day log return minus BTC’s. The outcome intervals did not overlap, although the lookback windows did. That design reduces one obvious dependence problem without claiming independence or statistical significance. Forward seven-day excess log return vs BTC, averaged across 11 evaluation dates; gross outcomes before costs. No predictive significance inferred.AssetQualifying datesAfter signalAll datesETH5+0.06%−1.10%XRP2−2.11%−1.50%ZEC3+7.62%+2.65%HYPE3−6.53%−0.04%PEPE5−4.59%+2.32%DOGE1−7.32%−1.39%SOL4+0.65%−1.34%NEAR4+16.58%+5.89%UNI4+1.76%+1.09% ZEC’s three qualifying dates were followed by an average +7.62% excess log return, compared with +2.65% across all evaluation dates. Hyperliquid’s three qualifying dates were followed by −6.53%, versus roughly zero across all dates. XRP’s two dates returned −2.11%. NEAR, not an original primary candidate, returned +16.58% across four qualifying dates. NEAR is inconvenient evidence in the best sense: it exposes how much the result depends on a shortlist assembled after looking at the market. A favorable diagnostic for ZEC is not meaningless, but a stronger-looking rival should not be quietly removed from consideration. HYPE’s negative result is equally important. It attacks the persistence mechanism itself. A legitimate hypothesis cannot be rescued merely by changing the thresholds until the historical numbers improve. Token structure is part of the tradePrice analysis also needs to survive contact with the assets’ economic design. Hyperliquid is especially instructive. CoinGecko’s November 18, 18:58:58 UTC supply snapshot reported about 237.71 million HYPE circulating against 949.84 million total, or 25.03%. Issuer disclosures describe a genesis allocation of one billion units: 38.89% for future emissions and rewards, 31% for genesis distribution, 23.8% for core contributors, 6% for the Foundation and roughly 0.31% for grants and liquidity programs. Contributor vesting commenced in November 2025, with schedules described as extending into 2027–28. These are allocation and schedule descriptions, not independently reconciled sales or a precise next unlock. An issuer filing and a second issuer disclosure describe the long-term supply framework; Hyperliquid’s fee documentation describes fee-funded acquisitions and token removal. Economic activity could support demand. Conversely, new circulating supply could overwhelm the effect. Without measuring actual burns, net emissions and distributions on comparable dates, neither side of that argument is established. The original genesis allocations are not measures of current ownership concentration. HYPE original genesis allocationDocumented original allocation: 38.89% future emissions/rewards; 31.00% genesis distribution; 23.80% contributors; 6.00% Foundation; approximately 0.31% grants/liquidity. Not current ownership or a forecast. CoinGecko supply snapshot, November 18, 2026 18:58:58 UTC. Reported circulating and total supply are aggregator definitions, not wallet or beneficial-owner census. UNI reported maximum is not a hard cap.AssetCirculating (native units)Reported totalReported max.Circulating / totalBTC20,113,58420,113,58421,000,000100.00%ETH122,230,379122,230,379Not stated100.00%XRP63,516,606,95399,985,583,260100,000,000,00063.53%ZEC17,048,69417,048,81121,000,000100.00%HYPE237,707,639949,839,0971,000,000,00025.03%PEPE420,690,000,000,000420,690,000,000,000420,690,000,000,000100.00%DOGE156,801,692,860156,802,642,860Not stated100.00%SOL591,794,769637,798,831Not stated92.79%NEAR1,312,061,6971,312,061,743Not stated100.00%UNI607,489,896885,750,4191,000,000,00068.58% Supply sensitivity: HYPEWhat if additional HYPE became circulating, with no offsetting burn or other supply change? The calculation is a scenario, not a verified unlock schedule, selling estimate, or price forecast.Hypothetical additional circulating supply (million HYPE)10 millionIncrease over reference circulation4.21%New circulating supply247.71M HYPEThe default scenario assumes 10 million additional HYPE; enable JavaScript to vary the input. XRP presents a different kind of supply question. Ripple’s Q1 2025 XRP Markets Report distinguished tokens held directly from escrowed XRP. Releases concern tokens that already existed, rather than fresh minting. Gross releases, net re-escrow and actual distribution to the market are three different quantities. CoinGecko reported 63.52 billion XRP circulating out of 99.99 billion total; the residual is not a verified Ripple balance. Native XRP is also distinct from issued assets subject to XRPL freeze rules. The original short-term resilience observation tells us nothing conclusive about whether large holders were accumulating or distributing. Zcash’s monetary limit of 21 million coins is described in project documentation, and the upcoming changes add protocol-specific uncertainty to its price behavior. The Zcash Foundation published NU7 polling results on September 14, Zebra 7.0.0 on October 22 and Zebra 7.1.0 security fixes on November 16. The previously announced activation target—around November 5 at height 3,543,405—was a planned event, not an established activation timestamp in this research. A subsequently announced NU7.1 advisory poll deadline was December 1 at 02:59 UTC. These developments may matter to the market, but no abnormal-return event study tied them causally to price. Shielded balances also prevent transparent-address statistics from establishing total ownership concentration. Governance is another place where a screening statistic can mislead. Ethereum token interfaces for UNI and PEPE were identified at the canonical mainnet contracts. UNI exposed mint and setMinter; PEPE exposed blacklist, setRule and ownership-management functions. Those interfaces do not establish who can currently exercise them. Current ownership, minter state, proxy status and concentrations were not reconciled to a finalized block. I would distinguish a demonstrated interface from a demonstrated live privilege. UNI’s minting framework also contradicts treating a reported one-billion maximum as a permanent cap. A fee-to-burn governance mechanism may be interesting, but gross fees, protocol revenue and actual burns are not interchangeable. Relevant evidence includes the UNI Ethereum contract, PEPE Ethereum contract, UNI published source code and UNIfication governance record. Native BTC has a declining issuance schedule; ETH has dynamic issuance and fee burning; SOL has an inflation schedule and validator dependencies; DOGE continues issuance. No comprehensive holder census or contemporaneous incident audit was established for the group, and NEAR’s current governance and issuance mechanics were not fully qualified. Leverage and liquidity complicate the chartFunding does not resolve the momentum question. On OKX, the twelve realized eight-hour funding settlements between November 15 and 18 averaged positive for BTC, ZEC and HYPE, negative for ETH and XRP. Liquid’s venue-specific positioning comparison classified the five markets as balanced. Its selected-cohort long shares ranged from 42% to 46%, with reported positive funding, but its precise observation timestamp and funding interval were not established. The open-interest fields should not be combined across venues without confirming contract definitions. Changes between two short-spaced OKX observations were within about 0.08% in underlying units: not enough to make a confident story about multi-day leverage expansion. Historical basis, liquidation and spot-flow evidence did not establish a causal mechanism. OKX USDT perpetuals: N=12 realized funding observations (Nov 15–18), latest at 16:00 UTC; OI approximately 18:54 UTC. Liquid November 18 comparison; exact time/interval unconfirmed, cohort-specific positioning. No aggregate OI or annualization.AssetOKX mean 8h fundingOKX latest 8hOKX OI (USD)Liquid OI (USD)Liquid long shareBTC+0.00121%+0.00635%$2,172.40M$2,568.66M43%ETH-0.00340%-0.00348%$1,228.69M$1,088.61M46%XRP-0.00281%+0.00126%$74.18M$70.70M42%ZEC+0.00352%+0.00296%$132.00M$335.61M46%HYPE+0.00606%+0.00173%$93.16M$1,258.15M46% Liquidity tells a similarly nuanced story. A tight quoted spread does not guarantee a large executable exit. HYPE had one of the tightest spreads yet the lowest observed minimum-side depth among the ten names in an earlier snapshot. Later, at approximately 19:16:49 UTC, ZEC’s midpoint was 910.695 USDT and its quoted spread was 0.769 basis points. The observed bid depth within fifty basis points was approximately 339,161 USDT; the ask depth was 250,756 USDT. But the first 100 price levels reached only 39.0 bps and 46.2 bps from the midpoint on the bid and ask sides, respectively. Those amounts are bounded observations, not complete depth across the band. OKX USDT spot, 100 levels per side at approximately 18:45–18:46 UTC, Nov 18. Depth and turnover in USDT. Displayed depths bounded by snapshot, not necessarily full bands.AssetSpread (bps)Bid depth / 50 bpsAsk depth / 50 bpsMedian 30D turnoverBTC0.0161,213,6641,667,742533.60METH0.0561,624,2771,539,694254.84MXRP1.0201,088,5701,013,33535.33MZEC2.384353,325264,38967.44MHYPE0.148288,670182,61334.44MPEPE2.670325,372404,24626.21MDOGE1.695716,289745,46321.01MSOL1.3521,559,3011,225,32667.88MNEAR3.070361,195295,69118.92MUNI3.833305,912230,05615.49M Displayed-depth stressChoose a hypothetical order notional and removal of displayed liquidity. The percentage uses the smaller observed side within 50 bps. This is not a fill or slippage estimator.Illustrative notional (USDT)10,00025,00050,000100,000Depth removed (%)50% BTC3.46% XRP5.07% ZEC19.94% HYPE27.38% BTC, XRP and ZEC: November 18, 19:16 UTC snapshot; HYPE: earlier 18:45 UTC snapshot. The snapshots are not simultaneous or current.Default values assume a 25,000 USDT illustrative notional and 50% depth removal. All of this helps explain why the benchmark comparisons matter. If an apparent relative advantage disappears when a straightforward rule or cash is used instead, an elaborate narrative about positioning and protocol economics will not make the strategy better. The experiment that put the narrative under pressure The historical simulation addressed a more difficult question than whether relative strength can be measured. Could that condition support a simple, repeatable rule after costs? Two long-only spot strategies were specified from the earlier research. ZEC qualified when its preceding seven- and thirty-day log returns both exceeded BTC’s. XRP qualified when Bitcoin’s 30-day return and XRP’s seven-day return were negative, but XRP had fallen less than BTC over seven days. Only completed bars were used. Decisions were made every seven days, with entry modeled at the observed opening price 24 hours later and exit seven days after entry. Those are modeled fills, not observed transactions. The test used 109 completed native-clock bars for BTC, ZEC and XRP, with ten weekly evaluation opportunities over a 70-day interval. The hypothetical capital base was 40,000 USDT—not an actual account—and each allocation was capped at 2.5% of current simulated equity, 1,000 USDT, and 0.01% of trailing 30-day median turnover. The full turnover gate was ten million USDT. Cash earned nothing; leverage, funding and borrowing were absent. The base cost model charged 25 bps per side (10 fee, 2.5 half-spread, 12.5 slippage/impact), with nominal round-trip sensitivities of 25, 50 and 100 bps. These assumptions create a reproducible exploratory simulation; they do not reconstruct actual fees, available historical depth, nonfills or the precise costs of trading in stressed conditions. The simple ZEC comparator omitted the 30-day condition. The XRP comparator omitted the relative-strength filter. Passive exposure and cash were additional baselines. The passive rule’s fixed allocation did not separately apply the weekly turnover eligibility screen, a small but real asymmetry. The simpler rules matteredNegative ← | → PositiveZEC dual momentum+1.13%ZEC 7D relative momentum+1.05%ZEC weekly exposure+0.86%ZEC passive hold+0.50%Cash+0.00%BTC passive hold−0.12%BTC weekly exposure−0.21%XRP resilience−0.48%XRP simple dip−0.48%XRP passive hold−0.51%XRP weekly exposure−0.55%Exploratory 70-day simulated NAV returns, with 50 bps nominal round-trip friction, 2.5% maximum allocation. No out-of-sample holdout. Historical simulations; September 2–November 11, 2026. Starting NAV and execution conditions hypothetical. Drawdown uses daily open marks, not intraday prices.RuleTradesNet NAV returnOpen-mark max DDTime investedGross turnover / initial NAVZEC dual momentum3+1.134%−0.361%30%16.17%ZEC 7D relative momentum5+1.046%−0.607%50%26.11%ZEC weekly exposure10+0.863%−1.077%100%50.99%ZEC passive hold1+0.501%−1.802%100%5.52%Cash0+0.000%+0.000%0%0.00%BTC passive hold1−0.119%−0.426%100%4.89%BTC weekly exposure10−0.205%−0.495%100%49.92%XRP resilience2−0.479%−0.532%20%9.55%XRP simple dip2−0.479%−0.532%20%9.55%XRP passive hold1−0.506%−0.996%100%4.51%XRP weekly exposure10−0.551%−1.056%100%49.56% ZEC’s dual condition ended the experiment at a positive 1.134% net hypothetical NAV return after base costs. Its simpler seven-day version returned 1.046%. That incremental difference, 0.088 percentage points, is not large enough to establish that the added filter contributes repeatable information. XRP’s resilience rule and the simple dip rule selected exactly the same two trades; both lost 0.479% of modeled NAV. Cash beat them. The relative filter contributed no observable improvement. When a complicated signal selects the same events as a simpler one, the simplest explanation is not that the complex signal has hidden power. It is that, in this sample, its extra condition did no work. Larger independent samples could tell a different story, but the result here offers no reason to promote it. One trade accounted for more than the entire gainThe most revealing ZEC result is the breakdown of three trades. To avoid confusing a simulated account with actual investment performance, the table shows the hypothetical contribution of each trade as a percentage of the research reference NAV. All five historical modeled trades, 2026. Observed opening prices as fill references; 50-bp nominal round-trip costs. All allocations and contributions are fictional research scenarios.Model / entry–exit (UTC)Gross asset returnNet contribution / model NAVZEC · 09-02 → 09-09+55.81%+1.379%ZEC · 09-09 → 09-16−1.75%−0.056%ZEC · 09-23 → 09-30−7.09%−0.189%XRP · 10-28 → 11-04+0.31%−0.005%XRP · 11-04 → 11-11−18.50%−0.474% ZEC’s result without its best tradeNegative ← | → PositiveLargest trade+1.38%Other trades−0.25%Total+1.13%Net contribution to hypothetical initial NAV (%) at 50 bps modeled round-trip friction. Removing the largest contribution holds the original position sizes fixed; it is not a refitted backtest. Removing the largest winner’s contribution flips ZEC’s total from +1.134% to −0.245% of modeled initial equity. The trade was not a rounding error; its underlying gross return was +55.81% in just seven days. Its two companions lost money.A profitable historical sequence is not necessarily evidence of a profitable mechanism. Nor does the sample establish the strategy’s performance in the regime that matters most on November 18. All three simulated ZEC positions occurred with a nonnegative trailing BTC 30-day return. Not one occurred with BTC’s 30-day trend negative. The apparent success therefore has no direct historical support under the market condition prevailing at the research date. Raising transaction-cost assumptions does not change the qualitative outcome: ZEC remains positive, XRP remains negative. But friction stress is not a substitute for removing an anomalous observation, evaluating parameter stability, or testing unseen data. Net hypothetical NAV return by assumed aggregate round-trip execution cost; matched historical observations, no measured fills.Strategy25 bps50 bps100 bpsZEC dual momentum+1.154%+1.134%+1.093%ZEC 7D relative momentum+1.079%+1.046%+0.981%XRP resilience−0.467%−0.479%−0.502% Risk budgets are not loss guaranteesA mechanical risk rule can help describe a scenario without turning the strategy into a recommendation. For ZEC, a November 18 snapshot put the midpoint at 910.695 USDT; the simple 14-day average true range was 108.43 USDT, or about 11.68% of the last completed daily close. A proposed stop-distance model of 1.5 ATR, plus a 5% gap allowance relative to the entry reference and 100 bps nominal round-trip friction, implied a loss of approximately 216.25 USDT per unit at that stressed exit. The model is hypothetical. Neither the stop overlay nor a proposed veto against negative BTC trends was historically tested. The distinction between monetary risk and committed capital can be expressed without assuming anyone’s actual holdings. The modeled loss per unit is the entry cost inclusive of friction minus the proceeds from the stressed exit, also net of friction. Divide a hypothetical risk budget by that loss; cap the result by allocation, turnover and displayed-depth participation. A gap can be much larger than the modeled allowance; custody failure and USDT depeg introduce separate exposures. A printed stop reference is not a promised execution price. Model: L = P(1 + c) − max(0, P − m × ATR − g × P)(1 − c); units = min(B/L, cap/[P(1+c)]). P = reference price; c = proportional cost per side; m = ATR multiple; g = gap allowance; B = hypothetical risk budget. Cap is the lesser of 2.5% hypothetical NAV, 1,000 USDT, 0.01% median turnover and 1% of observed minimum-side depth. Illustrative risk engineeringReference values are fixed to the November 18 historical snapshot. Default inputs are an explicitly fictional model; nothing is linked to personal financial information. This draft is not an executable position.Hypothetical research capital (USDT)Modeled stress budget (%)ATR multipleFurther gap allowance (%)Round-trip friction (bps)50100200Scenario asset move (%)−40%Market reference910.695 USDTModeled risk per unit216.25 USDTAnalytical units (not lot-rounded)0.924869 ZECCommitted cash (incl. cost)846.48 USDTStress loss200.00 USDTScenario net P&L−343.65 USDTComplete position loss846.48 USDTStress budget statusExceeds budget in selected scenarioDefault scenario is retained as a static example; enable JavaScript to vary assumptions. Net scenario impact in % of fictional research capital, fixed default analytical quantity. No probability or return forecast. Higher modeled costs require resizing.Hypothetical outcome50 bps100 bps200 bpsTotal position loss−2.111%−2.116%−2.127%−40% price shock−0.851%−0.859%−0.876%Stop + gap allowance−0.491%−0.500%−0.519%Stop, no further gap−0.386%−0.395%−0.414%Flat−0.011%−0.021%−0.042%+10% asset move+0.200%+0.188%+0.166%+20% asset move+0.410%+0.398%+0.375% The reference model has a stress budget of 0.50% of fictional equity, yet a 40% fall would cost roughly 0.859% and a total loss would cost 2.116% at the base friction estimate. The distinction matters even with modest allocation. A risk budget is conditional on a cost and gap model. It is not a guarantee. What would actually justify changing the verdict?I would not advance the ZEC hypothesis to an approved paper allocation. The latest completed relative-strength conditions were satisfied, but the BTC 30-day return was negative. The visible liquidity snapshot was bounded, current protocol-event qualification was incomplete, and neither the predictive edge nor the new risk overlay had been independently tested. A weekly prospective observation—logging signals, hypothetical nonfills, subsequent outcomes and invalidations—could be useful without taking or pretending to take a position. Zcash remains the main research question; XRP’s incremental resilience thesis is contradicted within the specific simulated experiment, and HYPE’s original momentum hypothesis is weakened enough to suspend it. NEAR remains an important competing explanation for any success attributed specifically to ZEC. PEPE’s adverse short-horizon evidence and unresolved structural risks argue against promotion; DOGE lacks a compelling surviving thesis; BTC and ETH remain controls, while SOL and UNI require their own independently defined research questions. To change the result, the dual-horizon signal would need to demonstrate incremental, net performance beyond the simple seven-day rule on genuinely unseen observations, in a historical universe defined as it existed at each date. The next experiment should seek at least 730 completed daily observations where available, check independently sourced prices, preserve historical listings and delistings, predefine rules and competing hypotheses, and separate discovery, calibration, validation and an untouched holdout. Label-overlap purging and an embargo, dependence-aware uncertainty estimates, and multiple-testing controls belong in that design. The acquisition target alone does not guarantee statistical power. Execution costs, depth and operational incidents should be evaluated on their own evidence rather than silently inferred from aggregate turnover. That is the central tension in crypto research. The market can offer vivid divergences, extraordinary returns and plausible economic stories. The uncomfortable work is deciding which of those survive the simplest objections. What stands out in this investigation is not that no trade emerged. It is how close the most promising thesis came to looking convincing before one unusually successful observation was put in context. A market signal that cannot survive that question is still a research question. Evidence and methodology notesSpot market and discovery: CoinPaprika partial top-60 snapshot (November 18, 18:21 UTC); CoinGecko identity and market comparison (18:29 UTC); OKX USDT spot instruments, completed 24-hour bars opening at 16:00 UTC, August 1–November 17, ending November 18 at 16:00 UTC. All daily series sampled for the trend study had 109 completed closes and 108 log-return observations. No missing daily periods or duplicate timestamps were observed in those samples. Longer history, point-in-time coverage and complete independent verification are not established. USD aggregation is not silently treated as USDT.Cross-source prices: Massive USD spot daily bars November 15–17, 2026; November 17 UTC reconciliation using 24 completed OKX hourly bars for BTC, ETH, XRP, SOL and ZEC. Independent longer-window agreement remains unestablished. CoinMarketCap and CoinPaprika aggregate capitalization and OI measures had unresolved definition/timing differences.Market structure: OKX spot L2 observations of the first 100 levels per side at 18:45–18:46 UTC (ten assets) and roughly 19:16 UTC (BTC, XRP, ZEC); prices and turnover in USDT. Spread = 10,000 × (ask − bid)/midpoint. Depth sums price × base quantity within the observed band; no guarantee of executable depth. OKX USDT perpetual funding for five assets, November 15–18 (12 settled eight-hour observations each); OI snapshots approximately 18:54 UTC; Liquid selected-cohort positioning comparison on November 18, precise timestamp and funding interval not established.Protocol evidence: CoinGecko reported token supplies at 18:58:58 UTC, November 18; issuer and project disclosures linked above. Additional context: HyperEVM documentation, Hyperliquid audit documentation, Zcash protocol proposal, Zebra 7.0.0 release, NU7.1 advisory poll, Uniswap fee expansion, Uniswap v4 fee proposal. Verified interfaces and historical announcements do not establish final on-chain state, present administrator authority, beneficial ownership, actual distribution or revenue series. Project and issuer claims are not independent audits.Historical experiment: 109 BTC, ZEC and XRP daily open/close observations; weekly decision-grid indices 30, 37, 44, 51, 58, 65, 72, 79, 86, 93 (zero-based). Return = close/lagged close − 1; log return = ln(close/lagged close); relative-strength difference in log returns. Entry at index t+2 open, exit t+9 open, after completed t-bar decision. No overlapping holds. Turnover = gross traded notional / reference initial NAV; drawdown uses daily open marks including modeled friction; not intraday. Base round trip 50 bps, sensitivity 25 and 100; cash earns zero. All data had already informed research selection. Results are exploratory, not a genuine untouched holdout. Archived numerical inputs support reproducible calculations, but the complete original market records were not retained; daily open-mark path alone does not retain all simultaneous post-entry marks. No credible significance, Sharpe, win probability or expected return is established.Scenario assumptions: historical midpoint 910.695 USDT and simple ATR14 108.4307 USDT (November 18, 2026). Calculators use fixed dated inputs; hypothetical risk, asset moves, costs, stops and gaps are assumptions. No actual buy/sell fills are represented.Independent market research for informational purposes. Prices and observations are historical. Hypothetical and simulated outcomes do not represent actual investment performance.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Zcash’s Momentum Test Turned on a Single Trade"
+      },
+      {
+        "tag": "h2",
+        "text": "Ten pairs, all down"
+      },
+      {
+        "tag": "h3",
+        "text": "A selloff with very different histories"
+      },
+      {
+        "tag": "h2",
+        "text": "The clock that almost manufactured a price discrepancy"
+      },
+      {
+        "tag": "h2",
+        "text": "Zcash was resilient—until the market’s worst days"
+      },
+      {
+        "tag": "h3",
+        "text": "Worst ten BTC days: resilience breaks down"
+      },
+      {
+        "tag": "h2",
+        "text": "Relative strength did not reliably persist"
+      },
+      {
+        "tag": "h2",
+        "text": "Token structure is part of the trade"
+      },
+      {
+        "tag": "h3",
+        "text": "HYPE original genesis allocation"
+      },
+      {
+        "tag": "h3",
+        "text": "Supply sensitivity: HYPE"
+      },
+      {
+        "tag": "h2",
+        "text": "Leverage and liquidity complicate the chart"
+      },
+      {
+        "tag": "h3",
+        "text": "Displayed-depth stress"
+      },
+      {
+        "tag": "h2",
+        "text": "The experiment that put the narrative under pressure"
+      },
+      {
+        "tag": "h3",
+        "text": "The simpler rules mattered"
+      },
+      {
+        "tag": "h2",
+        "text": "One trade accounted for more than the entire gain"
+      },
+      {
+        "tag": "h3",
+        "text": "ZEC’s result without its best trade"
+      },
+      {
+        "tag": "h2",
+        "text": "Risk budgets are not loss guarantees"
+      },
+      {
+        "tag": "h3",
+        "text": "Illustrative risk engineering"
+      },
+      {
+        "tag": "h2",
+        "text": "What would actually justify changing the verdict?"
+      },
+      {
+        "tag": "h2",
+        "text": "Evidence and methodology notes"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/2107730/000119312526248888/hype_s-1_amendment_5.htm",
+        "text": "An issuer filing"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/2078856/000119312526283059/d50758ds1a.htm",
+        "text": "a second issuer disclosure"
+      },
+      {
+        "href": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+        "text": "Hyperliquid’s fee documentation"
+      },
+      {
+        "href": "https://ripple.com/insights/q1-2025-xrp-markets-report/",
+        "text": "Ripple’s Q1 2025 XRP Markets Report"
+      },
+      {
+        "href": "https://xrpl.org/docs/concepts/tokens/fungible-tokens/freezes",
+        "text": "issued assets subject to XRPL freeze rules"
+      },
+      {
+        "href": "https://z.cash/learn/does-zcash-have-a-max-supply/",
+        "text": "project documentation"
+      },
+      {
+        "href": "https://zfnd.org/zcap-polling-results-nu7-scope/",
+        "text": "NU7 polling results"
+      },
+      {
+        "href": "https://zfnd.org/zebra-7-1-0-security-fixes-for-sync-and-memory-exhaustion/",
+        "text": "Zebra 7.1.0 security fixes"
+      },
+      {
+        "href": "https://eth.blockscout.com/address/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "text": "UNI Ethereum contract"
+      },
+      {
+        "href": "https://eth.blockscout.com/address/0x6982508145454ce325ddbe47a25d4ec3d2311933",
+        "text": "PEPE Ethereum contract"
+      },
+      {
+        "href": "https://github.com/Uniswap/governance/blob/master/contracts/Uni.sol",
+        "text": "UNI published source code"
+      },
+      {
+        "href": "https://gov.uniswap.org/t/executed-unification-proposal/25881",
+        "text": "UNIfication governance record"
+      },
+      {
+        "href": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm",
+        "text": "HyperEVM documentation"
+      },
+      {
+        "href": "https://hyperliquid.gitbook.io/hyperliquid-docs/audits",
+        "text": "Hyperliquid audit documentation"
+      },
+      {
+        "href": "https://zips.z.cash/zip-0259",
+        "text": "Zcash protocol proposal"
+      },
+      {
+        "href": "https://zfnd.org/zebra-7-0-0-release/",
+        "text": "Zebra 7.0.0 release"
+      },
+      {
+        "href": "https://zfnd.org/zcap-poll-now-open-nu7-1/",
+        "text": "NU7.1 advisory poll"
+      },
+      {
+        "href": "https://gov.uniswap.org/t/executed-temp-check-protocol-fee-expansion-three-more-chains/26108",
+        "text": "Uniswap fee expansion"
+      },
+      {
+        "href": "https://gov.uniswap.org/t/executed-temp-check-activate-v4-protocol-fees/26162/1",
+        "text": "Uniswap v4 fee proposal"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "A November 18 screen of ten liquid crypto pairs found relative strength inside a broad selloff. A historical simulation exposed why none qualified for a trade."
+      },
+      {
+        "tag": "p",
+        "text": "November 18, 2026 · Historical market investigation · All quotations are time-specific"
+      },
+      {
+        "tag": "p",
+        "text": "Three simulated Zcash trades turned a small, deliberately constrained allocation into a positive result. Remove the contribution of just one of them, and the profit becomes a loss. That is the most revealing detail in a November 18 investigation of ten relatively liquid cryptocurrency pairs: the strongest-looking candidate did not fail because it lacked a convincing price story. It failed because the story depended on an event that had not been shown to repeat."
+      },
+      {
+        "tag": "p",
+        "text": "Zcash had gained 62.54% over 90 days while Bitcoin had lost 12.90%. Yet both were down sharply over the preceding month. Hyperliquid, another relative outperformer, offered a different economic narrative, tied to protocol fees and token supply. XRP had held up better than Bitcoin over the latest week, suggesting a possible reversal. There was more than enough here to generate a watchlist. There was not enough to turn it into a dependable strategy."
+      },
+      {
+        "tag": "p",
+        "text": "My conclusion: the evidence favors further research on ZEC, not a trade. Relative strength inside a selloff is a legitimate observation; repeatable net profitability is a separate, considerably harder claim."
+      },
+      {
+        "tag": "p",
+        "text": "The daily spot evidence was unusually consistent. At the close of the 24-hour trading interval ending November 18 at 16:00 UTC, every one of the ten screened OKX USDT pairs had declined over both seven and 30 days. All ten were below their 20-, 50- and 100-day simple moving averages. A separate initial twelve-asset panel was also below its 20- and 50-day averages. That is broad weakness within the examined groups, not a census of the entire crypto market. Bitcoin’s turnover over the latest seven days was 54% higher than in the preceding thirty-day period, a sign of exceptional participation in a falling market—not proof that sellers had exhausted themselves."
+      },
+      {
+        "tag": "p",
+        "text": "The investable-looking group was deliberately narrow. The discovery screen began with a partial review of CoinPaprika’s top 60, excluding dollar-linked and duplicate wrapped exposures, then looked for at least $1 billion in market capitalization, $25 million in reported global daily volume, ninety completed daily bars, median OKX quote turnover of 10 million USDT, a quoted spread no greater than ten basis points, and at least 100,000 USDT of displayed depth per side within fifty basis points of the midpoint. Ten pairs met the provisional thresholds. These criteria were exploratory and adjusted after initial observations; ten names in the larger screen were not fully qualified. Some major assets failed the specific venue-turnover test, not necessarily a test of liquidity elsewhere."
+      },
+      {
+        "tag": "caption",
+        "text": "OKX USDT spot: 109 completed daily bars per pair, August 1–November 17 opening dates, ending November 18, 2026 at 16:00 UTC. Simple returns; realized volatility annualized."
+      },
+      {
+        "tag": "figcaption",
+        "text": "90-day simple price return, same OKX completed native-clock bars as the preceding table. Positive 90-day histories did not prevent recent losses."
+      },
+      {
+        "tag": "p",
+        "text": "ZEC and HYPE were the only nonbenchmark candidates to outperform Bitcoin over all three measured horizons. XRP’s comparative advantage was shorter-lived; it outperformed BTC by 5.75 percentage points over seven days but trailed it over thirty and ninety. NEAR was more extreme: a 90-day gain of nearly 85% sat beside a 34.58% monthly loss. PEPE’s 30-day loss was the smallest of the group, but its seven-day decline exceeded 25%. The leader depends on the clock and the horizon."
+      },
+      {
+        "tag": "p",
+        "text": "That last observation matters because a ranking can introduce its own distortion. A signed negative return divided by volatility becomes less negative as volatility rises. With identical −20% returns, the quotient is −0.50 at 40% volatility but −0.20 at 100% volatility. If a high quotient attracts a higher score, the riskier loser gets rewarded. The discovery ranking contained that weakness, as well as an identical missing-evidence penalty for assets whose structural risks were hardly identical. I would retire that score as a predictive signal rather than give its ordering undue authority."
+      },
+      {
+        "tag": "p",
+        "text": "Before attaching significance to the relative returns, a seemingly serious disagreement had to be understood. The November 17 bar-opening date in the exchange’s native daily series showed Bitcoin closing at 63,123.60 USDT. Massive’s November 17 BTC/USD daily close was $64,873.18. A difference of about 2.77% is large enough to question the comparison."
+      },
+      {
+        "tag": "p",
+        "text": "But those bars did not end at the same moment. OKX’s native day opened at 16:00 UTC; Massive’s daily aggregation began at midnight. Reconstructing the November 17 UTC day from twenty-four completed OKX hourly candles gave a 64,947.80 USDT close, only about 0.115% above the Massive dollar reference. Four other pairs showed similarly small discrepancies. The USD and USDT units are still distinct, and only this day was independently reconciled."
+      },
+      {
+        "tag": "caption",
+        "text": "November 17, 2026 UTC daily comparison. Absolute difference divided by Massive closing reference. Native series ended November 18 at 16:00 UTC; UTC series ended November 18 at 00:00 UTC."
+      },
+      {
+        "tag": "p",
+        "text": "That resolves much of the apparent Bitcoin discrepancy without pretending the two markets are identical. Other disagreements remained: CoinMarketCap reported a roughly $2.15 trillion global capitalization versus about $2.257 trillion from CoinPaprika, and the reported aggregate changes in derivatives open interest were not comparable. Combining incompatible figures would create an impressive-looking number with no defensible definition. The rest of this analysis stays with the common-clock spot series."
+      },
+      {
+        "tag": "p",
+        "text": "ZEC is the interesting case precisely because it does not fit the simplest bearish narrative. Its 90-day performance was substantial, and its seven- and thirty-day returns were less negative than Bitcoin’s. Controlling for a simple estimated relationship with Bitcoin also left positive relative performance. The question was whether that made Zcash meaningfully safer or more predictive."
+      },
+      {
+        "tag": "p",
+        "text": "A regression on the first 78 daily log returns estimated each asset’s sensitivity to BTC. Applying that fixed coefficient to the final 30 returns gave ZEC about +17.72 log-percentage points after subtracting the estimated Bitcoin exposure. XRP showed +14.41 and HYPE +13.33. But PEPE showed +47.86 under the same diagnostic. That last result is a useful reminder: removing one market factor is not the same as discovering alpha. A BTC-only regression omits other exposures, and the final thirty days had already informed candidate selection."
+      },
+      {
+        "tag": "caption",
+        "text": "108 common-clock daily log returns; beta fitted on first 78, then held fixed for last 30; 53 negative BTC days and 10 worst BTC days. Adjusted return is Σ(asset log return − beta × BTC log return), not hedge P&L."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Mean contemporaneous daily log returns on the ten most negative BTC days in the 108-return sample. This is a historical stress comparison, not a prediction."
+      },
+      {
+        "tag": "p",
+        "text": "Across all 53 BTC-negative days, ZEC’s mean loss was roughly the same as Bitcoin’s: 1.41% versus 1.43% in daily log-return terms. On the ten worst BTC days, ZEC’s mean loss widened to 6.48%, compared with Bitcoin’s 3.76%. ZEC’s month-long realized volatility was 119.55% annualized and its peak-to-trough closing-price drawdown reached 44.74% in the 109-bar sample. Recent turnover was only 0.79 times its preceding 30-day average."
+      },
+      {
+        "tag": "p",
+        "text": "My interpretation is that Zcash’s relative-momentum case is worth investigating, but its behavior under severe stress rules out treating it as a demonstrated defensive asset. When the market is losing liquidity, relative resilience measured over ordinary days may not be the kind of protection an investor actually needs."
+      },
+      {
+        "tag": "caption",
+        "text": "Volatility, trend and participation diagnostics through Nov 18 16:00 UTC. RV uses sample SD of log returns × √365; percentile among 79 overlapping RV30 windows; ATR is simple 14-period true range; drawdown uses closes. Volume ratio = last 7 days mean quote turnover / previous 30 days."
+      },
+      {
+        "tag": "p",
+        "text": "A forward-return diagnostic was deliberately simpler than any trading strategy. At eleven historical decision dates, spaced seven days apart, an asset qualified when both its preceding seven- and thirty-day log returns beat Bitcoin. The outcome was its next seven-day log return minus BTC’s. The outcome intervals did not overlap, although the lookback windows did. That design reduces one obvious dependence problem without claiming independence or statistical significance."
+      },
+      {
+        "tag": "caption",
+        "text": "Forward seven-day excess log return vs BTC, averaged across 11 evaluation dates; gross outcomes before costs. No predictive significance inferred."
+      },
+      {
+        "tag": "p",
+        "text": "ZEC’s three qualifying dates were followed by an average +7.62% excess log return, compared with +2.65% across all evaluation dates. Hyperliquid’s three qualifying dates were followed by −6.53%, versus roughly zero across all dates. XRP’s two dates returned −2.11%. NEAR, not an original primary candidate, returned +16.58% across four qualifying dates."
+      },
+      {
+        "tag": "p",
+        "text": "NEAR is inconvenient evidence in the best sense: it exposes how much the result depends on a shortlist assembled after looking at the market. A favorable diagnostic for ZEC is not meaningless, but a stronger-looking rival should not be quietly removed from consideration. HYPE’s negative result is equally important. It attacks the persistence mechanism itself. A legitimate hypothesis cannot be rescued merely by changing the thresholds until the historical numbers improve."
+      },
+      {
+        "tag": "p",
+        "text": "Price analysis also needs to survive contact with the assets’ economic design. Hyperliquid is especially instructive. CoinGecko’s November 18, 18:58:58 UTC supply snapshot reported about 237.71 million HYPE circulating against 949.84 million total, or 25.03%. Issuer disclosures describe a genesis allocation of one billion units: 38.89% for future emissions and rewards, 31% for genesis distribution, 23.8% for core contributors, 6% for the Foundation and roughly 0.31% for grants and liquidity programs. Contributor vesting commenced in November 2025, with schedules described as extending into 2027–28. These are allocation and schedule descriptions, not independently reconciled sales or a precise next unlock."
+      },
+      {
+        "tag": "p",
+        "text": "An issuer filing and a second issuer disclosure describe the long-term supply framework; Hyperliquid’s fee documentation describes fee-funded acquisitions and token removal. Economic activity could support demand. Conversely, new circulating supply could overwhelm the effect. Without measuring actual burns, net emissions and distributions on comparable dates, neither side of that argument is established. The original genesis allocations are not measures of current ownership concentration."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Documented original allocation: 38.89% future emissions/rewards; 31.00% genesis distribution; 23.80% contributors; 6.00% Foundation; approximately 0.31% grants/liquidity. Not current ownership or a forecast."
+      },
+      {
+        "tag": "caption",
+        "text": "CoinGecko supply snapshot, November 18, 2026 18:58:58 UTC. Reported circulating and total supply are aggregator definitions, not wallet or beneficial-owner census. UNI reported maximum is not a hard cap."
+      },
+      {
+        "tag": "p",
+        "text": "What if additional HYPE became circulating, with no offsetting burn or other supply change? The calculation is a scenario, not a verified unlock schedule, selling estimate, or price forecast."
+      },
+      {
+        "tag": "p",
+        "text": "The default scenario assumes 10 million additional HYPE; enable JavaScript to vary the input."
+      },
+      {
+        "tag": "p",
+        "text": "XRP presents a different kind of supply question. Ripple’s Q1 2025 XRP Markets Report distinguished tokens held directly from escrowed XRP. Releases concern tokens that already existed, rather than fresh minting. Gross releases, net re-escrow and actual distribution to the market are three different quantities. CoinGecko reported 63.52 billion XRP circulating out of 99.99 billion total; the residual is not a verified Ripple balance. Native XRP is also distinct from issued assets subject to XRPL freeze rules. The original short-term resilience observation tells us nothing conclusive about whether large holders were accumulating or distributing."
+      },
+      {
+        "tag": "p",
+        "text": "Zcash’s monetary limit of 21 million coins is described in project documentation, and the upcoming changes add protocol-specific uncertainty to its price behavior. The Zcash Foundation published NU7 polling results on September 14, Zebra 7.0.0 on October 22 and Zebra 7.1.0 security fixes on November 16. The previously announced activation target—around November 5 at height 3,543,405—was a planned event, not an established activation timestamp in this research. A subsequently announced NU7.1 advisory poll deadline was December 1 at 02:59 UTC. These developments may matter to the market, but no abnormal-return event study tied them causally to price. Shielded balances also prevent transparent-address statistics from establishing total ownership concentration."
+      },
+      {
+        "tag": "p",
+        "text": "Governance is another place where a screening statistic can mislead. Ethereum token interfaces for UNI and PEPE were identified at the canonical mainnet contracts. UNI exposed mint and setMinter; PEPE exposed blacklist, setRule and ownership-management functions. Those interfaces do not establish who can currently exercise them. Current ownership, minter state, proxy status and concentrations were not reconciled to a finalized block. I would distinguish a demonstrated interface from a demonstrated live privilege. UNI’s minting framework also contradicts treating a reported one-billion maximum as a permanent cap. A fee-to-burn governance mechanism may be interesting, but gross fees, protocol revenue and actual burns are not interchangeable."
+      },
+      {
+        "tag": "p",
+        "text": "Relevant evidence includes the UNI Ethereum contract, PEPE Ethereum contract, UNI published source code and UNIfication governance record. Native BTC has a declining issuance schedule; ETH has dynamic issuance and fee burning; SOL has an inflation schedule and validator dependencies; DOGE continues issuance. No comprehensive holder census or contemporaneous incident audit was established for the group, and NEAR’s current governance and issuance mechanics were not fully qualified."
+      },
+      {
+        "tag": "p",
+        "text": "Funding does not resolve the momentum question. On OKX, the twelve realized eight-hour funding settlements between November 15 and 18 averaged positive for BTC, ZEC and HYPE, negative for ETH and XRP. Liquid’s venue-specific positioning comparison classified the five markets as balanced. Its selected-cohort long shares ranged from 42% to 46%, with reported positive funding, but its precise observation timestamp and funding interval were not established. The open-interest fields should not be combined across venues without confirming contract definitions. Changes between two short-spaced OKX observations were within about 0.08% in underlying units: not enough to make a confident story about multi-day leverage expansion. Historical basis, liquidation and spot-flow evidence did not establish a causal mechanism."
+      },
+      {
+        "tag": "caption",
+        "text": "OKX USDT perpetuals: N=12 realized funding observations (Nov 15–18), latest at 16:00 UTC; OI approximately 18:54 UTC. Liquid November 18 comparison; exact time/interval unconfirmed, cohort-specific positioning. No aggregate OI or annualization."
+      },
+      {
+        "tag": "p",
+        "text": "Liquidity tells a similarly nuanced story. A tight quoted spread does not guarantee a large executable exit. HYPE had one of the tightest spreads yet the lowest observed minimum-side depth among the ten names in an earlier snapshot. Later, at approximately 19:16:49 UTC, ZEC’s midpoint was 910.695 USDT and its quoted spread was 0.769 basis points. The observed bid depth within fifty basis points was approximately 339,161 USDT; the ask depth was 250,756 USDT. But the first 100 price levels reached only 39.0 bps and 46.2 bps from the midpoint on the bid and ask sides, respectively. Those amounts are bounded observations, not complete depth across the band."
+      },
+      {
+        "tag": "caption",
+        "text": "OKX USDT spot, 100 levels per side at approximately 18:45–18:46 UTC, Nov 18. Depth and turnover in USDT. Displayed depths bounded by snapshot, not necessarily full bands."
+      },
+      {
+        "tag": "p",
+        "text": "Choose a hypothetical order notional and removal of displayed liquidity. The percentage uses the smaller observed side within 50 bps. This is not a fill or slippage estimator."
+      },
+      {
+        "tag": "p",
+        "text": "BTC, XRP and ZEC: November 18, 19:16 UTC snapshot; HYPE: earlier 18:45 UTC snapshot. The snapshots are not simultaneous or current."
+      },
+      {
+        "tag": "p",
+        "text": "Default values assume a 25,000 USDT illustrative notional and 50% depth removal."
+      },
+      {
+        "tag": "p",
+        "text": "All of this helps explain why the benchmark comparisons matter. If an apparent relative advantage disappears when a straightforward rule or cash is used instead, an elaborate narrative about positioning and protocol economics will not make the strategy better."
+      },
+      {
+        "tag": "p",
+        "text": "The historical simulation addressed a more difficult question than whether relative strength can be measured. Could that condition support a simple, repeatable rule after costs? Two long-only spot strategies were specified from the earlier research. ZEC qualified when its preceding seven- and thirty-day log returns both exceeded BTC’s. XRP qualified when Bitcoin’s 30-day return and XRP’s seven-day return were negative, but XRP had fallen less than BTC over seven days. Only completed bars were used. Decisions were made every seven days, with entry modeled at the observed opening price 24 hours later and exit seven days after entry. Those are modeled fills, not observed transactions."
+      },
+      {
+        "tag": "p",
+        "text": "The test used 109 completed native-clock bars for BTC, ZEC and XRP, with ten weekly evaluation opportunities over a 70-day interval. The hypothetical capital base was 40,000 USDT—not an actual account—and each allocation was capped at 2.5% of current simulated equity, 1,000 USDT, and 0.01% of trailing 30-day median turnover. The full turnover gate was ten million USDT. Cash earned nothing; leverage, funding and borrowing were absent. The base cost model charged 25 bps per side (10 fee, 2.5 half-spread, 12.5 slippage/impact), with nominal round-trip sensitivities of 25, 50 and 100 bps."
+      },
+      {
+        "tag": "p",
+        "text": "These assumptions create a reproducible exploratory simulation; they do not reconstruct actual fees, available historical depth, nonfills or the precise costs of trading in stressed conditions. The simple ZEC comparator omitted the 30-day condition. The XRP comparator omitted the relative-strength filter. Passive exposure and cash were additional baselines. The passive rule’s fixed allocation did not separately apply the weekly turnover eligibility screen, a small but real asymmetry."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Exploratory 70-day simulated NAV returns, with 50 bps nominal round-trip friction, 2.5% maximum allocation. No out-of-sample holdout."
+      },
+      {
+        "tag": "caption",
+        "text": "Historical simulations; September 2–November 11, 2026. Starting NAV and execution conditions hypothetical. Drawdown uses daily open marks, not intraday prices."
+      },
+      {
+        "tag": "p",
+        "text": "ZEC’s dual condition ended the experiment at a positive 1.134% net hypothetical NAV return after base costs. Its simpler seven-day version returned 1.046%. That incremental difference, 0.088 percentage points, is not large enough to establish that the added filter contributes repeatable information. XRP’s resilience rule and the simple dip rule selected exactly the same two trades; both lost 0.479% of modeled NAV. Cash beat them. The relative filter contributed no observable improvement."
+      },
+      {
+        "tag": "p",
+        "text": "When a complicated signal selects the same events as a simpler one, the simplest explanation is not that the complex signal has hidden power. It is that, in this sample, its extra condition did no work. Larger independent samples could tell a different story, but the result here offers no reason to promote it."
+      },
+      {
+        "tag": "p",
+        "text": "The most revealing ZEC result is the breakdown of three trades. To avoid confusing a simulated account with actual investment performance, the table shows the hypothetical contribution of each trade as a percentage of the research reference NAV."
+      },
+      {
+        "tag": "caption",
+        "text": "All five historical modeled trades, 2026. Observed opening prices as fill references; 50-bp nominal round-trip costs. All allocations and contributions are fictional research scenarios."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Net contribution to hypothetical initial NAV (%) at 50 bps modeled round-trip friction. Removing the largest contribution holds the original position sizes fixed; it is not a refitted backtest."
+      },
+      {
+        "tag": "p",
+        "text": "Removing the largest winner’s contribution flips ZEC’s total from +1.134% to −0.245% of modeled initial equity. The trade was not a rounding error; its underlying gross return was +55.81% in just seven days. Its two companions lost money."
+      },
+      {
+        "tag": "p",
+        "text": "A profitable historical sequence is not necessarily evidence of a profitable mechanism."
+      },
+      {
+        "tag": "p",
+        "text": "Nor does the sample establish the strategy’s performance in the regime that matters most on November 18. All three simulated ZEC positions occurred with a nonnegative trailing BTC 30-day return. Not one occurred with BTC’s 30-day trend negative. The apparent success therefore has no direct historical support under the market condition prevailing at the research date."
+      },
+      {
+        "tag": "p",
+        "text": "Raising transaction-cost assumptions does not change the qualitative outcome: ZEC remains positive, XRP remains negative. But friction stress is not a substitute for removing an anomalous observation, evaluating parameter stability, or testing unseen data."
+      },
+      {
+        "tag": "caption",
+        "text": "Net hypothetical NAV return by assumed aggregate round-trip execution cost; matched historical observations, no measured fills."
+      },
+      {
+        "tag": "p",
+        "text": "A mechanical risk rule can help describe a scenario without turning the strategy into a recommendation. For ZEC, a November 18 snapshot put the midpoint at 910.695 USDT; the simple 14-day average true range was 108.43 USDT, or about 11.68% of the last completed daily close. A proposed stop-distance model of 1.5 ATR, plus a 5% gap allowance relative to the entry reference and 100 bps nominal round-trip friction, implied a loss of approximately 216.25 USDT per unit at that stressed exit. The model is hypothetical. Neither the stop overlay nor a proposed veto against negative BTC trends was historically tested."
+      },
+      {
+        "tag": "p",
+        "text": "The distinction between monetary risk and committed capital can be expressed without assuming anyone’s actual holdings. The modeled loss per unit is the entry cost inclusive of friction minus the proceeds from the stressed exit, also net of friction. Divide a hypothetical risk budget by that loss; cap the result by allocation, turnover and displayed-depth participation. A gap can be much larger than the modeled allowance; custody failure and USDT depeg introduce separate exposures. A printed stop reference is not a promised execution price."
+      },
+      {
+        "tag": "p",
+        "text": "Reference values are fixed to the November 18 historical snapshot. Default inputs are an explicitly fictional model; nothing is linked to personal financial information. This draft is not an executable position."
+      },
+      {
+        "tag": "p",
+        "text": "Default scenario is retained as a static example; enable JavaScript to vary assumptions."
+      },
+      {
+        "tag": "caption",
+        "text": "Net scenario impact in % of fictional research capital, fixed default analytical quantity. No probability or return forecast. Higher modeled costs require resizing."
+      },
+      {
+        "tag": "p",
+        "text": "The reference model has a stress budget of 0.50% of fictional equity, yet a 40% fall would cost roughly 0.859% and a total loss would cost 2.116% at the base friction estimate. The distinction matters even with modest allocation. A risk budget is conditional on a cost and gap model. It is not a guarantee."
+      },
+      {
+        "tag": "p",
+        "text": "I would not advance the ZEC hypothesis to an approved paper allocation. The latest completed relative-strength conditions were satisfied, but the BTC 30-day return was negative. The visible liquidity snapshot was bounded, current protocol-event qualification was incomplete, and neither the predictive edge nor the new risk overlay had been independently tested. A weekly prospective observation—logging signals, hypothetical nonfills, subsequent outcomes and invalidations—could be useful without taking or pretending to take a position."
+      },
+      {
+        "tag": "p",
+        "text": "Zcash remains the main research question; XRP’s incremental resilience thesis is contradicted within the specific simulated experiment, and HYPE’s original momentum hypothesis is weakened enough to suspend it. NEAR remains an important competing explanation for any success attributed specifically to ZEC. PEPE’s adverse short-horizon evidence and unresolved structural risks argue against promotion; DOGE lacks a compelling surviving thesis; BTC and ETH remain controls, while SOL and UNI require their own independently defined research questions."
+      },
+      {
+        "tag": "p",
+        "text": "To change the result, the dual-horizon signal would need to demonstrate incremental, net performance beyond the simple seven-day rule on genuinely unseen observations, in a historical universe defined as it existed at each date. The next experiment should seek at least 730 completed daily observations where available, check independently sourced prices, preserve historical listings and delistings, predefine rules and competing hypotheses, and separate discovery, calibration, validation and an untouched holdout. Label-overlap purging and an embargo, dependence-aware uncertainty estimates, and multiple-testing controls belong in that design. The acquisition target alone does not guarantee statistical power. Execution costs, depth and operational incidents should be evaluated on their own evidence rather than silently inferred from aggregate turnover."
+      },
+      {
+        "tag": "p",
+        "text": "That is the central tension in crypto research. The market can offer vivid divergences, extraordinary returns and plausible economic stories. The uncomfortable work is deciding which of those survive the simplest objections. What stands out in this investigation is not that no trade emerged. It is how close the most promising thesis came to looking convincing before one unusually successful observation was put in context. A market signal that cannot survive that question is still a research question."
+      },
+      {
+        "tag": "li",
+        "text": "Spot market and discovery: CoinPaprika partial top-60 snapshot (November 18, 18:21 UTC); CoinGecko identity and market comparison (18:29 UTC); OKX USDT spot instruments, completed 24-hour bars opening at 16:00 UTC, August 1–November 17, ending November 18 at 16:00 UTC. All daily series sampled for the trend study had 109 completed closes and 108 log-return observations. No missing daily periods or duplicate timestamps were observed in those samples. Longer history, point-in-time coverage and complete independent verification are not established. USD aggregation is not silently treated as USDT."
+      },
+      {
+        "tag": "li",
+        "text": "Cross-source prices: Massive USD spot daily bars November 15–17, 2026; November 17 UTC reconciliation using 24 completed OKX hourly bars for BTC, ETH, XRP, SOL and ZEC. Independent longer-window agreement remains unestablished. CoinMarketCap and CoinPaprika aggregate capitalization and OI measures had unresolved definition/timing differences."
+      },
+      {
+        "tag": "li",
+        "text": "Market structure: OKX spot L2 observations of the first 100 levels per side at 18:45–18:46 UTC (ten assets) and roughly 19:16 UTC (BTC, XRP, ZEC); prices and turnover in USDT. Spread = 10,000 × (ask − bid)/midpoint. Depth sums price × base quantity within the observed band; no guarantee of executable depth. OKX USDT perpetual funding for five assets, November 15–18 (12 settled eight-hour observations each); OI snapshots approximately 18:54 UTC; Liquid selected-cohort positioning comparison on November 18, precise timestamp and funding interval not established."
+      },
+      {
+        "tag": "li",
+        "text": "Protocol evidence: CoinGecko reported token supplies at 18:58:58 UTC, November 18; issuer and project disclosures linked above. Additional context: HyperEVM documentation, Hyperliquid audit documentation, Zcash protocol proposal, Zebra 7.0.0 release, NU7.1 advisory poll, Uniswap fee expansion, Uniswap v4 fee proposal. Verified interfaces and historical announcements do not establish final on-chain state, present administrator authority, beneficial ownership, actual distribution or revenue series. Project and issuer claims are not independent audits."
+      },
+      {
+        "tag": "li",
+        "text": "Historical experiment: 109 BTC, ZEC and XRP daily open/close observations; weekly decision-grid indices 30, 37, 44, 51, 58, 65, 72, 79, 86, 93 (zero-based). Return = close/lagged close − 1; log return = ln(close/lagged close); relative-strength difference in log returns. Entry at index t+2 open, exit t+9 open, after completed t-bar decision. No overlapping holds. Turnover = gross traded notional / reference initial NAV; drawdown uses daily open marks including modeled friction; not intraday. Base round trip 50 bps, sensitivity 25 and 100; cash earns zero. All data had already informed research selection. Results are exploratory, not a genuine untouched holdout. Archived numerical inputs support reproducible calculations, but the complete original market records were not retained; daily open-mark path alone does not retain all simultaneous post-entry marks. No credible significance, Sharpe, win probability or expected return is established."
+      },
+      {
+        "tag": "li",
+        "text": "Scenario assumptions: historical midpoint 910.695 USDT and simple ATR14 108.4307 USDT (November 18, 2026). Calculators use fixed dated inputs; hypothetical risk, asset moves, costs, stops and gaps are assumptions. No actual buy/sell fills are represented."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Pair",
+          "Close (USDT)",
+          "7 days",
+          "30 days",
+          "90 days",
+          "RV30"
+        ],
+        [
+          "BTC",
+          "63,123.6",
+          "−14.70%",
+          "−22.96%",
+          "−12.90%",
+          "41.63%"
+        ],
+        [
+          "ETH",
+          "1,768.48",
+          "−14.80%",
+          "−26.14%",
+          "−23.96%",
+          "58.42%"
+        ],
+        [
+          "XRP",
+          "0.9767",
+          "−8.96%",
+          "−24.79%",
+          "−22.57%",
+          "55.48%"
+        ],
+        [
+          "ZEC",
+          "928.11",
+          "−5.60%",
+          "−17.57%",
+          "+62.54%",
+          "119.55%"
+        ],
+        [
+          "HYPE",
+          "65.888",
+          "−10.18%",
+          "−16.32%",
+          "−10.05%",
+          "84.23%"
+        ],
+        [
+          "PEPE",
+          "0.0000037036",
+          "−25.28%",
+          "−10.00%",
+          "+15.38%",
+          "129.48%"
+        ],
+        [
+          "DOGE",
+          "0.05874",
+          "−14.93%",
+          "−25.70%",
+          "−26.78%",
+          "59.44%"
+        ],
+        [
+          "SOL",
+          "73.48",
+          "−13.39%",
+          "−29.44%",
+          "−15.90%",
+          "61.38%"
+        ],
+        [
+          "NEAR",
+          "3.211",
+          "−14.33%",
+          "−34.58%",
+          "+84.86%",
+          "99.98%"
+        ],
+        [
+          "UNI",
+          "5.104",
+          "−21.67%",
+          "−30.02%",
+          "+37.95%",
+          "92.22%"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "OKX native close",
+          "OKX UTC close",
+          "Massive USD close",
+          "UTC difference"
+        ],
+        [
+          "BTC",
+          "63,123.6",
+          "64,947.80",
+          "64,873.18",
+          "0.115%"
+        ],
+        [
+          "ETH",
+          "1,768.48",
+          "1,825.11",
+          "1,822.77",
+          "0.128%"
+        ],
+        [
+          "XRP",
+          "0.9767",
+          "0.9836",
+          "0.9828",
+          "0.081%"
+        ],
+        [
+          "SOL",
+          "73.48",
+          "75.19",
+          "75.12",
+          "0.093%"
+        ],
+        [
+          "ZEC",
+          "928.11",
+          "968.45",
+          "967.68",
+          "0.080%"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "BTC beta",
+          "R² (first 78)",
+          "30D adjusted log return",
+          "Mean on BTC-down days",
+          "Mean on 10 worst BTC days"
+        ],
+        [
+          "BTC",
+          "1.00",
+          "100.0%",
+          "+0.00%",
+          "−1.43%",
+          "−3.76%"
+        ],
+        [
+          "ETH",
+          "1.10",
+          "75.4%",
+          "−1.64%",
+          "−1.76%",
+          "−4.98%"
+        ],
+        [
+          "XRP",
+          "1.64",
+          "68.4%",
+          "+14.41%",
+          "−2.18%",
+          "−4.61%"
+        ],
+        [
+          "ZEC",
+          "1.42",
+          "22.3%",
+          "+17.72%",
+          "−1.41%",
+          "−6.48%"
+        ],
+        [
+          "HYPE",
+          "1.19",
+          "46.9%",
+          "+13.33%",
+          "−1.68%",
+          "−4.09%"
+        ],
+        [
+          "PEPE",
+          "2.24",
+          "64.3%",
+          "+47.86%",
+          "−2.67%",
+          "−6.91%"
+        ],
+        [
+          "DOGE",
+          "1.44",
+          "63.7%",
+          "+7.83%",
+          "−2.11%",
+          "−5.74%"
+        ],
+        [
+          "SOL",
+          "1.28",
+          "69.5%",
+          "−1.41%",
+          "−1.86%",
+          "−5.24%"
+        ],
+        [
+          "NEAR",
+          "1.43",
+          "21.6%",
+          "−5.08%",
+          "−1.82%",
+          "−5.96%"
+        ],
+        [
+          "UNI",
+          "1.41",
+          "27.1%",
+          "+1.04%",
+          "−2.15%",
+          "−6.99%"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "SMA20 dist.",
+          "SMA50 dist.",
+          "SMA100 dist.",
+          "RV7",
+          "RV60",
+          "RV30 pctile",
+          "ATR14 / price",
+          "Max DD",
+          "Volume ratio"
+        ],
+        [
+          "BTC",
+          "−13.41%",
+          "−19.84%",
+          "−18.87%",
+          "32.2%",
+          "38.1%",
+          "67.1",
+          "4.39%",
+          "−26.96%",
+          "1.54×"
+        ],
+        [
+          "ETH",
+          "−15.63%",
+          "−24.19%",
+          "−25.49%",
+          "35.2%",
+          "49.4%",
+          "93.7",
+          "6.23%",
+          "−35.82%",
+          "1.07×"
+        ],
+        [
+          "XRP",
+          "−12.98%",
+          "−23.30%",
+          "−25.54%",
+          "47.0%",
+          "55.4%",
+          "36.7",
+          "6.13%",
+          "−39.58%",
+          "1.25×"
+        ],
+        [
+          "ZEC",
+          "−17.02%",
+          "−22.47%",
+          "−16.29%",
+          "83.5%",
+          "107.7%",
+          "75.9",
+          "11.68%",
+          "−44.74%",
+          "0.79×"
+        ],
+        [
+          "HYPE",
+          "−14.45%",
+          "−18.51%",
+          "−17.90%",
+          "67.8%",
+          "66.9%",
+          "100.0",
+          "7.56%",
+          "−30.58%",
+          "1.19×"
+        ],
+        [
+          "PEPE",
+          "−20.25%",
+          "−16.54%",
+          "−8.07%",
+          "108.9%",
+          "121.5%",
+          "92.4",
+          "12.16%",
+          "−32.65%",
+          "0.87×"
+        ],
+        [
+          "DOGE",
+          "−14.68%",
+          "−24.88%",
+          "−28.01%",
+          "56.2%",
+          "65.7%",
+          "34.2",
+          "6.30%",
+          "−41.60%",
+          "1.07×"
+        ],
+        [
+          "SOL",
+          "−13.98%",
+          "−26.16%",
+          "−26.35%",
+          "67.0%",
+          "57.4%",
+          "53.2",
+          "6.33%",
+          "−41.92%",
+          "1.24×"
+        ],
+        [
+          "NEAR",
+          "−12.94%",
+          "−27.50%",
+          "−8.67%",
+          "96.6%",
+          "110.0%",
+          "17.7",
+          "9.25%",
+          "−45.85%",
+          "0.79×"
+        ],
+        [
+          "UNI",
+          "−20.98%",
+          "−29.02%",
+          "−22.82%",
+          "106.3%",
+          "81.6%",
+          "38.0",
+          "9.90%",
+          "−47.51%",
+          "0.91×"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "Qualifying dates",
+          "After signal",
+          "All dates"
+        ],
+        [
+          "ETH",
+          "5",
+          "+0.06%",
+          "−1.10%"
+        ],
+        [
+          "XRP",
+          "2",
+          "−2.11%",
+          "−1.50%"
+        ],
+        [
+          "ZEC",
+          "3",
+          "+7.62%",
+          "+2.65%"
+        ],
+        [
+          "HYPE",
+          "3",
+          "−6.53%",
+          "−0.04%"
+        ],
+        [
+          "PEPE",
+          "5",
+          "−4.59%",
+          "+2.32%"
+        ],
+        [
+          "DOGE",
+          "1",
+          "−7.32%",
+          "−1.39%"
+        ],
+        [
+          "SOL",
+          "4",
+          "+0.65%",
+          "−1.34%"
+        ],
+        [
+          "NEAR",
+          "4",
+          "+16.58%",
+          "+5.89%"
+        ],
+        [
+          "UNI",
+          "4",
+          "+1.76%",
+          "+1.09%"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "Circulating (native units)",
+          "Reported total",
+          "Reported max.",
+          "Circulating / total"
+        ],
+        [
+          "BTC",
+          "20,113,584",
+          "20,113,584",
+          "21,000,000",
+          "100.00%"
+        ],
+        [
+          "ETH",
+          "122,230,379",
+          "122,230,379",
+          "Not stated",
+          "100.00%"
+        ],
+        [
+          "XRP",
+          "63,516,606,953",
+          "99,985,583,260",
+          "100,000,000,000",
+          "63.53%"
+        ],
+        [
+          "ZEC",
+          "17,048,694",
+          "17,048,811",
+          "21,000,000",
+          "100.00%"
+        ],
+        [
+          "HYPE",
+          "237,707,639",
+          "949,839,097",
+          "1,000,000,000",
+          "25.03%"
+        ],
+        [
+          "PEPE",
+          "420,690,000,000,000",
+          "420,690,000,000,000",
+          "420,690,000,000,000",
+          "100.00%"
+        ],
+        [
+          "DOGE",
+          "156,801,692,860",
+          "156,802,642,860",
+          "Not stated",
+          "100.00%"
+        ],
+        [
+          "SOL",
+          "591,794,769",
+          "637,798,831",
+          "Not stated",
+          "92.79%"
+        ],
+        [
+          "NEAR",
+          "1,312,061,697",
+          "1,312,061,743",
+          "Not stated",
+          "100.00%"
+        ],
+        [
+          "UNI",
+          "607,489,896",
+          "885,750,419",
+          "1,000,000,000",
+          "68.58%"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "OKX mean 8h funding",
+          "OKX latest 8h",
+          "OKX OI (USD)",
+          "Liquid OI (USD)",
+          "Liquid long share"
+        ],
+        [
+          "BTC",
+          "+0.00121%",
+          "+0.00635%",
+          "$2,172.40M",
+          "$2,568.66M",
+          "43%"
+        ],
+        [
+          "ETH",
+          "-0.00340%",
+          "-0.00348%",
+          "$1,228.69M",
+          "$1,088.61M",
+          "46%"
+        ],
+        [
+          "XRP",
+          "-0.00281%",
+          "+0.00126%",
+          "$74.18M",
+          "$70.70M",
+          "42%"
+        ],
+        [
+          "ZEC",
+          "+0.00352%",
+          "+0.00296%",
+          "$132.00M",
+          "$335.61M",
+          "46%"
+        ],
+        [
+          "HYPE",
+          "+0.00606%",
+          "+0.00173%",
+          "$93.16M",
+          "$1,258.15M",
+          "46%"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "Spread (bps)",
+          "Bid depth / 50 bps",
+          "Ask depth / 50 bps",
+          "Median 30D turnover"
+        ],
+        [
+          "BTC",
+          "0.016",
+          "1,213,664",
+          "1,667,742",
+          "533.60M"
+        ],
+        [
+          "ETH",
+          "0.056",
+          "1,624,277",
+          "1,539,694",
+          "254.84M"
+        ],
+        [
+          "XRP",
+          "1.020",
+          "1,088,570",
+          "1,013,335",
+          "35.33M"
+        ],
+        [
+          "ZEC",
+          "2.384",
+          "353,325",
+          "264,389",
+          "67.44M"
+        ],
+        [
+          "HYPE",
+          "0.148",
+          "288,670",
+          "182,613",
+          "34.44M"
+        ],
+        [
+          "PEPE",
+          "2.670",
+          "325,372",
+          "404,246",
+          "26.21M"
+        ],
+        [
+          "DOGE",
+          "1.695",
+          "716,289",
+          "745,463",
+          "21.01M"
+        ],
+        [
+          "SOL",
+          "1.352",
+          "1,559,301",
+          "1,225,326",
+          "67.88M"
+        ],
+        [
+          "NEAR",
+          "3.070",
+          "361,195",
+          "295,691",
+          "18.92M"
+        ],
+        [
+          "UNI",
+          "3.833",
+          "305,912",
+          "230,056",
+          "15.49M"
+        ]
+      ],
+      [
+        [
+          "Rule",
+          "Trades",
+          "Net NAV return",
+          "Open-mark max DD",
+          "Time invested",
+          "Gross turnover / initial NAV"
+        ],
+        [
+          "ZEC dual momentum",
+          "3",
+          "+1.134%",
+          "−0.361%",
+          "30%",
+          "16.17%"
+        ],
+        [
+          "ZEC 7D relative momentum",
+          "5",
+          "+1.046%",
+          "−0.607%",
+          "50%",
+          "26.11%"
+        ],
+        [
+          "ZEC weekly exposure",
+          "10",
+          "+0.863%",
+          "−1.077%",
+          "100%",
+          "50.99%"
+        ],
+        [
+          "ZEC passive hold",
+          "1",
+          "+0.501%",
+          "−1.802%",
+          "100%",
+          "5.52%"
+        ],
+        [
+          "Cash",
+          "0",
+          "+0.000%",
+          "+0.000%",
+          "0%",
+          "0.00%"
+        ],
+        [
+          "BTC passive hold",
+          "1",
+          "−0.119%",
+          "−0.426%",
+          "100%",
+          "4.89%"
+        ],
+        [
+          "BTC weekly exposure",
+          "10",
+          "−0.205%",
+          "−0.495%",
+          "100%",
+          "49.92%"
+        ],
+        [
+          "XRP resilience",
+          "2",
+          "−0.479%",
+          "−0.532%",
+          "20%",
+          "9.55%"
+        ],
+        [
+          "XRP simple dip",
+          "2",
+          "−0.479%",
+          "−0.532%",
+          "20%",
+          "9.55%"
+        ],
+        [
+          "XRP passive hold",
+          "1",
+          "−0.506%",
+          "−0.996%",
+          "100%",
+          "4.51%"
+        ],
+        [
+          "XRP weekly exposure",
+          "10",
+          "−0.551%",
+          "−1.056%",
+          "100%",
+          "49.56%"
+        ]
+      ],
+      [
+        [
+          "Model / entry–exit (UTC)",
+          "Gross asset return",
+          "Net contribution / model NAV"
+        ],
+        [
+          "ZEC · 09-02 → 09-09",
+          "+55.81%",
+          "+1.379%"
+        ],
+        [
+          "ZEC · 09-09 → 09-16",
+          "−1.75%",
+          "−0.056%"
+        ],
+        [
+          "ZEC · 09-23 → 09-30",
+          "−7.09%",
+          "−0.189%"
+        ],
+        [
+          "XRP · 10-28 → 11-04",
+          "+0.31%",
+          "−0.005%"
+        ],
+        [
+          "XRP · 11-04 → 11-11",
+          "−18.50%",
+          "−0.474%"
+        ]
+      ],
+      [
+        [
+          "Strategy",
+          "25 bps",
+          "50 bps",
+          "100 bps"
+        ],
+        [
+          "ZEC dual momentum",
+          "+1.154%",
+          "+1.134%",
+          "+1.093%"
+        ],
+        [
+          "ZEC 7D relative momentum",
+          "+1.079%",
+          "+1.046%",
+          "+0.981%"
+        ],
+        [
+          "XRP resilience",
+          "−0.467%",
+          "−0.479%",
+          "−0.502%"
+        ]
+      ],
+      [
+        [
+          "Hypothetical outcome",
+          "50 bps",
+          "100 bps",
+          "200 bps"
+        ],
+        [
+          "Total position loss",
+          "−2.111%",
+          "−2.116%",
+          "−2.127%"
+        ],
+        [
+          "−40% price shock",
+          "−0.851%",
+          "−0.859%",
+          "−0.876%"
+        ],
+        [
+          "Stop + gap allowance",
+          "−0.491%",
+          "−0.500%",
+          "−0.519%"
+        ],
+        [
+          "Stop, no further gap",
+          "−0.386%",
+          "−0.395%",
+          "−0.414%"
+        ],
+        [
+          "Flat",
+          "−0.011%",
+          "−0.021%",
+          "−0.042%"
+        ],
+        [
+          "+10% asset move",
+          "+0.200%",
+          "+0.188%",
+          "+0.166%"
+        ],
+        [
+          "+20% asset move",
+          "+0.410%",
+          "+0.398%",
+          "+0.375%"
+        ]
+      ]
+    ],
+    "alts": [],
+    "svgCount": 0,
+    "svgSha256": [],
+    "imageCount": 0,
+    "imageSha256": [],
+    "scriptCount": 1,
+    "scriptSha256": [
+      "24d84fa1cd4b1e59e4073212a7f5daf7f2face90befe0375518aa06e90d8db5f"
+    ]
+  },
   "crypto-edge-evidence-gap": {
     "text": "Independent Market Notes / InvestigationsMarket structure · Investigative analysisCrypto’s Missing Edge: When Evidence Stops ShortBitcoin and Ethereum showed stress, liquidity and violent positioning shifts. But a convincing market story is not the same as a tested trading advantage.November 16, 2026 · Historical investigation; observations are time-specific A market can be in unmistakable trouble and still refuse to give you a dependable trade. That was the tension running through Bitcoin and Ethereum on November 16, 2026. The charts were damaged, derivatives positions were being unwound, and both assets had recently suffered double-digit declines. Yet when the interesting story was forced through the less forgiving question—could those observations predict the next move better than doing nothing?—the evidence became distinctly less impressive. The distinction is more than academic. Crypto commentary often moves from a true observation to an implied trading instruction with astonishing speed. Funding turns positive, so longs must be crowded. Open interest falls, so the washout must be ending. A book displays millions in liquidity, so execution must be cheap. Those are tempting stories. They are not conclusions the underlying measurements can carry on their own. My central conclusion: the November evidence offered a credible diagnosis of a stressed market, but it did not establish an investable edge. The gap between describing risk and forecasting a return was the investigation's most consequential finding. A damaged trend beneath a lively tape Near 17:31 UTC on November 16, an aggregated market snapshot placed Bitcoin at roughly $64,843 and Ethereum at $1,824. Their reported seven-day changes were approximately −13.25% and −14.08%, respectively; thirty-day losses were closer to −20.14% and −24.13%. A contemporaneous crypto fear gauge read 13, in its extreme-fear category.1 Those prices are historical snapshots, not current quotations. The venue-specific OKX spot bars told a consistent but more nuanced story: BTC and ETH could show short-lived hourly improvement even while the four-hour, daily and weekly moving-average structures remained bearish. Over the latest completed daily lookback used in that examination, Bitcoin was well below its 20-day moving average, approximately 74,651 USDT. The problem was not a lack of intraday rebounds. It was the absence of convincing higher-timeframe repair. There is a perfectly reasonable bullish counterargument here. A sufficiently distressed market can rally hard once marginal sellers are exhausted. But a rally after forced liquidations is not automatically evidence that new spot buyers have built a lasting floor. What stands out to me is how easily those two phenomena get confused. Leverage tells us where pressure exists—not who is right Perpetual futures supplied some of the most revealing contradictions. On OKX, the latest sampled realized funding payment for BTC-USDT perpetuals was approximately +0.00615% per reported funding event, while ETH's was −0.00269%. Across 24 historical funding observations, BTC was positive 18 times; ETH was positive only 10 times. Funding signs also differed between venues in the current snapshots.2 A positive funding payment commonly means longs paid shorts under that contract's convention. It does not prove the buyer is a directional speculator: the position could hedge inventory, offset spot exposure, or form one leg of a relative-value trade. Neither the rate nor the account long/short ratio reveals who is actually carrying the risk. Hyperliquid's hourly-aggregated open-interest quantities slipped by about 0.38% for BTC and 0.47% for ETH across a roughly 24-hour comparison, even as their corresponding sampled mark prices increased modestly. That pairing is compatible with positions being closed into a rebound. It is not enough to decide whether shorts covered, longs reduced risk, or offsetting strategies rotated. Open interest contracted while marks roseHyperliquid perpetuals; hourly-aggregated endpoints, roughly Nov. 15–16, 2026. Percent change, not market-wide positioning. 0%+1%−1%−0.38%+0.44%−0.47%+0.93%BTCETHOpen-interest quantityMark price Calculated from the bounded historical observations. Price and open-interest changes do not identify the motivation or identity of counterparties. Source: Hyperliquid historical derivatives records. OKX perpetual funding, last 24 recorded events ending November 16, 16:00 UTCMeasureBTCETHLatest realized payment rate+0.00615%−0.00269%24-event mean+0.00418%−0.00137%Positive / negative events18 / 610 / 14 And the forced trades went in both directions. In one Hyperliquid BTC reporting bucket beginning at 12:00 UTC, historical liquidation records totaled roughly $24.2 million, including about $18.55 million in short liquidations. That is unmistakable stress for those positions, but a short-liquidation wave can produce a price rebound without resolving the larger downtrend. It is also a venue-specific observation, not a complete accounting of global liquidations.3 Price can rise because someone is forced to buy. That is not the same thing as a market attracting the buyers needed to keep it rising. The order book looks reassuring—until you ask what is executable The spot market seemed to offer a counterweight to that derivatives anxiety. At around 17:42 UTC, the OKX BTC-USDT book displayed a quoted spread of approximately 0.0154 basis points, with about $826,000 in visible bids and $1.50 million in visible asks across the first hundred levels on each side. ETH's equivalent snapshot showed a 0.0546-basis-point spread and approximately $2.40 million in bids versus $1.21 million in asks. That is displayed liquidity, not a promise of execution. The same orders can be cancelled, repriced or consumed before another participant reaches them. Nor does a single exchange's order book capture the broader market; wrapped assets, perpetual contracts and different quote currencies cannot be added together as if they were interchangeable pools. In a static calculation, a hypothetical $100,000 BTC buy walked the sampled ask book at an average price concession of approximately 0.335 basis points versus midprice; the ETH equivalent was about 0.840 basis points. Those small modeled concessions are interesting precisely because they are so easy to overstate. They exclude venue fees, latency, queue dynamics, changes in available size, and the adverse selection that often matters most during a sharp move. Hypothetical buys from November 16, roughly 17:42 UTC; estimated one-way concession versus sampled midpoint, excluding feesNotionalBTC–USDTETH–USDT$1,0000.008 bps0.027 bps$10,0000.008 bps0.027 bps$100,0000.335 bps0.840 bps The recent trade samples told another part of the story. Over two brief, unequal windows, both BTC and ETH showed roughly −24% signed traded-notional imbalance—more value transacted on the seller-initiated side than the buyer-initiated side. That can describe a moment of pressure. It cannot, without a larger synchronized record, become a durable order-flow forecasting model. The on-chain evidence does not settle the argument It is tempting to look to blockchain activity for a decisive arbiter: coins entering exchanges must be headed for sale, coins leaving must be entering strong hands. Neither shortcut is reliable. Transfers can represent custody reshuffling, internal wallet management, bridges, collateral moves or a change in beneficial ownership. Addresses are not people, and a transaction is not a motive. More fundamentally, one set of published BTC and ETH holder-bucket totals failed a supply-denominator consistency check: the summed BTC buckets were about 1.97 times the circulating-supply reference; the ETH equivalent was about 1.87 times. Different definitions, duplicated economic claims or reporting methods might explain an inconsistency, but the discrepancy cannot be silently converted into a reliable whale-concentration statistic. Ethereum block-height observations showed that the network continued producing blocks—7,185 block-height increments between a pair of November 15 boundary observations. Three sampled blocks, however, cannot establish a daily transaction census, let alone accumulation or exchange flows. The appropriate conclusion is limited: the market narrative about large holders remains unresolved by those measurements. The real test: did the measurements predict returns? Here the investigation took its most uncomfortable turn. A compact factor study considered six plausible market signals—six-hour momentum, 24-hour momentum, one-hour reversal, 24-hour realized volatility, a volume surprise measure, and the closing price's location within its candle. All are legitimate, precisely definable measurements. None should be called predictive until it improves forecasts of an explicitly defined future return. The subsequent four-hour forecasting experiment used completed hourly BTC-USDT and ETH-USDT candles and kept training, validation and later test periods separate. Among the models fitted, Bitcoin's best validation choice was not a sophisticated factor at all: it was a forecast of zero return. For Ethereum, a 24-hour momentum model won the short validation contest, then failed conspicuously on the held-out test. An appealing model can lose to predicting nothingFour-hour forward-return test RMSE, lower is better. 18 overlapping test outcomes per asset, November 2026. The model was selected using an earlier validation window. 015030054.154.181.1305.3BTCETHZero-return baselineSelected model Historical model-evaluation result, not a live forecast. Source: November 2026 completed OKX spot candles; chronological training/validation/test calculations. The small, overlapping holdout limits statistical interpretation. Out-of-sample four-hour return forecasting; root mean squared errorForecastBTCETHZero-return baseline54.12 bps81.07 bpsTraining-mean baseline81.72 bps117.48 bpsValidation-selected model54.12 bps305.27 bps The Ethereum model's average test forecast was about −291 basis points over four hours, while the sample's average realized four-hour return was nearly flat. The model had learned a relationship in one market condition and carried it into another with disastrous calibration. Bitcoin's zero-return selection at least refused to pretend there was a useful directional signal. This is not enough history for a grand statement that momentum, volatility or reversion never work in crypto. The test covered fewer than five days of hourly candles, and overlapping forward returns reduce the number of effectively independent observations. What it does establish is narrower, and more important: these particular fitted signals did not clear a basic evidence threshold in the observed period. When a sensible strategy never gets a chance to trade A natural response to weak forecasting is to make the rules stricter: demand an uptrend, a new high, and above-average participation before considering a breakout. That sounds prudent. It can also produce a strategy so selective that the available history contains no qualifying trades. That is what happened in the bounded signal reconstruction. The proposed long-only hourly breakout required price above the 50-hour exponential moving average, the 20-hour average above the 50-hour, a close above the previous 20-hour high, and elevated volume. Across 70 evaluated candles per asset, neither BTC nor ETH produced a complete entry signal. The 20-hour moving average did not exceed the 50-hour average on any evaluated bar. Zero trades are not a losing backtest. They are not a profitable backtest either. There is no observed win rate, trade expectancy, maximum strategy drawdown or net Sharpe ratio to quote. No honest argument can manufacture them from a well-written trading rule. Even if a later regime supplies entries, the cost question remains. Under one illustrative assumption of 10 basis points in taker fees and 5 basis points in slippage on each side, a round trip requires about 30 basis points of gross price movement merely to cover modeled charges. A stressed version doubles that hurdle to 60 basis points; a severe case takes it to 120. These are scenario assumptions, not measured exchange-account costs. Diversification turns fragile when everything shares the same shock There is one more misleading comfort in crypto: owning two large assets can feel diversified because the tickers differ. In a 118-return sample of completed daily BTC and ETH spot observations, their correlation was approximately 0.894. Across the latest 30 returns it was approximately 0.940. That does not imply perfect future co-movement, but it leaves little room to imagine ETH as an independent shock absorber for BTC in the sampled conditions. The worst completed daily BTC return observed in that span was approximately −5.31%; ETH's was around −7.16%. Hypothetical allocations combining the two consequently carried meaningful common-direction risk. In an explicitly imagined severe shock of BTC down 60% and ETH down 70%, a portfolio with 5% exposure to each asset would lose 6.5% of starting value before secondary frictions, while a portfolio with 25% in each would lose 32.5%. Neither number is a prediction or an upper bound. Small allocations reduce exposure, not correlated tail riskHypothetical instantaneous scenario: BTC −60%, ETH −70%, remaining stable-value holdings unchanged. Percentage of starting portfolio value lost.5% BTC + 5% ETH6.5%25% BTC + 25% ETH32.5%Scenario only. Bar lengths scaled to 32.5% loss as maximum displayed value.Illustrative static-weight arithmetic, not historical realized portfolio losses. Funding, liquidation mechanics, depegs and custody failures require separate modeling. Those scenarios also reveal why risk cannot be reduced to volatility alone. An exchange can become inaccessible while prices are still quoted. A stablecoin can lose its peg. A liquidation event can take place between price observations. The nominal stop-loss level someone writes into a plan is not the same as the level they are guaranteed to receive in a disorderly market. The best objection is that the market may have already turned There is a strong alternative interpretation of the November evidence: leverage was contracting, short liquidations were substantial in some intervals, and small-price-discount perpetuals might have been signaling that the forced-selling phase was already giving way to a reset. If buyers return while open interest stays restrained, a relief rally can become something more durable. That possibility should not be dismissed. But it has to earn its status as a forecast. I would want to see replenishing spot bids after aggressive selling, durable improvement across venues, stabilization in the broader trend, and a return relationship that survives untouched historical tests after realistic costs. Without those observations lining up, a plausible recovery remains one possible narrative among several. Three defensible scenarios, none assigned a probabilityRecovery: The higher-timeframe trend repairs while spot participation strengthens. This would weaken the case that rallies are merely liquidation-driven.Choppy reset: Open interest continues to contract and price consolidates without a durable new trend. This is consistent with de-risking, not necessarily with an investable rebound.Renewed stress: Selling overwhelms visible bids, leverage rebuilds into weakness, and the earlier observed BTC spot region around 62,000 USDT is revisited or broken. That reference is a historical price zone, not a mapped liquidation cluster. A good explanation has to survive a bad test My takeaway is not that markets are unknowable or that quantitative signals are useless. It is that the standard for believing a market story should change the moment money, leverage and execution enter the picture. November's BTC and ETH data described something real: a bruised trend, inconsistent positioning signals, fleeting pockets of liquidity, and assets that moved together when stress mattered. But the tested predictive relationships did not graduate from interesting measurements to dependable forecasts. The breakout hypothesis produced no qualifying trades in the bounded sample, and the modeled costs would still need to be paid if it ever did. There is a discipline in leaving that verdict unresolved. If the recovery develops, better evidence can strengthen the case. If the market falls further, the same framework can expose what changed. Either way, I would rather hold an incomplete conclusion to a complete standard than dress up a convincing explanation as a proven edge. Sources and measurement notes Market prices and sentiment. November 16, 2026 aggregated BTC/ETH price, seven-day and thirty-day change observations and fear reading. Provider context: CoinMarketCap. Values are time-bounded and may differ from spot prices on an individual USDT venue. Venue funding, prices and contract definitions. Historical BTC/ETH USDT-margined funding observations and completed spot OHLCV on OKX. Funding percentages are per reported event, not annualized. Daily candles can use a UTC+8 opening boundary; historical aggregation must preserve that convention. Perpetual positioning and liquidations. Hyperliquid hourly open-interest aggregates and historical liquidation reporting in the November 15–16 observation interval, accessed through 0xArchive. Liquidation observations are exchange-specific, not a global total. Spot liquidity. OKX BTC-USDT and ETH-USDT order-book snapshots and short recent-trade samples, November 16 approximately 17:42 UTC. Static-book sweep arithmetic estimates a quote-weighted fill against displayed levels only; neither the figures nor the diagrams imply actual execution. Holder and blockchain context. CoinMarketCap holder estimates and Blockscout Ethereum block-height observations. The reported holder bucket totals did not reconcile against circulating-supply references; no concentration conclusion is drawn from them. Forecast and risk calculations. November 2026 bounded BTC/ETH completed OKX spot-candle samples. A 119-bar hourly window underlies the exploratory factor and four-hour forecast comparisons; a separate 118-return daily window underlies reported covariance and observed worst daily returns. Small samples, dependent horizons and changes in market regime limit generalization. Model results are historical diagnostic findings, not current trading signals. Editorial scenarios are conditional illustrations, not probability-calibrated forecasts. No chart on this page depicts an unreported exchange order, hidden market liquidity, or personal investment activity.",
     "headings": [

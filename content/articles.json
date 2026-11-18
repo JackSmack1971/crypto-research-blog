@@ -1,5 +1,31 @@
 [
   {
+    "slug": "zcash-momentum-single-trade-test",
+    "source": "zcash-momentum-single-trade-test.html",
+    "date": "2026-11-18",
+    "title": "Zcash’s Momentum Test Turned on a Single Trade",
+    "dek": "A November 18 screen of ten liquid crypto pairs found relative strength inside a broad selloff. A historical simulation exposed why none qualified for a trade.",
+    "topic": "risk-verification",
+    "assets": [
+      "BTC",
+      "ETH",
+      "XRP",
+      "ZEC",
+      "HYPE",
+      "PEPE",
+      "DOGE",
+      "SOL",
+      "NEAR",
+      "UNI"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/zcash-momentum-single-trade-test.jpg",
+    "image_alt": "Conceptual editorial illustration of a precarious slate beam supported by one copper pillar, with detached blocks below, symbolizing a profitable historical result dependent on one exceptional trade; not a price chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "crypto-edge-evidence-gap",
     "source": "crypto-edge-evidence-gap.html",
     "date": "2026-11-16",

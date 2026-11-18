@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "zcash-momentum-single-trade-test": {
+      "title": "Zcash’s Momentum Test Turned on a Single Trade",
+      "description": "A November 18, 2026 crypto market investigation compares ZEC, XRP and HYPE, tests momentum against simpler rules, and reveals the danger of single-trade profitability.",
+      "canonical": "https://independent-market-notes.netlify.app/zcash-momentum-single-trade-test/",
+      "og:title": "Zcash’s Momentum Test Turned on a Single Trade",
+      "og:description": "A November 18, 2026 crypto market investigation compares ZEC, XRP and HYPE, tests momentum against simpler rules, and reveals the danger of single-trade profitability.",
+      "og:url": "https://independent-market-notes.netlify.app/zcash-momentum-single-trade-test/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "crypto-edge-evidence-gap": {
       "title": "Crypto’s Missing Edge: When Evidence Stops Short",
       "description": "November 16 evidence from BTC, ETH, derivatives, spot liquidity and model tests reveals why market conviction can outrun predictive proof.",
@@ -462,6 +472,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Zcash’s Momentum Test Turned on a Single Trade",
+      "link": "https://independent-market-notes.netlify.app/zcash-momentum-single-trade-test/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/zcash-momentum-single-trade-test/",
+      "description": "A November 18 screen of ten liquid crypto pairs found relative strength inside a broad selloff. A historical simulation exposed why none qualified for a trade."
+    },
     {
       "title": "Crypto’s Missing Edge: When Evidence Stops Short",
       "link": "https://independent-market-notes.netlify.app/crypto-edge-evidence-gap/",
