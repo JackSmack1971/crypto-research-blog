@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bitcoin-bearish-trap",
+    "source": "bitcoin-bearish-trap.html",
+    "date": "2026-11-19",
+    "title": "Bitcoin’s Bearish Trap: Weakness Is Not a Short Signal",
+    "dek": "Six days of falling prices, renewed ETF withdrawals and aggressive derivatives selling tell a bearish story. The harder question is whether that story offers a viable trade.",
+    "topic": "market-structure",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-bearish-trap.jpg",
+    "image_alt": "Editorial illustration of a weathered copper Bitcoin disk on fractured descending slate beside a balance holding a feather, symbolizing conflicting market forces.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "zcash-momentum-single-trade-test",
     "source": "zcash-momentum-single-trade-test.html",
     "date": "2026-11-18",

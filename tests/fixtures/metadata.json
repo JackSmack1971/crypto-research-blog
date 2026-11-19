@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-bearish-trap": {
+      "title": "Bitcoin’s Bearish Trap: Weakness Is Not a Short Signal",
+      "description": "Bitcoin fell below $64,000 in November 2026. Exchange flows, ETF withdrawals and trading-cost analysis reveal why bearish evidence alone cannot justify a short.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-bearish-trap/",
+      "og:title": "Bitcoin’s Bearish Trap: Weakness Is Not a Short Signal",
+      "og:description": "Bitcoin fell below $64,000 in November 2026. Exchange flows, ETF withdrawals and trading-cost analysis reveal why bearish evidence alone cannot justify a short.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-bearish-trap/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "zcash-momentum-single-trade-test": {
       "title": "Zcash’s Momentum Test Turned on a Single Trade",
       "description": "A November 18, 2026 crypto market investigation compares ZEC, XRP and HYPE, tests momentum against simpler rules, and reveals the danger of single-trade profitability.",
@@ -472,6 +482,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Bearish Trap: Weakness Is Not a Short Signal",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-bearish-trap/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-bearish-trap/",
+      "description": "Six days of falling prices, renewed ETF withdrawals and aggressive derivatives selling tell a bearish story. The harder question is whether that story offers a viable trade."
+    },
     {
       "title": "Zcash’s Momentum Test Turned on a Single Trade",
       "link": "https://independent-market-notes.netlify.app/zcash-momentum-single-trade-test/",
