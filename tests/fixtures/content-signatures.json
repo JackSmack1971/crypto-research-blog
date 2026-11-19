@@ -525,7 +525,9 @@
         ]
       ]
     ],
-    "alts": [],
+    "alts": [
+      "Editorial illustration of a weathered copper Bitcoin disk on fractured descending slate beside a balance holding a feather, symbolizing conflicting market forces."
+    ],
     "svgCount": 6,
     "svgSha256": [
       "4111e37524b2b570a0cd2a362f139b93198db4800adea1fa74533d708c2a7033",
@@ -535,8 +537,10 @@
       "e0191abd8ed1b7dda1680a1f505ada4580b3d740d8496a5c3a6150e1a1fba635",
       "9526d3a8be55f66572f6850601d368b22427974954086206bed9430b9f4568fb"
     ],
-    "imageCount": 0,
-    "imageSha256": [],
+    "imageCount": 1,
+    "imageSha256": [
+      "664ad53dd5afce4c8ca8ea1e5c1aa7f788c01d292d3c4ab6246be9eb06e98ab8"
+    ],
     "scriptCount": 1,
     "scriptSha256": [
       "d369fe33bbd50c9456bd953472a6562e37dd95aa0b90f155d649c61ea7666077"
