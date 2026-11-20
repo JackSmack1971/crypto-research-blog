@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-bottom-when-selling-stops-working": {
+      "title": "Bitcoin’s Bottom Is Not a Price. It Is a Change in Market Behavior.",
+      "description": "A November 20, 2026 investigation into Bitcoin’s potential bottom, realized price, ETF flows, deleveraging and the evidence needed to confirm a recovery.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-bottom-when-selling-stops-working/",
+      "og:title": "Bitcoin’s Bottom Is Not a Price. It Is a Change in Market Behavior.",
+      "og:description": "A November 20, 2026 investigation into Bitcoin’s potential bottom, realized price, ETF flows, deleveraging and the evidence needed to confirm a recovery.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-bottom-when-selling-stops-working/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "relative-strength-liquidity-trap-november-2026": {
       "title": "When Losing Less Becomes a Trading Trap",
       "description": "TRON outperformed Bitcoin in November 2026, yet its OKX spot turnover failed a proposed liquidity screen. An evidence-led investigation into what relative strength hides.",
@@ -492,6 +502,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Bottom Is Not a Price. It Is a Change in Market Behavior.",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-bottom-when-selling-stops-working/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-bottom-when-selling-stops-working/",
+      "description": "With Bitcoin testing its June low, the distinction between capitulation and genuine demand recovery matters more than any calendar prediction."
+    },
     {
       "title": "When Losing Less Becomes a Trading Trap",
       "link": "https://independent-market-notes.netlify.app/relative-strength-liquidity-trap-november-2026/",
