@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "relative-strength-liquidity-trap-november-2026": {
+      "title": "When Losing Less Becomes a Trading Trap",
+      "description": "TRON outperformed Bitcoin in November 2026, yet its OKX spot turnover failed a proposed liquidity screen. An evidence-led investigation into what relative strength hides.",
+      "canonical": "https://independent-market-notes.netlify.app/relative-strength-liquidity-trap-november-2026/",
+      "og:title": "When Losing Less Becomes a Trading Trap",
+      "og:description": "TRON outperformed Bitcoin in November 2026, yet its OKX spot turnover failed a proposed liquidity screen. An evidence-led investigation into what relative strength hides.",
+      "og:url": "https://independent-market-notes.netlify.app/relative-strength-liquidity-trap-november-2026/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-bearish-trap": {
       "title": "Bitcoin’s Bearish Trap: Weakness Is Not a Short Signal",
       "description": "Bitcoin fell below $64,000 in November 2026. Exchange flows, ETF withdrawals and trading-cost analysis reveal why bearish evidence alone cannot justify a short.",
@@ -482,6 +492,12 @@
     }
   },
   "rss": [
+    {
+      "title": "When Losing Less Becomes a Trading Trap",
+      "link": "https://independent-market-notes.netlify.app/relative-strength-liquidity-trap-november-2026/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/relative-strength-liquidity-trap-november-2026/",
+      "description": "TRON held up better than Bitcoin during a violent crypto selloff, but a closer look at venue liquidity complicates the defensive narrative."
+    },
     {
       "title": "Bitcoin’s Bearish Trap: Weakness Is Not a Short Signal",
       "link": "https://independent-market-notes.netlify.app/bitcoin-bearish-trap/",

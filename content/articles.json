@@ -1,5 +1,28 @@
 [
   {
+    "slug": "relative-strength-liquidity-trap-november-2026",
+    "source": "relative-strength-liquidity-trap-november-2026.html",
+    "date": "2026-11-20",
+    "title": "When Losing Less Becomes a Trading Trap",
+    "dek": "TRON held up better than Bitcoin during a violent crypto selloff, but a closer look at venue liquidity complicates the defensive narrative.",
+    "topic": "liquidity",
+    "assets": [
+      "TRX",
+      "BTC",
+      "ETH",
+      "SOL",
+      "XRP",
+      "BNB",
+      "HYPE"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/relative-strength-liquidity-trap-november-2026.jpg",
+    "image_alt": "A green rocky island above a stormy sea with its cracked, crumbling foundation visible below the waterline and red market candlesticks in the clouds",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "bitcoin-bearish-trap",
     "source": "bitcoin-bearish-trap.html",
     "date": "2026-11-19",
