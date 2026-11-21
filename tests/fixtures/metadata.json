@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "monday-market-selloff-crypto-liquidity-test": {
+      "title": "The Market Broke on Friday. Crypto’s Next Test Is Whether Liquidity Breaks With It.",
+      "description": "An evidence-led analysis of the November 20, 2026 U.S. equity selloff, Treasury yields, VIX, and the conditional liquidity risks for crypto markets ahead of November 23.",
+      "canonical": "https://independent-market-notes.netlify.app/monday-market-selloff-crypto-liquidity-test/",
+      "og:title": "The Market Broke on Friday. Crypto’s Next Test Is Whether Liquidity Breaks With It.",
+      "og:description": "An evidence-led analysis of the November 20, 2026 U.S. equity selloff, Treasury yields, VIX, and the conditional liquidity risks for crypto markets ahead of November 23.",
+      "og:url": "https://independent-market-notes.netlify.app/monday-market-selloff-crypto-liquidity-test/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-bottom-when-selling-stops-working": {
       "title": "Bitcoin’s Bottom Is Not a Price. It Is a Change in Market Behavior.",
       "description": "A November 20, 2026 investigation into Bitcoin’s potential bottom, realized price, ETF flows, deleveraging and the evidence needed to confirm a recovery.",
@@ -502,6 +512,12 @@
     }
   },
   "rss": [
+    {
+      "title": "The Market Broke on Friday. Crypto’s Next Test Is Whether Liquidity Breaks With It.",
+      "link": "https://independent-market-notes.netlify.app/monday-market-selloff-crypto-liquidity-test/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/monday-market-selloff-crypto-liquidity-test/",
+      "description": "After a sharp U.S. equity selloff and a surge in expected volatility, the decisive question for digital assets is not whether fear spreads, but how funding, leverage and market depth respond."
+    },
     {
       "title": "Bitcoin’s Bottom Is Not a Price. It Is a Change in Market Behavior.",
       "link": "https://independent-market-notes.netlify.app/bitcoin-bottom-when-selling-stops-working/",
