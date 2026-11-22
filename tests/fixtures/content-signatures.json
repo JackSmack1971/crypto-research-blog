@@ -339,14 +339,18 @@
         ]
       ]
     ],
-    "alts": [],
+    "alts": [
+      "Conceptual still life of a heavily marked brass counting drum over two stone water basins linked by a narrow sluice, illustrating how repeated trading activity differs from liquidity available at one moment; not market data."
+    ],
     "svgCount": 2,
     "svgSha256": [
       "01aaef1bacc0a765a526a6f4177fc6630e744597bda85272655a7969b7a31fc6",
       "0575b029a506576630f694d86e4b50cf2aa43d86e42c29005ad91392bf6a79f5"
     ],
-    "imageCount": 0,
-    "imageSha256": [],
+    "imageCount": 1,
+    "imageSha256": [
+      "9b2d9acb7e6e2abeda91825fc42586cb385ff23881b425d2d0c0a15ca2b311ad"
+    ],
     "scriptCount": 0,
     "scriptSha256": []
   },
