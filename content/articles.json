@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bitcoin-2026-breakout-failure-etf-reversal",
+    "source": "bitcoin-2026-breakout-failure-etf-reversal.html",
+    "date": "2026-11-22",
+    "title": "Bitcoin’s September High Met November’s ETF Exodus",
+    "dek": "From $86,603 to $60,094 in 62 days, Bitcoin’s collapse exposed a harder question: did leveraged selling clear the market, or did spot demand retreat with it?",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-2026-breakout-failure-etf-reversal.jpg",
+    "image_alt": "Editorial illustration of a copper-and-stone financial bridge fracturing into a dark chasm, with copper panels falling away; a metaphor for Bitcoin’s failed rally and reversal in ETF demand, not a price chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "dacity-the-contract-was-not-the-whole-risk",
     "source": "dacity-the-contract-was-not-the-whole-risk.html",
     "date": "2026-11-22",

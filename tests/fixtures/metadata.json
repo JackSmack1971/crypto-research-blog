@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-2026-breakout-failure-etf-reversal": {
+      "title": "Bitcoin’s September High Met November’s ETF Exodus",
+      "description": "A documented investigation of Bitcoin’s September 21–November 21, 2026 decline, ETF outflows, macro stress, and the evidence still missing from the bottom thesis.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-2026-breakout-failure-etf-reversal/",
+      "og:title": "Bitcoin’s September High Met November’s ETF Exodus",
+      "og:description": "A documented investigation of Bitcoin’s September 21–November 21, 2026 decline, ETF outflows, macro stress, and the evidence still missing from the bottom thesis.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-2026-breakout-failure-etf-reversal/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "dacity-the-contract-was-not-the-whole-risk": {
       "title": "DACITY: The Contract Was Not the Whole Risk",
       "description": "A forensic examination of DacityCoin's launch wallets, locked-liquidity claims, reward mechanics and volatile GTA VI trading—with the distinction between red flags and proof intact.",
@@ -522,6 +532,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s September High Met November’s ETF Exodus",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-2026-breakout-failure-etf-reversal/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-2026-breakout-failure-etf-reversal/",
+      "description": "From $86,603 to $60,094 in 62 days, Bitcoin’s collapse exposed a harder question: did leveraged selling clear the market, or did spot demand retreat with it?"
+    },
     {
       "title": "DACITY: The Contract Was Not the Whole Risk",
       "link": "https://independent-market-notes.netlify.app/dacity-the-contract-was-not-the-whole-risk/",
