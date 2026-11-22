@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-55130-who-bought-the-flush": {
+      "title": "Bitcoin Rebounded at $55,130. The Tape Still Won&#8217;t Name the Buyer.",
+      "description": "Binance and OKX show Bitcoin recovering while aggressive sellers remained in control of volume. The evidence supports absorption at the low—but not the identity or staying power of the buyers.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-55130-who-bought-the-flush/",
+      "og:title": "Bitcoin Rebounded at $55,130. The Tape Still Won’t Name the Buyer.",
+      "og:description": "Binance and OKX show Bitcoin recovering while aggressive sellers remained in control of volume. The evidence supports absorption at the low—but not the identity or staying power of the buyers.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-55130-who-bought-the-flush/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-2026-breakout-failure-etf-reversal": {
       "title": "Bitcoin’s September High Met November’s ETF Exodus",
       "description": "A documented investigation of Bitcoin’s September 21–November 21, 2026 decline, ETF outflows, macro stress, and the evidence still missing from the bottom thesis.",
@@ -532,6 +542,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin Rebounded at $55,130. The Tape Still Won’t Name the Buyer.",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-55130-who-bought-the-flush/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-55130-who-bought-the-flush/",
+      "description": "Binance and OKX show Bitcoin recovering while aggressive sellers remained in control of volume. The evidence supports absorption at the low—but not the identity or staying power of the buyers."
+    },
     {
       "title": "Bitcoin’s September High Met November’s ETF Exodus",
       "link": "https://independent-market-notes.netlify.app/bitcoin-2026-breakout-failure-etf-reversal/",
