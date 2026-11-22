@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "dacity-the-contract-was-not-the-whole-risk": {
+      "title": "DACITY: The Contract Was Not the Whole Risk",
+      "description": "A forensic examination of DacityCoin's launch wallets, locked-liquidity claims, reward mechanics and volatile GTA VI trading—with the distinction between red flags and proof intact.",
+      "canonical": "https://independent-market-notes.netlify.app/dacity-the-contract-was-not-the-whole-risk/",
+      "og:title": "DACITY: The Contract Was Not the Whole Risk",
+      "og:description": "A forensic examination of DacityCoin's launch wallets, locked-liquidity claims, reward mechanics and volatile GTA VI trading—with the distinction between red flags and proof intact.",
+      "og:url": "https://independent-market-notes.netlify.app/dacity-the-contract-was-not-the-whole-risk/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "monday-market-selloff-crypto-liquidity-test": {
       "title": "The Market Broke on Friday. Crypto’s Next Test Is Whether Liquidity Breaks With It.",
       "description": "An evidence-led analysis of the November 20, 2026 U.S. equity selloff, Treasury yields, VIX, and the conditional liquidity risks for crypto markets ahead of November 23.",
@@ -512,6 +522,12 @@
     }
   },
   "rss": [
+    {
+      "title": "DACITY: The Contract Was Not the Whole Risk",
+      "link": "https://independent-market-notes.netlify.app/dacity-the-contract-was-not-the-whole-risk/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/dacity-the-contract-was-not-the-whole-risk/",
+      "description": "A token can have reassuring permissions, apparently protected liquidity and a functioning sell market—and still leave the hardest questions about its launch unanswered."
+    },
     {
       "title": "The Market Broke on Friday. Crypto’s Next Test Is Whether Liquidity Breaks With It.",
       "link": "https://independent-market-notes.netlify.app/monday-market-selloff-crypto-liquidity-test/",
