@@ -1,4 +1,355 @@
 {
+  "crypto-liquidity-basics-liquidity-versus-daily-volume": {
+    "text": "Liquidity / Market structure / InvestigationCrypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell IntoA real pair of spot order books reveals what turnover totals leave out: available bids, available asks, and the price of crossing them for a specified trade size.November 22, 2026 · Dated spot snapshots, not live market quotes · BTC-USDT and ETH-USDT I can point to a big trading-volume number and still be unable to tell you what a sale will fetch. In a November 22 spot-market reading, a provider attributed 432.42 million USDT of rolling 24-hour BTC-USDT turnover to OKX. Roughly 27 seconds later, the first 60 bid levels returned for the same pair added up to 287,623.59 USDT of displayed orders. I do not divide one figure by the other and call the result liquidity. One measures yesterday’s passing trade flow; the other captures a limited slice of what was displayed at one instant. [1–3] The distinction is useful precisely because these numbers sound comparable. Both are expressed in USDT, and both refer to the same spot pair and venue attribution. But they have different clocks, denominators and meanings. Neither number, alone, tells me the cost of selling a specified amount now. Turnover is a record of activity, not an open invitation to trade Daily volume adds up trades completed over a rolling window. It can count repeated buying and selling of the same inventory. Order-book depth is different: bids are displayed offers to buy and asks are displayed offers to sell, distributed across price levels. A seller needs bids; a buyer needs asks. A narrow quoted spread measures the closest prices, not how much size can cross them. REPORTED: The provider’s two spot tickers returned 432,422,145.31 USDT in BTC-USDT 24-hour quote turnover at 16:13:06.670 UTC, and 182,983,067.99 USDT for ETH-USDT at 16:13:05.566 UTC. Under OKX’s documented spot ticker convention, the volCcy24h field denotes quote-currency volume. These values were not reconciled against native trade IDs or adjusted for possible wash trading. [1, 2] I deliberately keep those turnover totals out of a bar chart with depth. Placing millions of historical flow beside thousands of instantaneous resting orders on one scale would create a dramatic picture without making them the same quantity. A snapshot answers the next question—only partly The separate order-book responses arrived later: 16:13:33.752 UTC for BTC-USDT and 16:13:36.705 UTC for ETH-USDT. Both were attributed to OKX by the connected market-data adapter. BTC’s best bid and ask were 61,049.4 and 61,049.5 USDT per BTC; ETH’s were 1,719.60 and 1,719.61 USDT per ETH. That yields quoted midpoint-relative spreads of approximately 0.0164 and 0.0582 basis points, respectively. A basis point is 0.01%. [2–4] What the 60 returned price levels showed was not full market depth. The farthest listed prices on both sides of each pair were still inside 1% of the midpoint. The responses therefore did not reach either the 1% or 2% boundary. I can add up the levels I saw, but I cannot call the sum the complete 1% or 2% book. Visible notional in the first 60 order book levels for BTC-USDT and ETH-USDTBTC displayed 288 thousand USDT on bids and 197 thousand on asks; ETH 334 thousand bids and 480 thousand asks. These are truncated-book totals and only lower bounds within 1% and 2% price bands.First 60 displayed levels per side (thousand USDT)0100200300400500BTC bid288kBTC ask197kETH bid334kETH ask480kSnapshot only; 1% / 2% band boundaries NOT reachedFigure 1. Observed notional of the first 60 returned bid and ask price levels per spot pair, USDT. The bars start at zero. Their totals are truncated-book lower bounds inside the 1% and 2% midpoint bands, not full-band liquidity or executable guarantees. Source: provider-mediated, OKX-attributed spot books, November 22, 2026, 16:13:33–36 UTC; calculations sum price × displayed base size. Numerical table below. Figure 1 data: displayed first-60-level book notional, November 22, 2026; USDT, per sidePair · sideSnapshot time60th-level price (USDT/base)Displayed notional (USDT)Reached 1% / 2% band?BTC-USDT bid16:13:33 UTC61,026.40287,623.59NoBTC-USDT ask16:13:33 UTC61,066.90197,283.44NoETH-USDT bid16:13:36 UTC1,718.56334,320.26NoETH-USDT ask16:13:36 UTC1,720.81480,323.94No Method: for each recorded level, displayed quote notional = level price × base-asset quantity, summed by side. The observed book records comprise 60 levels per side. The first 60 are not a random sample of deeper liquidity; unreturned levels are missing, not zero. Timestamps are venue payload times, not an independently measured receiving clock. The turning point: price depends on order size A spread is one price step. A larger marketable order can use up the quantity at the best quote and move through progressively worse price levels. To see that effect without pretending to have placed a trade, I modeled immediate buys and sells of 1,000, 10,000, 50,000 and 100,000 USDT against each frozen book. I consumed displayed asks for buys and bids for sells in price order. There was enough notional in the returned 60 levels for each of these independent, reset-to-the-same-book examples. [3, 4] Modeled midpoint-relative cost versus order size for BTC and ETH spot buys and sellsFour series at one, ten, fifty and one hundred thousand USDT sizes. BTC buy costs 0.0082 to 0.7486 basis points, BTC sell 0.0082 to 0.8570; ETH buy 0.0291 to 1.5517, ETH sell 0.0291 to 1.5692. Model based on November 22, 2026 order books; no fees or latency and not observed fills.0.00.51.01.5Midpoint-relative cost (basis points, bps)1k10k50k100kOrder notional (USDT) · discrete sampled sizesBTC buyBTC sellETH buyETH sellFigure 2. MODELED, not filled: midpoint-relative book-walk cost in basis points for separate hypothetical USDT order sizes, using the same two observed November 22, 2026 spot snapshots. Each point resets the snapshot; joined lines connect four sampled scenarios and do not imply values were independently calculated between them. No taker fees, cancellations, latency, hidden orders, replenishment, market reaction or quote conversion. Source: provider-mediated, OKX-attributed books and deterministic midpoint/VWAP arithmetic. Numerical table below. Figure 2 data: modeled midpoint-relative shortfall, basis points (bps), excluding fees; November 22, 2026 spot booksRequested order (USDT)BTC buy (bps)BTC sell (bps)ETH buy (bps)ETH sell (bps)1,0000.00820.00820.02910.029110,0000.18510.00820.02910.029150,0000.51090.34240.68700.6605100,0000.74860.85701.55171.5692 Equation: midpoint = (best bid + best ask)/2; at each consumed level, USDT filled = minimum(remaining requested USDT, price × available base units), base filled = USDT filled ÷ level price, VWAP = total USDT filled ÷ total base filled. For buys, cost (bps) = 10,000 × (VWAP ÷ midpoint − 1); for sells, 10,000 × (1 − VWAP ÷ midpoint). A residual, if any, would remain unfilled rather than priced at an unknown level. All displayed scenarios were fully covered by the returned sample. No external order was submitted. Here is the specific change that matters to me. The BTC buy example rose from about 0.0082 bps at 1,000 USDT to 0.7486 bps at 100,000 USDT. ETH’s modeled sell cost reached 1.5692 bps at 100,000 USDT. These are not forecasts of a real order, and such fractions of a basis point should never be treated as a promise of easy fills. The direction of the example is the lesson: available price and available size are linked, and the linkage changes by side. Why I would not call the calculation executable liquidity There was no trade, fill receipt or latency observation in this exercise. A resting order can cancel before an incoming trade reaches it. A different maker may replenish the book; hidden or iceberg interest may be available; queue priority and fee schedules differ by participant. Price can move while an order is transmitted. USDT is also the quote asset here, not an assumed cash-dollar conversion. The snapshot only describes displayed price/quantity at the observed moment. It does not establish a binding exit capacity or a measured post-trade market impact. Nor could I independently rerun the whole depth sweep from a pristine all-level archive. The research retained the source-attributed calculations, ticker values and leading price levels, but not a complete immutable copy of all 60 levels in each original book response. I verified the saved midpoint/spread arithmetic and reconstructed cost from saved VWAPs; I cannot certify every underlying level against raw archived bytes. That provenance limit belongs next to the graph, not in fine print. The strongest countercase is the speed of replenishment I do not infer a defective market from the gap between a large rolling volume number and a smaller resting snapshot. A fast market-making system can recycle inventory and replace bids and asks many times in a day. Genuine turnover could be high even when a static book looks thin. Conversely, apparently deep displayed interest can vanish in a fast selloff. A good measurement would observe repeated books, native trade prints, cancellations, fills and volatility across ordinary and stressed hours. Manipulation is a further reason to check volume rather than trust it on sight. Cong, Li, Tang and Yang’s Crypto Wash Trading investigates historical exchange samples and documents anomalous reported trading. But that research does not establish what fraction—if any—of the November 2026 OKX-attributed BTC or ETH readings reflected wash trades. I make no venue-specific allegation here. [5] What I would measure before trusting a liquidity headline My first question would be the exact spot venue and pair, followed by the quote asset and observation clock. Next I would ask whether the depth is bid or ask, whether it reaches a defined 1% or 2% price band, and what an actual order size costs in an execution-aware model. I would want a documented taker fee, a record of the order book’s age, repeated snapshots, matched native trades and a stressed-period comparison before claiming dependable execution. If the book stops short of the stated price band, the missing portion is unknown. If the venue adapter has not been independently validated, attribution remains provisional. This is why I would not choose a market simply because its daily turnover looks impressive. The practical question is smaller and harder: when I need to trade a specified amount, how much real interest is available on the side I need, at what prices, and for how long? The dated snapshots do not answer that fully. They show why the 24-hour number never could. Questions readers ask Is 24-hour crypto volume the same as liquidity?No. It is a reported sum of past trades over a rolling window. Liquidity depends on the price, size, venue, side and time of a prospective transaction.What is 1% or 2% depth?It is the total displayed order notional on a specified side within a stated distance of a reference price, commonly a midpoint. You cannot calculate the full band from an order-book response that ends before its price boundary.Is a tight bid–ask spread proof I can sell a large order cheaply?No. It describes the nearest quoted prices, not the amount waiting at or beyond those prices, nor whether that amount persists.Can high turnover be genuine with a relatively small resting book?Yes. Market makers can replenish many times. The turnover figure alone cannot distinguish resilient replenishment from fragile or manipulated activity.Is book-walk cost the same as actual slippage?No. This model consumes a frozen visible book and excludes fees, cancellations, latency, hidden liquidity and price response. Actual fill costs require actual execution records.Are the USDT figures equal to US dollars?Not by assumption. They are USDT-denominated quantities; a USD comparison would require a timestamped, appropriate conversion quote. Sources and measurement recordOKX API documentation, market ticker and order-book field definitions. Primary documentation of exchange conventions; it does not independently confirm the adapter observations.Provider-mediated fin_data_mcp_http_v2 spot ticker reads, BTC-USDT at 2026-11-22 16:13:06.670 UTC and ETH-USDT at 16:13:05.566 UTC. Source IDs: OKX-TICKER-BTC-USDT and OKX-TICKER-ETH-USDT. Rolling 24-hour, reported, unadjusted, USDT quote volume. Original vendor availability timestamp and trade-level reconciliation unknown.Provider-mediated spot 60-level book reads, BTC-USDT at 2026-11-22 16:13:33.752 UTC and ETH-USDT at 16:13:36.705 UTC. Source IDs: OKX-BOOK60-BTC-USDT and OKX-BOOK60-ETH-USDT. Available first 60 levels per side, not complete price bands; raw full response not separately archived.Reproducible definitions: C-SPREAD midpoint-normalized best-quote spread; C-DEPTH60 sum(price × base size) on returned levels, per side; C-SWEEP static book walk, volume-weighted average price and signed midpoint-relative cost. The saved figure points and models were recomputed for midpoint/VWAP consistency but full raw-level replication is unavailable.Cong, Li, Tang and Yang, Crypto Wash Trading, historical exchange research (NBER working paper; later published in Management Science). Sample-bound literature, not direct evidence about today’s OKX trade authenticity.Related Independent Market Notes: The Liquidity Illusion in Crypto’s New Small-Cap Listings and The Token Unlock Calendar Has a Liquidity Problem. These provide broader liquidity contexts; neither substitutes for this pair-specific observation record. Historical observation and illustrative paper calculations only. No orders placed. Proposed editorial date: November 22, 2026; not evidence of publication.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Crypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell Into"
+      },
+      {
+        "tag": "h2",
+        "text": "Turnover is a record of activity, not an open invitation to trade"
+      },
+      {
+        "tag": "h2",
+        "text": "A snapshot answers the next question—only partly"
+      },
+      {
+        "tag": "h2",
+        "text": "The turning point: price depends on order size"
+      },
+      {
+        "tag": "h2",
+        "text": "Why I would not call the calculation executable liquidity"
+      },
+      {
+        "tag": "h2",
+        "text": "The strongest countercase is the speed of replenishment"
+      },
+      {
+        "tag": "h2",
+        "text": "What I would measure before trusting a liquidity headline"
+      },
+      {
+        "tag": "h2",
+        "text": "Questions readers ask"
+      },
+      {
+        "tag": "h3",
+        "text": "Is 24-hour crypto volume the same as liquidity?"
+      },
+      {
+        "tag": "h3",
+        "text": "What is 1% or 2% depth?"
+      },
+      {
+        "tag": "h3",
+        "text": "Is a tight bid–ask spread proof I can sell a large order cheaply?"
+      },
+      {
+        "tag": "h3",
+        "text": "Can high turnover be genuine with a relatively small resting book?"
+      },
+      {
+        "tag": "h3",
+        "text": "Is book-walk cost the same as actual slippage?"
+      },
+      {
+        "tag": "h3",
+        "text": "Are the USDT figures equal to US dollars?"
+      },
+      {
+        "tag": "h2",
+        "text": "Sources and measurement record"
+      }
+    ],
+    "links": [
+      {
+        "href": "#source-notes",
+        "text": "[1–3]"
+      },
+      {
+        "href": "https://www.okx.com/docs-v5/en/",
+        "text": "OKX’s documented spot ticker convention"
+      },
+      {
+        "href": "#source-notes",
+        "text": "[1, 2]"
+      },
+      {
+        "href": "#source-notes",
+        "text": "[2–4]"
+      },
+      {
+        "href": "#depth-table",
+        "text": "Numerical table below."
+      },
+      {
+        "href": "#source-notes",
+        "text": "[3, 4]"
+      },
+      {
+        "href": "#cost-table",
+        "text": "Numerical table below."
+      },
+      {
+        "href": "https://www.nber.org/papers/w30783",
+        "text": "Cong, Li, Tang and Yang’s Crypto Wash Trading"
+      },
+      {
+        "href": "#source-notes",
+        "text": "[5]"
+      },
+      {
+        "href": "https://www.okx.com/docs-v5/en/",
+        "text": "OKX API documentation"
+      },
+      {
+        "href": "https://www.nber.org/papers/w30783",
+        "text": "Cong, Li, Tang and Yang, Crypto Wash Trading"
+      },
+      {
+        "href": "../small-cap-crypto-liquidity-illusion/",
+        "text": "The Liquidity Illusion in Crypto’s New Small-Cap Listings"
+      },
+      {
+        "href": "../token-unlock-liquidity-illusion-90-day-calendar/",
+        "text": "The Token Unlock Calendar Has a Liquidity Problem"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Liquidity / Market structure / Investigation"
+      },
+      {
+        "tag": "p",
+        "text": "A real pair of spot order books reveals what turnover totals leave out: available bids, available asks, and the price of crossing them for a specified trade size."
+      },
+      {
+        "tag": "p",
+        "text": "November 22, 2026 · Dated spot snapshots, not live market quotes · BTC-USDT and ETH-USDT"
+      },
+      {
+        "tag": "p",
+        "text": "I can point to a big trading-volume number and still be unable to tell you what a sale will fetch. In a November 22 spot-market reading, a provider attributed 432.42 million USDT of rolling 24-hour BTC-USDT turnover to OKX. Roughly 27 seconds later, the first 60 bid levels returned for the same pair added up to 287,623.59 USDT of displayed orders. I do not divide one figure by the other and call the result liquidity. One measures yesterday’s passing trade flow; the other captures a limited slice of what was displayed at one instant. [1–3]"
+      },
+      {
+        "tag": "p",
+        "text": "The distinction is useful precisely because these numbers sound comparable. Both are expressed in USDT, and both refer to the same spot pair and venue attribution. But they have different clocks, denominators and meanings. Neither number, alone, tells me the cost of selling a specified amount now."
+      },
+      {
+        "tag": "p",
+        "text": "Daily volume adds up trades completed over a rolling window. It can count repeated buying and selling of the same inventory. Order-book depth is different: bids are displayed offers to buy and asks are displayed offers to sell, distributed across price levels. A seller needs bids; a buyer needs asks. A narrow quoted spread measures the closest prices, not how much size can cross them."
+      },
+      {
+        "tag": "p",
+        "text": "REPORTED: The provider’s two spot tickers returned 432,422,145.31 USDT in BTC-USDT 24-hour quote turnover at 16:13:06.670 UTC, and 182,983,067.99 USDT for ETH-USDT at 16:13:05.566 UTC. Under OKX’s documented spot ticker convention, the volCcy24h field denotes quote-currency volume. These values were not reconciled against native trade IDs or adjusted for possible wash trading. [1, 2]"
+      },
+      {
+        "tag": "p",
+        "text": "I deliberately keep those turnover totals out of a bar chart with depth. Placing millions of historical flow beside thousands of instantaneous resting orders on one scale would create a dramatic picture without making them the same quantity."
+      },
+      {
+        "tag": "p",
+        "text": "The separate order-book responses arrived later: 16:13:33.752 UTC for BTC-USDT and 16:13:36.705 UTC for ETH-USDT. Both were attributed to OKX by the connected market-data adapter. BTC’s best bid and ask were 61,049.4 and 61,049.5 USDT per BTC; ETH’s were 1,719.60 and 1,719.61 USDT per ETH. That yields quoted midpoint-relative spreads of approximately 0.0164 and 0.0582 basis points, respectively. A basis point is 0.01%. [2–4]"
+      },
+      {
+        "tag": "p",
+        "text": "What the 60 returned price levels showed was not full market depth. The farthest listed prices on both sides of each pair were still inside 1% of the midpoint. The responses therefore did not reach either the 1% or 2% boundary. I can add up the levels I saw, but I cannot call the sum the complete 1% or 2% book."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 1. Observed notional of the first 60 returned bid and ask price levels per spot pair, USDT. The bars start at zero. Their totals are truncated-book lower bounds inside the 1% and 2% midpoint bands, not full-band liquidity or executable guarantees. Source: provider-mediated, OKX-attributed spot books, November 22, 2026, 16:13:33–36 UTC; calculations sum price × displayed base size. Numerical table below."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 1 data: displayed first-60-level book notional, November 22, 2026; USDT, per side"
+      },
+      {
+        "tag": "p",
+        "text": "Method: for each recorded level, displayed quote notional = level price × base-asset quantity, summed by side. The observed book records comprise 60 levels per side. The first 60 are not a random sample of deeper liquidity; unreturned levels are missing, not zero. Timestamps are venue payload times, not an independently measured receiving clock."
+      },
+      {
+        "tag": "p",
+        "text": "A spread is one price step. A larger marketable order can use up the quantity at the best quote and move through progressively worse price levels. To see that effect without pretending to have placed a trade, I modeled immediate buys and sells of 1,000, 10,000, 50,000 and 100,000 USDT against each frozen book. I consumed displayed asks for buys and bids for sells in price order. There was enough notional in the returned 60 levels for each of these independent, reset-to-the-same-book examples. [3, 4]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 2. MODELED, not filled: midpoint-relative book-walk cost in basis points for separate hypothetical USDT order sizes, using the same two observed November 22, 2026 spot snapshots. Each point resets the snapshot; joined lines connect four sampled scenarios and do not imply values were independently calculated between them. No taker fees, cancellations, latency, hidden orders, replenishment, market reaction or quote conversion. Source: provider-mediated, OKX-attributed books and deterministic midpoint/VWAP arithmetic. Numerical table below."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 2 data: modeled midpoint-relative shortfall, basis points (bps), excluding fees; November 22, 2026 spot books"
+      },
+      {
+        "tag": "p",
+        "text": "Equation: midpoint = (best bid + best ask)/2; at each consumed level, USDT filled = minimum(remaining requested USDT, price × available base units), base filled = USDT filled ÷ level price, VWAP = total USDT filled ÷ total base filled. For buys, cost (bps) = 10,000 × (VWAP ÷ midpoint − 1); for sells, 10,000 × (1 − VWAP ÷ midpoint). A residual, if any, would remain unfilled rather than priced at an unknown level. All displayed scenarios were fully covered by the returned sample. No external order was submitted."
+      },
+      {
+        "tag": "p",
+        "text": "Here is the specific change that matters to me. The BTC buy example rose from about 0.0082 bps at 1,000 USDT to 0.7486 bps at 100,000 USDT. ETH’s modeled sell cost reached 1.5692 bps at 100,000 USDT. These are not forecasts of a real order, and such fractions of a basis point should never be treated as a promise of easy fills. The direction of the example is the lesson: available price and available size are linked, and the linkage changes by side."
+      },
+      {
+        "tag": "p",
+        "text": "There was no trade, fill receipt or latency observation in this exercise. A resting order can cancel before an incoming trade reaches it. A different maker may replenish the book; hidden or iceberg interest may be available; queue priority and fee schedules differ by participant. Price can move while an order is transmitted. USDT is also the quote asset here, not an assumed cash-dollar conversion. The snapshot only describes displayed price/quantity at the observed moment. It does not establish a binding exit capacity or a measured post-trade market impact."
+      },
+      {
+        "tag": "p",
+        "text": "Nor could I independently rerun the whole depth sweep from a pristine all-level archive. The research retained the source-attributed calculations, ticker values and leading price levels, but not a complete immutable copy of all 60 levels in each original book response. I verified the saved midpoint/spread arithmetic and reconstructed cost from saved VWAPs; I cannot certify every underlying level against raw archived bytes. That provenance limit belongs next to the graph, not in fine print."
+      },
+      {
+        "tag": "p",
+        "text": "I do not infer a defective market from the gap between a large rolling volume number and a smaller resting snapshot. A fast market-making system can recycle inventory and replace bids and asks many times in a day. Genuine turnover could be high even when a static book looks thin. Conversely, apparently deep displayed interest can vanish in a fast selloff. A good measurement would observe repeated books, native trade prints, cancellations, fills and volatility across ordinary and stressed hours."
+      },
+      {
+        "tag": "p",
+        "text": "Manipulation is a further reason to check volume rather than trust it on sight. Cong, Li, Tang and Yang’s Crypto Wash Trading investigates historical exchange samples and documents anomalous reported trading. But that research does not establish what fraction—if any—of the November 2026 OKX-attributed BTC or ETH readings reflected wash trades. I make no venue-specific allegation here. [5]"
+      },
+      {
+        "tag": "p",
+        "text": "My first question would be the exact spot venue and pair, followed by the quote asset and observation clock. Next I would ask whether the depth is bid or ask, whether it reaches a defined 1% or 2% price band, and what an actual order size costs in an execution-aware model. I would want a documented taker fee, a record of the order book’s age, repeated snapshots, matched native trades and a stressed-period comparison before claiming dependable execution. If the book stops short of the stated price band, the missing portion is unknown. If the venue adapter has not been independently validated, attribution remains provisional."
+      },
+      {
+        "tag": "p",
+        "text": "This is why I would not choose a market simply because its daily turnover looks impressive. The practical question is smaller and harder: when I need to trade a specified amount, how much real interest is available on the side I need, at what prices, and for how long? The dated snapshots do not answer that fully. They show why the 24-hour number never could."
+      },
+      {
+        "tag": "p",
+        "text": "No. It is a reported sum of past trades over a rolling window. Liquidity depends on the price, size, venue, side and time of a prospective transaction."
+      },
+      {
+        "tag": "p",
+        "text": "It is the total displayed order notional on a specified side within a stated distance of a reference price, commonly a midpoint. You cannot calculate the full band from an order-book response that ends before its price boundary."
+      },
+      {
+        "tag": "p",
+        "text": "No. It describes the nearest quoted prices, not the amount waiting at or beyond those prices, nor whether that amount persists."
+      },
+      {
+        "tag": "p",
+        "text": "Yes. Market makers can replenish many times. The turnover figure alone cannot distinguish resilient replenishment from fragile or manipulated activity."
+      },
+      {
+        "tag": "p",
+        "text": "No. This model consumes a frozen visible book and excludes fees, cancellations, latency, hidden liquidity and price response. Actual fill costs require actual execution records."
+      },
+      {
+        "tag": "p",
+        "text": "Not by assumption. They are USDT-denominated quantities; a USD comparison would require a timestamped, appropriate conversion quote."
+      },
+      {
+        "tag": "li",
+        "text": "OKX API documentation, market ticker and order-book field definitions. Primary documentation of exchange conventions; it does not independently confirm the adapter observations."
+      },
+      {
+        "tag": "li",
+        "text": "Provider-mediated fin_data_mcp_http_v2 spot ticker reads, BTC-USDT at 2026-11-22 16:13:06.670 UTC and ETH-USDT at 16:13:05.566 UTC. Source IDs: OKX-TICKER-BTC-USDT and OKX-TICKER-ETH-USDT. Rolling 24-hour, reported, unadjusted, USDT quote volume. Original vendor availability timestamp and trade-level reconciliation unknown."
+      },
+      {
+        "tag": "li",
+        "text": "Provider-mediated spot 60-level book reads, BTC-USDT at 2026-11-22 16:13:33.752 UTC and ETH-USDT at 16:13:36.705 UTC. Source IDs: OKX-BOOK60-BTC-USDT and OKX-BOOK60-ETH-USDT. Available first 60 levels per side, not complete price bands; raw full response not separately archived."
+      },
+      {
+        "tag": "li",
+        "text": "Reproducible definitions: C-SPREAD midpoint-normalized best-quote spread; C-DEPTH60 sum(price × base size) on returned levels, per side; C-SWEEP static book walk, volume-weighted average price and signed midpoint-relative cost. The saved figure points and models were recomputed for midpoint/VWAP consistency but full raw-level replication is unavailable."
+      },
+      {
+        "tag": "li",
+        "text": "Cong, Li, Tang and Yang, Crypto Wash Trading, historical exchange research (NBER working paper; later published in Management Science). Sample-bound literature, not direct evidence about today’s OKX trade authenticity."
+      },
+      {
+        "tag": "p",
+        "text": "Related Independent Market Notes: The Liquidity Illusion in Crypto’s New Small-Cap Listings and The Token Unlock Calendar Has a Liquidity Problem. These provide broader liquidity contexts; neither substitutes for this pair-specific observation record."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Pair · side",
+          "Snapshot time",
+          "60th-level price (USDT/base)",
+          "Displayed notional (USDT)",
+          "Reached 1% / 2% band?"
+        ],
+        [
+          "BTC-USDT bid",
+          "16:13:33 UTC",
+          "61,026.40",
+          "287,623.59",
+          "No"
+        ],
+        [
+          "BTC-USDT ask",
+          "16:13:33 UTC",
+          "61,066.90",
+          "197,283.44",
+          "No"
+        ],
+        [
+          "ETH-USDT bid",
+          "16:13:36 UTC",
+          "1,718.56",
+          "334,320.26",
+          "No"
+        ],
+        [
+          "ETH-USDT ask",
+          "16:13:36 UTC",
+          "1,720.81",
+          "480,323.94",
+          "No"
+        ]
+      ],
+      [
+        [
+          "Requested order (USDT)",
+          "BTC buy (bps)",
+          "BTC sell (bps)",
+          "ETH buy (bps)",
+          "ETH sell (bps)"
+        ],
+        [
+          "1,000",
+          "0.0082",
+          "0.0082",
+          "0.0291",
+          "0.0291"
+        ],
+        [
+          "10,000",
+          "0.1851",
+          "0.0082",
+          "0.0291",
+          "0.0291"
+        ],
+        [
+          "50,000",
+          "0.5109",
+          "0.3424",
+          "0.6870",
+          "0.6605"
+        ],
+        [
+          "100,000",
+          "0.7486",
+          "0.8570",
+          "1.5517",
+          "1.5692"
+        ]
+      ]
+    ],
+    "alts": [],
+    "svgCount": 2,
+    "svgSha256": [
+      "01aaef1bacc0a765a526a6f4177fc6630e744597bda85272655a7969b7a31fc6",
+      "0575b029a506576630f694d86e4b50cf2aa43d86e42c29005ad91392bf6a79f5"
+    ],
+    "imageCount": 0,
+    "imageSha256": [],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "bitcoin-55130-who-bought-the-flush": {
     "text": "Skip to investigation Bitcoin / Market structure / Investigation Bitcoin Rebounded at $55,130. The Tape Still Won’t Name the Buyer. Binance and OKX show Bitcoin recovering while aggressive sellers remained in control of volume. The evidence supports absorption at the low—but not the identity or staying power of the buyers. Planned publication: November 22, 2026 · Historical window: November 21–22, UTC · Not a live market update At 06:17:15 UTC on November 21, Bitcoin traded near $55,130 on two major exchanges. The first temptation was to call the ensuing bounce a triumph of buyers. The trade records tell a less comfortable story: prices started climbing even though sellers were still the ones crossing the spread. When I compare the signed spot executions on Binance and OKX with the liquidation record on Hyperliquid, the evidence is unusually specific. It gives me a defensible explanation for how the decline stopped accelerating. It does not give me a name for whoever was holding the bids, or proof that the same buyer kept the coins. The moment selling stopped moving price the same way The Binance BTCUSDT aggregate-trade archive places its observed low at 55,130 USDT at 06:17:15.845885 UTC. The independently processed OKX BTC-USDT tape reaches 55,134 USDT at 06:17:15.871 UTC. That is a nominal 25-millisecond difference in recorded timestamps—far too small, without clock and transport-latency controls, to declare either exchange the leader. Both prices are in USDT, not exchange-agnostic U.S. dollars. The data provenance is documented below. Each exchange publishes trade direction in a way that makes a seller-initiated execution distinguishable from a buyer-initiated one. On Binance, the buyer-maker flag is inverted to determine the aggressor; on OKX, the recorded side is the taker side. That lets me calculate cumulative volume delta, or CVD: buyer-initiated BTC volume minus seller-initiated BTC volume. It is a measure of executed aggression, not a census of investors. [1] [2] During the two minutes from 06:16 to 06:18 UTC, Binance recorded −140.94 BTC of net taker volume; OKX recorded −86.98 BTC. Both books printed their lows in that interval. More revealingly, in the next twelve minutes—the first leg of the recovery—Binance still registered −69.59 BTC and OKX −5.31 BTC. Prices rose anyway. That is the observable divergence. It is consistent with buyers resting on the book absorbing market sells, with seller urgency easing, or with the location and quality of liquidity changing. It does not mean there were no aggressive buyers; it means their executed volume remained smaller than aggressive sellers' volume over those measured intervals. The low was not defined by sellers disappearing. It was defined, at least on these two venues, by selling losing some of its ability to push price lower. Only later did the order-flow balance turn positive. From 06:30 to 07:00 UTC, Binance logged roughly +47.71 BTC of CVD and OKX +100.24 BTC. The rebound acquired more buyer-initiated participation after the initial turn, not before it on a sustained interval basis. The other side of the trade was under pressure Spot order flow was not operating in isolation. In Hyperliquid's separate BTC perpetual market, a completed historical query for 06:10–06:25 UTC returned 1,022 deduplicated liquidation records: 1,008 long closures and 14 short closures. Between 06:16 and 06:18 alone, 870 long-liquidation records represented approximately 172.19 BTC and $9.51 million of execution notional. These are liquidation fills on one perpetual venue, not market-wide liquidations or equivalent spot sales. [3] Hyperliquid's archived level-two snapshots add the missing physical constraint. The median quantity displayed across the first twenty bid levels fell from about 121.41 BTC at 06:00 to 39.90 BTC at 06:17. During the low minute, one snapshot contained only 2.22 BTC on those twenty bid levels, and the widest sampled spread was 17.55 basis points. Those numbers describe near-touch visible liquidity, not a constant-distance book-depth measure or a global market. [3] I can call this a documented liquidity-fragility episode accompanied by forced-long closing. I cannot prove that the liquidations created the first selling pressure. The larger spot selloff had been running for hours, including sharply negative CVD on both exchanges between 03:30 and 04:15 UTC. Nor can I reconstruct a complete multi-exchange liquidation count from this one venue. A rebound can last longer than the trade that supported it The argument for absorption is stronger than a fleeting one-second anomaly. Reprocessing Binance's full UTC-day archive shows that from 06:18 to midnight, buyer-initiated volume totaled about 14,008.60 BTC, against 14,280.12 BTC of seller-initiated volume: a net −271.53 BTC. Over that span, the venue's spot price advanced from roughly 55,733 to 60,216 USDT. Its lowest subsequent print stayed above 55,719, rather than revisiting the 55,130 low. That persistence matters. But it is not an account statement. A market maker can buy passively, hedge exposure in futures, replenish quotes and redistribute coins later. A long-horizon investor could leave almost the same visible footprint. CVD does not contain an account identifier, net inventory change, or the buyer's intended holding period. The reported withdrawal of thousands of BTC by wallets attributed to Abraxas Capital is an intriguing competing explanation for broader accumulation. Those reports remain an attribution lead, not a trade-level match: I have not independently matched individual Bitcoin transfer hashes, exchange settlement timing, and wallet clustering to the specific resting orders at 06:17. Withdrawals from an exchange do not identify who made the best bid in its order book, and a withdrawal is not automatically a purchase. I will not give the anonymous buyer a famous name simply because the timing is suggestive. The explanations that still survive There are at least three coherent readings. One is genuine accumulation: participants with fresh risk appetite met the market's urgency and retained BTC. Another is temporary market-making: dealers warehouse exposure briefly, arbitrage cross-venue price differences, then neutralize the inventory elsewhere. A third is mostly mechanical relief: liquidations and urgent spot selling exhaust themselves, so prices recover even before aggressive demand takes over. What would separate them is not another candle pattern. I would want authenticated maker-side order and execution records; exchange-attributed withdrawal transactions with timestamps and subsequent redeposit behavior; and synchronized spot, hedge and inventory changes over the following days. Continued positive taker flow across multiple spot venues and sustained higher lows would strengthen the durable-demand case. Renewed negative CVD accompanying a break under the low would weaken it. Maker-account records that showed rapid flatting or hedging would favor inventory recycling over long-term accumulation. The public data cannot supply that ownership proof. Coinbase and Bitstamp were not included in the completed signed spot-tape comparison; OKX's signed series ends at 07:00 UTC. The full-day persistence test applies to Binance, not every market. And the distinction between BTC/USD and BTC/USDT matters even when nearby prices look similar. The bid is real. The buyer is still a question. I came looking for the hand behind Bitcoin's November 21 rebound. What the tapes reveal is more useful than a guessed identity: two exchanges recorded an almost simultaneous low, both initially recovered against net seller-initiated spot flow, and a separate perpetual venue recorded forced-long closing amid transiently depleted displayed bids. That is a powerful explanation of how a falling market found a floor for the day. It is not proof of who owned the floor, how long they intended to hold it, or whether a lasting cycle bottom had been formed. Those are precisely the claims a dramatic chart cannot settle. The evidence has earned the word absorption. It has not yet earned the word accumulation. Evidence and methods All figures are historical as of November 22, 2026. Signed-volume deltas are computed in BTC from trades; negative CVD is net seller-initiated execution volume. Source rows and analytic handoffs are retained outside this publishable HTML. Trade-by-trade buyer identities and inventory records are not publicly supplied by the exchanges. Primary format, exchange archive Binance Public Data, spot BTCUSDT daily aggTrades, November 21, 2026, uploaded source archive. Official documentation gives the buyer-maker flag and notes that 2025-onward spot timestamps are microseconds. The full-day archive was locally parsed into 1,440 UTC-minute observations. Exchange records, derived file OKX historical market data, BTC-USDT daily trades for November 21, 2026; user-supplied derived 240-minute signed-volume CSV and handoff. The source handoff reports 386,502 records and unique trade IDs. The original OKX ZIP was unavailable for independent reinspection in this publication pass; quoted subsecond low time comes from that derived handoff. Venue-specific derivatives 0xArchive historical Hyperliquid BTC data, liquidation fills and level-two book snapshots retrieved November 22. Liquidation query for 06:10–06:25 UTC completed to the final cursor; the earlier 03:30–04:15 episode was not completely paginated and is not assigned a total here. Independent price-context source OKX spot trade records and Binance spot trade records are quoted separately. USDT-quoted trades are not described as a consolidated BTC/USD index.",
     "headings": [

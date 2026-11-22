@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-liquidity-basics-liquidity-versus-daily-volume": {
+      "title": "Crypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell Into",
+      "description": "A real pair of spot order books reveals what turnover totals leave out: available bids, available asks, and the price of crossing them for a specified trade size.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-liquidity-basics-liquidity-versus-daily-volume/",
+      "og:title": "Crypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell Into",
+      "og:description": "A real pair of spot order books reveals what turnover totals leave out: available bids, available asks, and the price of crossing them for a specified trade size.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-liquidity-basics-liquidity-versus-daily-volume/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-55130-who-bought-the-flush": {
       "title": "Bitcoin Rebounded at $55,130. The Tape Still Won&#8217;t Name the Buyer.",
       "description": "Binance and OKX show Bitcoin recovering while aggressive sellers remained in control of volume. The evidence supports absorption at the low—but not the identity or staying power of the buyers.",
@@ -542,6 +552,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Crypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell Into",
+      "link": "https://independent-market-notes.netlify.app/crypto-liquidity-basics-liquidity-versus-daily-volume/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-liquidity-basics-liquidity-versus-daily-volume/",
+      "description": "A real pair of spot order books reveals what turnover totals leave out: available bids, available asks, and the price of crossing them for a specified trade size."
+    },
     {
       "title": "Bitcoin Rebounded at $55,130. The Tape Still Won’t Name the Buyer.",
       "link": "https://independent-market-notes.netlify.app/bitcoin-55130-who-bought-the-flush/",

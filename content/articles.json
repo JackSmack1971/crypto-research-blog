@@ -1,5 +1,23 @@
 [
   {
+    "slug": "crypto-liquidity-basics-liquidity-versus-daily-volume",
+    "source": "crypto-liquidity-basics-liquidity-versus-daily-volume.html",
+    "date": "2026-11-22",
+    "title": "Crypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell Into",
+    "dek": "A real pair of spot order books reveals what turnover totals leave out: available bids, available asks, and the price of crossing them for a specified trade size.",
+    "topic": "liquidity",
+    "assets": [
+      "BTC",
+      "ETH"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/crypto-liquidity-basics-liquidity-versus-daily-volume.jpg",
+    "image_alt": "Conceptual still life of a heavily marked brass counting drum over two stone water basins linked by a narrow sluice, illustrating how repeated trading activity differs from liquidity available at one moment; not market data.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "bitcoin-55130-who-bought-the-flush",
     "source": "bitcoin-55130-who-bought-the-flush.html",
     "date": "2026-11-22",
