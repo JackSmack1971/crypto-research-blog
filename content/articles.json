@@ -1,5 +1,22 @@
 [
   {
+    "slug": "tokenomics-fundamentals-circulating-versus-total-versus-max-supply",
+    "source": "tokenomics-fundamentals-circulating-versus-total-versus-max-supply.html",
+    "date": "2026-11-22",
+    "title": "Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different Stories",
+    "dek": "A UNI supply audit finds 623.3 million tokens classified as circulating, a disputed total, and a one-billion-token ceiling that is not necessarily permanent.",
+    "topic": "tokenomics",
+    "assets": [
+      "UNI"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/tokenomics-fundamentals-circulating-versus-total-versus-max-supply.jpg",
+    "image_alt": "Conceptual still life of three nested brass rings holding stone tokens beside a key, ledger and exposed mechanism, representing different supply classifications and governance authority; not market data.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "crypto-liquidity-basics-liquidity-versus-daily-volume",
     "source": "crypto-liquidity-basics-liquidity-versus-daily-volume.html",
     "date": "2026-11-22",

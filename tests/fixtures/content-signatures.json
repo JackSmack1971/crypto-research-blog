@@ -1,4 +1,459 @@
 {
+  "tokenomics-fundamentals-circulating-versus-total-versus-max-supply": {
+    "text": "Tokenomics / Investigation / November 22, 2026 Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different StoriesA UNI supply audit finds 623.3 million tokens classified as circulating, a disputed total, and a one-billion-token ceiling that is not necessarily permanent. Independent Market Notes · Research snapshot, not a live feed I expected a token supply audit to begin with a number. It began with a disagreement over what the number meant. UNI began with a billion tokens. At 16:55:18 UTC on November 22, 2026, CoinMarketCap classified 623.3 million as circulating and 885.5 million as total. An Ethereum token indexer showed a different total again: one billion. None of those displays, by itself, establishes how many UNI are available to sell. That distinction matters because circulating supply, total supply and maximum supply are not three interchangeable descriptions of scarcity. One is an estimate of public availability, another aims to account for the issued stock, and the third asks what future issuance rules permit. Each rests on a different kind of evidence. [1] [2] [3] Three supply figures, three different questions Circulating supply is a provider-defined estimate of tokens accessible to the public market. Total supply generally describes issued tokens less recognized burns, but an ERC-20 contract's totalSupply() may not match a dashboard's burn-accounting convention. Max supply is the proposed or technically enforceable lifetime issuance ceiling—if one exists at all. A blank maximum field does not establish unlimited issuance. CoinMarketCap expressly treats public float as distinct from unlocked supply and total minted stock. CoinGecko describes exclusions for treasury, team and other uncirculated wallets, including some balances that are already unlocked. I would not treat either provider's circulating number as a census of holders ready to trade. [4] [5] The billion-UNI starting point was an allocation, not a float Uniswap's September 16, 2020 launch announcement described one billion UNI minted at genesis. Its current documentation breaks that starting allocation into six destinations: 430 million for the community treasury, 212.66 million for employees, 180.44 million for investors, 150 million for an immediate historical-user airdrop, 20 million for liquidity mining and 6.9 million for advisors. The amounts sum exactly to one billion. That is a check on planned allocation arithmetic, not a record of wallets holding those balances today. [6] [7] UNI genesis allocations in September 2020Six horizontal bars show community treasury 430 million, team 212.66 million, investors 180.44 million, historical airdrop 150 million, mining 20 million, and advisors 6.9 million UNI; together exactly one billion.September 2020 genesis allocationIssuer-reported allocations; not present-day wallets or floatCommunity treasury430.00mTeam and future employees212.66mInvestors180.44mHistorical user/LP airdrop150.00mLiquidity mining20.00mAdvisors6.90m0150300450Million UNI (zero baseline)Figure 1. The original one-billion-UNI allocation. Historical categories do not establish November 2026 ownership, spendability or float. Source: Uniswap's genesis announcement and UNI documentation, September 2020. Values in millions of UNI. Figure 1 data — issuer-reported genesis allocations, September 2020Recipient or programAllocation (UNI)Share of genesisCommunity treasury430,000,00043%Team and future employees212,660,00021.266%Investors180,440,00018.044%Historical user/LP airdrop150,000,00015%Liquidity mining20,000,0002%Advisors6,900,0000.69%Total1,000,000,000100% Vesting can change access without proving a sale Uniswap announced that its 430-million-UNI community treasury would vest over four years. The scheduled amounts were 172 million in the first year, then 129 million, 86 million and 43 million. The cumulative allocation therefore reached 430 million at year four. Current Uniswap documentation says all vesting concluded in September 2025. But a vesting schedule cannot prove a token was distributed, transferred to a trading venue or sold. [7] Scheduled UNI treasury vesting by yearFour bars show issuer-announced scheduled vesting of 172, 129, 86, and 43 million UNI for years one to four, cumulatively 430 million. These are schedules, not verified transfers or sales.Treasury schedule, not realized sellingOriginal four-year vesting design, grouped by vesting year050100150200172mYear 1Σ 172m129mYear 2Σ 301m86mYear 3Σ 387m43mYear 4Σ 430mScheduled UNI (millions)Cumulative annotation shows schedule onlyFigure 2. Scheduled annual treasury vesting, not on-chain realized transfers or sales. Annual grouping obscures within-year timing. Source: Uniswap UNI documentation; original four-year schedule following the September 2020 genesis. Values in millions of UNI. Figure 2 data — original UNI community treasury vesting schedule (not market float)Scheduled vesting periodScheduled UNICumulative scheduled UNIYear 1172,000,000172,000,000Year 2129,000,000301,000,000Year 386,000,000387,000,000Year 443,000,000430,000,000 For an investor, the relevant question after an unlock is not merely whether a vesting clock expired, but who controls the units, whether further transfer restrictions exist, and whether any of them reached a market. A token can be fully vested and still excluded from an indexer's estimate of circulating float. The November 22 reconciliation breaks at the definition CoinMarketCap's UNI snapshot put circulating supply at 623,284,422.48 UNI and total supply at 885,532,418.79 UNI. Subtracting the former from the latter yields 262,247,996.31 UNI, or 29.615% of that provider's reported total. It is a classified residual. I cannot certify that every token in it is technically locked, that any of it will be sold, or that it belongs to a single treasury. [2] CoinMarketCap UNI supply classification on November 22, 2026 A single stacked horizontal bar with 623.3 million circulating UNI and 262.2 million classified as noncirculating, totaling 885.5 million reported UNI. These are provider classifications, not confirmed locked wallets. CMC reported total: 885.5 million UNI Classification snapshot: 2026-11-22 16:55:18 UTC 623.3m 262.2m 0300600900 Supply (million UNI; axis starts at zero) Reported circulating Reported total minus circulating Figure 3. A decomposition of one provider's reported figures, not independently proven wallet-level restrictions. CoinMarketCap UNI ID 7083, as-of 2026-11-22 16:55:18.249 UTC. Arithmetic: 885,532,418.78619706 minus 623,284,422.48036204 UNI. Both segments share the same provider definition. Figure 3 data — CoinMarketCap UNI snapshot, November 22, 2026 at 16:55:18 UTCMeasurementUNISource / calculationReported circulating623,284,422.48CMC API, UNI 7083Reported total885,532,418.79CMC API, UNI 7083Reported total minus circulating262,247,996.31Calculated, C01 One token, three totals—and an unresolved on-chain test A same-day CoinGecko webpage displayed approximately 607.276 million UNI circulating and 885.536 million total. The CoinGecko quote's precise as-of timestamp was unavailable in the research record, so this is not a synchronized measurement against the CoinMarketCap API. The circulating estimates differed by about 16.008 million UNI—around 2.57% of CoinMarketCap's circulating figure—even though their reported total supplies were close. The numbers may reflect different exclusions, updates or both; the evidence does not identify the specific wallets responsible. [3] [5] Then the indexer result complicated the story. The Blockscout Ethereum contract page returned a raw token-supply field of 1027 base units and 18 decimals: one billion UNI. It also identified the Ethereum mainnet contract as 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984. That indexed number exceeds CoinMarketCap's reported total by 114,467,581.21 UNI. The two measurements may use different semantics, including whether specific burned or inaccessible balances are subtracted. But I cannot turn the gap into a verified burn tally. [8] Reported UNI supplies seen November 22, 2026 — asynchronous, definition-dependent sourcesSource and evidence typeCirculating (UNI)Total (UNI)CoinMarketCap API · 16:55:18 UTC623,284,422.48885,532,418.79CoinGecko webpage · precise quote time unknown; rounded≈607,276,000≈885,536,000Blockscout indexer metadata · token state block unknown607,275,895.88 (indexed)1,000,000,000 (indexed) Blockscout's indexed circulation may share an upstream feed with CoinGecko; similarity is not independent corroboration. The chain-head block reported in the same tool session (26,472,003 at 16:58:35 UTC) is not the verified block at which its token-supply metadata was sampled. Verification limit: A direct, block-pinned totalSupply() call was attempted but did not succeed; the Blockscout session then required a PRO key. No canonical supply, exact burn series or excluded-wallet ledger was retrieved. The discrepancy remains open. Maximum supply is a rule, not a slogan Uniswap's 2020 announcement described 2% annual inflation beginning after four years. Its current documentation is more specific: there is no active inflation, governance has authority to mint up to 2% of total supply annually, and that authority has not been exercised to date. The same current documentation describes UNI burns funded by protocol fees since December 2025. Those are issuer statements about authority and activity, not a reconstructed contract-event series. [6] [7] CoinGecko displayed a one-billion-UNI maximum; CoinMarketCap's queried record contained no maximum-supply value. Neither display answers the harder contract question: is one billion a permanent lifetime ceiling, or a historical issuance baseline under a governance-controlled mint function? A blank field is not zero and does not prove the supply is infinite; a displayed cap is not by itself proof that no further tokens can ever be minted. [3] [7] Wrapped UNI on another chain is a separate claim that may be backed by locked native UNI. Simply summing all chains' token contract totals risks counting one economic token twice. The bridge's lock/mint or burn/mint model must be identified first. [9] What I would check before trusting a supply figure I would begin with the canonical asset and contract address, the chain and block height, and the exact definition of any burn. I would next ask whose holdings a provider excluded, whether unlock dates correspond to real wallet movements, and whether bridged representations are counted as new units. Finally I would check if mint authority remains and when the display was last updated. These checks matter for valuation. Circulating market capitalization is price multiplied by estimated float; a fully diluted valuation invokes a different supply denominator. Neither formula establishes that a particular number of tokens will hit the order book. For that I would need evidence about holders, restrictions and actual market liquidity—not a supply chart alone. My conclusion is narrower than a dashboard: UNI's original allocation arithmetic is documented, the circulating classification is contestable, and the lifetime maximum is not independently settled by a displayed one-billion figure. The unresolved 114.47-million-UNI total-supply gap is the reason to demand a pinned contract read and an auditable burn ledger before declaring the accounting closed. Method, sources and further reading Research cutoff: November 22, 2026 UTC. Figures 1 and 2 are historical issuer schedules; Figure 3 is a single timestamped CoinMarketCap classification. No figure depicts realized exchange selling or a time series of burns. All plotted amounts derive from the same research ledger, with decimal arithmetic and zero baselines. The separately reported CoinGecko and Blockscout observations were retained in a table, not plotted on misleading common time axes. Source access, publication time and quote as-of time differ and are noted explicitly. ERC-20 token standard — defines the totalSupply() interface, not provider circulating float. Link was not independently fetched successfully in this publication pass. CoinMarketCap UNI market page — underlying UNI ID 7083 quotes response, updated 2026-11-22T16:55:18.249Z; snapshot values retained in research dossier. CoinGecko UNI webpage — rounded November 22, 2026 supply values, exact quote update time unavailable. CoinMarketCap: supply methodology — published methodology, updated October 30, 2026. CoinGecko: supply methodology — provider definitions, including uncirculated wallets. Uniswap Labs: Introducing UNI — launch announcement, September 16, 2020. Uniswap developers: UNI token — allocations, vesting and current issuer description of mint authority and burns. Blockscout: Ethereum UNI token — November 22, 2026 secondary indexer metadata, not a successful block-pinned contract state read. CoinGecko supply update and multi-chain FAQ — methodology for wrapped/multi-chain tokens. Uniswap's UNI source code — code reference for issuance mechanics, not independent live state verification. Related Independent Market Notes researchWhen vesting is not a sell order · Disputed unlock calendars · Bridge balances versus economic ownership · Treasury control and circulation",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different Stories"
+      },
+      {
+        "tag": "h2",
+        "text": "Three supply figures, three different questions"
+      },
+      {
+        "tag": "h2",
+        "text": "The billion-UNI starting point was an allocation, not a float"
+      },
+      {
+        "tag": "h2",
+        "text": "Vesting can change access without proving a sale"
+      },
+      {
+        "tag": "h2",
+        "text": "The November 22 reconciliation breaks at the definition"
+      },
+      {
+        "tag": "h2",
+        "text": "One token, three totals—and an unresolved on-chain test"
+      },
+      {
+        "tag": "h2",
+        "text": "Maximum supply is a rule, not a slogan"
+      },
+      {
+        "tag": "h2",
+        "text": "What I would check before trusting a supply figure"
+      },
+      {
+        "tag": "h2",
+        "text": "Method, sources and further reading"
+      },
+      {
+        "tag": "h3",
+        "text": "Related Independent Market Notes research"
+      }
+    ],
+    "links": [
+      {
+        "href": "#s01",
+        "text": "[1]"
+      },
+      {
+        "href": "#s02",
+        "text": "[2]"
+      },
+      {
+        "href": "#s03",
+        "text": "[3]"
+      },
+      {
+        "href": "#s04",
+        "text": "[4]"
+      },
+      {
+        "href": "#s05",
+        "text": "[5]"
+      },
+      {
+        "href": "#s06",
+        "text": "[6]"
+      },
+      {
+        "href": "#s07",
+        "text": "[7]"
+      },
+      {
+        "href": "#s07",
+        "text": "[7]"
+      },
+      {
+        "href": "#s02",
+        "text": "[2]"
+      },
+      {
+        "href": "#s03",
+        "text": "[3]"
+      },
+      {
+        "href": "#s05",
+        "text": "[5]"
+      },
+      {
+        "href": "#s08",
+        "text": "[8]"
+      },
+      {
+        "href": "#s06",
+        "text": "[6]"
+      },
+      {
+        "href": "#s07",
+        "text": "[7]"
+      },
+      {
+        "href": "#s03",
+        "text": "[3]"
+      },
+      {
+        "href": "#s07",
+        "text": "[7]"
+      },
+      {
+        "href": "#s09",
+        "text": "[9]"
+      },
+      {
+        "href": "https://eips.ethereum.org/EIPS/eip-20",
+        "text": "ERC-20 token standard"
+      },
+      {
+        "href": "https://coinmarketcap.com/currencies/uniswap/",
+        "text": "CoinMarketCap UNI market page"
+      },
+      {
+        "href": "https://www.coingecko.com/en/coins/uniswap",
+        "text": "CoinGecko UNI webpage"
+      },
+      {
+        "href": "https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max",
+        "text": "CoinMarketCap: supply methodology"
+      },
+      {
+        "href": "https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology",
+        "text": "CoinGecko: supply methodology"
+      },
+      {
+        "href": "https://blog.uniswap.org/uni",
+        "text": "Uniswap Labs: Introducing UNI"
+      },
+      {
+        "href": "https://developers.uniswap.org/docs/ecosystem/governance/uni",
+        "text": "Uniswap developers: UNI token"
+      },
+      {
+        "href": "https://eth.blockscout.com/token/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+        "text": "Blockscout: Ethereum UNI token"
+      },
+      {
+        "href": "https://support.coingecko.com/articles/4098617618-coingecko-supply-update-faq",
+        "text": "CoinGecko supply update and multi-chain FAQ"
+      },
+      {
+        "href": "https://github.com/Uniswap/governance/blob/master/contracts/Uni.sol",
+        "text": "Uniswap's UNI source code"
+      },
+      {
+        "href": "../allora-unlock-accounting-versus-selling/",
+        "text": "When vesting is not a sell order"
+      },
+      {
+        "href": "../aptos-unlock-calendar-discrepancy/",
+        "text": "Disputed unlock calendars"
+      },
+      {
+        "href": "../inj-bridge-concentration-accounting/",
+        "text": "Bridge balances versus economic ownership"
+      },
+      {
+        "href": "../deepbook-supply-transparency/",
+        "text": "Treasury control and circulation"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Tokenomics / Investigation / November 22, 2026"
+      },
+      {
+        "tag": "p",
+        "text": "A UNI supply audit finds 623.3 million tokens classified as circulating, a disputed total, and a one-billion-token ceiling that is not necessarily permanent."
+      },
+      {
+        "tag": "p",
+        "text": "Independent Market Notes · Research snapshot, not a live feed"
+      },
+      {
+        "tag": "p",
+        "text": "I expected a token supply audit to begin with a number. It began with a disagreement over what the number meant. UNI began with a billion tokens. At 16:55:18 UTC on November 22, 2026, CoinMarketCap classified 623.3 million as circulating and 885.5 million as total. An Ethereum token indexer showed a different total again: one billion. None of those displays, by itself, establishes how many UNI are available to sell."
+      },
+      {
+        "tag": "p",
+        "text": "That distinction matters because circulating supply, total supply and maximum supply are not three interchangeable descriptions of scarcity. One is an estimate of public availability, another aims to account for the issued stock, and the third asks what future issuance rules permit. Each rests on a different kind of evidence. [1] [2] [3]"
+      },
+      {
+        "tag": "p",
+        "text": "Circulating supply is a provider-defined estimate of tokens accessible to the public market. Total supply generally describes issued tokens less recognized burns, but an ERC-20 contract's totalSupply() may not match a dashboard's burn-accounting convention. Max supply is the proposed or technically enforceable lifetime issuance ceiling—if one exists at all. A blank maximum field does not establish unlimited issuance."
+      },
+      {
+        "tag": "p",
+        "text": "CoinMarketCap expressly treats public float as distinct from unlocked supply and total minted stock. CoinGecko describes exclusions for treasury, team and other uncirculated wallets, including some balances that are already unlocked. I would not treat either provider's circulating number as a census of holders ready to trade. [4] [5]"
+      },
+      {
+        "tag": "p",
+        "text": "Uniswap's September 16, 2020 launch announcement described one billion UNI minted at genesis. Its current documentation breaks that starting allocation into six destinations: 430 million for the community treasury, 212.66 million for employees, 180.44 million for investors, 150 million for an immediate historical-user airdrop, 20 million for liquidity mining and 6.9 million for advisors. The amounts sum exactly to one billion. That is a check on planned allocation arithmetic, not a record of wallets holding those balances today. [6] [7]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 1. The original one-billion-UNI allocation. Historical categories do not establish November 2026 ownership, spendability or float. Source: Uniswap's genesis announcement and UNI documentation, September 2020. Values in millions of UNI."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 1 data — issuer-reported genesis allocations, September 2020"
+      },
+      {
+        "tag": "p",
+        "text": "Uniswap announced that its 430-million-UNI community treasury would vest over four years. The scheduled amounts were 172 million in the first year, then 129 million, 86 million and 43 million. The cumulative allocation therefore reached 430 million at year four. Current Uniswap documentation says all vesting concluded in September 2025. But a vesting schedule cannot prove a token was distributed, transferred to a trading venue or sold. [7]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 2. Scheduled annual treasury vesting, not on-chain realized transfers or sales. Annual grouping obscures within-year timing. Source: Uniswap UNI documentation; original four-year schedule following the September 2020 genesis. Values in millions of UNI."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 2 data — original UNI community treasury vesting schedule (not market float)"
+      },
+      {
+        "tag": "p",
+        "text": "For an investor, the relevant question after an unlock is not merely whether a vesting clock expired, but who controls the units, whether further transfer restrictions exist, and whether any of them reached a market. A token can be fully vested and still excluded from an indexer's estimate of circulating float."
+      },
+      {
+        "tag": "p",
+        "text": "CoinMarketCap's UNI snapshot put circulating supply at 623,284,422.48 UNI and total supply at 885,532,418.79 UNI. Subtracting the former from the latter yields 262,247,996.31 UNI, or 29.615% of that provider's reported total. It is a classified residual. I cannot certify that every token in it is technically locked, that any of it will be sold, or that it belongs to a single treasury. [2]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 3. A decomposition of one provider's reported figures, not independently proven wallet-level restrictions. CoinMarketCap UNI ID 7083, as-of 2026-11-22 16:55:18.249 UTC. Arithmetic: 885,532,418.78619706 minus 623,284,422.48036204 UNI. Both segments share the same provider definition."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 3 data — CoinMarketCap UNI snapshot, November 22, 2026 at 16:55:18 UTC"
+      },
+      {
+        "tag": "p",
+        "text": "A same-day CoinGecko webpage displayed approximately 607.276 million UNI circulating and 885.536 million total. The CoinGecko quote's precise as-of timestamp was unavailable in the research record, so this is not a synchronized measurement against the CoinMarketCap API. The circulating estimates differed by about 16.008 million UNI—around 2.57% of CoinMarketCap's circulating figure—even though their reported total supplies were close. The numbers may reflect different exclusions, updates or both; the evidence does not identify the specific wallets responsible. [3] [5]"
+      },
+      {
+        "tag": "p",
+        "text": "Then the indexer result complicated the story. The Blockscout Ethereum contract page returned a raw token-supply field of 1027 base units and 18 decimals: one billion UNI. It also identified the Ethereum mainnet contract as 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984. That indexed number exceeds CoinMarketCap's reported total by 114,467,581.21 UNI. The two measurements may use different semantics, including whether specific burned or inaccessible balances are subtracted. But I cannot turn the gap into a verified burn tally. [8]"
+      },
+      {
+        "tag": "caption",
+        "text": "Reported UNI supplies seen November 22, 2026 — asynchronous, definition-dependent sources"
+      },
+      {
+        "tag": "p",
+        "text": "Blockscout's indexed circulation may share an upstream feed with CoinGecko; similarity is not independent corroboration. The chain-head block reported in the same tool session (26,472,003 at 16:58:35 UTC) is not the verified block at which its token-supply metadata was sampled."
+      },
+      {
+        "tag": "p",
+        "text": "Uniswap's 2020 announcement described 2% annual inflation beginning after four years. Its current documentation is more specific: there is no active inflation, governance has authority to mint up to 2% of total supply annually, and that authority has not been exercised to date. The same current documentation describes UNI burns funded by protocol fees since December 2025. Those are issuer statements about authority and activity, not a reconstructed contract-event series. [6] [7]"
+      },
+      {
+        "tag": "p",
+        "text": "CoinGecko displayed a one-billion-UNI maximum; CoinMarketCap's queried record contained no maximum-supply value. Neither display answers the harder contract question: is one billion a permanent lifetime ceiling, or a historical issuance baseline under a governance-controlled mint function? A blank field is not zero and does not prove the supply is infinite; a displayed cap is not by itself proof that no further tokens can ever be minted. [3] [7]"
+      },
+      {
+        "tag": "p",
+        "text": "Wrapped UNI on another chain is a separate claim that may be backed by locked native UNI. Simply summing all chains' token contract totals risks counting one economic token twice. The bridge's lock/mint or burn/mint model must be identified first. [9]"
+      },
+      {
+        "tag": "p",
+        "text": "I would begin with the canonical asset and contract address, the chain and block height, and the exact definition of any burn. I would next ask whose holdings a provider excluded, whether unlock dates correspond to real wallet movements, and whether bridged representations are counted as new units. Finally I would check if mint authority remains and when the display was last updated."
+      },
+      {
+        "tag": "p",
+        "text": "These checks matter for valuation. Circulating market capitalization is price multiplied by estimated float; a fully diluted valuation invokes a different supply denominator. Neither formula establishes that a particular number of tokens will hit the order book. For that I would need evidence about holders, restrictions and actual market liquidity—not a supply chart alone."
+      },
+      {
+        "tag": "p",
+        "text": "My conclusion is narrower than a dashboard: UNI's original allocation arithmetic is documented, the circulating classification is contestable, and the lifetime maximum is not independently settled by a displayed one-billion figure. The unresolved 114.47-million-UNI total-supply gap is the reason to demand a pinned contract read and an auditable burn ledger before declaring the accounting closed."
+      },
+      {
+        "tag": "p",
+        "text": "Research cutoff: November 22, 2026 UTC. Figures 1 and 2 are historical issuer schedules; Figure 3 is a single timestamped CoinMarketCap classification. No figure depicts realized exchange selling or a time series of burns. All plotted amounts derive from the same research ledger, with decimal arithmetic and zero baselines. The separately reported CoinGecko and Blockscout observations were retained in a table, not plotted on misleading common time axes. Source access, publication time and quote as-of time differ and are noted explicitly."
+      },
+      {
+        "tag": "li",
+        "text": "ERC-20 token standard — defines the totalSupply() interface, not provider circulating float. Link was not independently fetched successfully in this publication pass."
+      },
+      {
+        "tag": "li",
+        "text": "CoinMarketCap UNI market page — underlying UNI ID 7083 quotes response, updated 2026-11-22T16:55:18.249Z; snapshot values retained in research dossier."
+      },
+      {
+        "tag": "li",
+        "text": "CoinGecko UNI webpage — rounded November 22, 2026 supply values, exact quote update time unavailable."
+      },
+      {
+        "tag": "li",
+        "text": "CoinMarketCap: supply methodology — published methodology, updated October 30, 2026."
+      },
+      {
+        "tag": "li",
+        "text": "CoinGecko: supply methodology — provider definitions, including uncirculated wallets."
+      },
+      {
+        "tag": "li",
+        "text": "Uniswap Labs: Introducing UNI — launch announcement, September 16, 2020."
+      },
+      {
+        "tag": "li",
+        "text": "Uniswap developers: UNI token — allocations, vesting and current issuer description of mint authority and burns."
+      },
+      {
+        "tag": "li",
+        "text": "Blockscout: Ethereum UNI token — November 22, 2026 secondary indexer metadata, not a successful block-pinned contract state read."
+      },
+      {
+        "tag": "li",
+        "text": "CoinGecko supply update and multi-chain FAQ — methodology for wrapped/multi-chain tokens."
+      },
+      {
+        "tag": "li",
+        "text": "Uniswap's UNI source code — code reference for issuance mechanics, not independent live state verification."
+      },
+      {
+        "tag": "p",
+        "text": "When vesting is not a sell order · Disputed unlock calendars · Bridge balances versus economic ownership · Treasury control and circulation"
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Recipient or program",
+          "Allocation (UNI)",
+          "Share of genesis"
+        ],
+        [
+          "Community treasury",
+          "430,000,000",
+          "43%"
+        ],
+        [
+          "Team and future employees",
+          "212,660,000",
+          "21.266%"
+        ],
+        [
+          "Investors",
+          "180,440,000",
+          "18.044%"
+        ],
+        [
+          "Historical user/LP airdrop",
+          "150,000,000",
+          "15%"
+        ],
+        [
+          "Liquidity mining",
+          "20,000,000",
+          "2%"
+        ],
+        [
+          "Advisors",
+          "6,900,000",
+          "0.69%"
+        ],
+        [
+          "Total",
+          "1,000,000,000",
+          "100%"
+        ]
+      ],
+      [
+        [
+          "Scheduled vesting period",
+          "Scheduled UNI",
+          "Cumulative scheduled UNI"
+        ],
+        [
+          "Year 1",
+          "172,000,000",
+          "172,000,000"
+        ],
+        [
+          "Year 2",
+          "129,000,000",
+          "301,000,000"
+        ],
+        [
+          "Year 3",
+          "86,000,000",
+          "387,000,000"
+        ],
+        [
+          "Year 4",
+          "43,000,000",
+          "430,000,000"
+        ]
+      ],
+      [
+        [
+          "Measurement",
+          "UNI",
+          "Source / calculation"
+        ],
+        [
+          "Reported circulating",
+          "623,284,422.48",
+          "CMC API, UNI 7083"
+        ],
+        [
+          "Reported total",
+          "885,532,418.79",
+          "CMC API, UNI 7083"
+        ],
+        [
+          "Reported total minus circulating",
+          "262,247,996.31",
+          "Calculated, C01"
+        ]
+      ],
+      [
+        [
+          "Source and evidence type",
+          "Circulating (UNI)",
+          "Total (UNI)"
+        ],
+        [
+          "CoinMarketCap API · 16:55:18 UTC",
+          "623,284,422.48",
+          "885,532,418.79"
+        ],
+        [
+          "CoinGecko webpage · precise quote time unknown; rounded",
+          "≈607,276,000",
+          "≈885,536,000"
+        ],
+        [
+          "Blockscout indexer metadata · token state block unknown",
+          "607,275,895.88 (indexed)",
+          "1,000,000,000 (indexed)"
+        ]
+      ]
+    ],
+    "alts": [],
+    "svgCount": 3,
+    "svgSha256": [
+      "13e9d845c0104cdccad91d11885e81903aadb641f8eae9b00c14dcdd5ad86212",
+      "997fe5d1cd8da4caae6a9f855a6e39e392ad97d1dd8034ff09529b04572dc6ea",
+      "4f9b9df9c36dc477b9a305f221c63b52a93357ec713b2b6417860a5421e414b0"
+    ],
+    "imageCount": 0,
+    "imageSha256": [],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "crypto-liquidity-basics-liquidity-versus-daily-volume": {
     "text": "Liquidity / Market structure / InvestigationCrypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell IntoA real pair of spot order books reveals what turnover totals leave out: available bids, available asks, and the price of crossing them for a specified trade size.November 22, 2026 · Dated spot snapshots, not live market quotes · BTC-USDT and ETH-USDT I can point to a big trading-volume number and still be unable to tell you what a sale will fetch. In a November 22 spot-market reading, a provider attributed 432.42 million USDT of rolling 24-hour BTC-USDT turnover to OKX. Roughly 27 seconds later, the first 60 bid levels returned for the same pair added up to 287,623.59 USDT of displayed orders. I do not divide one figure by the other and call the result liquidity. One measures yesterday’s passing trade flow; the other captures a limited slice of what was displayed at one instant. [1–3] The distinction is useful precisely because these numbers sound comparable. Both are expressed in USDT, and both refer to the same spot pair and venue attribution. But they have different clocks, denominators and meanings. Neither number, alone, tells me the cost of selling a specified amount now. Turnover is a record of activity, not an open invitation to trade Daily volume adds up trades completed over a rolling window. It can count repeated buying and selling of the same inventory. Order-book depth is different: bids are displayed offers to buy and asks are displayed offers to sell, distributed across price levels. A seller needs bids; a buyer needs asks. A narrow quoted spread measures the closest prices, not how much size can cross them. REPORTED: The provider’s two spot tickers returned 432,422,145.31 USDT in BTC-USDT 24-hour quote turnover at 16:13:06.670 UTC, and 182,983,067.99 USDT for ETH-USDT at 16:13:05.566 UTC. Under OKX’s documented spot ticker convention, the volCcy24h field denotes quote-currency volume. These values were not reconciled against native trade IDs or adjusted for possible wash trading. [1, 2] I deliberately keep those turnover totals out of a bar chart with depth. Placing millions of historical flow beside thousands of instantaneous resting orders on one scale would create a dramatic picture without making them the same quantity. A snapshot answers the next question—only partly The separate order-book responses arrived later: 16:13:33.752 UTC for BTC-USDT and 16:13:36.705 UTC for ETH-USDT. Both were attributed to OKX by the connected market-data adapter. BTC’s best bid and ask were 61,049.4 and 61,049.5 USDT per BTC; ETH’s were 1,719.60 and 1,719.61 USDT per ETH. That yields quoted midpoint-relative spreads of approximately 0.0164 and 0.0582 basis points, respectively. A basis point is 0.01%. [2–4] What the 60 returned price levels showed was not full market depth. The farthest listed prices on both sides of each pair were still inside 1% of the midpoint. The responses therefore did not reach either the 1% or 2% boundary. I can add up the levels I saw, but I cannot call the sum the complete 1% or 2% book. Visible notional in the first 60 order book levels for BTC-USDT and ETH-USDTBTC displayed 288 thousand USDT on bids and 197 thousand on asks; ETH 334 thousand bids and 480 thousand asks. These are truncated-book totals and only lower bounds within 1% and 2% price bands.First 60 displayed levels per side (thousand USDT)0100200300400500BTC bid288kBTC ask197kETH bid334kETH ask480kSnapshot only; 1% / 2% band boundaries NOT reachedFigure 1. Observed notional of the first 60 returned bid and ask price levels per spot pair, USDT. The bars start at zero. Their totals are truncated-book lower bounds inside the 1% and 2% midpoint bands, not full-band liquidity or executable guarantees. Source: provider-mediated, OKX-attributed spot books, November 22, 2026, 16:13:33–36 UTC; calculations sum price × displayed base size. Numerical table below. Figure 1 data: displayed first-60-level book notional, November 22, 2026; USDT, per sidePair · sideSnapshot time60th-level price (USDT/base)Displayed notional (USDT)Reached 1% / 2% band?BTC-USDT bid16:13:33 UTC61,026.40287,623.59NoBTC-USDT ask16:13:33 UTC61,066.90197,283.44NoETH-USDT bid16:13:36 UTC1,718.56334,320.26NoETH-USDT ask16:13:36 UTC1,720.81480,323.94No Method: for each recorded level, displayed quote notional = level price × base-asset quantity, summed by side. The observed book records comprise 60 levels per side. The first 60 are not a random sample of deeper liquidity; unreturned levels are missing, not zero. Timestamps are venue payload times, not an independently measured receiving clock. The turning point: price depends on order size A spread is one price step. A larger marketable order can use up the quantity at the best quote and move through progressively worse price levels. To see that effect without pretending to have placed a trade, I modeled immediate buys and sells of 1,000, 10,000, 50,000 and 100,000 USDT against each frozen book. I consumed displayed asks for buys and bids for sells in price order. There was enough notional in the returned 60 levels for each of these independent, reset-to-the-same-book examples. [3, 4] Modeled midpoint-relative cost versus order size for BTC and ETH spot buys and sellsFour series at one, ten, fifty and one hundred thousand USDT sizes. BTC buy costs 0.0082 to 0.7486 basis points, BTC sell 0.0082 to 0.8570; ETH buy 0.0291 to 1.5517, ETH sell 0.0291 to 1.5692. Model based on November 22, 2026 order books; no fees or latency and not observed fills.0.00.51.01.5Midpoint-relative cost (basis points, bps)1k10k50k100kOrder notional (USDT) · discrete sampled sizesBTC buyBTC sellETH buyETH sellFigure 2. MODELED, not filled: midpoint-relative book-walk cost in basis points for separate hypothetical USDT order sizes, using the same two observed November 22, 2026 spot snapshots. Each point resets the snapshot; joined lines connect four sampled scenarios and do not imply values were independently calculated between them. No taker fees, cancellations, latency, hidden orders, replenishment, market reaction or quote conversion. Source: provider-mediated, OKX-attributed books and deterministic midpoint/VWAP arithmetic. Numerical table below. Figure 2 data: modeled midpoint-relative shortfall, basis points (bps), excluding fees; November 22, 2026 spot booksRequested order (USDT)BTC buy (bps)BTC sell (bps)ETH buy (bps)ETH sell (bps)1,0000.00820.00820.02910.029110,0000.18510.00820.02910.029150,0000.51090.34240.68700.6605100,0000.74860.85701.55171.5692 Equation: midpoint = (best bid + best ask)/2; at each consumed level, USDT filled = minimum(remaining requested USDT, price × available base units), base filled = USDT filled ÷ level price, VWAP = total USDT filled ÷ total base filled. For buys, cost (bps) = 10,000 × (VWAP ÷ midpoint − 1); for sells, 10,000 × (1 − VWAP ÷ midpoint). A residual, if any, would remain unfilled rather than priced at an unknown level. All displayed scenarios were fully covered by the returned sample. No external order was submitted. Here is the specific change that matters to me. The BTC buy example rose from about 0.0082 bps at 1,000 USDT to 0.7486 bps at 100,000 USDT. ETH’s modeled sell cost reached 1.5692 bps at 100,000 USDT. These are not forecasts of a real order, and such fractions of a basis point should never be treated as a promise of easy fills. The direction of the example is the lesson: available price and available size are linked, and the linkage changes by side. Why I would not call the calculation executable liquidity There was no trade, fill receipt or latency observation in this exercise. A resting order can cancel before an incoming trade reaches it. A different maker may replenish the book; hidden or iceberg interest may be available; queue priority and fee schedules differ by participant. Price can move while an order is transmitted. USDT is also the quote asset here, not an assumed cash-dollar conversion. The snapshot only describes displayed price/quantity at the observed moment. It does not establish a binding exit capacity or a measured post-trade market impact. Nor could I independently rerun the whole depth sweep from a pristine all-level archive. The research retained the source-attributed calculations, ticker values and leading price levels, but not a complete immutable copy of all 60 levels in each original book response. I verified the saved midpoint/spread arithmetic and reconstructed cost from saved VWAPs; I cannot certify every underlying level against raw archived bytes. That provenance limit belongs next to the graph, not in fine print. The strongest countercase is the speed of replenishment I do not infer a defective market from the gap between a large rolling volume number and a smaller resting snapshot. A fast market-making system can recycle inventory and replace bids and asks many times in a day. Genuine turnover could be high even when a static book looks thin. Conversely, apparently deep displayed interest can vanish in a fast selloff. A good measurement would observe repeated books, native trade prints, cancellations, fills and volatility across ordinary and stressed hours. Manipulation is a further reason to check volume rather than trust it on sight. Cong, Li, Tang and Yang’s Crypto Wash Trading investigates historical exchange samples and documents anomalous reported trading. But that research does not establish what fraction—if any—of the November 2026 OKX-attributed BTC or ETH readings reflected wash trades. I make no venue-specific allegation here. [5] What I would measure before trusting a liquidity headline My first question would be the exact spot venue and pair, followed by the quote asset and observation clock. Next I would ask whether the depth is bid or ask, whether it reaches a defined 1% or 2% price band, and what an actual order size costs in an execution-aware model. I would want a documented taker fee, a record of the order book’s age, repeated snapshots, matched native trades and a stressed-period comparison before claiming dependable execution. If the book stops short of the stated price band, the missing portion is unknown. If the venue adapter has not been independently validated, attribution remains provisional. This is why I would not choose a market simply because its daily turnover looks impressive. The practical question is smaller and harder: when I need to trade a specified amount, how much real interest is available on the side I need, at what prices, and for how long? The dated snapshots do not answer that fully. They show why the 24-hour number never could. Questions readers ask Is 24-hour crypto volume the same as liquidity?No. It is a reported sum of past trades over a rolling window. Liquidity depends on the price, size, venue, side and time of a prospective transaction.What is 1% or 2% depth?It is the total displayed order notional on a specified side within a stated distance of a reference price, commonly a midpoint. You cannot calculate the full band from an order-book response that ends before its price boundary.Is a tight bid–ask spread proof I can sell a large order cheaply?No. It describes the nearest quoted prices, not the amount waiting at or beyond those prices, nor whether that amount persists.Can high turnover be genuine with a relatively small resting book?Yes. Market makers can replenish many times. The turnover figure alone cannot distinguish resilient replenishment from fragile or manipulated activity.Is book-walk cost the same as actual slippage?No. This model consumes a frozen visible book and excludes fees, cancellations, latency, hidden liquidity and price response. Actual fill costs require actual execution records.Are the USDT figures equal to US dollars?Not by assumption. They are USDT-denominated quantities; a USD comparison would require a timestamped, appropriate conversion quote. Sources and measurement recordOKX API documentation, market ticker and order-book field definitions. Primary documentation of exchange conventions; it does not independently confirm the adapter observations.Provider-mediated fin_data_mcp_http_v2 spot ticker reads, BTC-USDT at 2026-11-22 16:13:06.670 UTC and ETH-USDT at 16:13:05.566 UTC. Source IDs: OKX-TICKER-BTC-USDT and OKX-TICKER-ETH-USDT. Rolling 24-hour, reported, unadjusted, USDT quote volume. Original vendor availability timestamp and trade-level reconciliation unknown.Provider-mediated spot 60-level book reads, BTC-USDT at 2026-11-22 16:13:33.752 UTC and ETH-USDT at 16:13:36.705 UTC. Source IDs: OKX-BOOK60-BTC-USDT and OKX-BOOK60-ETH-USDT. Available first 60 levels per side, not complete price bands; raw full response not separately archived.Reproducible definitions: C-SPREAD midpoint-normalized best-quote spread; C-DEPTH60 sum(price × base size) on returned levels, per side; C-SWEEP static book walk, volume-weighted average price and signed midpoint-relative cost. The saved figure points and models were recomputed for midpoint/VWAP consistency but full raw-level replication is unavailable.Cong, Li, Tang and Yang, Crypto Wash Trading, historical exchange research (NBER working paper; later published in Management Science). Sample-bound literature, not direct evidence about today’s OKX trade authenticity.Related Independent Market Notes: The Liquidity Illusion in Crypto’s New Small-Cap Listings and The Token Unlock Calendar Has a Liquidity Problem. These provide broader liquidity contexts; neither substitutes for this pair-specific observation record. Historical observation and illustrative paper calculations only. No orders placed. Proposed editorial date: November 22, 2026; not evidence of publication.",
     "headings": [

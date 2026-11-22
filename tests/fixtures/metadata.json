@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "tokenomics-fundamentals-circulating-versus-total-versus-max-supply": {
+      "title": "Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different Stories",
+      "description": "A UNI supply audit finds 623.3 million tokens classified as circulating, a disputed total, and a one-billion-token ceiling that is not necessarily permanent.",
+      "canonical": "https://independent-market-notes.netlify.app/tokenomics-fundamentals-circulating-versus-total-versus-max-supply/",
+      "og:title": "Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different Stories",
+      "og:description": "A UNI supply audit finds 623.3 million tokens classified as circulating, a disputed total, and a one-billion-token ceiling that is not necessarily permanent.",
+      "og:url": "https://independent-market-notes.netlify.app/tokenomics-fundamentals-circulating-versus-total-versus-max-supply/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "crypto-liquidity-basics-liquidity-versus-daily-volume": {
       "title": "Crypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell Into",
       "description": "A real pair of spot order books reveals what turnover totals leave out: available bids, available asks, and the price of crossing them for a specified trade size.",
@@ -552,6 +562,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different Stories",
+      "link": "https://independent-market-notes.netlify.app/tokenomics-fundamentals-circulating-versus-total-versus-max-supply/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/tokenomics-fundamentals-circulating-versus-total-versus-max-supply/",
+      "description": "A UNI supply audit finds 623.3 million tokens classified as circulating, a disputed total, and a one-billion-token ceiling that is not necessarily permanent."
+    },
     {
       "title": "Crypto Liquidity Basics: Why Daily Trading Volume Is Not the Liquidity You Can Sell Into",
       "link": "https://independent-market-notes.netlify.app/crypto-liquidity-basics-liquidity-versus-daily-volume/",
