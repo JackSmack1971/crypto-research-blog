@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-rebound-without-conviction": {
+      "title": "Crypto’s Rebound Has a Conviction Problem",
+      "description": "Bitcoin is recovering from a sharp November selloff, but ETF redemptions, weak Ethereum leadership, and uneven altcoin liquidity complicate the bullish case.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-rebound-without-conviction/",
+      "og:title": "Crypto’s Rebound Has a Conviction Problem",
+      "og:description": "Bitcoin has rebounded from its November low. Institutional flows, derivatives positioning and Solana’s uneven recovery tell a more complicated story.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-rebound-without-conviction/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "minelius-bundles-are-not-ownership-proof": {
       "title": "MINELIUS and the Wallet-Cluster Claim That Outran Its Evidence",
       "description": "A Solana launch drew a startling bundled-buy warning. Conflicting scanner verdicts show why purchase patterns, holder balances and beneficial ownership must not be mistaken for one another.",
@@ -612,6 +622,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Crypto’s Rebound Has a Conviction Problem",
+      "link": "https://independent-market-notes.netlify.app/crypto-rebound-without-conviction/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-rebound-without-conviction/",
+      "description": "Bitcoin is climbing off a bruising November low, and selected altcoins are showing life. But institutional withdrawals, weak Ethereum leadership and conflicting liquidity signals complicate the story behind the bounce."
+    },
     {
       "title": "MINELIUS and the Wallet-Cluster Claim That Outran Its Evidence",
       "link": "https://independent-market-notes.netlify.app/minelius-bundles-are-not-ownership-proof/",

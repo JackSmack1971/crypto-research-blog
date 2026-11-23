@@ -1,5 +1,24 @@
 [
   {
+    "slug": "crypto-rebound-without-conviction",
+    "source": "crypto-rebound-without-conviction.html",
+    "date": "2026-11-23",
+    "title": "Crypto’s Rebound Has a Conviction Problem",
+    "dek": "Bitcoin is climbing off a bruising November low, and selected altcoins are showing life. But institutional withdrawals, weak Ethereum leadership and conflicting liquidity signals complicate the story behind the bounce.",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/crypto-rebound-without-conviction.jpg",
+    "image_alt": "Editorial illustration of a fractured market bridge whose two sections are beginning to reconnect, against a restrained dark grid",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "minelius-bundles-are-not-ownership-proof",
     "source": "minelius-bundles-are-not-ownership-proof.html",
     "date": "2026-11-22",
