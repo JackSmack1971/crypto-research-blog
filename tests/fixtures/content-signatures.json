@@ -1,4 +1,457 @@
 {
+  "on-chain-forensics-tracing-funds-across-wallet-clusters": {
+    "text": "Investigative analysis · Risk & Verification On-Chain Forensics Can Trace the Money. It Cannot Automatically Name the Owner. The Euler Finance recovery shows where blockchain evidence is strongest: transaction paths are verifiable, wallet clusters are inferential, and real-world attribution needs evidence the ledger does not contain. November 22, 2026 · Ethereum historical case study · No current-market claims A blockchain can tell me with unusual precision that 10,701,338 DAI moved from one Ethereum address to another at 18:40:23 UTC. It cannot, by itself, tell me how many people held the keys, whether those people also controlled another wallet, or what real-world name belonged to any of them. That gap is the central problem in on-chain forensics. The transaction layer can be almost brutally specific. The attribution layer is not. When those two levels are collapsed into one story, a clean-looking wallet graph can turn into an accusation that the ledger never actually proved. I used the 2023 Euler Finance exploit recovery as a bounded case because it contains exactly the kind of pattern that tempts overreach: a large return to Euler, repeated transfers into fresh wallets, recombination of funds, later returns, and public labels supplied by explorers and forensic researchers. The chain records make the movement visible. The hard part is deciding where the evidence stops. Evidence boundary. This article uses historical Ethereum mainnet transactions from March 25 through April 3, 2023, plus protocol and forensic disclosures published in 2023. Transaction occurrence is treated as OBSERVED only where a specific hash, amount, block or timestamp was independently retrieved. Explorer labels and analyst interpretations are REPORTED. Common-control conclusions are INFERRED. Real-world identity remains UNKNOWN. The first layer is simple: did the transfer happen? On March 25, 2023 at 15:08:23 UTC, Ethereum transaction 0xb0308e…4343f succeeded in block 16,905,269. It sent 51,000 ETH from 0xb66cd966…995db to the Euler deployer address 0xEe009FAF…8C8C5. That is the strongest kind of statement in this investigation: a directly observed transaction with an identifiable source, destination, amount, block and time. Minutes later, the same source address sent equal native-asset tranches to fresh wallets. Two of those transfers were independently recovered here: 7,738.25 ETH to 0xa1b44d…8e676 at 15:25:59 UTC, and another 7,738.25 ETH to 0x8765A3…E38A4c one minute later. Coinbase Unit 0x reported a broader four-wallet split. I can reproduce two of those native-ETH legs from the retrieved explorer records; I do not treat the other two as independently established in this article. Verified native-ETH transfers in the bounded March 25 subset UTC timeFromToAmountBlockSource 2023-03-25 15:08:230xb66cd…995db0xEe009…8C8C551,000 ETH16,905,269Etherscan 2023-03-25 15:25:590xb66cd…995db0xa1b44d…8e6767,738.25 ETH16,905,356Etherscan 2023-03-25 15:26:590xb66cd…995db0x8765A3…E38A4c7,738.25 ETH16,905,361Etherscan The verified subtotal in those three rows is 66,476.50 ETH. It is not the total exploit recovery. It is simply the arithmetic sum of the rows I can defend from this bounded dataset. Token tracing introduces a second problem: the ticker is not the asset ERC-20 data looks straightforward until the explorer starts returning multiple tokens with the same name. During this research, target-address histories included unrelated contracts using the label “Dai Stablecoin (DAI).” For forensic purposes, the token symbol is not enough. The canonical DAI contract in this analysis is 0x6B175474E89094C44Da98b954EedeAC495271d0F, with 18 decimals. Filtering on that contract produced three independently supported seed-to-fresh-wallet DAI rows: 10,787,465.25 DAI to 0xa1b44d…8e676, 10,787,465.25 DAI to 0xC4e04A…b208E, and 10,701,338.6 DAI to 0x8765A3…E38A4c. Their subtotal is 32,276,269.10 DAI. That subtotal matters less for its size than for its provenance. Each admitted row is tied to the canonical contract, not merely a familiar ticker. A forensic graph built from token symbols alone can quietly merge unrelated assets and manufacture false paths. Verified Euler-related Ethereum transfer timeline, March 25 to April 3, 2023 Timeline showing verified large ETH and DAI transfers from the seed address to Euler and fresh wallets, followed by verified DAI returns to Euler. Hollow markers indicate rows that were retrieved from Blockscout but not independently reopened before the acquisition session failed. Mar 25Mar 28Apr 3 51,000 ETH → Euler deployer 7,738.25 ETH → fresh wallet 7,738.25 ETH → fresh wallet 10.787M / 10.787M / 10.701M DAI partitions 10.701338M DAI → Euler deployer 5M DAI → Euler multisig 12M DAI → Euler multisig Filled = independently reopened explorer row · Hollow = source row retained with partial corroboration Figure 1 — Verified event timeline. The chain is strongest at the transaction level. Timing can show sequence, but sequence alone does not prove common ownership or causation. Sources: Etherscan transaction records listed in the table below; Blockscout historical token-transfer retrieval for the canonical-DAI partition rows. Event window: March 25–April 3, 2023. Transaction rows supporting the timeline UTC timeObserved movementHashStatus in this investigation 2023-03-25 15:08:2351,000 ETH seed → Euler deployer0xb0308e…4343fOBSERVED / independently reopened 2023-03-25 15:25:597,738.25 ETH seed → a1b44d0x79c10c…baedaOBSERVED / independently reopened 2023-03-25 15:26:597,738.25 ETH seed → 87650x77720a…c1e2aOBSERVED / independently reopened 2023-03-25 15:30:2310,787,465.25 DAI seed → c4e04a0xb0d5c4…e10b2OBSERVED / independently reopened 2023-03-25 15:32:5910,701,338.6 DAI seed → 87650xeac56b…ae666OBSERVED / independently reopened 2023-03-27 18:40:2310,701,338 DAI 8765 → Euler deployer0x32a56c…cdc1OBSERVED / independently reopened 2023-03-28 04:47:595,000,000 DAI c4e04a → Euler multisig 20x92f311…4099OBSERVED / independently reopened 2023-04-03 22:49:4712,000,000 DAI 0d1B → Euler multisig 20x237309…8ac4OBSERVED / independently reopened The graph gets interesting exactly where certainty begins to fall One fresh wallet, 0x8765A3…E38A4c, provides a useful example. It received 10,701,338.6 canonical DAI on March 25. On March 27, it sent 10,701,338 DAI to the Euler deployer in transaction 0x32a56c…cdc1. The difference between those two observed rows is just 0.6 DAI. Another branch is more complicated. Blockscout returned a canonical-DAI transfer of 9,557,465.25 DAI from 0x46e0Be…Cf55 to 0xa1b44d…8e676. The latter had already received 10,787,465.25 DAI from the seed wallet. It later sent 20,000,000 DAI onward to 0x0d1B0c…A9843. On the partial rows I have, the simple reconciliation is 10,787,465.25 + 9,557,465.25 − 20,000,000 = 344,930.50 DAI. That residual is not a finding of hidden profit. It is a reminder that a path calculation is only as complete as the address history behind it. The available Blockscout history was not exhaustively paginated, so I do not present the bounded graph as a complete balance accounting. The graph can be certain about an arrow while remaining uncertain about the person behind either endpoint. The central mistake is turning connectivity into ownership Common source, close timing, repeated amounts and shared return destinations can make a wallet cluster analytically useful. They can also be produced by several people coordinating, by delegated signing, by a service acting for multiple users, or by a negotiated distribution of funds. Those alternatives matter because the strongest claim I can defend here is not “these addresses belonged to one person.” It is that the observed routing is consistent with coordinated activity. Coinbase Unit 0x went further. Its April 25, 2023 investigation interpreted the wallet partition and on-chain messages as evidence that multiple actors—possibly up to four—were involved. That is a plausible REPORTED interpretation, and it deserves to be presented as such. It is not the same thing as an Ethereum transaction proving how many humans existed behind the keys. Evidence confidence falls as claims move from transfers toward identity A five-row matrix ranks transaction occurrence as high confidence, bounded path continuity as high to moderate, coordinated control as moderate, explorer or service attribution as reported, and natural-person identity as unresolved. What the evidence can actually support Claim layerConfidenceMain limitation Specific transfer occurredHIGHReceipt / explorer completeness Bounded path continuityHIGH–MODERATEMissing hops / pooled assets Coordinated wallet clusterMODERATEMultiple-control alternatives Explorer / analyst labelREPORTEDThird-party attribution Natural-person identityUNRESOLVEDLedger does not name owner Qualitative evidence tiers, not calibrated probabilities. Figure 2 — Link-confidence matrix. Confidence is highest for the existence of individual transfers and declines as the claim moves toward control, attribution and identity. Method: claim classification from the verified transaction set, Coinbase Unit 0x’s attributed interpretation, and explicit alternative explanations. These are qualitative evidence judgments, not statistical probabilities. Evidence hierarchy and the strongest defensible wording LayerClassificationDefensible statementWhat I would not claim Transaction occurrenceOBSERVEDA specified amount moved between specified addresses in a specified transaction.The sender’s explorer label proves a real-world identity. Path continuityOBSERVED / INFERREDObserved transfers connect these addresses within the bounded path.Every fungible unit remained continuously identifiable. Wallet clusterINFERREDThe routing is consistent with coordination or shared control.All addresses definitely had one owner. Analyst/explorer attributionREPORTEDCoinbase or an explorer labeled/interpreted the address this way.The label is independent proof. Individual identityUNKNOWNThe public-chain evidence here does not establish it.A natural person’s name as fact. Pooled infrastructure is where naïve tracing breaks Euler’s April 12 redemption plan reported that 1,100 ETH sent to Tornado Cash remained unrecovered, alongside 100 ETH sent to an address attributed to the Ronin attacker. The protocol’s accounting is useful context, but it does not license a stronger post-mixer claim. Once fungible assets enter pooled privacy infrastructure, matching an incoming amount to a later outgoing amount is not enough to establish unit-level continuity. Similar amounts, timestamps or address shapes can generate hypotheses. They do not restore the deterministic arrow that existed before the pool. This is the point where forensic diagrams often become most visually confident just as the evidence becomes least certain. A dashed speculative edge should not look like a transaction receipt. The countercase matters A skeptical investigation has to survive the strongest competing interpretation. In this case, Coinbase’s account of multiple participants is not frivolous. The partitioning behavior, messages and later returns are compatible with distinct actors reacting differently. One wallet’s near-exact DAI return, another wallet’s relay behavior, and the timing of subsequent transfers can all fit a multi-party story. But the same public data also permits other control structures. One operator could use multiple wallets. Several operators could share procedures. Keys could be delegated. Some addresses could represent temporary allocations rather than independent owners. The blockchain alone does not choose among those explanations. That is why the most important result of this case is methodological rather than dramatic: the correct stopping point is itself a finding. What would change my conclusion Independent verification that the two unretrieved native-ETH partition legs differ materially from the Coinbase account. Complete address histories showing an unobserved intermediary that breaks one of the proposed direct path interpretations. Evidence that a fresh wallet was controlled by an unrelated custodian, service or victim rather than a coordinated participant. Reliable off-chain evidence tying specific addresses to a common controller—or, conversely, to demonstrably separate controllers. A transaction-level reconstruction showing that one of the Blockscout-only rows was a lookalike-token event rather than canonical DAI. Those invalidators are not rhetorical caveats. They define what evidence would force the cluster model to change. The practical rule I would use I would build every on-chain investigation in layers. First, establish the transfer graph from exact chain records. Second, normalize assets by contract address and decimals. Third, mark where the observed path becomes incomplete. Only then add clustering heuristics—and keep them visually and verbally separate from transaction edges. Explorer labels should remain attributed. Real-world identity should remain unresolved until independent evidence supports it. The Euler case is useful precisely because the graph is compelling. Money moved in large, repeated, tightly timed transactions. Some wallets later returned funds. Others relayed them. A cluster is a reasonable analytical object. But the ledger’s precision is easy to overread. It can show me the money moving from address to address. It cannot automatically tell me who “the owner” was. The discipline of on-chain forensics is not just knowing how to follow the arrows. It is knowing when an arrow stops being evidence and starts becoming a story. Sources and method Coinbase Unit 0x — Euler Compromise Investigation, Part 2: The Redemption, April 25, 2023. Used for reported address grouping, broader chronology and the multiple-actor interpretation. Euler — Plan for Redemption of Euler Funds V2, April 12, 2023. Used for protocol-reported recovery accounting and the 1,100 ETH Tornado Cash figure. Euler Foundation — Special Announcement, April 4, 2023. Used for the protocol’s statement that recoverable funds had been returned. Etherscan transaction records linked directly throughout the article for independently reopened transaction rows. Blockscout historical token-transfer records on Ethereum mainnet for canonical-DAI rows. The retrieved coverage was not exhaustive, so those rows are not presented as complete address histories. Calculation note: 32,276,269.10 DAI is the sum of three retrieved canonical-DAI seed-to-fresh-wallet rows. 344,930.50 DAI is a partial-path residual from two observed inflows to 0xa1b44d…8e676 minus one observed 20,000,000 DAI outflow. 0.6 DAI is the difference between the observed inbound and outbound DAI rows for 0x8765A3…E38A4c. None is presented as a complete exploit balance. Related Independent Market Notes: DACITY: The Contract Was Not the Whole Risk and INJ’s 95% Bridge Wallet Is Not the Whale Story It Appears to Be.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "On-Chain Forensics Can Trace the Money. It Cannot Automatically Name the Owner."
+      },
+      {
+        "tag": "h2",
+        "text": "The first layer is simple: did the transfer happen?"
+      },
+      {
+        "tag": "h2",
+        "text": "Token tracing introduces a second problem: the ticker is not the asset"
+      },
+      {
+        "tag": "h2",
+        "text": "The graph gets interesting exactly where certainty begins to fall"
+      },
+      {
+        "tag": "h2",
+        "text": "The central mistake is turning connectivity into ownership"
+      },
+      {
+        "tag": "h2",
+        "text": "Pooled infrastructure is where naïve tracing breaks"
+      },
+      {
+        "tag": "h2",
+        "text": "The countercase matters"
+      },
+      {
+        "tag": "h2",
+        "text": "What would change my conclusion"
+      },
+      {
+        "tag": "h2",
+        "text": "The practical rule I would use"
+      },
+      {
+        "tag": "h2",
+        "text": "Sources and method"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://etherscan.io/tx/0xb0308ee113c541e7c6f4623e833417524d68fd6267d23f43d9041f583c14343f",
+        "text": "0xb0308e…4343f"
+      },
+      {
+        "href": "https://etherscan.io/tx/0xb0308ee113c541e7c6f4623e833417524d68fd6267d23f43d9041f583c14343f",
+        "text": "Etherscan"
+      },
+      {
+        "href": "https://etherscan.io/tx/0x79c10cf538667a0a7de40ce54d2444c9e9e17b5c62b321e739020df0015baeda",
+        "text": "Etherscan"
+      },
+      {
+        "href": "https://etherscan.io/tx/0x77720ab2ab2bb6550e9b4e1cb4b6c2033c2200ae3abb7ae51f89898f86ac1e2a",
+        "text": "Etherscan"
+      },
+      {
+        "href": "https://etherscan.io/token/0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        "text": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+      },
+      {
+        "href": "https://etherscan.io/tx/0xb0308ee113c541e7c6f4623e833417524d68fd6267d23f43d9041f583c14343f",
+        "text": "0xb0308e…4343f"
+      },
+      {
+        "href": "https://etherscan.io/tx/0x79c10cf538667a0a7de40ce54d2444c9e9e17b5c62b321e739020df0015baeda",
+        "text": "0x79c10c…baeda"
+      },
+      {
+        "href": "https://etherscan.io/tx/0x77720ab2ab2bb6550e9b4e1cb4b6c2033c2200ae3abb7ae51f89898f86ac1e2a",
+        "text": "0x77720a…c1e2a"
+      },
+      {
+        "href": "https://etherscan.io/tx/0xb0d5c4871cba106d5f3600d0381be8ac80b66c6a408045e0e23697bf226e10b2",
+        "text": "0xb0d5c4…e10b2"
+      },
+      {
+        "href": "https://etherscan.io/tx/0xeac56baea66e67188068e8fde9088ed61f049535913659c607fcd175689ae666",
+        "text": "0xeac56b…ae666"
+      },
+      {
+        "href": "https://etherscan.io/tx/0x32a56c42cc4e4750ee1e10121caaff3eee8162ea210c75795dec7bed8b77cdc1",
+        "text": "0x32a56c…cdc1"
+      },
+      {
+        "href": "https://etherscan.io/tx/0x92f3110e3239507b4c1d60ffdde14fbae443436f9cb33070383a7a3d9a2b4099",
+        "text": "0x92f311…4099"
+      },
+      {
+        "href": "https://etherscan.io/tx/0x237309bd163e2f9b38d4a788d67d149c1f4e3016da33e790828b896295668ac4",
+        "text": "0x237309…8ac4"
+      },
+      {
+        "href": "https://etherscan.io/tx/0x32a56c42cc4e4750ee1e10121caaff3eee8162ea210c75795dec7bed8b77cdc1",
+        "text": "0x32a56c…cdc1"
+      },
+      {
+        "href": "https://www.coinbase.com/blog/euler-compromise-investigation-part-2-the-redemption",
+        "text": "Coinbase Unit 0x — Euler Compromise Investigation, Part 2: The Redemption"
+      },
+      {
+        "href": "https://forum.euler.finance/t/plan-for-redemption-of-euler-funds-v2/947",
+        "text": "Euler — Plan for Redemption of Euler Funds V2"
+      },
+      {
+        "href": "https://forum.euler.finance/t/special-announcement/900",
+        "text": "Euler Foundation — Special Announcement"
+      },
+      {
+        "href": "../dacity-the-contract-was-not-the-whole-risk/",
+        "text": "DACITY: The Contract Was Not the Whole Risk"
+      },
+      {
+        "href": "../inj-bridge-concentration-accounting/",
+        "text": "INJ’s 95% Bridge Wallet Is Not the Whale Story It Appears to Be"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Investigative analysis · Risk & Verification"
+      },
+      {
+        "tag": "p",
+        "text": "The Euler Finance recovery shows where blockchain evidence is strongest: transaction paths are verifiable, wallet clusters are inferential, and real-world attribution needs evidence the ledger does not contain."
+      },
+      {
+        "tag": "p",
+        "text": "November 22, 2026 · Ethereum historical case study · No current-market claims"
+      },
+      {
+        "tag": "p",
+        "text": "A blockchain can tell me with unusual precision that 10,701,338 DAI moved from one Ethereum address to another at 18:40:23 UTC. It cannot, by itself, tell me how many people held the keys, whether those people also controlled another wallet, or what real-world name belonged to any of them."
+      },
+      {
+        "tag": "p",
+        "text": "That gap is the central problem in on-chain forensics. The transaction layer can be almost brutally specific. The attribution layer is not. When those two levels are collapsed into one story, a clean-looking wallet graph can turn into an accusation that the ledger never actually proved."
+      },
+      {
+        "tag": "p",
+        "text": "I used the 2023 Euler Finance exploit recovery as a bounded case because it contains exactly the kind of pattern that tempts overreach: a large return to Euler, repeated transfers into fresh wallets, recombination of funds, later returns, and public labels supplied by explorers and forensic researchers. The chain records make the movement visible. The hard part is deciding where the evidence stops."
+      },
+      {
+        "tag": "p",
+        "text": "On March 25, 2023 at 15:08:23 UTC, Ethereum transaction 0xb0308e…4343f succeeded in block 16,905,269. It sent 51,000 ETH from 0xb66cd966…995db to the Euler deployer address 0xEe009FAF…8C8C5. That is the strongest kind of statement in this investigation: a directly observed transaction with an identifiable source, destination, amount, block and time."
+      },
+      {
+        "tag": "p",
+        "text": "Minutes later, the same source address sent equal native-asset tranches to fresh wallets. Two of those transfers were independently recovered here: 7,738.25 ETH to 0xa1b44d…8e676 at 15:25:59 UTC, and another 7,738.25 ETH to 0x8765A3…E38A4c one minute later. Coinbase Unit 0x reported a broader four-wallet split. I can reproduce two of those native-ETH legs from the retrieved explorer records; I do not treat the other two as independently established in this article."
+      },
+      {
+        "tag": "caption",
+        "text": "Verified native-ETH transfers in the bounded March 25 subset"
+      },
+      {
+        "tag": "p",
+        "text": "The verified subtotal in those three rows is 66,476.50 ETH. It is not the total exploit recovery. It is simply the arithmetic sum of the rows I can defend from this bounded dataset."
+      },
+      {
+        "tag": "p",
+        "text": "ERC-20 data looks straightforward until the explorer starts returning multiple tokens with the same name. During this research, target-address histories included unrelated contracts using the label “Dai Stablecoin (DAI).” For forensic purposes, the token symbol is not enough. The canonical DAI contract in this analysis is 0x6B175474E89094C44Da98b954EedeAC495271d0F, with 18 decimals."
+      },
+      {
+        "tag": "p",
+        "text": "Filtering on that contract produced three independently supported seed-to-fresh-wallet DAI rows: 10,787,465.25 DAI to 0xa1b44d…8e676, 10,787,465.25 DAI to 0xC4e04A…b208E, and 10,701,338.6 DAI to 0x8765A3…E38A4c. Their subtotal is 32,276,269.10 DAI."
+      },
+      {
+        "tag": "p",
+        "text": "That subtotal matters less for its size than for its provenance. Each admitted row is tied to the canonical contract, not merely a familiar ticker. A forensic graph built from token symbols alone can quietly merge unrelated assets and manufacture false paths."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 1 — Verified event timeline. The chain is strongest at the transaction level. Timing can show sequence, but sequence alone does not prove common ownership or causation."
+      },
+      {
+        "tag": "p",
+        "text": "Sources: Etherscan transaction records listed in the table below; Blockscout historical token-transfer retrieval for the canonical-DAI partition rows. Event window: March 25–April 3, 2023."
+      },
+      {
+        "tag": "caption",
+        "text": "Transaction rows supporting the timeline"
+      },
+      {
+        "tag": "p",
+        "text": "One fresh wallet, 0x8765A3…E38A4c, provides a useful example. It received 10,701,338.6 canonical DAI on March 25. On March 27, it sent 10,701,338 DAI to the Euler deployer in transaction 0x32a56c…cdc1. The difference between those two observed rows is just 0.6 DAI."
+      },
+      {
+        "tag": "p",
+        "text": "Another branch is more complicated. Blockscout returned a canonical-DAI transfer of 9,557,465.25 DAI from 0x46e0Be…Cf55 to 0xa1b44d…8e676. The latter had already received 10,787,465.25 DAI from the seed wallet. It later sent 20,000,000 DAI onward to 0x0d1B0c…A9843. On the partial rows I have, the simple reconciliation is 10,787,465.25 + 9,557,465.25 − 20,000,000 = 344,930.50 DAI."
+      },
+      {
+        "tag": "p",
+        "text": "That residual is not a finding of hidden profit. It is a reminder that a path calculation is only as complete as the address history behind it. The available Blockscout history was not exhaustively paginated, so I do not present the bounded graph as a complete balance accounting."
+      },
+      {
+        "tag": "blockquote",
+        "text": "The graph can be certain about an arrow while remaining uncertain about the person behind either endpoint."
+      },
+      {
+        "tag": "p",
+        "text": "Common source, close timing, repeated amounts and shared return destinations can make a wallet cluster analytically useful. They can also be produced by several people coordinating, by delegated signing, by a service acting for multiple users, or by a negotiated distribution of funds. Those alternatives matter because the strongest claim I can defend here is not “these addresses belonged to one person.” It is that the observed routing is consistent with coordinated activity."
+      },
+      {
+        "tag": "p",
+        "text": "Coinbase Unit 0x went further. Its April 25, 2023 investigation interpreted the wallet partition and on-chain messages as evidence that multiple actors—possibly up to four—were involved. That is a plausible REPORTED interpretation, and it deserves to be presented as such. It is not the same thing as an Ethereum transaction proving how many humans existed behind the keys."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 2 — Link-confidence matrix. Confidence is highest for the existence of individual transfers and declines as the claim moves toward control, attribution and identity."
+      },
+      {
+        "tag": "p",
+        "text": "Method: claim classification from the verified transaction set, Coinbase Unit 0x’s attributed interpretation, and explicit alternative explanations. These are qualitative evidence judgments, not statistical probabilities."
+      },
+      {
+        "tag": "caption",
+        "text": "Evidence hierarchy and the strongest defensible wording"
+      },
+      {
+        "tag": "p",
+        "text": "Euler’s April 12 redemption plan reported that 1,100 ETH sent to Tornado Cash remained unrecovered, alongside 100 ETH sent to an address attributed to the Ronin attacker. The protocol’s accounting is useful context, but it does not license a stronger post-mixer claim."
+      },
+      {
+        "tag": "p",
+        "text": "Once fungible assets enter pooled privacy infrastructure, matching an incoming amount to a later outgoing amount is not enough to establish unit-level continuity. Similar amounts, timestamps or address shapes can generate hypotheses. They do not restore the deterministic arrow that existed before the pool."
+      },
+      {
+        "tag": "p",
+        "text": "This is the point where forensic diagrams often become most visually confident just as the evidence becomes least certain. A dashed speculative edge should not look like a transaction receipt."
+      },
+      {
+        "tag": "p",
+        "text": "A skeptical investigation has to survive the strongest competing interpretation. In this case, Coinbase’s account of multiple participants is not frivolous. The partitioning behavior, messages and later returns are compatible with distinct actors reacting differently. One wallet’s near-exact DAI return, another wallet’s relay behavior, and the timing of subsequent transfers can all fit a multi-party story."
+      },
+      {
+        "tag": "p",
+        "text": "But the same public data also permits other control structures. One operator could use multiple wallets. Several operators could share procedures. Keys could be delegated. Some addresses could represent temporary allocations rather than independent owners. The blockchain alone does not choose among those explanations."
+      },
+      {
+        "tag": "p",
+        "text": "That is why the most important result of this case is methodological rather than dramatic: the correct stopping point is itself a finding."
+      },
+      {
+        "tag": "li",
+        "text": "Independent verification that the two unretrieved native-ETH partition legs differ materially from the Coinbase account."
+      },
+      {
+        "tag": "li",
+        "text": "Complete address histories showing an unobserved intermediary that breaks one of the proposed direct path interpretations."
+      },
+      {
+        "tag": "li",
+        "text": "Evidence that a fresh wallet was controlled by an unrelated custodian, service or victim rather than a coordinated participant."
+      },
+      {
+        "tag": "li",
+        "text": "Reliable off-chain evidence tying specific addresses to a common controller—or, conversely, to demonstrably separate controllers."
+      },
+      {
+        "tag": "li",
+        "text": "A transaction-level reconstruction showing that one of the Blockscout-only rows was a lookalike-token event rather than canonical DAI."
+      },
+      {
+        "tag": "p",
+        "text": "Those invalidators are not rhetorical caveats. They define what evidence would force the cluster model to change."
+      },
+      {
+        "tag": "p",
+        "text": "I would build every on-chain investigation in layers. First, establish the transfer graph from exact chain records. Second, normalize assets by contract address and decimals. Third, mark where the observed path becomes incomplete. Only then add clustering heuristics—and keep them visually and verbally separate from transaction edges. Explorer labels should remain attributed. Real-world identity should remain unresolved until independent evidence supports it."
+      },
+      {
+        "tag": "p",
+        "text": "The Euler case is useful precisely because the graph is compelling. Money moved in large, repeated, tightly timed transactions. Some wallets later returned funds. Others relayed them. A cluster is a reasonable analytical object."
+      },
+      {
+        "tag": "p",
+        "text": "But the ledger’s precision is easy to overread. It can show me the money moving from address to address. It cannot automatically tell me who “the owner” was. The discipline of on-chain forensics is not just knowing how to follow the arrows. It is knowing when an arrow stops being evidence and starts becoming a story."
+      },
+      {
+        "tag": "li",
+        "text": "Coinbase Unit 0x — Euler Compromise Investigation, Part 2: The Redemption, April 25, 2023. Used for reported address grouping, broader chronology and the multiple-actor interpretation."
+      },
+      {
+        "tag": "li",
+        "text": "Euler — Plan for Redemption of Euler Funds V2, April 12, 2023. Used for protocol-reported recovery accounting and the 1,100 ETH Tornado Cash figure."
+      },
+      {
+        "tag": "li",
+        "text": "Euler Foundation — Special Announcement, April 4, 2023. Used for the protocol’s statement that recoverable funds had been returned."
+      },
+      {
+        "tag": "li",
+        "text": "Etherscan transaction records linked directly throughout the article for independently reopened transaction rows."
+      },
+      {
+        "tag": "li",
+        "text": "Blockscout historical token-transfer records on Ethereum mainnet for canonical-DAI rows. The retrieved coverage was not exhaustive, so those rows are not presented as complete address histories."
+      },
+      {
+        "tag": "p",
+        "text": "Calculation note: 32,276,269.10 DAI is the sum of three retrieved canonical-DAI seed-to-fresh-wallet rows. 344,930.50 DAI is a partial-path residual from two observed inflows to 0xa1b44d…8e676 minus one observed 20,000,000 DAI outflow. 0.6 DAI is the difference between the observed inbound and outbound DAI rows for 0x8765A3…E38A4c. None is presented as a complete exploit balance."
+      },
+      {
+        "tag": "p",
+        "text": "Related Independent Market Notes: DACITY: The Contract Was Not the Whole Risk and INJ’s 95% Bridge Wallet Is Not the Whale Story It Appears to Be."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "UTC time",
+          "From",
+          "To",
+          "Amount",
+          "Block",
+          "Source"
+        ],
+        [
+          "2023-03-25 15:08:23",
+          "0xb66cd…995db",
+          "0xEe009…8C8C5",
+          "51,000 ETH",
+          "16,905,269",
+          "Etherscan"
+        ],
+        [
+          "2023-03-25 15:25:59",
+          "0xb66cd…995db",
+          "0xa1b44d…8e676",
+          "7,738.25 ETH",
+          "16,905,356",
+          "Etherscan"
+        ],
+        [
+          "2023-03-25 15:26:59",
+          "0xb66cd…995db",
+          "0x8765A3…E38A4c",
+          "7,738.25 ETH",
+          "16,905,361",
+          "Etherscan"
+        ]
+      ],
+      [
+        [
+          "UTC time",
+          "Observed movement",
+          "Hash",
+          "Status in this investigation"
+        ],
+        [
+          "2023-03-25 15:08:23",
+          "51,000 ETH seed → Euler deployer",
+          "0xb0308e…4343f",
+          "OBSERVED / independently reopened"
+        ],
+        [
+          "2023-03-25 15:25:59",
+          "7,738.25 ETH seed → a1b44d",
+          "0x79c10c…baeda",
+          "OBSERVED / independently reopened"
+        ],
+        [
+          "2023-03-25 15:26:59",
+          "7,738.25 ETH seed → 8765",
+          "0x77720a…c1e2a",
+          "OBSERVED / independently reopened"
+        ],
+        [
+          "2023-03-25 15:30:23",
+          "10,787,465.25 DAI seed → c4e04a",
+          "0xb0d5c4…e10b2",
+          "OBSERVED / independently reopened"
+        ],
+        [
+          "2023-03-25 15:32:59",
+          "10,701,338.6 DAI seed → 8765",
+          "0xeac56b…ae666",
+          "OBSERVED / independently reopened"
+        ],
+        [
+          "2023-03-27 18:40:23",
+          "10,701,338 DAI 8765 → Euler deployer",
+          "0x32a56c…cdc1",
+          "OBSERVED / independently reopened"
+        ],
+        [
+          "2023-03-28 04:47:59",
+          "5,000,000 DAI c4e04a → Euler multisig 2",
+          "0x92f311…4099",
+          "OBSERVED / independently reopened"
+        ],
+        [
+          "2023-04-03 22:49:47",
+          "12,000,000 DAI 0d1B → Euler multisig 2",
+          "0x237309…8ac4",
+          "OBSERVED / independently reopened"
+        ]
+      ],
+      [
+        [
+          "Layer",
+          "Classification",
+          "Defensible statement",
+          "What I would not claim"
+        ],
+        [
+          "Transaction occurrence",
+          "OBSERVED",
+          "A specified amount moved between specified addresses in a specified transaction.",
+          "The sender’s explorer label proves a real-world identity."
+        ],
+        [
+          "Path continuity",
+          "OBSERVED / INFERRED",
+          "Observed transfers connect these addresses within the bounded path.",
+          "Every fungible unit remained continuously identifiable."
+        ],
+        [
+          "Wallet cluster",
+          "INFERRED",
+          "The routing is consistent with coordination or shared control.",
+          "All addresses definitely had one owner."
+        ],
+        [
+          "Analyst/explorer attribution",
+          "REPORTED",
+          "Coinbase or an explorer labeled/interpreted the address this way.",
+          "The label is independent proof."
+        ],
+        [
+          "Individual identity",
+          "UNKNOWN",
+          "The public-chain evidence here does not establish it.",
+          "A natural person’s name as fact."
+        ]
+      ]
+    ],
+    "alts": [],
+    "svgCount": 2,
+    "svgSha256": [
+      "e80a6911a92b1aa28404f7faa375646adfbaa6729cd43c03f7b6859d6ebe6615",
+      "3fca8f62332764adb65803b24c29e98ffaab5c8118c6688c6b0ccd4106f771e5"
+    ],
+    "imageCount": 0,
+    "imageSha256": [],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics": {
     "text": "Bitcoin · Market structure · Investigative analysisBitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions WorkIssuer filings separate net share creation, custodied BTC and changes in fund value—and the SEC’s in-kind rule change makes that distinction more important.Research edition: November 22, 2026 · Historical issuer data through June 30, 2026 · Not a live ETF-flow report An inflow and a shrinking fund, at the same timeIn the first quarter of 2026, the iShares Bitcoin Trust ETF recorded $1,112,018,777 of net capital-share transactions. Its net assets nevertheless fell $14,016,408,526. I started with that contradiction because it is the cleanest way to see what the phrase bitcoin ETF flows does—and does not—tell us. Both numbers come from the fund's own statement of changes in net assets. They describe different parts of the same accounting identity. [1]When an ETF flow ticker displays a positive number, a reader can easily picture a matching market order buying bitcoin. The issuer's ledger does not warrant that leap. It separates primary-market share transactions from the investment results of BTC the trust already owns. It does not identify an exchange, trading desk, or execution timestamp for the underlying coins.Quarterly IBIT share capital, investment operations, and AUM changesFour selected quarters; 2025 Q1 and 2026 Q1 have positive primary share capital but negative change in net assets. Bars show USD billions on a common baseline, not daily trading flows.-30-20-100+10+20USD billions • zero-centered scale2025 Q1+2.71-6.46-3.742025 Q2+12.46+14.47+26.932026 Q1+1.11-15.13-14.022026 Q2-2.95-7.05-10.00Net share capitalInvestment operationsChange in net assetsFigure 1. Selected IBIT quarters (not a continuous series): primary capital, investment operations, and net-asset changes, USD billions. Zero-centered bars; exact figures below. Operations include gains, losses and expenses and should not be interpreted as pure bitcoin-price return. Source: IBIT June 2026 Form 10-Q, statements of changes in net assets; analyst addition of signed contributions and redemptions.Figure 1 source values; USD, selected accounting quartersQuarterNet capital share transactionsInvestment operationsNet asset change2025 Q1+2,713,805,623-6,457,874,778-3,744,069,155 2025 Q2+12,461,944,771+14,468,115,204+26,930,059,975 2026 Q1+1,112,018,777-15,128,427,303-14,016,408,526 2026 Q2-2,950,586,623-7,048,147,970-9,998,734,593 Two markets, one bitcoin trustMost investors trade ETF shares on a securities exchange. Those trades generally transfer already-existing shares from one holder to another. A buyer of 100 shares does not automatically cause the fund to issue 100 new shares or obtain a fresh quantity of BTC.New shares enter, or existing shares leave, through the primary market. Authorized participants (APs) interact with the fund in specified creation/redemption baskets. The trust issues shares in return for permitted consideration; on redemption it cancels shares and returns consideration. Arbitrage and market making can help link the exchange share price to net asset value per share, but frictions, timing and spreads make that linkage imperfect. The precise basket is fund-specific: IBIT describes 40,000-share baskets, while the Fidelity Wise Origin Bitcoin Fund reports 25,000-share baskets. [1] [3]That distinction matters at the headline level. Secondary-market trading volume measures shares changing hands. A primary-market flow measures creation less redemption under an explicit valuation convention. Neither is a direct tape of the BTC trades an intermediary may perform. Cash and in-kind are different routesThere are at least two meaningful settlement paths. In a cash creation, an AP supplies cash under the trust's process; the trust or its agents arrange the BTC exposure according to their procedures. In an in-kind creation, the permitted consideration includes BTC delivered against newly created ETF shares. Redemptions work in reverse. The market risk can migrate through intermediaries, inventory and execution channels in either case, but it is analytically wrong to assign every creation a same-day on-exchange purchase.On July 29, 2025, the SEC approved orders allowing in-kind creations and redemptions for crypto ETPs that had initially been constrained to cash transactions. That was a permission, not proof of the operating method each issuer used on the very same day. [2]Evidence of the distinction: for the six months ended June 30, 2026, IBIT separately reported $9,362,376,537 of bitcoin purchased in-kind for shares issued and $5,491,156,370 of bitcoin paid in-kind for shares redeemed in non-cash disclosures. Those are accounting values of BTC consideration, not exchange execution receipts. [1]Cash baskets can still transmit demand into the bitcoin market. A desk may need inventory; a market maker may hedge an ETF premium; an issuer's agent may acquire or dispose of coins. I cannot tell you which venue or time absorbed those transactions from this quarterly filing alone. That is the serious counterargument to a simplistic “flows are meaningless” thesis: they matter, but they do not reveal the route. What the word “flow” actually measuresFor this analysis I use a deliberately narrow measure: net capital-share transactions = issuer contributions for shares issued + signed distributions for shares redeemed. Redemptions are negative. It is an issuer accounting figure, not an estimate of aggregate daily net cash traded by all investors, and it must not be mixed uncritically with vendor daily-flow tables.Other numbers answer other questions. Holdings are BTC units in custody at a valuation date. Shares outstanding count ETF claims then in circulation. Net asset value is assets less liabilities, denominated in dollars; NAV per share divides that amount by outstanding shares. Because BTC is revalued while units change via creations, redemptions, fees and settlement, AUM can change without a matching capital inflow. Conversely capital can flow into a falling asset.The proper alignment for any daily investigation would use issuer-level creations/redemptions, their valuation or settlement dates, BTC units, a documented benchmark and a historical release timestamp. I do not have that verified daily panel here, so I have not drawn a daily inflow-versus-price chart. The six-month bridge: new capital was not the main lossFrom December 31, 2025 to June 30, 2026, IBIT's net assets fell from $67.401 billion to $43.386 billion. Net primary capital transactions across the first two quarters of 2026 were negative $1.839 billion. Investment operations were negative $22.177 billion. Their sum reconciles the negative $24.015 billion total change. This decomposition is a balance-sheet identity—not an experiment estimating how ETF flows moved the BTC market. [1]IBIT first-half 2026 net assets reconciliationFrom 67.401 billion dollars of fund net assets on December 31 2025, subtract 1.839 billion in net primary-market capital and 22.177 billion of investment operations to reach 43.386 billion on June 30 2026.020406080IBIT net assets (USD billions)$67.40BOpening net assets−$1.84BNet share capital−$22.18BInvestment operations$43.39BClosing net assetsFigure 2. IBIT net-asset reconciliation for January–June 2026. Floating negative bars connect the opening and closing dollar levels; no price axis is mixed into the chart. Source: IBIT Form 10-Q; summed 2026 Q1–Q2 accounting records, USD.Figure 2 reconstruction, USD (six months ended June 30, 2026)StepSigned amount or balance (USD)RoleOpening net assets, Dec 3167,401,155,244BalanceNet capital transactions, H1−1,838,567,846ChangeInvestment operations, H1−22,176,575,273ChangeClosing net assets, Jun 3043,386,012,125Balance67,401,155,244 − 1,838,567,846 − 22,176,575,273 = 43,386,012,125 USDIt would be tempting to label that $22.177 billion as a price decline. I would not: the accounting heading includes realized and unrealized investment effects and operating expenses. The fund's documented index reference price did fall from $87,463.03/BTC on December 31 to $59,101.49/BTC on June 30, but those two endpoints do not isolate every intervening accounting contribution. [1] Holdings are a third ledger, not a trade tapeThe fund reported 770,792 BTC at December 31, 2025, and 734,261 BTC at June 30, 2026—36,531 fewer BTC based on rounded whole-coin disclosure. Shares outstanding fell from 1,358,680,000 to 1,296,040,000. The endpoints agree on direction, but even that agreement does not assign the intervening activity to particular exchange purchases or sales. [1]IBIT BTC holdings and ETF shares outstanding, two endpoint comparisonWhole-bitcoin holdings fell from 770792 to 734261; outstanding shares fell from 1358680000 to 1296040000 between December 31 2025 and June 30 2026. Each panel uses its own zero-based scale; neither is an executed trade record.Custodied BTC (coins)770,792 BTCDec 31, 2025734,261 BTCJun 30, 2026Zero-based bars; snapshots onlyShares outstanding (count)1.359BDec 31, 20251.296BJun 30, 2026Zero-based bars; snapshots onlyFigure 3. Two issuer snapshots, shown as independent zero-based panels: custodied BTC and issued ETF share count. Different units and scales; values reflect reporting-date positions, not trade events. Source: IBIT June 2026 Form 10-Q, schedules of investments and balance sheets.Figure 3 reported endpoints, IBITValuation dateBTC held (whole coins, rounded)Shares outstandingReference BTC price (USD/BTC)2025-12-31770,7921,358,680,00087,463.032026-06-30734,2611,296,040,00059,101.49There is a further observational limit. The September 2026 quarterly filing was identified during research, but its body was not validated into this dataset. I therefore stop the quantitative figures at June 30 rather than silently promote a later search snippet to an audited observation. This is a historical mechanics analysis dated November 22, not a claim about today's share count or daily flow. What it would take to say “the ETF bought bitcoin”To prove execution rather than infer it, I would want primary creation/redemption instructions, whether consideration was cash or BTC, the execution agent's matching records or defensible custodian movements, and a consistent clock linking order, settlement, NAV and market trades. Then I would ask whether the observed purchase was incremental spot demand, internal inventory transfer, OTC execution or hedge unwinding. A custodial transfer on its own also cannot establish price impact.The skeptical conclusion is therefore specific. ETF net share flows are a useful measure of demand for primary-market fund exposure. They are not interchangeable with the number of coins held, the dollar value of the whole trust, or a list of identifiable BTC market buys. A headline that merges those ledgers may point toward a real pressure on price while overstating how much of that pressure has actually been measured.For the broader transmission hypothesis, see Bitcoin’s selling chain and the ETF reversal analysis. The related distinction between turnover and readily sellable depth is explored in our liquidity investigation. Definitions, methods and uncertaintyCreation / redemptionPrimary-market issuance or cancellation of fund shares, ordinarily through authorized participants in documented baskets.In-kindConsideration delivered or returned as bitcoin, rather than solely cash, subject to issuer rules.Net share capitalReported contributions for issued shares less signed distributions for redeemed shares; USD per accounting quarter.OperationsNet investment loss, realized and unrealized gains/losses and related expenses, not a stand-alone spot return.AUM / net assetsTrust assets less liabilities at a stated valuation date; changes combine share capital and investment effects.Provenance and audit. Tables transcribe one issuer's SEC 10-Q; four quarter identities were recomputed using integer USD arithmetic, and all displayed rows were checked against the Prompt Zero frozen dataset. Calculations: (1) net capital = contributions + negative redemptions; (2) AUM change = net capital + operations; (3) half-year totals = Q1 + Q2; (4) BTC-unit and share changes = closing minus opening. No price proxy, resampling, daily interpolation or execution attribution was used. Figures are based on selected 2025 Q1–Q2 and 2026 Q1–Q2 quarters and two 2025/2026 endpoints, not a representative consecutive full panel. Source accounting is unaudited interim issuer reporting. BTC holding quantities are rounded to whole coins. Figures are denominated in USD, BTC, and shares as labeled, with no pooled venue series.Primary sourcesiShares Bitcoin Trust ETF, Form 10-Q, quarter ended June 30, 2026. SEC EDGAR, filed August 2026; primary quarterly statements, investments schedule and cash-flow supplements.SEC, July 29, 2025 announcement approving permission for in-kind crypto ETP creations/redemptions. Regulatory scope rather than issuer implementation evidence.Fidelity Wise Origin Bitcoin Fund, 2025 Form 10-K. Basket mechanism cross-check, distinct fund. Questions behind the ETF flow headlineDoes buying an ETF share make the issuer buy bitcoin?No automatic one-for-one purchase follows from an ordinary secondary-market share trade. Net creations and cash-versus-in-kind procedures determine the primary-market response.Can an ETF have inflows while AUM falls?Yes. IBIT's first quarter of 2026 shows positive capital-share transactions alongside larger negative investment operations.Are daily ETF flow dashboards an execution record?No. Treat any dashboard as an estimate or aggregation until its issuer inputs, reporting cutoffs, adjustments and revisions are disclosed. It cannot by itself reveal an AP's venue or BTC execution price.What changed in July 2025?SEC orders permitted in-kind crypto ETP creation and redemption activity; each issuer's actual operational adoption must be verified separately. Evidence label: OBSERVED for issuer- and regulator-reported figures/rules; CALCULATED for the identities shown; INFERRED for the limits on execution attribution; UNKNOWN for unobserved daily trades and later unverified share/holding series. No direct ETF-to-BTC causal price effect has been established.",
     "headings": [

@@ -1,5 +1,23 @@
 [
   {
+    "slug": "on-chain-forensics-tracing-funds-across-wallet-clusters",
+    "source": "on-chain-forensics-tracing-funds-across-wallet-clusters.html",
+    "date": "2026-11-22",
+    "title": "On-Chain Forensics Can Trace the Money. It Cannot Automatically Name the Owner.",
+    "dek": "The Euler Finance recovery shows where blockchain evidence is strongest: transaction paths are verifiable, wallet clusters are inferential, and real-world attribution needs evidence the ledger does not contain.",
+    "topic": "risk-verification",
+    "assets": [
+      "ETH",
+      "DAI"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/on-chain-forensics-tracing-funds-across-wallet-clusters.jpg",
+    "image_alt": "Conceptual editorial illustration of bronze wallet nodes linked by solid transaction arrows that fade into dashed paths toward unidentified silhouettes, representing the boundary between observable fund movement and uncertain human attribution; not a market chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics",
     "source": "bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics.html",
     "date": "2026-11-22",

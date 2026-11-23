@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "on-chain-forensics-tracing-funds-across-wallet-clusters": {
+      "title": "On-Chain Forensics Can Trace the Money. It Cannot Automatically Name the Owner.",
+      "description": "The Euler Finance recovery shows where blockchain evidence is strongest: transaction paths are verifiable, wallet clusters are inferential, and real-world attribution needs evidence the ledger does not contain.",
+      "canonical": "https://independent-market-notes.netlify.app/on-chain-forensics-tracing-funds-across-wallet-clusters/",
+      "og:title": "On-Chain Forensics Can Trace the Money. It Cannot Automatically Name the Owner.",
+      "og:description": "The Euler Finance recovery shows where blockchain evidence is strongest: transaction paths are verifiable, wallet clusters are inferential, and real-world attribution needs evidence the ledger does not contain.",
+      "og:url": "https://independent-market-notes.netlify.app/on-chain-forensics-tracing-funds-across-wallet-clusters/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics": {
       "title": "Bitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions Work",
       "description": "Issuer filings separate net share creation, custodied BTC and changes in fund value—and the SEC’s in-kind rule change makes that distinction more important.",
@@ -582,6 +592,12 @@
     }
   },
   "rss": [
+    {
+      "title": "On-Chain Forensics Can Trace the Money. It Cannot Automatically Name the Owner.",
+      "link": "https://independent-market-notes.netlify.app/on-chain-forensics-tracing-funds-across-wallet-clusters/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/on-chain-forensics-tracing-funds-across-wallet-clusters/",
+      "description": "The Euler Finance recovery shows where blockchain evidence is strongest: transaction paths are verifiable, wallet clusters are inferential, and real-world attribution needs evidence the ledger does not contain."
+    },
     {
       "title": "Bitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions Work",
       "link": "https://independent-market-notes.netlify.app/bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics/",
