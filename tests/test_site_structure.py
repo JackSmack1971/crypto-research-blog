@@ -397,6 +397,10 @@ class NetlifyHeadersTests(unittest.TestCase):
         self.assertEqual(values["X-Content-Type-Options"], "nosniff")
         self.assertIn("Referrer-Policy", values)
         self.assertEqual(values["Content-Security-Policy"], "frame-ancestors 'none'")
+        self.assertEqual(values["Cache-Control"], "public, max-age=300, stale-while-revalidate=86400")
+        endpoint_rules = {item["for"]: item["values"] for item in config.get("headers", [])}
+        for path in ("/robots.txt", "/sitemap.xml", "/feed.xml"):
+            self.assertEqual(endpoint_rules[path]["Cache-Control"], "public, max-age=300, must-revalidate")
 
 
 class HomeTitleTests(unittest.TestCase):

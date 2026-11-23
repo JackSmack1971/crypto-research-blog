@@ -888,7 +888,12 @@
     "assets": [
       "BTC"
     ],
-    "research_type": "market-snapshot"
+    "research_type": "market-snapshot",
+    "image": "assets/featured/bitcoin-rebound-spot-demand.jpg",
+    "image_alt": "Editorial illustration of a dark Bitcoin coin suspended above a broken luminous market path, representing an unconfirmed rebound rather than market data.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "bitcoin-selloff-leverage",
@@ -900,7 +905,12 @@
     "assets": [
       "BTC"
     ],
-    "research_type": "market-snapshot"
+    "research_type": "market-snapshot",
+    "image": "assets/featured/bitcoin-selloff-leverage.jpg",
+    "image_alt": "Editorial illustration of a Bitcoin coin descending steps above tangled red threads, representing leverage risk rather than market data.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "solz-launch-investigation",
@@ -912,7 +922,12 @@
     "assets": [
       "SOLZ"
     ],
-    "research_type": "investigative-analysis"
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/solz-launch-investigation.jpg",
+    "image_alt": "Editorial illustration of three anonymous wallets linked to a coin and exit doorway, representing a launch investigation rather than an on-chain map.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "institutional-adoption-token-demand",
@@ -925,7 +940,12 @@
       "CC",
       "LINK"
     ],
-    "research_type": "token-due-diligence"
+    "research_type": "token-due-diligence",
+    "image": "assets/featured/institutional-adoption-token-demand.jpg",
+    "image_alt": "Editorial illustration of a financial building and an isolated token joined by a fragile bridge, representing the question of token demand.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "bitcoin-holding-up",
@@ -939,7 +959,12 @@
       "ETH",
       "SOL"
     ],
-    "research_type": "market-snapshot"
+    "research_type": "market-snapshot",
+    "image": "assets/featured/bitcoin-holding-up.jpg",
+    "image_alt": "Editorial illustration of a black Bitcoin coin balanced on a narrow support above an uneven surface, representing fragile resilience rather than market data.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "aero-at-0-68",
@@ -951,7 +976,12 @@
     "assets": [
       "AERO"
     ],
-    "research_type": "token-due-diligence"
+    "research_type": "token-due-diligence",
+    "image": "assets/featured/aero-at-0-68.jpg",
+    "image_alt": "Editorial illustration of joined aerodynamic forms and a separate tilted token, representing a merger and an unproven reversal.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "bitcoin-buying-imbalance",
@@ -963,7 +993,12 @@
     "assets": [
       "BTC"
     ],
-    "research_type": "market-snapshot"
+    "research_type": "market-snapshot",
+    "image": "assets/featured/bitcoin-buying-imbalance.jpg",
+    "image_alt": "Editorial illustration of a bright current that dissolves before reaching a Bitcoin coin, representing unconfirmed buying pressure rather than market data.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "weft-first-week",
@@ -975,7 +1010,12 @@
     "assets": [
       "WEFT"
     ],
-    "research_type": "token-due-diligence"
+    "research_type": "token-due-diligence",
+    "image": "assets/featured/weft-first-week.jpg",
+    "image_alt": "Editorial illustration of a token caught in a tightening woven mesh beside a narrow exit, representing constrained float and liquidity questions.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "virtual-alpha-risk",
@@ -987,7 +1027,12 @@
     "assets": [
       "VIRTUAL"
     ],
-    "research_type": "investigative-analysis"
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/virtual-alpha-risk.jpg",
+    "image_alt": "Editorial illustration of a bright rising arrow breaking through glass while a dark shadow falls below, representing apparent alpha and hidden risk.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "rune-quiet-repricing",
@@ -999,7 +1044,12 @@
     "assets": [
       "RUNE"
     ],
-    "research_type": "token-due-diligence"
+    "research_type": "token-due-diligence",
+    "image": "assets/featured/rune-quiet-repricing.jpg",
+    "image_alt": "Editorial illustration of a protected network lattice beside a tilted token, representing the gap between network activity and token thesis.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "pyth-revenue-unlock",
@@ -1011,7 +1061,12 @@
     "assets": [
       "PYTH"
     ],
-    "research_type": "token-due-diligence"
+    "research_type": "token-due-diligence",
+    "image": "assets/featured/pyth-revenue-unlock.jpg",
+    "image_alt": "Editorial illustration of a key opening a vault as blank token discs emerge, representing revenue progress alongside supply unlock risk.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "venice-ai-privacy",
@@ -1023,7 +1078,12 @@
     "assets": [
       "VVV"
     ],
-    "research_type": "investigative-analysis"
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/venice-ai-privacy.jpg",
+    "image_alt": "Editorial illustration of a frosted privacy screen examined by a narrow beam of light, representing a privacy claim requiring verification.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   },
   {
     "slug": "crypto-buybacks",
@@ -1036,6 +1096,11 @@
       "EDGE",
       "STONK"
     ],
-    "research_type": "token-due-diligence"
+    "research_type": "token-due-diligence",
+    "image": "assets/featured/crypto-buybacks.jpg",
+    "image_alt": "Editorial illustration of three hands reaching toward a coin entering an incomplete ledger ring, representing uncertain buyback beneficiaries.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
   }
 ]

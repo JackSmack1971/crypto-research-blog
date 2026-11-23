@@ -11,14 +11,15 @@ import build
 
 
 class FeaturedImageTest(unittest.TestCase):
-    def test_existing_articles_without_images_remain_unchanged(self):
+    def test_every_catalogued_article_has_social_artwork(self):
         notes = build.load_notes()
         self.assertTrue(notes)
-        legacy = next(note for note in notes if note["slug"] == "bitcoin-rebound-spot-demand")
-        self.assertIsNone(legacy["image"])
-        head = build.article_extra_head(legacy, build.load_site())
-        self.assertNotIn('property="og:image"', head)
-        self.assertIn('content="summary"', head)
+        for note in notes:
+            with self.subTest(note=note["slug"]):
+                self.assertIsNotNone(note["image"])
+                rendered = build.render_article(note, build.load_site(), notes)
+                self.assertIn('property="og:image"', rendered)
+                self.assertIn('content="summary_large_image"', rendered)
 
     def test_featured_image_generates_social_metadata(self):
         with tempfile.TemporaryDirectory() as temp:

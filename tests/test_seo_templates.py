@@ -92,11 +92,12 @@ class SeoTemplateTests(unittest.TestCase):
             ],
         )
 
-    def test_build_emits_only_asset_cache_rules(self):
+    def test_build_emits_document_and_asset_cache_rules(self):
         headers = (build.DIST / "_headers").read_text(encoding="utf-8")
-        self.assertEqual(headers, build.NETLIFY_ASSET_HEADERS)
-        for path in ("/*.html", "/feed.xml", "/sitemap.xml", "/robots.txt"):
-            self.assertNotIn(path, headers)
+        self.assertEqual(headers, build.NETLIFY_HEADERS)
+        self.assertIn("/*\n  Cache-Control: public, max-age=300, stale-while-revalidate=86400", headers)
+        for path in ("/feed.xml", "/sitemap.xml", "/robots.txt"):
+            self.assertIn(path + "\n  Cache-Control: public, max-age=300, must-revalidate", headers)
 
 
 if __name__ == "__main__":
