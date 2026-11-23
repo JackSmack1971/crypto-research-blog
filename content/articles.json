@@ -1,5 +1,22 @@
 [
   {
+    "slug": "minelius-bundles-are-not-ownership-proof",
+    "source": "minelius-bundles-are-not-ownership-proof.html",
+    "date": "2026-11-22",
+    "title": "MINELIUS and the Wallet-Cluster Claim That Outran Its Evidence",
+    "dek": "A Solana launch drew a startling bundled-buy warning. Conflicting scanner verdicts show why purchase patterns, holder balances and beneficial ownership must not be mistaken for one another.",
+    "topic": "risk-verification",
+    "assets": [
+      "MINELIUS"
+    ],
+    "research_type": "token-due-diligence",
+    "image": "assets/featured/minelius-bundles-are-not-ownership-proof.jpg",
+    "image_alt": "Conceptual editorial photograph of unlabeled brass discs connected by threads beneath a magnifying glass; an illustration of questions about wallet links, not a map of actual token holders.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "wallet-ownership-custodial-wallets-and-false-whale-claims",
     "source": "wallet-ownership-custodial-wallets-and-false-whale-claims.html",
     "date": "2026-11-22",

@@ -1,4 +1,347 @@
 {
+  "minelius-bundles-are-not-ownership-proof": {
+    "text": "Risk verification / Solana / token due diligenceMINELIUS and the Wallet-Cluster Claim That Outran Its EvidenceA Solana launch drew a startling bundled-buy warning. Conflicting scanner verdicts show why purchase patterns, holder balances and beneficial ownership must not be mistaken for one another.Research cutoff: November 22, 2026 Eastern / early November 23 UTC · Planned article date: 2026-11-22 · Snapshot evidence, not a live token rating Editorial illustration. The threads depict questions of attribution, not a traced network of MINELIUS wallets. The headline number attached to a newly launched Solana token was hard to ignore: 79.31% of its tokens had reportedly been purchased through bundled buys. The same token's trading pool displayed a liquidity-lock reading of 100% in one scanner and 0% in another. Neither number, on its own, identifies who owns the coins or who can remove the liquidity. That distinction is the MINELIUS story. GeckoTerminal [S01]; DexAlerts [S02]. MINELIUS is a Solana token identified by mint E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump. Its principal observed MINELIUS/SOL pool was 7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ on PumpSwap. The identifiers match across the two scanners; this article does not treat other same-name coins as interchangeable. Pool record [S01]; token record [S02]. What a bundle warning actually tells us GeckoTerminal's security text reports that 79.31% of the tokens were purchased via bundled buys. That is a vendor classification of purchases, not an independently disclosed list of beneficial owners and not a current percentage of supply controlled by a connected group. The page does not provide, in the material examined here, a complete transaction-indexed list, cluster membership, funding ancestry or sale proceeds from which to reproduce its percentage. The observation is therefore REPORTED [S01/C03], rather than an independently recomputed on-chain fact. GeckoTerminal security explanation. The warning is worth taking seriously. Coordinated purchases at launch can distribute supply across accounts in a way that looks, on a holder leaderboard, less concentrated than the underlying economic exposure. Yet a bundle does not automatically mean that the same person controls every buyer. Transactions arriving near each other may be bundled by shared infrastructure, bots, or other mechanisms. Establishing common economic control requires stronger links: shared non-service funders, deliberate transfer chains, joint exit destinations, documented operators or other corroboration. No such wallet-level reconstruction was supplied in the available evidence. A separate Larpcheck report alleged that 34 funded wallets held 63% of the token. That more specific allegation remains UNKNOWN as an on-chain conclusion: the accessible report did not expose all wallet addresses, transaction hashes or balances necessary to reproduce the calculation. It is not plotted as a current ownership fact, and neither number is added to the other. [S05/C06] Trading is visible; common ownership is not At an early-November-23-UTC page capture, GeckoTerminal displayed 32,639 buys and 17,572 sells over a rolling 24-hour window. I recomputed their sum as 50,211 transactions, the same total the page displayed. That is evidence that sells are occurring through the pool; it is not evidence that every wallet can exit in unlimited size, that trades are independent, or that net dollar flow is positive. Transaction counts are not dollar volumes. GeckoTerminal snapshot [S01/C01/C02/CALC01]. Figure 1 · Buys and sells, not buyers and sellers MINELIUS/SOL 24-hour transaction countsGeckoTerminal displayed 32,639 buy transactions and 17,572 sell transactions, totaling 50,211. A 500-pixel bar is divided into 65.0% buys and 35.0% sells. These are trades, not unique wallets or dollar volume. Trailing 24-hour trades · captured early Nov 23, 2026 UTC 0%100% of trades Buys: 32,639 (65.0%)Sells: 17,572 (35.0%) Observed vendor total: 50,211 trades · equal to recomputed sumCounts only; individual traders and executed USD values not represented Observed vendor counts; independently checked addition. Source: GeckoTerminal MINELIUS/SOL [S01], rows R01–R03; CALC01. Capture early November 23 UTC, rolling 24-hour window; source does not provide a fixed API snapshot timestamp. Percentages rounded to 0.1 point. Data are not a wallet clustering measurement. Figure 1 data: transaction counts, MINELIUS/SOL, trailing 24h, source GeckoTerminal [S01]; vendor-reported countsTransaction typeCount (trades)Share (%)ProvenanceBuys32,63965.0R01 · REPORTEDSells17,57235.0R02 · REPORTEDTotal50,211100.0R03 · REPORTED; CALC01 PASS Liquidity's two meanings The apparent contradiction sharpens at the LP check. GeckoTerminal describes liquidity as 100% locked; DexAlerts labels 0% locked/burned. These are conflicting reports about the same named market, not two measurements that should be averaged. GeckoTerminal [S01/C04]; DexAlerts [S02/C05]. The protocol's own documentation explains a likely interpretation problem. In the canonical Pump.fun migration flow, bonding-curve liquidity moves to PumpSwap and the resulting LP tokens are burned, while the PumpSwap accounting distinguishes recorded LP supply from tokens directly burned outside a withdrawal. That is a program-level mechanism—not a transaction-level inspection of the exact MINELIUS pool's LP mint, holders or migration signature. So the strongest defensible statement is narrower: the canonical migration design burns LP; this pool's complete position-level lock state was not independently reconstructed. Pump program documentation [S03]; PumpSwap pool documentation [S04]. A market cap is not an exit pool GeckoTerminal displayed approximately $8.19 million market capitalization and $212,422.49 pooled liquidity in the same retrieved page. Dividing the latter by the former yields 2.59%—a ratio of displayed metrics, not a prediction of slippage or a claim about the amount of capital available to sellers. The market-cap input is rounded by the source, making the derived percentage approximate. GeckoTerminal snapshot [S01/R04/R05/CALC02]. Figure 2 · Pool liquidity against quoted capitalization Quoted market capitalization and total pool liquidityUsing GeckoTerminal's co-displayed snapshot, quoted market capitalization was approximately $8.19 million and total pool liquidity $212,422.49, approximately 2.59% of market capitalization. Both are displayed USD metrics with different meanings, and a proportional comparison is not a slippage model. Same-page USD snapshot · early November 23, 2026 UTCMarket capitalization (approx. $8.19M)100% reference Total pool liquidity ($212,422.49)2.59% Both bars start at zero. The smaller bar is not a cash-out capacity. Comparative ratio, not a liquidity simulation. Source: GeckoTerminal [S01], rows R04–R05; CALC02. Both values are co-displayed but update dynamically. USD units; quoted market cap rounded to $0.01M. Pool liquidity is the two-sided reserve value, not the amount sellers could extract at the prevailing price. Figure 2 data: same-page USD snapshot, source GeckoTerminal [S01]; amounts vendor-reported, ratio calculatedMetricUSDFraction of displayed market capProvenanceQuoted capitalization≈8,190,000100% (reference)R04 · REPORTED, roundedTotal pool liquidity212,422.492.59% (approx.)R05 · REPORTED; CALC02 PASS The countercase matters There are observations that cut against a simple \"cannot sell\" allegation. The GeckoTerminal page lists thousands of sell transactions. DexAlerts reports the mint and freeze authorities revoked and a top-10 holder share of 24.7%. That share is a different denominator and a different scanner snapshot from GeckoTerminal's bundled-buy percentage; comparing them as proof of inconsistency would be a mistake. No native binary decode of the token's Token-2022 extensions was obtained here, so successful ordinary sells do not clear every possible transfer privilege. DexAlerts [S02/C07]; GeckoTerminal [S01]. Likewise, a historical scanner report of zero direct developer holdings would not negate the possibility of holdings in linked accounts, while a developer warning exceeding ten percent cannot be treated as proof without the address, time, and observed token-account balances. GeckoTerminal itself posts a more-than-10% developer warning, but the available evidence does not resolve which wallet population or methodology produced it. The warning is a prompt for investigation, not an established concentration figure. [S01/C08] A platform claim adds a separate trust question. The Minelius site has described an engine holding mine-wallet keys and a private-launch arrangement that obscures the user's wallet from launch history. Those descriptions, if applicable to this specific token's operation, would make attribution harder; they are not evidence that any identified launch buyer is controlled by the company. The claims are documented in the earlier research memo but were not tied to an independently verified on-chain payout trace. Minelius project site [S06/C09, site-reported]. What would falsify this assessment? A transaction-indexed launch ledger could establish the set of first-block purchases and distinguish a true common-funder cluster from merely contemporaneous automated trades. From there, independently decoded token balances, SOL funding hops, swaps, and withdrawal destinations could support—or disprove—the reported 34-wallet cluster. A replay of the exact Pool account, LP mint and migration transaction could settle the lock-status dispute without trusting either percentage label. A full mint-account decode could check every enabled Token-2022 extension rather than infer absence from the ordinary trading record. For each potential linkage, the test must preserve transaction signature, block/slot, instruction index, wallet address, amount and units, and whether the link is a direct transfer or a heuristic. A payment to the same exchange deposit infrastructure does not, by itself, identify a common person. Addresses can be investigated without guessing or exposing private people behind them. Methods and evidence statusOBSERVED in retrieved pages: the text and figures published by GeckoTerminal and DexAlerts on the exact mint/pool pages [S01–S02]. REPORTED: all vendor-labeled ownership, security and bundle classifications [C03–C09]. CALCULATED: trade-count reconciliation and the ratio of two co-displayed USD metrics [CALC01–CALC02]. INFERRED: common-owner attribution cannot be deduced from these reports. UNKNOWN: raw bundle-member wallets, shared funders, realized exit proceeds, current cluster ownership, exact LP token holder balances and complete mint extension data.Snapshots were retrieved during November 22, 2026 Eastern / early November 23 UTC, without a reproducible vendor timestamp for every metric. Figures preserve the page capture's stated 24-hour window rather than imply immutable live values. No figures show wallet-level flows, and no unlabeled same-name tokens are included. The original PROMPT ZERO v3 A–G dossier and READY figure handoff were unavailable; these two narrowly scoped figures were newly validated against the directly retrieved vendor rows, not presented as preapproved on-chain forensic graphics. MINELIUS demonstrates how a security dashboard can be simultaneously useful and insufficient. One scanner raises a credible question about bundled purchases; another offers a narrower holder statistic; two disagree about liquidity accounting. The responsible conclusion is not that the wallet farm has been proved, nor that the token has been cleared. The next meaningful evidence would be the transactions and balances beneath the percentages. Source register and limitations S01, primary for vendor's claims; derivative of market/on-chain indexing: GeckoTerminal MINELIUS/SOL pool. Retrieved November 22 ET / early Nov 23 UTC. Contains mint/pool match, reported count and USD snapshots, 79.31% bundled-buy label, 100% liquidity-lock label, and developer warning. Does not disclose a reproducible owner cluster in the accessed view. S02, vendor compilation: DexAlerts MINELIUS. Retrieved during same session; reports mint/freeze revoked, top-10 24.7%, and LP 0% locked/burned. Its metrics are not a synchronized event-level counterproof to S01. S03, primary protocol documentation: Pump program. Explains canonical bonding-curve migration and LP burn, not this pool's account proof. S04, primary protocol documentation: PumpSwap AMM. Describes LP mint and pool supply accounting. S05, unverified secondary attribution report: Larpcheck MINELIUS. Allegation of a 34-wallet cluster holding 63%; excluded from figures pending reproducible wallet rows. S06, self-description: Minelius platform. Describes claimed architecture; no independent proof its payout or privacy claims operate on this mint. S07, independent explorer reference: Solscan mint page. Provided for contract verification; complete native RPC decoding was not obtained. This article is an evidence audit, not trading advice, an accusation against identified individuals, or proof of a coordinated exit. Statements about project mechanisms are attributed to their publishers.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "MINELIUS and the Wallet-Cluster Claim That Outran Its Evidence"
+      },
+      {
+        "tag": "h2",
+        "text": "What a bundle warning actually tells us"
+      },
+      {
+        "tag": "h2",
+        "text": "Trading is visible; common ownership is not"
+      },
+      {
+        "tag": "h3",
+        "text": "Figure 1 · Buys and sells, not buyers and sellers"
+      },
+      {
+        "tag": "h2",
+        "text": "Liquidity's two meanings"
+      },
+      {
+        "tag": "h2",
+        "text": "A market cap is not an exit pool"
+      },
+      {
+        "tag": "h3",
+        "text": "Figure 2 · Pool liquidity against quoted capitalization"
+      },
+      {
+        "tag": "h2",
+        "text": "The countercase matters"
+      },
+      {
+        "tag": "h2",
+        "text": "What would falsify this assessment?"
+      },
+      {
+        "tag": "h3",
+        "text": "Methods and evidence status"
+      },
+      {
+        "tag": "h2",
+        "text": "Source register and limitations"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal"
+      },
+      {
+        "href": "https://www.dexalerts.io/token/solana/E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump",
+        "text": "DexAlerts"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "Pool record"
+      },
+      {
+        "href": "https://www.dexalerts.io/token/solana/E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump",
+        "text": "token record"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal security explanation"
+      },
+      {
+        "href": "https://larpcheck.app/E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump",
+        "text": "Larpcheck report"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal snapshot"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal MINELIUS/SOL"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal"
+      },
+      {
+        "href": "https://www.dexalerts.io/token/solana/E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump",
+        "text": "DexAlerts"
+      },
+      {
+        "href": "https://github.com/pump-fun/pump-public-docs/blob/main/docs/PUMP_PROGRAM_README.md",
+        "text": "Pump program documentation"
+      },
+      {
+        "href": "https://github.com/pump-fun/pump-public-docs/blob/main/docs/PUMP_SWAP_README.md",
+        "text": "PumpSwap pool documentation"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal snapshot"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal"
+      },
+      {
+        "href": "https://www.dexalerts.io/token/solana/E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump",
+        "text": "DexAlerts"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal"
+      },
+      {
+        "href": "https://www.minelius.online/",
+        "text": "Minelius project site"
+      },
+      {
+        "href": "https://www.geckoterminal.com/solana/pools/7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ",
+        "text": "GeckoTerminal MINELIUS/SOL pool"
+      },
+      {
+        "href": "https://www.dexalerts.io/token/solana/E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump",
+        "text": "DexAlerts MINELIUS"
+      },
+      {
+        "href": "https://github.com/pump-fun/pump-public-docs/blob/main/docs/PUMP_PROGRAM_README.md",
+        "text": "Pump program"
+      },
+      {
+        "href": "https://github.com/pump-fun/pump-public-docs/blob/main/docs/PUMP_SWAP_README.md",
+        "text": "PumpSwap AMM"
+      },
+      {
+        "href": "https://larpcheck.app/E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump",
+        "text": "Larpcheck MINELIUS"
+      },
+      {
+        "href": "https://www.minelius.online/",
+        "text": "Minelius platform"
+      },
+      {
+        "href": "https://solscan.io/token/E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump",
+        "text": "Solscan mint page"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Risk verification / Solana / token due diligence"
+      },
+      {
+        "tag": "p",
+        "text": "A Solana launch drew a startling bundled-buy warning. Conflicting scanner verdicts show why purchase patterns, holder balances and beneficial ownership must not be mistaken for one another."
+      },
+      {
+        "tag": "p",
+        "text": "Research cutoff: November 22, 2026 Eastern / early November 23 UTC · Planned article date: 2026-11-22 · Snapshot evidence, not a live token rating"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Editorial illustration. The threads depict questions of attribution, not a traced network of MINELIUS wallets."
+      },
+      {
+        "tag": "p",
+        "text": "The headline number attached to a newly launched Solana token was hard to ignore: 79.31% of its tokens had reportedly been purchased through bundled buys. The same token's trading pool displayed a liquidity-lock reading of 100% in one scanner and 0% in another. Neither number, on its own, identifies who owns the coins or who can remove the liquidity. That distinction is the MINELIUS story. GeckoTerminal [S01]; DexAlerts [S02]."
+      },
+      {
+        "tag": "p",
+        "text": "MINELIUS is a Solana token identified by mint E9rWKjVhHMxQkxfREr7Li8Yy46rVcWiWHoKVQAe9pump. Its principal observed MINELIUS/SOL pool was 7yJDP2VmgazVEa6usbXM61uSk5AT3J4dZFaJQvq2LnfZ on PumpSwap. The identifiers match across the two scanners; this article does not treat other same-name coins as interchangeable. Pool record [S01]; token record [S02]."
+      },
+      {
+        "tag": "p",
+        "text": "GeckoTerminal's security text reports that 79.31% of the tokens were purchased via bundled buys. That is a vendor classification of purchases, not an independently disclosed list of beneficial owners and not a current percentage of supply controlled by a connected group. The page does not provide, in the material examined here, a complete transaction-indexed list, cluster membership, funding ancestry or sale proceeds from which to reproduce its percentage. The observation is therefore REPORTED [S01/C03], rather than an independently recomputed on-chain fact. GeckoTerminal security explanation."
+      },
+      {
+        "tag": "p",
+        "text": "The warning is worth taking seriously. Coordinated purchases at launch can distribute supply across accounts in a way that looks, on a holder leaderboard, less concentrated than the underlying economic exposure. Yet a bundle does not automatically mean that the same person controls every buyer. Transactions arriving near each other may be bundled by shared infrastructure, bots, or other mechanisms. Establishing common economic control requires stronger links: shared non-service funders, deliberate transfer chains, joint exit destinations, documented operators or other corroboration. No such wallet-level reconstruction was supplied in the available evidence."
+      },
+      {
+        "tag": "p",
+        "text": "A separate Larpcheck report alleged that 34 funded wallets held 63% of the token. That more specific allegation remains UNKNOWN as an on-chain conclusion: the accessible report did not expose all wallet addresses, transaction hashes or balances necessary to reproduce the calculation. It is not plotted as a current ownership fact, and neither number is added to the other. [S05/C06]"
+      },
+      {
+        "tag": "p",
+        "text": "At an early-November-23-UTC page capture, GeckoTerminal displayed 32,639 buys and 17,572 sells over a rolling 24-hour window. I recomputed their sum as 50,211 transactions, the same total the page displayed. That is evidence that sells are occurring through the pool; it is not evidence that every wallet can exit in unlimited size, that trades are independent, or that net dollar flow is positive. Transaction counts are not dollar volumes. GeckoTerminal snapshot [S01/C01/C02/CALC01]."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Observed vendor counts; independently checked addition. Source: GeckoTerminal MINELIUS/SOL [S01], rows R01–R03; CALC01. Capture early November 23 UTC, rolling 24-hour window; source does not provide a fixed API snapshot timestamp. Percentages rounded to 0.1 point. Data are not a wallet clustering measurement."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 1 data: transaction counts, MINELIUS/SOL, trailing 24h, source GeckoTerminal [S01]; vendor-reported counts"
+      },
+      {
+        "tag": "p",
+        "text": "The apparent contradiction sharpens at the LP check. GeckoTerminal describes liquidity as 100% locked; DexAlerts labels 0% locked/burned. These are conflicting reports about the same named market, not two measurements that should be averaged. GeckoTerminal [S01/C04]; DexAlerts [S02/C05]."
+      },
+      {
+        "tag": "p",
+        "text": "The protocol's own documentation explains a likely interpretation problem. In the canonical Pump.fun migration flow, bonding-curve liquidity moves to PumpSwap and the resulting LP tokens are burned, while the PumpSwap accounting distinguishes recorded LP supply from tokens directly burned outside a withdrawal. That is a program-level mechanism—not a transaction-level inspection of the exact MINELIUS pool's LP mint, holders or migration signature. So the strongest defensible statement is narrower: the canonical migration design burns LP; this pool's complete position-level lock state was not independently reconstructed. Pump program documentation [S03]; PumpSwap pool documentation [S04]."
+      },
+      {
+        "tag": "p",
+        "text": "GeckoTerminal displayed approximately $8.19 million market capitalization and $212,422.49 pooled liquidity in the same retrieved page. Dividing the latter by the former yields 2.59%—a ratio of displayed metrics, not a prediction of slippage or a claim about the amount of capital available to sellers. The market-cap input is rounded by the source, making the derived percentage approximate. GeckoTerminal snapshot [S01/R04/R05/CALC02]."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Comparative ratio, not a liquidity simulation. Source: GeckoTerminal [S01], rows R04–R05; CALC02. Both values are co-displayed but update dynamically. USD units; quoted market cap rounded to $0.01M. Pool liquidity is the two-sided reserve value, not the amount sellers could extract at the prevailing price."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 2 data: same-page USD snapshot, source GeckoTerminal [S01]; amounts vendor-reported, ratio calculated"
+      },
+      {
+        "tag": "p",
+        "text": "There are observations that cut against a simple \"cannot sell\" allegation. The GeckoTerminal page lists thousands of sell transactions. DexAlerts reports the mint and freeze authorities revoked and a top-10 holder share of 24.7%. That share is a different denominator and a different scanner snapshot from GeckoTerminal's bundled-buy percentage; comparing them as proof of inconsistency would be a mistake. No native binary decode of the token's Token-2022 extensions was obtained here, so successful ordinary sells do not clear every possible transfer privilege. DexAlerts [S02/C07]; GeckoTerminal [S01]."
+      },
+      {
+        "tag": "p",
+        "text": "Likewise, a historical scanner report of zero direct developer holdings would not negate the possibility of holdings in linked accounts, while a developer warning exceeding ten percent cannot be treated as proof without the address, time, and observed token-account balances. GeckoTerminal itself posts a more-than-10% developer warning, but the available evidence does not resolve which wallet population or methodology produced it. The warning is a prompt for investigation, not an established concentration figure. [S01/C08]"
+      },
+      {
+        "tag": "p",
+        "text": "A platform claim adds a separate trust question. The Minelius site has described an engine holding mine-wallet keys and a private-launch arrangement that obscures the user's wallet from launch history. Those descriptions, if applicable to this specific token's operation, would make attribution harder; they are not evidence that any identified launch buyer is controlled by the company. The claims are documented in the earlier research memo but were not tied to an independently verified on-chain payout trace. Minelius project site [S06/C09, site-reported]."
+      },
+      {
+        "tag": "p",
+        "text": "A transaction-indexed launch ledger could establish the set of first-block purchases and distinguish a true common-funder cluster from merely contemporaneous automated trades. From there, independently decoded token balances, SOL funding hops, swaps, and withdrawal destinations could support—or disprove—the reported 34-wallet cluster. A replay of the exact Pool account, LP mint and migration transaction could settle the lock-status dispute without trusting either percentage label. A full mint-account decode could check every enabled Token-2022 extension rather than infer absence from the ordinary trading record."
+      },
+      {
+        "tag": "p",
+        "text": "For each potential linkage, the test must preserve transaction signature, block/slot, instruction index, wallet address, amount and units, and whether the link is a direct transfer or a heuristic. A payment to the same exchange deposit infrastructure does not, by itself, identify a common person. Addresses can be investigated without guessing or exposing private people behind them."
+      },
+      {
+        "tag": "p",
+        "text": "OBSERVED in retrieved pages: the text and figures published by GeckoTerminal and DexAlerts on the exact mint/pool pages [S01–S02]. REPORTED: all vendor-labeled ownership, security and bundle classifications [C03–C09]. CALCULATED: trade-count reconciliation and the ratio of two co-displayed USD metrics [CALC01–CALC02]. INFERRED: common-owner attribution cannot be deduced from these reports. UNKNOWN: raw bundle-member wallets, shared funders, realized exit proceeds, current cluster ownership, exact LP token holder balances and complete mint extension data."
+      },
+      {
+        "tag": "p",
+        "text": "Snapshots were retrieved during November 22, 2026 Eastern / early November 23 UTC, without a reproducible vendor timestamp for every metric. Figures preserve the page capture's stated 24-hour window rather than imply immutable live values. No figures show wallet-level flows, and no unlabeled same-name tokens are included. The original PROMPT ZERO v3 A–G dossier and READY figure handoff were unavailable; these two narrowly scoped figures were newly validated against the directly retrieved vendor rows, not presented as preapproved on-chain forensic graphics."
+      },
+      {
+        "tag": "p",
+        "text": "MINELIUS demonstrates how a security dashboard can be simultaneously useful and insufficient. One scanner raises a credible question about bundled purchases; another offers a narrower holder statistic; two disagree about liquidity accounting. The responsible conclusion is not that the wallet farm has been proved, nor that the token has been cleared. The next meaningful evidence would be the transactions and balances beneath the percentages."
+      },
+      {
+        "tag": "li",
+        "text": "S01, primary for vendor's claims; derivative of market/on-chain indexing: GeckoTerminal MINELIUS/SOL pool. Retrieved November 22 ET / early Nov 23 UTC. Contains mint/pool match, reported count and USD snapshots, 79.31% bundled-buy label, 100% liquidity-lock label, and developer warning. Does not disclose a reproducible owner cluster in the accessed view."
+      },
+      {
+        "tag": "li",
+        "text": "S02, vendor compilation: DexAlerts MINELIUS. Retrieved during same session; reports mint/freeze revoked, top-10 24.7%, and LP 0% locked/burned. Its metrics are not a synchronized event-level counterproof to S01."
+      },
+      {
+        "tag": "li",
+        "text": "S03, primary protocol documentation: Pump program. Explains canonical bonding-curve migration and LP burn, not this pool's account proof."
+      },
+      {
+        "tag": "li",
+        "text": "S04, primary protocol documentation: PumpSwap AMM. Describes LP mint and pool supply accounting."
+      },
+      {
+        "tag": "li",
+        "text": "S05, unverified secondary attribution report: Larpcheck MINELIUS. Allegation of a 34-wallet cluster holding 63%; excluded from figures pending reproducible wallet rows."
+      },
+      {
+        "tag": "li",
+        "text": "S06, self-description: Minelius platform. Describes claimed architecture; no independent proof its payout or privacy claims operate on this mint."
+      },
+      {
+        "tag": "li",
+        "text": "S07, independent explorer reference: Solscan mint page. Provided for contract verification; complete native RPC decoding was not obtained."
+      },
+      {
+        "tag": "p",
+        "text": "This article is an evidence audit, not trading advice, an accusation against identified individuals, or proof of a coordinated exit. Statements about project mechanisms are attributed to their publishers."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Transaction type",
+          "Count (trades)",
+          "Share (%)",
+          "Provenance"
+        ],
+        [
+          "Buys",
+          "32,639",
+          "65.0",
+          "R01 · REPORTED"
+        ],
+        [
+          "Sells",
+          "17,572",
+          "35.0",
+          "R02 · REPORTED"
+        ],
+        [
+          "Total",
+          "50,211",
+          "100.0",
+          "R03 · REPORTED; CALC01 PASS"
+        ]
+      ],
+      [
+        [
+          "Metric",
+          "USD",
+          "Fraction of displayed market cap",
+          "Provenance"
+        ],
+        [
+          "Quoted capitalization",
+          "≈8,190,000",
+          "100% (reference)",
+          "R04 · REPORTED, rounded"
+        ],
+        [
+          "Total pool liquidity",
+          "212,422.49",
+          "2.59% (approx.)",
+          "R05 · REPORTED; CALC02 PASS"
+        ]
+      ]
+    ],
+    "alts": [
+      "Conceptual editorial photograph of unlabeled brass discs connected by threads beneath a magnifying glass; an illustration of questions about wallet links, not a map of actual token holders."
+    ],
+    "svgCount": 2,
+    "svgSha256": [
+      "a20710cd57766406393bf3d45383a69e62404fee882f28ad1d5589350c72593d",
+      "91d61e672ba28a72497dd0f6c29fe42ad9e833721ef3ed4a8542654cd93be966"
+    ],
+    "imageCount": 1,
+    "imageSha256": [
+      "081d0d1b3e6c263b43edc2bfdedf24dd02097faba6b312e637756500bc57ca27"
+    ],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "wallet-ownership-custodial-wallets-and-false-whale-claims": {
     "text": "Risk & Verification · Investigative analysisThe Wallet Is Large. The Owner Is Still a Question.A historical exchange wallet disclosure and a custodian’s own terms expose the mistake behind crypto rich lists: an address may show where assets sit, without revealing whose economic claims they satisfy.Research cutoff: November 22, 2026 · Historical evidence, not a live wallet ranking Editorial illustration. One set of keys can secure assets against which several distinct parties hold claims; this is a metaphor, not a transaction map. An Ethereum address appears in a 2022 exchange disclosure next to an extraordinary number: 809,939,998 USDT. It is tempting to turn that number into a character—a gigantic investor, a mysterious whale, a single owner whose next move might shake the market. But that transformation asks a public blockchain to answer a question it was not designed to answer. The address is 0x28c6…21d60. Binance named it in a November 10, 2022 wallet disclosure, alongside a balance specified at Ethereum block 15,935,898. That is an issuer-reported historical balance—not an independently replayed balance in this investigation, not a current reserve figure and certainly not a census of beneficial owners. The number's importance is the category error it invites. [S02 · REPORTED] 1. The most dangerous word in a rich list is “owner” A blockchain exposes addresses, token balances and recorded transfers. Depending on the network and contract, those records can provide powerful evidence that assets moved between addresses or were present in a state snapshot. They do not, by themselves, identify the legal owner, the person entitled to an asset, the party instructing a custodian, or the customers represented by a pooled balance. One address could represent one self-custody holder. It could also represent an exchange hot wallet, a custodian's omnibus account, a contract, or another operational arrangement. Those explanations are not equivalent, and the address string alone cannot select between them. A deposit into an exchange-controlled address does not prove every interacting sender belongs to that exchange; a transaction signed by an operator does not prove that operator owns every economic claim associated with the balance. A balance answers where tokens are recorded. It does not automatically answer for whom they are held. 2. The contract says what the address cannot The distinction is not merely philosophical. Coinbase's U.S. user agreement separates several concepts that whale lists routinely collapse. Under its applicable custodial provisions, customer title is addressed separately from the keys: Coinbase says it retains control of private keys for blockchain addresses it operates. It also says it may use shared addresses containing assets for customers and/or for Coinbase, while maintaining separate account ledgers. These contractual statements describe a permitted custody mechanism, not proof of the contents of any specific wallet. Terms differ by product and jurisdiction and may change. [S01 · REPORTED, §§2.7.1–2.7.4] Figure 1 · One address, different kinds of controlCustody mechanism and claims are separateConceptual flow. An operator holds signing keys for a shared on-chain address. Separately, an internal ledger records contractual customer or service claims. The diagram does not show actual Coinbase wallet contents or a number of customers.Custody operatorSigning-key controlShared addressOn-chain asset balanceSigns transactionsInternal ledgerOff-chain recordsCustomer / serviceclaims (possible)Off-chain attributionSolid = signing authority · Dashed = contractual / ledger relationshipConceptual mechanism, not an observed transaction graph. A service can operate a blockchain address while the economic claim to safeguarded assets is recorded elsewhere. Based on Coinbase's U.S. agreement; arrangements vary by product. Source S01.Accessible Figure 1 equivalent: types of control (no numerical observations)ComponentEvidence / roleWhat remains unknownCustody operatorMay control signing keys for operated addresses.Does not itself prove beneficial title.Shared blockchain addressHolds an on-chain asset balance.Individual claimants and their amounts.Internal ledgerService records separate customer and proprietary claims.Ledger accuracy and specific wallet allocations.Customer claimDepends on applicable agreement and account record.Not inferable from a public address alone. This is why “the exchange controls the key” and “the exchange owns every coin economically” cannot be treated as synonyms. The former may be supported by signing evidence or a service disclosure. The latter requires a very different inquiry into contracts, liabilities, segregation and title. 3. A disclosed address is better evidence than a rumor—and still not enough Binance's historical disclosure matters because it supplies something stronger than an anonymous tracker label: the service itself identified an address and published an amount for a specified block. The document also calls its disclosure incomplete. A contemporaneous issuer acknowledgment strengthens attribution to a service's wallet operations; it does not prove exclusive key control, external audit of every reported number, ownership of all tokens as corporate property, or the count of depositors represented. [S02 · REPORTED] Five of Binance's listed Ethereum USDT address figures share block 15,935,898. Their published whole-token balances are 809,939,998; 74,178,945; 61,296,558; 54,695,297; and 49,650,585 USDT. Added without rounding, those reported rows yield 1,049,761,383 USDT. The largest is 77.15% of that five-address selection. These calculations were reproduced using decimal-safe arithmetic on the source figures. They say nothing about the proportion of all Binance reserves, total USDT supply, or an individual whale's holdings. The figures were not independently reconstructed from block state. [S02 · CALC01 / CALC02 · REPORTED INPUTS] There is another trap in the table: the disclosure lists other assets and addresses at different blocks. Summing those unrelated snapshots as though they describe one perfectly synchronized balance sheet could introduce timing errors or double counting. This article deliberately restricts its arithmetic to the five same-block USDT rows; it does not show a quantitative chart because the underlying historic balances have not been independently verified on-chain. 4. How far attribution can go In attribution work, the decisive step is not generating a more impressive cluster diagram. It is identifying precisely which proposition the evidence proves. A heuristic can suggest that several addresses are operationally linked; an issuer acknowledgment can establish that a service reported an address as part of its wallet set. Neither can disclose a secret off-chain customer ledger just by becoming more visually convincing. Figure 2 · The attribution ladder has a ceilingFour levels of wallet service attributionA nonquantitative four-step ladder from unknown label through heuristic, corroborated service identity, and direct issuer acknowledgment. Above every level the distinct question of beneficial ownership remains unanswered without further evidence.Service attribution ≠ beneficial ownershipClaimant identities require independent, relevant evidenceLevel 0Unknown or unsupported labelNo reliable service attributionLevel 1Transaction-pattern heuristicHypothesis, not independently confirmed identityLevel 2Corroborated service attributionStill not a customer-ownership registerLevel 3Official service acknowledgment + chain contextDoes not identify beneficiaries or prove exclusive titleEvidence taxonomy, not measured probabilities. Levels describe confidence in a specific service-attribution proposition, not rising certainty of legal ownership. The Binance 2022 disclosure supports a historical issuer-reported service association; independent 2022 block-balance replay and exclusive signing control are unverified. Method: research dossier attribution rubric, source S02.Accessible Figure 2 equivalent: attribution categoriesLevelBasisCannot establish by itself0Unverified labelService identity or owner1Heuristic address activityExclusive control or owner2Independent corroborationCustomer account attribution3Issuer service acknowledgment and relevant chain evidenceLegal title, beneficial owners or customer count A service can acknowledge an address while the relevant custody arrangement remains different for each product. Another piece of evidence might be a cryptographic message signed by a wallet's key; that supports key control within the signature's context, not an unqualified claim about who bears the economic exposure. And a token transfer into or out of custody is not synonymous with a purchase or liquidation. Internal inventory movement, customer withdrawal, batching or other operational transfer may explain the same chain-level event. 5. The countercase: sometimes segregation is real It would be just as misleading to reverse the mistake and declare that every large custodial address necessarily pools thousands of customers. Coinbase's 2024 Form 10-K describes certain custody entities' use of dedicated cold-storage addresses and separate records for corporate and customer assets. The filing also describes audit procedures concerning cold-storage balances, blockchain reconciliation, internal segregation and samples of signing or asset movement. This supports a more qualified view: custody structures can differ, and well-designed control tests can answer some questions public labels cannot. The filing does not identify the beneficial owners behind the Binance addresses discussed here. [S05 · REPORTED / AUDITOR-DESCRIBED PROCEDURES] An individual who controls a self-custody key and possesses independent legal evidence of title may be an unusually straightforward case. But that conclusion rests on the combination, not on address size or a convenient name assigned by a blockchain explorer. Even a strong proof-of-reserves process principally addresses specified assets, liabilities and control at a snapshot; it is not automatically a person-by-person ownership map. See the exchange's description of its proof-of-reserves method for the distinction between disclosed wallet assets and customer-liability reporting. [S04 · REPORTED] 6. What I could not prove I checked the issuer documents and recomputed the five-row arithmetic. I did not independently replay the 2022 USDT balances at Ethereum block 15,935,898. The available investigation also did not verify a deposit-to-consolidation sequence, relevant transaction hashes, a full 2026 wallet history, or a mapping from the historical address to any underlying customers. A narrow Blockscout query returned no matching transactions for its short 2026 window, a broader request timed out and a direct explorer page was inaccessible during the earlier research stage. No inference about 2022 transaction absence follows from those failures. This uncertainty does not defeat the central distinction, but it does constrain the story. The Binance example establishes what Binance published. The Coinbase documents establish how its custody terms and separate institutional products describe control and claims. Neither independently tests all the assets, liabilities or account holders associated with the historical address. I have excluded a sweep chart rather than invent a transaction trail to complete the picture. Methods and evidence standardREPORTED: Binance's published 2022 address amounts, Coinbase's agreement and 2024 filing. CALCULATED: whole-token sum and ratio for five same-block, issuer-reported USDT rows. INFERRED: the ownership claim cannot follow from an address balance alone. UNKNOWN: historical direct on-chain replay, customer identities, counts and any current reserves claim. The figures are explanatory schematics, not observed network flows. Research cutoff November 22, 2026; document versions and product scope may differ over time.Arithmetic: 809939998 + 74178945 + 61296558 + 54695297 + 49650585 = 1049761383 USDT; 809939998 / 1049761383 × 100 = 77.15% (rounded to 2 decimal places). Dataset DATA01; calculations CALC01/02; source S02. No customer denominator is available. 7. The test to apply before repeating a whale claim Identify the network, contract and exact block/time. A screenshot without these is an invitation to guess.Separate on-chain activity from an explorer's label or a service's statement. What was directly observed, and who asserted the rest?Ask who controls the keys, who administers the custody ledger, and who has the contractual claim. Those can be different parties.Check whether transfers could be operational: batching, consolidation, a hot/cold rebalance, contract interaction or customer withdrawals.Demand a precise denominator. Five disclosed addresses are not the network, exchange reserves, or five people.Require additional documentary or verified legal evidence before assigning a beneficial owner; do not infer or publish private customer identities. For further context, this publication's wallet-cluster investigation considers the limits of tracing fund paths. Its INJ bridge-concentration investigation shows why a large infrastructure balance should not automatically be described as a whale position. The largest address in a disclosure can be a revealing fact. It becomes a misleading story the moment a custody arrangement is recast as a single person's fortune. The disciplined question is not “How big is that whale?” It is “What, exactly, does this evidence let us say about the person—or institution—behind the balance?” Primary sources and reading notesS01: Coinbase U.S. User Agreement, applicable custody provisions including §§2.7.1–2.7.4. Contractual descriptions; not wallet-by-wallet verification.S02: Binance, “Our Commitment to Transparency”, issued November 10, 2022, later updated; partial historical addresses and balances, Ethereum block 15,935,898 for the five USDT values selected. Issuer-reported, not independently replayed here.S04: Binance Proof of Reserves, issuer explanation; not a third-party beneficial-ownership audit.S05: Coinbase Global, 2024 Form 10-K, custody and audit-procedures discussion; different period/product from the historical Binance snapshot.Editorial review: no individual or customer identities inferred from public addresses. This article is historical methodology, not an allegation about particular depositors or a live reserve assessment.",
     "headings": [

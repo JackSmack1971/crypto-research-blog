@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "minelius-bundles-are-not-ownership-proof": {
+      "title": "MINELIUS and the Wallet-Cluster Claim That Outran Its Evidence",
+      "description": "A Solana launch drew a startling bundled-buy warning. Conflicting scanner verdicts show why purchase patterns, holder balances and beneficial ownership must not be mistaken for one another.",
+      "canonical": "https://independent-market-notes.netlify.app/minelius-bundles-are-not-ownership-proof/",
+      "og:title": "MINELIUS and the Wallet-Cluster Claim That Outran Its Evidence",
+      "og:description": "A Solana launch drew a startling bundled-buy warning. Conflicting scanner verdicts show why purchase patterns, holder balances and beneficial ownership must not be mistaken for one another.",
+      "og:url": "https://independent-market-notes.netlify.app/minelius-bundles-are-not-ownership-proof/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "wallet-ownership-custodial-wallets-and-false-whale-claims": {
       "title": "The Wallet Is Large. The Owner Is Still a Question.",
       "description": "A historical exchange wallet disclosure and a custodian’s own terms expose the mistake behind crypto rich lists: an address may show where assets sit, without revealing whose economic claims they satisfy.",
@@ -602,6 +612,12 @@
     }
   },
   "rss": [
+    {
+      "title": "MINELIUS and the Wallet-Cluster Claim That Outran Its Evidence",
+      "link": "https://independent-market-notes.netlify.app/minelius-bundles-are-not-ownership-proof/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/minelius-bundles-are-not-ownership-proof/",
+      "description": "A Solana launch drew a startling bundled-buy warning. Conflicting scanner verdicts show why purchase patterns, holder balances and beneficial ownership must not be mistaken for one another."
+    },
     {
       "title": "The Wallet Is Large. The Owner Is Still a Question.",
       "link": "https://independent-market-notes.netlify.app/wallet-ownership-custodial-wallets-and-false-whale-claims/",
