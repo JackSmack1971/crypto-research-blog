@@ -1,4 +1,385 @@
 {
+  "bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics": {
+    "text": "Bitcoin · Market structure · Investigative analysisBitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions WorkIssuer filings separate net share creation, custodied BTC and changes in fund value—and the SEC’s in-kind rule change makes that distinction more important.Research edition: November 22, 2026 · Historical issuer data through June 30, 2026 · Not a live ETF-flow report An inflow and a shrinking fund, at the same timeIn the first quarter of 2026, the iShares Bitcoin Trust ETF recorded $1,112,018,777 of net capital-share transactions. Its net assets nevertheless fell $14,016,408,526. I started with that contradiction because it is the cleanest way to see what the phrase bitcoin ETF flows does—and does not—tell us. Both numbers come from the fund's own statement of changes in net assets. They describe different parts of the same accounting identity. [1]When an ETF flow ticker displays a positive number, a reader can easily picture a matching market order buying bitcoin. The issuer's ledger does not warrant that leap. It separates primary-market share transactions from the investment results of BTC the trust already owns. It does not identify an exchange, trading desk, or execution timestamp for the underlying coins.Quarterly IBIT share capital, investment operations, and AUM changesFour selected quarters; 2025 Q1 and 2026 Q1 have positive primary share capital but negative change in net assets. Bars show USD billions on a common baseline, not daily trading flows.-30-20-100+10+20USD billions • zero-centered scale2025 Q1+2.71-6.46-3.742025 Q2+12.46+14.47+26.932026 Q1+1.11-15.13-14.022026 Q2-2.95-7.05-10.00Net share capitalInvestment operationsChange in net assetsFigure 1. Selected IBIT quarters (not a continuous series): primary capital, investment operations, and net-asset changes, USD billions. Zero-centered bars; exact figures below. Operations include gains, losses and expenses and should not be interpreted as pure bitcoin-price return. Source: IBIT June 2026 Form 10-Q, statements of changes in net assets; analyst addition of signed contributions and redemptions.Figure 1 source values; USD, selected accounting quartersQuarterNet capital share transactionsInvestment operationsNet asset change2025 Q1+2,713,805,623-6,457,874,778-3,744,069,155 2025 Q2+12,461,944,771+14,468,115,204+26,930,059,975 2026 Q1+1,112,018,777-15,128,427,303-14,016,408,526 2026 Q2-2,950,586,623-7,048,147,970-9,998,734,593 Two markets, one bitcoin trustMost investors trade ETF shares on a securities exchange. Those trades generally transfer already-existing shares from one holder to another. A buyer of 100 shares does not automatically cause the fund to issue 100 new shares or obtain a fresh quantity of BTC.New shares enter, or existing shares leave, through the primary market. Authorized participants (APs) interact with the fund in specified creation/redemption baskets. The trust issues shares in return for permitted consideration; on redemption it cancels shares and returns consideration. Arbitrage and market making can help link the exchange share price to net asset value per share, but frictions, timing and spreads make that linkage imperfect. The precise basket is fund-specific: IBIT describes 40,000-share baskets, while the Fidelity Wise Origin Bitcoin Fund reports 25,000-share baskets. [1] [3]That distinction matters at the headline level. Secondary-market trading volume measures shares changing hands. A primary-market flow measures creation less redemption under an explicit valuation convention. Neither is a direct tape of the BTC trades an intermediary may perform. Cash and in-kind are different routesThere are at least two meaningful settlement paths. In a cash creation, an AP supplies cash under the trust's process; the trust or its agents arrange the BTC exposure according to their procedures. In an in-kind creation, the permitted consideration includes BTC delivered against newly created ETF shares. Redemptions work in reverse. The market risk can migrate through intermediaries, inventory and execution channels in either case, but it is analytically wrong to assign every creation a same-day on-exchange purchase.On July 29, 2025, the SEC approved orders allowing in-kind creations and redemptions for crypto ETPs that had initially been constrained to cash transactions. That was a permission, not proof of the operating method each issuer used on the very same day. [2]Evidence of the distinction: for the six months ended June 30, 2026, IBIT separately reported $9,362,376,537 of bitcoin purchased in-kind for shares issued and $5,491,156,370 of bitcoin paid in-kind for shares redeemed in non-cash disclosures. Those are accounting values of BTC consideration, not exchange execution receipts. [1]Cash baskets can still transmit demand into the bitcoin market. A desk may need inventory; a market maker may hedge an ETF premium; an issuer's agent may acquire or dispose of coins. I cannot tell you which venue or time absorbed those transactions from this quarterly filing alone. That is the serious counterargument to a simplistic “flows are meaningless” thesis: they matter, but they do not reveal the route. What the word “flow” actually measuresFor this analysis I use a deliberately narrow measure: net capital-share transactions = issuer contributions for shares issued + signed distributions for shares redeemed. Redemptions are negative. It is an issuer accounting figure, not an estimate of aggregate daily net cash traded by all investors, and it must not be mixed uncritically with vendor daily-flow tables.Other numbers answer other questions. Holdings are BTC units in custody at a valuation date. Shares outstanding count ETF claims then in circulation. Net asset value is assets less liabilities, denominated in dollars; NAV per share divides that amount by outstanding shares. Because BTC is revalued while units change via creations, redemptions, fees and settlement, AUM can change without a matching capital inflow. Conversely capital can flow into a falling asset.The proper alignment for any daily investigation would use issuer-level creations/redemptions, their valuation or settlement dates, BTC units, a documented benchmark and a historical release timestamp. I do not have that verified daily panel here, so I have not drawn a daily inflow-versus-price chart. The six-month bridge: new capital was not the main lossFrom December 31, 2025 to June 30, 2026, IBIT's net assets fell from $67.401 billion to $43.386 billion. Net primary capital transactions across the first two quarters of 2026 were negative $1.839 billion. Investment operations were negative $22.177 billion. Their sum reconciles the negative $24.015 billion total change. This decomposition is a balance-sheet identity—not an experiment estimating how ETF flows moved the BTC market. [1]IBIT first-half 2026 net assets reconciliationFrom 67.401 billion dollars of fund net assets on December 31 2025, subtract 1.839 billion in net primary-market capital and 22.177 billion of investment operations to reach 43.386 billion on June 30 2026.020406080IBIT net assets (USD billions)$67.40BOpening net assets−$1.84BNet share capital−$22.18BInvestment operations$43.39BClosing net assetsFigure 2. IBIT net-asset reconciliation for January–June 2026. Floating negative bars connect the opening and closing dollar levels; no price axis is mixed into the chart. Source: IBIT Form 10-Q; summed 2026 Q1–Q2 accounting records, USD.Figure 2 reconstruction, USD (six months ended June 30, 2026)StepSigned amount or balance (USD)RoleOpening net assets, Dec 3167,401,155,244BalanceNet capital transactions, H1−1,838,567,846ChangeInvestment operations, H1−22,176,575,273ChangeClosing net assets, Jun 3043,386,012,125Balance67,401,155,244 − 1,838,567,846 − 22,176,575,273 = 43,386,012,125 USDIt would be tempting to label that $22.177 billion as a price decline. I would not: the accounting heading includes realized and unrealized investment effects and operating expenses. The fund's documented index reference price did fall from $87,463.03/BTC on December 31 to $59,101.49/BTC on June 30, but those two endpoints do not isolate every intervening accounting contribution. [1] Holdings are a third ledger, not a trade tapeThe fund reported 770,792 BTC at December 31, 2025, and 734,261 BTC at June 30, 2026—36,531 fewer BTC based on rounded whole-coin disclosure. Shares outstanding fell from 1,358,680,000 to 1,296,040,000. The endpoints agree on direction, but even that agreement does not assign the intervening activity to particular exchange purchases or sales. [1]IBIT BTC holdings and ETF shares outstanding, two endpoint comparisonWhole-bitcoin holdings fell from 770792 to 734261; outstanding shares fell from 1358680000 to 1296040000 between December 31 2025 and June 30 2026. Each panel uses its own zero-based scale; neither is an executed trade record.Custodied BTC (coins)770,792 BTCDec 31, 2025734,261 BTCJun 30, 2026Zero-based bars; snapshots onlyShares outstanding (count)1.359BDec 31, 20251.296BJun 30, 2026Zero-based bars; snapshots onlyFigure 3. Two issuer snapshots, shown as independent zero-based panels: custodied BTC and issued ETF share count. Different units and scales; values reflect reporting-date positions, not trade events. Source: IBIT June 2026 Form 10-Q, schedules of investments and balance sheets.Figure 3 reported endpoints, IBITValuation dateBTC held (whole coins, rounded)Shares outstandingReference BTC price (USD/BTC)2025-12-31770,7921,358,680,00087,463.032026-06-30734,2611,296,040,00059,101.49There is a further observational limit. The September 2026 quarterly filing was identified during research, but its body was not validated into this dataset. I therefore stop the quantitative figures at June 30 rather than silently promote a later search snippet to an audited observation. This is a historical mechanics analysis dated November 22, not a claim about today's share count or daily flow. What it would take to say “the ETF bought bitcoin”To prove execution rather than infer it, I would want primary creation/redemption instructions, whether consideration was cash or BTC, the execution agent's matching records or defensible custodian movements, and a consistent clock linking order, settlement, NAV and market trades. Then I would ask whether the observed purchase was incremental spot demand, internal inventory transfer, OTC execution or hedge unwinding. A custodial transfer on its own also cannot establish price impact.The skeptical conclusion is therefore specific. ETF net share flows are a useful measure of demand for primary-market fund exposure. They are not interchangeable with the number of coins held, the dollar value of the whole trust, or a list of identifiable BTC market buys. A headline that merges those ledgers may point toward a real pressure on price while overstating how much of that pressure has actually been measured.For the broader transmission hypothesis, see Bitcoin’s selling chain and the ETF reversal analysis. The related distinction between turnover and readily sellable depth is explored in our liquidity investigation. Definitions, methods and uncertaintyCreation / redemptionPrimary-market issuance or cancellation of fund shares, ordinarily through authorized participants in documented baskets.In-kindConsideration delivered or returned as bitcoin, rather than solely cash, subject to issuer rules.Net share capitalReported contributions for issued shares less signed distributions for redeemed shares; USD per accounting quarter.OperationsNet investment loss, realized and unrealized gains/losses and related expenses, not a stand-alone spot return.AUM / net assetsTrust assets less liabilities at a stated valuation date; changes combine share capital and investment effects.Provenance and audit. Tables transcribe one issuer's SEC 10-Q; four quarter identities were recomputed using integer USD arithmetic, and all displayed rows were checked against the Prompt Zero frozen dataset. Calculations: (1) net capital = contributions + negative redemptions; (2) AUM change = net capital + operations; (3) half-year totals = Q1 + Q2; (4) BTC-unit and share changes = closing minus opening. No price proxy, resampling, daily interpolation or execution attribution was used. Figures are based on selected 2025 Q1–Q2 and 2026 Q1–Q2 quarters and two 2025/2026 endpoints, not a representative consecutive full panel. Source accounting is unaudited interim issuer reporting. BTC holding quantities are rounded to whole coins. Figures are denominated in USD, BTC, and shares as labeled, with no pooled venue series.Primary sourcesiShares Bitcoin Trust ETF, Form 10-Q, quarter ended June 30, 2026. SEC EDGAR, filed August 2026; primary quarterly statements, investments schedule and cash-flow supplements.SEC, July 29, 2025 announcement approving permission for in-kind crypto ETP creations/redemptions. Regulatory scope rather than issuer implementation evidence.Fidelity Wise Origin Bitcoin Fund, 2025 Form 10-K. Basket mechanism cross-check, distinct fund. Questions behind the ETF flow headlineDoes buying an ETF share make the issuer buy bitcoin?No automatic one-for-one purchase follows from an ordinary secondary-market share trade. Net creations and cash-versus-in-kind procedures determine the primary-market response.Can an ETF have inflows while AUM falls?Yes. IBIT's first quarter of 2026 shows positive capital-share transactions alongside larger negative investment operations.Are daily ETF flow dashboards an execution record?No. Treat any dashboard as an estimate or aggregation until its issuer inputs, reporting cutoffs, adjustments and revisions are disclosed. It cannot by itself reveal an AP's venue or BTC execution price.What changed in July 2025?SEC orders permitted in-kind crypto ETP creation and redemption activity; each issuer's actual operational adoption must be verified separately. Evidence label: OBSERVED for issuer- and regulator-reported figures/rules; CALCULATED for the identities shown; INFERRED for the limits on execution attribution; UNKNOWN for unobserved daily trades and later unverified share/holding series. No direct ETF-to-BTC causal price effect has been established.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Bitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions Work"
+      },
+      {
+        "tag": "h2",
+        "text": "An inflow and a shrinking fund, at the same time"
+      },
+      {
+        "tag": "h2",
+        "text": "Two markets, one bitcoin trust"
+      },
+      {
+        "tag": "h2",
+        "text": "Cash and in-kind are different routes"
+      },
+      {
+        "tag": "h2",
+        "text": "What the word “flow” actually measures"
+      },
+      {
+        "tag": "h2",
+        "text": "The six-month bridge: new capital was not the main loss"
+      },
+      {
+        "tag": "h2",
+        "text": "Holdings are a third ledger, not a trade tape"
+      },
+      {
+        "tag": "h2",
+        "text": "What it would take to say “the ETF bought bitcoin”"
+      },
+      {
+        "tag": "h2",
+        "text": "Definitions, methods and uncertainty"
+      },
+      {
+        "tag": "h3",
+        "text": "Primary sources"
+      },
+      {
+        "tag": "h2",
+        "text": "Questions behind the ETF flow headline"
+      },
+      {
+        "tag": "h3",
+        "text": "Does buying an ETF share make the issuer buy bitcoin?"
+      },
+      {
+        "tag": "h3",
+        "text": "Can an ETF have inflows while AUM falls?"
+      },
+      {
+        "tag": "h3",
+        "text": "Are daily ETF flow dashboards an execution record?"
+      },
+      {
+        "tag": "h3",
+        "text": "What changed in July 2025?"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "[1]"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "IBIT June 2026 Form 10-Q"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1852317/000119312526071484/ck0001852317-20251231.htm",
+        "text": "Fidelity Wise Origin Bitcoin Fund reports 25,000-share baskets"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "[1]"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1852317/000119312526071484/ck0001852317-20251231.htm",
+        "text": "[3]"
+      },
+      {
+        "href": "https://www.sec.gov/newsroom/press-releases/2025-101-sec-permits-kind-creations-redemptions-crypto-etps",
+        "text": "[2]"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "[1]"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "[1]"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "IBIT Form 10-Q"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "[1]"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "[1]"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "IBIT June 2026 Form 10-Q"
+      },
+      {
+        "href": "../bitcoin-selling-chain-etfs-basis-treasuries/",
+        "text": "Bitcoin’s selling chain"
+      },
+      {
+        "href": "../bitcoin-2026-breakout-failure-etf-reversal/",
+        "text": "the ETF reversal analysis"
+      },
+      {
+        "href": "../crypto-liquidity-basics-liquidity-versus-daily-volume/",
+        "text": "our liquidity investigation"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1980994/000143774926026004/bit20260630c_10q.htm",
+        "text": "iShares Bitcoin Trust ETF, Form 10-Q, quarter ended June 30, 2026"
+      },
+      {
+        "href": "https://www.sec.gov/newsroom/press-releases/2025-101-sec-permits-kind-creations-redemptions-crypto-etps",
+        "text": "SEC, July 29, 2025 announcement approving permission for in-kind crypto ETP creations/redemptions"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1852317/000119312526071484/ck0001852317-20251231.htm",
+        "text": "Fidelity Wise Origin Bitcoin Fund, 2025 Form 10-K"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Issuer filings separate net share creation, custodied BTC and changes in fund value—and the SEC’s in-kind rule change makes that distinction more important."
+      },
+      {
+        "tag": "p",
+        "text": "Research edition: November 22, 2026 · Historical issuer data through June 30, 2026 · Not a live ETF-flow report"
+      },
+      {
+        "tag": "p",
+        "text": "In the first quarter of 2026, the iShares Bitcoin Trust ETF recorded $1,112,018,777 of net capital-share transactions. Its net assets nevertheless fell $14,016,408,526. I started with that contradiction because it is the cleanest way to see what the phrase bitcoin ETF flows does—and does not—tell us. Both numbers come from the fund's own statement of changes in net assets. They describe different parts of the same accounting identity. [1]"
+      },
+      {
+        "tag": "p",
+        "text": "When an ETF flow ticker displays a positive number, a reader can easily picture a matching market order buying bitcoin. The issuer's ledger does not warrant that leap. It separates primary-market share transactions from the investment results of BTC the trust already owns. It does not identify an exchange, trading desk, or execution timestamp for the underlying coins."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 1. Selected IBIT quarters (not a continuous series): primary capital, investment operations, and net-asset changes, USD billions. Zero-centered bars; exact figures below. Operations include gains, losses and expenses and should not be interpreted as pure bitcoin-price return. Source: IBIT June 2026 Form 10-Q, statements of changes in net assets; analyst addition of signed contributions and redemptions."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 1 source values; USD, selected accounting quarters"
+      },
+      {
+        "tag": "p",
+        "text": "Most investors trade ETF shares on a securities exchange. Those trades generally transfer already-existing shares from one holder to another. A buyer of 100 shares does not automatically cause the fund to issue 100 new shares or obtain a fresh quantity of BTC."
+      },
+      {
+        "tag": "p",
+        "text": "New shares enter, or existing shares leave, through the primary market. Authorized participants (APs) interact with the fund in specified creation/redemption baskets. The trust issues shares in return for permitted consideration; on redemption it cancels shares and returns consideration. Arbitrage and market making can help link the exchange share price to net asset value per share, but frictions, timing and spreads make that linkage imperfect. The precise basket is fund-specific: IBIT describes 40,000-share baskets, while the Fidelity Wise Origin Bitcoin Fund reports 25,000-share baskets. [1] [3]"
+      },
+      {
+        "tag": "p",
+        "text": "That distinction matters at the headline level. Secondary-market trading volume measures shares changing hands. A primary-market flow measures creation less redemption under an explicit valuation convention. Neither is a direct tape of the BTC trades an intermediary may perform."
+      },
+      {
+        "tag": "p",
+        "text": "There are at least two meaningful settlement paths. In a cash creation, an AP supplies cash under the trust's process; the trust or its agents arrange the BTC exposure according to their procedures. In an in-kind creation, the permitted consideration includes BTC delivered against newly created ETF shares. Redemptions work in reverse. The market risk can migrate through intermediaries, inventory and execution channels in either case, but it is analytically wrong to assign every creation a same-day on-exchange purchase."
+      },
+      {
+        "tag": "p",
+        "text": "On July 29, 2025, the SEC approved orders allowing in-kind creations and redemptions for crypto ETPs that had initially been constrained to cash transactions. That was a permission, not proof of the operating method each issuer used on the very same day. [2]"
+      },
+      {
+        "tag": "p",
+        "text": "Evidence of the distinction: for the six months ended June 30, 2026, IBIT separately reported $9,362,376,537 of bitcoin purchased in-kind for shares issued and $5,491,156,370 of bitcoin paid in-kind for shares redeemed in non-cash disclosures. Those are accounting values of BTC consideration, not exchange execution receipts. [1]"
+      },
+      {
+        "tag": "p",
+        "text": "Cash baskets can still transmit demand into the bitcoin market. A desk may need inventory; a market maker may hedge an ETF premium; an issuer's agent may acquire or dispose of coins. I cannot tell you which venue or time absorbed those transactions from this quarterly filing alone. That is the serious counterargument to a simplistic “flows are meaningless” thesis: they matter, but they do not reveal the route."
+      },
+      {
+        "tag": "p",
+        "text": "For this analysis I use a deliberately narrow measure: net capital-share transactions = issuer contributions for shares issued + signed distributions for shares redeemed. Redemptions are negative. It is an issuer accounting figure, not an estimate of aggregate daily net cash traded by all investors, and it must not be mixed uncritically with vendor daily-flow tables."
+      },
+      {
+        "tag": "p",
+        "text": "Other numbers answer other questions. Holdings are BTC units in custody at a valuation date. Shares outstanding count ETF claims then in circulation. Net asset value is assets less liabilities, denominated in dollars; NAV per share divides that amount by outstanding shares. Because BTC is revalued while units change via creations, redemptions, fees and settlement, AUM can change without a matching capital inflow. Conversely capital can flow into a falling asset."
+      },
+      {
+        "tag": "p",
+        "text": "The proper alignment for any daily investigation would use issuer-level creations/redemptions, their valuation or settlement dates, BTC units, a documented benchmark and a historical release timestamp. I do not have that verified daily panel here, so I have not drawn a daily inflow-versus-price chart."
+      },
+      {
+        "tag": "p",
+        "text": "From December 31, 2025 to June 30, 2026, IBIT's net assets fell from $67.401 billion to $43.386 billion. Net primary capital transactions across the first two quarters of 2026 were negative $1.839 billion. Investment operations were negative $22.177 billion. Their sum reconciles the negative $24.015 billion total change. This decomposition is a balance-sheet identity—not an experiment estimating how ETF flows moved the BTC market. [1]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 2. IBIT net-asset reconciliation for January–June 2026. Floating negative bars connect the opening and closing dollar levels; no price axis is mixed into the chart. Source: IBIT Form 10-Q; summed 2026 Q1–Q2 accounting records, USD."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 2 reconstruction, USD (six months ended June 30, 2026)"
+      },
+      {
+        "tag": "p",
+        "text": "67,401,155,244 − 1,838,567,846 − 22,176,575,273 = 43,386,012,125 USD"
+      },
+      {
+        "tag": "p",
+        "text": "It would be tempting to label that $22.177 billion as a price decline. I would not: the accounting heading includes realized and unrealized investment effects and operating expenses. The fund's documented index reference price did fall from $87,463.03/BTC on December 31 to $59,101.49/BTC on June 30, but those two endpoints do not isolate every intervening accounting contribution. [1]"
+      },
+      {
+        "tag": "p",
+        "text": "The fund reported 770,792 BTC at December 31, 2025, and 734,261 BTC at June 30, 2026—36,531 fewer BTC based on rounded whole-coin disclosure. Shares outstanding fell from 1,358,680,000 to 1,296,040,000. The endpoints agree on direction, but even that agreement does not assign the intervening activity to particular exchange purchases or sales. [1]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 3. Two issuer snapshots, shown as independent zero-based panels: custodied BTC and issued ETF share count. Different units and scales; values reflect reporting-date positions, not trade events. Source: IBIT June 2026 Form 10-Q, schedules of investments and balance sheets."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 3 reported endpoints, IBIT"
+      },
+      {
+        "tag": "p",
+        "text": "There is a further observational limit. The September 2026 quarterly filing was identified during research, but its body was not validated into this dataset. I therefore stop the quantitative figures at June 30 rather than silently promote a later search snippet to an audited observation. This is a historical mechanics analysis dated November 22, not a claim about today's share count or daily flow."
+      },
+      {
+        "tag": "p",
+        "text": "To prove execution rather than infer it, I would want primary creation/redemption instructions, whether consideration was cash or BTC, the execution agent's matching records or defensible custodian movements, and a consistent clock linking order, settlement, NAV and market trades. Then I would ask whether the observed purchase was incremental spot demand, internal inventory transfer, OTC execution or hedge unwinding. A custodial transfer on its own also cannot establish price impact."
+      },
+      {
+        "tag": "p",
+        "text": "The skeptical conclusion is therefore specific. ETF net share flows are a useful measure of demand for primary-market fund exposure. They are not interchangeable with the number of coins held, the dollar value of the whole trust, or a list of identifiable BTC market buys. A headline that merges those ledgers may point toward a real pressure on price while overstating how much of that pressure has actually been measured."
+      },
+      {
+        "tag": "p",
+        "text": "For the broader transmission hypothesis, see Bitcoin’s selling chain and the ETF reversal analysis. The related distinction between turnover and readily sellable depth is explored in our liquidity investigation."
+      },
+      {
+        "tag": "p",
+        "text": "Provenance and audit. Tables transcribe one issuer's SEC 10-Q; four quarter identities were recomputed using integer USD arithmetic, and all displayed rows were checked against the Prompt Zero frozen dataset. Calculations: (1) net capital = contributions + negative redemptions; (2) AUM change = net capital + operations; (3) half-year totals = Q1 + Q2; (4) BTC-unit and share changes = closing minus opening. No price proxy, resampling, daily interpolation or execution attribution was used. Figures are based on selected 2025 Q1–Q2 and 2026 Q1–Q2 quarters and two 2025/2026 endpoints, not a representative consecutive full panel. Source accounting is unaudited interim issuer reporting. BTC holding quantities are rounded to whole coins. Figures are denominated in USD, BTC, and shares as labeled, with no pooled venue series."
+      },
+      {
+        "tag": "li",
+        "text": "iShares Bitcoin Trust ETF, Form 10-Q, quarter ended June 30, 2026. SEC EDGAR, filed August 2026; primary quarterly statements, investments schedule and cash-flow supplements."
+      },
+      {
+        "tag": "li",
+        "text": "SEC, July 29, 2025 announcement approving permission for in-kind crypto ETP creations/redemptions. Regulatory scope rather than issuer implementation evidence."
+      },
+      {
+        "tag": "li",
+        "text": "Fidelity Wise Origin Bitcoin Fund, 2025 Form 10-K. Basket mechanism cross-check, distinct fund."
+      },
+      {
+        "tag": "p",
+        "text": "No automatic one-for-one purchase follows from an ordinary secondary-market share trade. Net creations and cash-versus-in-kind procedures determine the primary-market response."
+      },
+      {
+        "tag": "p",
+        "text": "Yes. IBIT's first quarter of 2026 shows positive capital-share transactions alongside larger negative investment operations."
+      },
+      {
+        "tag": "p",
+        "text": "No. Treat any dashboard as an estimate or aggregation until its issuer inputs, reporting cutoffs, adjustments and revisions are disclosed. It cannot by itself reveal an AP's venue or BTC execution price."
+      },
+      {
+        "tag": "p",
+        "text": "SEC orders permitted in-kind crypto ETP creation and redemption activity; each issuer's actual operational adoption must be verified separately."
+      },
+      {
+        "tag": "p",
+        "text": "Evidence label: OBSERVED for issuer- and regulator-reported figures/rules; CALCULATED for the identities shown; INFERRED for the limits on execution attribution; UNKNOWN for unobserved daily trades and later unverified share/holding series. No direct ETF-to-BTC causal price effect has been established."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Quarter",
+          "Net capital share transactions",
+          "Investment operations",
+          "Net asset change"
+        ],
+        [
+          "2025 Q1",
+          "+2,713,805,623",
+          "-6,457,874,778",
+          "-3,744,069,155"
+        ],
+        [
+          "2025 Q2",
+          "+12,461,944,771",
+          "+14,468,115,204",
+          "+26,930,059,975"
+        ],
+        [
+          "2026 Q1",
+          "+1,112,018,777",
+          "-15,128,427,303",
+          "-14,016,408,526"
+        ],
+        [
+          "2026 Q2",
+          "-2,950,586,623",
+          "-7,048,147,970",
+          "-9,998,734,593"
+        ]
+      ],
+      [
+        [
+          "Step",
+          "Signed amount or balance (USD)",
+          "Role"
+        ],
+        [
+          "Opening net assets, Dec 31",
+          "67,401,155,244",
+          "Balance"
+        ],
+        [
+          "Net capital transactions, H1",
+          "−1,838,567,846",
+          "Change"
+        ],
+        [
+          "Investment operations, H1",
+          "−22,176,575,273",
+          "Change"
+        ],
+        [
+          "Closing net assets, Jun 30",
+          "43,386,012,125",
+          "Balance"
+        ]
+      ],
+      [
+        [
+          "Valuation date",
+          "BTC held (whole coins, rounded)",
+          "Shares outstanding",
+          "Reference BTC price (USD/BTC)"
+        ],
+        [
+          "2025-12-31",
+          "770,792",
+          "1,358,680,000",
+          "87,463.03"
+        ],
+        [
+          "2026-06-30",
+          "734,261",
+          "1,296,040,000",
+          "59,101.49"
+        ]
+      ]
+    ],
+    "alts": [],
+    "svgCount": 3,
+    "svgSha256": [
+      "df144e75eb76274d8307e25592547795a703b4b12321dedbe1caa4419deb8a0b",
+      "f9725c259f9a0ea816709125b317d2a1b058215f769bcb70d6c2433af79b3e95",
+      "94cf029961ee05f74610834eaa8f4b63e08639242a002639025510fcfe208bbc"
+    ],
+    "imageCount": 0,
+    "imageSha256": [],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "token-unlocks-cliff-vesting-versus-linear-vesting": {
     "text": "Independent Market Notes · Tokenomics · Historical investigationToken Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear VestingArbitrum's original vesting disclosures put more than 1.1 billion insider tokens on a single modeled cliff, while a separate Foundation allocation accrued continuously. The timing difference is measurable; the selling pressure is not.Research checked November 22, 2026 (America/Detroit) · Historical documents dated March 2024 · ARB units throughout · No live-price or trading-flow claim On March 7, 2024, Arbitrum's own supply table estimated 1,537,398,145 ARB in circulation. Its projection for March 17 was 2,653,939,384. That apparent leap of more than 1.1 billion tokens was mostly scheduled insider vesting—not evidence of 1.1 billion tokens hitting exchange order books. The difference matters: a calendar can tell me when a grant is due to become available. It cannot tell me who sold it. [1] I wanted to isolate the part of the story that the schedule can establish. A cliff withholds an initial grant and releases a large tranche on a stated date. Linear vesting accrues steadily. They can ultimately make the same number of tokens eligible, but their release patterns are not the same. Arbitrum's original team-and-investor schedule and its separate Foundation arrangement make that distinction unusually measurable. [2] The finding: The disclosed team-and-investor allocation yields a modeled 1,111,750,000-ARB first cliff, followed by roughly 92,645,833 ARB per monthly installment. The first cliff is exactly twelve such tranches. Neither number measures sales. What the schedule actually promises Arbitrum's historical allocation sets aside 2.694 billion ARB for team and contributors and 1.753 billion for investors: 4.447 billion combined. Its supply explanation says the four-year term began March 16, 2023, with the first unlock on March 16, 2024 and monthly unlocks thereafter. The issuer's March 17 projection puts 673.5 million team tokens and 438.25 million investor tokens in circulation—one-quarter of each allocation. [1] [2] I model the remaining three-quarters as 36 equal post-cliff monthly tranches. This follows the described four-year term and cadence; it does not reconstruct every token-level claim, contract rounding rule, or intraday release instant. The first modeled month is March 16, 2024 at 00:00 UTC for chart alignment only. The primary documents specify the calendar date, not this precise release hour. The Foundation comparison works differently. Arbitrum's historical accounting assigns 750 million ARB to the Foundation, including 50 million initially distributed and 700 million in the vesting budget. The latter begins vesting April 17, 2023 over four years, with the issuer describing per-second accrual. An entitlement accruing each second is not proof that someone withdraws, transfers, or sells tokens each second. [1] Historical ARB vesting trajectories, February to September 2024Insider scheduled vesting jumps from zero to 1,111.75 million ARB on March 16, then adds about 92.646 million monthly. Foundation continuous accrual rises smoothly from 196.133 million to 298.186 million over the shown dates. These cohorts have different allocation sizes.04509001,3501,80002-1603-1604-1605-1606-1607-1608-1609-16Cumulative vested · million ARB2024 dates (UTC month-day; modeled midnight sampling)━━ Insider cliff + monthly━━ Foundation continuous accrualFigure 1. The insider schedule has a large discrete first step; the Foundation budget accrues continuously. These are different-sized allocations (4.447B versus 700M vesting principal), so vertical distance is not a controlled comparison of their price effects. The continuous curve shows monthly sampled points connected for visual readability, and all dates/times are model assumptions rather than verified release timestamps.Source: Arbitrum DAO historical supply account and allocation specifications. Method: insider cumulative grant = first 25% cliff + each succeeding modeled monthly 1/48 of allocation; Foundation = 700M × elapsed seconds / seconds from 2023-04-17 to 2027-04-17, plus the initial 50M distributed ARB. The Foundation line includes that initial 50M. Values are derived, not observed withdrawal transactions. Figure 1 data: modeled cumulative vested or distributed ARB, millions, UTC monthly samples in 2024DateInsider cumulative (M ARB)Foundation cumulative incl. initial 50M (M ARB)2024-02-160.000196.1332024-03-161,111.750210.0272024-04-161,204.396224.8802024-05-161,297.042239.2542024-06-161,389.688254.1072024-07-161,482.333268.4802024-08-161,574.979283.3332024-09-161,667.625298.186 One date overwhelms eleven ordinary months The larger concentration is mechanical, not a market forecast. Twenty-five percent of 4.447 billion is 1.11175 billion. Seventy-five percent divided into 36 installments is 92.645833 million each. Divide the first by the second and the answer is exactly twelve. In other words, the first insider cliff is a year's worth of the later modeled monthly pace delivered at one point in the calendar. The Foundation's monthly accrual varies slightly because months have different numbers of days; those differences are visible even with constant per-second vesting. I used calendar dates in UTC and preserved the actual leap-day interval in the four-year denominator. A tracker that simply assumes a uniform 30-day month can introduce avoidable distortions. Monthly incremental release in million ARBMonthly incremental release in million ARB. The March 2024 insider cliff is around twelve later tranches; Foundation accrual is modeled from elapsed seconds, not observed withdrawals.03006009001,20003-1604-1605-1606-1607-1608-1609-16Incremental amount · million ARB■ Insider monthly tranche■ Foundation accrualFigure 2. Scheduled incremental insider tranches and Foundation time-based accrual, both in million ARB. March's insider bar contains the first cliff. Foundation values are differences between the monthly samples, not verified withdrawal totals. Different cohort sizes prevent inference about market impact.Sources: Arbitrum DAO [1] and [2]; calculated from dated disclosure allocations. The March Foundation increment covers Feb 16–Mar 16; subsequent bars cover their corresponding preceding monthly intervals. Figure 2 data: modeled ARB added between successive monthly sampling points, millions, 2024End date (UTC)Insider (M ARB)Foundation (M ARB)2024-03-161,111.75013.8952024-04-1692.64614.8532024-05-1692.64614.3742024-06-1692.64614.8532024-07-1692.64614.3742024-08-1692.64614.8532024-09-1692.64614.853 The denominator trap: 72.3 percent of what? The first cliff divided by Arbitrum's own March 7, 2024 estimated circulating base equals 72.3137%. A later ordinary monthly insider tranche equals 6.0261% of that same fixed historical base. This is a consistent size comparison; it is not a claim that circulating supply grew by 72.3%, nor a statement about what was freely tradable on March 16 or in November 2026. Arbitrum's own documentation notes that its supply estimate may differ from actual circulation, including because of DAO treasury distribution or vesting-contract behavior. Its accounting also includes an airdrop category holding certain unclaimed tokens returned to treasury while preserving presentation consistency. I therefore cannot treat this denominator as a verified order-book float. [1] Cliff size is 72Cliff size is 72.3137 percent and the modeled later monthly amount is 6.0261 percent of the same March 7 2024 issuer-estimated ARB circulating base. These percentages are not realized dilution or selling.020406080First cliffLater monthShare of Mar 7 estimated circulation · %Figure 3. Historical schedule size as a share of the same March 7, 2024 Arbitrum-estimated 1,537,398,145 circulating ARB. The monthly bar is not a contemporaneous April supply ratio. Neither bar represents realized dilution, sales, or price impact.Source: Arbitrum DAO [1]. Calculation: scheduled ARB / 1,537,398,145 × 100, using disclosed insider allocation in [2]. Percentage bars start at zero. Figure 3 data: fixed historical denominator = 1,537,398,145 ARB estimated on March 7, 2024TrancheAmount (ARB)Share of historical base (%)March 16 first cliff1,111,750,00072.3137Modeled later monthly installment92,645,833.333…6.0261 Precision is not independent verification The strongest check I can perform with the issuer's historical tables is arithmetic. If I allocate the 700 million Foundation vesting principal uniformly over the actual seconds from April 17, 2023 to April 17, 2027, then add the 50 million initially distributed, I obtain 205,715,263.518 ARB for March 7, 2024 and 210,506,502.396 for March 17. Rounded to whole tokens, they reproduce the official Foundation entries of 205,715,264 and 210,506,502. [1] There is even a tiny disclosed-table wrinkle worth retaining. Arbitrum's headline total changes by 1,116,541,239 tokens between its March 7 estimate and March 17 projection, while the sum of the changed component rows is 1,116,541,238. The issuer warns that values are rounded. That one-token discrepancy is not evidence of economically meaningful leakage; it is a reason to state the precision of what I have reconstructed. At the same time, I have not reconstructed historical withdrawals from the chain. The official deployment list identifies the Arbitrum One ARB contract as 0x912CE59144191C1204E64559FE8253a0e49E6548 and the Foundation vesting budget address as 0x15533b77981cDa0F85c4F9a485237DF4285D6844. That gives a route for independent verification, not completed verification of historical payouts. [3] The strongest counterargument to cliff panic A token becoming eligible to move does not mean its owner rushes to sell. Vesting can be anticipated; holders may retain balances, delegate governance weight, arrange custody or transact later. Conversely, a smooth accrual schedule need not create smooth sell flow: a recipient can wait and sell multiple accrued months together. I find no defensible way to convert a release schedule into an estimated sell ratio without wallet-level and venue-level evidence. To test a price-impact thesis, I would first reconcile vesting contract state with transfers and actual token availability; then separate recipient-controlled transfers from exchange-linked deposits; then compare matched spot returns and executable liquidity across venues around the event. Even an exchange deposit is not necessarily an executed sale. The dataset here contains none of that transaction-level market evidence. It establishes a timing mechanism, not a short signal. What would change the conclusion? The accounting would need revision if governance changed grant conditions, if the exact month or second rules differed from the documentary approximation, or if chain-state reconstruction contradicted the reported entitlement. A measured market effect would require observed transfers, ownership attribution with stated limits, dated spot-flow data and an appropriate comparison against market-wide moves. A controlled sample of several independent cliff and linear events would be necessary before claiming one mechanism predictably depresses prices more than the other. For now I would use a large dated cliff as a prompt to investigate who can actually sell and whether buyers could absorb it, not as a proxy for sales. The calendar tells us how inventory could become available. The order book, if we can observe it, tells us something very different. Source notes and method Arbitrum DAO, “What is the token circulating supply?” Historical estimate dated March 7, 2024 and March 17, 2024 projection; page publication date not established; reviewed November 22, 2026. Issuer account, not independent chain audit.Arbitrum DAO, “$ARB airdrop eligibility and distribution specifications.” Original allocations and vesting context; public-preview document; publication date not established, reviewed November 22, 2026.Arbitrum DAO, “DAO contract addresses.” Official address inventory; reviewed November 22, 2026. Contract listing is not a historical transaction read. Calculations: team + investor allocation = 2,694,000,000 + 1,753,000,000 = 4,447,000,000 ARB; first cliff = 0.25 × allocation = 1,111,750,000; later installment = 0.75 × allocation / 36 = 92,645,833.333…; Foundation model = 50,000,000 + 700,000,000 × (elapsed UTC seconds / total vesting seconds), with start 2023-04-17 00:00 UTC and end 2027-04-17 00:00 UTC. Values in charts/tables are rounded only for display. They are a schedule-derived series rather than observed transfers. The raw source CSVs and code are separate audit outputs, not prerequisites for the article's three figures. Related Independent Market Notes: The Token Unlock Calendar Has a Liquidity Problem; Allora's Insider Unlock; Aptos Unlock Calendar Discrepancy. Questions readers should askDoes a token unlock guarantee a sale?No. Vesting eligibility, token withdrawal, transfers, exchange deposits, and executions are separate events.Is the cliff larger than the historical float?In this example the first cliff was about 72.3% of the issuer's earlier estimated circulating base, not greater than 100% and not proof of that percentage reaching the market.Why can a linear schedule still create sudden selling?Recipients need not sell when tokens accrue. They can accumulate transferable balances and sell in batches.",
     "headings": [

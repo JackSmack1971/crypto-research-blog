@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics": {
+      "title": "Bitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions Work",
+      "description": "Issuer filings separate net share creation, custodied BTC and changes in fund value—and the SEC’s in-kind rule change makes that distinction more important.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics/",
+      "og:title": "Bitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions Work",
+      "og:description": "Issuer filings separate net share creation, custodied BTC and changes in fund value—and the SEC’s in-kind rule change makes that distinction more important.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "token-unlocks-cliff-vesting-versus-linear-vesting": {
       "title": "Token Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear Vesting",
       "description": "Arbitrum's original vesting disclosures put more than 1.1 billion insider tokens on a single modeled cliff, while a separate Foundation allocation accrued continuously. The timing difference is measurable; the selling pressure is not.",
@@ -572,6 +582,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions Work",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics/",
+      "description": "Issuer filings separate net share creation, custodied BTC and changes in fund value—and the SEC’s in-kind rule change makes that distinction more important."
+    },
     {
       "title": "Token Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear Vesting",
       "link": "https://independent-market-notes.netlify.app/token-unlocks-cliff-vesting-versus-linear-vesting/",

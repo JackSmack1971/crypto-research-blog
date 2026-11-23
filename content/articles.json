@@ -1,5 +1,22 @@
 [
   {
+    "slug": "bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics",
+    "source": "bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics.html",
+    "date": "2026-11-22",
+    "title": "Bitcoin ETF Flows Aren’t Bitcoin Buy Orders: How Creations and Redemptions Work",
+    "dek": "Issuer filings separate net share creation, custodied BTC and changes in fund value—and the SEC’s in-kind rule change makes that distinction more important.",
+    "topic": "bitcoin",
+    "assets": [
+      "BTC"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/bitcoin-etf-flows-spot-etf-creation-and-redemption-mechanics.jpg",
+    "image_alt": "Conceptual still life of ETF share certificates and a Bitcoin custody vault linked by opposing brass arrows, symbolizing cash or in-kind creation and redemption; not a market chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "token-unlocks-cliff-vesting-versus-linear-vesting",
     "source": "token-unlocks-cliff-vesting-versus-linear-vesting.html",
     "date": "2026-11-22",
