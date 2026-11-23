@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "wallet-ownership-custodial-wallets-and-false-whale-claims": {
+      "title": "The Wallet Is Large. The Owner Is Still a Question.",
+      "description": "A historical exchange wallet disclosure and a custodian’s own terms expose the mistake behind crypto rich lists: an address may show where assets sit, without revealing whose economic claims they satisfy.",
+      "canonical": "https://independent-market-notes.netlify.app/wallet-ownership-custodial-wallets-and-false-whale-claims/",
+      "og:title": "The Wallet Is Large. The Owner Is Still a Question.",
+      "og:description": "A historical exchange wallet disclosure and a custodian’s own terms expose the mistake behind crypto rich lists: an address may show where assets sit, without revealing whose economic claims they satisfy.",
+      "og:url": "https://independent-market-notes.netlify.app/wallet-ownership-custodial-wallets-and-false-whale-claims/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "on-chain-forensics-tracing-funds-across-wallet-clusters": {
       "title": "On-Chain Forensics Can Trace the Money. It Cannot Automatically Name the Owner.",
       "description": "The Euler Finance recovery shows where blockchain evidence is strongest: transaction paths are verifiable, wallet clusters are inferential, and real-world attribution needs evidence the ledger does not contain.",
@@ -592,6 +602,12 @@
     }
   },
   "rss": [
+    {
+      "title": "The Wallet Is Large. The Owner Is Still a Question.",
+      "link": "https://independent-market-notes.netlify.app/wallet-ownership-custodial-wallets-and-false-whale-claims/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/wallet-ownership-custodial-wallets-and-false-whale-claims/",
+      "description": "A historical exchange wallet disclosure and a custodian’s own terms expose the mistake behind crypto rich lists: an address may show where assets sit, without revealing whose economic claims they satisfy."
+    },
     {
       "title": "On-Chain Forensics Can Trace the Money. It Cannot Automatically Name the Owner.",
       "link": "https://independent-market-notes.netlify.app/on-chain-forensics-tracing-funds-across-wallet-clusters/",

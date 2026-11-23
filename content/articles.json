@@ -1,5 +1,22 @@
 [
   {
+    "slug": "wallet-ownership-custodial-wallets-and-false-whale-claims",
+    "source": "wallet-ownership-custodial-wallets-and-false-whale-claims.html",
+    "date": "2026-11-22",
+    "title": "The Wallet Is Large. The Owner Is Still a Question.",
+    "dek": "A historical exchange wallet disclosure and a custodian’s own terms expose the mistake behind crypto rich lists: an address may show where assets sit, without revealing whose economic claims they satisfy.",
+    "topic": "risk-verification",
+    "assets": [
+      "USDT"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/wallet-ownership-custodial-wallets-and-false-whale-claims.jpg",
+    "image_alt": "Conceptual illustration of one brass vault controlling access to several separate, blank claim certificates, representing the difference between custody and economic ownership; not a blockchain chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "on-chain-forensics-tracing-funds-across-wallet-clusters",
     "source": "on-chain-forensics-tracing-funds-across-wallet-clusters.html",
     "date": "2026-11-22",
