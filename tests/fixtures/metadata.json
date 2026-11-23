@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "token-unlocks-cliff-vesting-versus-linear-vesting": {
+      "title": "Token Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear Vesting",
+      "description": "Arbitrum's original vesting disclosures put more than 1.1 billion insider tokens on a single modeled cliff, while a separate Foundation allocation accrued continuously. The timing difference is measurable; the selling pressure is not.",
+      "canonical": "https://independent-market-notes.netlify.app/token-unlocks-cliff-vesting-versus-linear-vesting/",
+      "og:title": "Token Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear Vesting",
+      "og:description": "Arbitrum's original vesting disclosures put more than 1.1 billion insider tokens on a single modeled cliff, while a separate Foundation allocation accrued continuously. The timing difference is measurable; the selling pressure is not.",
+      "og:url": "https://independent-market-notes.netlify.app/token-unlocks-cliff-vesting-versus-linear-vesting/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "tokenomics-fundamentals-circulating-versus-total-versus-max-supply": {
       "title": "Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different Stories",
       "description": "A UNI supply audit finds 623.3 million tokens classified as circulating, a disputed total, and a one-billion-token ceiling that is not necessarily permanent.",
@@ -562,6 +572,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Token Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear Vesting",
+      "link": "https://independent-market-notes.netlify.app/token-unlocks-cliff-vesting-versus-linear-vesting/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/token-unlocks-cliff-vesting-versus-linear-vesting/",
+      "description": "Arbitrum's original vesting disclosures put more than 1.1 billion insider tokens on a single modeled cliff, while a separate Foundation allocation accrued continuously. The timing difference is measurable; the selling pressure is not."
+    },
     {
       "title": "Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different Stories",
       "link": "https://independent-market-notes.netlify.app/tokenomics-fundamentals-circulating-versus-total-versus-max-supply/",

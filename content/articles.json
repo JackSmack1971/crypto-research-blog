@@ -1,5 +1,22 @@
 [
   {
+    "slug": "token-unlocks-cliff-vesting-versus-linear-vesting",
+    "source": "token-unlocks-cliff-vesting-versus-linear-vesting.html",
+    "date": "2026-11-22",
+    "title": "Token Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear Vesting",
+    "dek": "Arbitrum's original vesting disclosures put more than 1.1 billion insider tokens on a single modeled cliff, while a separate Foundation allocation accrued continuously. The timing difference is measurable; the selling pressure is not.",
+    "topic": "tokenomics",
+    "assets": [
+      "ARB"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/token-unlocks-cliff-vesting-versus-linear-vesting.jpg",
+    "image_alt": "Conceptual illustration of a stack of gold tokens behind a stone threshold beside a measured sequence of gold tokens on a pale ramp; not a market chart.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "tokenomics-fundamentals-circulating-versus-total-versus-max-supply",
     "source": "tokenomics-fundamentals-circulating-versus-total-versus-max-supply.html",
     "date": "2026-11-22",

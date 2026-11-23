@@ -1,4 +1,404 @@
 {
+  "token-unlocks-cliff-vesting-versus-linear-vesting": {
+    "text": "Independent Market Notes · Tokenomics · Historical investigationToken Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear VestingArbitrum's original vesting disclosures put more than 1.1 billion insider tokens on a single modeled cliff, while a separate Foundation allocation accrued continuously. The timing difference is measurable; the selling pressure is not.Research checked November 22, 2026 (America/Detroit) · Historical documents dated March 2024 · ARB units throughout · No live-price or trading-flow claim On March 7, 2024, Arbitrum's own supply table estimated 1,537,398,145 ARB in circulation. Its projection for March 17 was 2,653,939,384. That apparent leap of more than 1.1 billion tokens was mostly scheduled insider vesting—not evidence of 1.1 billion tokens hitting exchange order books. The difference matters: a calendar can tell me when a grant is due to become available. It cannot tell me who sold it. [1] I wanted to isolate the part of the story that the schedule can establish. A cliff withholds an initial grant and releases a large tranche on a stated date. Linear vesting accrues steadily. They can ultimately make the same number of tokens eligible, but their release patterns are not the same. Arbitrum's original team-and-investor schedule and its separate Foundation arrangement make that distinction unusually measurable. [2] The finding: The disclosed team-and-investor allocation yields a modeled 1,111,750,000-ARB first cliff, followed by roughly 92,645,833 ARB per monthly installment. The first cliff is exactly twelve such tranches. Neither number measures sales. What the schedule actually promises Arbitrum's historical allocation sets aside 2.694 billion ARB for team and contributors and 1.753 billion for investors: 4.447 billion combined. Its supply explanation says the four-year term began March 16, 2023, with the first unlock on March 16, 2024 and monthly unlocks thereafter. The issuer's March 17 projection puts 673.5 million team tokens and 438.25 million investor tokens in circulation—one-quarter of each allocation. [1] [2] I model the remaining three-quarters as 36 equal post-cliff monthly tranches. This follows the described four-year term and cadence; it does not reconstruct every token-level claim, contract rounding rule, or intraday release instant. The first modeled month is March 16, 2024 at 00:00 UTC for chart alignment only. The primary documents specify the calendar date, not this precise release hour. The Foundation comparison works differently. Arbitrum's historical accounting assigns 750 million ARB to the Foundation, including 50 million initially distributed and 700 million in the vesting budget. The latter begins vesting April 17, 2023 over four years, with the issuer describing per-second accrual. An entitlement accruing each second is not proof that someone withdraws, transfers, or sells tokens each second. [1] Historical ARB vesting trajectories, February to September 2024Insider scheduled vesting jumps from zero to 1,111.75 million ARB on March 16, then adds about 92.646 million monthly. Foundation continuous accrual rises smoothly from 196.133 million to 298.186 million over the shown dates. These cohorts have different allocation sizes.04509001,3501,80002-1603-1604-1605-1606-1607-1608-1609-16Cumulative vested · million ARB2024 dates (UTC month-day; modeled midnight sampling)━━ Insider cliff + monthly━━ Foundation continuous accrualFigure 1. The insider schedule has a large discrete first step; the Foundation budget accrues continuously. These are different-sized allocations (4.447B versus 700M vesting principal), so vertical distance is not a controlled comparison of their price effects. The continuous curve shows monthly sampled points connected for visual readability, and all dates/times are model assumptions rather than verified release timestamps.Source: Arbitrum DAO historical supply account and allocation specifications. Method: insider cumulative grant = first 25% cliff + each succeeding modeled monthly 1/48 of allocation; Foundation = 700M × elapsed seconds / seconds from 2023-04-17 to 2027-04-17, plus the initial 50M distributed ARB. The Foundation line includes that initial 50M. Values are derived, not observed withdrawal transactions. Figure 1 data: modeled cumulative vested or distributed ARB, millions, UTC monthly samples in 2024DateInsider cumulative (M ARB)Foundation cumulative incl. initial 50M (M ARB)2024-02-160.000196.1332024-03-161,111.750210.0272024-04-161,204.396224.8802024-05-161,297.042239.2542024-06-161,389.688254.1072024-07-161,482.333268.4802024-08-161,574.979283.3332024-09-161,667.625298.186 One date overwhelms eleven ordinary months The larger concentration is mechanical, not a market forecast. Twenty-five percent of 4.447 billion is 1.11175 billion. Seventy-five percent divided into 36 installments is 92.645833 million each. Divide the first by the second and the answer is exactly twelve. In other words, the first insider cliff is a year's worth of the later modeled monthly pace delivered at one point in the calendar. The Foundation's monthly accrual varies slightly because months have different numbers of days; those differences are visible even with constant per-second vesting. I used calendar dates in UTC and preserved the actual leap-day interval in the four-year denominator. A tracker that simply assumes a uniform 30-day month can introduce avoidable distortions. Monthly incremental release in million ARBMonthly incremental release in million ARB. The March 2024 insider cliff is around twelve later tranches; Foundation accrual is modeled from elapsed seconds, not observed withdrawals.03006009001,20003-1604-1605-1606-1607-1608-1609-16Incremental amount · million ARB■ Insider monthly tranche■ Foundation accrualFigure 2. Scheduled incremental insider tranches and Foundation time-based accrual, both in million ARB. March's insider bar contains the first cliff. Foundation values are differences between the monthly samples, not verified withdrawal totals. Different cohort sizes prevent inference about market impact.Sources: Arbitrum DAO [1] and [2]; calculated from dated disclosure allocations. The March Foundation increment covers Feb 16–Mar 16; subsequent bars cover their corresponding preceding monthly intervals. Figure 2 data: modeled ARB added between successive monthly sampling points, millions, 2024End date (UTC)Insider (M ARB)Foundation (M ARB)2024-03-161,111.75013.8952024-04-1692.64614.8532024-05-1692.64614.3742024-06-1692.64614.8532024-07-1692.64614.3742024-08-1692.64614.8532024-09-1692.64614.853 The denominator trap: 72.3 percent of what? The first cliff divided by Arbitrum's own March 7, 2024 estimated circulating base equals 72.3137%. A later ordinary monthly insider tranche equals 6.0261% of that same fixed historical base. This is a consistent size comparison; it is not a claim that circulating supply grew by 72.3%, nor a statement about what was freely tradable on March 16 or in November 2026. Arbitrum's own documentation notes that its supply estimate may differ from actual circulation, including because of DAO treasury distribution or vesting-contract behavior. Its accounting also includes an airdrop category holding certain unclaimed tokens returned to treasury while preserving presentation consistency. I therefore cannot treat this denominator as a verified order-book float. [1] Cliff size is 72Cliff size is 72.3137 percent and the modeled later monthly amount is 6.0261 percent of the same March 7 2024 issuer-estimated ARB circulating base. These percentages are not realized dilution or selling.020406080First cliffLater monthShare of Mar 7 estimated circulation · %Figure 3. Historical schedule size as a share of the same March 7, 2024 Arbitrum-estimated 1,537,398,145 circulating ARB. The monthly bar is not a contemporaneous April supply ratio. Neither bar represents realized dilution, sales, or price impact.Source: Arbitrum DAO [1]. Calculation: scheduled ARB / 1,537,398,145 × 100, using disclosed insider allocation in [2]. Percentage bars start at zero. Figure 3 data: fixed historical denominator = 1,537,398,145 ARB estimated on March 7, 2024TrancheAmount (ARB)Share of historical base (%)March 16 first cliff1,111,750,00072.3137Modeled later monthly installment92,645,833.333…6.0261 Precision is not independent verification The strongest check I can perform with the issuer's historical tables is arithmetic. If I allocate the 700 million Foundation vesting principal uniformly over the actual seconds from April 17, 2023 to April 17, 2027, then add the 50 million initially distributed, I obtain 205,715,263.518 ARB for March 7, 2024 and 210,506,502.396 for March 17. Rounded to whole tokens, they reproduce the official Foundation entries of 205,715,264 and 210,506,502. [1] There is even a tiny disclosed-table wrinkle worth retaining. Arbitrum's headline total changes by 1,116,541,239 tokens between its March 7 estimate and March 17 projection, while the sum of the changed component rows is 1,116,541,238. The issuer warns that values are rounded. That one-token discrepancy is not evidence of economically meaningful leakage; it is a reason to state the precision of what I have reconstructed. At the same time, I have not reconstructed historical withdrawals from the chain. The official deployment list identifies the Arbitrum One ARB contract as 0x912CE59144191C1204E64559FE8253a0e49E6548 and the Foundation vesting budget address as 0x15533b77981cDa0F85c4F9a485237DF4285D6844. That gives a route for independent verification, not completed verification of historical payouts. [3] The strongest counterargument to cliff panic A token becoming eligible to move does not mean its owner rushes to sell. Vesting can be anticipated; holders may retain balances, delegate governance weight, arrange custody or transact later. Conversely, a smooth accrual schedule need not create smooth sell flow: a recipient can wait and sell multiple accrued months together. I find no defensible way to convert a release schedule into an estimated sell ratio without wallet-level and venue-level evidence. To test a price-impact thesis, I would first reconcile vesting contract state with transfers and actual token availability; then separate recipient-controlled transfers from exchange-linked deposits; then compare matched spot returns and executable liquidity across venues around the event. Even an exchange deposit is not necessarily an executed sale. The dataset here contains none of that transaction-level market evidence. It establishes a timing mechanism, not a short signal. What would change the conclusion? The accounting would need revision if governance changed grant conditions, if the exact month or second rules differed from the documentary approximation, or if chain-state reconstruction contradicted the reported entitlement. A measured market effect would require observed transfers, ownership attribution with stated limits, dated spot-flow data and an appropriate comparison against market-wide moves. A controlled sample of several independent cliff and linear events would be necessary before claiming one mechanism predictably depresses prices more than the other. For now I would use a large dated cliff as a prompt to investigate who can actually sell and whether buyers could absorb it, not as a proxy for sales. The calendar tells us how inventory could become available. The order book, if we can observe it, tells us something very different. Source notes and method Arbitrum DAO, “What is the token circulating supply?” Historical estimate dated March 7, 2024 and March 17, 2024 projection; page publication date not established; reviewed November 22, 2026. Issuer account, not independent chain audit.Arbitrum DAO, “$ARB airdrop eligibility and distribution specifications.” Original allocations and vesting context; public-preview document; publication date not established, reviewed November 22, 2026.Arbitrum DAO, “DAO contract addresses.” Official address inventory; reviewed November 22, 2026. Contract listing is not a historical transaction read. Calculations: team + investor allocation = 2,694,000,000 + 1,753,000,000 = 4,447,000,000 ARB; first cliff = 0.25 × allocation = 1,111,750,000; later installment = 0.75 × allocation / 36 = 92,645,833.333…; Foundation model = 50,000,000 + 700,000,000 × (elapsed UTC seconds / total vesting seconds), with start 2023-04-17 00:00 UTC and end 2027-04-17 00:00 UTC. Values in charts/tables are rounded only for display. They are a schedule-derived series rather than observed transfers. The raw source CSVs and code are separate audit outputs, not prerequisites for the article's three figures. Related Independent Market Notes: The Token Unlock Calendar Has a Liquidity Problem; Allora's Insider Unlock; Aptos Unlock Calendar Discrepancy. Questions readers should askDoes a token unlock guarantee a sale?No. Vesting eligibility, token withdrawal, transfers, exchange deposits, and executions are separate events.Is the cliff larger than the historical float?In this example the first cliff was about 72.3% of the issuer's earlier estimated circulating base, not greater than 100% and not proof of that percentage reaching the market.Why can a linear schedule still create sudden selling?Recipients need not sell when tokens accrue. They can accumulate transferable balances and sell in batches.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Token Unlocks: Why a Cliff Is Not the Same Supply Shock as Linear Vesting"
+      },
+      {
+        "tag": "h2",
+        "text": "What the schedule actually promises"
+      },
+      {
+        "tag": "h2",
+        "text": "One date overwhelms eleven ordinary months"
+      },
+      {
+        "tag": "h2",
+        "text": "The denominator trap: 72.3 percent of what?"
+      },
+      {
+        "tag": "h2",
+        "text": "Precision is not independent verification"
+      },
+      {
+        "tag": "h2",
+        "text": "The strongest counterargument to cliff panic"
+      },
+      {
+        "tag": "h2",
+        "text": "What would change the conclusion?"
+      },
+      {
+        "tag": "h2",
+        "text": "Source notes and method"
+      },
+      {
+        "tag": "h2",
+        "text": "Questions readers should ask"
+      },
+      {
+        "tag": "h3",
+        "text": "Does a token unlock guarantee a sale?"
+      },
+      {
+        "tag": "h3",
+        "text": "Is the cliff larger than the historical float?"
+      },
+      {
+        "tag": "h3",
+        "text": "Why can a linear schedule still create sudden selling?"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "[1]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/airdrop-eligibility-distribution",
+        "text": "[2]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "[1]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/airdrop-eligibility-distribution",
+        "text": "[2]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "[1]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "historical supply account"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/airdrop-eligibility-distribution",
+        "text": "allocation specifications"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "[1]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/airdrop-eligibility-distribution",
+        "text": "[2]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "[1]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "[1]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/airdrop-eligibility-distribution",
+        "text": "[2]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "[1]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/deployment-addresses",
+        "text": "[3]"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/token-supply",
+        "text": "Arbitrum DAO, “What is the token circulating supply?”"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/airdrop-eligibility-distribution",
+        "text": "Arbitrum DAO, “$ARB airdrop eligibility and distribution specifications.”"
+      },
+      {
+        "href": "https://docs.arbitrum.foundation/deployment-addresses",
+        "text": "Arbitrum DAO, “DAO contract addresses.”"
+      },
+      {
+        "href": "../token-unlock-liquidity-illusion-90-day-calendar/",
+        "text": "The Token Unlock Calendar Has a Liquidity Problem"
+      },
+      {
+        "href": "../allora-unlock-accounting-versus-selling/",
+        "text": "Allora's Insider Unlock"
+      },
+      {
+        "href": "../aptos-unlock-calendar-discrepancy/",
+        "text": "Aptos Unlock Calendar Discrepancy"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "Independent Market Notes · Tokenomics · Historical investigation"
+      },
+      {
+        "tag": "p",
+        "text": "Arbitrum's original vesting disclosures put more than 1.1 billion insider tokens on a single modeled cliff, while a separate Foundation allocation accrued continuously. The timing difference is measurable; the selling pressure is not."
+      },
+      {
+        "tag": "p",
+        "text": "Research checked November 22, 2026 (America/Detroit) · Historical documents dated March 2024 · ARB units throughout · No live-price or trading-flow claim"
+      },
+      {
+        "tag": "p",
+        "text": "On March 7, 2024, Arbitrum's own supply table estimated 1,537,398,145 ARB in circulation. Its projection for March 17 was 2,653,939,384. That apparent leap of more than 1.1 billion tokens was mostly scheduled insider vesting—not evidence of 1.1 billion tokens hitting exchange order books. The difference matters: a calendar can tell me when a grant is due to become available. It cannot tell me who sold it. [1]"
+      },
+      {
+        "tag": "p",
+        "text": "I wanted to isolate the part of the story that the schedule can establish. A cliff withholds an initial grant and releases a large tranche on a stated date. Linear vesting accrues steadily. They can ultimately make the same number of tokens eligible, but their release patterns are not the same. Arbitrum's original team-and-investor schedule and its separate Foundation arrangement make that distinction unusually measurable. [2]"
+      },
+      {
+        "tag": "p",
+        "text": "Arbitrum's historical allocation sets aside 2.694 billion ARB for team and contributors and 1.753 billion for investors: 4.447 billion combined. Its supply explanation says the four-year term began March 16, 2023, with the first unlock on March 16, 2024 and monthly unlocks thereafter. The issuer's March 17 projection puts 673.5 million team tokens and 438.25 million investor tokens in circulation—one-quarter of each allocation. [1] [2]"
+      },
+      {
+        "tag": "p",
+        "text": "I model the remaining three-quarters as 36 equal post-cliff monthly tranches. This follows the described four-year term and cadence; it does not reconstruct every token-level claim, contract rounding rule, or intraday release instant. The first modeled month is March 16, 2024 at 00:00 UTC for chart alignment only. The primary documents specify the calendar date, not this precise release hour."
+      },
+      {
+        "tag": "p",
+        "text": "The Foundation comparison works differently. Arbitrum's historical accounting assigns 750 million ARB to the Foundation, including 50 million initially distributed and 700 million in the vesting budget. The latter begins vesting April 17, 2023 over four years, with the issuer describing per-second accrual. An entitlement accruing each second is not proof that someone withdraws, transfers, or sells tokens each second. [1]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 1. The insider schedule has a large discrete first step; the Foundation budget accrues continuously. These are different-sized allocations (4.447B versus 700M vesting principal), so vertical distance is not a controlled comparison of their price effects. The continuous curve shows monthly sampled points connected for visual readability, and all dates/times are model assumptions rather than verified release timestamps."
+      },
+      {
+        "tag": "p",
+        "text": "Source: Arbitrum DAO historical supply account and allocation specifications. Method: insider cumulative grant = first 25% cliff + each succeeding modeled monthly 1/48 of allocation; Foundation = 700M × elapsed seconds / seconds from 2023-04-17 to 2027-04-17, plus the initial 50M distributed ARB. The Foundation line includes that initial 50M. Values are derived, not observed withdrawal transactions."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 1 data: modeled cumulative vested or distributed ARB, millions, UTC monthly samples in 2024"
+      },
+      {
+        "tag": "p",
+        "text": "The larger concentration is mechanical, not a market forecast. Twenty-five percent of 4.447 billion is 1.11175 billion. Seventy-five percent divided into 36 installments is 92.645833 million each. Divide the first by the second and the answer is exactly twelve. In other words, the first insider cliff is a year's worth of the later modeled monthly pace delivered at one point in the calendar."
+      },
+      {
+        "tag": "p",
+        "text": "The Foundation's monthly accrual varies slightly because months have different numbers of days; those differences are visible even with constant per-second vesting. I used calendar dates in UTC and preserved the actual leap-day interval in the four-year denominator. A tracker that simply assumes a uniform 30-day month can introduce avoidable distortions."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 2. Scheduled incremental insider tranches and Foundation time-based accrual, both in million ARB. March's insider bar contains the first cliff. Foundation values are differences between the monthly samples, not verified withdrawal totals. Different cohort sizes prevent inference about market impact."
+      },
+      {
+        "tag": "p",
+        "text": "Sources: Arbitrum DAO [1] and [2]; calculated from dated disclosure allocations. The March Foundation increment covers Feb 16–Mar 16; subsequent bars cover their corresponding preceding monthly intervals."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 2 data: modeled ARB added between successive monthly sampling points, millions, 2024"
+      },
+      {
+        "tag": "p",
+        "text": "The first cliff divided by Arbitrum's own March 7, 2024 estimated circulating base equals 72.3137%. A later ordinary monthly insider tranche equals 6.0261% of that same fixed historical base. This is a consistent size comparison; it is not a claim that circulating supply grew by 72.3%, nor a statement about what was freely tradable on March 16 or in November 2026."
+      },
+      {
+        "tag": "p",
+        "text": "Arbitrum's own documentation notes that its supply estimate may differ from actual circulation, including because of DAO treasury distribution or vesting-contract behavior. Its accounting also includes an airdrop category holding certain unclaimed tokens returned to treasury while preserving presentation consistency. I therefore cannot treat this denominator as a verified order-book float. [1]"
+      },
+      {
+        "tag": "figcaption",
+        "text": "Figure 3. Historical schedule size as a share of the same March 7, 2024 Arbitrum-estimated 1,537,398,145 circulating ARB. The monthly bar is not a contemporaneous April supply ratio. Neither bar represents realized dilution, sales, or price impact."
+      },
+      {
+        "tag": "p",
+        "text": "Source: Arbitrum DAO [1]. Calculation: scheduled ARB / 1,537,398,145 × 100, using disclosed insider allocation in [2]. Percentage bars start at zero."
+      },
+      {
+        "tag": "caption",
+        "text": "Figure 3 data: fixed historical denominator = 1,537,398,145 ARB estimated on March 7, 2024"
+      },
+      {
+        "tag": "p",
+        "text": "The strongest check I can perform with the issuer's historical tables is arithmetic. If I allocate the 700 million Foundation vesting principal uniformly over the actual seconds from April 17, 2023 to April 17, 2027, then add the 50 million initially distributed, I obtain 205,715,263.518 ARB for March 7, 2024 and 210,506,502.396 for March 17. Rounded to whole tokens, they reproduce the official Foundation entries of 205,715,264 and 210,506,502. [1]"
+      },
+      {
+        "tag": "p",
+        "text": "There is even a tiny disclosed-table wrinkle worth retaining. Arbitrum's headline total changes by 1,116,541,239 tokens between its March 7 estimate and March 17 projection, while the sum of the changed component rows is 1,116,541,238. The issuer warns that values are rounded. That one-token discrepancy is not evidence of economically meaningful leakage; it is a reason to state the precision of what I have reconstructed."
+      },
+      {
+        "tag": "p",
+        "text": "At the same time, I have not reconstructed historical withdrawals from the chain. The official deployment list identifies the Arbitrum One ARB contract as 0x912CE59144191C1204E64559FE8253a0e49E6548 and the Foundation vesting budget address as 0x15533b77981cDa0F85c4F9a485237DF4285D6844. That gives a route for independent verification, not completed verification of historical payouts. [3]"
+      },
+      {
+        "tag": "p",
+        "text": "A token becoming eligible to move does not mean its owner rushes to sell. Vesting can be anticipated; holders may retain balances, delegate governance weight, arrange custody or transact later. Conversely, a smooth accrual schedule need not create smooth sell flow: a recipient can wait and sell multiple accrued months together. I find no defensible way to convert a release schedule into an estimated sell ratio without wallet-level and venue-level evidence."
+      },
+      {
+        "tag": "p",
+        "text": "To test a price-impact thesis, I would first reconcile vesting contract state with transfers and actual token availability; then separate recipient-controlled transfers from exchange-linked deposits; then compare matched spot returns and executable liquidity across venues around the event. Even an exchange deposit is not necessarily an executed sale. The dataset here contains none of that transaction-level market evidence. It establishes a timing mechanism, not a short signal."
+      },
+      {
+        "tag": "p",
+        "text": "The accounting would need revision if governance changed grant conditions, if the exact month or second rules differed from the documentary approximation, or if chain-state reconstruction contradicted the reported entitlement. A measured market effect would require observed transfers, ownership attribution with stated limits, dated spot-flow data and an appropriate comparison against market-wide moves. A controlled sample of several independent cliff and linear events would be necessary before claiming one mechanism predictably depresses prices more than the other."
+      },
+      {
+        "tag": "p",
+        "text": "For now I would use a large dated cliff as a prompt to investigate who can actually sell and whether buyers could absorb it, not as a proxy for sales. The calendar tells us how inventory could become available. The order book, if we can observe it, tells us something very different."
+      },
+      {
+        "tag": "li",
+        "text": "Arbitrum DAO, “What is the token circulating supply?” Historical estimate dated March 7, 2024 and March 17, 2024 projection; page publication date not established; reviewed November 22, 2026. Issuer account, not independent chain audit."
+      },
+      {
+        "tag": "li",
+        "text": "Arbitrum DAO, “$ARB airdrop eligibility and distribution specifications.” Original allocations and vesting context; public-preview document; publication date not established, reviewed November 22, 2026."
+      },
+      {
+        "tag": "li",
+        "text": "Arbitrum DAO, “DAO contract addresses.” Official address inventory; reviewed November 22, 2026. Contract listing is not a historical transaction read."
+      },
+      {
+        "tag": "p",
+        "text": "Calculations: team + investor allocation = 2,694,000,000 + 1,753,000,000 = 4,447,000,000 ARB; first cliff = 0.25 × allocation = 1,111,750,000; later installment = 0.75 × allocation / 36 = 92,645,833.333…; Foundation model = 50,000,000 + 700,000,000 × (elapsed UTC seconds / total vesting seconds), with start 2023-04-17 00:00 UTC and end 2027-04-17 00:00 UTC. Values in charts/tables are rounded only for display. They are a schedule-derived series rather than observed transfers. The raw source CSVs and code are separate audit outputs, not prerequisites for the article's three figures."
+      },
+      {
+        "tag": "p",
+        "text": "Related Independent Market Notes: The Token Unlock Calendar Has a Liquidity Problem; Allora's Insider Unlock; Aptos Unlock Calendar Discrepancy."
+      },
+      {
+        "tag": "p",
+        "text": "No. Vesting eligibility, token withdrawal, transfers, exchange deposits, and executions are separate events."
+      },
+      {
+        "tag": "p",
+        "text": "In this example the first cliff was about 72.3% of the issuer's earlier estimated circulating base, not greater than 100% and not proof of that percentage reaching the market."
+      },
+      {
+        "tag": "p",
+        "text": "Recipients need not sell when tokens accrue. They can accumulate transferable balances and sell in batches."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Date",
+          "Insider cumulative (M ARB)",
+          "Foundation cumulative incl. initial 50M (M ARB)"
+        ],
+        [
+          "2024-02-16",
+          "0.000",
+          "196.133"
+        ],
+        [
+          "2024-03-16",
+          "1,111.750",
+          "210.027"
+        ],
+        [
+          "2024-04-16",
+          "1,204.396",
+          "224.880"
+        ],
+        [
+          "2024-05-16",
+          "1,297.042",
+          "239.254"
+        ],
+        [
+          "2024-06-16",
+          "1,389.688",
+          "254.107"
+        ],
+        [
+          "2024-07-16",
+          "1,482.333",
+          "268.480"
+        ],
+        [
+          "2024-08-16",
+          "1,574.979",
+          "283.333"
+        ],
+        [
+          "2024-09-16",
+          "1,667.625",
+          "298.186"
+        ]
+      ],
+      [
+        [
+          "End date (UTC)",
+          "Insider (M ARB)",
+          "Foundation (M ARB)"
+        ],
+        [
+          "2024-03-16",
+          "1,111.750",
+          "13.895"
+        ],
+        [
+          "2024-04-16",
+          "92.646",
+          "14.853"
+        ],
+        [
+          "2024-05-16",
+          "92.646",
+          "14.374"
+        ],
+        [
+          "2024-06-16",
+          "92.646",
+          "14.853"
+        ],
+        [
+          "2024-07-16",
+          "92.646",
+          "14.374"
+        ],
+        [
+          "2024-08-16",
+          "92.646",
+          "14.853"
+        ],
+        [
+          "2024-09-16",
+          "92.646",
+          "14.853"
+        ]
+      ],
+      [
+        [
+          "Tranche",
+          "Amount (ARB)",
+          "Share of historical base (%)"
+        ],
+        [
+          "March 16 first cliff",
+          "1,111,750,000",
+          "72.3137"
+        ],
+        [
+          "Modeled later monthly installment",
+          "92,645,833.333…",
+          "6.0261"
+        ]
+      ]
+    ],
+    "alts": [],
+    "svgCount": 3,
+    "svgSha256": [
+      "f43705dd55227027284b17f1d8844da5f5fd0050a37f7cbb62e42a5b702adc78",
+      "f3b0bbe21623b40b98551805885c2f234e0d8ae086ca4fdc128aae12a7c46812",
+      "18fe2eff0761ef27f3f90bb9d9b56429147f1f22f2c6b0d2d1ef8711490deb0b"
+    ],
+    "imageCount": 0,
+    "imageSha256": [],
+    "scriptCount": 0,
+    "scriptSha256": []
+  },
   "tokenomics-fundamentals-circulating-versus-total-versus-max-supply": {
     "text": "Tokenomics / Investigation / November 22, 2026 Tokenomics Fundamentals: Why Circulating, Total and Max Supply Tell Different StoriesA UNI supply audit finds 623.3 million tokens classified as circulating, a disputed total, and a one-billion-token ceiling that is not necessarily permanent. Independent Market Notes · Research snapshot, not a live feed I expected a token supply audit to begin with a number. It began with a disagreement over what the number meant. UNI began with a billion tokens. At 16:55:18 UTC on November 22, 2026, CoinMarketCap classified 623.3 million as circulating and 885.5 million as total. An Ethereum token indexer showed a different total again: one billion. None of those displays, by itself, establishes how many UNI are available to sell. That distinction matters because circulating supply, total supply and maximum supply are not three interchangeable descriptions of scarcity. One is an estimate of public availability, another aims to account for the issued stock, and the third asks what future issuance rules permit. Each rests on a different kind of evidence. [1] [2] [3] Three supply figures, three different questions Circulating supply is a provider-defined estimate of tokens accessible to the public market. Total supply generally describes issued tokens less recognized burns, but an ERC-20 contract's totalSupply() may not match a dashboard's burn-accounting convention. Max supply is the proposed or technically enforceable lifetime issuance ceiling—if one exists at all. A blank maximum field does not establish unlimited issuance. CoinMarketCap expressly treats public float as distinct from unlocked supply and total minted stock. CoinGecko describes exclusions for treasury, team and other uncirculated wallets, including some balances that are already unlocked. I would not treat either provider's circulating number as a census of holders ready to trade. [4] [5] The billion-UNI starting point was an allocation, not a float Uniswap's September 16, 2020 launch announcement described one billion UNI minted at genesis. Its current documentation breaks that starting allocation into six destinations: 430 million for the community treasury, 212.66 million for employees, 180.44 million for investors, 150 million for an immediate historical-user airdrop, 20 million for liquidity mining and 6.9 million for advisors. The amounts sum exactly to one billion. That is a check on planned allocation arithmetic, not a record of wallets holding those balances today. [6] [7] UNI genesis allocations in September 2020Six horizontal bars show community treasury 430 million, team 212.66 million, investors 180.44 million, historical airdrop 150 million, mining 20 million, and advisors 6.9 million UNI; together exactly one billion.September 2020 genesis allocationIssuer-reported allocations; not present-day wallets or floatCommunity treasury430.00mTeam and future employees212.66mInvestors180.44mHistorical user/LP airdrop150.00mLiquidity mining20.00mAdvisors6.90m0150300450Million UNI (zero baseline)Figure 1. The original one-billion-UNI allocation. Historical categories do not establish November 2026 ownership, spendability or float. Source: Uniswap's genesis announcement and UNI documentation, September 2020. Values in millions of UNI. Figure 1 data — issuer-reported genesis allocations, September 2020Recipient or programAllocation (UNI)Share of genesisCommunity treasury430,000,00043%Team and future employees212,660,00021.266%Investors180,440,00018.044%Historical user/LP airdrop150,000,00015%Liquidity mining20,000,0002%Advisors6,900,0000.69%Total1,000,000,000100% Vesting can change access without proving a sale Uniswap announced that its 430-million-UNI community treasury would vest over four years. The scheduled amounts were 172 million in the first year, then 129 million, 86 million and 43 million. The cumulative allocation therefore reached 430 million at year four. Current Uniswap documentation says all vesting concluded in September 2025. But a vesting schedule cannot prove a token was distributed, transferred to a trading venue or sold. [7] Scheduled UNI treasury vesting by yearFour bars show issuer-announced scheduled vesting of 172, 129, 86, and 43 million UNI for years one to four, cumulatively 430 million. These are schedules, not verified transfers or sales.Treasury schedule, not realized sellingOriginal four-year vesting design, grouped by vesting year050100150200172mYear 1Σ 172m129mYear 2Σ 301m86mYear 3Σ 387m43mYear 4Σ 430mScheduled UNI (millions)Cumulative annotation shows schedule onlyFigure 2. Scheduled annual treasury vesting, not on-chain realized transfers or sales. Annual grouping obscures within-year timing. Source: Uniswap UNI documentation; original four-year schedule following the September 2020 genesis. Values in millions of UNI. Figure 2 data — original UNI community treasury vesting schedule (not market float)Scheduled vesting periodScheduled UNICumulative scheduled UNIYear 1172,000,000172,000,000Year 2129,000,000301,000,000Year 386,000,000387,000,000Year 443,000,000430,000,000 For an investor, the relevant question after an unlock is not merely whether a vesting clock expired, but who controls the units, whether further transfer restrictions exist, and whether any of them reached a market. A token can be fully vested and still excluded from an indexer's estimate of circulating float. The November 22 reconciliation breaks at the definition CoinMarketCap's UNI snapshot put circulating supply at 623,284,422.48 UNI and total supply at 885,532,418.79 UNI. Subtracting the former from the latter yields 262,247,996.31 UNI, or 29.615% of that provider's reported total. It is a classified residual. I cannot certify that every token in it is technically locked, that any of it will be sold, or that it belongs to a single treasury. [2] CoinMarketCap UNI supply classification on November 22, 2026 A single stacked horizontal bar with 623.3 million circulating UNI and 262.2 million classified as noncirculating, totaling 885.5 million reported UNI. These are provider classifications, not confirmed locked wallets. CMC reported total: 885.5 million UNI Classification snapshot: 2026-11-22 16:55:18 UTC 623.3m 262.2m 0300600900 Supply (million UNI; axis starts at zero) Reported circulating Reported total minus circulating Figure 3. A decomposition of one provider's reported figures, not independently proven wallet-level restrictions. CoinMarketCap UNI ID 7083, as-of 2026-11-22 16:55:18.249 UTC. Arithmetic: 885,532,418.78619706 minus 623,284,422.48036204 UNI. Both segments share the same provider definition. Figure 3 data — CoinMarketCap UNI snapshot, November 22, 2026 at 16:55:18 UTCMeasurementUNISource / calculationReported circulating623,284,422.48CMC API, UNI 7083Reported total885,532,418.79CMC API, UNI 7083Reported total minus circulating262,247,996.31Calculated, C01 One token, three totals—and an unresolved on-chain test A same-day CoinGecko webpage displayed approximately 607.276 million UNI circulating and 885.536 million total. The CoinGecko quote's precise as-of timestamp was unavailable in the research record, so this is not a synchronized measurement against the CoinMarketCap API. The circulating estimates differed by about 16.008 million UNI—around 2.57% of CoinMarketCap's circulating figure—even though their reported total supplies were close. The numbers may reflect different exclusions, updates or both; the evidence does not identify the specific wallets responsible. [3] [5] Then the indexer result complicated the story. The Blockscout Ethereum contract page returned a raw token-supply field of 1027 base units and 18 decimals: one billion UNI. It also identified the Ethereum mainnet contract as 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984. That indexed number exceeds CoinMarketCap's reported total by 114,467,581.21 UNI. The two measurements may use different semantics, including whether specific burned or inaccessible balances are subtracted. But I cannot turn the gap into a verified burn tally. [8] Reported UNI supplies seen November 22, 2026 — asynchronous, definition-dependent sourcesSource and evidence typeCirculating (UNI)Total (UNI)CoinMarketCap API · 16:55:18 UTC623,284,422.48885,532,418.79CoinGecko webpage · precise quote time unknown; rounded≈607,276,000≈885,536,000Blockscout indexer metadata · token state block unknown607,275,895.88 (indexed)1,000,000,000 (indexed) Blockscout's indexed circulation may share an upstream feed with CoinGecko; similarity is not independent corroboration. The chain-head block reported in the same tool session (26,472,003 at 16:58:35 UTC) is not the verified block at which its token-supply metadata was sampled. Verification limit: A direct, block-pinned totalSupply() call was attempted but did not succeed; the Blockscout session then required a PRO key. No canonical supply, exact burn series or excluded-wallet ledger was retrieved. The discrepancy remains open. Maximum supply is a rule, not a slogan Uniswap's 2020 announcement described 2% annual inflation beginning after four years. Its current documentation is more specific: there is no active inflation, governance has authority to mint up to 2% of total supply annually, and that authority has not been exercised to date. The same current documentation describes UNI burns funded by protocol fees since December 2025. Those are issuer statements about authority and activity, not a reconstructed contract-event series. [6] [7] CoinGecko displayed a one-billion-UNI maximum; CoinMarketCap's queried record contained no maximum-supply value. Neither display answers the harder contract question: is one billion a permanent lifetime ceiling, or a historical issuance baseline under a governance-controlled mint function? A blank field is not zero and does not prove the supply is infinite; a displayed cap is not by itself proof that no further tokens can ever be minted. [3] [7] Wrapped UNI on another chain is a separate claim that may be backed by locked native UNI. Simply summing all chains' token contract totals risks counting one economic token twice. The bridge's lock/mint or burn/mint model must be identified first. [9] What I would check before trusting a supply figure I would begin with the canonical asset and contract address, the chain and block height, and the exact definition of any burn. I would next ask whose holdings a provider excluded, whether unlock dates correspond to real wallet movements, and whether bridged representations are counted as new units. Finally I would check if mint authority remains and when the display was last updated. These checks matter for valuation. Circulating market capitalization is price multiplied by estimated float; a fully diluted valuation invokes a different supply denominator. Neither formula establishes that a particular number of tokens will hit the order book. For that I would need evidence about holders, restrictions and actual market liquidity—not a supply chart alone. My conclusion is narrower than a dashboard: UNI's original allocation arithmetic is documented, the circulating classification is contestable, and the lifetime maximum is not independently settled by a displayed one-billion figure. The unresolved 114.47-million-UNI total-supply gap is the reason to demand a pinned contract read and an auditable burn ledger before declaring the accounting closed. Method, sources and further reading Research cutoff: November 22, 2026 UTC. Figures 1 and 2 are historical issuer schedules; Figure 3 is a single timestamped CoinMarketCap classification. No figure depicts realized exchange selling or a time series of burns. All plotted amounts derive from the same research ledger, with decimal arithmetic and zero baselines. The separately reported CoinGecko and Blockscout observations were retained in a table, not plotted on misleading common time axes. Source access, publication time and quote as-of time differ and are noted explicitly. ERC-20 token standard — defines the totalSupply() interface, not provider circulating float. Link was not independently fetched successfully in this publication pass. CoinMarketCap UNI market page — underlying UNI ID 7083 quotes response, updated 2026-11-22T16:55:18.249Z; snapshot values retained in research dossier. CoinGecko UNI webpage — rounded November 22, 2026 supply values, exact quote update time unavailable. CoinMarketCap: supply methodology — published methodology, updated October 30, 2026. CoinGecko: supply methodology — provider definitions, including uncirculated wallets. Uniswap Labs: Introducing UNI — launch announcement, September 16, 2020. Uniswap developers: UNI token — allocations, vesting and current issuer description of mint authority and burns. Blockscout: Ethereum UNI token — November 22, 2026 secondary indexer metadata, not a successful block-pinned contract state read. CoinGecko supply update and multi-chain FAQ — methodology for wrapped/multi-chain tokens. Uniswap's UNI source code — code reference for issuance mechanics, not independent live state verification. Related Independent Market Notes researchWhen vesting is not a sell order · Disputed unlock calendars · Bridge balances versus economic ownership · Treasury control and circulation",
     "headings": [
