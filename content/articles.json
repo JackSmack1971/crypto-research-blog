@@ -1,5 +1,28 @@
 [
   {
+    "slug": "crypto-recovery-without-participation",
+    "source": "crypto-recovery-without-participation.html",
+    "date": "2026-11-24",
+    "title": "Crypto’s Narrow Rebound: Why Relative Strength Is Not a Recovery",
+    "dek": "A market with only six advancing assets out of a hundred, persistent ETF redemptions and rising derivatives turnover deserves a harder test than a bounce in Bitcoin.",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL",
+      "TRX",
+      "HYPE",
+      "XRP",
+      "VVV"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/crypto-recovery-without-participation.jpg",
+    "image_alt": "Abstract editorial illustration of broad slate-colored channels converging on a narrow amber opening, representing a market rebound with limited participation.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "crypto-rebound-without-conviction",
     "source": "crypto-rebound-without-conviction.html",
     "date": "2026-11-23",

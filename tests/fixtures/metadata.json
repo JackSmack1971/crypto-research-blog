@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-recovery-without-participation": {
+      "title": "Crypto’s Narrow Rebound: Why Relative Strength Is Not a Recovery",
+      "description": "November 24 crypto market analysis: weak breadth, Bitcoin and Ethereum ETF outflows, DeFi liquidity, derivatives positioning and the evidence needed for recovery.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-recovery-without-participation/",
+      "og:title": "Crypto’s Narrow Rebound: Why Relative Strength Is Not a Recovery",
+      "og:description": "November 24 crypto market analysis: weak breadth, Bitcoin and Ethereum ETF outflows, DeFi liquidity, derivatives positioning and the evidence needed for recovery.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-recovery-without-participation/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "crypto-rebound-without-conviction": {
       "title": "Crypto’s Rebound Has a Conviction Problem",
       "description": "Bitcoin is recovering from a sharp November selloff, but ETF redemptions, weak Ethereum leadership, and uneven altcoin liquidity complicate the bullish case.",
@@ -622,6 +632,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Crypto’s Narrow Rebound: Why Relative Strength Is Not a Recovery",
+      "link": "https://independent-market-notes.netlify.app/crypto-recovery-without-participation/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-recovery-without-participation/",
+      "description": "A market with only six advancing assets out of a hundred, persistent ETF redemptions and rising derivatives turnover deserves a harder test than a bounce in Bitcoin."
+    },
     {
       "title": "Crypto’s Rebound Has a Conviction Problem",
       "link": "https://independent-market-notes.netlify.app/crypto-rebound-without-conviction/",
