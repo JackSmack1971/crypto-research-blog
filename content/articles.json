@@ -1,5 +1,24 @@
 [
   {
+    "slug": "crypto-rebound-without-breadth",
+    "source": "crypto-rebound-without-breadth.html",
+    "date": "2026-11-25",
+    "title": "Crypto’s rebound has a participation problem",
+    "dek": "A brief improvement in market breadth does not erase persistent ETF withdrawals or a defensive technical structure.",
+    "topic": "market-structure",
+    "assets": [
+      "BTC",
+      "ETH",
+      "SOL"
+    ],
+    "research_type": "investigative-analysis",
+    "image": "assets/featured/crypto-rebound-without-breadth.jpg",
+    "image_alt": "A copper pillar engraved with the Bitcoin symbol rises among descending dark stone columns, illustrating a narrow market rebound.",
+    "image_width": 1200,
+    "image_height": 630,
+    "image_mime_type": "image/jpeg"
+  },
+  {
     "slug": "crypto-recovery-without-participation",
     "source": "crypto-recovery-without-participation.html",
     "date": "2026-11-24",

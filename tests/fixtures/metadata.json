@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-rebound-without-breadth": {
+      "title": "Crypto’s rebound has a participation problem",
+      "description": "November 25, 2026 cryptocurrency market analysis of breadth, ETF withdrawals, leverage and conditional BTC, ETH and SOL price ranges.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-rebound-without-breadth/",
+      "og:title": "Crypto’s rebound has a participation problem",
+      "og:description": "November 25, 2026 cryptocurrency market analysis of breadth, ETF withdrawals, leverage and conditional BTC, ETH and SOL price ranges.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-rebound-without-breadth/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "crypto-recovery-without-participation": {
       "title": "Crypto’s Narrow Rebound: Why Relative Strength Is Not a Recovery",
       "description": "November 24 crypto market analysis: weak breadth, Bitcoin and Ethereum ETF outflows, DeFi liquidity, derivatives positioning and the evidence needed for recovery.",
@@ -632,6 +642,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Crypto’s rebound has a participation problem",
+      "link": "https://independent-market-notes.netlify.app/crypto-rebound-without-breadth/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-rebound-without-breadth/",
+      "description": "A brief improvement in market breadth does not erase persistent ETF withdrawals or a defensive technical structure."
+    },
     {
       "title": "Crypto’s Narrow Rebound: Why Relative Strength Is Not a Recovery",
       "link": "https://independent-market-notes.netlify.app/crypto-recovery-without-participation/",

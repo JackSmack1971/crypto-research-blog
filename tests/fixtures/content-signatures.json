@@ -1,4 +1,587 @@
 {
+  "crypto-rebound-without-breadth": {
+    "text": "Independent Market Notes / Market structureCrypto’s rebound has a participation problemA brief improvement in market breadth does not erase persistent ETF withdrawals or a defensive technical structure.November 25, 2026Editorial illustration — not a market chart.A market can bounce without recovering. On November 25, the distinction mattered more to me than the direction of Bitcoin’s latest price tick. Participation briefly improved, then deteriorated again, while the longer-term structure remained weak.Reported global turnover reached $396.52 billion over 24 hours. Yet only eight of 58 assets in the fixed sample were positive. Trading activity is not necessarily buying conviction. A busy market can also be a market in which investors are trying to leave.The rebound lacked breadthGlobal capitalization stood near $2.102 trillion, down 2.02% over 24 hours, with Bitcoin dominance at 55.89%, according to CoinPaprika. The provisional sample excludes identified stablecoins, wrapped assets and staking receipts. It is not a comprehensive top-100 index.CoinPaprika aggregate USD snapshot, November 25, 15:13:08 UTC; cap and volume in USD.AssetUSD price24h %7d %30d %Cap USDVolume USDBTC57,852.8-2.83-8.01-27.571.16384e+122.15387e+10ETH1,632.52-2.39-7.53-29.51.99576e+117.83277e+09BNB533.479-2.11-8.14-287.01578e+103.81712e+08XRP0.896447-1.92-7.98-31.325.69393e+101.19541e+09SOL66.8707-2.96-8.79-33.033.9596e+101.84049e+09TRX0.303046-1.53-2.13-7.352.88067e+102.71365e+08HYPE56.8818-6.54-13.47-27.241.35186e+103.06177e+08ZEC684.827-4.13-25.9-45.511.1182e+106.07335e+08XMR499.8511.810.91-14.239.41503e+091.24783e+08DOGE0.0530119-2.79-9.55-31.599.08814e+093.09221e+08LINK8.59522-1.77-4.34-24.156.59125e+091.82314e+08ADA0.13815-3.17-8.3-32.145.38916e+091.50535e+08Positive participation across the same 58 assets14:48 UTC24h: 6/587d: 3/5830d: 2/5815:03 UTC24h: 11/587d: 4/5830d: 3/5815:13 UTC24h: 8/587d: 4/5830d: 3/58November 25; CoinPaprika matched cohort. Each track represents 58 assets.The final seven-day median return was −9.41%; the monthly median was −28.07%. Only four names gained over seven days and three over 30 days. Privacy was relatively resilient, but even its weekly median was negative. DeFi was much weaker. These selected basket returns do not measure direct capital rotation.Sector median returns (%), November 25 15:13 UTC; fixed provisional baskets, CoinPaprika.SectorMembers24h median %7d median %30d median %layer116-2.76-8.89-28.41payments_pow5-1.92-8.01-28.72privacy30.19-1.86-14.23exchange7-2.33-7.68-27.19defi9-4.91-13.77-30.43memes3-2.79-9.55-29.01ai_compute3-3.99-10.29-25.83scaling3-3.73-8.84-32.01Institutional infrastructure is not institutional buyingBitcoin and Ethereum spot ETF flows show five consecutive completed sessions of withdrawals through November 24. Bitcoin funds lost a net $2.359 billion over five sessions and $5.427 billion over 20; Ethereum funds lost $417.3 million and $1.502 billion respectively. The unfinished November 25 session is excluded. DefiLlama republishes the latest figures, not independent corroboration.Net ETF withdrawal magnitudeBTC · 5 sessions: −$2,359.1MBTC · 20 sessions: −$5,426.8METH · 5 sessions: −$417.3METH · 20 sessions: −$1,501.5MFarside, completed sessions through November 24. Common scale: $5.5 billion.That does not negate institutional adoption. SBI’s Solana joint venture announcement on November 25 is a constructive longer-term development. But it does not quantify incremental demand for SOL. VanEck’s custody transition filing likewise describes an operational change rather than ETF liquidation.Leverage does not explain everythingOn OKX around 15:03 UTC, Bitcoin and Ethereum perpetual funding estimates were positive (0.00452% and 0.00359%), while Solana’s was negative (−0.00593%). The preceding settled rates were all positive. Perpetual marks were below matched spot prices by 4.65, 5.12 and 7.37 basis points. Open interest was $1.85 billion, $1.10 billion and $203 million on that venue, respectively.Those observations cannot distinguish new leverage from short covering or spot demand. A historical Bitcoin spot order book at 15:04 UTC showed a tight 0.0171 basis-point spread, but its 20 returned levels per side did not establish complete depth within even ten basis points. A tight spread is not a guarantee of executable liquidity. Aligned native open-interest changes, signed trade flow and liquidation observations would help resolve the competing explanations.Technical repair remains absentAll twelve sampled core technical series closed below their 20- and 50-period moving averages. Bitcoin and Ethereum daily RSI readings were below 30. Oversold is a description of momentum, not a timing signal. Weekly session conventions and the underlying historical observations warrant caution.OKX USDT closed-bar indicators; hourly close November 25 15:00 UTC, 4H noon UTC, daily November 24 16:00 UTC, weekly November 22 16:00 UTC.AssetIntervalPriceSMA20SMA50RSI14ATR14BTC4H58,640.360,498.561,380.236.24181,231.97BTC1D59,718.667,764.775,885.825.06853,026.97ETH4H1,638.541,700.141,724.236.601938.4777ETH1D1,677.671,923.612,215.728.5791111.407SOL4H67.5470.710571.526237.08011.82661SOL1D69.0678.31793.716431.915.12408BTC1H58,235.559,211.460,216.934.7342598.694BTC1W60,890.573,695.374,486.334.05766,968.7ETH1H1,646.221,6591,691.3142.32318.8931ETH1W1,718.382,223.32,255.0633.0945276.471SOL1H67.4168.59470.565436.80320.852502SOL1W70.3392.84693.796436.159713.1202Capital contraction and selective growthDefiLlama reported stablecoin capitalization of $280.31 billion on November 25. Its prior-day snapshot showed a 1.11% weekly decline and 5.73% monthly decline. Aggregate DeFi TVL was $68.48 billion, including $36.09 billion on Ethereum and $4.53 billion on Solana. Reported daily decentralized spot and perpetual turnover reached $6.89 billion and $25.07 billion respectively. Falling dollar-denominated TVL may reflect falling collateral prices rather than withdrawals; protocol revenue is not automatically token-holder income.Venice Token’s seven-day gain of 18.18% contrasted with Bitcoin’s −8.01%. Pieverse and JST also gained over the week. Their AI inference, agent payments and lending-related economic theses warrant investigation, but adoption, supply, governance and liquidity questions remain unresolved. Relative strength alone is not an investment ranking.Macro conditions remain restrictiveThe October 28 Federal Reserve decision left the target range at 3.75–4.00%. November 24 Treasury yields were 4.63% at two years and 4.91% at ten years. October CPI rose 0.4% month over month; headline and core PCE prices rose 0.3%, while real consumption was unchanged, according to the BLS and BEA. Nasdaq fell 1.48% on November 24. This is consistent with weak risk appetite, not proof of a causal relationship.The Thanksgiving closure and shortened November 27 session complicate comparisons of ETF flows. The December 4 jobs report, December 8–9 FOMC meeting and December 10 CPI release are important scheduled tests. See the NYSE calendar and FOMC calendar.What would change my interpretation?I would look for sustained recovery above nearby technical boundaries, a majority of the same 58 assets turning positive, and a reversal in completed-session ETF withdrawals. Bitcoin and Solana had already breached their seven-day lower boundaries at the final venue snapshot. Those levels require a reclaim rather than being treated as intact support.Historical scenario explorerAsset BTCETHSOL Horizon 24H7D30DHistorical OKX USDT reference ranges; quotes 15:13:43–49 UTC, November 25.AssetHorizonLowerUpperQuoteBTC24H5730059198.858028.9BTC7D58455.660289.758028.9BTC30D551346460058028.9ETH24H1608.871654.981635.85ETH7D1633.151689.291635.85ETH30D1536.591845.281635.85SOL24H65.8468.0366.95SOL7D67.2870.1366.95SOL30D64.8478.566.95A confirmed close above the upper boundary and subsequent hold would strengthen the bull case. An intact range supports a neutral interpretation; a confirmed exit invalidates it. A close below the lower boundary and failed reclaim weakens the structure. Monthly boundaries are distant historical references, not immediate objectives. No calibrated probabilities are justified.Until participation, institutional flows and price structure start telling a consistent story, I regard a rebound as evidence that the market can bounce. I do not regard it as evidence that the market has healed.Historical research snapshot. Not an execution recommendation.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Crypto’s rebound has a participation problem"
+      },
+      {
+        "tag": "h2",
+        "text": "The rebound lacked breadth"
+      },
+      {
+        "tag": "h3",
+        "text": "Positive participation across the same 58 assets"
+      },
+      {
+        "tag": "h2",
+        "text": "Institutional infrastructure is not institutional buying"
+      },
+      {
+        "tag": "h3",
+        "text": "Net ETF withdrawal magnitude"
+      },
+      {
+        "tag": "h2",
+        "text": "Leverage does not explain everything"
+      },
+      {
+        "tag": "h2",
+        "text": "Technical repair remains absent"
+      },
+      {
+        "tag": "h2",
+        "text": "Capital contraction and selective growth"
+      },
+      {
+        "tag": "h2",
+        "text": "Macro conditions remain restrictive"
+      },
+      {
+        "tag": "h2",
+        "text": "What would change my interpretation?"
+      },
+      {
+        "tag": "h3",
+        "text": "Historical scenario explorer"
+      }
+    ],
+    "links": [
+      {
+        "href": "https://coinpaprika.com/",
+        "text": "CoinPaprika"
+      },
+      {
+        "href": "https://farside.co.uk/bitcoin-etf-flow-all-data/",
+        "text": "Bitcoin"
+      },
+      {
+        "href": "https://farside.co.uk/ethereum-etf-flow-all-data/",
+        "text": "Ethereum"
+      },
+      {
+        "href": "https://www.sbigroup.co.jp/english/news/pdf/2026/1125_a_en.pdf",
+        "text": "Solana joint venture announcement"
+      },
+      {
+        "href": "https://www.sec.gov/Archives/edgar/data/1838028/000183802826000007/hodl-20261116.htm",
+        "text": "custody transition filing"
+      },
+      {
+        "href": "https://defillama.com/stablecoins",
+        "text": "DefiLlama"
+      },
+      {
+        "href": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+        "text": "October 28 Federal Reserve decision"
+      },
+      {
+        "href": "https://www.bls.gov/news.release/cpi.htm",
+        "text": "BLS"
+      },
+      {
+        "href": "https://bea.gov/news/2026/personal-income-and-outlays-october-2026",
+        "text": "BEA"
+      },
+      {
+        "href": "https://www.nyse.com/trade/hours-calendars",
+        "text": "NYSE calendar"
+      },
+      {
+        "href": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "text": "FOMC calendar"
+      }
+    ],
+    "blocks": [
+      {
+        "tag": "p",
+        "text": "A brief improvement in market breadth does not erase persistent ETF withdrawals or a defensive technical structure."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Editorial illustration — not a market chart."
+      },
+      {
+        "tag": "p",
+        "text": "A market can bounce without recovering. On November 25, the distinction mattered more to me than the direction of Bitcoin’s latest price tick. Participation briefly improved, then deteriorated again, while the longer-term structure remained weak."
+      },
+      {
+        "tag": "p",
+        "text": "Reported global turnover reached $396.52 billion over 24 hours. Yet only eight of 58 assets in the fixed sample were positive. Trading activity is not necessarily buying conviction. A busy market can also be a market in which investors are trying to leave."
+      },
+      {
+        "tag": "p",
+        "text": "Global capitalization stood near $2.102 trillion, down 2.02% over 24 hours, with Bitcoin dominance at 55.89%, according to CoinPaprika. The provisional sample excludes identified stablecoins, wrapped assets and staking receipts. It is not a comprehensive top-100 index."
+      },
+      {
+        "tag": "caption",
+        "text": "CoinPaprika aggregate USD snapshot, November 25, 15:13:08 UTC; cap and volume in USD."
+      },
+      {
+        "tag": "figcaption",
+        "text": "November 25; CoinPaprika matched cohort. Each track represents 58 assets."
+      },
+      {
+        "tag": "p",
+        "text": "The final seven-day median return was −9.41%; the monthly median was −28.07%. Only four names gained over seven days and three over 30 days. Privacy was relatively resilient, but even its weekly median was negative. DeFi was much weaker. These selected basket returns do not measure direct capital rotation."
+      },
+      {
+        "tag": "caption",
+        "text": "Sector median returns (%), November 25 15:13 UTC; fixed provisional baskets, CoinPaprika."
+      },
+      {
+        "tag": "p",
+        "text": "Bitcoin and Ethereum spot ETF flows show five consecutive completed sessions of withdrawals through November 24. Bitcoin funds lost a net $2.359 billion over five sessions and $5.427 billion over 20; Ethereum funds lost $417.3 million and $1.502 billion respectively. The unfinished November 25 session is excluded. DefiLlama republishes the latest figures, not independent corroboration."
+      },
+      {
+        "tag": "figcaption",
+        "text": "Farside, completed sessions through November 24. Common scale: $5.5 billion."
+      },
+      {
+        "tag": "p",
+        "text": "That does not negate institutional adoption. SBI’s Solana joint venture announcement on November 25 is a constructive longer-term development. But it does not quantify incremental demand for SOL. VanEck’s custody transition filing likewise describes an operational change rather than ETF liquidation."
+      },
+      {
+        "tag": "p",
+        "text": "On OKX around 15:03 UTC, Bitcoin and Ethereum perpetual funding estimates were positive (0.00452% and 0.00359%), while Solana’s was negative (−0.00593%). The preceding settled rates were all positive. Perpetual marks were below matched spot prices by 4.65, 5.12 and 7.37 basis points. Open interest was $1.85 billion, $1.10 billion and $203 million on that venue, respectively."
+      },
+      {
+        "tag": "p",
+        "text": "Those observations cannot distinguish new leverage from short covering or spot demand. A historical Bitcoin spot order book at 15:04 UTC showed a tight 0.0171 basis-point spread, but its 20 returned levels per side did not establish complete depth within even ten basis points. A tight spread is not a guarantee of executable liquidity. Aligned native open-interest changes, signed trade flow and liquidation observations would help resolve the competing explanations."
+      },
+      {
+        "tag": "p",
+        "text": "All twelve sampled core technical series closed below their 20- and 50-period moving averages. Bitcoin and Ethereum daily RSI readings were below 30. Oversold is a description of momentum, not a timing signal. Weekly session conventions and the underlying historical observations warrant caution."
+      },
+      {
+        "tag": "caption",
+        "text": "OKX USDT closed-bar indicators; hourly close November 25 15:00 UTC, 4H noon UTC, daily November 24 16:00 UTC, weekly November 22 16:00 UTC."
+      },
+      {
+        "tag": "p",
+        "text": "DefiLlama reported stablecoin capitalization of $280.31 billion on November 25. Its prior-day snapshot showed a 1.11% weekly decline and 5.73% monthly decline. Aggregate DeFi TVL was $68.48 billion, including $36.09 billion on Ethereum and $4.53 billion on Solana. Reported daily decentralized spot and perpetual turnover reached $6.89 billion and $25.07 billion respectively. Falling dollar-denominated TVL may reflect falling collateral prices rather than withdrawals; protocol revenue is not automatically token-holder income."
+      },
+      {
+        "tag": "p",
+        "text": "Venice Token’s seven-day gain of 18.18% contrasted with Bitcoin’s −8.01%. Pieverse and JST also gained over the week. Their AI inference, agent payments and lending-related economic theses warrant investigation, but adoption, supply, governance and liquidity questions remain unresolved. Relative strength alone is not an investment ranking."
+      },
+      {
+        "tag": "p",
+        "text": "The October 28 Federal Reserve decision left the target range at 3.75–4.00%. November 24 Treasury yields were 4.63% at two years and 4.91% at ten years. October CPI rose 0.4% month over month; headline and core PCE prices rose 0.3%, while real consumption was unchanged, according to the BLS and BEA. Nasdaq fell 1.48% on November 24. This is consistent with weak risk appetite, not proof of a causal relationship."
+      },
+      {
+        "tag": "p",
+        "text": "The Thanksgiving closure and shortened November 27 session complicate comparisons of ETF flows. The December 4 jobs report, December 8–9 FOMC meeting and December 10 CPI release are important scheduled tests. See the NYSE calendar and FOMC calendar."
+      },
+      {
+        "tag": "p",
+        "text": "I would look for sustained recovery above nearby technical boundaries, a majority of the same 58 assets turning positive, and a reversal in completed-session ETF withdrawals. Bitcoin and Solana had already breached their seven-day lower boundaries at the final venue snapshot. Those levels require a reclaim rather than being treated as intact support."
+      },
+      {
+        "tag": "caption",
+        "text": "Historical OKX USDT reference ranges; quotes 15:13:43–49 UTC, November 25."
+      },
+      {
+        "tag": "p",
+        "text": "A confirmed close above the upper boundary and subsequent hold would strengthen the bull case. An intact range supports a neutral interpretation; a confirmed exit invalidates it. A close below the lower boundary and failed reclaim weakens the structure. Monthly boundaries are distant historical references, not immediate objectives. No calibrated probabilities are justified."
+      },
+      {
+        "tag": "p",
+        "text": "Until participation, institutional flows and price structure start telling a consistent story, I regard a rebound as evidence that the market can bounce. I do not regard it as evidence that the market has healed."
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Asset",
+          "USD price",
+          "24h %",
+          "7d %",
+          "30d %",
+          "Cap USD",
+          "Volume USD"
+        ],
+        [
+          "BTC",
+          "57,852.8",
+          "-2.83",
+          "-8.01",
+          "-27.57",
+          "1.16384e+12",
+          "2.15387e+10"
+        ],
+        [
+          "ETH",
+          "1,632.52",
+          "-2.39",
+          "-7.53",
+          "-29.5",
+          "1.99576e+11",
+          "7.83277e+09"
+        ],
+        [
+          "BNB",
+          "533.479",
+          "-2.11",
+          "-8.14",
+          "-28",
+          "7.01578e+10",
+          "3.81712e+08"
+        ],
+        [
+          "XRP",
+          "0.896447",
+          "-1.92",
+          "-7.98",
+          "-31.32",
+          "5.69393e+10",
+          "1.19541e+09"
+        ],
+        [
+          "SOL",
+          "66.8707",
+          "-2.96",
+          "-8.79",
+          "-33.03",
+          "3.9596e+10",
+          "1.84049e+09"
+        ],
+        [
+          "TRX",
+          "0.303046",
+          "-1.53",
+          "-2.13",
+          "-7.35",
+          "2.88067e+10",
+          "2.71365e+08"
+        ],
+        [
+          "HYPE",
+          "56.8818",
+          "-6.54",
+          "-13.47",
+          "-27.24",
+          "1.35186e+10",
+          "3.06177e+08"
+        ],
+        [
+          "ZEC",
+          "684.827",
+          "-4.13",
+          "-25.9",
+          "-45.51",
+          "1.1182e+10",
+          "6.07335e+08"
+        ],
+        [
+          "XMR",
+          "499.851",
+          "1.81",
+          "0.91",
+          "-14.23",
+          "9.41503e+09",
+          "1.24783e+08"
+        ],
+        [
+          "DOGE",
+          "0.0530119",
+          "-2.79",
+          "-9.55",
+          "-31.59",
+          "9.08814e+09",
+          "3.09221e+08"
+        ],
+        [
+          "LINK",
+          "8.59522",
+          "-1.77",
+          "-4.34",
+          "-24.15",
+          "6.59125e+09",
+          "1.82314e+08"
+        ],
+        [
+          "ADA",
+          "0.13815",
+          "-3.17",
+          "-8.3",
+          "-32.14",
+          "5.38916e+09",
+          "1.50535e+08"
+        ]
+      ],
+      [
+        [
+          "Sector",
+          "Members",
+          "24h median %",
+          "7d median %",
+          "30d median %"
+        ],
+        [
+          "layer1",
+          "16",
+          "-2.76",
+          "-8.89",
+          "-28.41"
+        ],
+        [
+          "payments_pow",
+          "5",
+          "-1.92",
+          "-8.01",
+          "-28.72"
+        ],
+        [
+          "privacy",
+          "3",
+          "0.19",
+          "-1.86",
+          "-14.23"
+        ],
+        [
+          "exchange",
+          "7",
+          "-2.33",
+          "-7.68",
+          "-27.19"
+        ],
+        [
+          "defi",
+          "9",
+          "-4.91",
+          "-13.77",
+          "-30.43"
+        ],
+        [
+          "memes",
+          "3",
+          "-2.79",
+          "-9.55",
+          "-29.01"
+        ],
+        [
+          "ai_compute",
+          "3",
+          "-3.99",
+          "-10.29",
+          "-25.83"
+        ],
+        [
+          "scaling",
+          "3",
+          "-3.73",
+          "-8.84",
+          "-32.01"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "Interval",
+          "Price",
+          "SMA20",
+          "SMA50",
+          "RSI14",
+          "ATR14"
+        ],
+        [
+          "BTC",
+          "4H",
+          "58,640.3",
+          "60,498.5",
+          "61,380.2",
+          "36.2418",
+          "1,231.97"
+        ],
+        [
+          "BTC",
+          "1D",
+          "59,718.6",
+          "67,764.7",
+          "75,885.8",
+          "25.0685",
+          "3,026.97"
+        ],
+        [
+          "ETH",
+          "4H",
+          "1,638.54",
+          "1,700.14",
+          "1,724.2",
+          "36.6019",
+          "38.4777"
+        ],
+        [
+          "ETH",
+          "1D",
+          "1,677.67",
+          "1,923.61",
+          "2,215.7",
+          "28.5791",
+          "111.407"
+        ],
+        [
+          "SOL",
+          "4H",
+          "67.54",
+          "70.7105",
+          "71.5262",
+          "37.0801",
+          "1.82661"
+        ],
+        [
+          "SOL",
+          "1D",
+          "69.06",
+          "78.317",
+          "93.7164",
+          "31.91",
+          "5.12408"
+        ],
+        [
+          "BTC",
+          "1H",
+          "58,235.5",
+          "59,211.4",
+          "60,216.9",
+          "34.7342",
+          "598.694"
+        ],
+        [
+          "BTC",
+          "1W",
+          "60,890.5",
+          "73,695.3",
+          "74,486.3",
+          "34.0576",
+          "6,968.7"
+        ],
+        [
+          "ETH",
+          "1H",
+          "1,646.22",
+          "1,659",
+          "1,691.31",
+          "42.323",
+          "18.8931"
+        ],
+        [
+          "ETH",
+          "1W",
+          "1,718.38",
+          "2,223.3",
+          "2,255.06",
+          "33.0945",
+          "276.471"
+        ],
+        [
+          "SOL",
+          "1H",
+          "67.41",
+          "68.594",
+          "70.5654",
+          "36.8032",
+          "0.852502"
+        ],
+        [
+          "SOL",
+          "1W",
+          "70.33",
+          "92.846",
+          "93.7964",
+          "36.1597",
+          "13.1202"
+        ]
+      ],
+      [
+        [
+          "Asset",
+          "Horizon",
+          "Lower",
+          "Upper",
+          "Quote"
+        ],
+        [
+          "BTC",
+          "24H",
+          "57300",
+          "59198.8",
+          "58028.9"
+        ],
+        [
+          "BTC",
+          "7D",
+          "58455.6",
+          "60289.7",
+          "58028.9"
+        ],
+        [
+          "BTC",
+          "30D",
+          "55134",
+          "64600",
+          "58028.9"
+        ],
+        [
+          "ETH",
+          "24H",
+          "1608.87",
+          "1654.98",
+          "1635.85"
+        ],
+        [
+          "ETH",
+          "7D",
+          "1633.15",
+          "1689.29",
+          "1635.85"
+        ],
+        [
+          "ETH",
+          "30D",
+          "1536.59",
+          "1845.28",
+          "1635.85"
+        ],
+        [
+          "SOL",
+          "24H",
+          "65.84",
+          "68.03",
+          "66.95"
+        ],
+        [
+          "SOL",
+          "7D",
+          "67.28",
+          "70.13",
+          "66.95"
+        ],
+        [
+          "SOL",
+          "30D",
+          "64.84",
+          "78.5",
+          "66.95"
+        ]
+      ]
+    ],
+    "alts": [
+      "A copper pillar engraved with the Bitcoin symbol rises among descending dark stone columns, illustrating a narrow market rebound."
+    ],
+    "svgCount": 0,
+    "svgSha256": [],
+    "imageCount": 1,
+    "imageSha256": [
+      "9c416532eedf8a07cf065079e50fe996a5cbb81cf3271f2a913951efcbb5c6bf"
+    ],
+    "scriptCount": 1,
+    "scriptSha256": [
+      "68e5cf4ff342fda5adea38143305e1254df952292cafcaba9013757e395e6575"
+    ]
+  },
   "crypto-recovery-without-participation": {
     "text": "Independent Market Notes / Market structureCrypto’s Narrow Rebound: Why Relative Strength Is Not a RecoveryA market with only six advancing assets out of a hundred, persistent ETF redemptions and rising derivatives turnover deserves a harder test than a bounce in Bitcoin.November 24, 2026 · Investigative analysisBitcoin climbed back above 60,000 USDT late on November 24. That was the encouraging part of the afternoon. The less encouraging part was that, in a separate market-wide snapshot, only six of a hundred selected crypto assets had posted positive returns over the preceding 24 hours.What stands out to me is the distance between a visible price rebound and the breadth of demand behind it. Bitcoin can recover a round number while most of the market is still deteriorating. A handful of tokens can outperform Bitcoin without attracting enough new capital to change the market's direction. Neither observation is a contradiction; both are reasons to be careful about calling a recovery.My interpretation is bearish on the underlying structure, with moderate conviction, but considerably less certain about what caused the selling or what happens next. The evidence is more persuasive about the condition of the market than about its next move.Historical research snapshot. All prices, order books and market statistics in this article refer to November 24, 2026 or the specified earlier reporting periods. They are not live quotes.What a six-percent market looks likeAt 17:54 UTC, aggregate crypto capitalization was approximately $2.146 trillion, down 3.02% over 24 hours. Reported daily turnover was $108.16 billion, down 11.69%, and Bitcoin represented 56.18% of capitalization. That dominance figure describes the distribution of market value; it does not measure money moving from altcoins into Bitcoin.24 hours6/1007 days12/10030 days7/100Positive returns in a fixed 100-asset basket, observed at 17:57:07 UTC. The colored segment represents advancing assets; the remainder is nonpositive. Source: CoinPaprika.Matched basket returns, November 24, 17:57 UTCWindowPositiveMedianEqual-weight mean24 hours6-3.75%-3.88%7 days12-6.45%-5.70%30 days7-27.19%-23.86%The median 30-day return was negative 27.19%. Even the best-performing groups were not generally rising: the six-member AI/compute basket averaged about −1% over seven days, while the 15-member exchange and infrastructure basket averaged −2.20%. Stablecoin infrastructure was down approximately 14.27%. These are provisional equal-weight groupings of present-day constituents, not investable historical sector indices. Stablecoins, wrapped duplicates and staking receipts were excluded; the selection is not a claim of exhaustive market coverage.Source: CoinPaprikaTen largest selected assets, aggregate USD snapshot at 17:57:07 UTCAssetUSD priceCap ($B)24h7d30dBTC59,953.561,206.08-2.25%-5.88%-25.86%ETH1,682.25205.65-3.31%-5.97%-28.07%BNB549.0872.21-1.95%-6.44%-26.74%XRP0.92337258.65-2.86%-3.58%-29.67%SOL69.4541.12-5.19%-4.12%-31.75%TRX0.30756129.24-1.10%+0.19%-6.90%HYPE60.7214.43-7.14%-10.35%-22.39%ZEC714.7611.67-12.54%-21.98%-42.36%DOGE0.0553249.48-3.21%-5.59%-29.24%XMR502.289.46-1.02%-0.60%-16.68%The rebound has not repaired the trendAt approximately 18:09:45 UTC, OKX spot prices were 60,165.80 USDT for Bitcoin, 1,685.29 for Ethereum and 69.64 for Solana. Each had recovered from its preceding completed four-hour close. But all three still stood beneath the twenty- and fifty-period averages on both daily and four-hour charts.OKX spot USDT, completed intervals ending 16:00 UTCAssetClosed price4h SMA20 / 50Daily SMA20 / 50Daily RSI14BTC59,718.6060,587.40 / 61,932.2967,764.70 / 75,885.7925.07ETH1,677.671,703.86 / 1,740.321,923.61 / 2,215.7028.58SOL69.0671.026 / 71.82178.317 / 93.71631.91Daily RSI readings below 30 for BTC and ETH give the bullish counterargument substance: selling has been intense enough for a relief rally to be entirely plausible. But an oversold oscillator is not a floor. Prior weekly and hourly summaries also showed declining moving-average structure; the subsequent hourly rebound did not establish a reversal. These indicator values are historical calculations on 64 completed candles per series, not independent cross-exchange measurements.Relative performance is similarly ambiguous. Over twenty matched daily intervals ETH/BTC fell 7.03% and SOL/BTC fell 3.97%, although both outperformed over ten intervals. A market can produce short periods of altcoin resilience without establishing a durable change in leadership.Source: OKX market dataInstitutional capital is still leaving the ETF channelThe more consequential demand signal is not a single price print but the persistence of redemptions. Across twenty reported sessions from October 27 through November 23, US spot Bitcoin ETFs recorded net outflows of $5.019 billion and Ethereum ETFs $1.498 billion. The last five sessions contributed $2.368 billion and $382.3 million respectively in net redemptions.Reported net ETF flows through November 23; revisableAssetNov 23 ($M)5 sessions ($M)20 sessions ($M)BTC−569.7−2,367.6−5,019.4ETH−84.9−382.3−1,497.6I would not treat every redemption as an unhedged sale. Basis arbitrage, portfolio rebalancing and hedged unwinds can all generate outflows. Nevertheless, sustained net redemptions weaken the case that ETF demand is providing broad marginal support.Source: Farside BTC flows · Farside ETH flowsThe macro backdrop is not uniformly hostile. The November 20 two- and ten-year Treasury yields were 4.63% and 4.92%, both lower than on November 16. But the October 28 Federal Reserve target remained 3.75–4.00%, October CPI rose 0.4% month over month, and unemployment was reported at 4.1%. Lower yields could reflect easing expectations or defensive demand; they do not by themselves establish easier financial conditions for crypto. The November 23 equity rebound is likewise not proof of renewed digital-asset demand.Source: Federal Reserve October decision · BLS CPI · BLS employment · FRED 2-year · FRED 10-yearMore derivatives turnover, less decentralized spot turnoverDefiLlama's November 24 dashboard reported $50.134 billion of seven-day DEX volume, down 5.69% on the preceding week, alongside $197.819 billion of perpetual turnover, up 5.24%. That is a divergence worth investigating, not a global spot-versus-futures ratio: the two tracked universes differ and omit centralized spot activity.DEX −5.69%Perpetuals +5.24%0%Weekly turnover changes, DefiLlama dashboard dated November 24; exact observation clock unspecified. Different tracked markets, not capital flows.More perpetual turnover could mean more hedging, new leverage, liquidations or simply more churn. At roughly 17:57–17:58 UTC, indicated eight-hour OKX funding was positive for BTC (+0.005883%) and ETH (+0.005061%), but negative for SOL (−0.003352%). Open interest was approximately $1.839 billion, $1.151 billion and $205 million respectively on those three OKX swaps.These are not global totals. More importantly, static open interest cannot reveal whether positions are expanding or closing. The observed spot-perpetual midpoint discounts of roughly 5.6–7.6 basis points shortly after 18:00 UTC establish a local pricing relationship, not a mark-index premium or evidence of forced liquidation. I cannot distinguish spot-led selling, short positioning, covering and forced deleveraging without aligned native open-interest changes, aggressor flow and liquidation observations.Source: DefiLlama · OKX market dataLiquidity is a separate question from turnoverA narrow spread can hide a shallow book. On OKX, six historical spot snapshots of twenty price levels on each side showed a particularly important difference between advertised turnover and the notional visible close to the midpoint. At 18:00 UTC, HYPE's returned book contained only about 7,687 USDT of bids and 3,473 of asks. VVV showed about 57,413 of bids but 19,370 of asks. Neither snapshot describes the full exchange book, much less the entire market.Returned spot depth within 100 bps; all are lower bounds, 18:00:14–30 UTCAssetSpread (bps)Bid USDTAsk USDTBTC0.01754,019318,433ETH0.059144,861172,990SOL1.437738,019962,820VVV3.96757,41319,370TRX0.32529,82020,267HYPE1.3137,6873,473Historical depth simulationHypothetical quote notional (USDT)10,00050,000100,000Midpoint-relative slippage, basis pointsAssetBuySellBTC0.008-0.541ETH0.030-0.030SOL1.848-1.353VVV33.890-14.097TRX2.249-2.869HYPEDepth exceededDepth exceededThe hypothetical calculation consumes observed price levels until the chosen quote notional is reached. Negative sell slippage means below midpoint. No extrapolation, fees, latency or future impact. These books expired by 18:02:30 UTC. “Depth exceeded” means the returned slice is insufficient, not that the exchange cannot fill the amount.The table shows the default 10,000 USDT simulation.VVV's 10,000 USDT simulated buy was approximately 33.89 bps above midpoint, whereas TRX's was about 2.25 bps. HYPE could not be simulated at that notional on either side from the observed levels. That does not establish execution costs today; it illustrates why aggregate volume alone is a poor proxy for available liquidity.Source: OKX market dataNetwork activity is not the same as token demandStablecoin capitalization was around $281.1 billion, down 1.11% over seven days, while aggregate DeFi TVL stood at $68.755 billion, down 1.12% over 24 hours in the November 24 dashboard. A later same-day reading differed slightly; the exact observation clocks are unknown. Stablecoin contraction may reflect redemptions or migration, and falling USD TVL can arise from declining collateral prices rather than withdrawals.Solana presents a useful counterexample to a blanket contraction narrative. Its seven-day DEX turnover rose 7.07% even as tracked stablecoin capitalization fell 3.16%. Ethereum mainnet DEX turnover declined 17.31%. That could be a shift in usage, faster turnover of existing liquidity or speculative trading. It is not evidence of net capital migration by itself. Ethereum layer-two activity and staking economics also matter; raw transaction counts are not comparable across chains without reconciling their definitions.Tracked chain activity, November 24; dashboard clock unspecifiedChainTVL ($B)Stablecoins ($B)DEX 7d ($B)Weekly DEX changeBitcoin2.91—0.0019−64.34%Ethereum35.84128.7510.952−17.31%Solana4.5213.6310.447+7.07%Source: DefiLlama · Ethereum · Solana · BitcoinProtocol revenue is equally easy to misread. Hyperliquid's reported trailing 30-day protocol revenue was $77.89 million, compared with $8.24 million for Uniswap and $6.40 million for Aave. These figures are economically interesting, but protocol receipts, token purchases, burns and legally enforceable holder claims are different concepts. I would not convert them into a valuation multiple until the underlying rights and circulating-supply economics are reconciled.Aave's TVL rose 8.17% over seven days despite broader weakness. That is an important counterpoint to systemic-deleveraging claims. At the same time, BTCS disclosed on November 23 that it had sold approximately 27,300 ETH and repaid $43.8 million of Aave borrowing after the November 20 decline. This is a real example of balance-sheet deleveraging, not proof of an ecosystem-wide liquidation cascade. Precautionary debt reduction remains a plausible explanation.Source: BTCS SEC-filed release · Hyperliquid fees · DefiLlamaFour research subjects, not four recommendationsThe selective strength that persists through a decline deserves scrutiny rather than automatic promotion. Venice Token, TRON, Hyperliquid and XRP illustrate distinct mechanisms. None is cleared by relative returns alone.Venice Token (VVV) had gained 23.55% over seven days in the 17:41 UTC snapshot, while Bitcoin fell 5.91%. Its inference-credit model provides a possible demand mechanism, but contract permissions, actual credit use, emissions and verified burns determine whether that mechanism is economically meaningful. The shallow historical ask book is a separate concern. Venice tokenomics documentation.TRON (TRX) was comparatively resilient across seven and thirty days. Its resource staking and transaction burn mechanism is documented, but network usage does not automatically translate into net token demand, especially where issuance and governance concentration remain important. TRON economic model.Hyperliquid (HYPE) warrants attention because of its documented fee-funded purchase and burn mechanism, despite negative seven-day relative performance and declining technical structure. Vesting and circulating supply could materially change the economics. Hyperliquid fee documentation.XRP showed seven-day relative resilience but thirty-day underperformance. The ledger's original 100-billion maximum supply and escrow mechanism are documented; current distributions and actual settlement demand still matter more than a fixed maximum in isolation. XRP Ledger escrow documentation.These are unranked research subjects. Their supply, security and liquidity evidence does not support an execution-quality assessment.What would change the interpretation?The following ranges offer concrete ways to test the bearish structural thesis. The near-term boundaries use recent hourly ranges, the seven-day boundaries use recent four-hour ranges, and the thirty-day boundaries use the previous completed weekly range. The wider levels are structural milestones, not expected targets.Conditional OKX spot reference levels, November 24Horizon / assetLower boundary (USDT)Upper boundary (USDT)24h BTC59,236.7060,691.1024h ETH1,664.101,706.6024h SOL68.5870.877d BTC59,391.3064,600.007d ETH1,667.551,845.287d SOL68.5878.5030d BTC55,134.0065,687.0030d ETH1,536.591,866.7530d SOL64.8475.78Distance to historical range boundariesHorizon24 hours7 days30 daysPercent and ATR distance from the 18:09 UTC referenceAssetLowerUpperBTC-1.54% / -0.67 ATR+0.87% / +0.38 ATRETH-1.26% / -0.48 ATR+1.26% / +0.49 ATRSOL-1.52% / -0.52 ATR+1.77% / +0.61 ATRFour-hour ATR for 24h and 7d; daily ATR for 30d. No scenario probability is implied. Reference prices are historical.The table shows the default 24-hour distances.For the next 24 hours, a completed hourly close outside the relevant range would be an initial signal, not sufficient evidence of a sustained breakout. Over seven days I would want four-hour confirmation followed by daily confirmation. Over thirty days, a completed weekly exit is the more meaningful structural test. Neutrality means persistence within the range; a confirmed exit invalidates it. A bullish interpretation requires wider participation and corroborated demand, while a bearish interpretation requires sustained deterioration rather than a single wick.The scheduled November 25 GDP and PCE releases (13:30 UTC), December 1 JOLTS (15:00 UTC), December 9 Fed decision (19:00 UTC), and December 10 CPI (13:30 UTC) are relevant tests. These are scheduled releases, not assumptions about their outcomes.Source: BEA schedule · BLS calendar · Federal Reserve December meetingThe distinction that mattersI would revise the bearish structural assessment if sustained recovery above nearby resistance were accompanied by a positive median return and a broadening majority of advancing assets, followed by improvement in daily trends and institutional flows. A convincing explanation of the underlying selling would require a different set of evidence: aligned spot and derivatives flow, native open-interest changes and documented liquidation activity. Neither price movement nor turnover supplies that evidence on its own.The important distinction is between a market that is capable of bouncing and a market that has repaired the conditions that made it vulnerable. November 24 offered evidence of the former. The latter remains an open question.Evidence and methodologyMarket breadth is calculated on the same 100 selected constituents using reported percentage changes, excluding stablecoins and recognized economic duplicates. Sector definitions are provisional; current constituents introduce selection and survivorship limitations. Moving averages use completed native OKX candles. ETF totals cover reported US sessions through November 23 and may be revised. Dashboard figures are dated but not synchronized. The historical candle summaries, order-book snapshots and aggregate quotes are single-source observations rather than independently authenticated records. No live execution or causal attribution is inferred.Primary and aggregate references are linked adjacent to the relevant sections. Market analysis and conditional scenarios are not individualized investment advice.",
     "headings": [
