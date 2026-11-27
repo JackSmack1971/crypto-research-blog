@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "bitcoin-bottom-evidence": {
+      "title": "Bitcoin’s Bottom Is Not a Matter of Belief",
+      "description": "A November 27, 2026 investigation of Bitcoin’s $55,000 rebound, 200-week moving average, ETF outflows, whale claims, equity risk and leveraged trade economics.",
+      "canonical": "https://independent-market-notes.netlify.app/bitcoin-bottom-evidence/",
+      "og:title": "Bitcoin’s Bottom Is Not a Matter of Belief",
+      "og:description": "A November 27, 2026 investigation of Bitcoin’s $55,000 rebound, 200-week moving average, ETF outflows, whale claims, equity risk and leveraged trade economics.",
+      "og:url": "https://independent-market-notes.netlify.app/bitcoin-bottom-evidence/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "crypto-rebound-without-breadth": {
       "title": "Crypto’s rebound has a participation problem",
       "description": "November 25, 2026 cryptocurrency market analysis of breadth, ETF withdrawals, leverage and conditional BTC, ETH and SOL price ranges.",
@@ -642,6 +652,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Bitcoin’s Bottom Is Not a Matter of Belief",
+      "link": "https://independent-market-notes.netlify.app/bitcoin-bottom-evidence/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/bitcoin-bottom-evidence/",
+      "description": "Eight market narratives converge on a tempting conclusion. The evidence for distress is stronger than the evidence for a durable reversal."
+    },
     {
       "title": "Crypto’s rebound has a participation problem",
       "link": "https://independent-market-notes.netlify.app/crypto-rebound-without-breadth/",
