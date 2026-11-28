@@ -10,6 +10,16 @@
     "twitter:card": "summary"
   },
   "articles": {
+    "crypto-due-diligence-checklist": {
+      "title": "Crypto Due Diligence Checklist: 28 Risk Factors for Evaluating Crypto Projects",
+      "description": "Learn how to conduct crypto due diligence with a 28-point checklist covering blockchain verification, tokenomics, security audits and regulatory compliance.",
+      "canonical": "https://independent-market-notes.netlify.app/crypto-due-diligence-checklist/",
+      "og:title": "Crypto Due Diligence Checklist: 28 Risk Factors for Evaluating Crypto Projects",
+      "og:description": "Learn how to conduct crypto due diligence with a 28-point checklist covering blockchain verification, tokenomics, security audits and regulatory compliance.",
+      "og:url": "https://independent-market-notes.netlify.app/crypto-due-diligence-checklist/",
+      "og:type": "article",
+      "twitter:card": "summary_large_image"
+    },
     "bitcoin-bottom-evidence": {
       "title": "Bitcoin’s Bottom Is Not a Matter of Belief",
       "description": "A November 27, 2026 investigation of Bitcoin’s $55,000 rebound, 200-week moving average, ETF outflows, whale claims, equity risk and leveraged trade economics.",
@@ -652,6 +662,12 @@
     }
   },
   "rss": [
+    {
+      "title": "Crypto Due Diligence Checklist: 28 Risk Factors for Evaluating Crypto Projects",
+      "link": "https://independent-market-notes.netlify.app/crypto-due-diligence-checklist/",
+      "guid": "https://jacksmack1971.github.io/crypto-research-blog/crypto-due-diligence-checklist/",
+      "description": "A crypto due diligence checklist should examine six areas: technical security, operational controls, liquidity, governance, tokenomics and regulatory exposure."
+    },
     {
       "title": "Bitcoin’s Bottom Is Not a Matter of Belief",
       "link": "https://independent-market-notes.netlify.app/bitcoin-bottom-evidence/",
